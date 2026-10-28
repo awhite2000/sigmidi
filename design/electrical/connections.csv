@@ -1,0 +1,160 @@
+Component,Value,Terminal,Physical board label,Logical GPIO / signal,Net,Note
+U1,DFRobot DFR1075 V1.1,P1:1,VIN,VCC,+5V,
+U1,DFRobot DFR1075 V1.1,P1:2,3V3,3V3,3V3,
+U1,DFRobot DFR1075 V1.1,P1:3,GND,GND,GND,
+U1,DFRobot DFR1075 V1.1,P1:4,SCL,GPIO20,P1_MODE,
+U1,DFRobot DFR1075 V1.1,P1:5,SDA,GPIO19,NC,
+U1,DFRobot DFR1075 V1.1,P1:6,5/A4/LP_TX,GPIO5,NC,
+U1,DFRobot DFR1075 V1.1,P1:7,4/A3/LP_RX,GPIO4,NC,
+U1,DFRobot DFR1075 V1.1,P1:8,3/A2,GPIO3,P2_ADC,
+U1,DFRobot DFR1075 V1.1,P1:9,2/A1,GPIO2,P1_ADC,
+U1,DFRobot DFR1075 V1.1,P1:10,NC,NC,NC,
+U1,DFRobot DFR1075 V1.1,P1:11,15/D13,GPIO15,NC,
+U1,DFRobot DFR1075 V1.1,P1:12,6/D12/LP_SDA,GPIO6,ENC_A,
+U1,DFRobot DFR1075 V1.1,P1:13,7/D11/LP_SCL,GPIO7,ENC_B,
+U1,DFRobot DFR1075 V1.1,P1:14,NC,NC,NC,
+U1,DFRobot DFR1075 V1.1,P2:1,RST,RST,NC,
+U1,DFRobot DFR1075 V1.1,P2:2,3V3,3V3,3V3,
+U1,DFRobot DFR1075 V1.1,P2:3,NC,NC,NC,
+U1,DFRobot DFR1075 V1.1,P2:4,GND,GND,GND,
+U1,DFRobot DFR1075 V1.1,P2:5,NC,NC,NC,
+U1,DFRobot DFR1075 V1.1,P2:6,23/SCK,GPIO23,LCD_CLK,
+U1,DFRobot DFR1075 V1.1,P2:7,22/MO,GPIO22,LCD_DIN,
+U1,DFRobot DFR1075 V1.1,P2:8,21/MI,GPIO21,P2_MODE,
+U1,DFRobot DFR1075 V1.1,P2:9,20/SCL,GPIO20,NC,
+U1,DFRobot DFR1075 V1.1,P2:10,19/SDA,GPIO19,LCD_DC,
+U1,DFRobot DFR1075 V1.1,P2:11,9/D9,GPIO9,NC,
+U1,DFRobot DFR1075 V1.1,P2:12,18/D7,GPIO18,LCD_CS,
+U1,DFRobot DFR1075 V1.1,P2:13,1/D6,GPIO1,LADDER,
+U1,DFRobot DFR1075 V1.1,P2:14,NC,NC,NC,
+U1,DFRobot DFR1075 V1.1,P2:15,14/D3,GPIO14,LCD_RST,
+U1,DFRobot DFR1075 V1.1,P2:16,8/D2,GPIO8,NC,
+U1,DFRobot DFR1075 V1.1,P2:17,16/TX,GPIO16,LED_GPIO,
+U1,DFRobot DFR1075 V1.1,P2:18,17/RX,GPIO17,ENC_SW,
+U2,Waveshare 24382,P2:1,,,3V3,
+U2,Waveshare 24382,P2:2,,,LCD_RST,
+U2,Waveshare 24382,P2:3,,,LCD_DC,
+U2,Waveshare 24382,P2:4,,,LCD_CS,
+U2,Waveshare 24382,P2:5,,,LCD_CLK,
+U2,Waveshare 24382,P2:6,,,LCD_DIN,
+U2,Waveshare 24382,P2:7,,,GND,
+U2,Waveshare 24382,P2:8,,,3V3,
+J1,5.5x2.1mm center-negative,CENTER,,,GND,
+J1,5.5x2.1mm center-negative,SLEEVE,,,+9V,
+U3,Pololu S13V10F5 #4083,VIN,,,+9V,
+U3,Pololu S13V10F5 #4083,GND,,,GND,
+U3,Pololu S13V10F5 #4083,VOUT,,,+5V,
+C1,47uF / 35V,1,,,+9V,
+C1,47uF / 35V,2,,,GND,
+SW11,20-detent rotary encoder + NO click,A,,,ENC_A,Functional pin names only; verify the selected encoder terminal order.
+SW11,20-detent rotary encoder + NO click,B,,,ENC_B,Functional pin names only; verify the selected encoder terminal order.
+SW11,20-detent rotary encoder + NO click,C,,,GND,Functional pin names only; verify the selected encoder terminal order.
+SW11,20-detent rotary encoder + NO click,SW1,,,ENC_SW,Functional pin names only; verify the selected encoder terminal order.
+SW11,20-detent rotary encoder + NO click,SW2,,,GND,Functional pin names only; verify the selected encoder terminal order.
+R7,10k,1,,,3V3,
+R7,10k,2,,,LADDER,
+R8,20k,1,,,LADDER,
+R8,20k,2,,,GND,
+C5,100nF,1,,,LADDER,
+C5,100nF,2,,,GND,
+R9,1k,1,,,LADDER,
+R9,1k,2,,,T1,
+SW1,momentary NO,1,,,T1,B
+SW1,momentary NO,2,,,GND,B
+R10,1k,1,,,T1,
+R10,1k,2,,,T2,
+SW2,momentary NO,1,,,T2,A
+SW2,momentary NO,2,,,GND,A
+R11,1k,1,,,T2,
+R11,1k,2,,,T3,
+SW3,momentary NO,1,,,T3,2
+SW3,momentary NO,2,,,GND,2
+R12,1k,1,,,T3,
+R12,1k,2,,,T4,
+SW4,momentary NO,1,,,T4,1
+SW4,momentary NO,2,,,GND,1
+R13,1k,1,,,T4,
+R13,1k,2,,,T5,
+SW5,momentary NO,1,,,T5,C
+SW5,momentary NO,2,,,GND,C
+R14,1k,1,,,T5,
+R14,1k,2,,,T6,
+SW6,momentary NO,1,,,T6,3
+SW6,momentary NO,2,,,GND,3
+R15,1k,1,,,T6,
+R15,1k,2,,,T7,
+SW7,momentary NO,1,,,T7,D
+SW7,momentary NO,2,,,GND,D
+R16,1k,1,,,T7,
+R16,1k,2,,,T8,
+SW8,momentary NO,1,,,T8,4
+SW8,momentary NO,2,,,GND,4
+R17,1k,1,,,T8,
+R17,1k,2,,,T9,
+SW9,momentary NO,1,,,T9,E
+SW9,momentary NO,2,,,GND,E
+R18,1k,1,,,T9,
+R18,1k,2,,,T10,
+SW10,momentary NO,1,,,T10,5
+SW10,momentary NO,2,,,GND,5
+J2,Amphenol ACJS-MHDC,10,,,GND,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,11,,,P1_RING,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,12,,,P1_ADC,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,7,,,NC,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,8,,,NC,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,9,,,NC,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,4,,,GND,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,5,,,P2_RING,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,6,,,P2_ADC,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,1,,,NC,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,2,,,NC,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,3,,,NC,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+J2,Amphenol ACJS-MHDC,13,,,NC,"TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+R20,5.1k,1,,,3V3,
+R20,5.1k,2,,,P1_RING,
+R21,10k,1,,,P1_MODE,
+R21,10k,2,,,P1_ADC,
+R30,5.1k,1,,,3V3,
+R30,5.1k,2,,,P2_RING,
+R31,10k,1,,,P2_MODE,
+R31,10k,2,,,P2_ADC,
+LED1,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,LED_GPIO,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch B / tap T1."
+LED1,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,L1,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch B / tap T1."
+LED1,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch B / tap T1."
+LED1,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch B / tap T1."
+LED2,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,L1,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch A / tap T2."
+LED2,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,L2,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch A / tap T2."
+LED2,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch A / tap T2."
+LED2,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch A / tap T2."
+LED3,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,L2,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 2 / tap T3."
+LED3,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,L3,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 2 / tap T3."
+LED3,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 2 / tap T3."
+LED3,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 2 / tap T3."
+LED4,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,L3,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 1 / tap T4."
+LED4,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,L4,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 1 / tap T4."
+LED4,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 1 / tap T4."
+LED4,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 1 / tap T4."
+LED5,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,L4,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch C / tap T5."
+LED5,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,L5,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch C / tap T5."
+LED5,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch C / tap T5."
+LED5,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch C / tap T5."
+LED6,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,L5,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 3 / tap T6."
+LED6,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,L6,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 3 / tap T6."
+LED6,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 3 / tap T6."
+LED6,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 3 / tap T6."
+LED7,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,L6,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch D / tap T7."
+LED7,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,L7,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch D / tap T7."
+LED7,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch D / tap T7."
+LED7,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch D / tap T7."
+LED8,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,L7,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 4 / tap T8."
+LED8,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,L8,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 4 / tap T8."
+LED8,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 4 / tap T8."
+LED8,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 4 / tap T8."
+LED9,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,L8,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch E / tap T9."
+LED9,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,L9,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch E / tap T9."
+LED9,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch E / tap T9."
+LED9,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch E / tap T9."
+LED10,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,L9,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."
+LED10,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,NC,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."
+LED10,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."
+LED10,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."

@@ -10,4 +10,6 @@ From the project root, run `python3 scripts/serve_flasher.py` and open http://lo
 
 Build intermediates are disposable. `scripts/build.py` publishes firmware and web-flasher bundles here. `scripts/package_web_flasher.py` can reuse these release firmware files if `build/` has been removed; stale firmware sources still fail validation.
 
+These bundles use the [passive pedal wiring](../docs/hardware.md#two-selectable-pedal-inputs): two resistors per input (5.1 kΩ ring reference and 10 kΩ GPIO bias), TIP directly to ADC, and HIGH/high-impedance bias selection. Use unpowered 0–10 kΩ pedals and recapture endpoint calibration after rewiring.
+
 Run `python3 scripts/verify_distribution.py` to check release hashes, ZIP contents, firmware compatibility and the full native Fusion archive. `verification/` contains build/test records. Physical flashing and print testing remain unverified.

@@ -75,6 +75,9 @@ def preserve_firmware(root, info, images):
     (output / application).write_bytes(images['firmware.bin'])
     guide = ('SIGMIDI Foot Controller v' + info['version'] + '\n\n'
              'ESP32-C6 / DFRobot DFR1075. For first installation, use the web flasher.\n'
+             'Pedal interface: two controller resistors per input (5.1k ring reference, 10k GPIO bias to TIP).\n'
+             'TIP goes directly to ADC. Enabled resistor mode drives bias HIGH; pot/disabled mode is high impedance.\n'
+             'Use passive 0-10k pedals and recapture heel/toe after rewiring. No active pedal interface or 1.5x scaling.\n'
              'Manual esptool write_flash offsets: bootloader.bin 0x0, partitions.bin 0x8000, firmware.bin 0x20000.\n'
              'The versioned application alone requires an existing compatible bootloader and partition table.\n'
              'Export controller settings before updating; avoid full erase to preserve compatible NVS settings.\n')

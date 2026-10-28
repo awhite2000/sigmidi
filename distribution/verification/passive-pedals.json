@@ -1,0 +1,23 @@
+{
+  "status": "software verified; hardware not bench tested",
+  "build_id": "9288f3d5c0a6",
+  "source_sha256": "9288f3d5c0a65f38bf9762731590ae3caa275ab03cdf576f7b1fd8746a4094b7",
+  "pedals": {
+    "per_input_resistors_ohms": [
+      5100,
+      10000
+    ],
+    "active_interface": false,
+    "ADC_gain": 1,
+    "resistor_bias_state": "HIGH only if enabled",
+    "pot_disabled_boot_state": "high impedance, internal pulls off",
+    "nominal_10k_resistor_mv": 1650,
+    "nominal_10k_pot_mv": 2185.430463576159,
+    "ring_short_current_mA": 0.6470588235294118
+  },
+  "unit_integration_tests": "passed",
+  "full_ESP32_C6_build": "passed",
+  "test_log_sha256": "66c07cd66863214f3086724546d28d1baee1245b862ee188a8e1eed5f163b4a3",
+  "hardware_flash_tested": false,
+  "pedal_recalibration_required_after_rewiring": true
+}

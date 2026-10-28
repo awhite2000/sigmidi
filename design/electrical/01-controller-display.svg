@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 990" role="img" aria-label="Controller and display - external pins">
+<rect x="0" y="0" width="1400" height="990" fill="white" stroke="none"/>
+<text x="42" y="42" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#183044" text-anchor="start">SIGMIDI</text>
+<text x="195" y="41" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">FOOT CONTROLLER  /  v0.1</text>
+<text x="42" y="78" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#183044" text-anchor="start">Controller and display - external pins</text>
+<text x="42" y="104" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">Purchased boards are black boxes. Printed pin labels, logical GPIO names and external nets are shown together.</text>
+<line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
+<line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
+<text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">1 / 7  |  28 OCT 2026</text>
+<text x="42" y="154" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">U1  DFRobot DFR1075</text>
+<text x="42" y="180" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">Top view, USB-C up. Physical names include labels from both faces; outline is not to scale.</text>
+<rect x="300" y="211" width="270" height="595" fill="#f6f8fa" stroke="#183044"/>
+<rect x="386" y="198" width="98" height="31" fill="white" stroke="#183044"/>
+<text x="435" y="219" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="middle">USB-C</text>
+<text x="435" y="252" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#183044" text-anchor="middle">DFR1075</text>
+<text x="90" y="231" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#183044" text-anchor="start">LOGICAL GPIO / EXTERNAL NET</text>
+<text x="601" y="231" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#183044" text-anchor="start">LOGICAL GPIO / EXTERNAL NET</text>
+<circle cx="312" cy="280" r="4" stroke="#526575" fill="white"/>
+<text x="327" y="284" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">RST</text>
+<line x1="312" y1="309" x2="275" y2="309" stroke="#ba344b" stroke-width="1.5"/>
+<circle cx="312" cy="309" r="4" stroke="#ba344b" fill="white"/>
+<text x="327" y="313" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">3V3</text>
+<text x="267" y="313" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#ba344b" text-anchor="end">P2:2  |  3V3  |  3V3</text>
+<circle cx="312" cy="338" r="4" stroke="#526575" fill="white"/>
+<text x="327" y="342" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">NC</text>
+<line x1="312" y1="367" x2="275" y2="367" stroke="#183044" stroke-width="1.5"/>
+<circle cx="312" cy="367" r="4" stroke="#183044" fill="white"/>
+<text x="327" y="371" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">GND</text>
+<text x="267" y="371" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#183044" text-anchor="end">P2:4  |  GND  |  GND</text>
+<circle cx="312" cy="396" r="4" stroke="#526575" fill="white"/>
+<text x="327" y="400" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">NC</text>
+<line x1="312" y1="425" x2="275" y2="425" stroke="#2164b4" stroke-width="1.5"/>
+<circle cx="312" cy="425" r="4" stroke="#2164b4" fill="white"/>
+<text x="327" y="429" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">23/SCK</text>
+<text x="267" y="429" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#2164b4" text-anchor="end">P2:6  |  GPIO23  |  LCD_CLK</text>
+<line x1="312" y1="454" x2="275" y2="454" stroke="#2164b4" stroke-width="1.5"/>
+<circle cx="312" cy="454" r="4" stroke="#2164b4" fill="white"/>
+<text x="327" y="458" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">22/MO</text>
+<text x="267" y="458" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#2164b4" text-anchor="end">P2:7  |  GPIO22  |  LCD_DIN</text>
+<line x1="312" y1="483" x2="275" y2="483" stroke="#087e89" stroke-width="1.5"/>
+<circle cx="312" cy="483" r="4" stroke="#087e89" fill="white"/>
+<text x="327" y="487" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">21/MI</text>
+<text x="267" y="487" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#087e89" text-anchor="end">P2:8  |  GPIO21  |  P2_MODE</text>
+<circle cx="312" cy="512" r="4" stroke="#526575" fill="white"/>
+<text x="327" y="516" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">20/SCL</text>
+<line x1="312" y1="541" x2="275" y2="541" stroke="#2164b4" stroke-width="1.5"/>
+<circle cx="312" cy="541" r="4" stroke="#2164b4" fill="white"/>
+<text x="327" y="545" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">19/SDA</text>
+<text x="267" y="545" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#2164b4" text-anchor="end">P2:10  |  GPIO19  |  LCD_DC</text>
+<circle cx="312" cy="570" r="4" stroke="#526575" fill="white"/>
+<text x="327" y="574" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">9/D9</text>
+<line x1="312" y1="599" x2="275" y2="599" stroke="#2164b4" stroke-width="1.5"/>
+<circle cx="312" cy="599" r="4" stroke="#2164b4" fill="white"/>
+<text x="327" y="603" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">18/D7</text>
+<text x="267" y="603" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#2164b4" text-anchor="end">P2:12  |  GPIO18  |  LCD_CS</text>
+<line x1="312" y1="628" x2="275" y2="628" stroke="#986300" stroke-width="1.5"/>
+<circle cx="312" cy="628" r="4" stroke="#986300" fill="white"/>
+<text x="327" y="632" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">1/D6</text>
+<text x="267" y="632" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#986300" text-anchor="end">P2:13  |  GPIO1  |  LADDER</text>
+<circle cx="312" cy="657" r="4" stroke="#526575" fill="white"/>
+<text x="327" y="661" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">NC</text>
+<line x1="312" y1="686" x2="275" y2="686" stroke="#2164b4" stroke-width="1.5"/>
+<circle cx="312" cy="686" r="4" stroke="#2164b4" fill="white"/>
+<text x="327" y="690" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">14/D3</text>
+<text x="267" y="690" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#2164b4" text-anchor="end">P2:15  |  GPIO14  |  LCD_RST</text>
+<circle cx="312" cy="715" r="4" stroke="#526575" fill="white"/>
+<text x="327" y="719" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">8/D2</text>
+<line x1="312" y1="744" x2="275" y2="744" stroke="#8650aa" stroke-width="1.5"/>
+<circle cx="312" cy="744" r="4" stroke="#8650aa" fill="white"/>
+<text x="327" y="748" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">16/TX</text>
+<text x="267" y="748" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#8650aa" text-anchor="end">P2:17  |  GPIO16  |  LED_GPIO</text>
+<line x1="312" y1="773" x2="275" y2="773" stroke="#25734a" stroke-width="1.5"/>
+<circle cx="312" cy="773" r="4" stroke="#25734a" fill="white"/>
+<text x="327" y="777" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="start">17/RX</text>
+<text x="267" y="777" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#25734a" text-anchor="end">P2:18  |  GPIO17  |  ENC_SW</text>
+<line x1="558" y1="396" x2="595" y2="396" stroke="#ba344b" stroke-width="1.5"/>
+<circle cx="558" cy="396" r="4" stroke="#ba344b" fill="white"/>
+<text x="543" y="400" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">VIN</text>
+<text x="603" y="400" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#ba344b" text-anchor="start">P1:1  |  VCC  |  +5V</text>
+<line x1="558" y1="425" x2="595" y2="425" stroke="#ba344b" stroke-width="1.5"/>
+<circle cx="558" cy="425" r="4" stroke="#ba344b" fill="white"/>
+<text x="543" y="429" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">3V3</text>
+<text x="603" y="429" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#ba344b" text-anchor="start">P1:2  |  3V3  |  3V3</text>
+<line x1="558" y1="454" x2="595" y2="454" stroke="#183044" stroke-width="1.5"/>
+<circle cx="558" cy="454" r="4" stroke="#183044" fill="white"/>
+<text x="543" y="458" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">GND</text>
+<text x="603" y="458" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#183044" text-anchor="start">P1:3  |  GND  |  GND</text>
+<line x1="558" y1="483" x2="595" y2="483" stroke="#087e89" stroke-width="1.5"/>
+<circle cx="558" cy="483" r="4" stroke="#087e89" fill="white"/>
+<text x="543" y="487" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">SCL</text>
+<text x="603" y="487" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#087e89" text-anchor="start">P1:4  |  GPIO20  |  P1_MODE</text>
+<circle cx="558" cy="512" r="4" stroke="#526575" fill="white"/>
+<text x="543" y="516" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">SDA</text>
+<circle cx="558" cy="541" r="4" stroke="#526575" fill="white"/>
+<text x="543" y="545" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">5/A4/LP_TX</text>
+<circle cx="558" cy="570" r="4" stroke="#526575" fill="white"/>
+<text x="543" y="574" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">4/A3/LP_RX</text>
+<line x1="558" y1="599" x2="595" y2="599" stroke="#087e89" stroke-width="1.5"/>
+<circle cx="558" cy="599" r="4" stroke="#087e89" fill="white"/>
+<text x="543" y="603" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">3/A2</text>
+<text x="603" y="603" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#087e89" text-anchor="start">P1:8  |  GPIO3  |  P2_ADC</text>
+<line x1="558" y1="628" x2="595" y2="628" stroke="#087e89" stroke-width="1.5"/>
+<circle cx="558" cy="628" r="4" stroke="#087e89" fill="white"/>
+<text x="543" y="632" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">2/A1</text>
+<text x="603" y="632" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#087e89" text-anchor="start">P1:9  |  GPIO2  |  P1_ADC</text>
+<circle cx="558" cy="657" r="4" stroke="#526575" fill="white"/>
+<text x="543" y="661" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">NC</text>
+<circle cx="558" cy="686" r="4" stroke="#526575" fill="white"/>
+<text x="543" y="690" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">15/D13</text>
+<line x1="558" y1="715" x2="595" y2="715" stroke="#25734a" stroke-width="1.5"/>
+<circle cx="558" cy="715" r="4" stroke="#25734a" fill="white"/>
+<text x="543" y="719" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">6/D12/LP_SDA</text>
+<text x="603" y="719" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#25734a" text-anchor="start">P1:12  |  GPIO6  |  ENC_A</text>
+<line x1="558" y1="744" x2="595" y2="744" stroke="#25734a" stroke-width="1.5"/>
+<circle cx="558" cy="744" r="4" stroke="#25734a" fill="white"/>
+<text x="543" y="748" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">7/D11/LP_SCL</text>
+<text x="603" y="748" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#25734a" text-anchor="start">P1:13  |  GPIO7  |  ENC_B</text>
+<circle cx="558" cy="773" r="4" stroke="#526575" fill="white"/>
+<text x="543" y="777" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">NC</text>
+<text x="435" y="792" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#526575" text-anchor="middle">PRINTED BOARD LABELS</text>
+<text x="940" y="154" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">U2  Waveshare 24382</text>
+<text x="940" y="180" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#183044" text-anchor="start">P2 - 8-pin GH1.25 connector</text>
+<rect x="940" y="202" width="418" height="34" fill="#e9f0f5" stroke="#d6e0e6"/>
+<text x="949" y="225.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">Pin</text>
+<text x="987" y="225.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">LCD label</text>
+<text x="1109" y="225.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">DFRobot physical / logical</text>
+<line x1="940" y1="236" x2="1358" y2="236" stroke="#d6e0e6" stroke-width="0.6"/>
+<text x="949" y="259.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">1</text>
+<text x="987" y="259.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">BL</text>
+<text x="1109" y="259.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">3V3</text>
+<line x1="940" y1="270" x2="1358" y2="270" stroke="#d6e0e6" stroke-width="0.6"/>
+<rect x="940" y="270" width="418" height="34" fill="#f6f8fa" stroke="none"/>
+<text x="949" y="293.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">2</text>
+<text x="987" y="293.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">RST</text>
+<text x="1109" y="293.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">D3 / GPIO14</text>
+<line x1="940" y1="304" x2="1358" y2="304" stroke="#d6e0e6" stroke-width="0.6"/>
+<text x="949" y="327.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">3</text>
+<text x="987" y="327.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">D/C</text>
+<text x="1109" y="327.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">SDA / GPIO19</text>
+<line x1="940" y1="338" x2="1358" y2="338" stroke="#d6e0e6" stroke-width="0.6"/>
+<rect x="940" y="338" width="418" height="34" fill="#f6f8fa" stroke="none"/>
+<text x="949" y="361.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">4</text>
+<text x="987" y="361.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">CS</text>
+<text x="1109" y="361.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">D7 / GPIO18</text>
+<line x1="940" y1="372" x2="1358" y2="372" stroke="#d6e0e6" stroke-width="0.6"/>
+<text x="949" y="395.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">5</text>
+<text x="987" y="395.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">SCL / CLK</text>
+<text x="1109" y="395.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">SCK / GPIO23</text>
+<line x1="940" y1="406" x2="1358" y2="406" stroke="#d6e0e6" stroke-width="0.6"/>
+<rect x="940" y="406" width="418" height="34" fill="#f6f8fa" stroke="none"/>
+<text x="949" y="429.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">6</text>
+<text x="987" y="429.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">SDA / DIN</text>
+<text x="1109" y="429.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">MOSI (MO) / GPIO22</text>
+<line x1="940" y1="440" x2="1358" y2="440" stroke="#d6e0e6" stroke-width="0.6"/>
+<text x="949" y="463.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">7</text>
+<text x="987" y="463.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">GND</text>
+<text x="1109" y="463.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">GND</text>
+<line x1="940" y1="474" x2="1358" y2="474" stroke="#d6e0e6" stroke-width="0.6"/>
+<rect x="940" y="474" width="418" height="34" fill="#f6f8fa" stroke="none"/>
+<text x="949" y="497.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">8</text>
+<text x="987" y="497.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">VCC</text>
+<text x="1109" y="497.12" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">3V3</text>
+<line x1="940" y1="508" x2="1358" y2="508" stroke="#d6e0e6" stroke-width="0.6"/>
+<rect x="940" y="503" width="418" height="133" fill="#edf4fc" stroke="#d6e0e6"/>
+<text x="956" y="529" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">SCL and SDA are SPI signals here.</text>
+<text x="956" y="554" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">No MISO connection is required.</text>
+<text x="956" y="579" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">BL ties to VCC (3V3) for always-on backlight.</text>
+<text x="956" y="604" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Use the external P2, not the LCD FPC.</text>
+<text x="940" y="684" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Display orientation</text>
+<text x="940" y="711" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Landscape 280 x 240 pixels.</text>
+<text x="940" y="736" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Left variant: firmware rotation 180 degrees.</text>
+<text x="940" y="761" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Right variant: firmware rotation 0 degrees.</text>
+<text x="940" y="786" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">The electrical wiring stays identical.</text>
+<rect x="42" y="831" width="855" height="83" fill="#edf4fc" stroke="#d6e0e6"/>
+<text x="58" y="855" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">All printed labels retained inside; only connected pins have external GPIO / net callouts.</text>
+<text x="58" y="878" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">P1:5 duplicates SDA/GPIO19; P2:9 duplicates SCL/GPIO20. Leave those pads unwired.</text>
+<text x="58" y="901" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">MOSI = printed MO; MISO = printed MI. BAT and GDI connectors are unused.</text>
+</svg>

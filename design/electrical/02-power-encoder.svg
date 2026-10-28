@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 990" role="img" aria-label="Power distribution and rotary encoder">
+<rect x="0" y="0" width="1400" height="990" fill="white" stroke="none"/>
+<text x="42" y="42" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#183044" text-anchor="start">SIGMIDI</text>
+<text x="195" y="41" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">FOOT CONTROLLER  /  v0.1</text>
+<text x="42" y="78" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#183044" text-anchor="start">Power distribution and rotary encoder</text>
+<text x="42" y="104" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">9V center-negative input; 3V3 logic; external 5V rail for the controller and optional LEDs.</text>
+<line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
+<line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
+<text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">2 / 7  |  28 OCT 2026</text>
+<text x="42" y="158" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">External power</text>
+<rect x="42" y="190" width="224" height="140" fill="#f6f8fa" stroke="#183044"/>
+<text x="57" y="216" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#183044" text-anchor="start">J1  5.5 x 2.1mm socket</text>
+<text x="57" y="249" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#183044" text-anchor="start">CENTER = GND (-)</text>
+<text x="57" y="291" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#183044" text-anchor="start">SLEEVE = +9V (+)</text>
+<text x="57" y="318" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">18mm overall, M8 thread</text>
+<line x1="266" y1="286" x2="430" y2="286" stroke="#a35b12" stroke-width="1.8"/>
+<circle cx="325" cy="286" r="2.6" stroke="#a35b12" fill="#a35b12"/>
+<text x="333" y="281" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#a35b12" text-anchor="start">+9V</text>
+<line x1="266" y1="244" x2="340" y2="244" stroke="#183044" stroke-width="1.8"/>
+<line x1="340" y1="244" x2="340" y2="253" stroke="#183044" stroke-width="1.8"/>
+<line x1="330" y1="253" x2="350" y2="253" stroke="#183044" stroke-width="1.8"/>
+<line x1="334" y1="258" x2="346" y2="258" stroke="#183044" stroke-width="1.8"/>
+<line x1="338" y1="263" x2="342" y2="263" stroke="#183044" stroke-width="1.8"/>
+<rect x="430" y="185" width="290" height="150" fill="white" stroke="#183044"/>
+<text x="452" y="212" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#183044" text-anchor="start">U3  Pololu S13V10F5</text>
+<text x="452" y="237" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">#4083 / retailer 1178565</text>
+<text x="443" y="281" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">VIN</text>
+<text x="710" y="281" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="end">VOUT / 5V</text>
+<text x="575" y="322" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="middle">GND</text>
+<line x1="575" y1="335" x2="575" y2="366" stroke="#183044" stroke-width="1.8"/>
+<line x1="575" y1="366" x2="575" y2="375" stroke="#183044" stroke-width="1.8"/>
+<line x1="565" y1="375" x2="585" y2="375" stroke="#183044" stroke-width="1.8"/>
+<line x1="569" y1="380" x2="581" y2="380" stroke="#183044" stroke-width="1.8"/>
+<line x1="573" y1="385" x2="577" y2="385" stroke="#183044" stroke-width="1.8"/>
+<line x1="720" y1="286" x2="1280" y2="286" stroke="#ba344b" stroke-width="1.8"/>
+<circle cx="775" cy="286" r="2.6" stroke="#ba344b" fill="#ba344b"/>
+<text x="783" y="281" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="start">+5V</text>
+<line x1="1010" y1="286" x2="1010" y2="250" stroke="#ba344b" stroke-width="1.8"/>
+<circle cx="1010" cy="250" r="2.6" stroke="#ba344b" fill="#ba344b"/>
+<text x="1018" y="245" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="start">U1 P1:1 VCC/VIN</text>
+<line x1="1280" y1="286" x2="1280" y2="337" stroke="#ba344b" stroke-width="1.8"/>
+<circle cx="1280" cy="337" r="2.6" stroke="#ba344b" fill="#ba344b"/>
+<text x="1272" y="332" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="end">+5V_LED (sheet 6)</text>
+<circle cx="370" cy="286" r="3" stroke="#a35b12" fill="#a35b12"/>
+<line x1="370" y1="286" x2="370" y2="340" stroke="#a35b12" stroke-width="1.8"/>
+<line x1="370" y1="340" x2="370" y2="364" stroke="#183044" stroke-width="1.8"/>
+<line x1="359" y1="364" x2="381" y2="364" stroke="#183044" stroke-width="1.8"/>
+<line x1="359" y1="371" x2="381" y2="371" stroke="#183044" stroke-width="1.8"/>
+<line x1="370" y1="371" x2="370" y2="375" stroke="#183044" stroke-width="1.8"/>
+<text x="387" y="366" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="start">C1</text>
+<text x="387" y="383" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">47uF / 35V</text>
+<text x="350" y="362" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">+</text>
+<line x1="370" y1="375" x2="370" y2="384" stroke="#183044" stroke-width="1.8"/>
+<line x1="360" y1="384" x2="380" y2="384" stroke="#183044" stroke-width="1.8"/>
+<line x1="364" y1="389" x2="376" y2="389" stroke="#183044" stroke-width="1.8"/>
+<line x1="368" y1="394" x2="372" y2="394" stroke="#183044" stroke-width="1.8"/>
+<text x="42" y="405" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">C1: place close to VIN/GND; electrolytic positive terminal goes to +9V.</text>
+<rect x="770" y="330" width="370" height="106" fill="#f6f8fa" stroke="#d6e0e6"/>
+<text x="786" y="354" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">U1 external supply terminals:</text>
+<text x="786" y="377" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">VIN (P1:1) = +5V input</text>
+<text x="786" y="400" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">3V3 (P1:2 / P2:2) = logic supply output</text>
+<text x="786" y="423" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">GND (P1:3 / P2:4) = common return</text>
+<text x="42" y="461" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">USB-C programming and supply</text>
+<text x="42" y="489" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Use the DFRobot external USB-C port directly for programming.</text>
+<text x="42" y="513" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Connect external +5V to VIN (P1:1); do not wire to USB VBUS.</text>
+<text x="42" y="537" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">USB-only operation does not supply the external +5V_LED rail in this wiring.</text>
+<text x="42" y="561" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">U3 VIN/GND/VOUT are its external terminals. Use a 9V DC center-negative adapter.</text>
+<text x="42" y="619" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">SW11  20-detent encoder with click - direct wiring</text>
+<text x="42" y="645" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">No external resistors or capacitors. Firmware enables internal pull-ups on GPIO6, GPIO7 and GPIO17.</text>
+<rect x="80" y="673" width="260" height="193" fill="#f1f8f3" stroke="#25734a"/>
+<text x="97" y="700" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">SW11  ENCODER</text>
+<text x="97" y="727" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">20 detents + click</text>
+<text x="97" y="757" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">Passive contacts</text>
+<rect x="850" y="673" width="470" height="193" fill="#f6f8fa" stroke="#183044"/>
+<text x="870" y="699" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">U1  DFRobot DFR1075</text>
+<text x="325" y="725" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">A</text>
+<circle cx="340" cy="721" r="3" stroke="#25734a" fill="white"/>
+<line x1="340" y1="721" x2="850" y2="721" stroke="#25734a" stroke-width="1.8"/>
+<circle cx="590" cy="721" r="2.6" stroke="#25734a" fill="#25734a"/>
+<text x="598" y="716" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#25734a" text-anchor="start">ENC_A</text>
+<circle cx="850" cy="721" r="3" stroke="#25734a" fill="white"/>
+<text x="870" y="725" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">D12 / GPIO6 (P1:12)</text>
+<text x="325" y="757" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">B</text>
+<circle cx="340" cy="753" r="3" stroke="#25734a" fill="white"/>
+<line x1="340" y1="753" x2="850" y2="753" stroke="#25734a" stroke-width="1.8"/>
+<circle cx="590" cy="753" r="2.6" stroke="#25734a" fill="#25734a"/>
+<text x="598" y="748" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#25734a" text-anchor="start">ENC_B</text>
+<circle cx="850" cy="753" r="3" stroke="#25734a" fill="white"/>
+<text x="870" y="757" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">D11 / GPIO7 (P1:13)</text>
+<text x="325" y="789" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">SW1</text>
+<circle cx="340" cy="785" r="3" stroke="#25734a" fill="white"/>
+<line x1="340" y1="785" x2="850" y2="785" stroke="#25734a" stroke-width="1.8"/>
+<circle cx="590" cy="785" r="2.6" stroke="#25734a" fill="#25734a"/>
+<text x="598" y="780" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#25734a" text-anchor="start">ENC_SW</text>
+<circle cx="850" cy="785" r="3" stroke="#25734a" fill="white"/>
+<text x="870" y="789" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">RX / GPIO17 (P2:18)</text>
+<text x="325" y="821" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">C</text>
+<circle cx="340" cy="817" r="3" stroke="#183044" fill="white"/>
+<text x="325" y="853" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">SW2</text>
+<circle cx="340" cy="849" r="3" stroke="#183044" fill="white"/>
+<polyline points="340,817 600,817 600,849" fill="none" stroke="#183044" stroke-width="1.8"/>
+<line x1="340" y1="849" x2="850" y2="849" stroke="#183044" stroke-width="1.8"/>
+<circle cx="600" cy="849" r="3" stroke="#183044" fill="#183044"/>
+<line x1="600" y1="849" x2="600" y2="858" stroke="#183044" stroke-width="1.8"/>
+<line x1="590" y1="858" x2="610" y2="858" stroke="#183044" stroke-width="1.8"/>
+<line x1="594" y1="863" x2="606" y2="863" stroke="#183044" stroke-width="1.8"/>
+<line x1="598" y1="868" x2="602" y2="868" stroke="#183044" stroke-width="1.8"/>
+<circle cx="850" cy="849" r="3" stroke="#183044" fill="white"/>
+<text x="870" y="853" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">GND (P1:3 / P2:4)</text>
+<text x="80" y="900" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">Functional pin arrangement: verify A/B/C and the two click terminals on the selected encoder.</text>
+<text x="80" y="921" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">Software decodes A/B and debounces the click. Keep the encoder harness short.</text>
+</svg>

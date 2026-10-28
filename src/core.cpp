@@ -136,7 +136,8 @@ int decodeLadder(const Config &c, float mv) {
     return -1;
 }
 int pedalValue(const Pedal &p, float adc, int previous) {
-    float v = adc * 1.5f, x;
+    // Passive pedal TIP is wired directly to the ADC; no buffer/divider gain.
+    float v = adc, x;
     if (!finite(v) || v < 0 || v > 3400)
         return -1;
     if (p.resistor) {

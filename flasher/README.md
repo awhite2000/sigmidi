@@ -26,6 +26,8 @@ The page validates firmware hashes and compatibility before enabling installatio
 
 The BLE name is **SIGMIDI Foot Controller v0.1**. On the controller, open **Wi-Fi Setup**, join the displayed network, open **http://192.168.4.1/** and use the displayed password. Configure the ladder count, calibrate inputs and assign MIDI actions.
 
+This firmware uses passive pedal inputs with two resistors per controller input: 5.1 kΩ from 3V3 to RING and 10 kΩ from GPIO20/21 to TIP. TIP connects directly to ADC GPIO2/3; SLEEVE connects to GND. Resistor mode drives the bias GPIO HIGH; potentiometer and disabled modes leave it at high impedance. Recapture pedal heel/toe after rewiring. The external pedals are unpowered 0–10 kΩ variable resistors or potentiometers.
+
 Choose **Left · Screen on left** for 180° display rotation and A–E / 1–5 list order from left to right. **Right · Screen on right** uses 0° and reverses each row. Left is the default. MIDI actions, names, calibration and LED assignments belong to physical taps. Save the selected variant.
 
 ## Flash layout and integrity

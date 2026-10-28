@@ -98,23 +98,31 @@ int main() {
     Pedal p;
     p.maxOhms = 5000;
     assert(pedalValue(p, 0) == 0);
-    assert(pedalValue(p, 1100.0f / 1.5f) == 127);
-    assert(pedalValue(p, 2200) == -1);
+    assert(pedalValue(p, 1100.0f) == 127); // 5k to GND with 10k bias at 3.3V
+    assert(pedalValue(p, 3300) == -1);
+    p.maxOhms = 10000;
+    assert(pedalValue(p, 1650) == 127);
+    assert(pedalValue(p, 1100) == 64);
     p.resistor = false;
     p.heel = 100;
     p.toe = 3100;
-    assert(pedalValue(p, 100 / 1.5f) == 0);
-    assert(pedalValue(p, 3100 / 1.5f) == 127);
+    assert(pedalValue(p, 100) == 0);
+    assert(pedalValue(p, 3100) == 127);
     p.invert = true;
-    assert(pedalValue(p, 3100 / 1.5f) == 0);
+    assert(pedalValue(p, 3100) == 0);
     p.invert = false;
     p.logarithmic = true;
     int previous = -1;
     for (int i = 0; i <= 100; i++) {
-        int value = pedalValue(p, (100 + i * 30) / 1.5f);
+        int value = pedalValue(p, 100 + i * 30);
         assert(value >= previous);
         previous = value;
     }
+    p.logarithmic = false;
+    p.heel = 0;
+    p.toe = 3300.0f * 10000 / (5100 + 10000);
+    assert(pedalValue(p, p.toe) == 127); // full travel of a passive 10k pot
+    assert(pedalValue(p, p.toe / 2) == 64);
     assert(Message{}.delayMs == 5);
     c.switches[0].press.messages[0].delayMs = 0;
     c.switches[0].release.messages[0].delayMs = 0;

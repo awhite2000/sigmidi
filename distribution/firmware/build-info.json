@@ -2,9 +2,9 @@
   "name": "SIGMIDI Foot Controller",
   "version": "0.1",
   "firmware_name": "sigmidi-foot-controller-0.1.bin",
-  "build_id": "ec1bdfe45a42",
-  "built_at": "2026-10-28T15:45:07.955769+00:00",
-  "source_sha256": "ec1bdfe45a42f8b8942e4f94efe272d9d5c85d262450668ed90f3252aa5a8a00",
+  "build_id": "9288f3d5c0a6",
+  "built_at": "2026-10-28T20:05:19.730759+00:00",
+  "source_sha256": "9288f3d5c0a65f38bf9762731590ae3caa275ab03cdf576f7b1fd8746a4094b7",
   "source_files": {
     "src/CMakeLists.txt": "0469cd123a3c0880a7a48b7cf81419f9dd5e0a48d2bc5152226fbfabee1bd237",
     "src/app.hpp": "16381d7da34c29f4326d11c5ee221663f29d6cd056cb5e22ed3ed39023943911",
@@ -12,11 +12,11 @@
     "src/branding.hpp": "8399cbd5f124434e18b0e7ed93c24ff178ee098b3ad23573fd95c6d6cd8c5b98",
     "src/config.cpp": "6f15ebd586455adad676c91512ed60dd1c046f55f9b735cbc3aaf08004698e75",
     "src/config.hpp": "6edf96183c505f393d6a82dc3fc1b8db0f10331ea0d7543322472cc3de073059",
-    "src/core.cpp": "28180773b6da07e0bc8c2455e66c754ed145c7705141d1762176c67835994fb1",
+    "src/core.cpp": "2e3410f708ef848664c1f021c80a22233b311bb560188d44668ee64840f84b4f",
     "src/core.hpp": "59b0b5eee32b50e56007b807168173179a89fb2f8c7e99349b321e74e0953b9a",
     "src/display.cpp": "4dbd1edafaceab7567403486db88d120527cd24053a2f26e8df73dbaa8080fb4",
     "src/display.hpp": "1a1bea047fc1a7ba40b554020bdcb7026867010ed25021084594d69b264974fe",
-    "src/hardware.cpp": "b5b1a473523eb7d633c9f08dff402be9396f714b8ace166d0b172edd87bcd573",
+    "src/hardware.cpp": "8377f8c7a499c83a67c82d5c7d972e48a61719dc469b5b46435d1d9a2bd475a8",
     "src/led_hardware.cpp": "5f7090ea7219ede8a65ddf8612f7d9c973de790a39919b400d6a2c20abaf4e8e",
     "src/leds.cpp": "8b347d42395af9ab5779f5dbf112db07712140823447b623f48839cfd6a8fccc",
     "src/leds.hpp": "1c1fc525cbc577335c11bf8a6f125d5f394e208a49cb292b49c9f584866b92a8",
@@ -32,9 +32,9 @@
     "partitions.csv": "0fc87e012db3c478107e047978fd142c43f104edb0dfb5546537d16f49a95300"
   },
   "sha256": {
-    "bootloader.bin": "591cb790e4083cc848c732fabfbc291223a4832def68d0669332e2ed30e5dbf6",
+    "bootloader.bin": "d6e5f4e402531dfc0e16193bdd5c65c9b4b0ed0b99eb5108f60bb0a9aa7957fd",
     "partitions.bin": "37f9719078927bf594a883c81ad80dd4e6d179c8db193fbded90851178aa39e7",
-    "firmware.bin": "8b666986f19cd70bdcb9d153052811d2610ba747761ab80e076cbd9a060a8242"
+    "firmware.bin": "3c277b12cc06bd90404e339ca15c48b08f5d4aa665392c4146e2b8fe4f853a30"
   },
   "chip": "ESP32-C6",
   "flash_bytes": 4194304,

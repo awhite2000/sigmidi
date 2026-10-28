@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 990" role="img" aria-label="Continuous pedal input 1 - passive">
+<rect x="0" y="0" width="1400" height="990" fill="white" stroke="none"/>
+<text x="42" y="42" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#183044" text-anchor="start">SIGMIDI</text>
+<text x="195" y="41" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">FOOT CONTROLLER  /  v0.1</text>
+<text x="42" y="78" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#183044" text-anchor="start">Continuous pedal input 1 - passive</text>
+<text x="42" y="104" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">Two resistors inside the controller. External pedal: passive variable resistor or potentiometer, 0-10k.</text>
+<line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
+<line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
+<text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">4 / 7  |  28 OCT 2026</text>
+<text x="42" y="155" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Inside the controller - only two resistors</text>
+<rect x="700" y="190" width="230" height="390" fill="#f6f8fa" stroke="#183044"/>
+<text x="715" y="217" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#183044" text-anchor="start">J2  TOP</text>
+<text x="715" y="241" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Pedal 1 TRS socket</text>
+<circle cx="80" cy="280" r="2.6" stroke="#ba344b" fill="#ba344b"/>
+<text x="88" y="275" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="start">3V3</text>
+<line x1="180" y1="280" x2="305.0" y2="280.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="345.0" y1="280.0" x2="470" y2="280" stroke="#183044" stroke-width="1.8"/>
+<rect x="305.0" y="273.0" width="40" height="14" fill="white" stroke="#183044"/>
+<text x="325.0" y="253.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">R20</text>
+<text x="325.0" y="268.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">5.1k</text>
+<line x1="80" y1="280" x2="180" y2="280" stroke="#ba344b" stroke-width="1.8"/>
+<line x1="470" y1="280" x2="700" y2="280" stroke="#087e89" stroke-width="1.8"/>
+<circle cx="700" cy="280" r="4" stroke="#087e89" fill="white"/>
+<text x="715" y="285" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">11  RING / reference</text>
+<circle cx="80" cy="365" r="2.6" stroke="#087e89" fill="#087e89"/>
+<text x="88" y="360" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#087e89" text-anchor="start">P1_ADC</text>
+<line x1="80" y1="365" x2="700" y2="365" stroke="#087e89" stroke-width="1.8"/>
+<text x="80" y="398" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">U1 A1 / GPIO2 (P1:9)</text>
+<circle cx="700" cy="365" r="4" stroke="#087e89" fill="white"/>
+<text x="715" y="370" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">12  TIP / signal</text>
+<circle cx="80" cy="475" r="2.6" stroke="#087e89" fill="#087e89"/>
+<text x="88" y="470" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#087e89" text-anchor="start">P1_MODE</text>
+<line x1="80" y1="475" x2="180" y2="475" stroke="#087e89" stroke-width="1.8"/>
+<line x1="180" y1="475" x2="305.0" y2="475.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="345.0" y1="475.0" x2="470" y2="475" stroke="#183044" stroke-width="1.8"/>
+<rect x="305.0" y="468.0" width="40" height="14" fill="white" stroke="#183044"/>
+<text x="325.0" y="448.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">R21</text>
+<text x="325.0" y="463.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">10k</text>
+<line x1="470" y1="475" x2="550" y2="475" stroke="#087e89" stroke-width="1.8"/>
+<line x1="550" y1="475" x2="550" y2="365" stroke="#087e89" stroke-width="1.8"/>
+<circle cx="550" cy="365" r="3" stroke="#087e89" fill="#087e89"/>
+<text x="80" y="509" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">U1 SCL / GPIO20 (P1:4)</text>
+<line x1="80" y1="550" x2="700" y2="550" stroke="#183044" stroke-width="1.8"/>
+<line x1="80" y1="550" x2="80" y2="559" stroke="#183044" stroke-width="1.8"/>
+<line x1="70" y1="559" x2="90" y2="559" stroke="#183044" stroke-width="1.8"/>
+<line x1="74" y1="564" x2="86" y2="564" stroke="#183044" stroke-width="1.8"/>
+<line x1="78" y1="569" x2="82" y2="569" stroke="#183044" stroke-width="1.8"/>
+<circle cx="700" cy="550" r="4" stroke="#183044" fill="white"/>
+<text x="715" y="555" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">10  SLEEVE / GND</text>
+<rect x="970" y="190" width="388" height="390" fill="#edf4fc" stroke="#d6e0e6"/>
+<text x="987" y="222" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Firmware bias state</text>
+<text x="987" y="253" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Resistor mode: mode GPIO = HIGH.</text>
+<text x="987" y="279" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Pot mode: mode GPIO = high impedance.</text>
+<text x="987" y="305" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Disabled / boot: high impedance.</text>
+<text x="987" y="331" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Internal pull-up and pull-down OFF.</text>
+<text x="987" y="357" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Never drive the bias GPIO LOW.</text>
+<text x="987" y="414" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Nominal values at 3.300V</text>
+<text x="987" y="443" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">10k variable resistor: TIP = 1650mV.</text>
+<text x="987" y="470" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">10k pot, full travel: TIP = 2185mV.</text>
+<text x="987" y="497" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Ring short current: about 0.65mA.</text>
+<text x="987" y="524" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">ADC measures TIP directly (gain = 1).</text>
+<rect x="42" y="621" width="632" height="285" fill="white" stroke="#d6e0e6"/>
+<text x="60" y="651" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Option A - three-wire potentiometer pedal</text>
+<circle cx="240" cy="694" r="2.6" stroke="#087e89" fill="#087e89"/>
+<text x="248" y="689" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#087e89" text-anchor="start">RING</text>
+<line x1="240" y1="694" x2="240.0" y2="742.5" stroke="#183044" stroke-width="1.8"/>
+<line x1="240.0" y1="780.5" x2="240" y2="829" stroke="#183044" stroke-width="1.8"/>
+<rect x="233.0" y="742.5" width="14" height="38" fill="white" stroke="#183044"/>
+<text x="227.0" y="756.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="end">POT</text>
+<text x="227.0" y="772.5" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="end">0-10k</text>
+<circle cx="240" cy="829" r="2.6" stroke="#183044" fill="#183044"/>
+<text x="232" y="824" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="end">SLEEVE</text>
+<line x1="510" y1="761" x2="247" y2="761" stroke="#087e89" stroke-width="1.8"/>
+<polyline points="260,752 247,761 261,767" fill="none" stroke="#087e89" stroke-width="1.8"/>
+<circle cx="510" cy="761" r="2.6" stroke="#087e89" fill="#087e89"/>
+<text x="502" y="756" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#087e89" text-anchor="end">TIP / wiper</text>
+<text x="60" y="875" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Capture actual heel and toe voltages after connecting.</text>
+<rect x="714" y="621" width="644" height="285" fill="white" stroke="#d6e0e6"/>
+<text x="732" y="651" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Option B - two-wire variable resistor pedal</text>
+<circle cx="770" cy="761" r="2.6" stroke="#087e89" fill="#087e89"/>
+<text x="778" y="756" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#087e89" text-anchor="start">TIP</text>
+<line x1="770" y1="761" x2="922.5" y2="761.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="962.5" y1="761.0" x2="1115" y2="761" stroke="#183044" stroke-width="1.8"/>
+<rect x="922.5" y="754.0" width="40" height="14" fill="white" stroke="#183044"/>
+<text x="942.5" y="734.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">PEDAL R</text>
+<text x="942.5" y="749.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">0-10k</text>
+<line x1="1115" y1="761" x2="1230" y2="761" stroke="#183044" stroke-width="1.8"/>
+<line x1="1230" y1="761" x2="1230" y2="770" stroke="#183044" stroke-width="1.8"/>
+<line x1="1220" y1="770" x2="1240" y2="770" stroke="#183044" stroke-width="1.8"/>
+<line x1="1224" y1="775" x2="1236" y2="775" stroke="#183044" stroke-width="1.8"/>
+<line x1="1228" y1="780" x2="1232" y2="780" stroke="#183044" stroke-width="1.8"/>
+<text x="1230" y="807" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">SLEEVE</text>
+<text x="732" y="851" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">RING unused; a TS plug may connect it to SLEEVE.</text>
+<text x="732" y="875" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Select resistor mode and configure maximum resistance.</text>
+<text x="42" y="927" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">No active pedal interface, scaling divider or external filter capacitors. J2 switched contacts remain NC; pad13 mechanical.</text>
+</svg>

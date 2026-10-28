@@ -1,0 +1,15 @@
+Quantity (10-switch maximum),References,Value,Package / type
+1,U1,DFRobot DFR1075 V1.1,ESP32-C6 board
+1,U2,Waveshare 24382,1.69 inch ST7789V2 LCD module
+1,J1,5.5x2.1mm center-negative,18mm barrel socket / M8
+1,U3,Pololu S13V10F5 #4083,5V 1A step-up/down module
+1,C1,47uF / 35V,capacitor
+1,SW11,20-detent rotary encoder + NO click,passive encoder
+3,R7 R21 R31,10k,1% resistor
+1,R8,20k,1% resistor
+1,C5,100nF,capacitor
+10,R9 R10 R11 R12 R13 R14 R15 R16 R17 R18,1k,1% resistor
+10,SW1 SW2 SW3 SW4 SW5 SW6 SW7 SW8 SW9 SW10,momentary NO,12mm footswitch
+1,J2,Amphenol ACJS-MHDC,dual switched TRS
+2,R20 R30,5.1k,1% resistor
+10,LED1 LED2 LED3 LED4 LED5 LED6 LED7 LED8 LED9 LED10,Pololu 2535,5mm WS2811 pixel

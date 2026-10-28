@@ -17,20 +17,20 @@ Use GPIO numbers in firmware, not Arduino D-label numbers. Do not connect a seco
 | Function | ESP32-C6 GPIO | Connection |
 | --- | --- | --- |
 | Switch ladder | 1 / ADC1_CH1 | Ladder sense node |
-| Pedal 1 | 2 / ADC1_CH2 | Scaled buffered pedal 1 signal |
-| Pedal 2 | 3 / ADC1_CH3 | Scaled buffered pedal 2 signal |
+| Pedal 1 | 2 / ADC1_CH2 | Direct passive pedal 1 TIP |
+| Pedal 2 | 3 / ADC1_CH3 | Direct passive pedal 2 TIP |
 | LCD DIN | 22 | SPI MOSI |
 | LCD CLK | 23 | SPI SCK |
 | LCD CS | 18 | Active-low chip select |
 | LCD DC | 19 | Data/command |
 | LCD RST | 14 | Active-low reset |
 | LCD BL | 3V3 | Always-on backlight |
-| Pedal 1 mode | 20 | Pull-up MOSFET control |
-| Pedal 2 mode | 21 | Pull-up MOSFET control |
+| Pedal 1 mode | 20 | 10k bias: HIGH in resistor mode, high impedance otherwise |
+| Pedal 2 mode | 21 | 10k bias: HIGH in resistor mode, high impedance otherwise |
 | Encoder A | 6 | Quadrature contact A |
 | Encoder B | 7 | Quadrature contact B |
 | Encoder click | 17 | Normally open push switch |
-| Pololu 2535 LED data (optional) | 16 / TX | Through 5 V SN74AHCT125 and 330 Ω to first pixel DIN |
+| Pololu 2535 LED data (optional) | 16 / TX | Directly to first Pololu 2535 DIN |
 
 LCD VCC → 3V3 and GND → GND; use the factory four-wire SPI configuration. No MISO signal is needed. Connect BL to 3V3 for always-on backlight; no additional GPIO is allocated. The display is not touch-sensitive. The module uses its supplied GH1.25 eight-pin connector; follow the signal names on the module, rather than wire colors. Landscape orientation uses a 280×240 drawing area, MADCTL 0x70 (RGB), RGB565 pixels, inversion on, and column/row offsets (20, 0): controller columns 20–299 and rows 0–239. The driver runs SPI at 10 MHz and applies the landscape mapping after vendor initialization. The saved Enclosure variant selects Right (0° screen, Right switch order) or Left (180° screen, mirrored switch order) through software stripe/window mapping; controller register settings remain the same. New configurations default to the preferred Left enclosure with the screen and ribbon on the left. For an existing saved setup choose Left, using Wi-Fi Settings → Enclosure variant or LCD EDIT CONFIG → ENCLOSURE. Verify physical viewing direction and red/blue color order on the actual module. Leave GPIO0 for the board's battery measurement and GPIO9 for BOOT. The assignment avoids GPIO4/5/8/15 strapping functions and USB pins 12/13. Confirm GPIO2 and GPIO3 header locations against the board pinout; these are chip GPIO numbers.
 
@@ -38,9 +38,9 @@ LCD VCC → 3V3 and GND → GND; use the factory four-wire SPI configuration. No
 
 Add a passive incremental quadrature encoder with 20 detents per revolution and an independent momentary push switch. Confirm the selected part's pulses-per-revolution and detent phase relationship: 20 detents does not necessarily mean 20 complete quadrature cycles.
 
-- Connect encoder common C to ground, A to GPIO6, and B to GPIO7.
-- Connect one push-switch terminal to GPIO17 and the other to ground.
-- Fit a 10 kΩ pull-up to 3V3 on each of A, B, and click. Add 1 kΩ series resistance between each contact node and its GPIO. Optionally fit 1 nF from each A/B GPIO to ground; use 100 nF at the click GPIO. Keep encoder wires short.
+- Connect encoder common C to GND, A directly to D12 / GPIO6 (P1:12), and B directly to D11 / GPIO7 (P1:13).
+- Connect one push-switch terminal directly to RX / GPIO17 (P2:18) and the other to GND.
+- No external resistors or capacitors are required. Firmware enables the GPIO internal pull-ups for A, B and click, decodes quadrature transitions and debounces the click in software. Keep encoder wires short.
 - Use GPIO6/7 for encoder input; external pin-based JTAG is unavailable. Use GPIO17 for the encoder click; UART0 RX is unavailable; do not attach a UART transmitter there. Use native USB for programming/debugging. Confirm header locations on the DFR1075 pinout.
 - Use a bare contact encoder or a module explicitly compatible with 3.3 V; verify terminal identification from the selected encoder datasheet.
 
@@ -93,29 +93,32 @@ Operation is one footswitch at a time. Simultaneous presses are outside the requ
 
 Each input supports a two-wire variable resistor or a three-wire potentiometer, independently selected. TRS wiring: tip = signal, ring = reference, sleeve = ground. Verify actual pedal polarity; provide a tip/ring swap adapter where needed. Two-wire pedals connect signal to ground through their variable resistance. A TS plug may short ring to sleeve, so the reference output must tolerate that condition.
 
-For each input:
+Each input needs **only two resistors inside the controller**, with no op-amp, MOSFET, clamp circuit, divider or external filter capacitor:
 
-1. Provide ring reference from 3V3 through 1 kΩ, limiting a ring-to-ground short to approximately 3.3 mA.
-2. Connect tip through 1 kΩ to the signal sensing node; add a 100 nF capacitor and appropriately selected low-leakage ESD/clamp protection at this interface.
-3. Feed the sensing node into one channel of a unity-gain-stable, rail-to-rail input/output buffer, MCP6002 powered at 3.3 V. One dual package handles both pedals; add 100 nF supply bypass.
-4. Buffer output → 10 kΩ → ADC node → 20 kΩ → ground. Add 100 nF at the ADC node. This scales nominal 0–3.3 V to 0–2.2 V without loading the pedal with the scaling divider. Firmware reconstructs the buffer voltage as `Vsignal = 1.5 × Vadc`; calibrate actual gain and endpoint headroom.
-5. Connect a selectable 10 kΩ pull-up from 3V3 to the tip side of the 1 kΩ input resistor. Switch it with a P-channel MOSFET: source to 3V3, drain to the 10 kΩ resistor, gate through 1 kΩ to the mode GPIO, and gate-to-source 100 kΩ. HIGH disables the pull-up (potentiometer mode); LOW enables it (resistor mode). Select a MOSFET specified for operation at −3.3 V gate drive and low leakage.
+| Connection | Pedal 1 | Pedal 2 |
+| --- | --- | --- |
+| TIP directly to ADC | A1 / GPIO2 (P1:9) | A2 / GPIO3 (P1:8) |
+| RING reference | 3V3 through 5.1 kΩ | 3V3 through 5.1 kΩ |
+| SLEEVE | GND | GND |
+| 10 kΩ from bias pin to TIP | SCL / GPIO20 (P1:4) | MISO / GPIO21 (P2:8) |
 
-The pull-up is disconnected by default at reset. Change mode with the pedal unplugged, configure GPIO HIGH before enabling output, then apply the saved mode. Ring reference is current-limited but remains powered; it is not switched by the mode control.
+Use 1% resistors. A 5.1 kΩ ring resistor limits a ring-to-ground short to about 0.65 mA at 3.3 V. It also limits a 10 kΩ potentiometer's nominal full-travel voltage to `3300 × 10000 / (5100 + 10000) = 2185 mV`; lower-resistance pots have a lower full-travel voltage. TIP is measured directly without a gain correction. A 10 kΩ pot's maximum source impedance is approximately 3.78 kΩ; validate acquisition settling and noise on the actual harness.
 
-In resistor mode the DC buffer input approximates the tip voltage. For pull-up `Rp = 10k`, use `Rpedal = Rp × Vsignal / (Vref − Vsignal)`. Account for leakage and reference tolerance; guard the denominator near open circuit. Normalize resistance against calibrated minimum and configured maximum (positive, at most 10 kΩ), then apply the response curve. Open circuit approaches 3.3 V before scaling, whereas a 10 kΩ pedal approaches 1.65 V.
+For an enabled **two-wire variable resistor**, firmware drives the bias pin HIGH through its 10 kΩ resistor. The external resistance connects TIP to SLEEVE. Use `Rpedal = 10000 × Vtip / (3300 - Vtip)` with nominal millivolts, then normalize against the configured maximum resistance (positive, at most 10 kΩ). A 10 kΩ resistor gives nominal 1650 mV. The GPIO HIGH voltage and resistor tolerance affect resistance accuracy. Open circuit approaches the 3.3 V supply; firmware guards the denominator near that value. A TS plug may ground RING safely through the 5.1 kΩ reference resistor.
 
-In potentiometer mode the pull-up is disabled. Calibrate heel/toe voltages; ring series resistance reduces full-travel voltage depending on the pot resistance. Total resistance is metadata, not the ideal position scale. A floating wiper is not a reliable disconnect detector: add a switched jack contact if dependable unplug detection is required.
+For a **three-wire potentiometer**, connect the outer legs to RING and SLEEVE and the wiper to TIP. Firmware leaves the bias GPIO at high impedance with both internal pulls disabled. Capture the actual heel and toe voltages before use; these endpoints set the position scale independently of pot resistance. A floating wiper is not a dependable unplug detector. The external pedal contains only the resistor or potentiometer, without any powered electronics.
+
+Boot and disabled-input states also leave the bias GPIO at high impedance. The firmware preloads HIGH before enabling its output and never drives the bias LOW. Change mode with the pedal unplugged. This wiring requires the passive-input firmware; the earlier active-interface firmware drives the bias incorrectly and applies an incompatible 1.5× conversion. Repeat pedal endpoint calibration after rewiring; switch actions, ladder calibration and LED identities remain unchanged. Internal weak pull-ups are not used as precision resistance references.
 
 ## ADC and prototype validation
 
-Use calibrated ESP32-C6 ADC readings with attenuation selected for at least the 0–2.2 V operating span. Current ESP32-C6 datasheets specify an ATTEN3 calibrated range up to 3.3 V for qualifying chip date codes, with up to ±40 mV total error. The 2.2 V ceiling retains headroom; per-switch calibration remains necessary because absolute ADC error can exceed half the smallest ladder gap. Reserve margin for reference and resistor tolerance; check the current ESP-IDF C6 ADC limits. Schedule ladder samples every 1–2 ms and each pedal initially at 200 samples/s. Measure multiplexer settling, noise, and endpoint error; tune filtering from observations. Protect external jacks against ESD and insertion transients within chip absolute maximum ratings.
+Use calibrated ESP32-C6 ADC readings with attenuation selected for at least the connected-pedal 0–2.2 V operating span. Current ESP32-C6 datasheets specify an ATTEN3 calibrated range up to 3.3 V for qualifying chip date codes, with up to ±40 mV total error. The 2.2 V ceiling retains headroom; per-switch calibration remains necessary because absolute ADC error can exceed half the smallest ladder gap. Reserve margin for reference and resistor tolerance; check the current ESP-IDF C6 ADC limits. Schedule ladder samples every 1–2 ms and each pedal initially at 200 samples/s. Measure multiplexer settling, noise, and endpoint error; tune filtering from observations. Connect only unpowered passive pedals. This minimal two-resistor interface adds no external ESD protection; its noise and transient performance must be checked on hardware.
 
 Before building the harness, verify idle and all N installed ladder states, individual press/release detection, and all four combinations of pedal modes. Test with BLE and LCD active, USB and intended battery/power operation, and the longest intended pedal cables. Inspect the regulator rating for the actual DFR1075 revision. No external ADC or GPIO expander is included.
 
 ## Optional switch LEDs
 
-The optional chain uses one [Pololu 2535 5 mm LED](https://www.pololu.com/product/2535) per switch, initially paired in switch-number order. Use **5 V, RGB byte order and the 2535 (800 kbit/s) profile**. The side-view lead order is DIN / +5 V / GND / DOUT, from the side opposite the flat toward the flat; follow the orientation diagram in the LED guide. GPIO16/TX is reserved for its hardware-timed data output; the firmware console remains on USB. Use a 5 V AHCT logic buffer, a 330 Ω data resistor, a regulated 5 V LED supply and common ground. Ten LEDs draw about 0.5 A at full white; a separate LED supply should allow at least 1 A plus controller headroom. When using the optional Pololu 4083 source, its 1 A rating is the total controller-plus-LED budget; follow the limitations in the [power guide](power.md). Add 470 µF at the chain entry and 100 nF per LED. Never power this part above 5 V. Chain output is disabled by default, with 64/255 brightness and white/yellow press/release colors. Pololu LEDs power up blue until a data command; firmware clears them at initialization and refreshes the chain every 250 ms. See [exact lead orientation, wiring and configuration](leds.md).
+The optional chain uses one [Pololu 2535 5 mm LED](https://www.pololu.com/product/2535) per switch, initially paired in switch-number order. Use **5 V, RGB byte order and the 2535 (800 kbit/s) profile**. The side-view lead order is DIN / +5 V / GND / DOUT, from the side opposite the flat toward the flat; follow the orientation diagram in the LED guide. GPIO16/TX is reserved for its hardware-timed data output; the firmware console remains on USB. Connect GPIO16 directly to the first DIN, each DOUT to the next DIN, and every LED to the regulated 5 V supply and common ground. The chain contains only LEDs and wires. Ten LEDs draw about 0.5 A at full white; a separate LED supply should allow at least 1 A plus controller headroom. When using the optional Pololu 4083 source, its 1 A rating is the total controller-plus-LED budget; follow the limitations in the [power guide](power.md). Never power this part above 5 V. Chain output is disabled by default, with 64/255 brightness and white/yellow press/release colors. Pololu LEDs power up blue until a data command; firmware clears them at initialization and refreshes the chain every 250 ms. See [exact lead orientation, wiring and configuration](leds.md).
 
 ## Sources
 
@@ -123,4 +126,3 @@ The optional chain uses one [Pololu 2535 5 mm LED](https://www.pololu.com/produc
 - [Waveshare 24382 product](https://www.waveshare.com/1.69inch-lcd-module.htm), [module wiki](https://www.waveshare.com/wiki/1.69inch_LCD_Module) and [mechanical drawing](https://files.waveshare.com/upload/4/41/1.69inch_LCD_Module_2Ddrawing.pdf): ST7789V2, interface configuration, wiring and PCB dimensions.
 - [Espressif ESP32-C6 GPIO reference](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c6/api-reference/peripherals/gpio.html): ADC channels and restricted pins.
 - [ESP32-C6 datasheet](https://documentation.espressif.com/esp32-c6_datasheet_en.html): ADC ranges, calibration error and date-code qualifications.
-- [Microchip MCP6002](https://www.microchip.com/en-us/product/MCP6002): analog buffer; check electrical characteristics when finalizing the schematic.

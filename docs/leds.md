@@ -16,7 +16,7 @@ Identify leads before trimming. In the [manufacturer's side-view diagram](https:
 
 | Position in that view | Signal | Connection |
 | --- | --- | --- |
-| Top, farthest from flat side | DIN | Buffer output for LED 1; preceding LED's DOUT for LEDs 2–N |
+| Top, farthest from flat side | DIN | DFRobot TX / GPIO16 directly for LED 1; preceding LED's DOUT for LEDs 2–N |
 | Second | +5 V | Regulated LED supply, in parallel to every LED |
 | Third | GND | Common ground, in parallel to every LED and the controller |
 | Bottom, nearest flat side | DOUT | Next LED's DIN; leave the final LED's DOUT unconnected |
@@ -27,22 +27,20 @@ This side view is not a bottom view; turning the LED over reverses the visible o
 
 Use **GPIO16 / IO16 / TX** on the DFR1075 header for LED data. The project's console uses USB Serial/JTAG, leaving that UART TX pad available. The data GPIO is independent of switch, LCD, pedal and encoder connections. The pin assignment follows the [DFRobot board documentation](https://wiki.dfrobot.com/dfr1075/) and its [V1.1 schematic](../design/fusion/datasheets/dfr1075-schematic-v11.pdf).
 
-For the Pololu 2535 chain, use one gate of an **SN74AHCT125 powered at 5 V** to translate the 3.3 V GPIO. Its TTL-compatible input accepts the ESP32 signal; ordinary 5 V HC logic does not give the same input-level guarantee. Pin numbers below apply to the standard 14-pin D/N/PW packages. [TI datasheet](https://www.ti.com/lit/ds/symlink/sn74ahct125.pdf).
+The LED chain contains only the Pololu 2535 LEDs and wiring. Connect the DFRobot data output directly to the first LED's DIN. Supply every LED from the regulated 5 V rail and common ground, in parallel. The WS2811 driver is already inside each LED; no additional driver, buffer, series resistor, pulldown or capacitor is fitted in the chain.
 
 ```text
-DFR1075 GPIO16 ────────────── SN74AHCT125 1A (pin 2)
-                    │        1OE (pin 1) ───────── GND
-                   10kΩ      VCC (pin 14) ──────── regulated +5 V
-                    │        GND (pin 7) ───────── common GND
-                   GND       100 nF between pins 14 and 7, close to IC
-
-SN74AHCT125 1Y (pin 3) ── 330Ω ── DIN [LED 1] DOUT ── DIN [LED 2] ... [LED N]
-LED supply +5 V ─────────────────── LED 1 V+ ────── LED 2 V+ ─── ... LED N V+
-Common GND ──────────────────────── LED 1 GND ───── LED 2 GND ── ... LED N GND
-             └── DFR1075 GND
+DFRobot TX / GPIO16 (P2:17) -------- LED1 DIN
+LED1 DOUT ------------------------ LED2 DIN
+LED2 DOUT ------------------------ LED3 DIN ... final LED DOUT open
+Regulated +5V -------------------- every LED's 5V lead
+Supply GND ----------------------- every LED's GND lead
+DFRobot GND (P1:3 or P2:4) -------- supply GND
 ```
 
-Place the 330 Ω data resistor near the first LED's DIN; this is within Pololu's suggested 100–1000 Ω range. Pololu specifies at least 10 µF across the supply; this design uses **470 µF at the chain entry**, plus **100 nF directly across +5 V/GND at each LED** for local bypassing. Use capacitors rated at least 10 V, observing electrolytic polarity. Tie unused AHCT125 output-enable pins 4, 10 and 13 high to 5 V, and unused data-input pins 5, 9 and 12 to GND; leave their outputs unconnected. Keep data wiring short and route it alongside a ground return. The 10 kΩ pulldown holds the buffer input low while the MCU is resetting; software sends an all-off frame during initialization.
+Each LED box in the electrical diagram uses the actual package side-view lead order: lens left, flat down, with DIN / 5V / GND / DOUT on the right from top to bottom. Use the flat-side reference before cutting or bending leads. The source photograph is included unchanged in the diagram. A raised wire hop crosses the +5 V rail without connecting to it.
+
+The GPIO signal is 3.3 V while LED power is 5 V. The Pololu product page does not specify a guaranteed 3.3 V DIN threshold; verify direct-drive operation with the purchased LED batch and actual harness. Keep the data wire short and alongside a ground return. Firmware sends an all-off frame at initialization; no added component holds the data input low during MCU reset.
 
 Power this chain from a **regulated 5.0 V rail that does not exceed 5 V at the LEDs**, with common ground to the controller. Do not use a 12 V LED supply or the DFR1075 3V3 output. For a dedicated supply, allow at least **1 A for the LED rail** plus any shared controller load. The Pololu 4083 has a **1 A total** limit; validate the combined load as described in the power guide. The default 64/255 brightness gives about 0.13 A for ten white LEDs by PWM scaling, plus driver overhead; size the supply for the full-white setting. Avoid joining independent positive supply outputs together. Make or change wiring only with power off.
 

@@ -1,0 +1,896 @@
+{
+  "project": "SIGMIDI Foot Controller",
+  "version": "0.1",
+  "status": "electrical review - not bench qualified",
+  "board_detail": "external pins only; passive pedals use two controller resistors per input",
+  "dfrobot_external_pins": {
+    "P1:1": {
+      "physical_label": "VIN",
+      "logical_name": "VCC",
+      "net": "+5V"
+    },
+    "P1:2": {
+      "physical_label": "3V3",
+      "logical_name": "3V3",
+      "net": "3V3"
+    },
+    "P1:3": {
+      "physical_label": "GND",
+      "logical_name": "GND",
+      "net": "GND"
+    },
+    "P1:4": {
+      "physical_label": "SCL",
+      "logical_name": "GPIO20",
+      "net": "P1_MODE"
+    },
+    "P1:5": {
+      "physical_label": "SDA",
+      "logical_name": "GPIO19",
+      "net": null
+    },
+    "P1:6": {
+      "physical_label": "5/A4/LP_TX",
+      "logical_name": "GPIO5",
+      "net": null
+    },
+    "P1:7": {
+      "physical_label": "4/A3/LP_RX",
+      "logical_name": "GPIO4",
+      "net": null
+    },
+    "P1:8": {
+      "physical_label": "3/A2",
+      "logical_name": "GPIO3",
+      "net": "P2_ADC"
+    },
+    "P1:9": {
+      "physical_label": "2/A1",
+      "logical_name": "GPIO2",
+      "net": "P1_ADC"
+    },
+    "P1:10": {
+      "physical_label": "NC",
+      "logical_name": "NC",
+      "net": null
+    },
+    "P1:11": {
+      "physical_label": "15/D13",
+      "logical_name": "GPIO15",
+      "net": null
+    },
+    "P1:12": {
+      "physical_label": "6/D12/LP_SDA",
+      "logical_name": "GPIO6",
+      "net": "ENC_A"
+    },
+    "P1:13": {
+      "physical_label": "7/D11/LP_SCL",
+      "logical_name": "GPIO7",
+      "net": "ENC_B"
+    },
+    "P1:14": {
+      "physical_label": "NC",
+      "logical_name": "NC",
+      "net": null
+    },
+    "P2:1": {
+      "physical_label": "RST",
+      "logical_name": "RST",
+      "net": null
+    },
+    "P2:2": {
+      "physical_label": "3V3",
+      "logical_name": "3V3",
+      "net": "3V3"
+    },
+    "P2:3": {
+      "physical_label": "NC",
+      "logical_name": "NC",
+      "net": null
+    },
+    "P2:4": {
+      "physical_label": "GND",
+      "logical_name": "GND",
+      "net": "GND"
+    },
+    "P2:5": {
+      "physical_label": "NC",
+      "logical_name": "NC",
+      "net": null
+    },
+    "P2:6": {
+      "physical_label": "23/SCK",
+      "logical_name": "GPIO23",
+      "net": "LCD_CLK"
+    },
+    "P2:7": {
+      "physical_label": "22/MO",
+      "logical_name": "GPIO22",
+      "net": "LCD_DIN"
+    },
+    "P2:8": {
+      "physical_label": "21/MI",
+      "logical_name": "GPIO21",
+      "net": "P2_MODE"
+    },
+    "P2:9": {
+      "physical_label": "20/SCL",
+      "logical_name": "GPIO20",
+      "net": null
+    },
+    "P2:10": {
+      "physical_label": "19/SDA",
+      "logical_name": "GPIO19",
+      "net": "LCD_DC"
+    },
+    "P2:11": {
+      "physical_label": "9/D9",
+      "logical_name": "GPIO9",
+      "net": null
+    },
+    "P2:12": {
+      "physical_label": "18/D7",
+      "logical_name": "GPIO18",
+      "net": "LCD_CS"
+    },
+    "P2:13": {
+      "physical_label": "1/D6",
+      "logical_name": "GPIO1",
+      "net": "LADDER"
+    },
+    "P2:14": {
+      "physical_label": "NC",
+      "logical_name": "NC",
+      "net": null
+    },
+    "P2:15": {
+      "physical_label": "14/D3",
+      "logical_name": "GPIO14",
+      "net": "LCD_RST"
+    },
+    "P2:16": {
+      "physical_label": "8/D2",
+      "logical_name": "GPIO8",
+      "net": null
+    },
+    "P2:17": {
+      "physical_label": "16/TX",
+      "logical_name": "GPIO16",
+      "net": "LED_GPIO"
+    },
+    "P2:18": {
+      "physical_label": "17/RX",
+      "logical_name": "GPIO17",
+      "net": "ENC_SW"
+    }
+  },
+  "units": {
+    "resistors": "ohms (k = 1000)",
+    "capacitors": "farads (nF/uF as labelled)"
+  },
+  "components": {
+    "U1": {
+      "value": "DFRobot DFR1075 V1.1",
+      "package": "ESP32-C6 board",
+      "pins": {
+        "P1:1": "+5V",
+        "P1:2": "3V3",
+        "P1:3": "GND",
+        "P1:4": "P1_MODE",
+        "P1:5": null,
+        "P1:6": null,
+        "P1:7": null,
+        "P1:8": "P2_ADC",
+        "P1:9": "P1_ADC",
+        "P1:10": null,
+        "P1:11": null,
+        "P1:12": "ENC_A",
+        "P1:13": "ENC_B",
+        "P1:14": null,
+        "P2:1": null,
+        "P2:2": "3V3",
+        "P2:3": null,
+        "P2:4": "GND",
+        "P2:5": null,
+        "P2:6": "LCD_CLK",
+        "P2:7": "LCD_DIN",
+        "P2:8": "P2_MODE",
+        "P2:9": null,
+        "P2:10": "LCD_DC",
+        "P2:11": null,
+        "P2:12": "LCD_CS",
+        "P2:13": "LADDER",
+        "P2:14": null,
+        "P2:15": "LCD_RST",
+        "P2:16": null,
+        "P2:17": "LED_GPIO",
+        "P2:18": "ENC_SW"
+      },
+      "note": ""
+    },
+    "U2": {
+      "value": "Waveshare 24382",
+      "package": "1.69 inch ST7789V2 LCD module",
+      "pins": {
+        "P2:1": "3V3",
+        "P2:2": "LCD_RST",
+        "P2:3": "LCD_DC",
+        "P2:4": "LCD_CS",
+        "P2:5": "LCD_CLK",
+        "P2:6": "LCD_DIN",
+        "P2:7": "GND",
+        "P2:8": "3V3"
+      },
+      "note": ""
+    },
+    "J1": {
+      "value": "5.5x2.1mm center-negative",
+      "package": "18mm barrel socket / M8",
+      "pins": {
+        "CENTER": "GND",
+        "SLEEVE": "+9V"
+      },
+      "note": ""
+    },
+    "U3": {
+      "value": "Pololu S13V10F5 #4083",
+      "package": "5V 1A step-up/down module",
+      "pins": {
+        "VIN": "+9V",
+        "GND": "GND",
+        "VOUT": "+5V"
+      },
+      "note": ""
+    },
+    "C1": {
+      "value": "47uF / 35V",
+      "package": "capacitor",
+      "pins": {
+        "1": "+9V",
+        "2": "GND"
+      },
+      "note": ""
+    },
+    "SW11": {
+      "value": "20-detent rotary encoder + NO click",
+      "package": "passive encoder",
+      "pins": {
+        "A": "ENC_A",
+        "B": "ENC_B",
+        "C": "GND",
+        "SW1": "ENC_SW",
+        "SW2": "GND"
+      },
+      "note": "Functional pin names only; verify the selected encoder terminal order."
+    },
+    "R7": {
+      "value": "10k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "3V3",
+        "2": "LADDER"
+      },
+      "note": ""
+    },
+    "R8": {
+      "value": "20k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "LADDER",
+        "2": "GND"
+      },
+      "note": ""
+    },
+    "C5": {
+      "value": "100nF",
+      "package": "capacitor",
+      "pins": {
+        "1": "LADDER",
+        "2": "GND"
+      },
+      "note": ""
+    },
+    "R9": {
+      "value": "1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "LADDER",
+        "2": "T1"
+      },
+      "note": ""
+    },
+    "SW1": {
+      "value": "momentary NO",
+      "package": "12mm footswitch",
+      "pins": {
+        "1": "T1",
+        "2": "GND"
+      },
+      "note": "B"
+    },
+    "R10": {
+      "value": "1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "T1",
+        "2": "T2"
+      },
+      "note": ""
+    },
+    "SW2": {
+      "value": "momentary NO",
+      "package": "12mm footswitch",
+      "pins": {
+        "1": "T2",
+        "2": "GND"
+      },
+      "note": "A"
+    },
+    "R11": {
+      "value": "1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "T2",
+        "2": "T3"
+      },
+      "note": ""
+    },
+    "SW3": {
+      "value": "momentary NO",
+      "package": "12mm footswitch",
+      "pins": {
+        "1": "T3",
+        "2": "GND"
+      },
+      "note": "2"
+    },
+    "R12": {
+      "value": "1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "T3",
+        "2": "T4"
+      },
+      "note": ""
+    },
+    "SW4": {
+      "value": "momentary NO",
+      "package": "12mm footswitch",
+      "pins": {
+        "1": "T4",
+        "2": "GND"
+      },
+      "note": "1"
+    },
+    "R13": {
+      "value": "1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "T4",
+        "2": "T5"
+      },
+      "note": ""
+    },
+    "SW5": {
+      "value": "momentary NO",
+      "package": "12mm footswitch",
+      "pins": {
+        "1": "T5",
+        "2": "GND"
+      },
+      "note": "C"
+    },
+    "R14": {
+      "value": "1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "T5",
+        "2": "T6"
+      },
+      "note": ""
+    },
+    "SW6": {
+      "value": "momentary NO",
+      "package": "12mm footswitch",
+      "pins": {
+        "1": "T6",
+        "2": "GND"
+      },
+      "note": "3"
+    },
+    "R15": {
+      "value": "1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "T6",
+        "2": "T7"
+      },
+      "note": ""
+    },
+    "SW7": {
+      "value": "momentary NO",
+      "package": "12mm footswitch",
+      "pins": {
+        "1": "T7",
+        "2": "GND"
+      },
+      "note": "D"
+    },
+    "R16": {
+      "value": "1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "T7",
+        "2": "T8"
+      },
+      "note": ""
+    },
+    "SW8": {
+      "value": "momentary NO",
+      "package": "12mm footswitch",
+      "pins": {
+        "1": "T8",
+        "2": "GND"
+      },
+      "note": "4"
+    },
+    "R17": {
+      "value": "1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "T8",
+        "2": "T9"
+      },
+      "note": ""
+    },
+    "SW9": {
+      "value": "momentary NO",
+      "package": "12mm footswitch",
+      "pins": {
+        "1": "T9",
+        "2": "GND"
+      },
+      "note": "E"
+    },
+    "R18": {
+      "value": "1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "T9",
+        "2": "T10"
+      },
+      "note": ""
+    },
+    "SW10": {
+      "value": "momentary NO",
+      "package": "12mm footswitch",
+      "pins": {
+        "1": "T10",
+        "2": "GND"
+      },
+      "note": "5"
+    },
+    "J2": {
+      "value": "Amphenol ACJS-MHDC",
+      "package": "dual switched TRS",
+      "pins": {
+        "10": "GND",
+        "11": "P1_RING",
+        "12": "P1_ADC",
+        "7": null,
+        "8": null,
+        "9": null,
+        "4": "GND",
+        "5": "P2_RING",
+        "6": "P2_ADC",
+        "1": null,
+        "2": null,
+        "3": null,
+        "13": null
+      },
+      "note": "TOP=pedal1, BOTTOM=pedal2; pad13 mechanical. All normal contacts NC."
+    },
+    "R20": {
+      "value": "5.1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "3V3",
+        "2": "P1_RING"
+      },
+      "note": ""
+    },
+    "R21": {
+      "value": "10k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "P1_MODE",
+        "2": "P1_ADC"
+      },
+      "note": ""
+    },
+    "R30": {
+      "value": "5.1k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "3V3",
+        "2": "P2_RING"
+      },
+      "note": ""
+    },
+    "R31": {
+      "value": "10k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "P2_MODE",
+        "2": "P2_ADC"
+      },
+      "note": ""
+    },
+    "LED1": {
+      "value": "Pololu 2535",
+      "package": "5mm WS2811 pixel",
+      "pins": {
+        "DIN": "LED_GPIO",
+        "DOUT": "L1",
+        "+5V": "+5V",
+        "GND": "GND"
+      },
+      "note": "Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch B / tap T1."
+    },
+    "LED2": {
+      "value": "Pololu 2535",
+      "package": "5mm WS2811 pixel",
+      "pins": {
+        "DIN": "L1",
+        "DOUT": "L2",
+        "+5V": "+5V",
+        "GND": "GND"
+      },
+      "note": "Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch A / tap T2."
+    },
+    "LED3": {
+      "value": "Pololu 2535",
+      "package": "5mm WS2811 pixel",
+      "pins": {
+        "DIN": "L2",
+        "DOUT": "L3",
+        "+5V": "+5V",
+        "GND": "GND"
+      },
+      "note": "Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 2 / tap T3."
+    },
+    "LED4": {
+      "value": "Pololu 2535",
+      "package": "5mm WS2811 pixel",
+      "pins": {
+        "DIN": "L3",
+        "DOUT": "L4",
+        "+5V": "+5V",
+        "GND": "GND"
+      },
+      "note": "Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 1 / tap T4."
+    },
+    "LED5": {
+      "value": "Pololu 2535",
+      "package": "5mm WS2811 pixel",
+      "pins": {
+        "DIN": "L4",
+        "DOUT": "L5",
+        "+5V": "+5V",
+        "GND": "GND"
+      },
+      "note": "Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch C / tap T5."
+    },
+    "LED6": {
+      "value": "Pololu 2535",
+      "package": "5mm WS2811 pixel",
+      "pins": {
+        "DIN": "L5",
+        "DOUT": "L6",
+        "+5V": "+5V",
+        "GND": "GND"
+      },
+      "note": "Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 3 / tap T6."
+    },
+    "LED7": {
+      "value": "Pololu 2535",
+      "package": "5mm WS2811 pixel",
+      "pins": {
+        "DIN": "L6",
+        "DOUT": "L7",
+        "+5V": "+5V",
+        "GND": "GND"
+      },
+      "note": "Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch D / tap T7."
+    },
+    "LED8": {
+      "value": "Pololu 2535",
+      "package": "5mm WS2811 pixel",
+      "pins": {
+        "DIN": "L7",
+        "DOUT": "L8",
+        "+5V": "+5V",
+        "GND": "GND"
+      },
+      "note": "Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 4 / tap T8."
+    },
+    "LED9": {
+      "value": "Pololu 2535",
+      "package": "5mm WS2811 pixel",
+      "pins": {
+        "DIN": "L8",
+        "DOUT": "L9",
+        "+5V": "+5V",
+        "GND": "GND"
+      },
+      "note": "Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch E / tap T9."
+    },
+    "LED10": {
+      "value": "Pololu 2535",
+      "package": "5mm WS2811 pixel",
+      "pins": {
+        "DIN": "L9",
+        "DOUT": null,
+        "+5V": "+5V",
+        "GND": "GND"
+      },
+      "note": "Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."
+    }
+  },
+  "nets": {
+    "+5V": [
+      "U1.P1:1",
+      "U3.VOUT",
+      "LED1.+5V",
+      "LED2.+5V",
+      "LED3.+5V",
+      "LED4.+5V",
+      "LED5.+5V",
+      "LED6.+5V",
+      "LED7.+5V",
+      "LED8.+5V",
+      "LED9.+5V",
+      "LED10.+5V"
+    ],
+    "+9V": [
+      "J1.SLEEVE",
+      "U3.VIN",
+      "C1.1"
+    ],
+    "3V3": [
+      "U1.P1:2",
+      "U1.P2:2",
+      "U2.P2:1",
+      "U2.P2:8",
+      "R7.1",
+      "R20.1",
+      "R30.1"
+    ],
+    "ENC_A": [
+      "U1.P1:12",
+      "SW11.A"
+    ],
+    "ENC_B": [
+      "U1.P1:13",
+      "SW11.B"
+    ],
+    "ENC_SW": [
+      "U1.P2:18",
+      "SW11.SW1"
+    ],
+    "GND": [
+      "U1.P1:3",
+      "U1.P2:4",
+      "U2.P2:7",
+      "J1.CENTER",
+      "U3.GND",
+      "C1.2",
+      "SW11.C",
+      "SW11.SW2",
+      "R8.2",
+      "C5.2",
+      "SW1.2",
+      "SW2.2",
+      "SW3.2",
+      "SW4.2",
+      "SW5.2",
+      "SW6.2",
+      "SW7.2",
+      "SW8.2",
+      "SW9.2",
+      "SW10.2",
+      "J2.10",
+      "J2.4",
+      "LED1.GND",
+      "LED2.GND",
+      "LED3.GND",
+      "LED4.GND",
+      "LED5.GND",
+      "LED6.GND",
+      "LED7.GND",
+      "LED8.GND",
+      "LED9.GND",
+      "LED10.GND"
+    ],
+    "L1": [
+      "LED1.DOUT",
+      "LED2.DIN"
+    ],
+    "L2": [
+      "LED2.DOUT",
+      "LED3.DIN"
+    ],
+    "L3": [
+      "LED3.DOUT",
+      "LED4.DIN"
+    ],
+    "L4": [
+      "LED4.DOUT",
+      "LED5.DIN"
+    ],
+    "L5": [
+      "LED5.DOUT",
+      "LED6.DIN"
+    ],
+    "L6": [
+      "LED6.DOUT",
+      "LED7.DIN"
+    ],
+    "L7": [
+      "LED7.DOUT",
+      "LED8.DIN"
+    ],
+    "L8": [
+      "LED8.DOUT",
+      "LED9.DIN"
+    ],
+    "L9": [
+      "LED9.DOUT",
+      "LED10.DIN"
+    ],
+    "LADDER": [
+      "U1.P2:13",
+      "R7.2",
+      "R8.1",
+      "C5.1",
+      "R9.1"
+    ],
+    "LCD_CLK": [
+      "U1.P2:6",
+      "U2.P2:5"
+    ],
+    "LCD_CS": [
+      "U1.P2:12",
+      "U2.P2:4"
+    ],
+    "LCD_DC": [
+      "U1.P2:10",
+      "U2.P2:3"
+    ],
+    "LCD_DIN": [
+      "U1.P2:7",
+      "U2.P2:6"
+    ],
+    "LCD_RST": [
+      "U1.P2:15",
+      "U2.P2:2"
+    ],
+    "LED_GPIO": [
+      "U1.P2:17",
+      "LED1.DIN"
+    ],
+    "P1_ADC": [
+      "U1.P1:9",
+      "J2.12",
+      "R21.2"
+    ],
+    "P1_MODE": [
+      "U1.P1:4",
+      "R21.1"
+    ],
+    "P1_RING": [
+      "J2.11",
+      "R20.2"
+    ],
+    "P2_ADC": [
+      "U1.P1:8",
+      "J2.6",
+      "R31.2"
+    ],
+    "P2_MODE": [
+      "U1.P2:8",
+      "R31.1"
+    ],
+    "P2_RING": [
+      "J2.5",
+      "R30.2"
+    ],
+    "T1": [
+      "R9.2",
+      "SW1.1",
+      "R10.1"
+    ],
+    "T10": [
+      "R18.2",
+      "SW10.1"
+    ],
+    "T2": [
+      "R10.2",
+      "SW2.1",
+      "R11.1"
+    ],
+    "T3": [
+      "R11.2",
+      "SW3.1",
+      "R12.1"
+    ],
+    "T4": [
+      "R12.2",
+      "SW4.1",
+      "R13.1"
+    ],
+    "T5": [
+      "R13.2",
+      "SW5.1",
+      "R14.1"
+    ],
+    "T6": [
+      "R14.2",
+      "SW6.1",
+      "R15.1"
+    ],
+    "T7": [
+      "R15.2",
+      "SW7.1",
+      "R16.1"
+    ],
+    "T8": [
+      "R16.2",
+      "SW8.1",
+      "R17.1"
+    ],
+    "T9": [
+      "R17.2",
+      "SW9.1",
+      "R18.1"
+    ]
+  },
+  "sources": [
+    {
+      "title": "DFRobot DFR1075 V1.1 schematic",
+      "description": "Local: design/fusion/datasheets/dfr1075-schematic-v11.pdf",
+      "url": "https://wiki.dfrobot.com/dfr1075/"
+    },
+    {
+      "title": "DFRobot external pinout / printed labels",
+      "description": "Top view; P2 left, P1 right, USB-C upper edge",
+      "url": "https://dfimg.dfrobot.com/5d57611a3416442fa39bffca/wiki/1fa8b29bf6d340347ccdc39f4648b949_0x0.png.webp"
+    },
+    {
+      "title": "Waveshare 24382 external P2 connector",
+      "description": "Local: design/fusion/datasheets/waveshare-24382-schematic.pdf",
+      "url": "https://www.waveshare.com/wiki/1.69inch_LCD_Module"
+    },
+    {
+      "title": "Amphenol ACJS-MHDC socket drawing",
+      "description": "Local: design/fusion/datasheets/double-trs-ACJS-MHDC.pdf",
+      "url": ""
+    },
+    {
+      "title": "Pololu S13V10F5 / #4083",
+      "description": "5V, 1A step-up/down regulator; retailer item 1178565",
+      "url": "https://www.pololu.com/product/4083"
+    },
+    {
+      "title": "Pololu #2535",
+      "description": "5mm addressable RGB LED / WS2811 / 5V / 800kHz",
+      "url": "https://www.pololu.com/product/2535"
+    },
+    {
+      "title": "Espressif ESP32-C6 ADC / GPIO",
+      "description": "ADC calibrated mV; bias output HIGH or disabled with pulls off",
+      "url": "https://documentation.espressif.com/esp32-c6_datasheet_en.html"
+    }
+  ]
+}

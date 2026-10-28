@@ -1,0 +1,848 @@
+{
+  "variant": "Left main, ten switches",
+  "source": "design/fusion/mirrored/layout.json",
+  "source_sha256": "7c357963dd24552da748f04e48d4aab69394bea25b45ff5b9d6e26b49a379306",
+  "status": "routing proposal; no native CAD changes",
+  "component_footprints": [
+    {
+      "component": "Mirrored SW01 - rotated",
+      "bounds_XY_mm": [
+        293.6,
+        5.000000000000007,
+        323.6,
+        18.0
+      ],
+      "switch": "E"
+    },
+    {
+      "component": "Mirrored SW02 - original upper-row orientation",
+      "bounds_XY_mm": [
+        228.6,
+        5.000000000000007,
+        258.6,
+        18.0
+      ],
+      "switch": "D"
+    },
+    {
+      "component": "Mirrored SW03 - rotated",
+      "bounds_XY_mm": [
+        163.60000000000002,
+        5.000000000000002,
+        193.6,
+        18.0
+      ],
+      "switch": "C"
+    },
+    {
+      "component": "Mirrored SW04 - rotated",
+      "bounds_XY_mm": [
+        98.60000000000005,
+        5.0,
+        128.60000000000005,
+        17.999999999999993
+      ],
+      "switch": "B"
+    },
+    {
+      "component": "Mirrored SW05 - rotated",
+      "bounds_XY_mm": [
+        33.60000000000003,
+        5.0,
+        63.600000000000065,
+        17.999999999999993
+      ],
+      "switch": "A"
+    },
+    {
+      "component": "Mirrored SW06",
+      "bounds_XY_mm": [
+        328.6,
+        43.50000000000001,
+        341.59999999999997,
+        73.5
+      ],
+      "switch": "5"
+    },
+    {
+      "component": "Mirrored SW07",
+      "bounds_XY_mm": [
+        263.6,
+        43.50000000000001,
+        276.6,
+        73.5
+      ],
+      "switch": "4"
+    },
+    {
+      "component": "Mirrored SW08",
+      "bounds_XY_mm": [
+        198.6,
+        43.50000000000001,
+        211.6,
+        73.5
+      ],
+      "switch": "3"
+    },
+    {
+      "component": "Mirrored SW09",
+      "bounds_XY_mm": [
+        133.60000000000005,
+        43.50000000000001,
+        146.60000000000002,
+        73.5
+      ],
+      "switch": "2"
+    },
+    {
+      "component": "Mirrored SW10",
+      "bounds_XY_mm": [
+        68.60000000000002,
+        43.50000000000001,
+        81.6,
+        73.5
+      ],
+      "switch": "1"
+    },
+    {
+      "component": "Mirrored LCD Waveshare 24382 - exact STEP - 280x240 landscape - rear M2 studs",
+      "bounds_XY_mm": [
+        23.097810660349943,
+        46.23436535680001,
+        62.097810660349964,
+        77.73436535680003
+      ]
+    },
+    {
+      "component": "Mirrored DFRobot DFR1075 - manufacturer STEP - PCB thickness corrected to 1.6",
+      "bounds_XY_mm": [
+        86.61179000000102,
+        3.7762937308724087,
+        112.07002431507904,
+        65.00022780610101
+      ]
+    },
+    {
+      "component": "Mirrored Double TRS ACJS-MHDC - X319 - horizontal ports - 3mm rear wall",
+      "bounds_XY_mm": [
+        9.725000000000001,
+        -6.1,
+        47.02499999999999,
+        27.4
+      ]
+    },
+    {
+      "component": "Mirrored Pololu S13V10F5 - 5V converter - manufacturer STEP",
+      "bounds_XY_mm": [
+        117.935,
+        25.999999999999996,
+        129.99999999999997,
+        34.88999999999999
+      ]
+    },
+    {
+      "component": "Mirrored Encoder 15x15 - left of LCD X337.5 - 15mm knob",
+      "bounds_XY_mm": [
+        5.0,
+        57.0,
+        20.0,
+        72.0
+      ]
+    },
+    {
+      "component": "Mirrored DC power socket - 9V center-negative - M8 x8 - 18mm overall",
+      "bounds_XY_mm": [
+        132.49444650053488,
+        -6.0,
+        147.50555349946512,
+        12.0
+      ]
+    }
+  ],
+  "bundles": {
+    "dc": [
+      "9 V input",
+      "Sleeve +9 V \u2192 VIN; centre \u2192 GND",
+      "2 wires \u00b7 J-PWR",
+      "power"
+    ],
+    "supply": [
+      "Regulated 5 V",
+      "Pololu VOUT \u2192 DFRobot VIN / LED rail",
+      "Supply + return travel together",
+      "power"
+    ],
+    "ground": [
+      "Ground / returns",
+      "Common reference; LED return to supply",
+      "Dark lines beside power and signals",
+      "power"
+    ],
+    "ladder": [
+      "Footswitch ladder",
+      "Series taps T1\u2013T10; each adds 1 k\u03a9",
+      "TAIL + GND between sections",
+      "controls"
+    ],
+    "pedal": [
+      "Expression pedals",
+      "Passive TRS \u2192 2 resistors/input \u2192 GPIO2 / 3",
+      "6 wires at sockets \u00b7 modes GPIO20 / 21",
+      "controls"
+    ],
+    "display": [
+      "LCD / SPI",
+      "GPIO22, 23, 18, 19, 14; 3V3 + GND",
+      "7 wires \u00b7 backlight tied to 3V3 locally",
+      "controls"
+    ],
+    "encoder": [
+      "Encoder + click",
+      "GPIO6 / 7 / 17 + common GND",
+      "4 wires \u00b7 J-ENC",
+      "controls"
+    ],
+    "led": [
+      "Optional Pololu 2535",
+      "GPIO16 \u2192 first LED DIN, directly",
+      "5V + GND + data; preserve tap assignments",
+      "led"
+    ]
+  },
+  "colors": {
+    "dc": "#d65e21",
+    "supply": "#cf3144",
+    "ground": "#303a48",
+    "ladder": "#b47a00",
+    "pedal": "#008b95",
+    "display": "#2b74cc",
+    "encoder": "#45933b",
+    "led": "#9251c7"
+  },
+  "routes": [
+    {
+      "purpose": "dc",
+      "points_XY_mm": [
+        [
+          142,
+          12
+        ],
+        [
+          142,
+          20
+        ],
+        [
+          114,
+          20
+        ],
+        [
+          114,
+          32.98
+        ],
+        [
+          119.21,
+          32.98
+        ]
+      ],
+      "description": "Socket sleeve +9 V to converter VIN"
+    },
+    {
+      "purpose": "ground",
+      "points_XY_mm": [
+        [
+          138,
+          12
+        ],
+        [
+          138,
+          18
+        ],
+        [
+          116,
+          18
+        ],
+        [
+          116,
+          30.45
+        ],
+        [
+          119.21,
+          30.45
+        ]
+      ],
+      "description": "Socket centre negative to converter GND"
+    },
+    {
+      "purpose": "supply",
+      "points_XY_mm": [
+        [
+          119.21,
+          27.91
+        ],
+        [
+          110.73,
+          27.91
+        ],
+        [
+          110.73,
+          26.79
+        ]
+      ],
+      "description": "Converter VOUT to DFRobot VIN"
+    },
+    {
+      "purpose": "ground",
+      "points_XY_mm": [
+        [
+          119.21,
+          30.45
+        ],
+        [
+          110.73,
+          30.45
+        ],
+        [
+          110.73,
+          31.87
+        ]
+      ],
+      "description": "Converter return to DFRobot ground"
+    },
+    {
+      "purpose": "supply",
+      "points_XY_mm": [
+        [
+          119,
+          28
+        ],
+        [
+          119,
+          35
+        ],
+        [
+          81,
+          35
+        ]
+      ],
+      "description": "LED +5V distribution; pair with return"
+    },
+    {
+      "purpose": "ground",
+      "points_XY_mm": [
+        [
+          119,
+          30.5
+        ],
+        [
+          120.5,
+          36.5
+        ],
+        [
+          81,
+          36.5
+        ]
+      ],
+      "description": "LED supply return, routed directly to supply point"
+    },
+    {
+      "purpose": "pedal",
+      "points_XY_mm": [
+        [
+          27,
+          27.4
+        ],
+        [
+          27,
+          31
+        ],
+        [
+          56,
+          31
+        ],
+        [
+          56,
+          33
+        ],
+        [
+          61,
+          33
+        ]
+      ],
+      "description": "Six TRS conductors to passive resistor connections"
+    },
+    {
+      "purpose": "pedal",
+      "points_XY_mm": [
+        [
+          81,
+          32
+        ],
+        [
+          84,
+          32
+        ],
+        [
+          86.6,
+          35
+        ]
+      ],
+      "description": "Direct TIP ADC signals, two bias GPIOs, reference and ground to DFRobot"
+    },
+    {
+      "purpose": "display",
+      "points_XY_mm": [
+        [
+          86.6,
+          45
+        ],
+        [
+          82.5,
+          45
+        ],
+        [
+          82.5,
+          42
+        ],
+        [
+          43,
+          42
+        ],
+        [
+          43,
+          46.23
+        ]
+      ],
+      "description": "Short SPI loom to display; J-LCD service disconnect"
+    },
+    {
+      "purpose": "encoder",
+      "points_XY_mm": [
+        [
+          12.5,
+          57
+        ],
+        [
+          12.5,
+          46
+        ],
+        [
+          57,
+          46
+        ],
+        [
+          57,
+          41
+        ],
+        [
+          84.5,
+          41
+        ],
+        [
+          86.6,
+          43
+        ]
+      ],
+      "description": "A, B, click and common ground to DFRobot"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          86.6,
+          38
+        ],
+        [
+          83,
+          38
+        ],
+        [
+          83,
+          21
+        ],
+        [
+          338,
+          21
+        ]
+      ],
+      "description": "Raised-row switched ladder harness"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          83,
+          21
+        ],
+        [
+          55,
+          21
+        ],
+        [
+          55,
+          40.5
+        ],
+        [
+          64,
+          40.5
+        ],
+        [
+          64,
+          76
+        ],
+        [
+          338,
+          76
+        ]
+      ],
+      "description": "Base and lower-row ladder harness; descent proposal"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          42.6,
+          18
+        ],
+        [
+          42.6,
+          21
+        ]
+      ],
+      "description": "Local switch branch / series tap resistor"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          107.6,
+          18
+        ],
+        [
+          107.6,
+          21
+        ]
+      ],
+      "description": "Local switch branch / series tap resistor"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          172.6,
+          18
+        ],
+        [
+          172.6,
+          21
+        ]
+      ],
+      "description": "Local switch branch / series tap resistor"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          237.6,
+          18
+        ],
+        [
+          237.6,
+          21
+        ]
+      ],
+      "description": "Local switch branch / series tap resistor"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          302.6,
+          18
+        ],
+        [
+          302.6,
+          21
+        ]
+      ],
+      "description": "Local switch branch / series tap resistor"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          75.1,
+          73.5
+        ],
+        [
+          75.1,
+          76
+        ]
+      ],
+      "description": "Local switch branch / series tap resistor"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          140.1,
+          73.5
+        ],
+        [
+          140.1,
+          76
+        ]
+      ],
+      "description": "Local switch branch / series tap resistor"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          205.1,
+          73.5
+        ],
+        [
+          205.1,
+          76
+        ]
+      ],
+      "description": "Local switch branch / series tap resistor"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          270.1,
+          73.5
+        ],
+        [
+          270.1,
+          76
+        ]
+      ],
+      "description": "Local switch branch / series tap resistor"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          335.1,
+          73.5
+        ],
+        [
+          335.1,
+          76
+        ]
+      ],
+      "description": "Local switch branch / series tap resistor"
+    },
+    {
+      "purpose": "ladder",
+      "points_XY_mm": [
+        [
+          42.6,
+          21
+        ],
+        [
+          65,
+          21
+        ]
+      ],
+      "description": "Base A branch"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          86.6,
+          38
+        ],
+        [
+          54,
+          38
+        ],
+        [
+          54,
+          32.4
+        ],
+        [
+          9.5,
+          32.4
+        ],
+        [
+          9.5,
+          26.2
+        ],
+        [
+          305,
+          26.2
+        ]
+      ],
+      "description": "Upper LED harness in CAD reference envelope Z17..21"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          9.5,
+          32.4
+        ],
+        [
+          9.5,
+          84.5
+        ],
+        [
+          338,
+          84.5
+        ]
+      ],
+      "description": "Left descent / lower LED harness; lower bus Z-12..-9"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          42.6,
+          26.2
+        ],
+        [
+          42.6,
+          28
+        ]
+      ],
+      "description": "LED branch; connect DIN/DOUT in electrical tap order"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          107.6,
+          26.2
+        ],
+        [
+          107.6,
+          28
+        ]
+      ],
+      "description": "LED branch; connect DIN/DOUT in electrical tap order"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          172.6,
+          26.2
+        ],
+        [
+          172.6,
+          28
+        ]
+      ],
+      "description": "LED branch; connect DIN/DOUT in electrical tap order"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          237.6,
+          26.2
+        ],
+        [
+          237.6,
+          28
+        ]
+      ],
+      "description": "LED branch; connect DIN/DOUT in electrical tap order"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          302.6,
+          26.2
+        ],
+        [
+          302.6,
+          28
+        ]
+      ],
+      "description": "LED branch; connect DIN/DOUT in electrical tap order"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          75.1,
+          84.5
+        ],
+        [
+          75.1,
+          81.7
+        ]
+      ],
+      "description": "LED branch; connect DIN/DOUT in electrical tap order"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          140.1,
+          84.5
+        ],
+        [
+          140.1,
+          81.7
+        ]
+      ],
+      "description": "LED branch; connect DIN/DOUT in electrical tap order"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          205.1,
+          84.5
+        ],
+        [
+          205.1,
+          81.7
+        ]
+      ],
+      "description": "LED branch; connect DIN/DOUT in electrical tap order"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          270.1,
+          84.5
+        ],
+        [
+          270.1,
+          81.7
+        ]
+      ],
+      "description": "LED branch; connect DIN/DOUT in electrical tap order"
+    },
+    {
+      "purpose": "led",
+      "points_XY_mm": [
+        [
+          335.1,
+          84.5
+        ],
+        [
+          335.1,
+          81.7
+        ]
+      ],
+      "description": "LED branch; connect DIN/DOUT in electrical tap order"
+    }
+  ],
+  "notes": [
+    "XY corridors only; crossings do not connect nets",
+    "Native LED/power references used; other routing and unmodeled interface carrier need clearance validation",
+    "Electrical tap and LED assignments remain unchanged",
+    "Disconnect shell controls and withdraw MCU USB before base removal"
+  ]
+}

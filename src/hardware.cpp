@@ -53,11 +53,17 @@ static void pair(uint8_t c, uint8_t v) {
 }
 void hardwareStart() {
     gpio_config_t g{};
-    g.pin_bit_mask = (1ULL << 20) | (1ULL << 21) | (1ULL << 19) | (1ULL << 14);
+    g.pin_bit_mask = (1ULL << 19) | (1ULL << 14);
     g.mode = GPIO_MODE_OUTPUT;
     ESP_ERROR_CHECK(gpio_config(&g));
-    gpio_set_level(GPIO_NUM_20, 1);
-    gpio_set_level(GPIO_NUM_21, 1);
+    // Passive pedal bias pins start disconnected. Never drive them LOW:
+    // each is connected through 10k directly to its pedal ADC input.
+    g = {};
+    g.pin_bit_mask = (1ULL << 20) | (1ULL << 21);
+    g.mode = GPIO_MODE_DISABLE;
+    ESP_ERROR_CHECK(gpio_config(&g));
+    ESP_ERROR_CHECK(gpio_set_level(GPIO_NUM_20, 1));
+    ESP_ERROR_CHECK(gpio_set_level(GPIO_NUM_21, 1));
     g = {};
     g.pin_bit_mask = (1ULL << 6) | (1ULL << 7) | (1ULL << 17);
     g.mode = GPIO_MODE_INPUT;
@@ -184,8 +190,16 @@ int clickEvent(uint32_t now) {
     return 0;
 }
 void pedalModes(const foot::Config &c) {
-    gpio_set_level(GPIO_NUM_20, !c.pedals[0].resistor);
-    gpio_set_level(GPIO_NUM_21, !c.pedals[1].resistor);
+    const gpio_num_t pins[] = {GPIO_NUM_20, GPIO_NUM_21};
+    for (int i = 0; i < 2; ++i) {
+        // Float before changing the output latch, so mode changes cannot
+        // momentarily ground the pedal signal through the bias resistor.
+        ESP_ERROR_CHECK(gpio_set_direction(pins[i], GPIO_MODE_DISABLE));
+        ESP_ERROR_CHECK(gpio_set_pull_mode(pins[i], GPIO_FLOATING));
+        ESP_ERROR_CHECK(gpio_set_level(pins[i], 1));
+        if (c.pedals[i].enabled && c.pedals[i].resistor)
+            ESP_ERROR_CHECK(gpio_set_direction(pins[i], GPIO_MODE_OUTPUT));
+    }
 }
 void lcdDraw(const foot::DisplayFrame &view) {
     static foot::DisplayFrame previousFrame{};
