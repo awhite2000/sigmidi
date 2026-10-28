@@ -59,14 +59,14 @@
     "main": {
       "path": "mirrored-main-mk3s-petg-06.zip",
       "files": 44,
-      "bytes": 14493855,
-      "sha256": "0c4940cc07a671cccd84afd94569ba5724fa12b94ae8cfcb9237a7e8a2973885"
+      "bytes": 14492805,
+      "sha256": "71352c2ee068f75af11211978de6f08558edfa1aeb9e67ec1f13f1f7b8b5ccee"
     },
     "modular": {
       "path": "mirrored-modular-mk3s-petg-06.zip",
       "files": 54,
-      "bytes": 17373047,
-      "sha256": "d500511adc7bc3eeff359c37d771c0a85cae5bdf09f42ac13110bd6271195329"
+      "bytes": 17371975,
+      "sha256": "d07405ff2a1b80a63a2d491f606feead69a178553ffe0cbb0718ffa7d0c4db28"
     }
   },
   "limits": "Nominal CAD, finite surface/toolpath checks and slicer estimates; no physical print/load test."

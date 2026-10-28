@@ -138,7 +138,7 @@ Use **two ladder conductors** across each section joint: **TAIL** and **GND**. B
 
 Fit the 10 kΩ pull-up, 20 kΩ idle resistor and 100 nF capacitor **once, in the base**. Fit four 1 kΩ series resistors in the base and two more per extension, all 1% metal film (0.1% optional). Do not connect an extension tap directly to 3V3 or duplicate the idle resistor. Leave the final TAIL OUT insulated and open: no terminating resistor, short or jumper. The extension ground return must connect to the MCU ground. Adding an open-ended section does not change any existing tap's nominal voltage or calibration.
 
-Power off before adding/removing sections, then select the installed total in setup. This ladder **does not auto-detect section count**. Never hot-plug the ladder while performing MIDI. Only one simultaneous switch needs to be decoded. Encoder and expression inputs retain their existing separate connections.
+Power off before adding/removing sections, then select the installed total in setup. This ladder **does not auto-detect section count**. Never hot-plug the ladder while performing MIDI. Only one simultaneous switch needs to be decoded. Encoder and expression inputs have separate connections.
 
 ## Tap-to-label mapping
 
@@ -158,20 +158,19 @@ Idle is **2200 mV** for every size. With tap `t` grounded, `Rbottom = (t × 1 k�
 
 These are calculated targets, not measured thresholds. Capture idle and each installed switch after assembly with BLE and LCD active. Start at ±20 mV half-width and 10 ms debounce; verify noise, contact resistance, supply drift and resistor tolerance leave guard bands between every pair of measured windows. The smallest nominal gap is 142.2 mV at four switches and 56.2 mV at ten. Existing switches retain their calibrated centers after expansion; calibrate newly added taps before performance use.
 
-## Software and compatibility
+## Software settings
 
 - **New configurations:** modular wiring, ten installed switches and the Left enclosure by default. Select 4 for the base alone, then 6/8/10 as sections are added.
 - **Wi-Fi:** Settings → Ladder wiring → Modular, then Number of footswitches → 4/6/8/10 → Save & exit.
 - **LCD:** EDIT CONFIG → LADDER → MODULAR, SWITCHES → installed total, then SAVE & EXIT. The count advances in pairs.
 - The performance display, LCD switch menus, browser editor and calibration labels all use these stable letter/number labels. Lists follow physical order, upper row first, left to right. User-edited switch names remain separate and are retained. MIDI Test operates the selected physical switch's message list and LED.
 - MIDI lists, custom names, calibration and LED assignments remain attached to **physical tap IDs** when the count changes. For example, the base upper-left switch is A and the upper-right switch is B at every size; the lower-left/right pair is 1/2. Their actions stay unchanged. New sections appear at the right; hidden sections keep their saved data.
-- Configuration **version 4** adds `ladderLayout` (`1` modular, `0` linear). The ten `switches` entries are stored in fixed T1–T10 order; `ladder` stores idle followed by T1–T10, regardless of visible ordering. Keep all entries in JSON backups. The MIDI total limit still includes inactive entries.
-- Version 1–3 backups migrate to version 4 in **linear** mode, retaining their existing switch count (v1 defaults to ten), LED assignments, messages and calibration. They are not silently reinterpreted as modular wiring. Switching an old setup to modular requires the wiring above; verify every switch and LED before saving. Versions 1/2 also receive disabled LEDs with 1:1 assignments as before.
-- Linear mode remains available for the original tap-numbered ladders, including odd counts, from 4 to 10. [4](../design/ladders/ladder-4.svg), [5](../design/ladders/ladder-5.svg), [6](../design/ladders/ladder-6.svg), [7](../design/ladders/ladder-7.svg), [8](../design/ladders/ladder-8.svg), [9](../design/ladders/ladder-9.svg), [10](../design/ladders/ladder-10.svg).
+- Configuration schema **4** uses `ladderLayout` (`1` modular, `0` linear). The ten `switches` entries are stored in fixed T1–T10 order; `ladder` stores idle followed by T1–T10, regardless of visible ordering. Keep all entries in JSON backups. The MIDI total limit still includes inactive entries.
+- Linear mode supports tap-numbered ladders, including odd counts, from 4 to 10. [4](../design/ladders/ladder-4.svg), [5](../design/ladders/ladder-5.svg), [6](../design/ladders/ladder-6.svg), [7](../design/ladders/ladder-7.svg), [8](../design/ladders/ladder-8.svg), [9](../design/ladders/ladder-9.svg), [10](../design/ladders/ladder-10.svg).
 
 ## Optional LED chain
 
-For matching physical identity, wire Pololu 2535 data in fixed tap order: base LEDs T1 → T2 → T3 → T4, then extension T5 → T6, then T7 → T8, then T9 → T10. Default LED assignments remain 1:1 with these taps; displayed switch labels are translated separately. Add +5V, GND and DATA for the LED chain in addition to the ladder tail; GND may share a suitably sized conductor. Connect LED DATA OUT to the next section DATA IN. Existing LED assignments need no changes when a section is added. Check total supply current using [LED wiring instructions](leds.md).
+For matching physical identity, wire Pololu 2535 data in fixed tap order: base LEDs T1 → T2 → T3 → T4, then extension T5 → T6, then T7 → T8, then T9 → T10. Default LED assignments are 1:1 with these taps; displayed switch labels are translated separately. Add +5V, GND and DATA for the LED chain in addition to the ladder tail; GND may share a suitably sized conductor. Connect LED DATA OUT to the next section DATA IN. Existing LED assignments need no changes when a section is added. Check total supply current using [LED wiring instructions](leds.md).
 
 [All voltage targets and switch labels (CSV)](../design/ladders/voltage-targets.csv). Regenerate this document and the drawings with `python3 scripts/generate_ladder_variants.py`.
 """

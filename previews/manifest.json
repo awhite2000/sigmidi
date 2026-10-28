@@ -21,7 +21,7 @@
     "src/ble.cpp": "32215647da7c33cb74fd3fbc5c7f06efb1a2c7c9549c8d45adc77c0c6d39e11c",
     "src/wifi.cpp": "2f82354ff1d18f2c471b90c8f833eaf10c16688b34011c19cc5fc82d2e944166",
     "scripts/brand_enclosure_previews.py": "d54debe916efcec3d9d8b4372e94d08f03479c0613d190c62cc1a1f05b85bf8c",
-    "scripts/generate_ladder_variants.py": "287d90d66305d7d74ec3d19ea14a4ada7d51d0e5026ba232696c27d6b6ae029d",
+    "scripts/generate_ladder_variants.py": "521e585b884bacc161f674b88582ef412d145118d4014f76ac3b26679fee496c",
     "tests/config_test.cpp": "54f0c11a03a0ca17c9c6cd59f9052e63bb3f7bf8ab5fa559845738d1182cd698",
     "tests/ui_test.cpp": "5add184a085056d614c73830c4ce68aad05a99860af9237f57e56f5b9d4ba933",
     "tests/modular_test.cpp": "0f042bb89ea26fc38c0debc8a407c6bb43642aafeae3557b3b263fb06b791b2e",

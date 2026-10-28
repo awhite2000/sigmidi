@@ -1,67 +1,48 @@
-# SIGMIDI Foot Controller v0.1 — Alternate 9 V DC power input
+# SIGMIDI Foot Controller v0.1 — Power
 
-The alternate input uses a **5.5 mm OD / 2.1 mm ID barrel plug, 9 V DC, center-negative** and the **Pololu S13V10F5, item 4083**. The number **1178565** is [Kamami's listing](https://kamami.pl/step-upstep-down/1178565-modul-przetwornicy-step-upstep-down-5v1a-s13v10f5-pololu-4083-5906623413195.html), rather than a Pololu part number. This is a step-up/step-down regulator with a nominal 5 V output and a 1 A limit. Its allowed module input range is 2.8–22 V; the enclosure input is specified and should be labelled **9 V DC, center-negative**. See [Pololu specifications](https://www.pololu.com/product/4083).
-
-The preferred Left enclosure places these electronics in the **left base**. Its assembly and component positions are shown in the [Left CAD guide](../design/fusion/mirrored/README.md). The detailed mechanical coordinates and close-up references below describe the retained original Right assembly; the electrical wiring is shared by both variants.
+The controller accepts USB power or **9 V DC, center-negative**, through a **5.5 × 2.1 mm barrel plug** and **Pololu S13V10F5 #4083** regulator (Kamami listing 1178565). The regulator supplies 5 V with a nominal **1 A total output limit**. Its module input range is 2.8–22 V; label the enclosure input 9 V DC, center-negative. [Manufacturer specifications](https://www.pololu.com/product/4083).
 
 ## Wiring
 
 ```text
-9 V DC barrel socket                 Pololu S13V10F5          DFR1075
-
-Sleeve / outer contact (+9 V) ------ VIN
-Center / 2.1 mm pin (negative) ----- GND --------------------- GND
-                                    VOUT (+5 V regulated) --- 5 V input
-                                                             (VIN / VCC)
+Barrel sleeve (+9 V) -------- Pololu VIN
+Barrel centre (negative) ---- Pololu GND -------- DFR1075 GND
+                             Pololu VOUT (+5 V) - DFR1075 VIN / VCC
 ```
 
-Use the **regulated converter output**, not raw 9 V, at the DFR1075's 5 V input. The manufacturer's pinout labels this input **VIN**; the V1.1 schematic calls the same external input **VCC**. Use the printed power labels rather than a GPIO number. The 3V3 and BAT connections remain as before. [DFRobot power and pin definitions](https://wiki.dfrobot.com/dfr1075/).
+Connect only regulated 5 V to DFR1075 VIN/VCC. The board's [V1.1 schematic](../design/fusion/datasheets/dfr1075-schematic-v11.pdf) shows external VCC and USB VBUS feeding VCC1 through Q1 and D2. Use that header input; do not connect the converter directly to USB VBUS. The controller, pedal circuit, buffer and LEDs share ground.
 
-Identify the socket's center and sleeve solder terminals using continuity with a matching plug. Terminal positions in the generic CAD reference are illustrative. If the purchased jack has an additional switched contact, leave that contact unused for this two-wire input. Prewire the converter, fit the socket and nut, then solder and insulate the socket lugs. Provide slack between the socket on the upper shell and the converter on the removable base.
+Identify socket terminals by continuity with a matching plug. Leave any unused switched contact disconnected. Insulate lugs and provide slack between the socket on the upper shell and the converter on the removable base. Route supply/return together and away from analog sense wiring.
 
-The S13V10F5 **does not provide reverse-input-polarity protection**, despite the distributor's description. Use the confirmed center-negative convention. A series Schottky diode or a separate reverse-polarity protector before VIN can be added if protection against the wrong adapter is required; neither is included in the two-component CAD reference. For long input leads or hot-plug transients, Pololu recommends an input capacitor of at least 33 µF, rated at least 35 V, close to VIN/GND. [Manufacturer protection and input-transient notes](https://www.pololu.com/product/4083).
+The regulator has no reverse-input-polarity protection. For long supply leads or hot-plug transients, Pololu specifies at least 33 µF, rated at least 35 V, near VIN/GND. See the manufacturer's protection and transient notes linked above.
 
-## USB and common ground
+## Load budget
 
-The project's [DFR1075 V1.1 schematic](../design/fusion/datasheets/dfr1075-schematic-v11.pdf) shows external VCC and USB VBUS feeding the internal VCC1 rail through Q1 and D2. Connecting the regulated output to the external VIN/VCC header uses that existing selection/isolation circuit; do not bridge the converter directly to USB VBUS. This interpretation is specific to the V1.1 schematic used by the project.
+The 1 A output is shared by ESP32, LCD, analog circuits and LEDs; continuous capacity depends on input voltage, airflow and temperature. Ten Pololu 2535 LEDs draw approximately 0.5 A at full white. Default 64/255 brightness reduces average load, but wiring and supply selection must accommodate peak current. Validate Wi-Fi and full-white/startup load. The budget assumes no concurrent LiPo charging.
 
-The board, converter, pedal circuits and optional LED driver share ground. Route the DC input and its return together near the rear panel and keep switching-power wiring away from the ladder/pedal sense wiring. No firmware change or extra GPIO is needed.
+Branch LED +5 V and GND directly at the supply distribution point. Do not route LED current through the DFR1075 header or join independent positive outputs. USB-only operation does not imply power on the converter's LED rail. [LED wiring](leds.md).
 
-If the optional LEDs use this converter, branch their +5 V and return directly at the converter supply distribution point rather than sending LED current through the DFRobot header. The external VIN/VCC header is an input, so USB-only operation should not be assumed to power that external LED rail. See [LED supply wiring](leds.md).
+## Socket and converter placement
 
-The regulator's **1 A is the total output budget** for the controller, LCD, analog circuit and LEDs, and available continuous current depends on input voltage and temperature. Ten Pololu 2535 LEDs can use approximately 0.5 A at full white; the default 64/255 brightness lowers average LED load but does not remove current peaks. The previous LED-only recommendation of 1 A plus controller headroom exceeds this selected regulator's rating. Validate the assembled load, especially Wi-Fi operation and LED full-white/startup behavior. This budget assumes no concurrent LiPo charging.
+Left electronics are on the left; Right electronics are on the right. Positions below use each assembly's native millimetre coordinates.
 
-## Chassis placement
+| Feature | Left | Right |
+|---|---|---|
+| Rear DC socket centre | X140, Z0 | X210, Z0 |
+| Converter centre, approximate | X123.968 | X226.033 |
+| Converter PCB underside | Z−11 | Z−11 |
+| Lowest-component clearance to floor | 8.65 mm | 8.65 mm |
 
-The power socket is positioned on the **rear panel at X210 mm, Z0 mm**, between the split at X193.65/193.9 and raised switch 4. Its mounting bore is Ø8.4 mm for the Ø8 mm threaded barrel. The rear panel remains 2 mm thick.
+The socket bore is Ø8.4 mm for an Ø8 mm thread. Its axial stack is **18 mm**: 8 mm threaded length, 4 mm flange/body and 6 mm terminals. A 2 mm nut sits outside the 2 mm rear panel. CAD reserves Ø12 mm flange and 13 mm nut across flats; confirm those envelopes and lug positions against the purchased socket.
 
-The corrected socket axial stack is **18 mm overall**: 8 mm thread, 4 mm rear flange/body and 6 mm solder terminals. A 2 mm nut sits outside the panel. The rear flange seats against the inside face, giving layout-Y positions: mouth −6 mm, nut −2…0 mm, flange 2…6 mm, terminals 6…12 mm. This leaves 4 mm of thread ahead of the nut. The unspecified flange diameter is conservatively reserved as Ø12 mm; the nut reference uses a conservative 13 mm across-flats envelope. These diameters and exact lug geometry must be checked against the purchased socket.
+The [converter STEP](../design/fusion/datasheets/pololu-4083.step) and [drawing](../design/fusion/datasheets/pololu-4083-dimensions.pdf) describe its approximately 8.9 × 12.1 × 4.2 mm double-sided assembly, with ±0.3 mm board-edge tolerance.
 
-The converter uses the [manufacturer STEP model](../design/fusion/datasheets/pololu-4083.step) and [dimension drawing](../design/fusion/datasheets/pololu-4083-dimensions.pdf). Its nominal 8.9 × 12.1 × 4.2 mm double-sided assembly remains at X220…232.065, Y26…34.89 mm. The PCB underside is now **Z−11 mm**, raised 6 mm from the previous carrier, with **8.65 mm from the lowest component to the inside floor**. The manufacturer drawing allows ±0.3 mm board-edge tolerance.
+## Clip mount and ventilation
 
-## Raised PETG clip mount and cooling
+Three bare-edge seats and two opposing PETG springs support the converter. Springs are 4.8 mm wide, 1.6 mm thick and 13.216 mm tall above the reinforced floor, with 0.8 mm root gussets at 45°. Hook overlap is 0.4 mm, top clearance 0.2 mm and insertion travel about 0.6 mm outward per leaf. Solder wires first; spread the leaves, lower the PCB onto its seats and release. Press only on bare edges and keep strain off the springs.
 
-The surrounding carrier walls are replaced by three small bare-edge seats and two opposing PETG spring leaves. Small locating tabs on those seats give 0.4 mm lateral clearance in X and 0.3 mm in Y, preventing the board sliding out from under the hooks. Both populated faces and most of every board edge remain exposed. The leaves are 1.6 mm thick, 4.8 mm wide and 13.216 mm tall above the reinforced floor. Their 0.8 mm outward root gussets start at the current floor surface (Z−21) and rise at 45° to Z−20.2. Width has doubled from 2.4 mm, while the bending thickness, hook profile and insertion travel are retained. Each hook overlaps the PCB edge by 0.4 mm and clears its top by 0.2 mm after seating, reducing sustained bending stress. Entry ramps are 45°; the short underside ledge is 0.6 mm. No adhesive or mounting screws are needed.
+The electronics base has six inlet slots around the converter and seven below DFR1075, each 2.4 mm wide. The floor is 3 mm thick across their rectangular zone and a 3 mm border. Twelve rear exhaust slots form three columns and four rows; their highest edge leaves a 7.6 mm solid top rim. An internal rib with 45° side chamfers runs from roof to base between columns and joins the USB-pocket chamfer.
 
-Solder the wires first. Gently spread both clips approximately 0.6 mm outward, lower the board onto its three edge seats, then release the clips. For removal, spread both clips before lifting the board. Press only on bare PCB edges; keep solder joints and wire strain away from the spring arms. The small module has no mounting holes. Check the first print's fit before loading the clips; filament, extrusion width and board tolerances affect snap force.
+Rear vents print with **0.6 mm internal membranes**. Remove all twelve films and clean the openings before operation; finished rear open area is 380.16 mm². Keep grilles clear of foam, tape and wiring, and provide at least **3 mm air space under the base**. The ventilated enclosure is not sealed against dust or liquid.
 
-The right base has **six rounded 2.4 mm-wide inlet slots beneath and around the regulator** (two central slots and four around its mount) and **seven below the DFRobot PCB**, with 3.6 mm webs between the DFRobot slots. Screw supports, locating ribs, glue joints and their anchor footprints remain intact. The rear upper shell originally had nine 2.4 mm-high exhaust slots in four rows, with 45° ends for its end-down print orientation. The complete pattern is raised **17 mm**, with row bottoms at Z2, Z8, Z14 and Z20 and the highest edge at Z22.4. This leaves a **7.6 mm solid top rim** and a 24 mm lower band. The old lower openings are restored to the original 2 mm skin. The top switch mounting panels, USB dust pocket and connector openings are retained; the vent edges maintain at least **3 mm clearance to the switch bodies**. The new base slots retain at least 3 mm clearance to the mounting anchors. The same changes are present in the main and modular electronics sections.
-
-Use at least **3 mm adhesive rubber feet or equivalent pedalboard clearance** under the enclosure so the floor vents can draw air. Keep the grilles free of tape, foam and wiring. No feet are integrated into the flat printed floor, preserving its support-free print orientation. The enclosure is ventilated and is no longer closed against dust or liquid ingress.
-
-The mount is a geometric design, not a measured thermal or fatigue result. PETG's grade, temperature and print quality affect spring retention; verify the installed regulator and clip temperatures under the intended sustained load, including Wi-Fi and LEDs. Pololu states that current capability depends on ambient temperature, airflow and heat sinking: [manufacturer thermal notes](https://www.pololu.com/product/4083). Prusa describes PETG as tough and flexible but intended for service below 80 °C; that general figure is not a safe continuous spring-load rating: [PETG material guide](https://help.prusa3d.com/article/petg_2059).
-
-All existing controls, main/module dimensions, straight base glue lips and screw mounts remain unchanged. Only the converter is raised. The socket stays on the upper shell and the converter stays on the removable floor; leave wire slack, unplug the external adapter and release the existing MCU USB-pocket engagement before removing the populated base. Source geometry and fit checks are recorded in [ventilated-clip.json](../design/fusion/ventilated-clip.json) and [rear vent relocation](../design/fusion/raised-rear-vents.json), alongside the Fusion models. The widened leaves and their insertion and withdrawal checks are recorded in [wide clip verification](../design/fusion/wide-pololu-clips.json).
-
-One internal vertical rib reinforces the solid strip between the middle and rightmost rear slot columns, centered at X261.7 mm. It projects 2 mm inward from the original 2 mm back plate, giving a local thickness of 4 mm. Its 2 mm-wide crest has 2 × 2 mm chamfers at 45° on both sides and a 6 mm attachment footprint. The rib runs straight at X261.7 mm from the roof at Z27 mm to its seat on the bottom shell at Z−22 mm, merging with the existing chamfered USB pocket edge. The local PCB-front gap is 1 mm; nearby board fasteners also use the recorded local clearances. Other hardware retains at least 3 mm clearance, and the USB-C socket retains its 1 mm clearance envelope. The base geometry and exterior envelope are retained. All nine original slots remain in the finished part after membrane removal. Three matching slots complete the middle column, making four slots in each of three columns (12 total), with 380.16 mm² open area. The rear-rib update retains the exterior envelope, component positions, 7.6 mm top rim and 17 mm upward relocation. The current base reinforcement is described below. The left-hand gap is left clear to preserve clearance behind switch 4. See [rib geometry checks](../design/fusion/rear-grille-ribs.json).
-
-The base ventilation zone has a **1 mm internal reinforcement**, increasing its floor from 2 mm to 3 mm. The single rectangular zone is X208.6–262.4 mm and Y13–57.4 mm (53.8 × 44.4 mm), covering all thirteen slots with a 3 mm border around their combined envelope. The inside floor rises from Z−22 to Z−21; the outside remains at Z−24. All slots and existing floor bores remain open. The converter retains 8.65 mm clearance above the reinforced floor; board, clip-tip and screw-seat positions are unchanged. The raised floor shortens the exposed clip root by 1 mm, so retention should be checked on the actual PETG print. See [reinforcement checks](../design/fusion/base-vent-reinforcement.json).
-
-The full-height rib has nominal contact with the removable base, with no positive-volume overlap, and retains its downward removal path. See [roof-to-base rib checks](../design/fusion/full-height-rear-rib.json).
-
-The straight rib replaces the previous offset and shares the USB pocket chamfer. See [straight rib fit checks](../design/fusion/straight-rear-rib.json), including the local 1 mm PCB-front clearance and nominal base contact.
-
-**Rear vent print membranes:** all twelve rear slots have a 0.6 mm sacrificial film at their internal side (Y1.4–2 mm), flush with the existing inside wall. Each outside slot remains a 1.4 mm-deep recess. The rear vents are closed as printed. Before installing electronics, score around each recessed slot outline with a sharp hobby blade, remove the thin film and clean the edges. Preserve the permanent 2 mm wall and straight reinforcing rib. Remove all twelve films before operating the controller; this restores the original 380.16 mm² rear open area. The membranes add no projection into the enclosure and leave component clearances unchanged. Actual slicing with the supplied 0.6 mm nozzle profile is checked for all twelve films; cutting force still depends on the print. See [membrane checks](../design/fusion/rear-vent-membranes.json).
-
-The right electronics section now uses **four M2×6 base screws**, including two near the split at X201 mm, Y6 and Y86 mm. The new mounts have Ø9 mm bosses, Ø1.9 × 6.5 mm blind pilots, and matching Ø2.6 mm base clearances with Ø4.4 × 0.9 mm countersinks. Leading 9 mm webs support end-down printing. Small local reliefs clear the retained locating ribs without cutting the 2 mm floor or straight seam glue lip. The split joint and all component positions are retained. The main enclosure and the illustrated 8-switch modular enclosure each use eight base screws in total; the display uses four M2×5 screws. See [mount checks](../design/fusion/extra-right-base-screws.json).
-
+Before removing the populated base, disconnect power, release the MCU and withdraw its USB-C connector from the pocket partition. Physical clip retention, fatigue and operating temperatures require testing with the intended PETG and electrical load.

@@ -178,13 +178,20 @@ def package(folder,archive,names,extra):
     entries=[(folder/f'{n}.{ext}',f'{n}.{ext}') for n in names for ext in ['stl','3mf']]
     entries += [(folder/n,n) for n in ['README.md','mk3s-petg-06.ini','print-export.json','mesh-audit.json','slice-verification.json','straight-base-lips.json']]
     entries+=extra
-    available={n for _,n in entries}
-    portable_readme=Path(portable.name)/(folder.name+'-README.md')
-    def local_link(match):
-        target=match.group(1)
-        return ']('+target+')' if target in available else match.group(0)
-    portable_readme.write_text(re.sub(r'\]\(\.\./([^)]*)\)',local_link,(folder/'README.md').read_text()))
-    entries=[(portable_readme if n=='README.md' else f,n) for f,n in entries]
+    import sys
+    sys.path.insert(0,str(P.parents[1]/'scripts'))
+    from documentation_bundles import portable_markdown
+    portable_entries=[]
+    for f,n in entries:
+        if n.endswith('.md'):
+            # The ladder guide's temporary file has no project-relative source context.
+            source=P.parents[1]/'docs/resistor-ladders.md' if n=='resistor-ladders.md' else f
+            target=Path(portable.name)/(folder.name+'-'+n.replace('/','-'))
+            target.write_text(portable_markdown(source,n,entries))
+            portable_entries.append((target,n))
+        else:
+            portable_entries.append((f,n))
+    entries=portable_entries
     manifest={'revision':REV,'parts':names,'files':{n:sha(f) for f,n in entries},'no_obsolete_base_variant':True}
     (folder/'delivery-manifest.json').write_text(json.dumps(manifest,indent=2))
     entries.append((folder/'delivery-manifest.json','delivery-manifest.json'))

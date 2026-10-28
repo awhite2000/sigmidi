@@ -21,7 +21,7 @@
   "firmware_build_passed": true,
   "hardware_flash_tested": false,
   "ZIP": "/Users/ab/Documents/ChatGPT/MIDI controller 3/build/sigmidi-foot-controller-0.1-web-flasher.zip",
-  "ZIP_sha256": "f7a3ebe7ab7ae93c125f097acd38553ae1e909d8b5ecb7fd3260c37619c5cf48",
+  "ZIP_sha256": "b18487d7018cba3a6a0514397e0eede983b27566d09dfa060897806f7c704769",
   "verified_UTC": "2026-10-28T15:50:03.611290+00:00",
   "render_update_UTC": "2026-10-28T16:22:16.422136+00:00"
 }

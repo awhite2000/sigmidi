@@ -1,0 +1,18 @@
+{
+  "project": "SIGMIDI Foot Controller",
+  "version": "0.1",
+  "verified_UTC": "2026-10-28T17:50:57.883803+00:00",
+  "standalone_Markdown_files": 26,
+  "bundled_Markdown_files": 13,
+  "local_links_checked": 281,
+  "broken_local_links": [],
+  "bundle_manufacturing_and_firmware_payloads_byte_identical": 161,
+  "bundled_ladder_files_match_project": 32,
+  "firmware_and_CAD_geometry_unchanged": true,
+  "release_integrity_checks_passed": true,
+  "flasher_checks": {
+    "Python": 6,
+    "JavaScript": 19
+  },
+  "scope": "Current-state guides, portable package documentation and documentation generators"
+}

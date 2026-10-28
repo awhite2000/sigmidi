@@ -1,13 +1,11 @@
-# SIGMIDI Foot Controller v0.1 — Current design files
+# SIGMIDI Foot Controller v0.1 — Design
 
-<img src="branding/sigmidi-mark.svg" width="96" alt="SIGMIDI logotype">
+- [Complete native Fusion model](fusion/sigmidi-foot-controller-0.1.f3d): all Left/Right main and modular assemblies and part libraries.
+- [Left enclosure](fusion/mirrored/README.md): preferred electronics-on-left assemblies and manufacturing packages.
+- [Right enclosure](fusion/README.md): electronics-on-right assemblies.
+- [Front panel](front-panel.md): dimensions, labels and display placement.
+- [Right main printing](fusion/print/README.md) and [Right modular assembly](fusion/modular/README.md).
+- [Printing tolerances](../docs/printing-tolerances.md), [ladder wiring](../docs/resistor-ladders.md) and [preview gallery](../previews/README.md).
+- [Brand assets](branding/README.md).
 
-- [Preferred Left main and modular CAD, print files and assembly](fusion/mirrored/README.md).
-- [Original Right technical reference](fusion/README.md).
-- [Current front-panel view](front-panel.md).
-- [Main print instructions](fusion/print/README.md).
-- [Modular parts and switch counts](fusion/modular/README.md).
-- [Preview gallery](../previews/README.md).
-- [Modular ladder wiring and 4/6/8/10 switch labels](../docs/resistor-ladders.md).
-
-Obsolete geometry, screenshots, one-off migration scripts and previous packages have been consolidated into the [recovery archive](fusion/archive/README.md). Current deliverables remain at the existing main/modular file paths.
+CAD uses manufacturer PCB models for the Waveshare 24382 display, DFR1075 and Pololu S13V10F5, and the ACJS-MHDC drawing for the dual TRS socket. Datasheets are in `fusion/datasheets/`. Printed parts use the supplied PETG 0.6 mm nozzle profiles. Physical fit, loading and thermal operation require assembly tests.

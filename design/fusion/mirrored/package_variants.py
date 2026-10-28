@@ -1,7 +1,9 @@
 """Verify and package both independent alternatives without touching old deliveries."""
 from pathlib import Path
-import json,hashlib,zipfile,re,datetime
+import json,hashlib,zipfile,re,datetime,sys
 P=Path(__file__).resolve().parent;ROOT=P.parents[2]
+sys.path.insert(0,str(ROOT/'scripts'))
+from documentation_bundles import portable_markdown
 REVISION='sigmidi_embossed_icon_25mm' if (P/'embossed-icon-25mm.json').exists() else 'logical_left_electronics'
 def read(name):return json.loads((P/name).read_text())
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -47,11 +49,15 @@ packages={}
 for folder in ['main','modular']:
  files=[P/n for n in common]+[f for f in (P/folder).iterdir() if f.is_file() and f.suffix in ['.f3d','.step','.stl','.3mf','.ini','.png']]
  paths={f.relative_to(P).as_posix():sha(f) for f in sorted(files)}
+ portable_guide=portable_markdown(P/'README.md','README.md',[(f,f.relative_to(P).as_posix()) for f in files]).encode()
+ paths['README.md']=hashlib.sha256(portable_guide).hexdigest()
  manifest={'revision':REVISION,'variant':folder,'files':paths,'nozzle_mm':.6,'layer_mm':.3,'original_files_byte_identical':True,'native_saved_document':native['document']}
  mf=P/folder/'delivery-manifest.json';mf.write_text(json.dumps(manifest,indent=2)+'\n');files.append(mf)
  filename='mirrored-'+folder+'-mk3s-petg-06.zip';target=P/filename
  with zipfile.ZipFile(target,'w',zipfile.ZIP_DEFLATED) as z:
-  for f in files:z.write(f,f.relative_to(P).as_posix())
+  for f in files:
+   if f==P/'README.md':z.writestr('README.md',portable_guide)
+   else:z.write(f,f.relative_to(P).as_posix())
  with zipfile.ZipFile(target) as z:
   assert z.testzip() is None
   for f,h in paths.items():assert hashlib.sha256(z.read(f)).hexdigest()==h

@@ -10,7 +10,7 @@ Firmware sends an all-off frame during startup, then clears the indicators on se
 
 ## Variant and lead identification
 
-Use these settings for **every Pololu 2535 LED**: **5 V supply, RGB byte order, PROTOCOL 2535 (800 kbit/s)**. The 400 kbit/s and legacy profiles are not the settings for this part. Each LED draws approximately **50 mA at full white**, so ten require approximately **0.5 A** before controller/display load. These specifications and the lead diagram come from [Pololu's product documentation](https://www.pololu.com/product/2535).
+Use these settings for **every Pololu 2535 LED**: **5 V supply, RGB byte order, PROTOCOL 2535 (800 kbit/s)**. The alternate timing profiles are not the settings for this part. Each LED draws approximately **50 mA at full white**, so ten require approximately **0.5 A** before controller/display load. These specifications and the lead diagram come from [Pololu's product documentation](https://www.pololu.com/product/2535).
 
 Identify leads before trimming. In the [manufacturer's side-view diagram](https://a.pololu-files.com/picture/0J5433.1200.jpg), with the **lens pointing left, leads pointing right and the flat side at the bottom**, the leads are **top to bottom**:
 
@@ -25,7 +25,7 @@ This side view is not a bottom view; turning the LED over reverses the visible o
 
 ## Wiring
 
-Use **GPIO16 / IO16 / TX** on the DFR1075 header for LED data. The project's console uses USB Serial/JTAG, leaving that UART TX pad available. Keep the existing switch, LCD, pedal and encoder wiring. The pin assignment follows the [DFRobot board documentation](https://wiki.dfrobot.com/dfr1075/) and its [V1.1 schematic](../design/fusion/datasheets/dfr1075-schematic-v11.pdf).
+Use **GPIO16 / IO16 / TX** on the DFR1075 header for LED data. The project's console uses USB Serial/JTAG, leaving that UART TX pad available. The data GPIO is independent of switch, LCD, pedal and encoder connections. The pin assignment follows the [DFRobot board documentation](https://wiki.dfrobot.com/dfr1075/) and its [V1.1 schematic](../design/fusion/datasheets/dfr1075-schematic-v11.pdf).
 
 For the Pololu 2535 chain, use one gate of an **SN74AHCT125 powered at 5 V** to translate the 3.3 V GPIO. Its TTL-compatible input accepts the ESP32 signal; ordinary 5 V HC logic does not give the same input-level guarantee. Pin numbers below apply to the standard 14-pin D/N/PW packages. [TI datasheet](https://www.ti.com/lit/ds/symlink/sn74ahct125.pdf).
 
@@ -44,7 +44,7 @@ Common GND ───────────────────────
 
 Place the 330 Ω data resistor near the first LED's DIN; this is within Pololu's suggested 100–1000 Ω range. Pololu specifies at least 10 µF across the supply; this design uses **470 µF at the chain entry**, plus **100 nF directly across +5 V/GND at each LED** for local bypassing. Use capacitors rated at least 10 V, observing electrolytic polarity. Tie unused AHCT125 output-enable pins 4, 10 and 13 high to 5 V, and unused data-input pins 5, 9 and 12 to GND; leave their outputs unconnected. Keep data wiring short and route it alongside a ground return. The 10 kΩ pulldown holds the buffer input low while the MCU is resetting; software sends an all-off frame during initialization.
 
-Power this chain from a **regulated 5.0 V rail that does not exceed 5 V at the LEDs**, with common ground to the controller. Do not use a 12 V LED supply or the DFR1075 3V3 output. Allow at least **1 A for the LED rail**, plus controller/display headroom if sharing a supply. The default 64/255 brightness gives about 0.13 A for ten white LEDs by PWM scaling, plus driver overhead; size the supply for the full-white setting. Avoid joining independent positive supply outputs together. Make or change wiring only with power off.
+Power this chain from a **regulated 5.0 V rail that does not exceed 5 V at the LEDs**, with common ground to the controller. Do not use a 12 V LED supply or the DFR1075 3V3 output. For a dedicated supply, allow at least **1 A for the LED rail** plus any shared controller load. The Pololu 4083 has a **1 A total** limit; validate the combined load as described in the power guide. The default 64/255 brightness gives about 0.13 A for ten white LEDs by PWM scaling, plus driver overhead; size the supply for the full-white setting. Avoid joining independent positive supply outputs together. Make or change wiring only with power off.
 
 **Power-on blue is normal for this variant.** Pololu states that these LEDs illuminate blue until the first color command. A brief blue indication can occur before firmware initializes, even with LED feedback disabled. The initial black frame clears it; frames are also refreshed approximately every 250 ms so an independently restarted LED supply receives the intended colors again. A startup indication before firmware runs cannot be eliminated by a software setting. [Pololu power-up behavior](https://www.pololu.com/product/2535).
 
@@ -52,24 +52,24 @@ Power this chain from a **regulated 5.0 V rail that does not exceed 5 V at the L
 
 - LCD: **EDIT CONFIG → LED CHAIN**: ENABLED, BRIGHTNESS, RGB ORDER, PROTOCOL. Under **switches → switch number → LED NO.**, choose 1–10 or OFF.
 - Wi-Fi: **Settings → Pololu 2535 LED chain (optional)**. Each switch has an **LED assignment** selector.
-- Global brightness is an integer 0–255. Initial RGB values are white `(brightness, brightness, brightness)` and yellow `(brightness, brightness, 0)`; colors are fixed for this first implementation.
-- For this part select **RGB**, the initial setting. Other channel orders remain available only for alternative hardware. Do not use a WS2812B GRB preset for the Pololu 2535.
+- Global brightness is an integer 0–255. Initial RGB values are white `(brightness, brightness, brightness)` and yellow `(brightness, brightness, 0)`; colors are fixed.
+- For this part select **RGB**, the initial setting. Other channel orders are available for alternative hardware. Do not use a WS2812B GRB preset for the Pololu 2535.
 
 | Protocol selector | Rate | 0 high / low | 1 high / low | Reset low |
 | --- | --- | --- | --- | --- |
-| 2535 (initial) | 800 kbit/s, Pololu 2535 | 0.35 / 0.90 µs | 0.90 / 0.35 µs | 350 µs |
-| OLD 800K | 800 kbit/s, legacy two-speed WS2811 | 0.25 / 1.00 µs | 0.60 / 0.65 µs | 350 µs |
-| OLD 400K | 400 kbit/s, legacy two-speed WS2811 | 0.50 / 2.00 µs | 1.20 / 1.30 µs | 350 µs |
+| 2535 (default) | 800 kbit/s, Pololu 2535 | 0.35 / 0.90 µs | 0.90 / 0.35 µs | 350 µs |
+| OLD 800K | 800 kbit/s, two-speed WS2811 | 0.25 / 1.00 µs | 0.60 / 0.65 µs | 350 µs |
+| OLD 400K | 400 kbit/s, two-speed WS2811 | 0.50 / 2.00 µs | 1.20 / 1.30 µs | 350 µs |
 
-The **2535** profile follows [Pololu's protocol](https://www.pololu.com/product/2535): 1.25 µs per bit, most-significant bit first, with RGB channel order. The 350 µs reset is longer than its required 50 µs. The two OLD profiles remain for other hardware and follow the [older two-speed Worldsemi datasheet](https://www.mouser.com/datasheet/3/1348/1/WS2811.pdf). Existing saved settings are retained; select RGB and 2535 if a previous configuration used another profile. No JSON schema change is needed.
+The **2535** profile uses 1.25 µs bits, most-significant bit first, RGB order and a 350 µs reset. OLD 800K and OLD 400K are selectable timing profiles for other two-speed WS2811 hardware. Use 2535 for the specified Pololu part.
 
-Schema version **3** adds a required global object and required `led` field in each of the ten switch entries:
+Configuration schema **4** stores global settings and a `led` assignment in each of ten switch entries:
 
 ```json
 "leds": {"enabled": false, "brightness": 64, "colorOrder": 0, "protocol": 0}
 ```
 
-Each switch initially has `"led": 1`, `"led": 2`, etc. All ten stored assignments are retained when reducing the active switch count. Version-1 and version-2 backups/NVS migrate automatically, preserving MIDI lists, pedal settings and ladder calibration while adding disabled LEDs and 1:1 assignments. Version 1 also receives a ten-switch count. Version 4 adds modular labels; v1–3 data migrates in Linear mode. Older firmware cannot read version-4 backups.
+Assignment 0 disables an indicator; 1–10 selects a pixel. Defaults pair taps T1–T10 with pixels 1–10. Hidden switch assignments remain stored when the installed count is reduced.
 
 ## Implementation and bench check
 
@@ -81,18 +81,14 @@ Each switch initially has `"led": 1`, `"led": 2`, etc. All ten stored assignment
 4. Change an assignment and brightness, save, and repeat. Test BLE disconnect/reconnect, setup entry/exit, MIDI Test actions and power cycling.
 5. Check the data waveform and reset interval at DIN with the actual module, including BLE traffic, Wi-Fi MIDI tests and flash saves. Also power-cycle just the LED supply and check that periodic refresh restores the intended colors. Host tests and compilation do not qualify physical timing, supply integrity or iPad delivery.
 
-## Chassis mounting — LEDs below switches
+## Chassis mounting
 
-The current Fusion chassis is **350 × 92 mm**, with one optional LED directly below each switch on its own panel level. Upper LED centers are 14.7 mm in front of their switch centers; lower LEDs are 17.2 mm in front. Switch pitch remains 65 mm. The upper deck is extended 8 mm, increasing the row spacing to 53 mm, and the front apron adds another 6 mm. The upper row remains 30 mm higher. The MCU and rear USB subsequently move 65 mm right under raised SW4; the TRS later moves beside SW5, with its ports 3 mm lower; the latest revision shifts it 10 mm left to midpoint X319 and 1 mm inward to match its reinforced rear wall. In the LED enclosure enlargement, the lower controls, display and their supports move 8 mm toward the front.
+Each optional LED sits below its switch on the same panel level. Upper centers are 14.7 mm in front of the switch centers; lower centers are 17.2 mm in front. The main body is 350 × 92 × 54 mm, with 65 mm switch pitch, 53 mm row spacing and 30 mm elevation. Left labels read A–E / 1–5 left to right; Right reverses each row.
 
-Each port has a **5.4 mm bore**, **6.4 mm × 0.8 mm flange recess**, and a **0.8 mm exterior breakaway cover**. Internal Ø10.4 mm seats extend 4.9 mm below the roof, with the flange shoulder 7.1 mm below the panel surface. The LED flange bottom sits 7.9 mm below the surface, leaving **0.8 mm nominal dome exposure** against the **1 mm maximum**, based on the reference 8.7 mm package height. Check the actual package and adjust the shoulder depth before printing if needed. Leave the covers intact when omitting LEDs. When installing, open and finish the bores before fitting electronics, seat the LED flanges from inside, and secure them with suitable adhesive after verifying fit. The hidden `LED01`–`LED10` Fusion components represent the installed option; print only the shell/base solids, which retain their covers. The installed preview temporarily removes covers to show the LEDs.
+Each port has a 5.4 mm bore, 6.4 × 0.8 mm flange recess and 0.8 mm exterior breakaway cover. Internal Ø10.4 mm seats extend 4.9 mm below the roof. The flange shoulder is 7.1 mm below the surface; nominal flange bottom is 7.9 mm below it. The reference 8.7 mm package gives **0.8 mm dome exposure**, within the 1 mm maximum. Verify actual flange, height and lead dimensions before printing.
 
-The reference flange, package height and lead dimensions are conservative modeling assumptions, because Pololu publishes a nominal 5 mm lens rather than a complete dimensioned package drawing. Confirm these against the purchased LEDs before printing. Four-lead solder/heatshrink spaces and two wire buses with a descent and crossover are reserved inside the enclosure. The lower bus sits at Y83.5–85.5 mm and Z−12 to −9 mm, below the recessed seats and clear of the front overlap rib. In the current encoder-right layout, the right crossover uses X338.5–342.5 mm at Z−17 to −14 mm, clearing the shifted display posts and staying 3 mm below the encoder housing. The front-right M2 boss is at Y85 mm; the lower bus passes 3 mm above it. The upper descent now occupies Y30.4–34.4 mm, 3 mm forward of the relocated TRS housing/saddle; a short turn joins the upper bus, and the low crossover begins at Y31.4. Run the crossover below the stepped roof; keep wiring clear of the display, MCU and removable-base interface. See `design/fusion/print/pololu-led-mounts.json` for exact placements and check results.
+Leave covers intact when omitting LEDs. Open and finish holes before fitting electronics, seat flanges from inside and secure after checking fit. Root tapers and teardrop ceilings provide 45° print support. Use the manufacturer's lead orientation; route insulated data and power buses through the reserved interior corridors, clear of fasteners, PCB components, spring clips, grilles and the removable-base interface. Print the shell/base solids, not the fitted LED or wiring reference bodies.
 
-The LED seat print refinement adds 45° root tapers in each shell’s end-down print direction and 45° teardrop ceilings inside the seats. The circular front membranes remain 0.8 mm thick; LED positions and nominal 0.8 mm dome exposure are unchanged. See `design/fusion/print/led-support-comparison.json` for the slicer check.
+## Supply
 
-The DFR1075 is subsequently moved 8.299886 mm right to retain 5 mm to SW10. Its adjacent support is now on the left at X232; the USB pocket and mounting posts follow. LED positions and wire corridors remain unchanged and are checked against this placement. See `design/fusion/print/mcu-switch10-clearance.json`.
-
-## Alternate DC source
-
-The optional 9 V center-negative barrel input and Pololu 4083 can provide the LED rail as well as the controller, subject to its **1 A total output limit**. Branch LED power and return at the regulator/distribution point; do not route LED current through the DFRobot header. USB-only use does not imply that this external rail is powered. See [power wiring and current budget](power.md).
+Use regulated 5 V. With the Pololu 4083 converter, **1 A is the total budget for controller and LEDs**. Branch LED current at the supply point and return it directly there. A dedicated LED supply can be sized for at least 1 A plus any shared controller load. See [power wiring and limits](power.md).

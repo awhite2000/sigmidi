@@ -1,13 +1,13 @@
-# SIGMIDI Foot Controller v0.1 — Current enclosure layout
+# SIGMIDI Foot Controller v0.1 — Front panel
 
-Use the [exact native Left top view](fusion/mirrored/main/top.png), [populated Left assembly](fusion/mirrored/main/assembled.png) and [current geometry data](fusion/current-layout.json). The earlier 350 × 78 mm panel drawing and Waveshare 13892 layout are superseded and archived.
+The preferred Left main enclosure measures **350 × 92 × 54 mm**, with 65 mm horizontal switch pitch, 32.5 mm stagger, 53 mm row spacing and a 30 mm raised upper row. The shell has at least 2 mm sides and 3 mm top panels.
 
-Preferred Left main enclosure: **350 × 92 × 54 mm**, with 65 mm switch pitch, 32.5 mm stagger, 53 mm row spacing and a raised upper row 30 mm above the lower. The display is Waveshare 24382, flush with the lower surface; the encoder is to its left. The display ribbon is on the left, with 180° LCD rotation. Switch/component positions are retained by the current straight-base-glue-lip revision.
+Viewed from the playing position, Left labels run **A B C D E** across the raised row and **1 2 3 4 5** across the lower row. The display and encoder are on the left. The Waveshare 24382 glass is flush with the lower deck; the ribbon is on the left and the firmware selects 180° rotation. Right has electronics on the right and labels **E D C B A / 5 4 3 2 1**.
 
-The native top render shows the actual current shell, fitted controls and optional LEDs. It is an overview, not a drilling template. Detailed component and PCB shapes are retained in the [Left Fusion/STEP models](fusion/mirrored/README.md).
+Modular Left assemblies have an A B / 1 2 electronics section, C/3, D/4 and E/5 sections as required, and a right end cap. Right extends leftward from its electronics section. Every extension occupies 65 mm of width.
 
-Switch labels, viewed from the front, run **A B C D E** across the upper row and **1 2 3 4 5** across the lower row, left to right. In modular assemblies the base retains **A B / 1 2**, and right extensions add **C/3**, **D/4** and **E/5**. Existing labels, switch positions and mounting holes stay fixed. Native CAD component IDs retain their historical numeric identifiers; these are separate from the visible labels.
+Switch names use Arial Bold outlines, 8 mm high and recessed 0.8 mm. The roof below the markings is 2.2 mm thick. An optional LED is below each switch; covers close unused LED holes.
 
-The switch labels are now cut 0.8 mm into the upper shell, in Arial Bold with actual 8 mm-high outlines, to the left of each optional LED. The original 3 mm top retains 2.2 mm below the markings. [Left label view](fusion/mirrored/main/top.png) and [dimensions/checks](fusion/recessed-switch-labels.json).
+The Left electronics upper shell carries a **25 × 20.183 mm** icon between A and B, raised 0.6 mm and backed by the full 3 mm roof. Maximum local body height at the icon is 54.6 mm.
 
-The preferred Left main and modular electronics shells include the supplied 25 mm-wide SIGMIDI icon raised 0.6 mm between A and B, fully backed by the 3 mm roof. The nominal enclosure body stays 350 × 92 × 54 mm; the local embossed roof reaches 54.6 mm overall. See the [icon close-up](fusion/mirrored/main/embossed-icon.png).
+Use the [Left top view](fusion/mirrored/main/top.png), [populated assembly](fusion/mirrored/main/assembled.png), [icon detail](fusion/mirrored/main/embossed-icon.png) and [assembly-coordinate geometry](fusion/mirrored/layout.json). Renders are overviews; manufacture from the [CAD and oriented print files](fusion/mirrored/README.md).

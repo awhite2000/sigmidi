@@ -2,73 +2,60 @@
 
 <img src="design/branding/sigmidi-mark.svg" width="96" alt="SIGMIDI logotype">
 
-A programmable stompbox-style BLE MIDI foot controller using the DFRobot DFR1075 (FireBeetle 2 ESP32-C6) and Waveshare 24382 LCD, with MIDI sent to an iPad.
+SIGMIDI is a programmable BLE MIDI foot controller built around the DFRobot DFR1075 FireBeetle 2 ESP32-C6 and Waveshare 24382 color LCD. It sends MIDI to an iPad and provides encoder menus and a Wi-Fi configuration editor.
 
-The BLE device is named **SIGMIDI Foot Controller v0.1**; Wi-Fi setup uses **SIGMIDI-xxxx**. Configuration backups download as `sigmidi-foot-controller.json`.
+## Features
 
-## Confirmed requirements
+- A four-switch base with up to three two-switch extensions: 4, 6, 8 or 10 momentary switches, detected individually through one resistor ladder.
+- Independent ordered press and release lists of PC and CC messages, with channels 1–16 and a delay per message. Added messages default to 5 ms.
+- Two pedal inputs, independently selectable as two-wire resistors or three-wire potentiometers, with maximum resistance up to 10 kΩ, calibration, linear/log response and CC output.
+- A 280 × 240 landscape LCD and a 20-detent encoder with click for local setup.
+- An offline Wi-Fi editor for configuration, calibration, MIDI tests and JSON backups.
+- Optional Pololu 2535 indicators, one per switch: white for a performed press action and yellow for release.
+- USB power and an optional 9 V center-negative input through a Pololu S13V10F5 regulator.
 
-- Edit the complete controller configuration through a Wi-Fi browser interface, including on an iPad.
+## Enclosures and switch identity
 
-- One incremental rotary encoder with 20 detents per revolution and a momentary push switch for menu navigation and setup.
-- Six to ten momentary (monostable) footswitches, configurable in software (default ten), operated one at a time. Simultaneous footswitch presses are not a requirement.
-- Each switch independently stores an ordered sequence of MIDI messages for press and an optional separate sequence for release.
-- Support Control Change (CC) and Program Change (PC), with an independent MIDI channel for every message.
-- Transmit MIDI over Bluetooth Low Energy MIDI to an iPad.
-- Optional Pololu 2535 (5 mm diffused, integrated WS2811) RGB indicators: one LED per switch, initially assigned 1:1, with white for performed press actions and yellow for performed release actions.
-- Two continuous pedal inputs, each supporting either a two-wire variable resistor or a three-wire potentiometer, selectable independently.
-- Support pedal resistances from 0 to 10 kΩ, a configurable maximum resistance, and linear or logarithmic response per input.
+**Left is the preferred enclosure and firmware default.** Its display and encoder are on the left, with modular extensions added on the right. Left labels read **A B C D E / 1 2 3 4 5** across the upper/lower rows. Right has the electronics on the right and reverses each row.
 
-## Proposed design
+Select **Settings → Enclosure variant** in the Wi-Fi editor or **EDIT CONFIG → ENCLOSURE** on the LCD. Left combines 180° LCD rotation with Left list order; Right uses 0°. MIDI actions, names, LED assignments and calibration belong to permanent electrical taps, independently of the selected variant or installed switch count.
 
-Use the ESP32-C6 internal ADC for a single modular 4/6/8/10-switch resistor ladder and both continuous pedals. Only one footswitch needs to be detected at a time. The Waveshare 24382 is a 280×240 ST7789V2 color LCD (landscape) connected over SPI; it has no touch input. No external ADC or GPIO expander is required. Enable Wi-Fi Setup from the encoder menu to start a password-protected access point and open the onboard editor from an iPad browser; no internet connection is needed.
+The main enclosure measures **350 × 92 × 54 mm**, with a 30 mm raised row, 65 mm horizontal pitch, 32.5 mm stagger and 53 mm row spacing. The Left electronics shell has a 25 mm-wide icon raised 0.6 mm between A and B. Main and modular assemblies are available for both variants.
 
-Choose the count in the Wi-Fi editor under **Settings → Number of footswitches**, or the LCD under **EDIT CONFIG → Switch count**. See [modular ladder wiring, numbering and resistor values](docs/resistor-ladders.md), including individual wiring drawings and voltage targets. Select **Modular** wiring for a four-switch base plus right extensions in the preferred Left enclosure. Upper switches are labeled A–E from left to right; lower switches are 1–5 from left to right. Existing labels remain stable as sections are added. Actions, calibration and LED assignments stay attached to physical switches. Existing configurations migrate in legacy linear wiring mode without remapping.
+## Install and configure
 
-**Left is the default for new configurations.** Choose **Settings → Enclosure variant → Left · Screen on left** in the Wi-Fi editor, or **EDIT CONFIG → ENCLOSURE → LEFT** on the LCD, then Save. Left selects mirrored switch/calibration list order and 180° display rotation together; Right uses the original order and 0°. Names, MIDI messages, calibration and LED assignments stay with the same physical switches. The variant persists across restarts; older 180° settings migrate to Left, and older saved configurations without a direction setting retain Right.
+Use the preserved [release bundles](distribution/README.md). From the project root:
 
-The alternate supply is **9 V DC, center-negative**, through a 5.5 × 2.1 mm socket and Pololu S13V10F5 #4083 (Kamami 1178565). See [power wiring, ratings and chassis placement](docs/power.md).
+```sh
+python3 scripts/serve_flasher.py
+```
 
-See [hardware](docs/hardware.md) for the proposed electrical design and [firmware](docs/firmware.md) for configuration, scheduling, calibration, and acceptance criteria.
+Open **http://localhost:8766/** in desktop Chrome or Edge, connect the DFR1075 over USB-C and choose **Connect & install**. Leave **Erase device** unchecked to keep compatible saved settings. The flasher serves the complete local installer from `distribution/web-flasher/`.
 
-## Project status
+On the controller, enter **Wi-Fi Setup**, join the displayed `SIGMIDI-xxxx` network, and open **http://192.168.4.1/**. Choose the enclosure, ladder wiring and installed switch count, calibrate the inputs, configure MIDI actions and save. Normal performance runs with Wi-Fi off. The BLE name is **SIGMIDI Foot Controller v0.1**.
 
-Initial ESP-IDF 5.3.1 firmware is implemented and compiles for ESP32-C6. It includes BLE MIDI, the ST7789V2 LCD, encoder setup menus, ladder/pedal input processing, NVS configuration storage, an optional hardware-timed WS2811 chain, and a Wi-Fi browser editor. Host tests cover the MIDI engine and configuration validation. Hardware operation and iPad compatibility have not yet been tested.
+## Documentation and files
 
-See [build, flash, and first-run instructions](docs/bringup.md). [Optional LED wiring and setup](docs/leds.md) covers GPIO16, the level shifter, power, assignments and timing. The larger display uses a new graphical performance view, seven-row scrolling menus with aligned parameter values, purple action labels, color-coded PC/CC entries and a Wi-Fi setup card. [Menu previews](previews/display-preview.png) are rendered from the actual firmware UI. [Updated chassis and display mounts](design/fusion/README.md) include the manufacturer STEP model and revised screen opening.
+| Area | Guide |
+|---|---|
+| Electrical wiring and GPIO | [Hardware](docs/hardware.md) |
+| Modular taps and resistor values | [Resistor ladder](docs/resistor-ladders.md) |
+| Menus, configuration and MIDI behavior | [Firmware](docs/firmware.md) |
+| Building and commissioning | [Bring-up](docs/bringup.md) |
+| Browser installation and hosting | [Web flasher](docs/web-flasher.md) |
+| LED wiring and configuration | [LEDs](docs/leds.md) |
+| Power wiring and load budget | [Power](docs/power.md) |
+| CAD and manufacturing files | [Design](design/README.md) |
+| Screenshots and enclosure renders | [Previews](previews/README.md) |
 
-## Install firmware from the browser
+The [complete Fusion model](design/fusion/sigmidi-foot-controller-0.1.f3d) contains the native component hierarchy for all four assemblies and the modular part libraries. Firmware source is in `src/`, the embedded editor in `web/`, and tests in `tests/`. Release binaries and installers are in `distribution/`; `build/` contains disposable compiler outputs when a build is run.
 
-Use the preserved [release bundles](distribution/README.md). Run `python3 scripts/serve_flasher.py` and open **http://localhost:8766/** in desktop Chrome or Edge. Connect the DFR1075 over USB-C and choose **Connect & install**. Leave **Erase device** unchecked to preserve compatible settings.
+## Validation status
 
-The versioned application is **`distribution/sigmidi-foot-controller-0.1.bin`**. The build also creates **`distribution/sigmidi-foot-controller-0.1-web-flasher.zip`**, a portable installer with firmware and local browser dependencies. See [web flasher instructions](docs/web-flasher.md) and [preview](previews/web-flasher.png). Physical USB flashing remains to be verified on the controller.
+The ESP-IDF 5.3.1 firmware compiles for ESP32-C6. Host tests cover configuration, MIDI scheduling, UI navigation, display mapping, switch identity and LED feedback. CAD, mesh and slicer checks accompany the manufacturing files. Physical USB flashing, iPad interoperability, printed fit/load strength and sustained thermal operation require validation on the assembled hardware.
 
-## Implementation order
+![SIGMIDI preferred Left enclosure](previews/sigmidi-left-main.png)
 
-1. Verify the board revision and proposed pin assignments; bring up the ST7789V2 display and calibrate the internal ADC.
-2. Bring up BLE MIDI and verify CC/PC delivery to the intended iPad application.
-3. Add the resistor ladder, debounce, independent press/release sequences, and ordered scheduling.
-4. Prototype both pedal interface modes, then add calibration, response curves, and CC filtering.
-5. Add configuration editing using rotary encoder navigation and a locally hosted Wi-Fi browser editor, persistent configuration, and fault/status feedback.
-6. Validate single-switch operation alongside both pedals, reconnection, power cycling, and enclosure wiring.
+## License
 
-## Details to resolve during hardware design
-
-- Confirm the proposed wiring against the actual board revision.
-- Pedal jack pinout and polarity for the pedals to be used; TRS expression-pedal wiring is not universal.
-- Validate the selected 1 A converter against the complete controller and optional LED load.
-- Intended iPad MIDI application and its displayed PC numbering convention.
-
-## Current project files
-
-Firmware and tests are in `src/`, `tests/` and `web/`; electrical instructions are in `docs/`. [Current CAD and print packages](design/fusion/README.md) use straight base glue lips and one universal pair base for all modular positions. [The preview gallery](previews/README.md) contains current native CAD renders, real firmware LCD screens and screenshots of the Wi-Fi editor. Superseded snapshots and build intermediates have been removed; current source, datasheets, renders and manufacturing files are retained.
-
-The [preferred Left enclosure variants](design/fusion/mirrored/README.md) put the electronics on the left and modular extensions on the right. Original CAD and print deliveries remain available unchanged.
-
-## Enclosure renderings
-
-![SIGMIDI Foot Controller — preferred Left variant](previews/sigmidi-left-main.png)
-
-[Left modular](previews/sigmidi-left-modular.png) · [Left CAD and print packages](design/fusion/mirrored/README.md) · [Right alternative](previews/sigmidi-right-main.png) · [Right modular](previews/sigmidi-right-modular.png)
-
-The [complete latest Fusion model](design/fusion/sigmidi-foot-controller-0.1.f3d) preserves the native component hierarchy for all Left and Right main/modular assemblies, including the embossed icon. [Export details](design/fusion/sigmidi-foot-controller-0.1-model.json). Firmware and installer releases live in [distribution/](distribution/README.md); `build/` is disposable.
+SIGMIDI is licensed under the [Apache License 2.0](LICENSE). Third-party materials carry their own license notices.
