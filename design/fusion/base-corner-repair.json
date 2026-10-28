@@ -1,0 +1,80 @@
+{
+  "revision": "base_corner_repair",
+  "location": "front-right rounded corner of main and reused modular electronics base",
+  "restored_material_bounds_XYZ_mm": [
+    346.0790622886292,
+    81.32759180473528,
+    -24.0,
+    347.4,
+    88.69026021046292,
+    -21.999999999999996
+  ],
+  "added_material_mm3": 14.64033707285286,
+  "floor_thickness_mm": 2,
+  "floor_Z_mm": [
+    -24,
+    -22
+  ],
+  "outer_corner_radius_mm": 6,
+  "local_patch_XY_mm": [
+    335,
+    77,
+    350,
+    92
+  ],
+  "remaining_unintended_gap_mm3": 0,
+  "original_material_removed_mm3": 0,
+  "single_connected_solid": true,
+  "outer_bounds_unchanged": true,
+  "all_screw_centers_XY_mm": [
+    [
+      6.0,
+      6.0
+    ],
+    [
+      125.0,
+      6.0
+    ],
+    [
+      344.0,
+      6.0
+    ],
+    [
+      35.0,
+      80.0
+    ],
+    [
+      125.0,
+      80.0
+    ],
+    [
+      326.0,
+      85.60000000000001
+    ],
+    [
+      201.0,
+      6.0
+    ],
+    [
+      201.0,
+      86.0
+    ]
+  ],
+  "screw_bores_countersinks_vents_mounts_and_joints_unchanged": true,
+  "upper_shell_and_all_other_base_parts_unchanged": true,
+  "component_positions_unchanged": true,
+  "main_and_modular_updated": true,
+  "assembly_collisions": [],
+  "base_removal_samples_Z_mm": [
+    0,
+    -0.01,
+    -0.25,
+    -0.5,
+    -1,
+    -2,
+    -5,
+    -10,
+    -20
+  ],
+  "backup": "archive/pre-base-corner-repair.zip"
+}

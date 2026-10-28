@@ -1,0 +1,52 @@
+{
+  "version": "0.1",
+  "configuration_version": 4,
+  "selector": "enclosureVariant",
+  "variants": {
+    "0": {
+      "name": "Right",
+      "screen": "right",
+      "rotation_degrees": 0,
+      "row_order": "original"
+    },
+    "1": {
+      "name": "Left",
+      "screen": "left",
+      "rotation_degrees": 180,
+      "row_order": "mirrored"
+    }
+  },
+  "independent_orientation_or_layout_controls": false,
+  "legacy_migration": "displayRotation 180 -> Left; 0 or absent -> Right; explicit new selector takes precedence",
+  "modular_counts_tested": [
+    4,
+    6,
+    8,
+    10
+  ],
+  "physical_identity_preserved": [
+    "names",
+    "press MIDI sequences",
+    "release MIDI sequences",
+    "calibration",
+    "LED assignments",
+    "inactive mappings"
+  ],
+  "checks_passed": [
+    "All host suites including unified enclosure tests",
+    "ADC-to-MIDI and custom LED mapping on every active switch in both variants",
+    "Mapped LCD edits/test/calibration and save/reload",
+    "Wi-Fi list order and mapped name/message/LED/calibration edits",
+    "Legacy JSON migration, strict types and ranges",
+    "SPI pixel-by-pixel 0/180 rotation for all screen types",
+    "ESP32-C6 ESP-IDF 5.3.1 release build",
+    "Browser Left selection, Save and Reload, A-E/1-5 order and retained LED/voltage mappings",
+    "Published installer ready with current SHA-256-verified build",
+    "Portable ZIP CRC and all published file hashes"
+  ],
+  "firmware_sha256": "8b666986f19cd70bdcb9d153052811d2610ba747761ab80e076cbd9a060a8242",
+  "source_sha256": "ec1bdfe45a42f8b8942e4f94efe272d9d5c85d262450668ed90f3252aa5a8a00",
+  "ZIP_sha256": "a8f8ed316870b033d5f7da4cf15fa2738616db855d2006b6ca449c6eeb2281e9",
+  "hardware_tested": false,
+  "verified_UTC": "2026-10-28T15:50:03.611290+00:00"
+}

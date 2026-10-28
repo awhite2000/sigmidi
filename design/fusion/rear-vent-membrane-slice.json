@@ -1,0 +1,328 @@
+{
+  "revision": "rear_vent_membranes",
+  "nozzle_mm": 0.6,
+  "layer_mm": 0.3,
+  "nominal_membrane_thickness_mm": 0.6,
+  "source_orientation": "Right outer end on bed; native X reversed into print Z",
+  "all_12_membranes_have_continuous_toolpaths": true,
+  "central_core_check": "Every 0.3mm print layer through each slot core, excluding 1.5mm tapered ends, has non-support extrusion across the slot center in the membrane Y band.",
+  "slots": [
+    {
+      "slot_XZ_mm": [
+        220.5,
+        234.9,
+        14.0,
+        16.4
+      ],
+      "core_print_Z_mm": [
+        116.6,
+        128.0
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 38,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6018
+    },
+    {
+      "slot_XZ_mm": [
+        220.5,
+        234.9,
+        20.0,
+        22.4
+      ],
+      "core_print_Z_mm": [
+        116.6,
+        128.0
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 38,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6021
+    },
+    {
+      "slot_XZ_mm": [
+        266.0,
+        280.4,
+        14.0,
+        16.4
+      ],
+      "core_print_Z_mm": [
+        71.10000000000002,
+        82.5
+      ],
+      "expected_layers": 39,
+      "layers_with_membrane_extrusion": 39,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6
+    },
+    {
+      "slot_XZ_mm": [
+        266.0,
+        280.4,
+        20.0,
+        22.4
+      ],
+      "core_print_Z_mm": [
+        71.10000000000002,
+        82.5
+      ],
+      "expected_layers": 39,
+      "layers_with_membrane_extrusion": 39,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6
+    },
+    {
+      "slot_XZ_mm": [
+        243.0,
+        257.4,
+        20.0,
+        22.4
+      ],
+      "core_print_Z_mm": [
+        94.10000000000002,
+        105.5
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 38,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6004
+    },
+    {
+      "slot_XZ_mm": [
+        220.5,
+        234.9,
+        2.0,
+        4.4
+      ],
+      "core_print_Z_mm": [
+        116.6,
+        128.0
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 38,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6012
+    },
+    {
+      "slot_XZ_mm": [
+        266.0,
+        280.4,
+        2.0,
+        4.4
+      ],
+      "core_print_Z_mm": [
+        71.10000000000002,
+        82.5
+      ],
+      "expected_layers": 39,
+      "layers_with_membrane_extrusion": 39,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6
+    },
+    {
+      "slot_XZ_mm": [
+        220.5,
+        234.9,
+        8.0,
+        10.4
+      ],
+      "core_print_Z_mm": [
+        116.6,
+        128.0
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 38,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6015
+    },
+    {
+      "slot_XZ_mm": [
+        266.0,
+        280.4,
+        8.0,
+        10.4
+      ],
+      "core_print_Z_mm": [
+        71.10000000000002,
+        82.5
+      ],
+      "expected_layers": 39,
+      "layers_with_membrane_extrusion": 39,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6
+    },
+    {
+      "slot_XZ_mm": [
+        243,
+        257.4,
+        2,
+        4.4
+      ],
+      "core_print_Z_mm": [
+        94.10000000000002,
+        105.5
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 38,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6001
+    },
+    {
+      "slot_XZ_mm": [
+        243,
+        257.4,
+        8,
+        10.4
+      ],
+      "core_print_Z_mm": [
+        94.10000000000002,
+        105.5
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 38,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6002
+    },
+    {
+      "slot_XZ_mm": [
+        243,
+        257.4,
+        14,
+        16.4
+      ],
+      "core_print_Z_mm": [
+        94.10000000000002,
+        105.5
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 38,
+      "missing_layers": [],
+      "estimated_commanded_bead_width_mm_median": 0.6003
+    }
+  ],
+  "baseline_without_membranes": [
+    {
+      "slot_XZ_mm": [
+        220.5,
+        234.9,
+        14.0,
+        16.4
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 0
+    },
+    {
+      "slot_XZ_mm": [
+        220.5,
+        234.9,
+        20.0,
+        22.4
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 0
+    },
+    {
+      "slot_XZ_mm": [
+        266.0,
+        280.4,
+        14.0,
+        16.4
+      ],
+      "expected_layers": 39,
+      "layers_with_membrane_extrusion": 0
+    },
+    {
+      "slot_XZ_mm": [
+        266.0,
+        280.4,
+        20.0,
+        22.4
+      ],
+      "expected_layers": 39,
+      "layers_with_membrane_extrusion": 0
+    },
+    {
+      "slot_XZ_mm": [
+        243.0,
+        257.4,
+        20.0,
+        22.4
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 0
+    },
+    {
+      "slot_XZ_mm": [
+        220.5,
+        234.9,
+        2.0,
+        4.4
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 0
+    },
+    {
+      "slot_XZ_mm": [
+        266.0,
+        280.4,
+        2.0,
+        4.4
+      ],
+      "expected_layers": 39,
+      "layers_with_membrane_extrusion": 0
+    },
+    {
+      "slot_XZ_mm": [
+        220.5,
+        234.9,
+        8.0,
+        10.4
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 0
+    },
+    {
+      "slot_XZ_mm": [
+        266.0,
+        280.4,
+        8.0,
+        10.4
+      ],
+      "expected_layers": 39,
+      "layers_with_membrane_extrusion": 0
+    },
+    {
+      "slot_XZ_mm": [
+        243,
+        257.4,
+        2,
+        4.4
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 0
+    },
+    {
+      "slot_XZ_mm": [
+        243,
+        257.4,
+        8,
+        10.4
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 0
+    },
+    {
+      "slot_XZ_mm": [
+        243,
+        257.4,
+        14,
+        16.4
+      ],
+      "expected_layers": 38,
+      "layers_with_membrane_extrusion": 0
+    }
+  ],
+  "STL_sha256": "3537c361d59e515bac5ea71acf2fce2f7971ba9ca7b7df897f4718c0c7c9a3d3",
+  "Gcode_sha256": "3ee9817b266904d9ff670f88c44c0e5917b8e495bd5b27bb60c71f561f5c2b8f",
+  "limits": "Extrusion paths and estimated commanded width do not establish adhesion, cutting effort or physical print quality."
+}

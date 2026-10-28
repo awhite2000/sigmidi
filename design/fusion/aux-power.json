@@ -1,0 +1,203 @@
+{
+  "revision": "ventilated_petg_clip",
+  "regulator": "Pololu S13V10F5 #4083 / Kamami 1178565",
+  "input_V_DC": 9,
+  "polarity": "center negative, sleeve positive",
+  "socket_center_layout_XYZ_mm": [
+    210,
+    0,
+    0
+  ],
+  "shell_side": "rear, right of split and left of SW4 housing",
+  "hole_diameter_mm": 8.4,
+  "rear_wall_thickness_mm": 2,
+  "socket_thread_diameter_mm": 8,
+  "thread_length_mm": 8,
+  "nut_thickness_mm": 2,
+  "flange_body_length_mm": 4,
+  "terminal_length_mm": 6,
+  "total_socket_length_mm": 18,
+  "socket_axial_layout_Y_mm": {
+    "front_tip": -6,
+    "nut": [
+      -2,
+      0
+    ],
+    "rear_flange": [
+      2,
+      6
+    ],
+    "terminals": [
+      6,
+      12
+    ]
+  },
+  "free_thread_ahead_of_nut_mm": 4,
+  "assumed_flange_diameter_mm": 12,
+  "assumed_nut_AF_mm": 13,
+  "reference_lug_locations": "Nominal only; identify center/sleeve contacts electrically on the purchased socket.",
+  "converter_position": "converter-carrier.json",
+  "wiring": {
+    "jack_center": "regulator GND",
+    "jack_sleeve": "regulator VIN",
+    "regulator VOUT": "DFR1075 regulated 5V input header (VIN/VCC)",
+    "regulator GND": "DFR1075 GND"
+  },
+  "wire_corridor_diameter_mm": 1.6,
+  "wire_routes": [
+    [
+      "9V sleeve positive to VIN",
+      [
+        [
+          212,
+          12,
+          -1.5
+        ],
+        [
+          212,
+          20,
+          -8
+        ],
+        [
+          214,
+          24,
+          -12
+        ],
+        [
+          214,
+          32.985,
+          -12
+        ],
+        [
+          221.27,
+          32.985,
+          -6
+        ],
+        [
+          221.27,
+          32.985,
+          -9.984
+        ]
+      ]
+    ],
+    [
+      "Center negative to converter GND",
+      [
+        [
+          208,
+          12,
+          -1.5
+        ],
+        [
+          208,
+          20,
+          -8
+        ],
+        [
+          212,
+          24,
+          -12
+        ],
+        [
+          212,
+          30.445,
+          -12
+        ],
+        [
+          221.27,
+          30.445,
+          -6
+        ],
+        [
+          221.27,
+          30.445,
+          -9.984
+        ]
+      ]
+    ],
+    [
+      "Regulated 5V VOUT to DFR1075 VIN-5V",
+      [
+        [
+          221.27,
+          27.905,
+          -9.984
+        ],
+        [
+          221.27,
+          27.905,
+          -2
+        ],
+        [
+          262.11420453389894,
+          27.905,
+          -2
+        ],
+        [
+          262.11420453389894,
+          26.78537742,
+          -2
+        ],
+        [
+          262.11420453389894,
+          26.78537742,
+          -11.5
+        ]
+      ]
+    ],
+    [
+      "Converter GND to DFR1075 GND",
+      [
+        [
+          221.27,
+          30.445,
+          -9.984
+        ],
+        [
+          221.27,
+          30.445,
+          -2
+        ],
+        [
+          262.11420453389894,
+          30.445,
+          -2
+        ],
+        [
+          262.11420453389894,
+          31.86537742,
+          -2
+        ],
+        [
+          262.11420453389894,
+          31.86537742,
+          -11.5
+        ]
+      ]
+    ]
+  ],
+  "DFR1075_header_approaches_XY_mm": {
+    "VIN": [
+      262.11420453389894,
+      26.78537742
+    ],
+    "GND": [
+      262.11420453389894,
+      31.86537742
+    ]
+  },
+  "body_collisions": [],
+  "component_clearance_lower_bounds_below_3mm": [],
+  "wire_collisions": [],
+  "assembly_collisions": [],
+  "socket_insertion_samples": 41,
+  "base_removal_samples": 21,
+  "upper_shell_insertion_samples": 121,
+  "all_existing_component_positions_unchanged": true,
+  "external_case_dimensions_unchanged": true,
+  "all_base_glue_joints_preserved": true,
+  "backup": "archive/pre-aux-power.zip",
+  "limits": "Generic socket reference uses the supplied axial dimensions and conservative flange/nut envelopes. Exact flange diameter, lug positions and plug engagement are not supplied; confirm these on the purchased socket. Native geometric fit does not establish physical thermal/current or printed fit performance.",
+  "thermal_revision": "ventilated-clip.json",
+  "socket_clearance_validation": "Socket unchanged; carrier and converter move only in the interior. Rechecked new-carrier, raised-board and wire interference in ventilated-clip.json; original socket hardware clearances remain in archive/pre-ventilated-clip.zip."
+}

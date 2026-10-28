@@ -1,0 +1,8 @@
+{
+  "original_preservation_check_passed": true,
+  "scope": "Every original body name, face count, volume, bounding box and occurrence transform completed before the subsequent new-library lookup error",
+  "baseline_sha256": "d338ed499c5f8c2f4f2c70f5bdf8a1ddd2b37f470ab31ee5aa5f1f7388e1c7da",
+  "script_sha256": "baed3881d01f8c19f3472db7ebefe5e52daa60a392b2f5c877250a335351b033",
+  "verified_UTC": "2026-10-28T09:23:35.266463+00:00",
+  "subsequent_error": "New modular library component was named pair-shell-D (1); normalized in the retry. No source geometry was changed."
+}

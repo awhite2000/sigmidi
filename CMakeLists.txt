@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.16)
+# Keep the ESP-IDF app descriptor aligned with the firmware's visible version.
+file(STRINGS "${CMAKE_CURRENT_LIST_DIR}/src/branding.hpp" version_line REGEX "^#define SIGMIDI_VERSION ")
+string(REGEX MATCH "\"([^\"]+)\"" version_match "${version_line}")
+set(PROJECT_VER "${CMAKE_MATCH_1}")
+if(NOT PROJECT_VER)
+    message(FATAL_ERROR "Missing SIGMIDI_VERSION in src/branding.hpp")
+endif()
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(sigmidi_foot_controller)

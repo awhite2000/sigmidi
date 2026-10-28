@@ -1,0 +1,110 @@
+{
+  "revision": "refined_positioning_ribs",
+  "front_thickness_before_mm": 7.8,
+  "front_and_rear_rib_thickness_mm": 1.8,
+  "rib_height_above_floor_mm": 3,
+  "top_chamfer_mm": 0.5,
+  "nominal_shell_side_clearance_mm": 0.35,
+  "joined_gaps": [
+    {
+      "part": "base-left",
+      "side": "rear",
+      "X_mm": [
+        55,
+        70
+      ]
+    },
+    {
+      "part": "base-right",
+      "side": "rear",
+      "X_mm": [
+        287,
+        300
+      ]
+    },
+    {
+      "part": "base-right",
+      "side": "front",
+      "X_mm": [
+        238,
+        252
+      ]
+    },
+    {
+      "part": "base-right",
+      "side": "front",
+      "X_mm": [
+        287,
+        290
+      ]
+    }
+  ],
+  "continuous_joined_runs": [
+    {
+      "part": "base-left",
+      "side": "rear",
+      "X_mm": [
+        20,
+        100
+      ]
+    },
+    {
+      "part": "base-right",
+      "side": "rear",
+      "X_mm": [
+        264.699886096949,
+        325
+      ]
+    },
+    {
+      "part": "base-right",
+      "side": "front",
+      "X_mm": [
+        203,
+        315
+      ],
+      "start_relief": "Existing screw-boss/web relief retained"
+    }
+  ],
+  "remaining_breaks": "Screw-boss webs interrupt the main left front/rear ribs and both modular pair locating ribs; MCU/USB support interrupts the right rear rib. These reliefs are retained.",
+  "parts": [
+    {
+      "part": "base-left",
+      "single_connected_solid": true,
+      "old_front_rib_thickness_mm": 7.8,
+      "new_front_rib_thickness_mm": 1.8,
+      "added_mm3": 77.53333333333336,
+      "removed_mm3": 1257.0000000000027,
+      "new_volume_mm3": 38318.18577037695
+    },
+    {
+      "part": "base-right",
+      "single_connected_solid": true,
+      "old_front_rib_thickness_mm": 7.8,
+      "new_front_rib_thickness_mm": 1.8,
+      "added_mm3": 155.3500000000014,
+      "removed_mm3": 1656.9168450336906,
+      "new_volume_mm3": 36030.177810549576
+    },
+    {
+      "part": "pair-base",
+      "single_connected_solid": true,
+      "old_front_rib_thickness_mm": 1.8,
+      "new_front_rib_thickness_mm": 1.8,
+      "added_mm3": 0,
+      "removed_mm3": 0,
+      "new_volume_mm3": 13024.737569577028,
+      "note": "Pair ribs were already 1.8mm; retain their original continuous profile and screw reliefs."
+    }
+  ],
+  "physical_collisions": [],
+  "wire_collisions": [],
+  "assembly_collisions": [],
+  "base_withdrawal_samples": 41,
+  "floor_mounts_vents_screw_holes_and_seam_glue_lips_unchanged": true,
+  "all_upper_shells_and_component_poses_unchanged": true,
+  "all_models_updated": true,
+  "universal_pair_base_retained": true,
+  "backup": "archive/pre-positioning-rib-refinement.zip",
+  "pair_base_profile_retained": true
+}

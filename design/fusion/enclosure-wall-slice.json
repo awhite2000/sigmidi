@@ -1,0 +1,1019 @@
+{
+  "revision": "display_m2x5",
+  "printer": "Prusa MK3S+",
+  "nozzle_mm": 0.6,
+  "material": "PETG",
+  "layer_mm": 0.3,
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "part": "shell-left",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        125.0,
+        6.0
+      ],
+      "print_layer_mm": 125.1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "shell-left",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        6.0,
+        6.0
+      ],
+      "print_layer_mm": 6.3,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "shell-left",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        125.0,
+        80.0
+      ],
+      "print_layer_mm": 125.1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "shell-left",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        35.0,
+        80.0
+      ],
+      "print_layer_mm": 35.1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        47.4,
+        26.2
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        47.4,
+        26.2
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        47.4,
+        26.2
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        112.4,
+        26.2
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        112.4,
+        26.2
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        112.4,
+        26.2
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        14.9,
+        81.7
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        14.9,
+        81.7
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        14.9,
+        81.7
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        79.9,
+        81.7
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        79.9,
+        81.7
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        79.9,
+        81.7
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "shell-left",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        201.0,
+        86.0
+      ],
+      "print_layer_mm": 149.1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "shell-right",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        201.0,
+        6.0
+      ],
+      "print_layer_mm": 149.1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "shell-right",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        326.0,
+        85.6
+      ],
+      "print_layer_mm": 24.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "shell-right",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        344.0,
+        6.0
+      ],
+      "print_layer_mm": 6.3,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        242.4,
+        26.2
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        242.4,
+        26.2
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        242.4,
+        26.2
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        307.4,
+        26.2
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        307.4,
+        26.2
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        307.4,
+        26.2
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        209.9,
+        81.7
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        209.9,
+        81.7
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        209.9,
+        81.7
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        274.9,
+        81.7
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        274.9,
+        81.7
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        274.9,
+        81.7
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "shell-right",
+      "feature": "retained 1.6mm USB partition",
+      "print_layer_mm": 101.4,
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "shell-right",
+      "feature": "retained 1.6mm USB partition",
+      "print_layer_mm": 99.0,
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "shell-right",
+      "feature": "retained 1.6mm USB partition",
+      "print_layer_mm": 96.0,
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "shell-right",
+      "feature": "retained 1.5mm flush LCD seat",
+      "native_XY_mm": [
+        300,
+        77.8
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "shell-right",
+      "feature": "retained 1.5mm flush LCD seat",
+      "native_XY_mm": [
+        300,
+        78.0
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "shell-right",
+      "feature": "retained 1.5mm flush LCD seat",
+      "native_XY_mm": [
+        310,
+        77.8
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "shell-right",
+      "feature": "retained 1.5mm flush LCD seat",
+      "native_XY_mm": [
+        310,
+        78.0
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "pair-shell",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        156.65,
+        86.0
+      ],
+      "print_layer_mm": 37.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "pair-shell",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        156.65,
+        6.0
+      ],
+      "print_layer_mm": 37.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "pair-shell",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "pair-shell",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "pair-shell",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        156.65,
+        86.0
+      ],
+      "print_layer_mm": 37.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "pair-shell-at-cap",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        156.65,
+        6.0
+      ],
+      "print_layer_mm": 37.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "pair-shell-at-cap",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-D",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        156.65,
+        86.0
+      ],
+      "print_layer_mm": 37.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "pair-shell-D",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        156.65,
+        6.0
+      ],
+      "print_layer_mm": 37.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "pair-shell-D",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-D",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-D",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-D",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-D",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-D",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-C",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        156.65,
+        86.0
+      ],
+      "print_layer_mm": 37.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "pair-shell-at-cap-C",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        156.65,
+        6.0
+      ],
+      "print_layer_mm": 37.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "pair-shell-at-cap-C",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-C",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-C",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-C",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-C",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-C",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-E",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        156.65,
+        86.0
+      ],
+      "print_layer_mm": 37.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "pair-shell-at-cap-E",
+      "feature": "2mm blind pilot cap",
+      "center_XY_mm": [
+        156.65,
+        6.0
+      ],
+      "print_layer_mm": 37.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "pair-shell-at-cap-E",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-E",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-E",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-E",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": -1,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-E",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 0,
+      "covered": true
+    },
+    {
+      "part": "pair-shell-at-cap-E",
+      "feature": "intentional 0.8mm LED cover",
+      "center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "offset_X_mm": 1,
+      "covered": true
+    },
+    {
+      "part": "left-cap",
+      "feature": "reinforced front wall",
+      "print_layer_mm": 0.6,
+      "covered": true
+    },
+    {
+      "part": "left-cap",
+      "feature": "reinforced front wall",
+      "print_layer_mm": 0.9,
+      "covered": true
+    },
+    {
+      "part": "left-cap",
+      "feature": "reinforced front wall",
+      "print_layer_mm": 1.8,
+      "covered": true
+    },
+    {
+      "part": "left-cap",
+      "feature": "reinforced front wall",
+      "print_layer_mm": 1.2,
+      "covered": true
+    },
+    {
+      "part": "left-cap",
+      "feature": "reinforced front wall",
+      "print_layer_mm": 1.5,
+      "covered": true
+    },
+    {
+      "part": "left-cap",
+      "feature": "reinforced front wall",
+      "print_layer_mm": 2.1,
+      "covered": true
+    },
+    {
+      "part": "left-cap",
+      "feature": "reinforced front wall",
+      "print_layer_mm": 2.4,
+      "covered": true
+    },
+    {
+      "part": "base-left",
+      "feature": "restored floor skin",
+      "print_layer_mm": 0.3,
+      "covered": true
+    },
+    {
+      "part": "base-left",
+      "feature": "restored floor skin",
+      "print_layer_mm": 1.5,
+      "covered": true
+    },
+    {
+      "part": "base-left",
+      "feature": "restored floor skin",
+      "print_layer_mm": 0.6,
+      "covered": true
+    },
+    {
+      "part": "base-left",
+      "feature": "restored floor skin",
+      "print_layer_mm": 2.1,
+      "covered": true
+    },
+    {
+      "part": "base-left",
+      "feature": "restored floor skin",
+      "print_layer_mm": 0.9,
+      "covered": true
+    },
+    {
+      "part": "base-left",
+      "feature": "restored floor skin",
+      "print_layer_mm": 1.8,
+      "covered": true
+    },
+    {
+      "part": "base-right",
+      "feature": "retained 1.725mm MCU post wall",
+      "center_XY_mm": [
+        239.69377609695,
+        6.70103
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "base-right",
+      "feature": "retained 1.725mm MCU post wall",
+      "center_XY_mm": [
+        239.69377609695,
+        63.30265
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "base-right",
+      "feature": "retained 1.725mm MCU post wall",
+      "center_XY_mm": [
+        261.69420609695,
+        6.70103
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "base-right",
+      "feature": "retained 1.725mm MCU post wall",
+      "center_XY_mm": [
+        261.69420609695,
+        63.30265
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "base-right",
+      "feature": "retained 1.6mm spring arm",
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "base-right",
+      "feature": "retained 1.6mm spring arm",
+      "extrusion_tracks": 2
+    }
+  ],
+  "STL_checks": [
+    {
+      "path": "print/shell-left.stl",
+      "sha256": "9e0cd12be8ed445f8f1531d4eefc239dcb5b1dfbfa4c18a5908f201656fe7557",
+      "gcode_sha256": "e131f04397d2ee5b2eb55b85d2ce3d6cf3ec40f2180e881c7b878abc2569f271"
+    },
+    {
+      "path": "print/shell-right.stl",
+      "sha256": "3537c361d59e515bac5ea71acf2fce2f7971ba9ca7b7df897f4718c0c7c9a3d3",
+      "gcode_sha256": "3ee9817b266904d9ff670f88c44c0e5917b8e495bd5b27bb60c71f561f5c2b8f"
+    },
+    {
+      "path": "modular/pair-shell.stl",
+      "sha256": "445177feff26b01fc97ce7b029711080d0269f7964c6458683885d4643e1723f",
+      "gcode_sha256": "0ba9b6e95cb5342d43fb84e1b6782d4adef98d723a27dc7b8bb3bfc546d66404"
+    },
+    {
+      "path": "modular/pair-shell-at-cap.stl",
+      "sha256": "5f20c3a282a3bfb7c012e21887ae91033292810670eca5780872507212feed6c",
+      "gcode_sha256": "e25a829a7e9073769214c2e98d4fbde84de44b422caa77987f8837708fc8614b"
+    },
+    {
+      "path": "modular/pair-shell-D.stl",
+      "sha256": "4792a971eae4c0bad685487709d34b88a7be342737ec031fc83b3ecf68bd3967",
+      "gcode_sha256": "f680758f6408774f50ca31402e43009a943e4942875e38beed259f0d100d6459"
+    },
+    {
+      "path": "modular/pair-shell-at-cap-C.stl",
+      "sha256": "da105a3d1027147df7be3ee5d8196bba5efc370da7012845e934808c57ac2f12",
+      "gcode_sha256": "8371da77342f7a17369e924a66e0653bc020a9c4c3b5851372ded195594fe5ba"
+    },
+    {
+      "path": "modular/pair-shell-at-cap-E.stl",
+      "sha256": "70cd646a8ef8b7b6b9a9b86f0c6b6c19090116172f330982ce0aeb4bc130f340",
+      "gcode_sha256": "3898d1dec06524d5e22263695beb8dab5d746e20adbe0a665068a26e7561da61"
+    },
+    {
+      "path": "modular/left-cap.stl",
+      "sha256": "f93ba486a4c92bdf2b94c28756445b8c7dec21aa1cb28638e57d82f7c6d2e723"
+    },
+    {
+      "path": "print/base-left.stl",
+      "sha256": "ac7ba15004ecff174089234c886af025626d4b4e0f003bcbfdd8f788ebb8fe59"
+    },
+    {
+      "path": "print/base-right.stl",
+      "sha256": "1dc6645060bb782717b787fff949e1304608ec68ba54b0258a9ced1b3a448cd2"
+    }
+  ],
+  "scope": "Actual non-support extrusion, two-track closure/wall probes; film and repaired plate point coverage checked against commanded bead width. The fixed 1.5mm flush-display seat, 1.6mm USB partition and spring arms, and 1.725mm MCU post walls retain at least two paths.",
+  "limits": "These nominal toolpaths do not prove physical calibration, adhesion, cooling or fatigue strength."
+}

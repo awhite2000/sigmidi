@@ -1,0 +1,55 @@
+{
+  "revision": "sigmidi_embossed_icon_25mm",
+  "captured_UTC": "2026-10-28T16:10:16.485512+00:00",
+  "images": [
+    {
+      "path": "main/assembled.png",
+      "sha256": "e7feda82cc719ab1899684bb779e1f000bc4c2a21d770687362af1a5eeb1221e"
+    },
+    {
+      "path": "main/top.png",
+      "sha256": "bb5305041f84ee3fda762bd315d1c0b09e331421eb73228e2f510ac80300e021"
+    },
+    {
+      "path": "main/rear.png",
+      "sha256": "ae575dcd80948002d7b0358e1ba7d8b4bac5098eb57c440b3d2b227c925c5bcc"
+    },
+    {
+      "path": "main/internal.png",
+      "sha256": "a0b4fcc71d88e59b2c84a5b25075483a0dff44f70a4322f1a359ed6c2cd3896f"
+    },
+    {
+      "path": "main/display-underside.png",
+      "sha256": "bc444b68ab2726233e35187819406bdb3fe3b09975bb70997670bc805c74e75b"
+    },
+    {
+      "path": "main/exploded.png",
+      "sha256": "023f8b89f017505cc2c062b684103ad7a0f865fe699f9de759772efe7d1c19ca"
+    },
+    {
+      "path": "main/base-mounts.png",
+      "sha256": "fea536e64d4416868aab24a4a021b9db0f862930e3e546b6cc8e8dab96b5933f"
+    },
+    {
+      "path": "modular/assembled.png",
+      "sha256": "d55ecba4726ff90a7c64594697c1a422d484da7190a786d5e77330cf31d4a930"
+    },
+    {
+      "path": "modular/top.png",
+      "sha256": "e50c3c9a4a2949dfefd7282f85b8464673efa7954859a9a5bfce41e2a20ee209"
+    },
+    {
+      "path": "modular/exploded.png",
+      "sha256": "194278e3a89adb78051533690fa99cddf96e2b967d7c33515d49993792961cad"
+    },
+    {
+      "path": "main/display-ribbon-left.png",
+      "sha256": "41cf20b096b6ce4e23905900c3bdee812bb359909f02d0d5bdd859012dd29507",
+      "source": "Native Fusion underside render with explanatory labels"
+    },
+    {
+      "path": "main/embossed-icon.png",
+      "sha256": "136077e3791f40996413f1cb5f9f5e9474ef05d3fd2c62aaa079313f2c4a02b9"
+    }
+  ]
+}

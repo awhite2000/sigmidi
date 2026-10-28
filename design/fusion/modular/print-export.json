@@ -1,0 +1,83 @@
+{
+  "revision": "display_m2x5",
+  "parts": [
+    {
+      "name": "pair-shell",
+      "size_mm": [
+        52.0,
+        92.0,
+        69.00000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "orientation": "right edge on bed; -X print up"
+    },
+    {
+      "name": "pair-base",
+      "size_mm": [
+        64.75000000000001,
+        92.0,
+        21.0
+      ],
+      "solid": true,
+      "lumps": 1,
+      "orientation": "outside floor down; posts up"
+    },
+    {
+      "name": "pair-shell-at-cap",
+      "size_mm": [
+        52.0,
+        92.0,
+        69.00000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "orientation": "right edge on bed; -X print up"
+    },
+    {
+      "name": "left-cap",
+      "size_mm": [
+        54.0,
+        92.0,
+        8.500000000000014
+      ],
+      "solid": true,
+      "lumps": 1,
+      "orientation": "closed left end on bed; +X print up"
+    },
+    {
+      "name": "pair-shell-D",
+      "size_mm": [
+        52.0,
+        92.0,
+        69.00000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "orientation": "right edge on bed; -X print up"
+    },
+    {
+      "name": "pair-shell-at-cap-C",
+      "size_mm": [
+        52.0,
+        92.0,
+        69.00000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "orientation": "right edge on bed; -X print up"
+    },
+    {
+      "name": "pair-shell-at-cap-E",
+      "size_mm": [
+        52.0,
+        92.0,
+        69.00000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "orientation": "right edge on bed; -X print up"
+    }
+  ],
+  "universal_pair_base": true
+}

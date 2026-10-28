@@ -1,0 +1,29 @@
+{
+  "project": "SIGMIDI Foot Controller",
+  "version": "0.1",
+  "source_sha256": "ec1bdfe45a42f8b8942e4f94efe272d9d5c85d262450668ed90f3252aa5a8a00",
+  "preferred_variant": "Left",
+  "new_configuration_enclosureVariant": 1,
+  "legacy_missing_variant_migrates_to": "Right",
+  "saved_explicit_variants_preserved": true,
+  "host_tests": "all passed",
+  "firmware_build": "success",
+  "browser_default_variant": "Left",
+  "browser_default_order": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "installer_ready": true,
+  "installer_illustration": "Left, with upright labels",
+  "render_gallery_primary": "Left main and modular",
+  "native_geometry_modified": false,
+  "verified_UTC": "2026-10-28T15:50:03.611290+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "revision": "display_m2x5",
+  "snapshot": "archive/pre-display-m2x5.zip",
+  "expected_changed_components": [
+    "02 Removable base - 2mm - integral PCB posts and TRS saddle",
+    "PCB screws - LCD recessed M2x5 - MCU M1.6"
+  ],
+  "all_other_existing_component_geometry_and_transforms_identical": true,
+  "converter_raise_mm_from_snapshot": 0,
+  "converter_total_raise_mm": 6,
+  "converter_XY_and_exact_shape_unchanged": true,
+  "outer_case_dimensions_unchanged": true,
+  "unchanged_print_meshes": [
+    "print/shell-left.stl",
+    "print/shell-right.stl",
+    "print/base-left.stl",
+    "modular/pair-base.stl",
+    "modular/pair-shell.stl",
+    "modular/pair-shell-at-cap.stl",
+    "modular/left-cap.stl",
+    "modular/pair-shell-D.stl",
+    "modular/pair-shell-at-cap-C.stl",
+    "modular/pair-shell-at-cap-E.stl",
+    "print/fit-coupon-left.stl",
+    "print/fit-coupon-right.stl"
+  ]
+}

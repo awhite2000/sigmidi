@@ -1,0 +1,23 @@
+{
+  "document": "MIDI Foot Controller - VERIFIED chassis v106",
+  "saved": true,
+  "changed_STL": [
+    "main/shell-left.stl",
+    "modular/electronics-shell-left.stl"
+  ],
+  "updated_CAD": [
+    "main/midi-foot-mirrored-main",
+    "modular/midi-foot-mirrored-modular"
+  ],
+  "images": [
+    "main/assembled.png",
+    "main/top.png",
+    "main/rear.png",
+    "main/embossed-icon.png",
+    "main/exploded.png",
+    "modular/assembled.png",
+    "modular/top.png",
+    "modular/exploded.png"
+  ],
+  "temporary_components": []
+}

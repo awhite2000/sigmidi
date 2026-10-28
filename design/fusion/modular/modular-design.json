@@ -1,0 +1,80 @@
+{
+  "revision": "recessed_switch_labels",
+  "separate_alternative": true,
+  "main_enclosure_plan_mm": [
+    350,
+    92
+  ],
+  "example_switches": 8,
+  "example_plan_mm": [
+    294.85,
+    92
+  ],
+  "height_mm": 54,
+  "section_pitch_mm": 65,
+  "stagger_mm": 32.5,
+  "row_pitch_mm": 53,
+  "upper_elevation_mm": 30,
+  "base_dovetails": false,
+  "base_joint": "Continuous straight glue lips, 2mm above floor, 45 degree inward runout",
+  "universal_pair_base": true,
+  "unique_print_parts": [
+    "pair-shell",
+    "pair-base",
+    "pair-shell-at-cap",
+    "left-cap"
+  ],
+  "pair_base_quantity_8_switches": 2,
+  "cap_width_mm": 8.5,
+  "cap_base_detachable": false,
+  "cap_floor_butt_clearance_mm": 0.3,
+  "screws_per_pair": 2,
+  "base_screw_type": "M2x6 countersunk",
+  "screws_per_cap": 0,
+  "main_right_parts_reused": true,
+  "component_positions_unchanged": true,
+  "validation": "straight-base-lips.json",
+  "right_section_base_screw_count": 4,
+  "example_total_base_screws": 8,
+  "right_extra_screw_centers_XY_mm": [
+    [
+      201,
+      6
+    ],
+    [
+      201,
+      86
+    ]
+  ],
+  "right_mount_update": "../extra-right-base-screws.json",
+  "switch_labels": "Upper A-E, lower 1-5, starting from the right",
+  "engraving": "../recessed-switch-labels.json",
+  "pair_shell_labels": "C/3",
+  "cap_pair_labels_shown": "D/4",
+  "additional_upper_shell_variants": [
+    "pair-shell-D",
+    "pair-shell-at-cap-C",
+    "pair-shell-at-cap-E"
+  ],
+  "upper_shell_selection": {
+    "6": [
+      "pair-shell-at-cap-C"
+    ],
+    "8": [
+      "pair-shell",
+      "pair-shell-at-cap"
+    ],
+    "10": [
+      "pair-shell",
+      "pair-shell-D",
+      "pair-shell-at-cap-E"
+    ]
+  },
+  "main_revision": "snug_06_tolerances",
+  "positioning_rib_thickness_mm": 1.8,
+  "positioning_rib_report": "../positioning-rib-refinement.json",
+  "nozzle_mm": 0.6,
+  "hook_clearance_normal_mm": 0.2,
+  "locator_wall_clearance_mm": 0.2,
+  "fit_report": "../snug-06-tolerances.json"
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "version": "0.1",
+    "logo_source": "design/branding/sigmidi-mark-light.png",
+    "logo_sha256": "93260dba79cbe47ce0e1e2447c9d6aab6ae9622dfd32002224e3200b24eebf63",
+    "source": "design/fusion/mirrored/main/assembled.png",
+    "source_sha256": "e7feda82cc719ab1899684bb779e1f000bc4c2a21d770687362af1a5eeb1221e",
+    "output": "previews/sigmidi-left-main.png",
+    "sha256": "f35a3efbe48c88a0cb3fe394b2fb13fc28a4f78d3291670ef8fa6aaff26a0400",
+    "geometry_modified": false
+  },
+  {
+    "version": "0.1",
+    "logo_source": "design/branding/sigmidi-mark-light.png",
+    "logo_sha256": "93260dba79cbe47ce0e1e2447c9d6aab6ae9622dfd32002224e3200b24eebf63",
+    "source": "design/fusion/mirrored/modular/assembled.png",
+    "source_sha256": "d55ecba4726ff90a7c64594697c1a422d484da7190a786d5e77330cf31d4a930",
+    "output": "previews/sigmidi-left-modular.png",
+    "sha256": "a7c158fb500303359179470c738348f8588434eebbcfe447ab0be77072991109",
+    "geometry_modified": false
+  },
+  {
+    "version": "0.1",
+    "logo_source": "design/branding/sigmidi-mark-light.png",
+    "logo_sha256": "93260dba79cbe47ce0e1e2447c9d6aab6ae9622dfd32002224e3200b24eebf63",
+    "source": "design/fusion/assembled.png",
+    "source_sha256": "4ccba0f7e56eddb7b1133b3bbdc00117c74b72e40cdbb0a5da003515fc9d2e7f",
+    "output": "previews/sigmidi-right-main.png",
+    "sha256": "0740fb36d6efbd59c1474c9c9b85938f975bf7776d8e55b80013d7f52cfa0b62",
+    "geometry_modified": false
+  },
+  {
+    "version": "0.1",
+    "logo_source": "design/branding/sigmidi-mark-light.png",
+    "logo_sha256": "93260dba79cbe47ce0e1e2447c9d6aab6ae9622dfd32002224e3200b24eebf63",
+    "source": "design/fusion/modular/modular-assembled.png",
+    "source_sha256": "334f4f921708203490b4070f47e75e759932fc818c00aad9dc6f5ea67c9371b0",
+    "output": "previews/sigmidi-right-modular.png",
+    "sha256": "5a99423b5af25cc7727a06ba793e4bd48b9cea26508b0848f9188cbd8f3f227b",
+    "geometry_modified": false
+  }
+]

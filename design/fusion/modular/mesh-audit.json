@@ -1,0 +1,198 @@
+[
+  {
+    "file": "design/fusion/modular/pair-shell.stl",
+    "triangles": 18882,
+    "bounds_mm": [
+      [
+        -8.881784197001252e-15,
+        0.0,
+        -4.373424865460637e-16
+      ],
+      [
+        52.0,
+        92.0,
+        69.0
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 38159.35510819123,
+    "overhang_surface_mm2": {
+      "upright": 882.66,
+      "roof_down": 1471.92,
+      "left_end_down": 5027.6,
+      "rear_down": 3617.13
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  },
+  {
+    "file": "design/fusion/modular/pair-base.stl",
+    "triangles": 596,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        64.75,
+        92.0,
+        21.0
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 13024.886219120577,
+    "overhang_surface_mm2": {
+      "upright": 0.0,
+      "roof_down": 5473.74,
+      "left_end_down": 111.52,
+      "rear_down": 237.78
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  },
+  {
+    "file": "design/fusion/modular/pair-shell-at-cap.stl",
+    "triangles": 14574,
+    "bounds_mm": [
+      [
+        -8.881784197001252e-15,
+        0.0,
+        -4.373424865460637e-16
+      ],
+      [
+        52.0,
+        92.0,
+        69.0
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 37721.39269932609,
+    "overhang_surface_mm2": {
+      "upright": 823.32,
+      "roof_down": 1477.52,
+      "left_end_down": 5027.49,
+      "rear_down": 3683.34
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  },
+  {
+    "file": "design/fusion/modular/left-cap.stl",
+    "triangles": 3892,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        -1.0968890319694793e-15
+      ],
+      [
+        54.0,
+        92.0,
+        8.5
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 10690.229985542484,
+    "overhang_surface_mm2": {
+      "upright": 658.37,
+      "roof_down": 2854.42,
+      "left_end_down": 1190.77,
+      "rear_down": 422.31
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  },
+  {
+    "file": "design/fusion/modular/pair-shell-D.stl",
+    "triangles": 16256,
+    "bounds_mm": [
+      [
+        -8.881784197001252e-15,
+        0.0,
+        -4.373424865460637e-16
+      ],
+      [
+        52.0,
+        92.0,
+        69.0
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 38151.39783639144,
+    "overhang_surface_mm2": {
+      "upright": 888.9,
+      "roof_down": 1477.52,
+      "left_end_down": 5027.6,
+      "rear_down": 3613.7
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  },
+  {
+    "file": "design/fusion/modular/pair-shell-at-cap-C.stl",
+    "triangles": 17200,
+    "bounds_mm": [
+      [
+        -8.881784197001252e-15,
+        0.0,
+        -4.373424865460637e-16
+      ],
+      [
+        52.0,
+        92.0,
+        69.0
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 37729.34997112587,
+    "overhang_surface_mm2": {
+      "upright": 817.09,
+      "roof_down": 1471.92,
+      "left_end_down": 5027.49,
+      "rear_down": 3686.76
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  },
+  {
+    "file": "design/fusion/modular/pair-shell-at-cap-E.stl",
+    "triangles": 15322,
+    "bounds_mm": [
+      [
+        -8.881784197001252e-15,
+        0.0,
+        -4.373424865460637e-16
+      ],
+      [
+        52.0,
+        92.0,
+        69.0
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 37721.97983937932,
+    "overhang_surface_mm2": {
+      "upright": 817.05,
+      "roof_down": 1471.9,
+      "left_end_down": 5027.49,
+      "rear_down": 3691.52
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  }
+]

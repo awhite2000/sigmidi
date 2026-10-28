@@ -1,0 +1,651 @@
+{
+  "project": "SIGMIDI Foot Controller",
+  "version": "0.1",
+  "completed_UTC": "2026-10-28T16:47:20.191875+00:00",
+  "removed_files": 154,
+  "removed_bytes": 2065796041,
+  "removed_inventory": [
+    {
+      "path": "design/fusion/archive/pre-wide-pololu-clips.zip",
+      "bytes": 86532611
+    },
+    {
+      "path": "design/fusion/archive/post-snug-06-wall-sampling.zip",
+      "bytes": 1273125
+    },
+    {
+      "path": "design/fusion/archive/pre-expanded-vents.zip",
+      "bytes": 71449203
+    },
+    {
+      "path": "design/fusion/archive/pre-rear-ribs.zip",
+      "bytes": 71867051
+    },
+    {
+      "path": "design/fusion/archive/pre-display-m2x5.zip",
+      "bytes": 89211941
+    },
+    {
+      "path": "design/fusion/archive/pre-sigmidi-25mm-emboss.f3d",
+      "bytes": 31058323
+    },
+    {
+      "path": "design/fusion/archive/pre-straight-base-lips.zip",
+      "bytes": 58198533
+    },
+    {
+      "path": "design/fusion/archive/pre-reinforcement-wall-sampling.zip",
+      "bytes": 2194095
+    },
+    {
+      "path": "design/fusion/archive/pre-upper-corner-walls.zip",
+      "bytes": 86526486
+    },
+    {
+      "path": "design/fusion/archive/pre-full-height-rear-rib.zip",
+      "bytes": 73927475
+    },
+    {
+      "path": "design/fusion/archive/pre-enclosure-wall-reinforcement.zip",
+      "bytes": 87663151
+    },
+    {
+      "path": "design/fusion/archive/pre-snug-06-tolerances.zip",
+      "bytes": 88975007
+    },
+    {
+      "path": "design/fusion/archive/pre-column-rib.zip",
+      "bytes": 73673884
+    },
+    {
+      "path": "design/fusion/archive/pre-letter-label-wifi-previews.zip",
+      "bytes": 160919
+    },
+    {
+      "path": "design/fusion/archive/pre-recessed-switch-labels.zip",
+      "bytes": 77700993
+    },
+    {
+      "path": "design/fusion/archive/pre-logical-mirror-native.f3d",
+      "bytes": 15813632
+    },
+    {
+      "path": "design/fusion/archive/pre-mirrored-lcd-180.zip",
+      "bytes": 61981308
+    },
+    {
+      "path": "design/fusion/archive/post-positioning-rib-wall-sampling.zip",
+      "bytes": 1259269
+    },
+    {
+      "path": "design/fusion/archive/pre-raised-rear-vents.zip",
+      "bytes": 72017716
+    },
+    {
+      "path": "design/fusion/archive/history.zip",
+      "bytes": 280312407
+    },
+    {
+      "path": "design/fusion/archive/README.md",
+      "bytes": 5949
+    },
+    {
+      "path": "design/fusion/archive/pre-extra-right-base-screws.zip",
+      "bytes": 76415775
+    },
+    {
+      "path": "design/fusion/archive/pre-sigmidi-25mm-emboss-deliveries.zip",
+      "bytes": 31001944
+    },
+    {
+      "path": "design/fusion/archive/pre-aux-power.zip",
+      "bytes": 55953817
+    },
+    {
+      "path": "design/fusion/archive/pre-positioning-rib-refinement.zip",
+      "bytes": 89111913
+    },
+    {
+      "path": "design/fusion/archive/pre-base-corner-repair.zip",
+      "bytes": 85393329
+    },
+    {
+      "path": "design/fusion/archive/pre-straight-rear-rib.zip",
+      "bytes": 76382660
+    },
+    {
+      "path": "design/fusion/archive/post-reinforcement-wall-sampling.zip",
+      "bytes": 1260958
+    },
+    {
+      "path": "design/fusion/archive/pre-ventilated-clip.zip",
+      "bytes": 65594638
+    },
+    {
+      "path": "design/fusion/archive/pre-logical-mirror.zip",
+      "bytes": 82553204
+    },
+    {
+      "path": "design/fusion/archive/cleanup-manifest.json",
+      "bytes": 56703
+    },
+    {
+      "path": "design/fusion/archive/pre-base-vent-reinforcement.zip",
+      "bytes": 73746429
+    },
+    {
+      "path": "design/fusion/archive/pre-rear-vent-membranes.zip",
+      "bytes": 76329332
+    },
+    {
+      "path": "design/fusion/mirrored/diagnostics/source-inspection.json",
+      "bytes": 35180
+    },
+    {
+      "path": "design/fusion/mirrored/diagnostics/initial-fit-diagnostic.json",
+      "bytes": 14759
+    },
+    {
+      "path": "design/fusion/mirrored/diagnostics/LED-reference-difference.json",
+      "bytes": 3567
+    },
+    {
+      "path": "design/fusion/mirrored/emblem-inspection.json",
+      "bytes": 330617
+    },
+    {
+      "path": "design/fusion/mirrored/emblem-roof-inspection.json",
+      "bytes": 1672
+    },
+    {
+      "path": "design/fusion/__pycache__/move_rear_vents.cpython-314.pyc",
+      "bytes": 20403
+    },
+    {
+      "path": "design/fusion/__pycache__/add_dc_power_socket.cpython-314.pyc",
+      "bytes": 29706
+    },
+    {
+      "path": "design/fusion/__pycache__/add_rear_vent_membranes.cpython-314.pyc",
+      "bytes": 15868
+    },
+    {
+      "path": "design/fusion/__pycache__/set_straight_base_lips.cpython-314.pyc",
+      "bytes": 26566
+    },
+    {
+      "path": "design/fusion/__pycache__/adjust_display_m2x5.cpython-314.pyc",
+      "bytes": 18020
+    },
+    {
+      "path": "design/fusion/__pycache__/adjust_snug_06.cpython-314.pyc",
+      "bytes": 37338
+    },
+    {
+      "path": "design/fusion/__pycache__/extend_rear_rib_to_base.cpython-314.pyc",
+      "bytes": 25589
+    },
+    {
+      "path": "design/fusion/__pycache__/refresh_current_views.cpython-314.pyc",
+      "bytes": 42362
+    },
+    {
+      "path": "design/fusion/__pycache__/verify_display_m2x5_slice.cpython-314.pyc",
+      "bytes": 3645
+    },
+    {
+      "path": "design/fusion/__pycache__/slice_print_parts.cpython-314.pyc",
+      "bytes": 6678
+    },
+    {
+      "path": "design/fusion/__pycache__/add_more_vents.cpython-314.pyc",
+      "bytes": 19653
+    },
+    {
+      "path": "design/fusion/__pycache__/verify_power_layout.cpython-314.pyc",
+      "bytes": 13971
+    },
+    {
+      "path": "design/fusion/__pycache__/reinforce_rear_column.cpython-314.pyc",
+      "bytes": 23688
+    },
+    {
+      "path": "design/fusion/__pycache__/verify_rear_membrane_slice.cpython-314.pyc",
+      "bytes": 9935
+    },
+    {
+      "path": "design/fusion/__pycache__/add_converter_carrier.cpython-314.pyc",
+      "bytes": 17920
+    },
+    {
+      "path": "design/fusion/__pycache__/render_print_orientations.cpython-314.pyc",
+      "bytes": 19089
+    },
+    {
+      "path": "design/fusion/__pycache__/verify_positioning_rib_slice.cpython-314.pyc",
+      "bytes": 5929
+    },
+    {
+      "path": "design/fusion/__pycache__/complete_clip_locators.cpython-314.pyc",
+      "bytes": 10829
+    },
+    {
+      "path": "design/fusion/__pycache__/reinforce_enclosure_walls.cpython-314.pyc",
+      "bytes": 22624
+    },
+    {
+      "path": "design/fusion/__pycache__/render_display_m2x5.cpython-314.pyc",
+      "bytes": 8733
+    },
+    {
+      "path": "design/fusion/__pycache__/verify_power_geometry.cpython-314.pyc",
+      "bytes": 13968
+    },
+    {
+      "path": "design/fusion/__pycache__/straighten_rear_rib.cpython-314.pyc",
+      "bytes": 27984
+    },
+    {
+      "path": "design/fusion/__pycache__/add_right_split_screws.cpython-314.pyc",
+      "bytes": 34411
+    },
+    {
+      "path": "design/fusion/__pycache__/add_recessed_switch_labels.cpython-314.pyc",
+      "bytes": 25307
+    },
+    {
+      "path": "design/fusion/__pycache__/verify_upper_corner_slice.cpython-314.pyc",
+      "bytes": 13523
+    },
+    {
+      "path": "design/fusion/__pycache__/verify_enclosure_wall_slice.cpython-314.pyc",
+      "bytes": 13710
+    },
+    {
+      "path": "design/fusion/__pycache__/widen_pololu_clips.cpython-314.pyc",
+      "bytes": 24517
+    },
+    {
+      "path": "design/fusion/__pycache__/reinforce_base_vents.cpython-314.pyc",
+      "bytes": 20519
+    },
+    {
+      "path": "design/fusion/__pycache__/export_current_cad.cpython-314.pyc",
+      "bytes": 14143
+    },
+    {
+      "path": "design/fusion/__pycache__/repair_base_corner.cpython-314.pyc",
+      "bytes": 13612
+    },
+    {
+      "path": "design/fusion/__pycache__/audit_enclosure_walls.cpython-314.pyc",
+      "bytes": 13210
+    },
+    {
+      "path": "design/fusion/__pycache__/audit_print_mesh.cpython-312.pyc",
+      "bytes": 5038
+    },
+    {
+      "path": "design/fusion/__pycache__/close_old_trs_relief.cpython-314.pyc",
+      "bytes": 10619
+    },
+    {
+      "path": "design/fusion/__pycache__/refine_positioning_ribs.cpython-314.pyc",
+      "bytes": 23231
+    },
+    {
+      "path": "design/fusion/__pycache__/package_current.cpython-314.pyc",
+      "bytes": 38582
+    },
+    {
+      "path": "design/fusion/__pycache__/repair_upper_corner_walls.cpython-314.pyc",
+      "bytes": 18612
+    },
+    {
+      "path": "design/fusion/__pycache__/verify_clip_slice.cpython-314.pyc",
+      "bytes": 6312
+    },
+    {
+      "path": "design/fusion/__pycache__/audit_print_mesh.cpython-314.pyc",
+      "bytes": 5119
+    },
+    {
+      "path": "design/fusion/__pycache__/add_ventilated_clip_mount.cpython-314.pyc",
+      "bytes": 36384
+    },
+    {
+      "path": "design/fusion/mirrored/__pycache__/verify_slice_features.cpython-314.pyc",
+      "bytes": 10266
+    },
+    {
+      "path": "design/fusion/mirrored/__pycache__/package_variants.cpython-314.pyc",
+      "bytes": 13863
+    },
+    {
+      "path": "design/fusion/mirrored/__pycache__/finalize_reference_metadata.cpython-314.pyc",
+      "bytes": 6985
+    },
+    {
+      "path": "design/fusion/mirrored/__pycache__/slice_variants.cpython-314.pyc",
+      "bytes": 7957
+    },
+    {
+      "path": "design/fusion/mirrored/__pycache__/finalize_exports_and_verify.cpython-314.pyc",
+      "bytes": 20257
+    },
+    {
+      "path": "design/fusion/mirrored/__pycache__/verify_walls.cpython-314.pyc",
+      "bytes": 9366
+    },
+    {
+      "path": "design/fusion/mirrored/__pycache__/export_variants.cpython-314.pyc",
+      "bytes": 29923
+    },
+    {
+      "path": "design/fusion/mirrored/__pycache__/create_variants.cpython-314.pyc",
+      "bytes": 44690
+    },
+    {
+      "path": "design/fusion/mirrored/.DS_Store",
+      "bytes": 6148
+    },
+    {
+      "path": "design/fusion/modular/__pycache__/slice_modular.cpython-314.pyc",
+      "bytes": 8640
+    },
+    {
+      "path": "scripts/__pycache__/prepare_logotype.cpython-312.pyc",
+      "bytes": 9168
+    },
+    {
+      "path": "scripts/__pycache__/build.cpython-314.pyc",
+      "bytes": 5282
+    },
+    {
+      "path": "scripts/__pycache__/serve_flasher.cpython-314.pyc",
+      "bytes": 4199
+    },
+    {
+      "path": "scripts/__pycache__/package_web_flasher.cpython-314.pyc",
+      "bytes": 12023
+    },
+    {
+      "path": "scripts/__pycache__/vendor_web_flasher.cpython-314.pyc",
+      "bytes": 3882
+    },
+    {
+      "path": "scripts/__pycache__/firmware_artifacts.cpython-314.pyc",
+      "bytes": 8059
+    },
+    {
+      "path": "scripts/__pycache__/firmware_artifacts.cpython-312.pyc",
+      "bytes": 4493
+    },
+    {
+      "path": "build/modular-verification.json",
+      "bytes": 1153
+    },
+    {
+      "path": "build/build-info.json",
+      "bytes": 2936
+    },
+    {
+      "path": "build/partitions.bin",
+      "bytes": 3072
+    },
+    {
+      "path": "build/sigmidi-foot-controller-0.1-web-flasher.zip",
+      "bytes": 1432453
+    },
+    {
+      "path": "build/web-flasher-verification.json",
+      "bytes": 467
+    },
+    {
+      "path": "build/SHA256.json",
+      "bytes": 351
+    },
+    {
+      "path": "build/logotype-verification.json",
+      "bytes": 799
+    },
+    {
+      "path": "build/firmware.elf",
+      "bytes": 12220980
+    },
+    {
+      "path": "build/sigmidi-foot-controller-0.1.bin",
+      "bytes": 1359248
+    },
+    {
+      "path": "build/preferred-left-verification.json",
+      "bytes": 767
+    },
+    {
+      "path": "build/firmware.bin",
+      "bytes": 1359248
+    },
+    {
+      "path": "build/bootloader.bin",
+      "bytes": 21632
+    },
+    {
+      "path": "build/version-verification.json",
+      "bytes": 1074
+    },
+    {
+      "path": "build/web-flasher-package.json",
+      "bytes": 414
+    },
+    {
+      "path": "build/calibration-rounding-verification.json",
+      "bytes": 437
+    },
+    {
+      "path": "build/enclosure-variant-verification.json",
+      "bytes": 1778
+    },
+    {
+      "path": "build/branding-verification.json",
+      "bytes": 814
+    },
+    {
+      "path": "build/web-flasher/index.html",
+      "bytes": 6083
+    },
+    {
+      "path": "build/web-flasher/SHA256.json",
+      "bytes": 4570
+    },
+    {
+      "path": "build/web-flasher/icon.svg",
+      "bytes": 24561
+    },
+    {
+      "path": "build/web-flasher/release.js",
+      "bytes": 4269
+    },
+    {
+      "path": "build/web-flasher/README.md",
+      "bytes": 5814
+    },
+    {
+      "path": "build/web-flasher/release.json",
+      "bytes": 1013
+    },
+    {
+      "path": "build/web-flasher/style.css",
+      "bytes": 6690
+    },
+    {
+      "path": "build/web-flasher/manifest.json",
+      "bytes": 389
+    },
+    {
+      "path": "build/web-flasher/app.js",
+      "bytes": 2827
+    },
+    {
+      "path": "build/web-flasher/firmware/application.bin",
+      "bytes": 1359248
+    },
+    {
+      "path": "build/web-flasher/firmware/boot-region.bin",
+      "bytes": 35840
+    },
+    {
+      "path": "build/web-flasher/assets/enclosure-left.json",
+      "bytes": 280
+    },
+    {
+      "path": "build/web-flasher/assets/enclosure-left.png",
+      "bytes": 442645
+    },
+    {
+      "path": "build/web-flasher/vendor/THIRD_PARTY_NOTICES.txt",
+      "bytes": 45701
+    },
+    {
+      "path": "build/web-flasher/vendor/notice-sources.json",
+      "bytes": 2610
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_32h2-CZ4EIL3w.js",
+      "bytes": 5502
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/esp32s2-w9SUkb7o.js",
+      "bytes": 5596
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/styles-sT2V1cOw.js",
+      "bytes": 59522
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/esp32c6-DolpfL0e.js",
+      "bytes": 2021
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/provenance.json",
+      "bytes": 3091
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/LICENSE",
+      "bytes": 11357
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_32s3-CiJyd6Fk.js",
+      "bytes": 7622
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/install-dialog-im156JnI.js",
+      "bytes": 310659
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/esp32-DNPRK0Ay.js",
+      "bytes": 3416
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/install-button.js",
+      "bytes": 2815
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/esp32h2-L0n5WuSo.js",
+      "bytes": 2425
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/esp32s3-DQt_R3ZE.js",
+      "bytes": 3868
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/esp32c2-CQ3ns5Nm.js",
+      "bytes": 2166
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/esp32c3-2tchr35W.js",
+      "bytes": 2752
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_32c61-DeKkw9vN.js",
+      "bytes": 5502
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_32c3-DmSvHQKL.js",
+      "bytes": 5606
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_32c5-D1WK4DyB.js",
+      "bytes": 7014
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_32-BLbsWvxO.js",
+      "bytes": 5150
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_32p4rc1-DyGqUAeZ.js",
+      "bytes": 7470
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/esp32p4-MR0ikcda.js",
+      "bytes": 8892
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_32p4-CpHBYEwI.js",
+      "bytes": 7678
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_32c2-wLQhZItC.js",
+      "bytes": 4954
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_8266-CQFcqJ_a.js",
+      "bytes": 12254
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/esp32c61-C8HktcOt.js",
+      "bytes": 3065
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_32s2-CrsP1231.js",
+      "bytes": 6374
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/esp32c5-CeCSizBL.js",
+      "bytes": 5319
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/index-Dt9w-IG1.js",
+      "bytes": 6163
+    },
+    {
+      "path": "build/web-flasher/vendor/esp-web-tools/stub_flasher_32c6-ZuxjUVr4.js",
+      "bytes": 5502
+    }
+  ],
+  "retained_files_checked": 469,
+  "unintended_retained_file_changes": [],
+  "release_metadata_refreshed": [
+    ".gitignore",
+    "design/fusion/mirrored/mirrored-modular-mk3s-petg-06.zip",
+    "design/fusion/mirrored/mirrored-main-mk3s-petg-06.zip",
+    "design/fusion/mirrored/original-file-preservation.json",
+    "design/fusion/mirrored/delivery-verification.json",
+    "design/fusion/mirrored/modular/delivery-manifest.json",
+    "design/fusion/mirrored/main/delivery-manifest.json",
+    "previews/manifest.json"
+  ],
+  "firmware_bundle": "distribution/sigmidi-foot-controller-0.1-firmware.zip",
+  "web_flasher_bundle": "distribution/sigmidi-foot-controller-0.1-web-flasher.zip",
+  "web_flasher_original_ZIP_preserved_byte_identically": true,
+  "latest_full_Fusion_model": "design/fusion/sigmidi-foot-controller-0.1.f3d",
+  "latest_native_document": "MIDI Foot Controller - VERIFIED chassis v108",
+  "original_Right_delivery_files_verified": 132,
+  "build_and_temporary_artifacts_remaining": [],
+  "release_integrity_verified": true,
+  "flasher_tests": {
+    "Python": 6,
+    "JavaScript": 19
+  },
+  "browser_flasher_after_build_removal": "SHA-256 verified; Connect & install enabled",
+  "git_history_untouched": true
+}

@@ -1,0 +1,16 @@
+{
+  "main_components": 32,
+  "copied_bodies": 305,
+  "visible_physical_bodies": 211,
+  "STEP_manifold_solids": 304,
+  "main_only": true,
+  "independent_copies": true,
+  "revision": "display_m2x5",
+  "modular_STEP_manifold_solids": 287,
+  "modular_independent_component_copies": true,
+  "engraved_modular_variant_CAD": [
+    "pair-shell-D",
+    "pair-shell-at-cap-C",
+    "pair-shell-at-cap-E"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "revision": "display_m2x5",
+  "parts": [
+    {
+      "name": "shell-left",
+      "size_mm": [
+        52.0,
+        92.0,
+        193.65000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "orientation": "outer end on bed; seam up"
+    },
+    {
+      "name": "shell-right",
+      "size_mm": [
+        52.0,
+        92.0,
+        160.35
+      ],
+      "solid": true,
+      "lumps": 1,
+      "orientation": "outer end on bed; seam up"
+    },
+    {
+      "name": "base-left",
+      "size_mm": [
+        193.65000000000003,
+        92.0,
+        21.0
+      ],
+      "solid": true,
+      "lumps": 1,
+      "orientation": "outside floor down; posts up"
+    },
+    {
+      "name": "base-right",
+      "size_mm": [
+        156.1,
+        92.0,
+        21.0
+      ],
+      "solid": true,
+      "lumps": 1,
+      "orientation": "outside floor down; posts up"
+    }
+  ],
+  "unchanged_meshes": [
+    "shell-left",
+    "shell-right",
+    "base-left",
+    "fit-coupon-left",
+    "fit-coupon-right"
+  ],
+  "base_joint": "straight-base-lips.json"
+}

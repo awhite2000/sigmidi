@@ -1,0 +1,503 @@
+{
+  "document": "MIDI Foot Controller - VERIFIED chassis v68",
+  "model_modified": false,
+  "current_width_mm": 8.5,
+  "method": "Translate closed-end geometry right, retain complete native joint at X126.65..128.65, keeping R6 corners, 2mm end wall, 4x3mm exterior chamfer and integral 2mm floor. Temporary BRep copies only.",
+  "candidates": [
+    {
+      "width_mm": 8.5,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0,
+      "shell_collision_bounds_native_mm": null,
+      "base_collision_mm3": 0,
+      "volume_mm3": 10647.412775957268
+    },
+    {
+      "width_mm": 8.4,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0,
+      "shell_collision_bounds_native_mm": null,
+      "base_collision_mm3": 0,
+      "volume_mm3": 10581.40342751823
+    },
+    {
+      "width_mm": 8.3,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0,
+      "shell_collision_bounds_native_mm": null,
+      "base_collision_mm3": 0,
+      "volume_mm3": 10515.39407907919
+    },
+    {
+      "width_mm": 8.2,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 4.82368149850773e-05,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          124.65720537994576,
+          -2.4242640687119277,
+          -17.65
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 10449.384730640153
+    },
+    {
+      "width_mm": 8.1,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0.010929298153945548,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          124.75720537994574,
+          -2.4242640687119277,
+          -17.65
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 10383.375382201115
+    },
+    {
+      "width_mm": 8.0,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0.04178748031030198,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          124.85720537994574,
+          -2.4242640687119277,
+          -17.65
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 10317.366033762066
+    },
+    {
+      "width_mm": 7.9,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0.09401356070471253,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          124.95720537994575,
+          -2.4242640687119277,
+          -17.65
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 10251.512691261534
+    },
+    {
+      "width_mm": 7.8,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0.1690697882370972,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          125.05720537994577,
+          -2.4242640687119277,
+          -17.65
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 10185.573825103238
+    },
+    {
+      "width_mm": 7.7,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0.2685003011876872,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          125.1572053799458,
+          -2.4242640687119277,
+          -17.65
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 10119.504320909804
+    },
+    {
+      "width_mm": 7.6,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0.3939435720547602,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          125.25720537994573,
+          -2.4242640687119277,
+          -17.65
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 10053.474431347842
+    },
+    {
+      "width_mm": 7.5,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0.5471474406801365,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          125.35720537994578,
+          -2.4242640687119277,
+          -17.65
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9987.443971779905
+    },
+    {
+      "width_mm": 7.4,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0.736986892847247,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          125.45720537994576,
+          -2.4242640687119277,
+          -3.4242640687119286
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9921.363546525266
+    },
+    {
+      "width_mm": 7.3,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 0.995143529875085,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          125.55720537994574,
+          -2.4242640687119277,
+          26.575735931288065
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9855.292526356543
+    },
+    {
+      "width_mm": 7.2,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 1.3329664364359293,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          125.65720537994576,
+          -2.4242640687119277,
+          26.575735931288065
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9789.17363951743
+    },
+    {
+      "width_mm": 7.1,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 1.7611047518281207,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          125.75720537994576,
+          -2.4242640687119277,
+          26.575735931288065
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9722.913235168005
+    },
+    {
+      "width_mm": 7.0,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 2.2933294293924202,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          125.85720537994575,
+          -2.4242640687119277,
+          26.575735931288065
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9656.557169277386
+    },
+    {
+      "width_mm": 6.9,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 2.9459970369787647,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          125.95720537994575,
+          -2.4242640687119277,
+          26.575735931288065
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9590.463316470215
+    },
+    {
+      "width_mm": 6.8,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 3.7437236104418585,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          126.05720537994578,
+          -2.4242640687119277,
+          26.575735931288065
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9524.376008609559
+    },
+    {
+      "width_mm": 6.7,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 4.839358252807749,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          126.15720537994576,
+          -2.4242640687119277,
+          26.575735931288065
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9457.890876852394
+    },
+    {
+      "width_mm": 6.6,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 6.70369139476688,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          126.25720537994574,
+          -2.4242640687119277,
+          26.575735931288065
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9391.59502320868
+    },
+    {
+      "width_mm": 6.5,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 10.576089501393545,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          126.35720537994574,
+          -2.4242640687119277,
+          26.575735931288076
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9325.144826013995
+    },
+    {
+      "width_mm": 6.4,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 17.413577896759264,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          126.45720537994578,
+          -2.4242640687119277,
+          26.575735931288065
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9258.49220949619
+    },
+    {
+      "width_mm": 6.3,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 26.288805909017686,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          126.55720537994576,
+          -2.4242640687119277,
+          26.575735931288076
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9192.027934368289
+    },
+    {
+      "width_mm": 6.2,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 37.715920931009855,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          126.64999999999999,
+          -2.4242640687119277,
+          26.575735931288065
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9125.246210580903
+    },
+    {
+      "width_mm": 6.1,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 52.38466558041189,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          126.64999999999999,
+          -2.4242640687119277,
+          26.575735931288076
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 9058.324874185393
+    },
+    {
+      "width_mm": 6.0,
+      "solid": true,
+      "lumps": 1,
+      "shell_collision_mm3": 72.23615068928534,
+      "shell_collision_bounds_native_mm": [
+        [
+          124.65,
+          -89.57573593128807,
+          -19.5
+        ],
+        [
+          126.65,
+          -2.4242640687119277,
+          26.575735931288065
+        ]
+      ],
+      "base_collision_mm3": 0,
+      "volume_mm3": 8991.403780735525
+    }
+  ],
+  "smallest_installed_collision_free_width_mm": 8.3,
+  "assembly_collisions": [],
+  "assembly_samples": {
+    "side_approach": 41,
+    "downward_seat": 17,
+    "base_removal": 21
+  },
+  "recommendation": "Retain 8.5mm with the current corners and joint. The 8.3mm nominal candidate has less than 0.1mm remaining travel before corner interference, while the existing design has about 0.29mm; this is a tolerance allowance, not spare structural width."
+}

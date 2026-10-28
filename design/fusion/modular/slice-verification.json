@@ -1,0 +1,116 @@
+{
+  "printer": "Prusa MK3S+",
+  "material": "Generic PETG",
+  "nozzle_mm": 0.6,
+  "layer_mm": 0.3,
+  "parts": [
+    {
+      "part": "pair-shell",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "2h 37m 4s",
+      "filament_g": "50.61",
+      "filament_mm": "16568.15",
+      "support_extrusion_filament_mm": 904.87
+    },
+    {
+      "part": "pair-base",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "42m 38s",
+      "filament_g": "18.06",
+      "filament_mm": "5912.14",
+      "support_extrusion_filament_mm": 0
+    },
+    {
+      "part": "pair-shell-at-cap",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "2h 36m 36s",
+      "filament_g": "50.04",
+      "filament_mm": "16382.55",
+      "support_extrusion_filament_mm": 905.99
+    },
+    {
+      "part": "left-cap",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "36m 32s",
+      "filament_g": "14.48",
+      "filament_mm": "4740.64",
+      "support_extrusion_filament_mm": 10.87
+    },
+    {
+      "part": "pair-shell-D",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "2h 37m 24s",
+      "filament_g": "50.61",
+      "filament_mm": "16568.13",
+      "support_extrusion_filament_mm": 906.52
+    },
+    {
+      "part": "pair-shell-at-cap-C",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "2h 36m 22s",
+      "filament_g": "50.04",
+      "filament_mm": "16381.68",
+      "support_extrusion_filament_mm": 903.43
+    },
+    {
+      "part": "pair-shell-at-cap-E",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "2h 36m 10s",
+      "filament_g": "50.04",
+      "filament_mm": "16382.29",
+      "support_extrusion_filament_mm": 904.28
+    },
+    {
+      "part": "electronics-shell",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "6h 20m 1s",
+      "filament_g": "113.58",
+      "filament_mm": "37182.75",
+      "support_extrusion_filament_mm": 3295.81,
+      "reused_from_main": "shell-right",
+      "STL_and_3MF_byte_identical": true
+    },
+    {
+      "part": "electronics-base",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "2h 3m 57s",
+      "filament_g": "47.44",
+      "filament_mm": "15529.75",
+      "support_extrusion_filament_mm": 0,
+      "reused_from_main": "base-right",
+      "STL_and_3MF_byte_identical": true
+    },
+    {
+      "part": "fit-coupon-left",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "2m 6s",
+      "filament_g": "0.39",
+      "filament_mm": "127.37",
+      "support_extrusion_filament_mm": 0,
+      "reused_from_main": "fit-coupon-left",
+      "STL_and_3MF_byte_identical": true
+    },
+    {
+      "part": "fit-coupon-right",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "3m 35s",
+      "filament_g": "0.64",
+      "filament_mm": "210.25",
+      "support_extrusion_filament_mm": 0,
+      "reused_from_main": "fit-coupon-right",
+      "STL_and_3MF_byte_identical": true
+    }
+  ],
+  "limits": "Slicing and mesh validation are not physical tolerance or load tests. Main right parts and coupons are copied byte-identically from their verified package."
+}

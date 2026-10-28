@@ -1,0 +1,27 @@
+{
+  "version": "0.1",
+  "source_sha256": "ec1bdfe45a42f8b8942e4f94efe272d9d5c85d262450668ed90f3252aa5a8a00",
+  "logotype_source": "design/branding/logotype-original.png",
+  "logotype_source_sha256": "9a0c5fc59e4fdf0debd5791db91182139dd14005eb9cc2538619973b5c284663",
+  "shared_SVG_path_sha256": "5f4d857f814e4891973abc95f2d2e68228f3c859d9a0e9414578b6cfb5345f65",
+  "palettes": [
+    "project green",
+    "light",
+    "original purple"
+  ],
+  "maximum_vector_simplification_px": 0.7,
+  "shadow_removed": true,
+  "browser_editor_logo_size": [
+    48,
+    40
+  ],
+  "LCD_logo_size": [
+    24,
+    20
+  ],
+  "firmware_build_passed": true,
+  "host_tests_passed": true,
+  "browser_flasher_ready": true,
+  "native_enclosure_geometry_modified": false,
+  "verified_UTC": "2026-10-28T15:50:03.611290+00:00"
+}

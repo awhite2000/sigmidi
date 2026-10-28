@@ -1,0 +1,174 @@
+{
+  "rotation_degrees": 180,
+  "axis": "Z, normal to display PCB",
+  "center_layout_XY_mm": [
+    42.59781066034995,
+    61.9843653568
+  ],
+  "ribbon_side": "left",
+  "applies_to": [
+    "mirrored main",
+    "mirrored modular"
+  ],
+  "original_variants_modified": false,
+  "glass_flush_Z_mm": 0,
+  "mounting_stud_positions_unchanged": true,
+  "M2x5_posts_and_screws_unchanged": true,
+  "window_region_outside_difference_mm3": [
+    0,
+    0
+  ],
+  "physical_collisions": [],
+  "rotated_bodies": [
+    {
+      "name": "1_69INCH-240X280-LCD:1 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+      "before_mm": [
+        23.882810660349953,
+        -77.0193653568,
+        -1.7599999999999998,
+        61.812810660349946,
+        -46.9493653568,
+        5.551115123125783e-16
+      ],
+      "after_mm": [
+        23.382810660349953,
+        -77.01936535680001,
+        -1.7599999999999998,
+        61.31281066034994,
+        -46.949365356800016,
+        5.551115123125783e-16
+      ],
+      "volume_mm3": 1650.3239564639812
+    },
+    {
+      "name": "1_69INCH_LCD_MODULE-PCBA:1 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+      "before_mm": [
+        23.097810660349936,
+        -77.7343653568,
+        -4.600000197918,
+        62.09781066034996,
+        -46.2343653568,
+        -1.7999999999999998
+      ],
+      "after_mm": [
+        23.097810660349943,
+        -77.73436535680003,
+        -4.600000197918,
+        62.097810660349964,
+        -46.23436535680001,
+        -1.7999999999999998
+      ],
+      "volume_mm3": 1945.4686107969928
+    },
+    {
+      "name": "1_69INCH_LCD_MODULE-PCBA:1 Body2 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+      "before_mm": [
+        44.57315579060996,
+        -69.359369006385,
+        -7.113258503713,
+        49.622813799369965,
+        -54.60936920856,
+        -3.454529403928
+      ],
+      "after_mm": [
+        35.572807521329935,
+        -69.35936150504001,
+        -7.113258503713,
+        40.62246553008994,
+        -54.609361707215015,
+        -3.454529403928
+      ],
+      "volume_mm3": 99.4331838687884
+    },
+    {
+      "name": "STUDS-M2XH2_5:1 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+      "before_mm": [
+        56.74781066034996,
+        -51.5843653568,
+        -5.899999999999999,
+        60.24781066034996,
+        -48.08436535679999,
+        -1.899999999999999
+      ],
+      "after_mm": [
+        24.94781066034994,
+        -75.88436535680002,
+        -5.899999999999999,
+        28.447810660349937,
+        -72.3843653568,
+        -1.899999999999999
+      ],
+      "volume_mm3": 21.028981302015836
+    },
+    {
+      "name": "STUDS-M2XH2_5:2 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+      "before_mm": [
+        24.94781066034993,
+        -51.5843653568,
+        -5.899999999999999,
+        28.44781066034993,
+        -48.08436535679999,
+        -1.899999999999999
+      ],
+      "after_mm": [
+        56.74781066034996,
+        -75.88436535680002,
+        -5.899999999999999,
+        60.24781066034996,
+        -72.38436535680002,
+        -1.899999999999999
+      ],
+      "volume_mm3": 21.0289813020167
+    },
+    {
+      "name": "STUDS-M2XH2_5:3 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+      "before_mm": [
+        56.74781066034996,
+        -75.8843653568,
+        -5.899999999999999,
+        60.24781066034996,
+        -72.3843653568,
+        -1.899999999999999
+      ],
+      "after_mm": [
+        24.94781066034994,
+        -51.58436535680001,
+        -5.899999999999999,
+        28.447810660349937,
+        -48.084365356800014,
+        -1.899999999999999
+      ],
+      "volume_mm3": 21.028978927669552
+    },
+    {
+      "name": "STUDS-M2XH2_5:4 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+      "before_mm": [
+        24.94781066034993,
+        -75.8843653568,
+        -5.899999999999999,
+        28.44781066034993,
+        -72.3843653568,
+        -1.899999999999999
+      ],
+      "after_mm": [
+        56.74781066034997,
+        -51.58436535680002,
+        -5.899999999999999,
+        60.24781066034997,
+        -48.08436535680002,
+        -1.899999999999999
+      ],
+      "volume_mm3": 21.02898052376053
+    }
+  ],
+  "verified_UTC": "2026-10-28T09:47:40.066052+00:00",
+  "saved": true,
+  "document": "MIDI Foot Controller - VERIFIED chassis v103",
+  "window_method": "Original aperture reflected left-to-right, matching the rigidly rotated glass while preserving the adjacent slanted deck",
+  "window_repair_outside_region_difference_mm3": [
+    0,
+    0
+  ],
+  "PCB_to_encoder_lateral_clearance_mm": 3.0978106603499427,
+  "FPC_to_encoder_lateral_clearance_mm": 15.572807521329935
+}

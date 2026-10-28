@@ -1,0 +1,475 @@
+{
+  "revision": "display_m2x5",
+  "method": "Inward normal first-exit ray tracing of closed oriented meshes. BVH, 0.002mm inward offset; area-scaled triangle interior samples, maximum 0.5mm2 nominal sampling area. Measurements at bevel tips and mating ramps are not sheet-wall minima.",
+  "threshold_mm": 1.8,
+  "unique_print_parts": 11,
+  "total_samples": 828311,
+  "parts": [
+    {
+      "part": "print/shell-left",
+      "STL_sha256": "9e0cd12be8ed445f8f1531d4eefc239dcb5b1dfbfa4c18a5908f201656fe7557",
+      "sample_count": 141183,
+      "miss_count": 0,
+      "surface_area_mm2": 80480.9,
+      "thin_sample_count": 5442,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        124.4053,
+        292.651,
+        288.5841,
+        153.0793,
+        69.05439,
+        5451.585,
+        74101.54
+      ],
+      "reviewed_thin_feature_categories": [
+        {
+          "feature": "Recessed glyph side/edge backed by exact-checked 2.2mm roof",
+          "samples": 451,
+          "sampled_surface_area_mm2": 46.64293384200001
+        },
+        {
+          "feature": "Intentional 0.8mm optional LED breakaway cover",
+          "samples": 692,
+          "sampled_surface_area_mm2": 254.7578155320005
+        },
+        {
+          "feature": "Mating drop-down joint ramp/runout, protected assembly interface",
+          "samples": 4212,
+          "sampled_surface_area_mm2": 607.6115105551027
+        },
+        {
+          "feature": "Internal LED seat/taper at intact roof or cover",
+          "samples": 36,
+          "sampled_surface_area_mm2": 18.733356599999997
+        },
+        {
+          "feature": "Internal boss-to-wall fillet tangent, backed by stock 2mm wall",
+          "samples": 51,
+          "sampled_surface_area_mm2": 0.02842166649999999
+        }
+      ],
+      "unresolved_samples": 0
+    },
+    {
+      "part": "print/shell-right",
+      "STL_sha256": "3537c361d59e515bac5ea71acf2fce2f7971ba9ca7b7df897f4718c0c7c9a3d3",
+      "sample_count": 149588,
+      "miss_count": 0,
+      "surface_area_mm2": 66662.28,
+      "thin_sample_count": 4836,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        37.47133,
+        1021.776,
+        65.68342,
+        273.1777,
+        73.88957,
+        1750.916,
+        63439.36
+      ],
+      "reviewed_thin_feature_categories": [
+        {
+          "feature": "Intentional 0.6mm rear vent breakaway film/edge",
+          "samples": 1004,
+          "sampled_surface_area_mm2": 759.40765500001
+        },
+        {
+          "feature": "Mating drop-down joint ramp/runout, protected assembly interface",
+          "samples": 36,
+          "sampled_surface_area_mm2": 3.3393059159999976
+        },
+        {
+          "feature": "Recessed glyph side/edge backed by exact-checked 2.2mm roof",
+          "samples": 166,
+          "sampled_surface_area_mm2": 24.38414601000001
+        },
+        {
+          "feature": "Intentional 0.8mm optional LED breakaway cover",
+          "samples": 476,
+          "sampled_surface_area_mm2": 182.17654880600028
+        },
+        {
+          "feature": "USB pocket: open lead-in bevel or retained 1.6mm partition",
+          "samples": 2058,
+          "sampled_surface_area_mm2": 247.47005866535974
+        },
+        {
+          "feature": "Internal boss-to-wall fillet tangent, backed by stock 2mm wall",
+          "samples": 20,
+          "sampled_surface_area_mm2": 0.0124749646
+        },
+        {
+          "feature": "Internal LED seat/taper at intact roof or cover",
+          "samples": 52,
+          "sampled_surface_area_mm2": 22.231902300000012
+        },
+        {
+          "feature": "LCD opening bevel or fixed 1.5mm seating ledge",
+          "samples": 608,
+          "sampled_surface_area_mm2": 211.12442289800006
+        },
+        {
+          "feature": "Intentional TRS bore mouth chamfer in reinforced 3mm wall",
+          "samples": 416,
+          "sampled_surface_area_mm2": 21.851883950000012
+        }
+      ],
+      "unresolved_samples": 0
+    },
+    {
+      "part": "print/base-left",
+      "STL_sha256": "ac7ba15004ecff174089234c886af025626d4b4e0f003bcbfdd8f788ebb8fe59",
+      "sample_count": 45969,
+      "miss_count": 0,
+      "surface_area_mm2": 39292.63,
+      "thin_sample_count": 1354,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        68.28251,
+        74.18453,
+        70.32421,
+        70.55858,
+        576.9247,
+        13065.01,
+        25367.35
+      ],
+      "reviewed_thin_feature_categories": [
+        {
+          "feature": "1.8mm locating rib or 0.5mm lead-in; actual toolpaths verified",
+          "samples": 600,
+          "sampled_surface_area_mm2": 477.2727000000026
+        },
+        {
+          "feature": "Countersink edge in 2mm floor, retained screw opening",
+          "samples": 378,
+          "sampled_surface_area_mm2": 77.3527062
+        },
+        {
+          "feature": "45-degree glue land runout backed by 2mm floor",
+          "samples": 352,
+          "sampled_surface_area_mm2": 305.64605620000015
+        },
+        {
+          "feature": "Sub-micron raised remnant backed by intact 2mm floor",
+          "samples": 24,
+          "sampled_surface_area_mm2": 0.0030098109000000002
+        }
+      ],
+      "unresolved_samples": 0
+    },
+    {
+      "part": "print/base-right",
+      "STL_sha256": "1dc6645060bb782717b787fff949e1304608ec68ba54b0258a9ced1b3a448cd2",
+      "sample_count": 60552,
+      "miss_count": 0,
+      "surface_area_mm2": 36811.44,
+      "thin_sample_count": 4480,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        70.12596,
+        77.23,
+        85.80193,
+        169.1957,
+        1429.42,
+        6429.735,
+        28549.93
+      ],
+      "reviewed_thin_feature_categories": [
+        {
+          "feature": "Countersink edge in 2mm floor, retained screw opening",
+          "samples": 398,
+          "sampled_surface_area_mm2": 76.19256252999979
+        },
+        {
+          "feature": "1.8mm locating rib or 0.5mm lead-in; actual toolpaths verified",
+          "samples": 780,
+          "sampled_surface_area_mm2": 660.5381997999892
+        },
+        {
+          "feature": "Boss clearance terminates locating rib; floor backing retained",
+          "samples": 25,
+          "sampled_surface_area_mm2": 15.400998399999997
+        },
+        {
+          "feature": "Open Pololu fixture: specified spring/hook/edge-seat geometry",
+          "samples": 333,
+          "sampled_surface_area_mm2": 224.2868737999981
+        },
+        {
+          "feature": "45-degree glue land runout backed by 2mm floor",
+          "samples": 352,
+          "sampled_surface_area_mm2": 305.64605620000015
+        },
+        {
+          "feature": "1.725mm MCU post wall, two-track slice required",
+          "samples": 2592,
+          "sampled_surface_area_mm2": 549.7086333600024
+        }
+      ],
+      "unresolved_samples": 0
+    },
+    {
+      "part": "modular/pair-shell",
+      "STL_sha256": "445177feff26b01fc97ce7b029711080d0269f7964c6458683885d4643e1723f",
+      "sample_count": 85618,
+      "miss_count": 0,
+      "surface_area_mm2": 29286.57,
+      "thin_sample_count": 4945,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        126.311,
+        244.1861,
+        144.1057,
+        137.0045,
+        64.70699,
+        797.8559,
+        27772.4
+      ],
+      "reviewed_thin_feature_categories": [
+        {
+          "feature": "Recessed glyph side/edge backed by exact-checked 2.2mm roof",
+          "samples": 462,
+          "sampled_surface_area_mm2": 8.7601573892
+        },
+        {
+          "feature": "Mating drop-down joint ramp/runout, protected assembly interface",
+          "samples": 4242,
+          "sampled_surface_area_mm2": 615.5420160270947
+        },
+        {
+          "feature": "Internal LED seat/taper at intact roof or cover",
+          "samples": 12,
+          "sampled_surface_area_mm2": 6.244450399999999
+        },
+        {
+          "feature": "Intentional 0.8mm optional LED breakaway cover",
+          "samples": 229,
+          "sampled_surface_area_mm2": 85.76769150399991
+        }
+      ],
+      "unresolved_samples": 0
+    },
+    {
+      "part": "modular/pair-shell-at-cap",
+      "STL_sha256": "5f20c3a282a3bfb7c012e21887ae91033292810670eca5780872507212feed6c",
+      "sample_count": 72788,
+      "miss_count": 0,
+      "surface_area_mm2": 29080.89,
+      "thin_sample_count": 4525,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        127.386,
+        248.4681,
+        145.1056,
+        138.4837,
+        63.36569,
+        816.3625,
+        27541.72
+      ],
+      "reviewed_thin_feature_categories": [
+        {
+          "feature": "Mating drop-down joint ramp/runout, protected assembly interface",
+          "samples": 4255,
+          "sampled_surface_area_mm2": 615.5346573216648
+        },
+        {
+          "feature": "Recessed glyph side/edge backed by exact-checked 2.2mm roof",
+          "samples": 23,
+          "sampled_surface_area_mm2": 11.022442999999999
+        },
+        {
+          "feature": "Intentional 0.8mm optional LED breakaway cover",
+          "samples": 235,
+          "sampled_surface_area_mm2": 90.00748330400003
+        },
+        {
+          "feature": "Internal LED seat/taper at intact roof or cover",
+          "samples": 12,
+          "sampled_surface_area_mm2": 6.244450399999999
+        }
+      ],
+      "unresolved_samples": 0
+    },
+    {
+      "part": "modular/pair-base",
+      "STL_sha256": "3a2952b453372f65fe0823cc7f92e0e9cce1d45be8ddab99db03a1fe249038a3",
+      "sample_count": 16529,
+      "miss_count": 0,
+      "surface_area_mm2": 13756.21,
+      "thin_sample_count": 1054,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        136.559,
+        148.3691,
+        140.6484,
+        127.9712,
+        210.1155,
+        962.3823,
+        12030.17
+      ],
+      "reviewed_thin_feature_categories": [
+        {
+          "feature": "1.8mm locating rib or 0.5mm lead-in; actual toolpaths verified",
+          "samples": 196,
+          "sampled_surface_area_mm2": 140.75000520000015
+        },
+        {
+          "feature": "Countersink edge in 2mm floor, retained screw opening",
+          "samples": 154,
+          "sampled_surface_area_mm2": 11.621112739999992
+        },
+        {
+          "feature": "45-degree glue land runout backed by 2mm floor",
+          "samples": 704,
+          "sampled_surface_area_mm2": 611.2921124000001
+        }
+      ],
+      "unresolved_samples": 0
+    },
+    {
+      "part": "modular/left-cap",
+      "STL_sha256": "f93ba486a4c92bdf2b94c28756445b8c7dec21aa1cb28638e57d82f7c6d2e723",
+      "sample_count": 22610,
+      "miss_count": 0,
+      "surface_area_mm2": 10872.73,
+      "thin_sample_count": 4608,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        121.8498,
+        147.1775,
+        141.8431,
+        141.1372,
+        57.77685,
+        2855.264,
+        7407.682
+      ],
+      "reviewed_thin_feature_categories": [
+        {
+          "feature": "Mating drop-down joint ramp/runout, protected assembly interface",
+          "samples": 4608,
+          "sampled_surface_area_mm2": 609.7844098701972
+        }
+      ],
+      "unresolved_samples": 0
+    },
+    {
+      "part": "modular/pair-shell-D",
+      "STL_sha256": "4792a971eae4c0bad685487709d34b88a7be342737ec031fc83b3ecf68bd3967",
+      "sample_count": 77881,
+      "miss_count": 0,
+      "surface_area_mm2": 29290.29,
+      "thin_sample_count": 4510,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        127.3761,
+        248.4622,
+        145.1055,
+        138.4808,
+        63.36567,
+        796.0252,
+        27771.48
+      ],
+      "reviewed_thin_feature_categories": [
+        {
+          "feature": "Recessed glyph side/edge backed by exact-checked 2.2mm roof",
+          "samples": 23,
+          "sampled_surface_area_mm2": 11.022442999999999
+        },
+        {
+          "feature": "Intentional 0.8mm optional LED breakaway cover",
+          "samples": 235,
+          "sampled_surface_area_mm2": 90.00748330400003
+        },
+        {
+          "feature": "Internal LED seat/taper at intact roof or cover",
+          "samples": 12,
+          "sampled_surface_area_mm2": 6.244450399999999
+        },
+        {
+          "feature": "Mating drop-down joint ramp/runout, protected assembly interface",
+          "samples": 4240,
+          "sampled_surface_area_mm2": 615.5158173470948
+        }
+      ],
+      "unresolved_samples": 0
+    },
+    {
+      "part": "modular/pair-shell-at-cap-C",
+      "STL_sha256": "da105a3d1027147df7be3ee5d8196bba5efc370da7012845e934808c57ac2f12",
+      "sample_count": 80525,
+      "miss_count": 0,
+      "surface_area_mm2": 29077.16,
+      "thin_sample_count": 4960,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        126.3209,
+        244.192,
+        144.1058,
+        137.0074,
+        64.70701,
+        818.1933,
+        27542.64
+      ],
+      "reviewed_thin_feature_categories": [
+        {
+          "feature": "Mating drop-down joint ramp/runout, protected assembly interface",
+          "samples": 4257,
+          "sampled_surface_area_mm2": 615.5608560016647
+        },
+        {
+          "feature": "Recessed glyph side/edge backed by exact-checked 2.2mm roof",
+          "samples": 462,
+          "sampled_surface_area_mm2": 8.7601573892
+        },
+        {
+          "feature": "Internal LED seat/taper at intact roof or cover",
+          "samples": 12,
+          "sampled_surface_area_mm2": 6.244450399999999
+        },
+        {
+          "feature": "Intentional 0.8mm optional LED breakaway cover",
+          "samples": 229,
+          "sampled_surface_area_mm2": 85.76769150399991
+        }
+      ],
+      "unresolved_samples": 0
+    },
+    {
+      "part": "modular/pair-shell-at-cap-E",
+      "STL_sha256": "70cd646a8ef8b7b6b9a9b86f0c6b6c19090116172f330982ce0aeb4bc130f340",
+      "sample_count": 75068,
+      "miss_count": 0,
+      "surface_area_mm2": 29086.46,
+      "thin_sample_count": 4718,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        126.3764,
+        248.5629,
+        146.3194,
+        139.3528,
+        71.21925,
+        816.1183,
+        27538.51
+      ],
+      "reviewed_thin_feature_categories": [
+        {
+          "feature": "Mating drop-down joint ramp/runout, protected assembly interface",
+          "samples": 4255,
+          "sampled_surface_area_mm2": 615.5346573216648
+        },
+        {
+          "feature": "Recessed glyph side/edge backed by exact-checked 2.2mm roof",
+          "samples": 215,
+          "sampled_surface_area_mm2": 19.72401661699999
+        },
+        {
+          "feature": "Internal LED seat/taper at intact roof or cover",
+          "samples": 12,
+          "sampled_surface_area_mm2": 6.244450399999999
+        },
+        {
+          "feature": "Intentional 0.8mm optional LED breakaway cover",
+          "samples": 236,
+          "sampled_surface_area_mm2": 90.32759220400013
+        }
+      ],
+      "unresolved_samples": 0
+    }
+  ],
+  "unresolved_sample_count": 0,
+  "unresolved": [],
+  "reinforcements": "enclosure-wall-reinforcement.json",
+  "actual_toolpath_checks": "enclosure-wall-slice.json",
+  "review_notes": "Thin is not automatically defective: opening chamfers, joint tapers, countersinks, text sidewalls and floor-backed runouts have vanishing edge thickness. Breakaway covers are intentionally thin. The fixed display/USB seats, MCU posts and flexible clips are retained only with actual extrusion checks. No claim of a global 1.8mm minimum is made.",
+  "limitations": "Finite interior-face sampling, inward normal chord thickness, and nominal CAD/toolpaths; not an exhaustive medial-axis minimum, physical print, thermal or fatigue test."
+}

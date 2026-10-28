@@ -1,0 +1,1986 @@
+{
+  "revision": "upper_corner_walls",
+  "nozzle_mm": 0.6,
+  "layer_mm": 0.3,
+  "all_repaired_probes_have_at_least_two_tracks": true,
+  "probe_scope": "Two native heights (-14 and -10mm), every 0.3mm end-down print layer through the repaired radial wall core, with the CAD cross-section evaluated at the 0.15mm layer midpoint below print Z. Counts are distinct non-support extrusion centerline crossings inside the exact R6/R4 wall interval.",
+  "parts": [
+    {
+      "part": "shell-right",
+      "minimum_distinct_tracks_before": 1,
+      "minimum_distinct_tracks_after": 3,
+      "probes": [
+        {
+          "print_layer_Z_mm": 2.4,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            1.31625,
+            4.60806
+          ],
+          "distinct_track_count": 5,
+          "track_centers_Y_mm": [
+            1.66387,
+            2.26986,
+            2.971,
+            3.672,
+            4.278
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 2.4,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            1.31625,
+            4.60806
+          ],
+          "distinct_track_count": 5,
+          "track_centers_Y_mm": [
+            1.66378,
+            2.26977,
+            2.971,
+            3.672,
+            4.278
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 2.7,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            1.09108,
+            3.97577
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            1.45098,
+            2.15097,
+            2.94492,
+            3.645
+          ],
+          "median_commanded_bead_width_mm": 0.7673
+        },
+        {
+          "print_layer_Z_mm": 2.7,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            1.09108,
+            3.97577
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            1.44972,
+            2.15003,
+            2.94462,
+            3.645
+          ],
+          "median_commanded_bead_width_mm": 0.7673
+        },
+        {
+          "print_layer_Z_mm": 3.0,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.89339,
+            3.53474
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            1.24508,
+            1.88913,
+            2.57205,
+            3.216
+          ],
+          "median_commanded_bead_width_mm": 0.7086
+        },
+        {
+          "print_layer_Z_mm": 3.0,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.89339,
+            3.53474
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            1.24575,
+            1.88963,
+            2.57225,
+            3.216
+          ],
+          "median_commanded_bead_width_mm": 0.7086
+        },
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            1.06873,
+            1.67297,
+            2.27597,
+            2.88
+          ],
+          "median_commanded_bead_width_mm": 0.6688
+        },
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            1.06856,
+            1.67287,
+            2.27587,
+            2.88
+          ],
+          "median_commanded_bead_width_mm": 0.6688
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.92748,
+            1.49382,
+            2.01995,
+            2.586
+          ],
+          "median_commanded_bead_width_mm": 0.6327
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.92656,
+            1.49312,
+            2.01975,
+            2.586
+          ],
+          "median_commanded_bead_width_mm": 0.6327
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.78969,
+            1.33808,
+            1.82803,
+            2.376
+          ],
+          "median_commanded_bead_width_mm": 0.6123
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.79012,
+            1.33838,
+            1.82813,
+            2.376
+          ],
+          "median_commanded_bead_width_mm": 0.6123
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.67014,
+            1.424,
+            2.178
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.67022,
+            1.424,
+            2.178
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.58759,
+            1.31287,
+            2.038
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.58674,
+            1.31237,
+            2.038
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.509,
+            1.205,
+            1.901
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.509,
+            1.205,
+            1.901
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.42978,
+            1.12513,
+            1.821
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.43071,
+            1.12563,
+            1.821
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.39885,
+            1.06992,
+            1.741
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.39816,
+            1.06962,
+            1.741
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.37318,
+            1.03895,
+            1.704
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.37276,
+            1.03875,
+            1.704
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.34767,
+            1.01297,
+            1.678
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.3475,
+            1.01287,
+            1.678
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        }
+      ],
+      "before": [
+        {
+          "print_layer_Z_mm": 2.4,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            1.31625,
+            4.60806
+          ],
+          "distinct_track_count": 1,
+          "track_centers_Y_mm": [
+            1.664
+          ],
+          "median_commanded_bead_width_mm": 0.7444
+        },
+        {
+          "print_layer_Z_mm": 2.4,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            1.31625,
+            4.60806
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            1.779,
+            2.58491,
+            3.36185,
+            4.16766
+          ],
+          "median_commanded_bead_width_mm": 0.8706
+        },
+        {
+          "print_layer_Z_mm": 2.7,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            1.09108,
+            3.97577
+          ],
+          "distinct_track_count": 1,
+          "track_centers_Y_mm": [
+            1.558
+          ],
+          "median_commanded_bead_width_mm": 0.884
+        },
+        {
+          "print_layer_Z_mm": 2.7,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            1.09108,
+            3.97577
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            1.56481,
+            2.54966,
+            3.53479
+          ],
+          "median_commanded_bead_width_mm": 0.9
+        },
+        {
+          "print_layer_Z_mm": 3.0,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.89339,
+            3.53474
+          ],
+          "distinct_track_count": 1,
+          "track_centers_Y_mm": [
+            1.455
+          ],
+          "median_commanded_bead_width_mm": 1.09
+        },
+        {
+          "print_layer_Z_mm": 3.0,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.89339,
+            3.53474
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            1.36106,
+            2.22828,
+            3.09617
+          ],
+          "median_commanded_bead_width_mm": 0.9
+        },
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 1,
+          "track_centers_Y_mm": [
+            1.367
+          ],
+          "median_commanded_bead_width_mm": 1.2665
+        },
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 1,
+          "track_centers_Y_mm": [
+            1.367
+          ],
+          "median_commanded_bead_width_mm": 1.2665
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.96,
+            1.632
+          ],
+          "median_commanded_bead_width_mm": 0.7391
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.95975,
+            1.632
+          ],
+          "median_commanded_bead_width_mm": 0.7392
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.85718,
+            1.598
+          ],
+          "median_commanded_bead_width_mm": 0.8048
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.85786,
+            1.598
+          ],
+          "median_commanded_bead_width_mm": 0.8048
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.767,
+            1.568
+          ],
+          "median_commanded_bead_width_mm": 0.8648
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.767,
+            1.568
+          ],
+          "median_commanded_bead_width_mm": 0.8648
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.70582,
+            1.547
+          ],
+          "median_commanded_bead_width_mm": 0.9065
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.70514,
+            1.547
+          ],
+          "median_commanded_bead_width_mm": 0.9065
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.646,
+            1.527
+          ],
+          "median_commanded_bead_width_mm": 0.9454
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.646,
+            1.527
+          ],
+          "median_commanded_bead_width_mm": 0.9454
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.58718,
+            1.508
+          ],
+          "median_commanded_bead_width_mm": 0.9848
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.58786,
+            1.508
+          ],
+          "median_commanded_bead_width_mm": 0.9848
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.564,
+            1.5
+          ],
+          "median_commanded_bead_width_mm": 1.0005
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.564,
+            1.5
+          ],
+          "median_commanded_bead_width_mm": 1.0005
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.545,
+            1.49382
+          ],
+          "median_commanded_bead_width_mm": 1.0132
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.545,
+            1.49314
+          ],
+          "median_commanded_bead_width_mm": 1.0132
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.52605,
+            1.48724
+          ],
+          "median_commanded_bead_width_mm": 1.033
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.52626,
+            1.48817
+          ],
+          "median_commanded_bead_width_mm": 1.033
+        }
+      ],
+      "before_zero_track_probes": 0,
+      "STL_path": "print/shell-right.stl",
+      "STL_sha256": "3537c361d59e515bac5ea71acf2fce2f7971ba9ca7b7df897f4718c0c7c9a3d3",
+      "Gcode_sha256": "3ee9817b266904d9ff670f88c44c0e5917b8e495bd5b27bb60c71f561f5c2b8f"
+    },
+    {
+      "part": "shell-left",
+      "minimum_distinct_tracks_before": 1,
+      "minimum_distinct_tracks_after": 3,
+      "probes": [
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            1.06873,
+            1.67103,
+            2.27112,
+            2.87319
+          ],
+          "median_commanded_bead_width_mm": 0.6688
+        },
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            1.06856,
+            1.67113,
+            2.27152,
+            2.87388
+          ],
+          "median_commanded_bead_width_mm": 0.6688
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.92748,
+            1.49576,
+            2.02673,
+            2.59492
+          ],
+          "median_commanded_bead_width_mm": 0.6328
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.92655,
+            1.49487,
+            2.02584,
+            2.59399
+          ],
+          "median_commanded_bead_width_mm": 0.6328
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.78969,
+            1.33418,
+            1.81638,
+            2.36013
+          ],
+          "median_commanded_bead_width_mm": 0.6112
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.79012,
+            1.33488,
+            1.81768,
+            2.36179
+          ],
+          "median_commanded_bead_width_mm": 0.6112
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.67014,
+            1.42699,
+            2.18496
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.67022,
+            1.42668,
+            2.18423
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.58759,
+            1.30703,
+            2.02607
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.58674,
+            1.30713,
+            2.02721
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.509,
+            1.20889,
+            1.90978
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.509,
+            1.20849,
+            1.90896
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.42978,
+            1.12124,
+            1.81304
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.43071,
+            1.12214,
+            1.81385
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.39885,
+            1.07187,
+            1.74489
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.39816,
+            1.07137,
+            1.74448
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.37318,
+            1.03603,
+            1.69802
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.37275,
+            1.03613,
+            1.69863
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.34767,
+            1.012,
+            1.67606
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.3475,
+            1.012,
+            1.67626
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        }
+      ],
+      "before": [
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 1,
+          "track_centers_Y_mm": [
+            1.367
+          ],
+          "median_commanded_bead_width_mm": 1.2665
+        },
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 1,
+          "track_centers_Y_mm": [
+            1.367
+          ],
+          "median_commanded_bead_width_mm": 1.2665
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.96,
+            1.632
+          ],
+          "median_commanded_bead_width_mm": 0.7366
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.95967,
+            1.632
+          ],
+          "median_commanded_bead_width_mm": 0.7366
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.85718,
+            1.598
+          ],
+          "median_commanded_bead_width_mm": 0.8048
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.85786,
+            1.598
+          ],
+          "median_commanded_bead_width_mm": 0.8048
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.767,
+            1.568
+          ],
+          "median_commanded_bead_width_mm": 0.8648
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.767,
+            1.568
+          ],
+          "median_commanded_bead_width_mm": 0.8648
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.70582,
+            1.547
+          ],
+          "median_commanded_bead_width_mm": 0.9065
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.70514,
+            1.547
+          ],
+          "median_commanded_bead_width_mm": 0.9065
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.646,
+            1.527
+          ],
+          "median_commanded_bead_width_mm": 0.9454
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.646,
+            1.527
+          ],
+          "median_commanded_bead_width_mm": 0.9454
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.58718,
+            1.508
+          ],
+          "median_commanded_bead_width_mm": 0.9848
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.58786,
+            1.508
+          ],
+          "median_commanded_bead_width_mm": 0.9848
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.564,
+            1.5
+          ],
+          "median_commanded_bead_width_mm": 1.0005
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.564,
+            1.5
+          ],
+          "median_commanded_bead_width_mm": 1.0005
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.545,
+            1.49381
+          ],
+          "median_commanded_bead_width_mm": 1.0132
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.545,
+            1.49314
+          ],
+          "median_commanded_bead_width_mm": 1.0132
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.52605,
+            1.48726
+          ],
+          "median_commanded_bead_width_mm": 1.033
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.52626,
+            1.48819
+          ],
+          "median_commanded_bead_width_mm": 1.033
+        }
+      ],
+      "before_zero_track_probes": 0,
+      "STL_path": "print/shell-left.stl",
+      "STL_sha256": "9e0cd12be8ed445f8f1531d4eefc239dcb5b1dfbfa4c18a5908f201656fe7557",
+      "Gcode_sha256": "e131f04397d2ee5b2eb55b85d2ce3d6cf3ec40f2180e881c7b878abc2569f271"
+    },
+    {
+      "part": "left-cap",
+      "minimum_distinct_tracks_before": 1,
+      "minimum_distinct_tracks_after": 3,
+      "probes": [
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            1.07011,
+            1.67363,
+            2.27566,
+            2.88
+          ],
+          "median_commanded_bead_width_mm": 0.6704
+        },
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            1.06922,
+            1.67295,
+            2.27549,
+            2.88
+          ],
+          "median_commanded_bead_width_mm": 0.6704
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.909,
+            1.47917,
+            2.015,
+            2.586
+          ],
+          "median_commanded_bead_width_mm": 0.6351
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.909,
+            1.47925,
+            2.015,
+            2.586
+          ],
+          "median_commanded_bead_width_mm": 0.6351
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.78409,
+            1.33364,
+            1.82649,
+            2.376
+          ],
+          "median_commanded_bead_width_mm": 0.616
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 4,
+          "track_centers_Y_mm": [
+            0.78319,
+            1.33297,
+            1.82623,
+            2.376
+          ],
+          "median_commanded_bead_width_mm": 0.616
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.67325,
+            1.42532,
+            2.178
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.67244,
+            1.42498,
+            2.178
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.56935,
+            1.304,
+            2.038
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.56952,
+            1.304,
+            2.038
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.50192,
+            1.20115,
+            1.901
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.50096,
+            1.20072,
+            1.901
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.43782,
+            1.12949,
+            1.821
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.43734,
+            1.12923,
+            1.821
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.38861,
+            1.06483,
+            1.741
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.38844,
+            1.06474,
+            1.741
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.36453,
+            1.03398,
+            1.704
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.36339,
+            1.03347,
+            1.704
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.34501,
+            1.01149,
+            1.678
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 3,
+          "track_centers_Y_mm": [
+            0.3446,
+            1.01123,
+            1.678
+          ],
+          "median_commanded_bead_width_mm": 0.67
+        }
+      ],
+      "before": [
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 1,
+          "track_centers_Y_mm": [
+            1.36782
+          ],
+          "median_commanded_bead_width_mm": 1.266
+        },
+        {
+          "print_layer_Z_mm": 3.3,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.72009,
+            3.19331
+          ],
+          "distinct_track_count": 1,
+          "track_centers_Y_mm": [
+            1.36714
+          ],
+          "median_commanded_bead_width_mm": 1.266
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.946,
+            1.627
+          ],
+          "median_commanded_bead_width_mm": 0.7479
+        },
+        {
+          "print_layer_Z_mm": 3.6,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.56884,
+            2.9182
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.946,
+            1.627
+          ],
+          "median_commanded_bead_width_mm": 0.7479
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.853,
+            1.596
+          ],
+          "median_commanded_bead_width_mm": 0.8081
+        },
+        {
+          "print_layer_Z_mm": 3.9,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.43785,
+            2.69281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.85218,
+            1.596
+          ],
+          "median_commanded_bead_width_mm": 0.8081
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.77,
+            1.568
+          ],
+          "median_commanded_bead_width_mm": 0.8637
+        },
+        {
+          "print_layer_Z_mm": 4.2,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.32572,
+            2.50751
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.769,
+            1.568
+          ],
+          "median_commanded_bead_width_mm": 0.8637
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.692,
+            1.543
+          ],
+          "median_commanded_bead_width_mm": 0.9149
+        },
+        {
+          "print_layer_Z_mm": 4.5,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.23133,
+            2.35617
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.692,
+            1.543
+          ],
+          "median_commanded_bead_width_mm": 0.9149
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.64082,
+            1.52582
+          ],
+          "median_commanded_bead_width_mm": 0.9494
+        },
+        {
+          "print_layer_Z_mm": 4.8,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.15385,
+            2.2347
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.64014,
+            1.52514
+          ],
+          "median_commanded_bead_width_mm": 0.9494
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.593,
+            1.50982
+          ],
+          "median_commanded_bead_width_mm": 0.9812
+        },
+        {
+          "print_layer_Z_mm": 5.1,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.09259,
+            2.14027
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.593,
+            1.50914
+          ],
+          "median_commanded_bead_width_mm": 0.9812
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.556,
+            1.497
+          ],
+          "median_commanded_bead_width_mm": 1.0057
+        },
+        {
+          "print_layer_Z_mm": 5.4,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.04706,
+            2.07094
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.556,
+            1.497
+          ],
+          "median_commanded_bead_width_mm": 1.0057
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.53782,
+            1.491
+          ],
+          "median_commanded_bead_width_mm": 1.0182
+        },
+        {
+          "print_layer_Z_mm": 5.7,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.0169,
+            2.02539
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.53714,
+            1.491
+          ],
+          "median_commanded_bead_width_mm": 1.0182
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -14.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.52647,
+            1.49582
+          ],
+          "median_commanded_bead_width_mm": 1.0358
+        },
+        {
+          "print_layer_Z_mm": 6.0,
+          "native_Z_mm": -10.0,
+          "wall_Y_interval_mm": [
+            0.00188,
+            2.00281
+          ],
+          "distinct_track_count": 2,
+          "track_centers_Y_mm": [
+            0.52621,
+            1.49574
+          ],
+          "median_commanded_bead_width_mm": 1.0358
+        }
+      ],
+      "before_zero_track_probes": 0,
+      "STL_path": "modular/left-cap.stl",
+      "STL_sha256": "f93ba486a4c92bdf2b94c28756445b8c7dec21aa1cb28638e57d82f7c6d2e723",
+      "Gcode_sha256": "ba00c3ed81f71bee3f8afba144450920adf3dc997ca28b7883d4dd65c72b921f"
+    }
+  ],
+  "limits": "Commanded toolpaths verify that the slicer retains wall material; they do not prove physical extrusion, bonding or calibrated dimensions.",
+  "toolpath_comparison_image": "upper-corner-toolpaths.png",
+  "toolpath_comparison_sha256": "edf103737e6dd7414494eeee6ccb5116d038cbc15eeb066d670a264b042e6794"
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "notice_source": "esptool-js@0.6.0",
+    "tarball": "https://registry.npmjs.org/esptool-js/-/esptool-js-0.6.0.tgz",
+    "sha256": "57323d793c453756569519be2a67e435b52fceae1b2c81b0a3dac414ee9a3859",
+    "files": [
+      "package/LICENSE"
+    ]
+  },
+  {
+    "notice_source": "improv-wifi-serial-sdk@2.8.0",
+    "tarball": "https://registry.npmjs.org/improv-wifi-serial-sdk/-/improv-wifi-serial-sdk-2.8.0.tgz",
+    "sha256": "eec6ba0f688f6491ff902b19a86a37a667382da43964c2c03053c5526d4fc4d6",
+    "files": [
+      "package/LICENSE"
+    ]
+  },
+  {
+    "notice_source": "@material/web@2.4.1",
+    "tarball": "https://registry.npmjs.org/@material/web/-/web-2.4.1.tgz",
+    "sha256": "d8884e51e4629ee055473aa470b27c80753a85e0292706ae3189e109992fc3e8",
+    "files": [
+      "package/LICENSE"
+    ]
+  },
+  {
+    "notice_source": "lit@3.2.1",
+    "tarball": "https://registry.npmjs.org/lit/-/lit-3.2.1.tgz",
+    "sha256": "84b8b4966cd9a30e8cc2eccc9f0dff2b775fd722a17615c60774dcbe773ac23e",
+    "files": [
+      "package/LICENSE"
+    ]
+  },
+  {
+    "notice_source": "lit-html@3.2.0",
+    "tarball": "https://registry.npmjs.org/lit-html/-/lit-html-3.2.0.tgz",
+    "sha256": "fc184499d517539661830089e76cff8ba81b60b50aec587526354dc4fc792732",
+    "files": [
+      "package/LICENSE"
+    ]
+  },
+  {
+    "notice_source": "lit-element@4.1.0",
+    "tarball": "https://registry.npmjs.org/lit-element/-/lit-element-4.1.0.tgz",
+    "sha256": "f995fa25de6ffcaa8cff25194d0b6119f907b99b46f3897c26198e20862c7b03",
+    "files": [
+      "package/LICENSE"
+    ]
+  },
+  {
+    "notice_source": "@lit/reactive-element@2.0.4",
+    "tarball": "https://registry.npmjs.org/@lit/reactive-element/-/reactive-element-2.0.4.tgz",
+    "sha256": "2a6262e93a2b88ad11a690ea43068a8d50d1148110908f4d6bd78ec2ac995fa2",
+    "files": [
+      "package/LICENSE"
+    ]
+  },
+  {
+    "notice_source": "tslib@2.8.1",
+    "tarball": "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz",
+    "sha256": "66f635d5eeabae44807534976913a102cf615b9a045368359c9f79ae6ee2119e",
+    "files": [
+      "package/CopyrightNotice.txt",
+      "package/LICENSE.txt"
+    ]
+  },
+  {
+    "notice_source": "pako@2.1.0",
+    "tarball": "https://registry.npmjs.org/pako/-/pako-2.1.0.tgz",
+    "sha256": "49fedc8866b4abfc8e71dc7fe75ad4ef1ff1ac9601b0642cff88ee5bf2338709",
+    "files": [
+      "package/LICENSE"
+    ]
+  },
+  {
+    "notice_source": "atob-lite@2.0.0",
+    "tarball": "https://registry.npmjs.org/atob-lite/-/atob-lite-2.0.0.tgz",
+    "sha256": "c4b3fb3c6d9bf906c7dce92c6306951a01ebe09ded5a871bf2e0b326443abc5a",
+    "files": [
+      "package/LICENSE.md"
+    ]
+  }
+]

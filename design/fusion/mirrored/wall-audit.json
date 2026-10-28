@@ -1,0 +1,193 @@
+{
+  "revision": "logical_left_electronics",
+  "method": "BVH inward normal wall chords of actual mirrored STL triangles; reviewed feature classes mapped through the reflection into source coordinates",
+  "threshold_mm": 1.8,
+  "parts": [
+    {
+      "part": "main/shell-left",
+      "source_feature_frame": "print/shell-right",
+      "STL_sha256": "24b88aab44e5eb655139910f6a13107ac39993bbd28e1d6fe6d72d8fa5eea03f",
+      "surface_samples": 149724,
+      "miss_count": 0,
+      "thin_sample_count": 5710,
+      "reviewed_features": {
+        "Intentional 0.6mm raised icon wall; full 3mm roof backing verified in native CAD": 861,
+        "Intentional 0.8mm optional LED breakaway cover": 470,
+        "LCD opening bevel or fixed 1.5mm seating ledge": 586,
+        "USB pocket: open lead-in bevel or retained 1.6mm partition": 2089,
+        "Recessed glyph side/edge backed by exact-checked 2.2mm roof": 167,
+        "Intentional 0.6mm rear vent breakaway film/edge": 1004,
+        "Mating drop-down joint ramp/runout, protected assembly interface": 45,
+        "Internal boss-to-wall fillet tangent, backed by stock 2mm wall": 20,
+        "Internal LED seat/taper at intact roof or cover": 52,
+        "Intentional TRS bore mouth chamfer in reinforced 3mm wall": 416
+      },
+      "unresolved": [],
+      "raw": "/tmp/midi-mirror-wall-main-shell-left.json"
+    },
+    {
+      "part": "main/shell-right",
+      "source_feature_frame": "print/shell-left",
+      "STL_sha256": "0de000e91a20590fedbe70e9a637943153aa9519386d60f4d960a6ad5aa39473",
+      "surface_samples": 144222,
+      "miss_count": 0,
+      "thin_sample_count": 7206,
+      "reviewed_features": {
+        "Recessed glyph side/edge backed by exact-checked 2.2mm roof": 442,
+        "Intentional 0.8mm optional LED breakaway cover": 725,
+        "Mating drop-down joint ramp/runout, protected assembly interface": 5952,
+        "Internal LED seat/taper at intact roof or cover": 36,
+        "Internal boss-to-wall fillet tangent, backed by stock 2mm wall": 51
+      },
+      "unresolved": [],
+      "raw": "/tmp/midi-mirror-wall-main-shell-right.json"
+    },
+    {
+      "part": "main/base-left",
+      "source_feature_frame": "print/base-right",
+      "STL_sha256": "e972b1235624b506d91779d3761654e19997fea88828e6d9525e3c7f0b453d0d",
+      "surface_samples": 60549,
+      "miss_count": 0,
+      "thin_sample_count": 4480,
+      "reviewed_features": {
+        "1.8mm locating rib or 0.5mm lead-in; actual toolpaths verified": 780,
+        "Countersink edge in 2mm floor, retained screw opening": 398,
+        "Boss clearance terminates locating rib; floor backing retained": 25,
+        "Open Pololu fixture: specified spring/hook/edge-seat geometry": 333,
+        "45-degree glue land runout backed by 2mm floor": 352,
+        "1.725mm MCU post wall, two-track slice required": 2592
+      },
+      "unresolved": [],
+      "raw": "/tmp/midi-mirror-wall-main-base-left.json"
+    },
+    {
+      "part": "main/base-right",
+      "source_feature_frame": "print/base-left",
+      "STL_sha256": "de6899386e40d1d327e5108e464fbeace331325b4daedc696852edf0c32d164c",
+      "surface_samples": 45969,
+      "miss_count": 0,
+      "thin_sample_count": 1134,
+      "reviewed_features": {
+        "Countersink edge in 2mm floor, retained screw opening": 358,
+        "1.8mm locating rib or 0.5mm lead-in; actual toolpaths verified": 400,
+        "45-degree glue land runout backed by 2mm floor": 352,
+        "Sub-micron raised remnant backed by intact 2mm floor": 24
+      },
+      "unresolved": [],
+      "raw": "/tmp/midi-mirror-wall-main-base-right.json"
+    },
+    {
+      "part": "modular/pair-shell-C",
+      "source_feature_frame": "modular/pair-shell",
+      "STL_sha256": "ea3fbd3490c7e0dcf952eba1a8d19214e84bb589a1c0b1f64f967d9ab6afb61a",
+      "surface_samples": 87121,
+      "miss_count": 0,
+      "thin_sample_count": 6724,
+      "reviewed_features": {
+        "Recessed glyph side/edge backed by exact-checked 2.2mm roof": 462,
+        "Mating drop-down joint ramp/runout, protected assembly interface": 6014,
+        "Internal LED seat/taper at intact roof or cover": 12,
+        "Intentional 0.8mm optional LED breakaway cover": 236
+      },
+      "unresolved": [],
+      "raw": "/tmp/midi-mirror-wall-modular-pair-shell-C.json"
+    },
+    {
+      "part": "modular/pair-shell-D",
+      "source_feature_frame": "modular/pair-shell-D",
+      "STL_sha256": "075941bce1a61e27fcac105809abf3527e3404d55921ac6dc9de45b24bc2875d",
+      "surface_samples": 79397,
+      "miss_count": 0,
+      "thin_sample_count": 6280,
+      "reviewed_features": {
+        "Recessed glyph side/edge backed by exact-checked 2.2mm roof": 24,
+        "Intentional 0.8mm optional LED breakaway cover": 232,
+        "Internal LED seat/taper at intact roof or cover": 12,
+        "Mating drop-down joint ramp/runout, protected assembly interface": 6012
+      },
+      "unresolved": [],
+      "raw": "/tmp/midi-mirror-wall-modular-pair-shell-D.json"
+    },
+    {
+      "part": "modular/pair-shell-at-right-cap-D",
+      "source_feature_frame": "modular/pair-shell-at-cap",
+      "STL_sha256": "27d43df4f6e9ca68f72dde72eff853e325a81928a63863c6a301d21c52874675",
+      "surface_samples": 75097,
+      "miss_count": 0,
+      "thin_sample_count": 6296,
+      "reviewed_features": {
+        "Recessed glyph side/edge backed by exact-checked 2.2mm roof": 24,
+        "Intentional 0.8mm optional LED breakaway cover": 232,
+        "Mating drop-down joint ramp/runout, protected assembly interface": 6028,
+        "Internal LED seat/taper at intact roof or cover": 12
+      },
+      "unresolved": [],
+      "raw": "/tmp/midi-mirror-wall-modular-pair-shell-at-right-cap-D.json"
+    },
+    {
+      "part": "modular/pair-shell-at-right-cap-C",
+      "source_feature_frame": "modular/pair-shell-at-cap-C",
+      "STL_sha256": "1df8eea02193affab05afb27f1500a85192ff0d370a60d55eadd59deddc8fec0",
+      "surface_samples": 82821,
+      "miss_count": 0,
+      "thin_sample_count": 6740,
+      "reviewed_features": {
+        "Recessed glyph side/edge backed by exact-checked 2.2mm roof": 462,
+        "Mating drop-down joint ramp/runout, protected assembly interface": 6030,
+        "Internal LED seat/taper at intact roof or cover": 12,
+        "Intentional 0.8mm optional LED breakaway cover": 236
+      },
+      "unresolved": [],
+      "raw": "/tmp/midi-mirror-wall-modular-pair-shell-at-right-cap-C.json"
+    },
+    {
+      "part": "modular/pair-shell-at-right-cap-E",
+      "source_feature_frame": "modular/pair-shell-at-cap-E",
+      "STL_sha256": "580fc4814d7b32c7cb9edad4f7dd645e1f3c52b0fe385fa0f915c21e99883b16",
+      "surface_samples": 77359,
+      "miss_count": 0,
+      "thin_sample_count": 6491,
+      "reviewed_features": {
+        "Recessed glyph side/edge backed by exact-checked 2.2mm roof": 218,
+        "Mating drop-down joint ramp/runout, protected assembly interface": 6028,
+        "Internal LED seat/taper at intact roof or cover": 12,
+        "Intentional 0.8mm optional LED breakaway cover": 233
+      },
+      "unresolved": [],
+      "raw": "/tmp/midi-mirror-wall-modular-pair-shell-at-right-cap-E.json"
+    },
+    {
+      "part": "modular/pair-base",
+      "source_feature_frame": "modular/pair-base",
+      "STL_sha256": "a672a95f81a6300d5fd3afaf5f7233e75746d70730ed1935224f8dd0fddbcee7",
+      "surface_samples": 16529,
+      "miss_count": 0,
+      "thin_sample_count": 1054,
+      "reviewed_features": {
+        "1.8mm locating rib or 0.5mm lead-in; actual toolpaths verified": 196,
+        "Countersink edge in 2mm floor, retained screw opening": 154,
+        "45-degree glue land runout backed by 2mm floor": 704
+      },
+      "unresolved": [],
+      "raw": "/tmp/midi-mirror-wall-modular-pair-base.json"
+    },
+    {
+      "part": "modular/right-cap",
+      "source_feature_frame": "modular/left-cap",
+      "STL_sha256": "bf21e5a9187ae5ccbed48af202b0df57fc700499d8e4e38c9f995c5d70bae00c",
+      "surface_samples": 25646,
+      "miss_count": 0,
+      "thin_sample_count": 6353,
+      "reviewed_features": {
+        "Mating drop-down joint ramp/runout, protected assembly interface": 6353
+      },
+      "unresolved": [],
+      "raw": "/tmp/midi-mirror-wall-modular-right-cap.json"
+    }
+  ],
+  "unique_parts": 11,
+  "surface_samples": 844434,
+  "miss_count": 0,
+  "unresolved_samples": 0,
+  "limits": "Finite normal-chord samples, not an exhaustive medial-axis minimum or a physical print test. Optional LED covers, rear films, lead-ins, glyph walls, USB/LCD seats and flexible clips retain their documented exceptions. No global 1.8mm minimum is claimed."
+}

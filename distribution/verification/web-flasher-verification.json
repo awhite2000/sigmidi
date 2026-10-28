@@ -1,0 +1,14 @@
+{
+  "version": "0.1",
+  "firmware_build": "ESP32-C6 PlatformIO espressif32 6.9.0 / ESP-IDF 5.3.1 success",
+  "host_firmware_tests": "all passed",
+  "release_JavaScript_cases": 19,
+  "artifact_Python_tests": 6,
+  "ZIP_files_verified": 43,
+  "all_browser_imports_local": true,
+  "browser_page_ready": true,
+  "hardware_flash_tested": false,
+  "verified_UTC": "2026-10-28T16:21:38.817529+00:00",
+  "project": "SIGMIDI Foot Controller",
+  "render_asset_verified": true
+}

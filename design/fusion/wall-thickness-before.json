@@ -1,0 +1,193 @@
+{
+  "method": "Inward normal first-exit ray tracing of closed oriented meshes. BVH, 0.002mm inward offset; area-scaled triangle interior samples, maximum 0.5mm2 nominal sampling area. Measurements at bevel tips and mating ramps are not sheet-wall minima.",
+  "parts": [
+    {
+      "part": "print/shell-left",
+      "sample_count": 140144,
+      "miss_count": 0,
+      "thin_count": 5871,
+      "sampled_surface_area_mm2": 80430.48,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        124.4053,
+        316.9702,
+        288.5841,
+        153.0793,
+        69.05439,
+        5434.492,
+        74043.9
+      ],
+      "STL_sha256_before": "183c64d946575a87cc9a92c52994e030ac427bd806d19b70e922a270a5db2f4e"
+    },
+    {
+      "part": "print/shell-right",
+      "sample_count": 147883,
+      "miss_count": 0,
+      "thin_count": 5293,
+      "sampled_surface_area_mm2": 66620.78,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        46.92575,
+        1046.049,
+        65.68422,
+        273.1777,
+        73.88957,
+        3039.741,
+        62075.31
+      ],
+      "STL_sha256_before": "4a349f4a99f7f8ec4658b52f61577211aae5ec7b63b272662145f92a0c429f91"
+    },
+    {
+      "part": "print/base-left",
+      "sample_count": 46166,
+      "miss_count": 0,
+      "thin_count": 695,
+      "sampled_surface_area_mm2": 39301.44,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        68.28251,
+        74.18453,
+        70.32421,
+        70.31056,
+        52.92625,
+        14876.98,
+        24088.43
+      ],
+      "STL_sha256_before": "12823edce000466111444f9bdb7fc5f0ec114711c3169a3351fb2d5b0db019bd"
+    },
+    {
+      "part": "print/base-right",
+      "sample_count": 60475,
+      "miss_count": 0,
+      "thin_count": 3694,
+      "sampled_surface_area_mm2": 36746.69,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        70.35005,
+        77.46072,
+        92.96509,
+        169.3731,
+        726.4062,
+        5212.656,
+        30397.48
+      ],
+      "STL_sha256_before": "267019f30fb29b56451140b0121b7a7a4ef746cc282492e48a1e5405704be6c2"
+    },
+    {
+      "part": "modular/pair-shell",
+      "sample_count": 84717,
+      "miss_count": 0,
+      "thin_count": 5173,
+      "sampled_surface_area_mm2": 29258.33,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        128.0085,
+        259.8866,
+        144.1065,
+        137.0045,
+        64.70699,
+        796.1044,
+        27728.52
+      ],
+      "STL_sha256_before": "65f1bb8f1acd657fcfdd380aff349d2293bc760bd1d91dd8ad7c4fae09d129c0"
+    },
+    {
+      "part": "modular/pair-shell-at-cap",
+      "sample_count": 72257,
+      "miss_count": 0,
+      "thin_count": 4749,
+      "sampled_surface_area_mm2": 29071.45,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        129.0761,
+        264.1653,
+        145.1055,
+        138.4846,
+        63.36567,
+        812.1467,
+        27519.11
+      ],
+      "STL_sha256_before": "32351894d16c9c6ba93825808a3ae2e796a9bc583be621d67e2c438c638beeaa"
+    },
+    {
+      "part": "modular/pair-base",
+      "sample_count": 16523,
+      "miss_count": 0,
+      "thin_count": 856,
+      "sampled_surface_area_mm2": 13756.21,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        136.559,
+        148.3691,
+        140.6484,
+        128.2618,
+        69.56607,
+        788.4809,
+        12344.33
+      ],
+      "STL_sha256_before": "ac56a8967b7c43ec21e5ede83e1c33939641a46037e8ce1dc060ef16fd742d61"
+    },
+    {
+      "part": "modular/left-cap",
+      "sample_count": 22644,
+      "miss_count": 0,
+      "thin_count": 4745,
+      "sampled_surface_area_mm2": 10879.16,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        121.8498,
+        147.1775,
+        141.8431,
+        141.1372,
+        169.3495,
+        3078.491,
+        7079.313
+      ],
+      "STL_sha256_before": "da40d0590a61ec99c30e53ffff4aac322c32dca0442160062079dd88a78cc8db"
+    },
+    {
+      "part": "modular/pair-shell-D",
+      "sample_count": 76980,
+      "miss_count": 0,
+      "thin_count": 4738,
+      "sampled_surface_area_mm2": 29262.06,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        129.0735,
+        264.1627,
+        145.1063,
+        138.4808,
+        63.36567,
+        794.2737,
+        27727.6
+      ],
+      "STL_sha256_before": "c1685b76bc1dae24148336370d06955e286482a24b13b9b031ee2668d4db948a"
+    },
+    {
+      "part": "modular/pair-shell-at-cap-C",
+      "sample_count": 79994,
+      "miss_count": 0,
+      "thin_count": 5184,
+      "sampled_surface_area_mm2": 29067.73,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        128.011,
+        259.8892,
+        144.1057,
+        137.0083,
+        64.70699,
+        813.9774,
+        27520.03
+      ],
+      "STL_sha256_before": "e42c3ad206605e57802159bfac0c186ff8ba0c1405d745b6f145f47b76740787"
+    },
+    {
+      "part": "modular/pair-shell-at-cap-E",
+      "sample_count": 74537,
+      "miss_count": 0,
+      "thin_count": 4942,
+      "sampled_surface_area_mm2": 29077.02,
+      "area_bins_lt_0_4_0_8_1_2_1_6_1_8_2_rest_mm2": [
+        128.0665,
+        264.26,
+        146.3193,
+        139.3536,
+        71.21923,
+        811.9025,
+        27515.9
+      ],
+      "STL_sha256_before": "c37f26aeb918b2763b103dba43689e689c11dec849841c6882858767da8adda8"
+    }
+  ],
+  "total_samples": 822320
+}

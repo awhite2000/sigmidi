@@ -1,0 +1,13 @@
+.DS_Store
+.pio/
+.pio-core/
+build/
+sdkconfig
+sdkconfig.*.old
+sdkconfig.firebeetle2_c6
+__pycache__/
+tmp/
+
+.pytest_cache/
+*.py[cod]
+distribution/web-flasher-*/

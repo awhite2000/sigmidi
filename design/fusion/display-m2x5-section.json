@@ -1,0 +1,11 @@
+{
+  "revision": "display_m2x5",
+  "image": "display-m2x5-section.png",
+  "image_sha256": "e131f8bcfc2c77204f2d5a0cb8e105503daf6364e426e03b1943aeca61b7af81",
+  "STL_sha256": "1dc6645060bb782717b787fff949e1304608ec68ba54b0258a9ced1b3a448cd2",
+  "section_XY_mm": [
+    291.50219,
+    49.83447
+  ],
+  "source": "Exact STL triangle intersections; nominal screw and factory stud envelope overlaid for explanation, no rendered thread detail."
+}

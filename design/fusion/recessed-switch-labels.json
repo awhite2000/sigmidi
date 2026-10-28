@@ -1,0 +1,735 @@
+{
+  "revision": "recessed_switch_labels",
+  "font_family": "Arial",
+  "text_style": "Bold",
+  "actual_outline_height_mm": 8,
+  "inset_depth_mm": 0.8,
+  "minimum_remaining_top_mm": 2.2,
+  "label_side": "right of LED; left glyph edge 6mm right of LED center",
+  "minimum_LED_flange_clearance_X_mm": 3,
+  "main_labels_upper_left_to_right": [
+    "E",
+    "D",
+    "C",
+    "B",
+    "A"
+  ],
+  "main_labels_lower_left_to_right": [
+    "5",
+    "4",
+    "3",
+    "2",
+    "1"
+  ],
+  "glyphs": [
+    {
+      "label": "A",
+      "font_family": "Arial",
+      "bold": true,
+      "outline_height_mm": 7.999999523162842,
+      "outline_width_mm": 8.027284741401672,
+      "profile_loops": 2
+    },
+    {
+      "label": "B",
+      "font_family": "Arial",
+      "bold": true,
+      "outline_height_mm": 7.999999523162842,
+      "outline_width_mm": 6.7012277245521545,
+      "profile_loops": 3
+    },
+    {
+      "label": "C",
+      "font_family": "Arial",
+      "bold": true,
+      "outline_height_mm": 8.0,
+      "outline_width_mm": 6.738787092367615,
+      "profile_loops": 1
+    },
+    {
+      "label": "D",
+      "font_family": "Arial",
+      "bold": true,
+      "outline_height_mm": 7.999999523162842,
+      "outline_width_mm": 6.706684976816177,
+      "profile_loops": 2
+    },
+    {
+      "label": "E",
+      "font_family": "Arial",
+      "bold": true,
+      "outline_height_mm": 7.999999523162842,
+      "outline_width_mm": 6.0845839232206345,
+      "profile_loops": 1
+    },
+    {
+      "label": "1",
+      "font_family": "Arial",
+      "bold": true,
+      "outline_height_mm": 8.0,
+      "outline_width_mm": 3.5000002968084782,
+      "profile_loops": 1
+    },
+    {
+      "label": "2",
+      "font_family": "Arial",
+      "bold": true,
+      "outline_height_mm": 8.0,
+      "outline_width_mm": 5.353260930862621,
+      "profile_loops": 1
+    },
+    {
+      "label": "3",
+      "font_family": "Arial",
+      "bold": true,
+      "outline_height_mm": 8.0,
+      "outline_width_mm": 5.205076681131812,
+      "profile_loops": 1
+    },
+    {
+      "label": "4",
+      "font_family": "Arial",
+      "bold": true,
+      "outline_height_mm": 8.0,
+      "outline_width_mm": 5.72826111636792,
+      "profile_loops": 2
+    },
+    {
+      "label": "5",
+      "font_family": "Arial",
+      "bold": true,
+      "outline_height_mm": 7.999999999999999,
+      "outline_width_mm": 5.362339343435049,
+      "profile_loops": 1
+    }
+  ],
+  "placements": [
+    {
+      "part": "main left",
+      "label": "E",
+      "LED_center_XY_mm": [
+        47.4,
+        26.2
+      ],
+      "glyph_left_X_mm": 53.4,
+      "glyph_bounds_layout_mm": [
+        [
+          53.4,
+          22.200000238418582,
+          29.2
+        ],
+        [
+          59.48458392322063,
+          30.199999761581424,
+          30.0
+        ]
+      ],
+      "roof_Z_mm": 30,
+      "pocket_bottom_Z_mm": 29.2,
+      "removed_volume_mm3": 24.161335683443543,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "main left",
+      "label": "D",
+      "LED_center_XY_mm": [
+        112.4,
+        26.2
+      ],
+      "glyph_left_X_mm": 118.4,
+      "glyph_bounds_layout_mm": [
+        [
+          118.4,
+          22.200000238418582,
+          29.2
+        ],
+        [
+          125.10668497681618,
+          30.199999761581424,
+          30.0
+        ]
+      ],
+      "roof_Z_mm": 30,
+      "pocket_bottom_Z_mm": 29.2,
+      "removed_volume_mm3": 25.770144905269827,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "main left",
+      "label": "C",
+      "LED_center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "glyph_left_X_mm": 183.4,
+      "glyph_bounds_layout_mm": [
+        [
+          183.4,
+          22.200000000000003,
+          29.2
+        ],
+        [
+          190.1387870923676,
+          30.2,
+          30.0
+        ]
+      ],
+      "roof_Z_mm": 30,
+      "pocket_bottom_Z_mm": 29.2,
+      "removed_volume_mm3": 19.472596677034307,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "main left",
+      "label": "5",
+      "LED_center_XY_mm": [
+        14.9,
+        81.7
+      ],
+      "glyph_left_X_mm": 20.9,
+      "glyph_bounds_layout_mm": [
+        [
+          20.9,
+          77.69999999999999,
+          -0.8
+        ],
+        [
+          26.26233934343505,
+          85.7,
+          0.0
+        ]
+      ],
+      "roof_Z_mm": 0,
+      "pocket_bottom_Z_mm": -0.8,
+      "removed_volume_mm3": 19.24524012203621,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "main left",
+      "label": "4",
+      "LED_center_XY_mm": [
+        79.9,
+        81.7
+      ],
+      "glyph_left_X_mm": 85.9,
+      "glyph_bounds_layout_mm": [
+        [
+          85.9,
+          77.69999999999999,
+          -0.8
+        ],
+        [
+          91.62826111636791,
+          85.7,
+          1.3877787807814457e-16
+        ]
+      ],
+      "roof_Z_mm": 0,
+      "pocket_bottom_Z_mm": -0.8,
+      "removed_volume_mm3": 18.219787440531864,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "main left",
+      "label": "3",
+      "LED_center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "glyph_left_X_mm": 150.9,
+      "glyph_bounds_layout_mm": [
+        [
+          150.9,
+          77.69999999999999,
+          -0.8
+        ],
+        [
+          156.1050766811318,
+          85.7,
+          0.0
+        ]
+      ],
+      "roof_Z_mm": 0,
+      "pocket_bottom_Z_mm": -0.8,
+      "removed_volume_mm3": 16.60619546849498,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "main/right electronics",
+      "label": "B",
+      "LED_center_XY_mm": [
+        242.4,
+        26.2
+      ],
+      "glyph_left_X_mm": 248.4,
+      "glyph_bounds_layout_mm": [
+        [
+          248.4,
+          22.200000238418582,
+          29.2
+        ],
+        [
+          255.10122772455216,
+          30.199999761581424,
+          30.0
+        ]
+      ],
+      "roof_Z_mm": 30,
+      "pocket_bottom_Z_mm": 29.2,
+      "removed_volume_mm3": 29.219293708796066,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "main/right electronics",
+      "label": "A",
+      "LED_center_XY_mm": [
+        307.4,
+        26.2
+      ],
+      "glyph_left_X_mm": 313.4,
+      "glyph_bounds_layout_mm": [
+        [
+          313.4,
+          22.200000238418582,
+          29.2
+        ],
+        [
+          321.42728474140165,
+          30.199999761581424,
+          30.0
+        ]
+      ],
+      "roof_Z_mm": 30,
+      "pocket_bottom_Z_mm": 29.2,
+      "removed_volume_mm3": 22.92457582325401,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "main/right electronics",
+      "label": "2",
+      "LED_center_XY_mm": [
+        209.9,
+        81.7
+      ],
+      "glyph_left_X_mm": 215.9,
+      "glyph_bounds_layout_mm": [
+        [
+          215.9,
+          77.69999999999999,
+          -0.8
+        ],
+        [
+          221.2532609308626,
+          85.7,
+          1.3877787807814457e-16
+        ]
+      ],
+      "roof_Z_mm": 0,
+      "pocket_bottom_Z_mm": -0.8,
+      "removed_volume_mm3": 18.63832493929846,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "main/right electronics",
+      "label": "1",
+      "LED_center_XY_mm": [
+        274.9,
+        81.7
+      ],
+      "glyph_left_X_mm": 280.9,
+      "glyph_bounds_layout_mm": [
+        [
+          280.9,
+          77.69999999999999,
+          -0.8
+        ],
+        [
+          284.40000029680846,
+          85.7,
+          1.3877787807814457e-16
+        ]
+      ],
+      "roof_Z_mm": 0,
+      "pocket_bottom_Z_mm": -0.8,
+      "removed_volume_mm3": 12.032640543865346,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "pair-shell C3",
+      "label": "C",
+      "LED_center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "glyph_left_X_mm": 183.4,
+      "glyph_bounds_layout_mm": [
+        [
+          183.4,
+          22.200000000000003,
+          29.2
+        ],
+        [
+          190.1387870923676,
+          30.2,
+          30.0
+        ]
+      ],
+      "roof_Z_mm": 30,
+      "pocket_bottom_Z_mm": 29.2,
+      "removed_volume_mm3": 19.472596677034307,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "pair-shell C3",
+      "label": "3",
+      "LED_center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "glyph_left_X_mm": 150.9,
+      "glyph_bounds_layout_mm": [
+        [
+          150.9,
+          77.69999999999999,
+          -0.8
+        ],
+        [
+          156.1050766811318,
+          85.7,
+          0.0
+        ]
+      ],
+      "roof_Z_mm": 0,
+      "pocket_bottom_Z_mm": -0.8,
+      "removed_volume_mm3": 16.60619546849498,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "pair-shell-at-cap D4",
+      "label": "D",
+      "LED_center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "glyph_left_X_mm": 183.4,
+      "glyph_bounds_layout_mm": [
+        [
+          183.4,
+          22.200000238418582,
+          29.2
+        ],
+        [
+          190.10668497681618,
+          30.199999761581424,
+          30.0
+        ]
+      ],
+      "roof_Z_mm": 30,
+      "pocket_bottom_Z_mm": 29.2,
+      "removed_volume_mm3": 25.770144905269216,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "pair-shell-at-cap D4",
+      "label": "4",
+      "LED_center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "glyph_left_X_mm": 150.9,
+      "glyph_bounds_layout_mm": [
+        [
+          150.9,
+          77.69999999999999,
+          -0.8
+        ],
+        [
+          156.62826111636792,
+          85.7,
+          1.3877787807814457e-16
+        ]
+      ],
+      "roof_Z_mm": 0,
+      "pocket_bottom_Z_mm": -0.8,
+      "removed_volume_mm3": 18.219787440532333,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "pair-shell D4",
+      "label": "D",
+      "LED_center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "glyph_left_X_mm": 183.4,
+      "glyph_bounds_layout_mm": [
+        [
+          183.4,
+          22.200000238418582,
+          29.2
+        ],
+        [
+          190.10668497681618,
+          30.199999761581424,
+          30.0
+        ]
+      ],
+      "roof_Z_mm": 30,
+      "pocket_bottom_Z_mm": 29.2,
+      "removed_volume_mm3": 25.770144905269216,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "pair-shell D4",
+      "label": "4",
+      "LED_center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "glyph_left_X_mm": 150.9,
+      "glyph_bounds_layout_mm": [
+        [
+          150.9,
+          77.69999999999999,
+          -0.8
+        ],
+        [
+          156.62826111636792,
+          85.7,
+          1.3877787807814457e-16
+        ]
+      ],
+      "roof_Z_mm": 0,
+      "pocket_bottom_Z_mm": -0.8,
+      "removed_volume_mm3": 18.219787440532333,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "pair-shell-at-cap C3",
+      "label": "C",
+      "LED_center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "glyph_left_X_mm": 183.4,
+      "glyph_bounds_layout_mm": [
+        [
+          183.4,
+          22.200000000000003,
+          29.2
+        ],
+        [
+          190.1387870923676,
+          30.2,
+          30.0
+        ]
+      ],
+      "roof_Z_mm": 30,
+      "pocket_bottom_Z_mm": 29.2,
+      "removed_volume_mm3": 19.472596677034307,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "pair-shell-at-cap C3",
+      "label": "3",
+      "LED_center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "glyph_left_X_mm": 150.9,
+      "glyph_bounds_layout_mm": [
+        [
+          150.9,
+          77.69999999999999,
+          -0.8
+        ],
+        [
+          156.1050766811318,
+          85.7,
+          0.0
+        ]
+      ],
+      "roof_Z_mm": 0,
+      "pocket_bottom_Z_mm": -0.8,
+      "removed_volume_mm3": 16.60619546849498,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "pair-shell-at-cap E5",
+      "label": "E",
+      "LED_center_XY_mm": [
+        177.4,
+        26.2
+      ],
+      "glyph_left_X_mm": 183.4,
+      "glyph_bounds_layout_mm": [
+        [
+          183.4,
+          22.200000238418582,
+          29.2
+        ],
+        [
+          189.48458392322064,
+          30.199999761581424,
+          30.0
+        ]
+      ],
+      "roof_Z_mm": 30,
+      "pocket_bottom_Z_mm": 29.2,
+      "removed_volume_mm3": 24.161335683443543,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    },
+    {
+      "part": "pair-shell-at-cap E5",
+      "label": "5",
+      "LED_center_XY_mm": [
+        144.9,
+        81.7
+      ],
+      "glyph_left_X_mm": 150.9,
+      "glyph_bounds_layout_mm": [
+        [
+          150.9,
+          77.69999999999999,
+          -0.8
+        ],
+        [
+          156.26233934343506,
+          85.7,
+          0.0
+        ]
+      ],
+      "roof_Z_mm": 0,
+      "pocket_bottom_Z_mm": -0.8,
+      "removed_volume_mm3": 19.24524012203619,
+      "minimum_remaining_roof_mm": 2.2,
+      "flange_clearance_X_mm": 3.0
+    }
+  ],
+  "parts": [
+    {
+      "part": "main left",
+      "solid": true,
+      "lumps": 1,
+      "removed_volume_mm3": 123.47530029681073,
+      "labels": [
+        "E",
+        "D",
+        "C",
+        "5",
+        "4",
+        "3"
+      ]
+    },
+    {
+      "part": "main/right electronics",
+      "solid": true,
+      "lumps": 1,
+      "removed_volume_mm3": 82.81483501521387,
+      "labels": [
+        "B",
+        "A",
+        "2",
+        "1"
+      ]
+    },
+    {
+      "part": "pair-shell C3",
+      "solid": true,
+      "lumps": 1,
+      "removed_volume_mm3": 36.07879214552929,
+      "labels": [
+        "C",
+        "3"
+      ]
+    },
+    {
+      "part": "pair-shell-at-cap D4",
+      "solid": true,
+      "lumps": 1,
+      "removed_volume_mm3": 43.98993234580155,
+      "labels": [
+        "D",
+        "4"
+      ]
+    },
+    {
+      "part": "pair-shell D4",
+      "solid": true,
+      "lumps": 1,
+      "removed_volume_mm3": 43.98993234580155,
+      "labels": [
+        "D",
+        "4"
+      ]
+    },
+    {
+      "part": "pair-shell-at-cap C3",
+      "solid": true,
+      "lumps": 1,
+      "removed_volume_mm3": 36.07879214552929,
+      "labels": [
+        "C",
+        "3"
+      ]
+    },
+    {
+      "part": "pair-shell-at-cap E5",
+      "solid": true,
+      "lumps": 1,
+      "removed_volume_mm3": 43.40657580547973,
+      "labels": [
+        "E",
+        "5"
+      ]
+    }
+  ],
+  "additional_modular_variants": [
+    {
+      "file": "pair-shell-D",
+      "component": "pair-shell-D",
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "file": "pair-shell-at-cap-C",
+      "component": "pair-shell-at-cap-C",
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "file": "pair-shell-at-cap-E",
+      "component": "pair-shell-at-cap-E",
+      "solid": true,
+      "lumps": 1
+    }
+  ],
+  "all_changed_shells_single_connected_solids": true,
+  "all_glyphs_wholly_in_flat_roof": true,
+  "all_pockets_backed_by_2_2mm_roof": true,
+  "main_and_modular_right_identical": true,
+  "seam_and_joint_material_removed_mm3": 0,
+  "all_other_components_and_base_parts_unchanged": true,
+  "component_positions_unchanged": true,
+  "backup": "archive/pre-recessed-switch-labels.zip",
+  "limits": "Nominal CAD roof thickness and slicing do not establish printed load strength; the recessed text follows the existing printing orientations."
+}

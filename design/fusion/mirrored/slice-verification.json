@@ -1,0 +1,189 @@
+{
+  "revision": "logical_left_electronics",
+  "slicer": "PrusaSlicer",
+  "printer": "Prusa MK3S+",
+  "nozzle_mm": 0.6,
+  "layer_mm": 0.3,
+  "material": "PETG",
+  "parts": [
+    {
+      "part": "main/shell-left",
+      "STL_sha256": "24b88aab44e5eb655139910f6a13107ac39993bbd28e1d6fe6d72d8fa5eea03f",
+      "gcode_sha256": "22c4cda77237f5bd2b3dd4a8703d226afaa7fda2bf0a2eda7e9e39db0c09ff4e",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "6h 24m 39s",
+      "filament_g": "113.63",
+      "support_extrusion_filament_mm": 3285.35
+    },
+    {
+      "part": "main/shell-right",
+      "STL_sha256": "0de000e91a20590fedbe70e9a637943153aa9519386d60f4d960a6ad5aa39473",
+      "gcode_sha256": "a3cb4bb2a4b6f90b5d351dcc044ac0f7fdd61bdbb51e52153f6fe0f3d051c053",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "6h 50m 18s",
+      "filament_g": "130.39",
+      "support_extrusion_filament_mm": 1301.92
+    },
+    {
+      "part": "main/base-left",
+      "STL_sha256": "e972b1235624b506d91779d3761654e19997fea88828e6d9525e3c7f0b453d0d",
+      "gcode_sha256": "b34d3d7281847ff6c3d919a0bc6ec5117553c50c85e518f9b3402bdfe85fdfd4",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "2h 4m 42s",
+      "filament_g": "47.44",
+      "support_extrusion_filament_mm": 0
+    },
+    {
+      "part": "main/base-right",
+      "STL_sha256": "de6899386e40d1d327e5108e464fbeace331325b4daedc696852edf0c32d164c",
+      "gcode_sha256": "5292e2a1929dd4280df19e32abd96ff8ae49d600d6ab9d4ec7e7f1742dea09aa",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "1h 56m 48s",
+      "filament_g": "52.08",
+      "support_extrusion_filament_mm": 0
+    },
+    {
+      "part": "modular/pair-shell-C",
+      "STL_sha256": "ea3fbd3490c7e0dcf952eba1a8d19214e84bb589a1c0b1f64f967d9ab6afb61a",
+      "gcode_sha256": "e457f438c12361f84b405db28a1f029c2fa1aa9abb4c488a237cd919165e799d",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "2h 37m 20s",
+      "filament_g": "50.59",
+      "support_extrusion_filament_mm": 905.43
+    },
+    {
+      "part": "modular/pair-shell-at-right-cap-D",
+      "STL_sha256": "27d43df4f6e9ca68f72dde72eff853e325a81928a63863c6a301d21c52874675",
+      "gcode_sha256": "780875506030feb5388088d0bb20569ad57b2cf9a0d89ff390d1272ee596291b",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "2h 35m 56s",
+      "filament_g": "50.02",
+      "support_extrusion_filament_mm": 905.62
+    },
+    {
+      "part": "modular/pair-base",
+      "STL_sha256": "a672a95f81a6300d5fd3afaf5f7233e75746d70730ed1935224f8dd0fddbcee7",
+      "gcode_sha256": "98f373ef9cb8bb7fb436b9aa7f7e91f21948d9edf0e87b5642eec25a3db747e6",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "42m 38s",
+      "filament_g": "18.06",
+      "support_extrusion_filament_mm": 0
+    },
+    {
+      "part": "modular/right-cap",
+      "STL_sha256": "bf21e5a9187ae5ccbed48af202b0df57fc700499d8e4e38c9f995c5d70bae00c",
+      "gcode_sha256": "7be9adf780b41f913fad4b0e180524630397dc6d42fbf24d7d9761acbfaa4269",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "36m 27s",
+      "filament_g": "14.48",
+      "support_extrusion_filament_mm": 11.56
+    },
+    {
+      "part": "modular/pair-shell-D",
+      "STL_sha256": "075941bce1a61e27fcac105809abf3527e3404d55921ac6dc9de45b24bc2875d",
+      "gcode_sha256": "433683b8b9f2dbec74961f77f6896f7150930c881c80a604e6e3dfb59917152d",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "2h 36m 59s",
+      "filament_g": "50.58",
+      "support_extrusion_filament_mm": 906.19
+    },
+    {
+      "part": "modular/pair-shell-at-right-cap-C",
+      "STL_sha256": "1df8eea02193affab05afb27f1500a85192ff0d370a60d55eadd59deddc8fec0",
+      "gcode_sha256": "9c01812ea44ae4b8abaa8427d65768c2ef1d97b0a366ffd5aa8279a56231cf06",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "2h 35m 36s",
+      "filament_g": "50.03",
+      "support_extrusion_filament_mm": 904.64
+    },
+    {
+      "part": "modular/pair-shell-at-right-cap-E",
+      "STL_sha256": "580fc4814d7b32c7cb9edad4f7dd645e1f3c52b0fe385fa0f915c21e99883b16",
+      "gcode_sha256": "8245ad4e0649051a0b13a879ee143335569048856b70671b09b8b110becc2cb6",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "2h 35m 42s",
+      "filament_g": "50.02",
+      "support_extrusion_filament_mm": 904.59
+    },
+    {
+      "part": "main/fit-coupon-left",
+      "STL_sha256": "d15b22ef3a09a17318f38cd1a17e6d4e759277ee2f36af2458855695c38cee53",
+      "gcode_sha256": "12f8205c0ede3bd893febb17a1158064c008c8656708361d25ffbaa319d07c45",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "3m 33s",
+      "filament_g": "0.64",
+      "support_extrusion_filament_mm": 0
+    },
+    {
+      "part": "main/fit-coupon-right",
+      "STL_sha256": "4e92c6843520edcd1b58b24935702d59a972f6544e7b103af4b97a2d42025d8c",
+      "gcode_sha256": "a825cd80c3d7ec5bcdf2c0998593448c52709a5ca640a568809c20c6b733d72c",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "2m 4s",
+      "filament_g": "0.39",
+      "support_extrusion_filament_mm": 0
+    },
+    {
+      "part": "modular/electronics-shell-left",
+      "STL_sha256": "24b88aab44e5eb655139910f6a13107ac39993bbd28e1d6fe6d72d8fa5eea03f",
+      "gcode_sha256": "22c4cda77237f5bd2b3dd4a8703d226afaa7fda2bf0a2eda7e9e39db0c09ff4e",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "6h 24m 39s",
+      "filament_g": "113.63",
+      "support_extrusion_filament_mm": 3285.35,
+      "reused_from": "main/shell-left",
+      "byte_identical": true
+    },
+    {
+      "part": "modular/electronics-base-left",
+      "STL_sha256": "e972b1235624b506d91779d3761654e19997fea88828e6d9525e3c7f0b453d0d",
+      "gcode_sha256": "b34d3d7281847ff6c3d919a0bc6ec5117553c50c85e518f9b3402bdfe85fdfd4",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "2h 4m 42s",
+      "filament_g": "47.44",
+      "support_extrusion_filament_mm": 0,
+      "reused_from": "main/base-left",
+      "byte_identical": true
+    },
+    {
+      "part": "modular/fit-coupon-left",
+      "STL_sha256": "d15b22ef3a09a17318f38cd1a17e6d4e759277ee2f36af2458855695c38cee53",
+      "gcode_sha256": "12f8205c0ede3bd893febb17a1158064c008c8656708361d25ffbaa319d07c45",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "3m 33s",
+      "filament_g": "0.64",
+      "support_extrusion_filament_mm": 0,
+      "reused_from": "main/fit-coupon-left",
+      "byte_identical": true
+    },
+    {
+      "part": "modular/fit-coupon-right",
+      "STL_sha256": "4e92c6843520edcd1b58b24935702d59a972f6544e7b103af4b97a2d42025d8c",
+      "gcode_sha256": "a825cd80c3d7ec5bcdf2c0998593448c52709a5ca640a568809c20c6b733d72c",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "2m 4s",
+      "filament_g": "0.39",
+      "support_extrusion_filament_mm": 0,
+      "reused_from": "main/fit-coupon-right",
+      "byte_identical": true
+    }
+  ],
+  "limits": "Toolpaths and mesh/CAD checks are not a physical print, load or fit test."
+}

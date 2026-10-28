@@ -1,0 +1,23 @@
+{
+  "version": "0.1",
+  "preview": "web-flasher.png",
+  "preview_sha256": "121c70c95d77fc1b3cf76856f21d24e5b10bfe89a182cba9e69d03b6a72947d8",
+  "ZIP_sha256": "f7a3ebe7ab7ae93c125f097acd38553ae1e909d8b5ecb7fd3260c37619c5cf48",
+  "page_source_sha256": {
+    "index.html": "5b5dd3d5364ee9073dab13ddb3019decf2be087690fb214f7013df4052050596",
+    "style.css": "c6c453bf02a669a4160985e0863144942a4cf76c8bb9cb60c003dd5c6cb00d14",
+    "app.js": "6ae1cc3fad9b65a636fdda260e15a241f56c87268473335db51c11c0b4a3f196",
+    "release.js": "952b66c2350d1dbc16e9e891c51ecc6c73fc745d5bae7312b57f1b9d2f03f151",
+    "icon.svg": "40661cc74a73ed3c70e0d95dd64a2723e30f8eca7d861432cac7def8dfafb430",
+    "assets/enclosure-left.png": "e7feda82cc719ab1899684bb779e1f000bc4c2a21d770687362af1a5eeb1221e"
+  },
+  "browser_checked": "Current firmware SHA-256 verified and install control enabled; no device write attempted",
+  "hardware_flash_tested": false,
+  "generated_UTC": "2026-10-28T16:21:38.817529+00:00",
+  "project": "SIGMIDI Foot Controller",
+  "preferred_variant": "Left",
+  "render_source": "design/fusion/mirrored/main/assembled.png",
+  "render_sha256": "e7feda82cc719ab1899684bb779e1f000bc4c2a21d770687362af1a5eeb1221e",
+  "hardware_typography": "Supported hardware: label, 14px name / 11px details",
+  "logotype": "design/branding/sigmidi-mark.svg"
+}

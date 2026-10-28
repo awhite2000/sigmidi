@@ -1,0 +1,25 @@
+{
+  "source": "logotype-original.png",
+  "source_sha256": "9a0c5fc59e4fdf0debd5791db91182139dd14005eb9cc2538619973b5c284663",
+  "main_ink_rgb": [
+    102,
+    102,
+    153
+  ],
+  "source_ink_bounds_px": [
+    48,
+    59,
+    1714,
+    1404
+  ],
+  "vector_contours": 2,
+  "vector_points": 2585,
+  "maximum_trace_simplification_px": 0.7,
+  "shadow_removed": true,
+  "geometry": "Main ink boundary traced; no rotation, skew or nonuniform scaling.",
+  "SVG_sha256": {
+    "sigmidi-mark-light.svg": "ff33549bcd4895d4ce3ca25810707e1ad9f15a89f041387eb5f04523a3b5cc27",
+    "sigmidi-mark.svg": "40661cc74a73ed3c70e0d95dd64a2723e30f8eca7d861432cac7def8dfafb430",
+    "sigmidi-mark-original.svg": "c2b0d9603bd22dbba65374486596177cf8c0052b539b4c4de8dab5c654f2ebeb"
+  }
+}

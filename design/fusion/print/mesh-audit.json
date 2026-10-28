@@ -1,0 +1,170 @@
+[
+  {
+    "file": "design/fusion/print/shell-left.stl",
+    "triangles": 19676,
+    "bounds_mm": [
+      [
+        -3.9968028886505635e-14,
+        0.0,
+        0.0
+      ],
+      [
+        52.0,
+        92.0,
+        193.64999389648438
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 102006.10534245266,
+    "overhang_surface_mm2": {
+      "upright": 1364.41,
+      "roof_down": 3654.77,
+      "left_end_down": 10340.63,
+      "rear_down": 10845.84
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  },
+  {
+    "file": "design/fusion/print/shell-right.stl",
+    "triangles": 27636,
+    "bounds_mm": [
+      [
+        -9.95858224273657e-16,
+        0.0,
+        -1.0933562693047185e-15
+      ],
+      [
+        52.0,
+        92.0,
+        160.35000610351562
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 83192.09071662283,
+    "overhang_surface_mm2": {
+      "upright": 1616.31,
+      "roof_down": 4393.67,
+      "left_end_down": 11140.0,
+      "rear_down": 9328.04
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  },
+  {
+    "file": "design/fusion/print/base-left.stl",
+    "triangles": 1460,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        193.64999389648438,
+        92.0,
+        21.0
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 38317.90972847497,
+    "overhang_surface_mm2": {
+      "upright": 0.0,
+      "roof_down": 17195.32,
+      "left_end_down": 413.71,
+      "rear_down": 713.39
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  },
+  {
+    "file": "design/fusion/print/base-right.stl",
+    "triangles": 7708,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        156.10000610351562,
+        92.0,
+        21.0
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 36060.14977663637,
+    "overhang_surface_mm2": {
+      "upright": 13.61,
+      "roof_down": 13199.12,
+      "left_end_down": 1343.17,
+      "rear_down": 2475.41
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  },
+  {
+    "file": "design/fusion/print/fit-coupon-left.stl",
+    "triangles": 1062,
+    "bounds_mm": [
+      [
+        -4.440892098500626e-15,
+        -4.440892098500626e-15,
+        0.0
+      ],
+      [
+        5.0,
+        6.0,
+        10.0
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 182.88962530527837,
+    "overhang_surface_mm2": {
+      "upright": 6.02,
+      "roof_down": 2.13,
+      "left_end_down": 11.39,
+      "rear_down": 3.47
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  },
+  {
+    "file": "design/fusion/print/fit-coupon-right.stl",
+    "triangles": 148,
+    "bounds_mm": [
+      [
+        0.0,
+        -8.878274939500778e-15,
+        0.0
+      ],
+      [
+        7.800000190734863,
+        6.0,
+        14.0
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 384.4051117230506,
+    "overhang_surface_mm2": {
+      "upright": 23.74,
+      "roof_down": 33.76,
+      "left_end_down": 35.7,
+      "rear_down": 0.45
+    },
+    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee."
+  }
+]

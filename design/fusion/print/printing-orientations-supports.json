@@ -1,0 +1,34 @@
+{
+  "source": "Current oriented STL solids and PrusaSlicer support extrusion paths from /tmp/midi-PART.gcode",
+  "views": "Separate prints; independently scaled; brim omitted for clarity; occluded support paths are hidden by opaque part surfaces",
+  "parts": [
+    {
+      "part": "shell-left",
+      "support_extrusion_segments_shown": 13389
+    },
+    {
+      "part": "shell-right",
+      "support_extrusion_segments_shown": 27010
+    },
+    {
+      "part": "base-left",
+      "support_extrusion_segments_shown": 0
+    },
+    {
+      "part": "base-right",
+      "support_extrusion_segments_shown": 0
+    }
+  ],
+  "STL_sha256": {
+    "shell-left": "9e0cd12be8ed445f8f1531d4eefc239dcb5b1dfbfa4c18a5908f201656fe7557",
+    "shell-right": "3537c361d59e515bac5ea71acf2fce2f7971ba9ca7b7df897f4718c0c7c9a3d3",
+    "base-left": "ac7ba15004ecff174089234c886af025626d4b4e0f003bcbfdd8f788ebb8fe59",
+    "base-right": "1dc6645060bb782717b787fff949e1304608ec68ba54b0258a9ced1b3a448cd2"
+  },
+  "Gcode_sha256": {
+    "shell-left": "e131f04397d2ee5b2eb55b85d2ce3d6cf3ec40f2180e881c7b878abc2569f271",
+    "shell-right": "3ee9817b266904d9ff670f88c44c0e5917b8e495bd5b27bb60c71f561f5c2b8f",
+    "base-left": "6bb148d1d735281bc9baa10e770e82ddba75b9bcb79748aff735feb6c0c47e02",
+    "base-right": "9439515f5d1204eec5b7273c9393f75570956ff3697cd4247a42cd99f503f8a4"
+  }
+}

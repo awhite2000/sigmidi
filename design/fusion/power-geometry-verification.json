@@ -1,0 +1,50 @@
+{
+  "locator_minimum_other_component_clearance_lower_bound_mm": 3.0,
+  "locator_clearances_below_3mm": [],
+  "revision": "display_m2x5",
+  "main_and_modular_electronics_print_parts_identical": true,
+  "universal_pair_bases_identical": true,
+  "pair_base_removal_collisions": [],
+  "parts": [
+    {
+      "part": "upper shell",
+      "main_volume_mm3": 83240.6100237209,
+      "modular_volume_mm3": 83240.6100237209,
+      "main_solid": true,
+      "main_lumps": 1,
+      "modular_solid": true,
+      "modular_lumps": 1,
+      "bidirectional_difference_mm3": [
+        0,
+        0
+      ]
+    },
+    {
+      "part": "base",
+      "main_volume_mm3": 36075.33448281675,
+      "modular_volume_mm3": 36075.33448281675,
+      "main_solid": true,
+      "main_lumps": 1,
+      "modular_solid": true,
+      "modular_lumps": 1,
+      "bidirectional_difference_mm3": [
+        0,
+        0
+      ]
+    },
+    {
+      "part": "universal pair base",
+      "main_volume_mm3": 13024.737569577026,
+      "modular_volume_mm3": 13024.737569577026,
+      "main_solid": true,
+      "main_lumps": 1,
+      "modular_solid": true,
+      "modular_lumps": 1,
+      "bidirectional_difference_mm3": [
+        0,
+        0
+      ]
+    }
+  ],
+  "document": "MIDI Foot Controller - VERIFIED chassis v94"
+}

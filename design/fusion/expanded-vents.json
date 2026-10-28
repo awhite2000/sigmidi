@@ -1,0 +1,108 @@
+{
+  "revision": "expanded_cooling_grilles",
+  "new_floor_slots_XY_mm": [
+    [
+      "Pololu surround - rear",
+      216.4,
+      235.6,
+      17.0,
+      19.4
+    ],
+    [
+      "Pololu surround - left",
+      211.6,
+      214.0,
+      22.0,
+      39.0
+    ],
+    [
+      "Pololu surround - right",
+      237.2,
+      239.6,
+      22.0,
+      39.0
+    ],
+    [
+      "Pololu surround - front",
+      216.4,
+      225.2,
+      41.2,
+      43.6
+    ]
+  ],
+  "new_rear_slots_XZ_mm": [
+    [
+      220.5,
+      234.9,
+      -15.0,
+      -12.6
+    ],
+    [
+      266.0,
+      280.4,
+      -15.0,
+      -12.6
+    ],
+    [
+      220.5,
+      234.9,
+      -9.0,
+      -6.6
+    ],
+    [
+      266.0,
+      280.4,
+      -9.0,
+      -6.6
+    ]
+  ],
+  "extra_rear_rows": 2,
+  "new_slot_width_height_mm": 2.4,
+  "floor_slot_anchor_clearance_lower_bounds_mm": [
+    [
+      "Pololu surround - rear",
+      3.0
+    ],
+    [
+      "Pololu surround - left",
+      3.0
+    ],
+    [
+      "Pololu surround - right",
+      3.0
+    ],
+    [
+      "Pololu surround - front",
+      3.3851738507793416
+    ]
+  ],
+  "minimum_slot_to_anchor_clearance_lower_bound_mm": 3.0,
+  "new_floor_open_area_mm2": 143.8555736846773,
+  "new_floor_removed_mm3": [
+    89.68778684233882,
+    79.12778684234124,
+    79.12778684233702,
+    39.767786842338644
+  ],
+  "new_rear_removed_mm3": [
+    63.360000000000085,
+    63.359999999999886,
+    63.35999999999997,
+    63.360000000000696
+  ],
+  "new_rear_open_area_mm2": 126.72,
+  "USB_pocket_material_removed_mm3": 0,
+  "unintended_added_material_mm3": [
+    0,
+    0
+  ],
+  "rear_top_solid_band_mm": 24.6,
+  "rear_bottom_solid_band_mm": 7,
+  "rear_web_between_rows_mm": 3.6,
+  "main_and_modular_updated": true,
+  "all_component_positions_unchanged": true,
+  "clip_and_screw_support_geometry_unchanged": true,
+  "assembly_path_argument": "Only material is removed, so previously validated collision-free component and assembly paths cannot acquire a new interference. Parts remain single connected solids; anchors retain at least 3mm solid floor margin.",
+  "backup": "archive/pre-expanded-vents.zip",
+  "limits": "Geometry and slicing checks do not establish stiffness under a specified load, air flow, operating temperatures or printed spring retention."
+}

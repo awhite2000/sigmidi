@@ -1,0 +1,26 @@
+{
+  "CAD": [
+    {
+      "file": "main/midi-foot-mirrored-main",
+      "STEP_solids": 304,
+      "STEP_BREP_WITH_VOIDS": 1,
+      "native_bodies": 305,
+      "native_solids": 305,
+      "complete": true,
+      "hierarchy": "flattened named bodies in assembly coordinates; editable source hierarchy retained in current Fusion document"
+    },
+    {
+      "file": "modular/midi-foot-mirrored-modular",
+      "STEP_solids": 287,
+      "STEP_BREP_WITH_VOIDS": 1,
+      "native_bodies": 288,
+      "native_solids": 288,
+      "complete": true,
+      "hierarchy": "flattened named bodies in assembly coordinates; editable source hierarchy retained in current Fusion document"
+    }
+  ],
+  "document": "MIDI Foot Controller - VERIFIED chassis v107",
+  "saved": true,
+  "geometry_unchanged_during_export": true,
+  "UTC": "2026-10-28T16:24:07.076838+00:00"
+}

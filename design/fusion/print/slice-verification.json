@@ -1,0 +1,64 @@
+{
+  "slicer": "PrusaSlicer 2.9.6",
+  "printer": "MK3S+",
+  "nozzle_mm": 0.6,
+  "material": "Generic PETG",
+  "layer_mm": 0.3,
+  "parts": [
+    {
+      "part": "shell-left",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "6h 46m 20s",
+      "filament_g": "130.24",
+      "filament_mm": "42634.36",
+      "support_extrusion_filament_mm": 1249.09
+    },
+    {
+      "part": "shell-right",
+      "slice_exit_code": 0,
+      "support_enabled": true,
+      "estimated_time": "6h 20m 1s",
+      "filament_g": "113.58",
+      "filament_mm": "37182.75",
+      "support_extrusion_filament_mm": 3295.81
+    },
+    {
+      "part": "base-left",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "1h 56m 54s",
+      "filament_g": "52.08",
+      "filament_mm": "17049.15",
+      "support_extrusion_filament_mm": 0
+    },
+    {
+      "part": "base-right",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "2h 3m 57s",
+      "filament_g": "47.44",
+      "filament_mm": "15529.75",
+      "support_extrusion_filament_mm": 0
+    },
+    {
+      "part": "fit-coupon-left",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "2m 6s",
+      "filament_g": "0.39",
+      "filament_mm": "127.37",
+      "support_extrusion_filament_mm": 0
+    },
+    {
+      "part": "fit-coupon-right",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "estimated_time": "3m 35s",
+      "filament_g": "0.64",
+      "filament_mm": "210.25",
+      "support_extrusion_filament_mm": 0
+    }
+  ],
+  "limitations": "Slicing success is not a physical fit or load test. Small pilot holes require drilling and tapping. Support extrusion is parsed positive extrusion under support feature tags."
+}

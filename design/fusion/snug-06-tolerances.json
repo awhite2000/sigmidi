@@ -1,0 +1,209 @@
+{
+  "revision": "snug_06_tolerances",
+  "nozzle_mm": 0.6,
+  "material": "PETG",
+  "printer": "Prusa MK3S+",
+  "layer_mm": 0.3,
+  "old_hook_clearance_normal_mm": 0.3,
+  "hook_clearance_normal_mm": 0.2,
+  "old_locator_wall_clearance_mm": 0.35,
+  "locator_wall_clearance_mm": 0.2,
+  "locator_rib_thickness_mm": 1.8,
+  "locator_top_lead_in_mm": 0.5,
+  "outer_seam_gap_mm": 0.25,
+  "cap_floor_butt_clearance_mm": 0.3,
+  "base_M2_clearance_diameter_mm": 2.6,
+  "M2_pilot_diameter_mm": 1.9,
+  "hardware_holes_unchanged": true,
+  "all_upper_exterior_surfaces_and_component_positions_unchanged": true,
+  "all_floor_mounts_vents_and_glue_lips_unchanged": true,
+  "cap_side_entry_relief_retained": true,
+  "all_changed_parts_single_connected_solids": true,
+  "parts": [
+    {
+      "part": "main-right",
+      "interface": "receiving hook",
+      "added_mm3": 100.93114810968417,
+      "removed_mm3": 0,
+      "inclined_clearance_normal_mm": 0.2,
+      "verified_plane_constant_mm": 218.36715728752537,
+      "boundary_point_native_XYZ_mm": [
+        192.65,
+        15,
+        25.71715728752538
+      ]
+    },
+    {
+      "part": "pair-shell",
+      "interface": "receiving hook",
+      "added_mm3": 100.94754029684144,
+      "removed_mm3": 0,
+      "inclined_clearance_normal_mm": 0.2,
+      "verified_plane_constant_mm": 153.36715728752537,
+      "boundary_point_native_XYZ_mm": [
+        127.65,
+        15,
+        25.71715728752538
+      ]
+    },
+    {
+      "part": "pair-shell-at-cap",
+      "interface": "receiving hook",
+      "added_mm3": 54.225650622011926,
+      "removed_mm3": 0,
+      "inclined_clearance_normal_mm": 0.2,
+      "verified_plane_constant_mm": 153.36715728752537,
+      "boundary_point_native_XYZ_mm": [
+        127.65,
+        15,
+        25.71715728752538
+      ]
+    },
+    {
+      "part": "pair-shell-D",
+      "interface": "receiving hook",
+      "added_mm3": 100.94754029684138,
+      "removed_mm3": 0,
+      "inclined_clearance_normal_mm": 0.2,
+      "verified_plane_constant_mm": 153.36715728752537,
+      "boundary_point_native_XYZ_mm": [
+        127.65,
+        15,
+        25.71715728752538
+      ]
+    },
+    {
+      "part": "pair-shell-at-cap-C",
+      "interface": "receiving hook",
+      "added_mm3": 54.225650622011926,
+      "removed_mm3": 0,
+      "inclined_clearance_normal_mm": 0.2,
+      "verified_plane_constant_mm": 153.36715728752537,
+      "boundary_point_native_XYZ_mm": [
+        127.65,
+        15,
+        25.71715728752538
+      ]
+    },
+    {
+      "part": "pair-shell-at-cap-E",
+      "interface": "receiving hook",
+      "added_mm3": 54.225650622011926,
+      "removed_mm3": 0,
+      "inclined_clearance_normal_mm": 0.2,
+      "verified_plane_constant_mm": 153.36715728752537,
+      "boundary_point_native_XYZ_mm": [
+        127.65,
+        15,
+        25.71715728752538
+      ]
+    },
+    {
+      "part": "base-left",
+      "interface": "locating ribs",
+      "shift_towards_wall_mm": 0.15,
+      "rib_thickness_mm": 1.8,
+      "nominal_wall_clearance_mm": 0.2,
+      "added_mm3": 92.08125000000156,
+      "removed_mm3": 92.08125000000159,
+      "rib_runs": [
+        [
+          "rear",
+          20,
+          100
+        ],
+        [
+          "rear",
+          137,
+          157
+        ],
+        [
+          "front",
+          48,
+          83
+        ],
+        [
+          "front",
+          140,
+          175
+        ],
+        [
+          "left",
+          20,
+          55
+        ]
+      ]
+    },
+    {
+      "part": "base-right",
+      "interface": "locating ribs",
+      "shift_towards_wall_mm": 0.15,
+      "rib_thickness_mm": 1.8,
+      "nominal_wall_clearance_mm": 0.2,
+      "added_mm3": 103.79208348744594,
+      "removed_mm3": 103.7920834874418,
+      "rib_runs": [
+        [
+          "rear",
+          203,
+          236.799886096949
+        ],
+        [
+          "rear",
+          264.699886096949,
+          325
+        ],
+        [
+          "front",
+          203,
+          315
+        ],
+        [
+          "right",
+          20,
+          55
+        ]
+      ]
+    },
+    {
+      "part": "pair-base",
+      "interface": "locating ribs",
+      "shift_towards_wall_mm": 0.15,
+      "rib_thickness_mm": 1.8,
+      "nominal_wall_clearance_mm": 0.2,
+      "added_mm3": 25.18500000000087,
+      "removed_mm3": 25.185000000000887,
+      "rib_runs": [
+        [
+          "rear",
+          138,
+          149.15
+        ],
+        [
+          "rear",
+          169,
+          186
+        ],
+        [
+          "front",
+          138,
+          149.15
+        ],
+        [
+          "front",
+          169,
+          186
+        ]
+      ]
+    }
+  ],
+  "physical_collisions": [],
+  "wire_collisions": [],
+  "assembly_collisions": [],
+  "joint_vertical_samples": 121,
+  "cap_side_entry_samples": 81,
+  "cap_seating_samples": 21,
+  "backup": "archive/pre-snug-06-tolerances.zip",
+  "physical_fit_status": "Nominal snug sliding fit; requires printing the matching coupons with the actual filament/flow/first-layer settings. Nozzle diameter alone does not guarantee dimensional accuracy.",
+  "basis": "https://help.prusa3d.com/article/modeling-with-3d-printing-in-mind_164135"
+}

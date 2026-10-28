@@ -1,0 +1,153 @@
+{
+  "revision": "raised_rear_grilles",
+  "rear_pattern_raise_mm": 17,
+  "previous_rear_slots_XZ_mm": [
+    [
+      220.5,
+      234.9,
+      -3.0,
+      -0.6000000000000001
+    ],
+    [
+      220.5,
+      234.9,
+      3.0,
+      5.4
+    ],
+    [
+      266.0,
+      280.4,
+      -3.0,
+      -0.6000000000000001
+    ],
+    [
+      266.0,
+      280.4,
+      3.0,
+      5.4
+    ],
+    [
+      243.0,
+      257.4,
+      3.0,
+      5.4
+    ],
+    [
+      220.5,
+      234.9,
+      -15.0,
+      -12.6
+    ],
+    [
+      266.0,
+      280.4,
+      -15.0,
+      -12.6
+    ],
+    [
+      220.5,
+      234.9,
+      -9.0,
+      -6.6
+    ],
+    [
+      266.0,
+      280.4,
+      -9.0,
+      -6.6
+    ]
+  ],
+  "rear_slots_XZ_mm": [
+    [
+      220.5,
+      234.9,
+      14.0,
+      16.4
+    ],
+    [
+      220.5,
+      234.9,
+      20.0,
+      22.4
+    ],
+    [
+      266.0,
+      280.4,
+      14.0,
+      16.4
+    ],
+    [
+      266.0,
+      280.4,
+      20.0,
+      22.4
+    ],
+    [
+      243.0,
+      257.4,
+      20.0,
+      22.4
+    ],
+    [
+      220.5,
+      234.9,
+      2.0,
+      4.4
+    ],
+    [
+      266.0,
+      280.4,
+      2.0,
+      4.4
+    ],
+    [
+      220.5,
+      234.9,
+      8.0,
+      10.4
+    ],
+    [
+      266.0,
+      280.4,
+      8.0,
+      10.4
+    ]
+  ],
+  "slot_count": 9,
+  "slot_height_mm": 2.4,
+  "slot_end_angle_degrees": 45,
+  "rear_open_area_mm2": 285.12,
+  "rear_wall_thickness_mm": 2,
+  "rear_top_solid_band_mm": 7.6,
+  "rear_bottom_solid_band_mm": 24,
+  "rows_lower_Z_mm": [
+    2,
+    8,
+    14,
+    20
+  ],
+  "web_between_rows_mm": 3.6,
+  "restored_volume_per_old_slot_mm3": [
+    63.35999999998603,
+    63.35999999998603,
+    63.36000000000058,
+    63.35999999998603,
+    63.36000000004424,
+    63.35999999998603,
+    63.35999999998603,
+    63.35999999998603,
+    63.36000000000058
+  ],
+  "restored_skin_component_collisions": [],
+  "vent_to_component_clearances_below_3mm": [],
+  "minimum_vent_to_hardware_clearance_lower_bound_mm": 3.0,
+  "minimum_vent_to_switch_body_AABB_clearance_mm": 3.0000000000000027,
+  "blocked_passages": [],
+  "roof_mounting_panels_untouched": true,
+  "main_modular_matched": true,
+  "all_component_positions_and_base_parts_unchanged": true,
+  "shell_volume_before_mm3": 81640.63658965155,
+  "shell_volume_after_mm3": 81640.63658965155,
+  "backup": "archive/pre-raised-rear-vents.zip",
+  "limits": "The solid rim, component clearance and mesh/slicing checks do not establish mechanical load capacity or operating temperature."
+}

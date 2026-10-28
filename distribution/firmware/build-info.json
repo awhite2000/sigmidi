@@ -1,0 +1,43 @@
+{
+  "name": "SIGMIDI Foot Controller",
+  "version": "0.1",
+  "firmware_name": "sigmidi-foot-controller-0.1.bin",
+  "build_id": "ec1bdfe45a42",
+  "built_at": "2026-10-28T15:45:07.955769+00:00",
+  "source_sha256": "ec1bdfe45a42f8b8942e4f94efe272d9d5c85d262450668ed90f3252aa5a8a00",
+  "source_files": {
+    "src/CMakeLists.txt": "0469cd123a3c0880a7a48b7cf81419f9dd5e0a48d2bc5152226fbfabee1bd237",
+    "src/app.hpp": "16381d7da34c29f4326d11c5ee221663f29d6cd056cb5e22ed3ed39023943911",
+    "src/ble.cpp": "32215647da7c33cb74fd3fbc5c7f06efb1a2c7c9549c8d45adc77c0c6d39e11c",
+    "src/branding.hpp": "8399cbd5f124434e18b0e7ed93c24ff178ee098b3ad23573fd95c6d6cd8c5b98",
+    "src/config.cpp": "6f15ebd586455adad676c91512ed60dd1c046f55f9b735cbc3aaf08004698e75",
+    "src/config.hpp": "6edf96183c505f393d6a82dc3fc1b8db0f10331ea0d7543322472cc3de073059",
+    "src/core.cpp": "28180773b6da07e0bc8c2455e66c754ed145c7705141d1762176c67835994fb1",
+    "src/core.hpp": "59b0b5eee32b50e56007b807168173179a89fb2f8c7e99349b321e74e0953b9a",
+    "src/display.cpp": "4dbd1edafaceab7567403486db88d120527cd24053a2f26e8df73dbaa8080fb4",
+    "src/display.hpp": "1a1bea047fc1a7ba40b554020bdcb7026867010ed25021084594d69b264974fe",
+    "src/hardware.cpp": "b5b1a473523eb7d633c9f08dff402be9396f714b8ace166d0b172edd87bcd573",
+    "src/led_hardware.cpp": "5f7090ea7219ede8a65ddf8612f7d9c973de790a39919b400d6a2c20abaf4e8e",
+    "src/leds.cpp": "8b347d42395af9ab5779f5dbf112db07712140823447b623f48839cfd6a8fccc",
+    "src/leds.hpp": "1c1fc525cbc577335c11bf8a6f125d5f394e208a49cb292b49c9f584866b92a8",
+    "src/logo.hpp": "32a7bb737d945903a803e0966ca9a32de56e23423d5670ebc25f1c71c3fea61d",
+    "src/main.cpp": "c783699480fd10f3a772d8b3182d823cfd88d641b19cbdfd83fcf7d73e494cb9",
+    "src/storage.cpp": "1f5a19f187e4bb4428167163a420878aff2be6ae1892f48bf8fdcce3e6d481b9",
+    "src/ui.cpp": "32680a9658defc7b1c1f2f153b1f3ac06301af99003f38f98e7b23be0be422a5",
+    "src/wifi.cpp": "2f82354ff1d18f2c471b90c8f833eaf10c16688b34011c19cc5fc82d2e944166",
+    "web/index.html": "6323ff27ee19b9e6a060d351988872cadd766fa32ab0a15465f14d28e4a7f50f",
+    "CMakeLists.txt": "d2b6a54beb7cf20478f15ccc126d5b6f1c83393b5a5eb73f0738124794d5c894",
+    "platformio.ini": "8337ad02af99edbcbbda5690bd5f3d5edb56a468674833830749b4b82c7dc8c0",
+    "sdkconfig.defaults": "d5be1d2d2cabfa1b86214ae157adcf835b6afd801d76789f87b6a9a084095041",
+    "partitions.csv": "0fc87e012db3c478107e047978fd142c43f104edb0dfb5546537d16f49a95300"
+  },
+  "sha256": {
+    "bootloader.bin": "591cb790e4083cc848c732fabfbc291223a4832def68d0669332e2ed30e5dbf6",
+    "partitions.bin": "37f9719078927bf594a883c81ad80dd4e6d179c8db193fbded90851178aa39e7",
+    "firmware.bin": "8b666986f19cd70bdcb9d153052811d2610ba747761ab80e076cbd9a060a8242"
+  },
+  "chip": "ESP32-C6",
+  "flash_bytes": 4194304,
+  "flash_mode": "dio",
+  "flash_frequency_mhz": 40
+}

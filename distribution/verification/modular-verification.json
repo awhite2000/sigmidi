@@ -1,0 +1,33 @@
+{
+  "configuration_version": 4,
+  "modular_switch_counts": [
+    4,
+    6,
+    8,
+    10
+  ],
+  "numbering": "Upper A-E, lower 1-5, both starting at right; stable labels across 4/6/8/10",
+  "stored_identity": "Permanent physical tap; count changes retain MIDI lists, LED assignments, custom names and calibration",
+  "legacy_migration": "Versions 1-3 migrate in linear mode",
+  "host_tests": [
+    "core",
+    "display",
+    "led",
+    "configuration",
+    "lcd_ui",
+    "modular_adc_midi_led_and_ui",
+    "editor",
+    "modular_editor"
+  ],
+  "firmware_target": "ESP32-C6 / ESP-IDF 5.3.1",
+  "firmware_build": "passed",
+  "hardware_operation": "not tested",
+  "voltage_and_diagram_checks": "passed",
+  "firmware_SHA256": {
+    "firmware.bin": "fef704067d9a62b81539f4f26d0ded06ede39897ab13e72fb776e6bb20ef3c0c",
+    "firmware.elf": "6eec778ff36e59aa0ed43e24195bf218add41a884bf72f698e9ff8deb88ef445",
+    "bootloader.bin": "9090ecfe2a257efabb7800444a68c3d1b8b64c2bde0a15b32dfdd265a75ea99e",
+    "partitions.bin": "37f9719078927bf594a883c81ad80dd4e6d179c8db193fbded90851178aa39e7"
+  },
+  "browser_labels_and_calibration": "verified in simulated editor"
+}

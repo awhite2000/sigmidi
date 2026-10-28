@@ -1,0 +1,73 @@
+{
+  "revision": "sigmidi_embossed_icon_25mm",
+  "original_native_assemblies_preserved": true,
+  "original_files_byte_identical": 132,
+  "independent_main_and_modular_models": true,
+  "unique_print_shapes": 11,
+  "print_meshes_with_coupons": 13,
+  "sliced_projects_with_aliases": 17,
+  "wall_samples": 844434,
+  "unresolved_thin_wall_samples": 0,
+  "critical_toolpath_checks": 192,
+  "label_backing_checks": 20,
+  "label_backing_mm": 2.2,
+  "CAD": [
+    {
+      "file": "main/midi-foot-mirrored-main",
+      "STEP_solids": 304,
+      "STEP_BREP_WITH_VOIDS": 1,
+      "native_bodies": 305,
+      "native_solids": 305,
+      "complete": true,
+      "hierarchy": "flattened named bodies in assembly coordinates; editable source hierarchy retained in current Fusion document"
+    },
+    {
+      "file": "modular/midi-foot-mirrored-modular",
+      "STEP_solids": 287,
+      "STEP_BREP_WITH_VOIDS": 1,
+      "native_bodies": 288,
+      "native_solids": 288,
+      "complete": true,
+      "hierarchy": "flattened named bodies in assembly coordinates; editable source hierarchy retained in current Fusion document"
+    },
+    {
+      "file": "modular/pair-shell-D",
+      "STEP_solids": 1
+    },
+    {
+      "file": "modular/pair-shell-at-right-cap-C",
+      "STEP_solids": 1
+    },
+    {
+      "file": "modular/pair-shell-at-right-cap-E",
+      "STEP_solids": 1
+    }
+  ],
+  "nozzle_mm": 0.6,
+  "layer_mm": 0.3,
+  "estimates": {
+    "main": {
+      "grams": 343.54,
+      "seconds": 62187
+    },
+    "modular_8_switches": {
+      "grams": 312.28,
+      "seconds": 56660
+    }
+  },
+  "packages": {
+    "main": {
+      "path": "mirrored-main-mk3s-petg-06.zip",
+      "files": 44,
+      "bytes": 14493855,
+      "sha256": "0c4940cc07a671cccd84afd94569ba5724fa12b94ae8cfcb9237a7e8a2973885"
+    },
+    "modular": {
+      "path": "mirrored-modular-mk3s-petg-06.zip",
+      "files": 54,
+      "bytes": 17373047,
+      "sha256": "d500511adc7bc3eeff359c37d771c0a85cae5bdf09f42ac13110bd6271195329"
+    }
+  },
+  "limits": "Nominal CAD, finite surface/toolpath checks and slicer estimates; no physical print/load test."
+}

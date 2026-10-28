@@ -1,0 +1,75 @@
+{
+  "right_section_base_screws": 4,
+  "main_base_screws": 8,
+  "modular_8_switch_base_screws": 8,
+  "revision": "display_m2x5",
+  "universal_pair_base": true,
+  "base_dovetails": false,
+  "checks": "native solid/assembly/wiring, closed manifold meshes, PrusaSlicer 0.6mm PETG, STEP solids, F3D and ZIP integrity",
+  "display_mount": {
+    "screw": "M2x5 countersunk",
+    "seat_Z_mm": -9.51,
+    "nominal_stud_engagement_mm": 1.39,
+    "display_glass_Z_mm": 0
+  },
+  "wall_audit": {
+    "unique_parts": 11,
+    "surface_samples": 828311,
+    "toolpath_checks": 104,
+    "blind_screw_cap_mm": 2,
+    "modular_cap_front_wall_mm": 2.1927526344,
+    "left_floor_slit_closed": true,
+    "old_TRS_relief_closed": true,
+    "exterior_and_component_positions_preserved": true
+  },
+  "snug_fit": {
+    "nozzle_mm": 0.6,
+    "hook_normal_clearance_mm": 0.2,
+    "locator_wall_clearance_mm": 0.2,
+    "print_joint_coupons_first": true
+  },
+  "positioning_ribs": {
+    "thickness_mm": 1.8,
+    "height_mm": 3,
+    "lead_in_mm": 0.5,
+    "joined_clear_gaps": 4,
+    "rib_geometry_retained": true
+  },
+  "pololu_spring_leaves": {
+    "count": 2,
+    "width_mm": 4.8,
+    "bending_thickness_mm": 1.6,
+    "root_gusset_mm": 0.8,
+    "outward_stroke_mm": 0.6
+  },
+  "main": {
+    "estimated_mass_g": 343.34000000000003,
+    "estimated_seconds": 61632
+  },
+  "modular_8_switches": {
+    "estimated_mass_g": 312.27,
+    "estimated_seconds": 56366
+  },
+  "auxiliary_power": {
+    "input_V_DC": 9,
+    "polarity": "center-negative",
+    "regulator": "Pololu S13V10F5 / 4083",
+    "socket_overall_length_mm": 18,
+    "converter_to_floor_clearance_mm": 8.650125000000187,
+    "mount": "two PETG spring clips and three edge seats",
+    "floor_inlet_area_mm2": 455.77061447520066,
+    "rear_outlet_area_mm2": 380.16,
+    "rear_outlet_as_printed_mm2": 0,
+    "remove_all_12_rear_membranes_before_use": true
+  },
+  "main_package": {
+    "files": 96,
+    "ZIP_bytes": 19767199,
+    "sha256": "e9757f588793714844272189371deb6d5b09f548bc7741422962a71a2327fa9b"
+  },
+  "modular_package": {
+    "files": 111,
+    "ZIP_bytes": 25381484,
+    "sha256": "5838038405ca8add183ebf4184d1be3ddd510101fcf6f6ea3533c5813353d98e"
+  }
+}

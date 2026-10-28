@@ -1,0 +1,1113 @@
+{
+  "revision": "logical_left_electronics",
+  "source_document": "MIDI Foot Controller - VERIFIED chassis v96",
+  "main_outline_mm": [
+    350,
+    92,
+    54
+  ],
+  "modular_example_outline_mm": [
+    294.85,
+    92,
+    54
+  ],
+  "reflection_plane_X_mm": 175,
+  "switch_pitch_mm": 65,
+  "upper_row_elevation_mm": 30,
+  "row_pitch_mm": 53,
+  "display_screws": "M2x5 countersunk",
+  "base_screws": "M2x6 countersunk",
+  "normal_joint_gap_mm": 0.2,
+  "base_locator_gap_mm": 0.2,
+  "placements": [
+    {
+      "component": "SW01 - rotated",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 47.400000000000006,
+      "new_anchor_X_mm": 302.6,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "SW02 - original upper-row orientation",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 112.4,
+      "new_anchor_X_mm": 237.6,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "SW03 - rotated",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 177.39999999999998,
+      "new_anchor_X_mm": 172.60000000000002,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "SW04 - rotated",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 242.39999999999998,
+      "new_anchor_X_mm": 107.60000000000002,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "SW05 - rotated",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 307.4,
+      "new_anchor_X_mm": 42.60000000000002,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "SW06",
+      "strategy": "rigid translation",
+      "old_anchor_X_mm": 14.9,
+      "new_anchor_X_mm": 335.1,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "SW07",
+      "strategy": "rigid translation",
+      "old_anchor_X_mm": 79.9,
+      "new_anchor_X_mm": 270.1,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "SW08",
+      "strategy": "rigid translation",
+      "old_anchor_X_mm": 144.9,
+      "new_anchor_X_mm": 205.1,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "SW09",
+      "strategy": "rigid translation",
+      "old_anchor_X_mm": 209.89999999999998,
+      "new_anchor_X_mm": 140.10000000000002,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "SW10",
+      "strategy": "rigid translation",
+      "old_anchor_X_mm": 274.9,
+      "new_anchor_X_mm": 75.10000000000002,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "LCD Waveshare 24382 - exact STEP - 280x240 landscape - rear M2 studs",
+      "strategy": "rigid translation followed by 180deg about PCB mounting centre",
+      "old_anchor_X_mm": 307.40219,
+      "new_anchor_X_mm": 42.59780999999998,
+      "manufacturer_geometry_preserved": true,
+      "ribbon_side": "left"
+    },
+    {
+      "component": "Encoder 15x15 - right of LCD X337.5 - 15mm knob",
+      "strategy": "rigid translation",
+      "old_anchor_X_mm": 337.5,
+      "new_anchor_X_mm": 12.5,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "DFRobot DFR1075 - manufacturer STEP - PCB thickness corrected to 1.6",
+      "strategy": "rigid translation",
+      "old_anchor_X_mm": 250.69399109694896,
+      "new_anchor_X_mm": 99.30600890305104,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "Double TRS ACJS-MHDC - X319 - horizontal ports - 3mm rear wall",
+      "strategy": "rigid translation",
+      "old_anchor_X_mm": 319.0,
+      "new_anchor_X_mm": 31.0,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "LED01 Pololu 2535 - OPTIONAL installed reference",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 47.4,
+      "new_anchor_X_mm": 302.6,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "LED02 Pololu 2535 - OPTIONAL installed reference",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 112.4,
+      "new_anchor_X_mm": 237.6,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "LED03 Pololu 2535 - OPTIONAL installed reference",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 177.4,
+      "new_anchor_X_mm": 172.6,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "LED04 Pololu 2535 - OPTIONAL installed reference",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 242.4,
+      "new_anchor_X_mm": 107.6,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "LED05 Pololu 2535 - OPTIONAL installed reference",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 307.4,
+      "new_anchor_X_mm": 42.60000000000002,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "LED06 Pololu 2535 - OPTIONAL installed reference",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 14.9,
+      "new_anchor_X_mm": 335.1,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "LED07 Pololu 2535 - OPTIONAL installed reference",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 79.9,
+      "new_anchor_X_mm": 270.1,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "LED08 Pololu 2535 - OPTIONAL installed reference",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 144.9,
+      "new_anchor_X_mm": 205.1,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "LED09 Pololu 2535 - OPTIONAL installed reference",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 209.9,
+      "new_anchor_X_mm": 140.1,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "LED10 Pololu 2535 - OPTIONAL installed reference",
+      "strategy": "rigid 180deg about shaft",
+      "old_anchor_X_mm": 274.9,
+      "new_anchor_X_mm": 75.10000000000002,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "Pololu S13V10F5 - 5V converter - manufacturer STEP",
+      "strategy": "rigid translation",
+      "old_anchor_X_mm": 226.0325,
+      "new_anchor_X_mm": 123.9675,
+      "manufacturer_geometry_preserved": true
+    },
+    {
+      "component": "DC power socket - 9V center-negative - M8 x8 - 18mm overall",
+      "strategy": "rigid translation",
+      "old_anchor_X_mm": 210.0,
+      "new_anchor_X_mm": 140.0,
+      "manufacturer_geometry_preserved": true
+    }
+  ],
+  "readable_labels": [
+    {
+      "part": "main left",
+      "label": "E",
+      "LED_XY_mm": [
+        302.6,
+        26.2
+      ],
+      "bounds_mm": [
+        290.5154160767794,
+        -30.199999761581424,
+        29.2,
+        296.6,
+        -22.200000238418582,
+        30.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "main left",
+      "label": "D",
+      "LED_XY_mm": [
+        237.6,
+        26.2
+      ],
+      "bounds_mm": [
+        224.8933150231838,
+        -30.199999761581424,
+        29.2,
+        231.59999999999997,
+        -22.200000238418582,
+        30.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "main left",
+      "label": "C",
+      "LED_XY_mm": [
+        172.6,
+        26.2
+      ],
+      "bounds_mm": [
+        159.8612129076324,
+        -30.2,
+        29.2,
+        166.6,
+        -22.200000000000003,
+        30.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "main left",
+      "label": "5",
+      "LED_XY_mm": [
+        335.1,
+        81.7
+      ],
+      "bounds_mm": [
+        323.73766065656497,
+        -85.7,
+        -0.8,
+        329.1,
+        -77.69999999999999,
+        0.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "main left",
+      "label": "4",
+      "LED_XY_mm": [
+        270.1,
+        81.7
+      ],
+      "bounds_mm": [
+        258.37173888363213,
+        -85.7,
+        -0.8,
+        264.1,
+        -77.69999999999999,
+        1.3877787807814457e-16
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "main left",
+      "label": "3",
+      "LED_XY_mm": [
+        205.1,
+        81.7
+      ],
+      "bounds_mm": [
+        193.89492331886822,
+        -85.7,
+        -0.8,
+        199.1,
+        -77.69999999999999,
+        0.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "main/right electronics",
+      "label": "B",
+      "LED_XY_mm": [
+        107.6,
+        26.2
+      ],
+      "bounds_mm": [
+        94.89877227544783,
+        -30.199999761581424,
+        29.2,
+        101.59999999999998,
+        -22.200000238418582,
+        30.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "main/right electronics",
+      "label": "A",
+      "LED_XY_mm": [
+        42.60000000000002,
+        26.2
+      ],
+      "bounds_mm": [
+        28.572705726895286,
+        -30.200011830666806,
+        29.2,
+        36.600000000000065,
+        -22.200000238418568,
+        30.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "main/right electronics",
+      "label": "2",
+      "LED_XY_mm": [
+        140.1,
+        81.7
+      ],
+      "bounds_mm": [
+        128.7467390691374,
+        -85.7,
+        -0.8,
+        134.1,
+        -77.69999999999999,
+        1.3877787807814457e-16
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "main/right electronics",
+      "label": "1",
+      "LED_XY_mm": [
+        75.10000000000002,
+        81.7
+      ],
+      "bounds_mm": [
+        65.59998970319157,
+        -85.7,
+        -0.8,
+        69.10000000000004,
+        -77.69998999999997,
+        1.3877787807814457e-16
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "pair-shell C3",
+      "label": "C",
+      "LED_XY_mm": [
+        172.6,
+        26.2
+      ],
+      "bounds_mm": [
+        159.8612129076324,
+        -30.2,
+        29.2,
+        166.6,
+        -22.200000000000003,
+        30.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "pair-shell C3",
+      "label": "3",
+      "LED_XY_mm": [
+        205.1,
+        81.7
+      ],
+      "bounds_mm": [
+        193.89492331886822,
+        -85.7,
+        -0.8,
+        199.1,
+        -77.69999999999999,
+        0.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "pair-shell-at-cap D4",
+      "label": "D",
+      "LED_XY_mm": [
+        172.6,
+        26.2
+      ],
+      "bounds_mm": [
+        159.89331502318382,
+        -30.199999761581424,
+        29.2,
+        166.59999999999997,
+        -22.200000238418582,
+        30.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "pair-shell-at-cap D4",
+      "label": "4",
+      "LED_XY_mm": [
+        205.1,
+        81.7
+      ],
+      "bounds_mm": [
+        193.37173888363208,
+        -85.7,
+        -0.8,
+        199.09999999999997,
+        -77.69999999999999,
+        1.3877787807814457e-16
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "pair-shell D4",
+      "label": "D",
+      "LED_XY_mm": [
+        172.6,
+        26.2
+      ],
+      "bounds_mm": [
+        159.89331502318382,
+        -30.199999761581424,
+        29.2,
+        166.59999999999997,
+        -22.200000238418582,
+        30.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "pair-shell D4",
+      "label": "4",
+      "LED_XY_mm": [
+        205.1,
+        81.7
+      ],
+      "bounds_mm": [
+        193.37173888363208,
+        -85.7,
+        -0.8,
+        199.09999999999997,
+        -77.69999999999999,
+        1.3877787807814457e-16
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "pair-shell-at-cap C3",
+      "label": "C",
+      "LED_XY_mm": [
+        172.6,
+        26.2
+      ],
+      "bounds_mm": [
+        159.8612129076324,
+        -30.2,
+        29.2,
+        166.6,
+        -22.200000000000003,
+        30.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "pair-shell-at-cap C3",
+      "label": "3",
+      "LED_XY_mm": [
+        205.1,
+        81.7
+      ],
+      "bounds_mm": [
+        193.89492331886822,
+        -85.7,
+        -0.8,
+        199.1,
+        -77.69999999999999,
+        0.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "pair-shell-at-cap E5",
+      "label": "E",
+      "LED_XY_mm": [
+        172.6,
+        26.2
+      ],
+      "bounds_mm": [
+        160.51541607677933,
+        -30.199999761581424,
+        29.2,
+        166.59999999999997,
+        -22.200000238418582,
+        30.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    },
+    {
+      "part": "pair-shell-at-cap E5",
+      "label": "5",
+      "LED_XY_mm": [
+        205.1,
+        81.7
+      ],
+      "bounds_mm": [
+        193.73766065656494,
+        -85.7,
+        -0.8,
+        199.09999999999997,
+        -77.69999999999999,
+        0.0
+      ],
+      "height_mm": 8,
+      "depth_mm": 0.8,
+      "text_reflected": false
+    }
+  ],
+  "LCD_opening_rigid_translation_X_mm": -264.80438000000004,
+  "LCD_glass_not_geometrically_reflected": true,
+  "TRS_saddle_rigid_translation_X_mm": -288,
+  "MCU_translation_X_mm": -151.38798219389793,
+  "power_wire_routes": [
+    [
+      "9V sleeve positive to VIN",
+      [
+        [
+          142,
+          12,
+          -1.5
+        ],
+        [
+          142,
+          20,
+          -2
+        ],
+        [
+          114,
+          20,
+          -2
+        ],
+        [
+          114,
+          32.985,
+          -2
+        ],
+        [
+          119.20500000000001,
+          32.985,
+          -2
+        ],
+        [
+          119.20500000000001,
+          32.985,
+          -9.984
+        ]
+      ]
+    ],
+    [
+      "Center negative to converter GND",
+      [
+        [
+          138,
+          12,
+          -1.5
+        ],
+        [
+          138,
+          18,
+          -4
+        ],
+        [
+          116,
+          18,
+          -4
+        ],
+        [
+          116,
+          30.445,
+          -4
+        ],
+        [
+          119.20500000000001,
+          30.445,
+          -4
+        ],
+        [
+          119.20500000000001,
+          30.445,
+          -9.984
+        ]
+      ]
+    ],
+    [
+      "Regulated 5V VOUT to DFR1075 VIN-5V",
+      [
+        [
+          119.20500000000001,
+          27.905,
+          -9.984
+        ],
+        [
+          119.20500000000001,
+          27.905,
+          -2
+        ],
+        [
+          110.72622234000102,
+          27.905,
+          -2
+        ],
+        [
+          110.72622234000102,
+          26.78537742,
+          -2
+        ],
+        [
+          110.72622234000102,
+          26.78537742,
+          -11.5
+        ]
+      ]
+    ],
+    [
+      "Converter GND to DFR1075 GND",
+      [
+        [
+          119.20500000000001,
+          30.445,
+          -9.984
+        ],
+        [
+          119.20500000000001,
+          30.445,
+          -2
+        ],
+        [
+          110.72622234000102,
+          30.445,
+          -2
+        ],
+        [
+          110.72622234000102,
+          31.86537742,
+          -2
+        ],
+        [
+          110.72622234000102,
+          31.86537742,
+          -11.5
+        ]
+      ]
+    ]
+  ],
+  "physical_collisions": [],
+  "intentional_optional_LED_knockout_contacts": [
+    {
+      "printed_part": "Shell LEFT - continuous downward-bevel drop-in joint - Arial bold 8mm inset 0.8mm - continuous 2mm rear corner wall - audited internal reinforcement",
+      "hardware": "LED01 Pololu 2535 - OPTIONAL installed reference",
+      "body": "5mm lens - reference 6mm flange and 8.7mm body - recessed 4.9mm",
+      "overlap_mm3": 11.326488713742703,
+      "original_overlap_mm3": 11.326488713742778
+    },
+    {
+      "printed_part": "Shell LEFT - continuous downward-bevel drop-in joint - Arial bold 8mm inset 0.8mm - continuous 2mm rear corner wall - audited internal reinforcement",
+      "hardware": "LED02 Pololu 2535 - OPTIONAL installed reference",
+      "body": "5mm lens - reference 6mm flange and 8.7mm body - recessed 4.9mm",
+      "overlap_mm3": 11.326488713742707,
+      "original_overlap_mm3": 11.326488713742776
+    },
+    {
+      "printed_part": "Shell LEFT - continuous downward-bevel drop-in joint - Arial bold 8mm inset 0.8mm - continuous 2mm rear corner wall - audited internal reinforcement",
+      "hardware": "LED03 Pololu 2535 - OPTIONAL installed reference",
+      "body": "5mm lens - reference 6mm flange and 8.7mm body - recessed 4.9mm",
+      "overlap_mm3": 11.326488713742703,
+      "original_overlap_mm3": 11.32648871374271
+    },
+    {
+      "printed_part": "Shell LEFT - continuous downward-bevel drop-in joint - Arial bold 8mm inset 0.8mm - continuous 2mm rear corner wall - audited internal reinforcement",
+      "hardware": "LED06 Pololu 2535 - OPTIONAL installed reference",
+      "body": "5mm lens - reference 6mm flange and 8.7mm body - recessed 4.9mm",
+      "overlap_mm3": 11.326488713742872,
+      "original_overlap_mm3": 11.32648871374277
+    },
+    {
+      "printed_part": "Shell LEFT - continuous downward-bevel drop-in joint - Arial bold 8mm inset 0.8mm - continuous 2mm rear corner wall - audited internal reinforcement",
+      "hardware": "LED07 Pololu 2535 - OPTIONAL installed reference",
+      "body": "5mm lens - reference 6mm flange and 8.7mm body - recessed 4.9mm",
+      "overlap_mm3": 11.326488713742703,
+      "original_overlap_mm3": 11.326488713742785
+    },
+    {
+      "printed_part": "Shell LEFT - continuous downward-bevel drop-in joint - Arial bold 8mm inset 0.8mm - continuous 2mm rear corner wall - audited internal reinforcement",
+      "hardware": "LED08 Pololu 2535 - OPTIONAL installed reference",
+      "body": "5mm lens - reference 6mm flange and 8.7mm body - recessed 4.9mm",
+      "overlap_mm3": 11.326488713742703,
+      "original_overlap_mm3": 11.326488713742778
+    },
+    {
+      "printed_part": "Shell RIGHT - continuous upward-open receiving hook - M8 DC input - ventilated clip revision - expanded grilles - rear grilles raised 17mm - one internal rear column rib - straight rear rib merged into USB pocket - 0.6mm rear vent cutaway membranes - two extra M2x6 near split - Arial bold 8mm inset 0.8mm - continuous 2mm rear corner wall - audited internal reinforcement - obsolete TRS relief closed - snug 0.6mm fit",
+      "hardware": "LED04 Pololu 2535 - OPTIONAL installed reference",
+      "body": "5mm lens - reference 6mm flange and 8.7mm body - recessed 4.9mm",
+      "overlap_mm3": 11.326488713742775,
+      "original_overlap_mm3": 11.32648871374271
+    },
+    {
+      "printed_part": "Shell RIGHT - continuous upward-open receiving hook - M8 DC input - ventilated clip revision - expanded grilles - rear grilles raised 17mm - one internal rear column rib - straight rear rib merged into USB pocket - 0.6mm rear vent cutaway membranes - two extra M2x6 near split - Arial bold 8mm inset 0.8mm - continuous 2mm rear corner wall - audited internal reinforcement - obsolete TRS relief closed - snug 0.6mm fit",
+      "hardware": "LED05 Pololu 2535 - OPTIONAL installed reference",
+      "body": "5mm lens - reference 6mm flange and 8.7mm body - recessed 4.9mm",
+      "overlap_mm3": 11.326488713742778,
+      "original_overlap_mm3": 11.32648871374271
+    },
+    {
+      "printed_part": "Shell RIGHT - continuous upward-open receiving hook - M8 DC input - ventilated clip revision - expanded grilles - rear grilles raised 17mm - one internal rear column rib - straight rear rib merged into USB pocket - 0.6mm rear vent cutaway membranes - two extra M2x6 near split - Arial bold 8mm inset 0.8mm - continuous 2mm rear corner wall - audited internal reinforcement - obsolete TRS relief closed - snug 0.6mm fit",
+      "hardware": "LED09 Pololu 2535 - OPTIONAL installed reference",
+      "body": "5mm lens - reference 6mm flange and 8.7mm body - recessed 4.9mm",
+      "overlap_mm3": 11.326488713742767,
+      "original_overlap_mm3": 11.326488713742714
+    },
+    {
+      "printed_part": "Shell RIGHT - continuous upward-open receiving hook - M8 DC input - ventilated clip revision - expanded grilles - rear grilles raised 17mm - one internal rear column rib - straight rear rib merged into USB pocket - 0.6mm rear vent cutaway membranes - two extra M2x6 near split - Arial bold 8mm inset 0.8mm - continuous 2mm rear corner wall - audited internal reinforcement - obsolete TRS relief closed - snug 0.6mm fit",
+      "hardware": "LED10 Pololu 2535 - OPTIONAL installed reference",
+      "body": "5mm lens - reference 6mm flange and 8.7mm body - recessed 4.9mm",
+      "overlap_mm3": 11.326488713742782,
+      "original_overlap_mm3": 11.326488713742714
+    }
+  ],
+  "power_wire_collisions": [],
+  "base_withdrawal_collisions": [],
+  "original_native_assemblies_unchanged": true,
+  "new_main_component": "ALT Mirrored MAIN - left electronics - 10 switches",
+  "new_modular_component": "ALT Mirrored MODULAR - right extensions - 8 switches",
+  "new_library_component": "ALT Mirrored modular upper print library - NOT assembly",
+  "modular_parts": [
+    {
+      "component": "Repeatable pair - C3 - extends right - 65mm pitch",
+      "body": "PAIR SHELL - receiver right - bevel left - 2 M2x6 mounts - Arial bold 8mm inset 0.8mm - audited internal reinforcement - snug 0.6mm fit - logical mirror",
+      "volume_mm3": 38174.240198553634,
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "component": "Repeatable pair - C3 - extends right - 65mm pitch",
+      "body": "PAIR BASE - universal - two M2x6 - straight glue lips - 1.8mm streamlined locating ribs - snug 0.6mm fit - logical mirror",
+      "volume_mm3": 13024.737569577028,
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "component": "Closed right cap - one piece - 8.5mm",
+      "body": "RIGHT CAP - one piece - integral floor - no screws - continuous 2mm rear corner wall - audited internal reinforcement - logical mirror",
+      "volume_mm3": 10690.84021870472,
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "component": "Existing LEFT electronics - 4 switches - real PCB poses",
+      "body": "REUSED LEFT SHELL - matches main perimeter ledge - M8 DC input - ventilated clip revision - expanded grilles - rear grilles raised 17mm - one internal rear column rib - straight rear rib merged into USB pocket - 0.6mm rear vent cutaway membranes - two extra M2x6 near split - Arial bold 8mm inset 0.8mm - continuous 2mm rear corner wall - audited internal reinforcement - obsolete TRS relief closed - snug 0.6mm fit - logical mirror (1) (1)",
+      "volume_mm3": 83198.6889935397,
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "component": "Existing LEFT electronics - 4 switches - real PCB poses",
+      "body": "REUSED LEFT BASE - straight glue lip - matches main - open Pololu carrier - ventilated clip revision - expanded grilles - local 3mm vent floor - two extra M2x6 near split - continuous front-left floor - 4.8mm Pololu spring leaves - 1.8mm streamlined locating ribs - snug 0.6mm fit - LCD M2x5 recessed seats - logical mirror",
+      "volume_mm3": 36075.33448281676,
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "component": "Mirrored Existing left base M2x6 fasteners",
+      "body": "M2x6 base screw 3 - logical mirror",
+      "volume_mm3": 15.147974377445925,
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "component": "Mirrored Existing left base M2x6 fasteners",
+      "body": "M2x6 base screw 6 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+      "volume_mm3": 15.147974377445923,
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "component": "Mirrored Existing left base M2x6 fasteners",
+      "body": "M2x6 extra left base rear near split X201 - logical mirror",
+      "volume_mm3": 15.147974377445925,
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "component": "Mirrored Existing left base M2x6 fasteners",
+      "body": "M2x6 extra left base front near split X201 - logical mirror",
+      "volume_mm3": 15.147974377445923,
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "component": "Rightmost pair - D4 - two M2x6 mounts",
+      "body": "PAIR SHELL - cap side entry - 2 M2x6 mounts - Arial bold 8mm inset 0.8mm - audited internal reinforcement - snug 0.6mm fit - logical mirror",
+      "volume_mm3": 37735.983391947426,
+      "solid": true,
+      "lumps": 1
+    },
+    {
+      "component": "Rightmost pair - D4 - two M2x6 mounts",
+      "body": "PAIR BASE - universal - two M2x6 - straight glue lips - 1.8mm streamlined locating ribs - snug 0.6mm fit - logical mirror",
+      "volume_mm3": 13024.737569577028,
+      "solid": true,
+      "lumps": 1
+    }
+  ],
+  "source_hardware_discrepancies": [
+    {
+      "original_component": "ALT reference - LED04 Pololu 2535 - OPTIONAL installed reference",
+      "original_body": "5mm lens - reference 6mm flange and 8.7mm body - recessed 4.9mm",
+      "original_volume_mm3": 185.92873218113522,
+      "correct_reference": "LED04 Pololu 2535 - OPTIONAL installed reference",
+      "correct_volume_mm3": 160.84169986860837,
+      "resolution": "New variant uses the correct validated main reference; original modular body preserved unchanged"
+    },
+    {
+      "original_component": "ALT reference - Pololu S13V10F5 - 5V converter",
+      "original_body": "Exact Pololu 4083 double-sided assembly",
+      "original_volume_mm3": 185.92873218113462,
+      "correct_reference": "Pololu S13V10F5 - 5V converter - manufacturer STEP",
+      "correct_volume_mm3": 185.92873218113522,
+      "resolution": "New variant uses the correct validated main reference; original modular body preserved unchanged"
+    }
+  ],
+  "modular_label_variants": [
+    "pair-shell-D (1)",
+    "pair-shell-at-right-cap-C",
+    "pair-shell-at-right-cap-E"
+  ],
+  "independent_BRep_copies": true,
+  "main_switch_labels_left_to_right": {
+    "upper": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "lower": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "modular_8_switch_labels_left_to_right": {
+    "upper": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "lower": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "copied_LED_lead_names_match_rigid_reference_geometry": true,
+  "display_rotation": {
+    "rotation_degrees": 180,
+    "axis": "Z, normal to display PCB",
+    "center_layout_XY_mm": [
+      42.59781066034995,
+      61.9843653568
+    ],
+    "ribbon_side": "left",
+    "applies_to": [
+      "mirrored main",
+      "mirrored modular"
+    ],
+    "original_variants_modified": false,
+    "glass_flush_Z_mm": 0,
+    "mounting_stud_positions_unchanged": true,
+    "M2x5_posts_and_screws_unchanged": true,
+    "window_region_outside_difference_mm3": [
+      0,
+      0
+    ],
+    "physical_collisions": [],
+    "rotated_bodies": [
+      {
+        "name": "1_69INCH-240X280-LCD:1 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+        "before_mm": [
+          23.882810660349953,
+          -77.0193653568,
+          -1.7599999999999998,
+          61.812810660349946,
+          -46.9493653568,
+          5.551115123125783e-16
+        ],
+        "after_mm": [
+          23.382810660349953,
+          -77.01936535680001,
+          -1.7599999999999998,
+          61.31281066034994,
+          -46.949365356800016,
+          5.551115123125783e-16
+        ],
+        "volume_mm3": 1650.3239564639812
+      },
+      {
+        "name": "1_69INCH_LCD_MODULE-PCBA:1 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+        "before_mm": [
+          23.097810660349936,
+          -77.7343653568,
+          -4.600000197918,
+          62.09781066034996,
+          -46.2343653568,
+          -1.7999999999999998
+        ],
+        "after_mm": [
+          23.097810660349943,
+          -77.73436535680003,
+          -4.600000197918,
+          62.097810660349964,
+          -46.23436535680001,
+          -1.7999999999999998
+        ],
+        "volume_mm3": 1945.4686107969928
+      },
+      {
+        "name": "1_69INCH_LCD_MODULE-PCBA:1 Body2 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+        "before_mm": [
+          44.57315579060996,
+          -69.359369006385,
+          -7.113258503713,
+          49.622813799369965,
+          -54.60936920856,
+          -3.454529403928
+        ],
+        "after_mm": [
+          35.572807521329935,
+          -69.35936150504001,
+          -7.113258503713,
+          40.62246553008994,
+          -54.609361707215015,
+          -3.454529403928
+        ],
+        "volume_mm3": 99.4331838687884
+      },
+      {
+        "name": "STUDS-M2XH2_5:1 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+        "before_mm": [
+          56.74781066034996,
+          -51.5843653568,
+          -5.899999999999999,
+          60.24781066034996,
+          -48.08436535679999,
+          -1.899999999999999
+        ],
+        "after_mm": [
+          24.94781066034994,
+          -75.88436535680002,
+          -5.899999999999999,
+          28.447810660349937,
+          -72.3843653568,
+          -1.899999999999999
+        ],
+        "volume_mm3": 21.028981302015836
+      },
+      {
+        "name": "STUDS-M2XH2_5:2 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+        "before_mm": [
+          24.94781066034993,
+          -51.5843653568,
+          -5.899999999999999,
+          28.44781066034993,
+          -48.08436535679999,
+          -1.899999999999999
+        ],
+        "after_mm": [
+          56.74781066034996,
+          -75.88436535680002,
+          -5.899999999999999,
+          60.24781066034996,
+          -72.38436535680002,
+          -1.899999999999999
+        ],
+        "volume_mm3": 21.0289813020167
+      },
+      {
+        "name": "STUDS-M2XH2_5:3 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+        "before_mm": [
+          56.74781066034996,
+          -75.8843653568,
+          -5.899999999999999,
+          60.24781066034996,
+          -72.3843653568,
+          -1.899999999999999
+        ],
+        "after_mm": [
+          24.94781066034994,
+          -51.58436535680001,
+          -5.899999999999999,
+          28.447810660349937,
+          -48.084365356800014,
+          -1.899999999999999
+        ],
+        "volume_mm3": 21.028978927669552
+      },
+      {
+        "name": "STUDS-M2XH2_5:4 Body1 - front row offset 8mm - encoder left layout - flush display and tapered mounts - logical mirror",
+        "before_mm": [
+          24.94781066034993,
+          -75.8843653568,
+          -5.899999999999999,
+          28.44781066034993,
+          -72.3843653568,
+          -1.899999999999999
+        ],
+        "after_mm": [
+          56.74781066034997,
+          -51.58436535680002,
+          -5.899999999999999,
+          60.24781066034997,
+          -48.08436535680002,
+          -1.899999999999999
+        ],
+        "volume_mm3": 21.02898052376053
+      }
+    ],
+    "verified_UTC": "2026-10-28T09:47:40.066052+00:00",
+    "saved": true,
+    "document": "MIDI Foot Controller - VERIFIED chassis v103",
+    "window_method": "Original aperture reflected left-to-right, matching the rigidly rotated glass while preserving the adjacent slanted deck",
+    "window_repair_outside_region_difference_mm3": [
+      0,
+      0
+    ],
+    "PCB_to_encoder_lateral_clearance_mm": 3.0978106603499427,
+    "FPC_to_encoder_lateral_clearance_mm": 15.572807521329935
+  },
+  "LCD_window_glass_shift_X_mm_from_initial_mirrored_variant": -0.5
+}

@@ -1,0 +1,179 @@
+{
+  "revision": "straight_rear_rib",
+  "rib_type": "Straight roof-to-base internal support merged with the existing USB pocket chamfer",
+  "rib_count": 1,
+  "rib_center_X_mm": 261.7,
+  "rib_projection_inward_mm": 2,
+  "original_wall_depth_mm": 2,
+  "reinforced_wall_depth_mm": 4,
+  "rib_crest_width_mm": 2,
+  "rib_attachment_width_mm": 6,
+  "rib_Z_span_mm": [
+    -22,
+    27.1
+  ],
+  "side_chamfers_mm": [
+    2,
+    2
+  ],
+  "chamfer_angle_degrees": 45,
+  "exterior_envelope_unchanged": true,
+  "original_nine_slots_preserved": true,
+  "slot_count": 12,
+  "columns": 3,
+  "slots_per_column": 4,
+  "added_middle_slots_XZ_mm": [
+    [
+      243,
+      257.4,
+      2,
+      4.4
+    ],
+    [
+      243,
+      257.4,
+      8,
+      10.4
+    ],
+    [
+      243,
+      257.4,
+      14,
+      16.4
+    ]
+  ],
+  "new_slot_material_removed_mm3": 190.07999999999504,
+  "rear_slots_XZ_mm": [
+    [
+      220.5,
+      234.9,
+      14.0,
+      16.4
+    ],
+    [
+      220.5,
+      234.9,
+      20.0,
+      22.4
+    ],
+    [
+      266.0,
+      280.4,
+      14.0,
+      16.4
+    ],
+    [
+      266.0,
+      280.4,
+      20.0,
+      22.4
+    ],
+    [
+      243.0,
+      257.4,
+      20.0,
+      22.4
+    ],
+    [
+      220.5,
+      234.9,
+      2.0,
+      4.4
+    ],
+    [
+      266.0,
+      280.4,
+      2.0,
+      4.4
+    ],
+    [
+      220.5,
+      234.9,
+      8.0,
+      10.4
+    ],
+    [
+      266.0,
+      280.4,
+      8.0,
+      10.4
+    ],
+    [
+      243,
+      257.4,
+      2,
+      4.4
+    ],
+    [
+      243,
+      257.4,
+      8,
+      10.4
+    ],
+    [
+      243,
+      257.4,
+      14,
+      16.4
+    ]
+  ],
+  "blocked_passages": [],
+  "rear_open_area_mm2": 380.16,
+  "previous_slot_bars_removed_mm3": 72.0,
+  "added_material_mm3": 203.16793506751952,
+  "original_material_removed_mm3": 0,
+  "body_collisions": [],
+  "component_clearances_below_3mm": [
+    [
+      "DFRobot DFR1075 - manufacturer STEP - PCB thickness corrected to 1.6",
+      "Exact PCB - 1.6mm per dimension drawing - MCU under raised SW4 - MCU 5mm from SW10",
+      1.0000006199997142
+    ],
+    [
+      "DFRobot DFR1075 - manufacturer STEP - PCB thickness corrected to 1.6",
+      "R8:1+RESC1005(0402):7 - MCU under raised SW4 - MCU 5mm from SW10",
+      2.8748231077537993
+    ],
+    [
+      "DFRobot DFR1075 - manufacturer STEP - PCB thickness corrected to 1.6",
+      "R19:1+RESC1005(0402):14 - MCU under raised SW4 - MCU 5mm from SW10",
+      2.8515912524918847
+    ],
+    [
+      "PCB screws - LCD recessed M2x6 same as base - MCU M1.6",
+      "DFR1075 M1.6 board screw 2 - cosmetic thread core - MCU under raised SW4 - MCU 5mm from SW10",
+      1.2010300000000003
+    ]
+  ],
+  "minimum_component_clearance_lower_bound_mm": 1.0000006199997142,
+  "base_parts_and_component_positions_unchanged": true,
+  "main_and_modular_updated": true,
+  "backup": "archive/pre-column-rib.zip",
+  "limits": "Geometry and slicing do not establish mechanical load capacity or operating temperature.",
+  "full_height_extension": "full-height-rear-rib.json",
+  "straightening": "straight-rear-rib.json",
+  "minimum_other_component_clearance_lower_bound_mm": 7.368174807915462,
+  "component_clearances_below_required_minimum": [],
+  "permitted_local_PCB_and_fastener_clearances_below_3mm": [
+    [
+      "DFRobot DFR1075 - manufacturer STEP - PCB thickness corrected to 1.6",
+      "Exact PCB - 1.6mm per dimension drawing - MCU under raised SW4 - MCU 5mm from SW10",
+      1.0000006199997142
+    ],
+    [
+      "DFRobot DFR1075 - manufacturer STEP - PCB thickness corrected to 1.6",
+      "R8:1+RESC1005(0402):7 - MCU under raised SW4 - MCU 5mm from SW10",
+      2.8748231077537993
+    ],
+    [
+      "DFRobot DFR1075 - manufacturer STEP - PCB thickness corrected to 1.6",
+      "R19:1+RESC1005(0402):14 - MCU under raised SW4 - MCU 5mm from SW10",
+      2.8515912524918847
+    ],
+    [
+      "PCB screws - LCD recessed M2x6 same as base - MCU M1.6",
+      "DFR1075 M1.6 board screw 2 - cosmetic thread core - MCU under raised SW4 - MCU 5mm from SW10",
+      1.2010300000000003
+    ]
+  ]
+}

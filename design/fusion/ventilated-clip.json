@@ -1,0 +1,419 @@
+{
+  "revision": "wide_pololu_clips",
+  "converter_raise_mm": 6,
+  "PCB_bottom_Z_mm": -11,
+  "populated_Z_mm": [
+    -12.349875,
+    -8.184
+  ],
+  "component_to_inside_floor_clearance_mm": 8.650125000000187,
+  "support": "Three small bare-edge seats; two opposing relaxed PETG leaves, no adhesive required.",
+  "spring_leaf_thickness_mm": 1.6,
+  "spring_leaf_width_mm": 4.8,
+  "leaf_height_mm": 14.216,
+  "root_gusset_mm": 0.8,
+  "retaining_overlap_mm": 0.4,
+  "PCB_top_retention_clearance_mm": 0.2,
+  "required_outward_assembly_stroke_mm": 0.6,
+  "clip_tip_underside": "0.6mm 45-degree ramp outside the PCB plus 0.6mm short ledge; 45-degree entry ramp",
+  "floor_slots_XY_mm": [
+    [
+      "Pololu",
+      223.6,
+      230.0,
+      27.0,
+      29.4
+    ],
+    [
+      "Pololu",
+      223.6,
+      230.0,
+      31.4,
+      33.8
+    ],
+    [
+      "DFR1075",
+      242.0,
+      259.4,
+      16.0,
+      18.4
+    ],
+    [
+      "DFR1075",
+      242.0,
+      259.4,
+      22.0,
+      24.4
+    ],
+    [
+      "DFR1075",
+      242.0,
+      259.4,
+      28.0,
+      30.4
+    ],
+    [
+      "DFR1075",
+      242.0,
+      259.4,
+      34.0,
+      36.4
+    ],
+    [
+      "DFR1075",
+      242.0,
+      259.4,
+      40.0,
+      42.4
+    ],
+    [
+      "DFR1075",
+      242.0,
+      259.4,
+      46.0,
+      48.4
+    ],
+    [
+      "DFR1075",
+      242.0,
+      259.4,
+      52.0,
+      54.4
+    ],
+    [
+      "Pololu surround - rear",
+      216.4,
+      235.6,
+      17.0,
+      19.4
+    ],
+    [
+      "Pololu surround - left",
+      211.6,
+      214.0,
+      22.0,
+      39.0
+    ],
+    [
+      "Pololu surround - right",
+      237.2,
+      239.6,
+      22.0,
+      39.0
+    ],
+    [
+      "Pololu surround - front",
+      216.4,
+      225.2,
+      41.2,
+      43.6
+    ]
+  ],
+  "floor_slot_width_mm": 2.4,
+  "floor_slot_ends": "R1.2",
+  "floor_open_area_mm2": 455.77061447520066,
+  "rear_slots_XZ_mm": [
+    [
+      220.5,
+      234.9,
+      14.0,
+      16.4
+    ],
+    [
+      220.5,
+      234.9,
+      20.0,
+      22.4
+    ],
+    [
+      266.0,
+      280.4,
+      14.0,
+      16.4
+    ],
+    [
+      266.0,
+      280.4,
+      20.0,
+      22.4
+    ],
+    [
+      243.0,
+      257.4,
+      20.0,
+      22.4
+    ],
+    [
+      220.5,
+      234.9,
+      2.0,
+      4.4
+    ],
+    [
+      266.0,
+      280.4,
+      2.0,
+      4.4
+    ],
+    [
+      220.5,
+      234.9,
+      8.0,
+      10.4
+    ],
+    [
+      266.0,
+      280.4,
+      8.0,
+      10.4
+    ],
+    [
+      243,
+      257.4,
+      2,
+      4.4
+    ],
+    [
+      243,
+      257.4,
+      8,
+      10.4
+    ],
+    [
+      243,
+      257.4,
+      14,
+      16.4
+    ]
+  ],
+  "rear_removed_volume_mm3": [
+    63.359999999998365,
+    63.35999999999808,
+    63.35999999999986,
+    63.36000000000175,
+    63.359999999997974
+  ],
+  "rear_slot_height_mm": 2.4,
+  "rear_open_area_mm2": 380.16,
+  "rear_slot_ends": "45 degrees to suit right-shell end-down printing",
+  "continuous_rear_top_band_mm": 7.6,
+  "minimum_exhaust_to_actual_switch_body_AABB_clearance_mm": 3.0000000000000027,
+  "minimum_base_web_between_DFR_slots_mm": 3.6,
+  "anchor_material_removed_mm3": 0,
+  "USB_pocket_material_removed_mm3": 0,
+  "component_clearances_below_3mm": [],
+  "minimum_other_component_clearance_lower_bound_mm": 3.0,
+  "body_collisions": [],
+  "wire_collisions": [],
+  "assembly_collisions": [],
+  "outward_clip_sweep_collisions": [],
+  "new_carrier_to_exact_converter_intersection_mm3": 0,
+  "wire_routes": [
+    [
+      "9V sleeve positive to VIN",
+      [
+        [
+          212,
+          12,
+          -1.5
+        ],
+        [
+          212,
+          20,
+          -8
+        ],
+        [
+          214,
+          24,
+          -12
+        ],
+        [
+          214,
+          32.985,
+          -12
+        ],
+        [
+          221.27,
+          32.985,
+          -6
+        ],
+        [
+          221.27,
+          32.985,
+          -9.984
+        ]
+      ]
+    ],
+    [
+      "Center negative to converter GND",
+      [
+        [
+          208,
+          12,
+          -1.5
+        ],
+        [
+          208,
+          20,
+          -8
+        ],
+        [
+          212,
+          24,
+          -12
+        ],
+        [
+          212,
+          30.445,
+          -12
+        ],
+        [
+          221.27,
+          30.445,
+          -6
+        ],
+        [
+          221.27,
+          30.445,
+          -9.984
+        ]
+      ]
+    ],
+    [
+      "Regulated 5V VOUT to DFR1075 VIN-5V",
+      [
+        [
+          221.27,
+          27.905,
+          -9.984
+        ],
+        [
+          221.27,
+          27.905,
+          -2
+        ],
+        [
+          262.11420453389894,
+          27.905,
+          -2
+        ],
+        [
+          262.11420453389894,
+          26.78537742,
+          -2
+        ],
+        [
+          262.11420453389894,
+          26.78537742,
+          -11.5
+        ]
+      ]
+    ],
+    [
+      "Converter GND to DFR1075 GND",
+      [
+        [
+          221.27,
+          30.445,
+          -9.984
+        ],
+        [
+          221.27,
+          30.445,
+          -2
+        ],
+        [
+          262.11420453389894,
+          30.445,
+          -2
+        ],
+        [
+          262.11420453389894,
+          31.86537742,
+          -2
+        ],
+        [
+          262.11420453389894,
+          31.86537742,
+          -11.5
+        ]
+      ]
+    ]
+  ],
+  "base_removal_samples": 41,
+  "withdrawal_scope": "New mount and raised regulator swept against the shell; the rest of the base is unchanged apart from material removal and retains its previously validated path.",
+  "main_and_modular_updated": true,
+  "unchanged": "DFRobot and all control positions, joints, screw supports, outer dimensions",
+  "backup": "archive/pre-ventilated-clip.zip",
+  "limits": "Geometric fit and slicer checks are not a thermal or spring-fatigue test. Verify retention and hot-operation temperature on the actual print. The leaves have clearance after seating to minimize sustained stress; do not glue or foam-wrap the module. Leave free air below the floor grilles in use.",
+  "positive_lateral_locators": true,
+  "lateral_locator_boxes_mm": [
+    [
+      218,
+      24.4,
+      -22,
+      219.6,
+      26.8,
+      -9.484
+    ],
+    [
+      219.3,
+      24.1,
+      -22,
+      221.7,
+      25.7,
+      -9.484
+    ],
+    [
+      218,
+      34.09,
+      -22,
+      219.6,
+      36.49,
+      -9.484
+    ],
+    [
+      219.3,
+      35.19,
+      -22,
+      221.7,
+      36.79,
+      -9.484
+    ],
+    [
+      232.465,
+      29.25,
+      -22,
+      234.065,
+      31.65,
+      -9.484
+    ]
+  ],
+  "lateral_clearance_X_mm": 0.4,
+  "lateral_clearance_Y_mm": 0.3,
+  "locator_top_Z_mm": -9.484,
+  "locator_body_collisions": [],
+  "locator_continuous_20mm_withdrawal_sweep_collisions": [],
+  "expanded_grilles": "expanded-vents.json",
+  "rear_bottom_solid_band_mm": 24,
+  "rear_relocation": "raised-rear-vents.json",
+  "rear_grille_ribs": "rear-grille-ribs.json",
+  "rear_opening_count_after_ribs": 12,
+  "base_vent_reinforcement": "base-vent-reinforcement.json",
+  "floor_reinforcement_inside_Z_mm": -21,
+  "floor_thickness_below_components_mm": 3,
+  "leaf_height_above_reinforced_floor_mm": 13.216,
+  "full_height_rear_rib": "full-height-rear-rib.json",
+  "straight_rear_rib": "straight-rear-rib.json",
+  "rear_vent_membranes": "rear-vent-membranes.json",
+  "rear_as_printed_open_area_mm2": 0,
+  "rear_open_area_after_membrane_removal_mm2": 380.16,
+  "rear_membranes_must_be_removed_before_use": true,
+  "spring_leaf_X_span_mm": [
+    223.8,
+    228.6
+  ],
+  "root_gusset_base_Z_mm": -21,
+  "root_gusset_top_Z_mm": -20.2,
+  "wide_leaf_verification": "wide-pololu-clips.json"
+}

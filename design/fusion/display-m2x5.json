@@ -1,0 +1,150 @@
+{
+  "revision": "display_m2x5",
+  "screw": "Four M2x5 countersunk display screws; base-shell screws remain M2x6",
+  "screw_length_mm": 5,
+  "screw_head_diameter_mm": 3.8,
+  "previous_recessed_head_seat_Z_mm": -10.51,
+  "new_recessed_head_seat_Z_mm": -9.51,
+  "seat_upward_adjustment_mm": 1,
+  "access_recess_depth_from_outside_floor_mm": 14.49,
+  "internal_transition_Z_mm": [
+    -9.51,
+    -8.61
+  ],
+  "external_transition_Z_mm": [
+    -8.61,
+    -7.71
+  ],
+  "tower_height_mm": 16.1,
+  "minimum_normal_wall_mm": 2,
+  "parallel_cone_normal_wall_mm": 2.0506096654409878,
+  "nominal_access_diameter_mm": 4.4,
+  "shaft_clearance_diameter_mm": 2.6,
+  "one_access_profile_minimum_width_mm": 4.22,
+  "minimum_screw_head_to_flat_clearance_mm": 0.12,
+  "outer_flat_to_encoder_gap_mm": 3.0096652902538734,
+  "nominal_stud_engagement_mm": 1.39,
+  "nominal_tip_to_blind_end_mm": 1.61,
+  "screw_tip_Z_mm": -4.51,
+  "display_glass_Z_mm": 0,
+  "posts": [
+    {
+      "center_XY_mm": [
+        291.50219,
+        49.83437
+      ],
+      "encoder_clearance_flat": false
+    },
+    {
+      "center_XY_mm": [
+        323.30219,
+        74.13437
+      ],
+      "encoder_clearance_flat": true
+    },
+    {
+      "center_XY_mm": [
+        291.50219,
+        74.13437
+      ],
+      "encoder_clearance_flat": false
+    },
+    {
+      "center_XY_mm": [
+        323.30219,
+        49.83437
+      ],
+      "encoder_clearance_flat": false
+    }
+  ],
+  "physical_collisions": [],
+  "wire_corridor_collisions": [],
+  "main_and_modular_updated": true,
+  "all_changed_parts_single_connected_solids": true,
+  "outside_display_post_envelopes_bidirectional_difference_mm3": [
+    0.0,
+    0.0
+  ],
+  "screws": [
+    {
+      "component": "PCB screws - LCD recessed M2x6 same as base - MCU M1.6",
+      "center_XY_mm": [
+        291.50219,
+        49.834369999999986
+      ],
+      "min_Z_mm": -9.51,
+      "max_Z_mm": -4.51,
+      "length_mm": 5.0
+    },
+    {
+      "component": "PCB screws - LCD recessed M2x6 same as base - MCU M1.6",
+      "center_XY_mm": [
+        323.30219,
+        74.13437
+      ],
+      "min_Z_mm": -9.51,
+      "max_Z_mm": -4.51,
+      "length_mm": 5.0
+    },
+    {
+      "component": "PCB screws - LCD recessed M2x6 same as base - MCU M1.6",
+      "center_XY_mm": [
+        291.50219,
+        74.13437
+      ],
+      "min_Z_mm": -9.51,
+      "max_Z_mm": -4.51,
+      "length_mm": 5.0
+    },
+    {
+      "component": "PCB screws - LCD recessed M2x6 same as base - MCU M1.6",
+      "center_XY_mm": [
+        323.30219,
+        49.834369999999986
+      ],
+      "min_Z_mm": -9.51,
+      "max_Z_mm": -4.51,
+      "length_mm": 5.0
+    },
+    {
+      "component": "ALT reference - PCB screws - LCD recessed M2x6 same as base - MCU M1.6",
+      "center_XY_mm": [
+        291.50219,
+        49.834369999999986
+      ],
+      "min_Z_mm": -9.51,
+      "max_Z_mm": -4.51,
+      "length_mm": 5.0
+    },
+    {
+      "component": "ALT reference - PCB screws - LCD recessed M2x6 same as base - MCU M1.6",
+      "center_XY_mm": [
+        323.30219,
+        74.13437
+      ],
+      "min_Z_mm": -9.51,
+      "max_Z_mm": -4.51,
+      "length_mm": 5.0
+    },
+    {
+      "component": "ALT reference - PCB screws - LCD recessed M2x6 same as base - MCU M1.6",
+      "center_XY_mm": [
+        291.50219,
+        74.13437
+      ],
+      "min_Z_mm": -9.51,
+      "max_Z_mm": -4.51,
+      "length_mm": 5.0
+    },
+    {
+      "component": "ALT reference - PCB screws - LCD recessed M2x6 same as base - MCU M1.6",
+      "center_XY_mm": [
+        323.30219,
+        49.834369999999986
+      ],
+      "min_Z_mm": -9.51,
+      "max_Z_mm": -4.51,
+      "length_mm": 5.0
+    }
+  ]
+}

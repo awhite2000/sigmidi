@@ -1,0 +1,130 @@
+{
+  "revision": "straight_base_glue_lips",
+  "base_dovetails": false,
+  "base_floor_thickness_mm": 2,
+  "lip_height_above_floor_mm": 2,
+  "lip_inward_width_mm": 2,
+  "lip_runout_degrees": 45,
+  "lip_Y_mm": [
+    2.35,
+    89.65
+  ],
+  "main_seam_X_mm": [
+    193.65,
+    193.9
+  ],
+  "repeat_span_X_mm": [
+    128.9,
+    193.65
+  ],
+  "nominal_seam_gap_mm": 0.25,
+  "cap_floor_gap_mm": 0.3,
+  "same_pair_base_for_all_positions": true,
+  "pair_base_print_size_mm": [
+    64.75,
+    92,
+    21
+  ],
+  "glue_joint": "Straight vertical butt faces with continuous raised internal lands on each side; no interlocking projections or recesses.",
+  "cap_interface": "Universal pair base fits the cap butt seam; leave the cap-to-removable-floor seam free of glue. Cap remains integral with upper chain.",
+  "upper_shells_and_all_hardware_unchanged": true,
+  "screw_mounts_unchanged": true,
+  "bearing_base_outline_retained": true,
+  "physical_collisions": [],
+  "wire_collisions": [],
+  "assembly_collisions": [],
+  "base_insertion_samples": 21,
+  "horizontal_approach_samples": 41,
+  "parts": [
+    {
+      "part": "main-left",
+      "solid": true,
+      "lumps": 1,
+      "volume_mm3": 39483.01209997076,
+      "structural_X_mm": [
+        0,
+        193.65
+      ],
+      "glue_sides": [
+        [
+          "right",
+          193.65
+        ]
+      ]
+    },
+    {
+      "part": "main-right",
+      "solid": true,
+      "lumps": 1,
+      "volume_mm3": 36174.82191321106,
+      "structural_X_mm": [
+        193.9,
+        350
+      ],
+      "glue_sides": [
+        [
+          "left",
+          193.9
+        ]
+      ]
+    },
+    {
+      "part": "pair",
+      "solid": true,
+      "lumps": 1,
+      "volume_mm3": 13024.737569577028,
+      "structural_X_mm": [
+        128.9,
+        193.65
+      ],
+      "glue_sides": [
+        [
+          "left",
+          128.9
+        ],
+        [
+          "right",
+          193.65
+        ]
+      ]
+    },
+    {
+      "part": "pair-at-cap",
+      "solid": true,
+      "lumps": 1,
+      "volume_mm3": 13024.737569577028,
+      "structural_X_mm": [
+        128.9,
+        193.65
+      ],
+      "glue_sides": [
+        [
+          "left",
+          128.9
+        ],
+        [
+          "right",
+          193.65
+        ]
+      ]
+    },
+    {
+      "part": "electronics",
+      "solid": true,
+      "lumps": 1,
+      "volume_mm3": 36174.82191321106,
+      "structural_X_mm": [
+        193.9,
+        350
+      ],
+      "glue_sides": [
+        [
+          "left",
+          193.9
+        ]
+      ]
+    }
+  ],
+  "backup": "archive/pre-straight-base-lips.zip",
+  "limits": "Geometric solids and sampled paths; printed fit and adhesive strength require physical validation."
+}

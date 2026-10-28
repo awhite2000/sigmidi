@@ -1,0 +1,272 @@
+[
+  {
+    "version": "0.1",
+    "variant": "left",
+    "view": "switches",
+    "path": "wifi-left-switches.png",
+    "region": {
+      "height": 704,
+      "labels": [
+        "Channel 1\u201316",
+        "Program",
+        "Delay before (ms)",
+        "Channel 1\u201316",
+        "Controller",
+        "Value",
+        "Delay before (ms)",
+        "Channel 1\u201316",
+        "Controller",
+        "Value",
+        "Delay before (ms)"
+      ],
+      "steps": [
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any"
+      ],
+      "values": [
+        "2",
+        "24",
+        "5",
+        "3",
+        "17",
+        "127",
+        "5",
+        "3",
+        "17",
+        "0",
+        "5"
+      ],
+      "width": 1000,
+      "x": 140,
+      "y": 382.875
+    },
+    "order": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "comparison_crop_px": [
+      140,
+      382,
+      440,
+      704
+    ],
+    "source_sha256": "287f846fc2fdad7b35f2530a487def8081baad2a96946f17c20fb6fa9e4a387a"
+  },
+  {
+    "version": "0.1",
+    "variant": "left",
+    "view": "calibration",
+    "path": "wifi-left-calibration.png",
+    "region": {
+      "focus": {
+        "height": 809,
+        "width": 440,
+        "x": 140,
+        "y": 434.875
+      },
+      "height": 1044,
+      "labels": [
+        "Idle (mV)",
+        "Switch A (mV)",
+        "Switch B (mV)",
+        "Switch C (mV)",
+        "Switch D (mV)",
+        "Switch E (mV)",
+        "Switch 1 (mV)",
+        "Switch 2 (mV)",
+        "Switch 3 (mV)",
+        "Switch 4 (mV)",
+        "Switch 5 (mV)"
+      ],
+      "steps": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "values": [
+        "2200",
+        "508",
+        "287",
+        "943",
+        "1127",
+        "1264",
+        "825",
+        "683",
+        "1042",
+        "1200",
+        "1320"
+      ],
+      "width": 1000,
+      "x": 140,
+      "y": 382.875
+    },
+    "whole_millivolts": true,
+    "comparison_crop_px": [
+      140,
+      434,
+      440,
+      809
+    ],
+    "source_sha256": "fe6ba943edec774b2e1fe2777325d82c75cba6c4eb793db10059c8d0273f463f"
+  },
+  {
+    "version": "0.1",
+    "variant": "right",
+    "view": "switches",
+    "path": "wifi-right-switches.png",
+    "region": {
+      "height": 704,
+      "labels": [
+        "Channel 1\u201316",
+        "Program",
+        "Delay before (ms)",
+        "Channel 1\u201316",
+        "Controller",
+        "Value",
+        "Delay before (ms)",
+        "Channel 1\u201316",
+        "Controller",
+        "Value",
+        "Delay before (ms)"
+      ],
+      "steps": [
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any",
+        "any"
+      ],
+      "values": [
+        "2",
+        "24",
+        "5",
+        "3",
+        "17",
+        "127",
+        "5",
+        "3",
+        "17",
+        "0",
+        "5"
+      ],
+      "width": 1000,
+      "x": 140,
+      "y": 382.875
+    },
+    "order": [
+      "E",
+      "D",
+      "C",
+      "B",
+      "A",
+      "5",
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "comparison_crop_px": [
+      140,
+      382,
+      440,
+      704
+    ],
+    "source_sha256": "e3a9833a107b6660cf1a16970f5cdc0b3a57aa8d973cc52af26f7c1c2de117e8"
+  },
+  {
+    "version": "0.1",
+    "variant": "right",
+    "view": "calibration",
+    "path": "wifi-right-calibration.png",
+    "region": {
+      "focus": {
+        "height": 809,
+        "width": 440,
+        "x": 140,
+        "y": 434.875
+      },
+      "height": 1044,
+      "labels": [
+        "Idle (mV)",
+        "Switch E (mV)",
+        "Switch D (mV)",
+        "Switch C (mV)",
+        "Switch B (mV)",
+        "Switch A (mV)",
+        "Switch 5 (mV)",
+        "Switch 4 (mV)",
+        "Switch 3 (mV)",
+        "Switch 2 (mV)",
+        "Switch 1 (mV)"
+      ],
+      "steps": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "values": [
+        "2200",
+        "1264",
+        "1127",
+        "943",
+        "287",
+        "508",
+        "1320",
+        "1200",
+        "1042",
+        "683",
+        "825"
+      ],
+      "width": 1000,
+      "x": 140,
+      "y": 382.875
+    },
+    "whole_millivolts": true,
+    "comparison_crop_px": [
+      140,
+      434,
+      440,
+      809
+    ],
+    "source_sha256": "017826dff56185f52359bfb0d4fa998c46c608b052a2b1897a4d4d21cb1cba1d"
+  }
+]

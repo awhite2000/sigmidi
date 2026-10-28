@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="340" viewBox="0 0 985 340">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;font-size:15px;fill:#172b3b}path,line,rect.res{fill:none;stroke:#172b3b;stroke-width:2}.node{fill:#172b3b}</style>
+<text x="24" y="30" style="font-size:22px">SIGMIDI v0.1 · 7-switch linear ladder</text>
+<text x="24" y="58">10 kΩ pull-up + 20 kΩ idle resistor + one 1 kΩ section per switch (1%)</text>
+<text x="24" y="115">3V3</text><path d="M65 110H105 M165 110H350"/>
+<rect class="res" x="105" y="101" width="60" height="18"/><text x="110" y="90">10 kΩ</text>
+<circle class="node" cx="220" cy="110" r="4"/>
+<path d="M220 110V155 M220 200V248 M208 248H232 M212 254H228 M216 260H224"/>
+<rect class="res" x="211" y="155" width="18" height="45"/><text x="238" y="211">20 kΩ</text>
+<path d="M290 110V155 M290 178V248 M278 248H302 M282 254H298 M286 260H294 M278 155H302 M278 178H302"/>
+<circle class="node" cx="290" cy="110" r="4"/><text x="303" y="174">100 nF</text>
+<path d="M185 110V280H26"/><circle class="node" cx="185" cy="110" r="4"/>
+<text x="24" y="304">SENSE → GPIO1; capacitor close to MCU. All ground symbols connect together.</text>
+<path d="M350 110H362 M412 110H435"/>
+<rect class="res" x="362" y="102" width="50" height="16"/><text x="367" y="91">1 kΩ</text>
+<circle class="node" cx="435" cy="110" r="4"/><text x="423" y="141">T1</text>
+<path d="M435 110V160 M435 190V248 M423 248H447 M427 254H443 M431 260H439 M435 190L448 165"/>
+<text x="418" y="218">SW1</text>
+<path d="M435 110H447 M497 110H520"/>
+<rect class="res" x="447" y="102" width="50" height="16"/><text x="452" y="91">1 kΩ</text>
+<circle class="node" cx="520" cy="110" r="4"/><text x="508" y="141">T2</text>
+<path d="M520 110V160 M520 190V248 M508 248H532 M512 254H528 M516 260H524 M520 190L533 165"/>
+<text x="503" y="218">SW2</text>
+<path d="M520 110H532 M582 110H605"/>
+<rect class="res" x="532" y="102" width="50" height="16"/><text x="537" y="91">1 kΩ</text>
+<circle class="node" cx="605" cy="110" r="4"/><text x="593" y="141">T3</text>
+<path d="M605 110V160 M605 190V248 M593 248H617 M597 254H613 M601 260H609 M605 190L618 165"/>
+<text x="588" y="218">SW3</text>
+<path d="M605 110H617 M667 110H690"/>
+<rect class="res" x="617" y="102" width="50" height="16"/><text x="622" y="91">1 kΩ</text>
+<circle class="node" cx="690" cy="110" r="4"/><text x="678" y="141">T4</text>
+<path d="M690 110V160 M690 190V248 M678 248H702 M682 254H698 M686 260H694 M690 190L703 165"/>
+<text x="673" y="218">SW4</text>
+<path d="M690 110H702 M752 110H775"/>
+<rect class="res" x="702" y="102" width="50" height="16"/><text x="707" y="91">1 kΩ</text>
+<circle class="node" cx="775" cy="110" r="4"/><text x="763" y="141">T5</text>
+<path d="M775 110V160 M775 190V248 M763 248H787 M767 254H783 M771 260H779 M775 190L788 165"/>
+<text x="758" y="218">SW5</text>
+<path d="M775 110H787 M837 110H860"/>
+<rect class="res" x="787" y="102" width="50" height="16"/><text x="792" y="91">1 kΩ</text>
+<circle class="node" cx="860" cy="110" r="4"/><text x="848" y="141">T6</text>
+<path d="M860 110V160 M860 190V248 M848 248H872 M852 254H868 M856 260H864 M860 190L873 165"/>
+<text x="843" y="218">SW6</text>
+<path d="M860 110H872 M922 110H945"/>
+<rect class="res" x="872" y="102" width="50" height="16"/><text x="877" y="91">1 kΩ</text>
+<circle class="node" cx="945" cy="110" r="4"/><text x="933" y="141">T7</text>
+<path d="M945 110V160 M945 190V248 M933 248H957 M937 254H953 M941 260H949 M945 190L958 165"/>
+<text x="928" y="218">SW7</text>
+<text x="24" y="329">Normally open switches; one press at a time. Final tap is un-terminated. Calibrate all installed switches and idle.</text>
+</svg>

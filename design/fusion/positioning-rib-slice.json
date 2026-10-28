@@ -1,0 +1,371 @@
+{
+  "revision": "display_m2x5",
+  "printer": "Prusa MK3S+",
+  "material": "PETG",
+  "nozzle_mm": 0.6,
+  "rib_thickness_mm": 1.8,
+  "layers_below_top_lead_in_mm": [
+    2.4,
+    3.0,
+    3.6,
+    4.2
+  ],
+  "all_probes_have_two_or_more_tracks": true,
+  "base_supports_required": false,
+  "checks": [
+    {
+      "part": "print/base-left",
+      "side": "front",
+      "native_X_mm": 60,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-left",
+      "side": "front",
+      "native_X_mm": 60,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-left",
+      "side": "front",
+      "native_X_mm": 60,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-left",
+      "side": "front",
+      "native_X_mm": 60,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-left",
+      "side": "front",
+      "native_X_mm": 150,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-left",
+      "side": "front",
+      "native_X_mm": 150,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-left",
+      "side": "front",
+      "native_X_mm": 150,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-left",
+      "side": "front",
+      "native_X_mm": 150,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-left",
+      "side": "rear",
+      "native_X_mm": 62.5,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-left",
+      "side": "rear",
+      "native_X_mm": 62.5,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-left",
+      "side": "rear",
+      "native_X_mm": 62.5,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-left",
+      "side": "rear",
+      "native_X_mm": 62.5,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 220,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 220,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 220,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 220,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 245,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 245,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 245,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 245,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 275,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 275,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 275,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 275,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 288.5,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 288.5,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 288.5,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 288.5,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 305,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 305,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 305,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "front",
+      "native_X_mm": 305,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "rear",
+      "native_X_mm": 294,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "rear",
+      "native_X_mm": 294,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "rear",
+      "native_X_mm": 294,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "print/base-right",
+      "side": "rear",
+      "native_X_mm": 294,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "front",
+      "native_X_mm": 145,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "front",
+      "native_X_mm": 145,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "front",
+      "native_X_mm": 145,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "front",
+      "native_X_mm": 145,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "front",
+      "native_X_mm": 170,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "front",
+      "native_X_mm": 170,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "front",
+      "native_X_mm": 170,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "front",
+      "native_X_mm": 170,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "rear",
+      "native_X_mm": 145,
+      "print_Z_mm": 2.4,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "rear",
+      "native_X_mm": 145,
+      "print_Z_mm": 3.0,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "rear",
+      "native_X_mm": 145,
+      "print_Z_mm": 3.6,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "modular/pair-base",
+      "side": "rear",
+      "native_X_mm": 145,
+      "print_Z_mm": 4.2,
+      "extrusion_tracks": 3
+    }
+  ],
+  "STL_checks": [
+    {
+      "path": "print/base-left.stl",
+      "sha256": "ac7ba15004ecff174089234c886af025626d4b4e0f003bcbfdd8f788ebb8fe59",
+      "gcode_sha256": "6bb148d1d735281bc9baa10e770e82ddba75b9bcb79748aff735feb6c0c47e02"
+    },
+    {
+      "path": "print/base-right.stl",
+      "sha256": "1dc6645060bb782717b787fff949e1304608ec68ba54b0258a9ced1b3a448cd2",
+      "gcode_sha256": "9439515f5d1204eec5b7273c9393f75570956ff3697cd4247a42cd99f503f8a4"
+    },
+    {
+      "path": "modular/pair-base.stl",
+      "sha256": "3a2952b453372f65fe0823cc7f92e0e9cce1d45be8ddab99db03a1fe249038a3",
+      "gcode_sha256": "7614ef0b95c3b2f86ad4fd2cf3360e25adf33cf89582187ed26501ba0b46bd7c"
+    }
+  ],
+  "limits": "Finite toolpath probes; actual fit and layer adhesion depend on print calibration."
+}

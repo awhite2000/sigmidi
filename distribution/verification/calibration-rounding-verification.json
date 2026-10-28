@@ -1,0 +1,15 @@
+{
+  "version": "0.1",
+  "source_sha256": "ec1bdfe45a42f8b8942e4f94efe272d9d5c85d262450668ed90f3252aa5a8a00",
+  "verified_UTC": "2026-10-28T15:50:03.611290+00:00",
+  "display": "whole millivolts",
+  "integer_edit_step_mV": 1,
+  "untouched_and_captured_precision_preserved": true,
+  "host_tests_passed": true,
+  "firmware_build_passed": true,
+  "browser_checked_variants": [
+    "Left",
+    "Right"
+  ],
+  "hardware_flash_tested": false
+}

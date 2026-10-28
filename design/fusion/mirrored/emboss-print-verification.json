@@ -1,0 +1,27 @@
+{
+  "revision": "sigmidi_embossed_icon_25mm",
+  "nozzle_mm": 0.6,
+  "layer_mm": 0.3,
+  "material": "PETG",
+  "slicer_exit_code": 0,
+  "oriented_mesh_topology": "closed, consistently oriented, no degenerate/nonmanifold edges",
+  "new_emboss_extrusion_segments": 882,
+  "new_emboss_layers": 82,
+  "new_emboss_print_Z_range_mm": [
+    63.3,
+    87.6
+  ],
+  "tested_print_X_region_mm": [
+    98.6,
+    99.28
+  ],
+  "former_roof_print_X_mm": 99.3,
+  "gcode_sha256": "22c4cda77237f5bd2b3dd4a8703d226afaa7fda2bf0a2eda7e9e39db0c09ff4e",
+  "STL_sha256": "24b88aab44e5eb655139910f6a13107ac39993bbd28e1d6fe6d72d8fa5eea03f",
+  "estimated_time": "6h 24m 39s",
+  "filament_g": "113.63",
+  "support_extrusion_filament_mm": 3285.35,
+  "all_192_retained_critical_feature_probes_passed": true,
+  "existing_print_orientation_retained": true,
+  "physical_print_tested": false
+}

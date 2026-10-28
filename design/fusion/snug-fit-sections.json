@@ -1,0 +1,16 @@
+{
+  "revision": "snug_06_tolerances",
+  "source": "Exact intersections of current high-resolution STL triangles, mapped back to native millimetres; no mesh alteration",
+  "image": "snug-fit-sections.png",
+  "image_sha256": "bf5c1044ea694f73824fd47989b12443eeef62ac5c193d364eb9f450ba42393a",
+  "STL_sha256": {
+    "print/shell-left.stl": "9e0cd12be8ed445f8f1531d4eefc239dcb5b1dfbfa4c18a5908f201656fe7557",
+    "print/shell-right.stl": "3537c361d59e515bac5ea71acf2fce2f7971ba9ca7b7df897f4718c0c7c9a3d3",
+    "print/base-left.stl": "ac7ba15004ecff174089234c886af025626d4b4e0f003bcbfdd8f788ebb8fe59"
+  },
+  "nominal_clearances_mm": {
+    "inclined_hook_normal": 0.2,
+    "base_rib_to_wall": 0.2
+  },
+  "limitations": "Nominal geometry, not measurements of a physical print. The hook panel is cropped; edges outside the view continue into the main walls."
+}

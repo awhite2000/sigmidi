@@ -1,0 +1,64 @@
+{
+  "revision": "sigmidi_embossed_icon_25mm",
+  "version": "0.1",
+  "width_mm": 25,
+  "height_mm": 20.183073229291715,
+  "raised_height_mm": 0.6,
+  "center_XY_mm": [
+    75.1,
+    -18
+  ],
+  "roof_Z_mm": 30,
+  "switch_A_X_mm": 42.6,
+  "switch_B_X_mm": 107.6,
+  "flat_roof_backing_mm": 3,
+  "geometry_source": "../../branding/sigmidi-mark-cad-25mm.json",
+  "top_view_shape_reflected": false,
+  "checks": [
+    {
+      "component": "Mirrored 01 Chassis - 2mm sides - 3mm top - 80deg filleted step",
+      "icon_bounds_mm": [
+        62.599999999999994,
+        -28.091536614645854,
+        30.0,
+        87.6,
+        -7.908463385354141,
+        30.599999999999994
+      ],
+      "added_volume_mm3": 58.79105844018262,
+      "removed_volume_mm3": 0,
+      "missing_roof_backing_mm3": 0,
+      "solid": true,
+      "connected_lumps": 1
+    },
+    {
+      "component": "Existing LEFT electronics - 4 switches - real PCB poses",
+      "icon_bounds_mm": [
+        62.599999999999994,
+        -28.091536614645854,
+        30.0,
+        87.6,
+        -7.908463385354141,
+        30.599999999999994
+      ],
+      "added_volume_mm3": 58.79105844018262,
+      "removed_volume_mm3": 0,
+      "missing_roof_backing_mm3": 0,
+      "solid": true,
+      "connected_lumps": 1
+    }
+  ],
+  "hardware_collisions": [],
+  "minimum_hardware_AABB_distance": {
+    "component": "Mirrored SW05 - rotated",
+    "body": "Actual 30x13x15 body (1) (1) (1) - logical mirror",
+    "lower_bound_mm": 3.0000000000000036
+  },
+  "unrelated_geometry_and_placements_unchanged": true,
+  "main_and_modular_updated": true,
+  "original_Right_models_unchanged": true,
+  "native_backup": "../archive/pre-sigmidi-25mm-emboss.f3d",
+  "UTC": "2026-10-28T16:00:30.445670+00:00",
+  "document": "MIDI Foot Controller - VERIFIED chassis v105",
+  "saved": true
+}

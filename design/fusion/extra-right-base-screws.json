@@ -1,0 +1,92 @@
+{
+  "revision": "extra_right_base_screws",
+  "new_centers_XY_mm": [
+    [
+      201,
+      6
+    ],
+    [
+      201,
+      86
+    ]
+  ],
+  "distance_right_of_split_mm": 7.1,
+  "right_section_base_screw_count": 4,
+  "main_total_base_screws": 8,
+  "modular_8_switch_total_base_screws": 8,
+  "screw_type": "M2x6 countersunk, same as existing base screws",
+  "boss_outer_diameter_mm": 9,
+  "boss_Z_mm": [
+    -22,
+    -15
+  ],
+  "pilot_diameter_mm": 1.9,
+  "pilot_depth_mm": 6.5,
+  "pilot_blind_cap_mm": 0.5,
+  "base_clearance_diameter_mm": 2.6,
+  "countersink_diameter_mm": 4.4,
+  "countersink_depth_mm": 0.9,
+  "countersink_included_angle_degrees": 90,
+  "leading_print_web_run_mm": 9,
+  "leading_print_web_rise_mm": 8.7,
+  "leading_print_web_angle_degrees": 44.028978068920836,
+  "locating_rib_relief_radial_clearance_mm": 0.3,
+  "physical_collisions": [],
+  "clearances_below_3mm": [],
+  "minimum_mount_to_hardware_clearance_lower_bound_mm": 3.5426039680111456,
+  "nearest_hardware_below_5mm": [
+    [
+      1,
+      "LED09 Pololu 2535 - OPTIONAL installed reference",
+      "DIN - reference 0.5mm lead, trimmed to 6mm - recessed 4.9mm",
+      3.5426039680111456
+    ],
+    [
+      1,
+      "LED09 Pololu 2535 - OPTIONAL installed reference",
+      "5V - reference 0.5mm lead, trimmed to 6mm - recessed 4.9mm",
+      4.613194112468172
+    ]
+  ],
+  "wire_collisions": [],
+  "pilot_checks": [
+    {
+      "center_XY_mm": [
+        201,
+        6
+      ],
+      "empty_pilot_intersection_mm3": 0,
+      "blind_cap_probe_mm3": 1.3892908112338047
+    },
+    {
+      "center_XY_mm": [
+        201,
+        86
+      ],
+      "empty_pilot_intersection_mm3": 0,
+      "blind_cap_probe_mm3": 1.3892908112338047
+    }
+  ],
+  "new_screw_intersections": [],
+  "assembly_collisions": [],
+  "base_removal_samples_Z_mm": [
+    0,
+    -0.01,
+    -0.25,
+    -0.5,
+    -1,
+    -2,
+    -5,
+    -10,
+    -20
+  ],
+  "upper_original_material_removed_mm3": 0,
+  "upper_added_material_mm3": 966.47980381757,
+  "base_glue_lip_material_removed_mm3": 0,
+  "joint_assembly_argument": "All added shell material is at X>=196.5mm, beyond the left shell maximum X193.65; the vertical seam approach is unchanged. No original upper material or base glue lip is removed.",
+  "component_positions_and_existing_mounts_unchanged": true,
+  "rear_and_floor_vent_geometry_unchanged": true,
+  "main_and_modular_updated": true,
+  "backup": "archive/pre-extra-right-base-screws.zip",
+  "limits": "Nominal CAD fit and slicing do not establish printed screw engagement strength or physical tolerances. Remove all base screws before withdrawing the floor."
+}

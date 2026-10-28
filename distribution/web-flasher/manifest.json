@@ -1,0 +1,21 @@
+{
+  "name": "SIGMIDI Foot Controller",
+  "version": "0.1",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C6",
+      "improv": false,
+      "parts": [
+        {
+          "path": "firmware/boot-region.bin",
+          "offset": 0
+        },
+        {
+          "path": "firmware/application.bin",
+          "offset": 131072
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2262 @@
+{
+  "revision": "logical_left_electronics",
+  "nozzle_mm": 0.6,
+  "layer_mm": 0.3,
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        49.83437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        49.83437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        26.69781,
+        74.13437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 3.0,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 10.2,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 14.4,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 14.7,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.0,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.3,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.6,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 15.9,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 16.2,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 16.5,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 0,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 0,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 1,
+      "side": -1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/base-left",
+      "feature": "M2x5 hollow tower wall",
+      "native_XY_mm": [
+        58.49781,
+        74.13437
+      ],
+      "print_layer_mm": 17.4,
+      "axis": 1,
+      "side": 1,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/shell-left",
+      "feature": "retained 1.6mm USB pocket partition",
+      "native_XZ_mm": [
+        101.3,
+        -5.2
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "main/shell-left",
+      "feature": "retained 1.6mm USB pocket partition",
+      "native_XZ_mm": [
+        101.3,
+        -14.7
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "main/shell-left",
+      "feature": "retained 1.6mm USB pocket partition",
+      "native_XZ_mm": [
+        98.9,
+        -5.2
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "main/shell-left",
+      "feature": "retained 1.6mm USB pocket partition",
+      "native_XZ_mm": [
+        98.9,
+        -14.7
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "main/shell-left",
+      "feature": "retained 1.6mm USB pocket partition",
+      "native_XZ_mm": [
+        95.9,
+        -5.2
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "main/shell-left",
+      "feature": "retained 1.6mm USB pocket partition",
+      "native_XZ_mm": [
+        95.9,
+        -14.7
+      ],
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "main/shell-left",
+      "feature": "nominal 2.2mm label backing, multiple extrusion paths",
+      "label": "B",
+      "print_layer_mm": 98.4,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/shell-left",
+      "feature": "nominal 2.2mm label backing, multiple extrusion paths",
+      "label": "A",
+      "print_layer_mm": 32.7,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/shell-left",
+      "feature": "nominal 2.2mm label backing, multiple extrusion paths",
+      "label": "2",
+      "print_layer_mm": 131.7,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/shell-left",
+      "feature": "nominal 2.2mm label backing, multiple extrusion paths",
+      "label": "1",
+      "print_layer_mm": 67.5,
+      "extrusion_tracks": 2
+    },
+    {
+      "part": "main/shell-right",
+      "feature": "nominal 2.2mm label backing, multiple extrusion paths",
+      "label": "E",
+      "print_layer_mm": 56.7,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/shell-right",
+      "feature": "nominal 2.2mm label backing, multiple extrusion paths",
+      "label": "D",
+      "print_layer_mm": 121.8,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/shell-right",
+      "feature": "nominal 2.2mm label backing, multiple extrusion paths",
+      "label": "C",
+      "print_layer_mm": 186.9,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/shell-right",
+      "feature": "nominal 2.2mm label backing, multiple extrusion paths",
+      "label": "5",
+      "print_layer_mm": 23.7,
+      "extrusion_tracks": 4
+    },
+    {
+      "part": "main/shell-right",
+      "feature": "nominal 2.2mm label backing, multiple extrusion paths",
+      "label": "4",
+      "print_layer_mm": 88.8,
+      "extrusion_tracks": 3
+    },
+    {
+      "part": "main/shell-right",
+      "feature": "nominal 2.2mm label backing, multiple extrusion paths",
+      "label": "3",
+      "print_layer_mm": 153.6,
+      "extrusion_tracks": 4
+    }
+  ],
+  "STL_checks": [
+    {
+      "path": "main/base-left.stl",
+      "sha256": "e972b1235624b506d91779d3761654e19997fea88828e6d9525e3c7f0b453d0d",
+      "gcode_sha256": "b34d3d7281847ff6c3d919a0bc6ec5117553c50c85e518f9b3402bdfe85fdfd4"
+    },
+    {
+      "path": "main/shell-left.stl",
+      "sha256": "24b88aab44e5eb655139910f6a13107ac39993bbd28e1d6fe6d72d8fa5eea03f",
+      "gcode_sha256": "22c4cda77237f5bd2b3dd4a8703d226afaa7fda2bf0a2eda7e9e39db0c09ff4e"
+    },
+    {
+      "path": "main/shell-right.stl",
+      "sha256": "0de000e91a20590fedbe70e9a637943153aa9519386d60f4d960a6ad5aa39473",
+      "gcode_sha256": "a3cb4bb2a4b6f90b5d351dcc044ac0f7fdd61bdbb51e52153f6fe0f3d051c053"
+    }
+  ],
+  "limits": "Finite extrusion probes at critical sections, not a physical print or fit test."
+}

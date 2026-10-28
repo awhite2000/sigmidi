@@ -1,0 +1,58 @@
+{
+  "revision": "sigmidi_embossed_icon_25mm",
+  "native_document": "MIDI Foot Controller - VERIFIED chassis v107",
+  "original_native_components_preserved": 34,
+  "original_files_byte_identical": 132,
+  "unique_print_shapes": 11,
+  "print_meshes_with_coupons": 13,
+  "sliced_projects_with_aliases": 17,
+  "wall_samples": 844434,
+  "unresolved_wall_samples": 0,
+  "critical_toolpath_checks": 192,
+  "solid_label_backing_checks": 20,
+  "nozzle_mm": 0.6,
+  "layer_mm": 0.3,
+  "CAD": [
+    {
+      "file": "main/midi-foot-mirrored-main",
+      "STEP_solids": 304,
+      "STEP_BREP_WITH_VOIDS": 1,
+      "native_bodies": 305,
+      "native_solids": 305,
+      "complete": true,
+      "hierarchy": "flattened named bodies in assembly coordinates; editable source hierarchy retained in current Fusion document"
+    },
+    {
+      "file": "modular/midi-foot-mirrored-modular",
+      "STEP_solids": 287,
+      "STEP_BREP_WITH_VOIDS": 1,
+      "native_bodies": 288,
+      "native_solids": 288,
+      "complete": true,
+      "hierarchy": "flattened named bodies in assembly coordinates; editable source hierarchy retained in current Fusion document"
+    },
+    {
+      "file": "modular/pair-shell-D",
+      "STEP_solids": 1
+    },
+    {
+      "file": "modular/pair-shell-at-right-cap-C",
+      "STEP_solids": 1
+    },
+    {
+      "file": "modular/pair-shell-at-right-cap-E",
+      "STEP_solids": 1
+    }
+  ],
+  "estimates": {
+    "main": {
+      "grams": 343.54,
+      "seconds": 62187
+    },
+    "modular_8_switches": {
+      "grams": 312.28,
+      "seconds": 56660
+    }
+  },
+  "physical_print_tested": false
+}

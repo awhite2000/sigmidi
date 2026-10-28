@@ -1,0 +1,184 @@
+{
+  "revision": "sigmidi_embossed_icon_25mm",
+  "parts": [
+    {
+      "path": "main/shell-left",
+      "size_mm": [
+        52.600000000000016,
+        92.0,
+        160.35
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": -90,
+      "orientation": "outer end on bed, seam upward"
+    },
+    {
+      "path": "main/shell-right",
+      "size_mm": [
+        51.99999999999996,
+        92.0,
+        193.65000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": 90,
+      "orientation": "outer end on bed, seam upward"
+    },
+    {
+      "path": "main/base-left",
+      "size_mm": [
+        156.1,
+        92.0,
+        21.0
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": 0,
+      "orientation": "outside floor down, posts upward"
+    },
+    {
+      "path": "main/base-right",
+      "size_mm": [
+        193.65000000000003,
+        92.0,
+        21.0
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": 0,
+      "orientation": "outside floor down, posts upward"
+    },
+    {
+      "path": "modular/pair-shell-C",
+      "size_mm": [
+        52.000000000000014,
+        92.0,
+        69.00000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": -90,
+      "orientation": "outer end on bed, seam upward"
+    },
+    {
+      "path": "modular/pair-shell-at-right-cap-D",
+      "size_mm": [
+        52.000000000000014,
+        92.0,
+        69.00000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": -90,
+      "orientation": "outer end on bed, seam upward"
+    },
+    {
+      "path": "modular/pair-base",
+      "size_mm": [
+        64.75000000000001,
+        92.0,
+        21.0
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": 0,
+      "orientation": "outside floor down, posts upward"
+    },
+    {
+      "path": "modular/right-cap",
+      "size_mm": [
+        54.0,
+        92.0,
+        8.500000000000014
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": 90,
+      "orientation": "outer end on bed, seam upward"
+    },
+    {
+      "path": "modular/pair-shell-D",
+      "size_mm": [
+        52.000000000000014,
+        92.0,
+        69.00000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": -90,
+      "orientation": "outer end on bed, seam upward"
+    },
+    {
+      "path": "modular/pair-shell-at-right-cap-C",
+      "size_mm": [
+        52.000000000000014,
+        92.0,
+        69.00000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": -90,
+      "orientation": "outer end on bed, seam upward"
+    },
+    {
+      "path": "modular/pair-shell-at-right-cap-E",
+      "size_mm": [
+        52.000000000000014,
+        92.0,
+        69.00000000000003
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": -90,
+      "orientation": "outer end on bed, seam upward"
+    },
+    {
+      "path": "main/fit-coupon-left",
+      "size_mm": [
+        7.800000000000007,
+        5.999999999999998,
+        14.000000000000004
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": -90,
+      "orientation": "outside floor down, posts upward"
+    },
+    {
+      "path": "main/fit-coupon-right",
+      "size_mm": [
+        5.0,
+        5.999999999999998,
+        10.0
+      ],
+      "solid": true,
+      "lumps": 1,
+      "rotation_Y_degrees": 90,
+      "orientation": "outside floor down, posts upward"
+    }
+  ],
+  "native_equivalence_checks": [
+    {
+      "parts": "electronics shell",
+      "bidirectional_difference_mm3": [
+        0,
+        0
+      ]
+    },
+    {
+      "parts": "electronics base",
+      "bidirectional_difference_mm3": [
+        0,
+        0
+      ]
+    },
+    {
+      "parts": "universal pair base",
+      "bidirectional_difference_mm3": [
+        0,
+        0
+      ]
+    }
+  ]
+}

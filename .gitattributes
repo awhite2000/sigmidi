@@ -1,0 +1,13 @@
+# Release and CAD verification records hash exact bytes. Preserve line endings.
+* -text
+
+# Treat manufacturing and release formats as binary in diffs and merges.
+*.step binary
+*.stp binary
+*.stl binary
+*.f3d binary
+*.3mf binary
+*.pdf binary
+*.png binary
+*.zip binary
+*.bin binary

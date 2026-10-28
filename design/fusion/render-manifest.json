@@ -1,0 +1,121 @@
+{
+  "revision": "display_m2x5",
+  "captured_UTC": "2026-10-27T21:25:02.644208+00:00",
+  "native_document": "MIDI Foot Controller - VERIFIED chassis v93",
+  "source_geometry_sha256": "1f7fbde90ff30901bdf73842c4a143a308fb52546f5018c838cb6a3c9cab3399",
+  "images": [
+    {
+      "path": "assembled.png",
+      "sha256": "4ccba0f7e56eddb7b1133b3bbdc00117c74b72e40cdbb0a5da003515fc9d2e7f"
+    },
+    {
+      "path": "rear.png",
+      "sha256": "baa90394159e308bf09e142eec213176e057a289b0ae90c2a718547860a3a0fa"
+    },
+    {
+      "path": "panel-top.png",
+      "sha256": "94761726c2095ba300d93ccce539f241fec687e8699157d30026e82b15847434"
+    },
+    {
+      "path": "internal.png",
+      "sha256": "4444a1a3daa759104dd37e47f40b6cd135ece42b20fb081a6b1198624cfa2847"
+    },
+    {
+      "path": "mounted-boards.png",
+      "sha256": "1f4115128082a5cb42156cf66e89b66064afa99360d9ea264cda2b2190d4136a"
+    },
+    {
+      "path": "switch-labels.png",
+      "sha256": "c29942b08ff7a557d35fcdbecc33191ea6ffa94a1168faafceacf10c68734eb7"
+    },
+    {
+      "path": "base-open.png",
+      "sha256": "ef1c53a66cb191f7f780043281f339df8324caa673541e97a2b6c510ffabd3df"
+    },
+    {
+      "path": "base-supports.png",
+      "sha256": "abfb2e2c8d1d4fdfd9fc478b63755f7308bdea14a042ce5e9536bff5d7312059"
+    },
+    {
+      "path": "print/split-exploded.png",
+      "sha256": "847d2aafeab68b1849badbf9deb5b30f3dc43a7a8ba0cdba71d376f88030ce84"
+    },
+    {
+      "path": "print/straight-base-lips.png",
+      "sha256": "a4a7d192bff1fe1bdb0efa7132a58a3d447cf3e29b13ec60c5f6a390306c4240"
+    },
+    {
+      "path": "print/perimeter-ledge-detail.png",
+      "sha256": "1dc0b8d6625780f729604301cd6de42f390032824e0e22fa717effaa93552170"
+    },
+    {
+      "path": "base-corner-detail.png",
+      "sha256": "2ee67640fbf67ab4d2ee4292fcf809c73c54a42d009eb4e8edcf6ab63d965364"
+    },
+    {
+      "path": "upper-corner-wall-detail.png",
+      "sha256": "fd0e088e45b4834eaf94f72cb0e071cd78e36e5e5b7187e702fa75292b507aa8"
+    },
+    {
+      "path": "blind-pilot-cap-section.png",
+      "sha256": "2c24e4567e87003ff173209c8021e634cfd6261c9ee08f8a57fab35ee6ee589c"
+    },
+    {
+      "path": "right-shell-base-mounts.png",
+      "sha256": "a7e7d252c983fa2a93914b1c461eebbf1a04f7e2838c3ead5f86b84fb158ac23"
+    },
+    {
+      "path": "power-internal.png",
+      "sha256": "e62d2d8918a28b21189494fa78dee03ce4460c824701602a222d7df484c48fdb"
+    },
+    {
+      "path": "power-rear.png",
+      "sha256": "45ec8562c256c1df8719d92794a98a977b190d13bdb6d62774187db35050d674"
+    },
+    {
+      "path": "clip-mount.png",
+      "sha256": "1053307ffc5cf1f3ca45b5479b266928b579dcb2837687b9d4dda12d9e474135"
+    },
+    {
+      "path": "ventilation-base.png",
+      "sha256": "ddaca909f93d61344d4a2d62a6dc5a164b72342f65bfd7d10bb7180f4fc59b98"
+    },
+    {
+      "path": "ventilation-rear.png",
+      "sha256": "5262bd7c7e91175284fceeba407443f5a24db8c9d50710ec1c181435d29d4fe8"
+    },
+    {
+      "path": "rear-ribs-internal.png",
+      "sha256": "5058b8aead4ed35f83b8035f13cb9ae77f24390dbc67193d06e41343a9984604"
+    },
+    {
+      "path": "rear-vent-membrane-section.png",
+      "sha256": "de9a977082cbe6142bbb23a76ae23806f35b9c6b3b9a6b7b6ab12cff9aa44513"
+    },
+    {
+      "path": "rear-rib-base-seat.png",
+      "sha256": "1a5df0782ad6bfc7766432dbe2428521135d53df3ffa210bad12863770264d9f"
+    },
+    {
+      "path": "modular/pair-two-screw-mounts.png",
+      "sha256": "73acc530188b5a5caa3b47eca7455edc726b0e9ca08bd5ec52a3788d35e78806"
+    },
+    {
+      "path": "modular/modular-exploded.png",
+      "sha256": "504dec25ba221361e9a16f36d625ce5f786ff9b67514b74ffbcb8cea8ecea5a4"
+    },
+    {
+      "path": "modular/cap-floor-underside.png",
+      "sha256": "9ef8d653ee710f8b9f265b26f8e34ded4fc1f93360a739c700cfaba88e00e43a"
+    },
+    {
+      "path": "modular/new-parts-print-orientations.png",
+      "sha256": "2ddd146323fe5f66fccce96a836d5331c8f340657a49a4a791caae22f9013dbe"
+    },
+    {
+      "path": "modular/modular-assembled.png",
+      "sha256": "334f4f921708203490b4070f47e75e759932fc818c00aad9dc6f5ea67c9371b0"
+    }
+  ],
+  "optional_LEDs": "Shown fitted in main views; mounting membranes remain present in the printable shell."
+}

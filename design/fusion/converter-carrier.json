@@ -1,0 +1,53 @@
+{
+  "revision": "wide_pololu_clips",
+  "converter": "Pololu S13V10F5 #4083; Kamami 1178565",
+  "manufacturer_STEP": "datasheets/pololu-4083.step",
+  "PCB_layout_XY_mm": [
+    [
+      220,
+      26
+    ],
+    [
+      232.065,
+      34.89
+    ]
+  ],
+  "PCB_bottom_Z_mm": -11,
+  "populated_Z_mm": [
+    -12.349875,
+    -8.184
+  ],
+  "inside_floor_Z_mm": -22,
+  "under_component_floor_clearance_mm": 9.650125,
+  "carrier_outer_XY_mm": [
+    [
+      218,
+      22.8
+    ],
+    [
+      234.065,
+      38.09
+    ]
+  ],
+  "PCB_edge_guide_clearance_mm": 0.8,
+  "PCB_edge_seat_overlap_mm": 0.8,
+  "carrier": "Three small bare-edge seats; two opposing relaxed PETG leaves, no adhesive required.",
+  "PCB_mount_holes": false,
+  "new_mounting_screws": 0,
+  "base_insertion_samples": 21,
+  "converter_insertion_samples": 41,
+  "body_collisions": [],
+  "assembly_collisions": [],
+  "near_body_AABB_lower_bounds_mm": [],
+  "converter_component_carrier_intersection_mm3": 0,
+  "socket_status": "Installed; see aux-power.json",
+  "backup": "archive/pre-aux-power.zip",
+  "limits": "Board boundary tolerance is \u00b10.3mm; physical fit and adhesive/thermal performance require validation.",
+  "spring_clip_details": "ventilated-clip.json",
+  "positive_lateral_locators": true,
+  "lateral_clearance_X_mm": 0.4,
+  "lateral_clearance_Y_mm": 0.3,
+  "spring_leaf_width_mm": 4.8,
+  "spring_leaf_thickness_mm": 1.6,
+  "wide_leaf_verification": "wide-pololu-clips.json"
+}
