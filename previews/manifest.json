@@ -19,7 +19,7 @@
     "tests/editor_test.js": "cfb980e8b276f2054b6cb0bf22034e4e1ab7e4d8f4eed059d809975f1d47d67d",
     "src/branding.hpp": "8399cbd5f124434e18b0e7ed93c24ff178ee098b3ad23573fd95c6d6cd8c5b98",
     "src/ble.cpp": "32215647da7c33cb74fd3fbc5c7f06efb1a2c7c9549c8d45adc77c0c6d39e11c",
-    "src/wifi.cpp": "bb4c516e5e937f4837520cf861472892a678251ae7b34923f269c982fdc0810c",
+    "src/wifi.cpp": "325356ff06e9404c887b42c85a8b807de32e508dd54c7df56620e43834378184",
     "scripts/brand_enclosure_previews.py": "d54debe916efcec3d9d8b4372e94d08f03479c0613d190c62cc1a1f05b85bf8c",
     "scripts/generate_ladder_variants.py": "521e585b884bacc161f674b88582ef412d145118d4014f76ac3b26679fee496c",
     "tests/config_test.cpp": "f30f2ca57399b7dba09d0123346587b06349b4d481af1bd88c2073682a0fcbbe",
@@ -339,5 +339,11 @@
     "UI_appearance_unchanged": true,
     "verification": "../distribution/verification/pedal-capture.json",
     "build_id": "eef991ea7349"
+  },
+  "wifi_password": {
+    "all_32_symbols_reachable": true,
+    "UI_appearance_unchanged": true,
+    "verification": "../distribution/verification/wifi-password.json",
+    "build_id": "7c4fa8597d2d"
   }
 }

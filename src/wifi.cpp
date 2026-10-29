@@ -174,8 +174,9 @@ bool wifiStart() {
     uint8_t mac[6];
     esp_read_mac(mac, ESP_MAC_WIFI_SOFTAP);
     snprintf(state.ssid, sizeof state.ssid, foot::WifiSsidFormat, mac[4], mac[5]);
+    static constexpr char alphabet[] = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
     for (int i = 0; i < 16; i++)
-        state.password[i] = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"[esp_random() % 31];
+        state.password[i] = alphabet[esp_random() % (sizeof alphabet - 1)];
     state.password[16] = 0;
     wifi_config_t cfg{};
     strcpy((char *)cfg.ap.ssid, state.ssid);
