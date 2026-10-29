@@ -123,6 +123,20 @@ int main() {
     p.toe = 3300.0f * 10000 / (5100 + 10000);
     assert(pedalValue(p, p.toe) == 127); // full travel of a passive 10k pot
     assert(pedalValue(p, p.toe / 2) == 64);
+    // Raw browser-captured passive-pot endpoints must span the complete MIDI range.
+    p.heel = 120;
+    p.toe = 2185;
+    assert(pedalValue(p, 120) == 0);
+    assert(pedalValue(p, 1152.5f) == 64);
+    assert(pedalValue(p, 2185) == 127);
+    auto calibrated = defaults();
+    char pedalError[80];
+    for (auto &input : calibrated.pedals) {
+        input = p;
+        input.toe = 3000.25f; // Valid ADC endpoint above the old 1.5x overflow threshold.
+        assert(pedalValue(input, input.toe) == 127);
+    }
+    assert(validate(calibrated, pedalError, sizeof pedalError));
     assert(Message{}.delayMs == 5);
     c.switches[0].press.messages[0].delayMs = 0;
     c.switches[0].release.messages[0].delayMs = 0;

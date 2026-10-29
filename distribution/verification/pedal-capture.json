@@ -1,0 +1,27 @@
+{
+  "verified_UTC": "2026-10-29T12:01:04.737900+00:00",
+  "version": "0.1",
+  "build_id": "eef991ea7349",
+  "source_sha256": "eef991ea7349a9ef245b1fb77f0d4066266d9da5d478734a7ef8433231b8428e",
+  "capture_units": "raw ADC millivolts; no gain multiplier",
+  "regression_failed_before_fix": true,
+  "host_tests": {
+    "real_editor_callbacks": true,
+    "both_pedal_inputs": true,
+    "both_endpoints": true,
+    "both_enclosure_variants": true,
+    "fractional_mV_preserved_in_save": true,
+    "whole_mV_display": true,
+    "toe_above_2200_mV": true,
+    "negative_samples_rejected": true,
+    "core_full_CC_range_0_127": true,
+    "core_midpoint_CC64": true,
+    "raw_endpoints_pass_validation": true,
+    "full_suite_passed": true,
+    "log_sha256": "4b1af04c3fe40738578df9cc38e005a8883b2da96ff5b46bb1c39b7225ac988d"
+  },
+  "target_build_passed": true,
+  "packaged_firmware_contains_fixed_editor": true,
+  "automatic_existing_endpoint_rescaling": false,
+  "physical_hardware_tested": false
+}

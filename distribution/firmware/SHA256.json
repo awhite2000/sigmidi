@@ -1,7 +1,7 @@
 {
   "README.txt": "51318a5b338066c50c96a051a1329e9783f8be44cc0508976139ca9691222dc8",
-  "bootloader.bin": "e8e0108aa5b16e4e53c81308d6415b60b68ecce7187237d925f0adc629eb1343",
-  "build-info.json": "5c0c99e9eccea390ece45f5b75848dc1631180d7a97571a78dbce4c20ac3b9ff",
-  "firmware.bin": "44687fef96057900122d05dd66e0f6aa6d461a672665b169650fdf3f06d0bb4b",
+  "bootloader.bin": "33a2a85aa4416ece44688ebc62763b68a6dbe4c5c7af3ff605946a6cba193f06",
+  "build-info.json": "2d27bf95cd6d7c8d2341d9bc50d2ae7b4421d83870f6cd364fa9fb2ed45b7541",
+  "firmware.bin": "aadd92bcf22b33a860d8dc3a5e588baabcc75ae708b961efce8f53682d3ad20c",
   "partitions.bin": "37f9719078927bf594a883c81ad80dd4e6d179c8db193fbded90851178aa39e7"
 }

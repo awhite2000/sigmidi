@@ -11,12 +11,12 @@
     "src/core.hpp": "d0b05afc7bedbe07874e5f9d68d4c1ad256db40ae09d351ea57a635d92020c7c",
     "src/display.hpp": "1a1bea047fc1a7ba40b554020bdcb7026867010ed25021084594d69b264974fe",
     "tests/display_preview.cpp": "cf523e1c51ae1625c8427ed766d122e722ba1a1323ecc620e312f4ce2b107f6e",
-    "web/index.html": "30dcd332fbe214dc3e4067e6823de4ebd685071de9cf0907d37ae2798f1cdbc8",
+    "web/index.html": "cac0fa988ce49454087a394055b69bd145d746179d604f99d663b17aebbf98be",
     "scripts/preview_display.py": "8a9ca52243ddd62f8d917a1906f2040d47a2453746fb8a396f2e3cce5cec60eb",
     "scripts/preview_wifi.py": "16da97e98a6d33511aa2da547d0cfc00579abab51ab2344635652330768166b7",
     "tests/mirrored_test.cpp": "e3acca6ed1a080e676d842c2776c808202566cfef25903d4bfb592db1130982c",
     "scripts/compose_wifi_variant_previews.py": "0da69da91dd704269170984a8eae446b04c2a4abe283e46db2fa593361ba7314",
-    "tests/editor_test.js": "5a6b9123167da8a3b369d5dc172ed079c8340cd9a13af94b937b8e090ffc19af",
+    "tests/editor_test.js": "cfb980e8b276f2054b6cb0bf22034e4e1ab7e4d8f4eed059d809975f1d47d67d",
     "src/branding.hpp": "8399cbd5f124434e18b0e7ed93c24ff178ee098b3ad23573fd95c6d6cd8c5b98",
     "src/ble.cpp": "32215647da7c33cb74fd3fbc5c7f06efb1a2c7c9549c8d45adc77c0c6d39e11c",
     "src/wifi.cpp": "bb4c516e5e937f4837520cf861472892a678251ae7b34923f269c982fdc0810c",
@@ -40,7 +40,7 @@
     "scripts/preview_cable_layout.py": "2c12e580dff20f4369e9ae878704ded327977d2de72bb0d16917bef3990ad35e",
     "scripts/preview_electrical.py": "ce8bf4e6265be781fb8bf89e26490ab0bb5023e4b66fda11bbd00bdbdad722cc",
     "src/hardware.cpp": "8377f8c7a499c83a67c82d5c7d972e48a61719dc469b5b46435d1d9a2bd475a8",
-    "tests/core_test.cpp": "0312f0149a261bb2a8e551d39929fc65f006d6b89a71edca4bd4bd8038334e98",
+    "tests/core_test.cpp": "4761223fe4c68ad9505d44e13d2394292a6b540d77c461dc5eb88ad4261e5ce2",
     "scripts/unified_electrical.py": "991d2baa186fc0fbe0d799d0a3bf2c9bb6221c4cbd7242a3a0836bf6b959089f",
     "src/counters.hpp": "e60bf4a979e0edfe3e8c935430e3b5fb37800b93d3584592d1ab29cc48699d72",
     "src/counters.cpp": "8d17090ad44f4401d0321f5cfceead885ed8b3e97d27b1caca9341907cbde6fa",
@@ -332,5 +332,12 @@
     ],
     "preferred_variant": "Left",
     "physical_hardware_capture": false
+  },
+  "pedal_capture": {
+    "raw_ADC_mV": true,
+    "both_inputs_and_endpoints_verified": true,
+    "UI_appearance_unchanged": true,
+    "verification": "../distribution/verification/pedal-capture.json",
+    "build_id": "eef991ea7349"
   }
 }

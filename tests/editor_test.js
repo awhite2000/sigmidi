@@ -194,6 +194,39 @@ const testButton=walk(ids.get('content').children[0]).find(n=>n.tagName==='butto
  assert.equal(vm.runInContext('JSON.stringify(requests[0].data.config)',context),storedBeforeSave);
  console.log('Calibration display tests passed: whole mV in both variants, integer editing, exact untouched/captured/saved values and unrounded non-voltage parameters');
 
+ // Pedal Capture must store the API's raw mV, just like ladder capture and the LCD.
+ // Exercise the real callbacks for both inputs/endpoints, including a toe >2200 mV.
+ for(const variant of [0,1]){
+  const endpoints=[{heel:120.25,toe:2185.5},{heel:145.5,toe:3000.25}];
+  vm.runInContext(`config.enclosureVariant=${variant};config.pedals=Array.from({length:2},()=>({enabled:true,resistor:false,invert:false,logarithmic:false,maxOhms:10000,heel:0,toe:3300,curve:9,channel:1,cc:11,outMin:0,outMax:127}));tab='Calibration';render()`,context);
+  for(let i=0;i<2;i++)for(const key of ['heel','toe']){
+   const mv=[2200,999,888];mv[i+1]=endpoints[i][key];
+   vm.runInContext(`dirty=false;api=async()=>({adcCalibrated:true,mv:${JSON.stringify(mv)}})`,context);
+   const before=JSON.parse(vm.runInContext('JSON.stringify(config.pedals)',context));
+   await walk(ids.get('content')).find(n=>n.tagName==='button'&&n.textContent===`Capture pedal ${i+1} ${key}`).onclick();
+   before[i][key]=endpoints[i][key];
+   assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(config.pedals)',context)),before);
+   assert.equal(vm.runInContext('dirty',context),true);
+  }
+  // Invalid samples must not overwrite a valid calibration or mark it dirty.
+  const captured=vm.runInContext('JSON.stringify(config.pedals)',context);
+  vm.runInContext('dirty=false;api=async()=>({adcCalibrated:true,mv:[2200,-1,-1]})',context);
+  for(let i=0;i<2;i++)for(const key of ['heel','toe'])
+   await walk(ids.get('content')).find(n=>n.tagName==='button'&&n.textContent===`Capture pedal ${i+1} ${key}`).onclick();
+  assert.equal(vm.runInContext('JSON.stringify(config.pedals)',context),captured);
+  assert.equal(vm.runInContext('dirty',context),false);
+  vm.runInContext("tab='Pedals';render()",context);
+  for(const key of ['heel','toe']){
+   const title=key==='heel'?'Heel signal (mV)':'Toe signal (mV)';
+   const fields=walk(ids.get('content')).filter(n=>n.tagName==='label'&&n.textContent===title);
+   assert.deepEqual(fields.map(n=>Number(n.children[0].value)),endpoints.map(p=>Math.round(p[key])));
+  }
+  vm.runInContext('api=async(path,data)=>{requests.push({path,data});return {revision:4}};requests=[]',context);
+  await vm.runInContext("write('save')",context);
+  assert.equal(vm.runInContext('JSON.stringify(requests[0].data.config.pedals)',context),captured);
+ }
+ console.log('Pedal capture tests passed: both inputs, heel/toe, Left/Right, raw mV precision, >2200 mV, invalid samples, rounded display and saved payload');
+
 
  // Per-message PC counters keep identities when the list is edited.
  vm.runInContext(`config=${JSON.stringify(sample)};config.switchCount=4;config.enclosureVariant=0;config.switches[0].press=[{type:1,pcMode:0,channel:2,number:24,value:0,delayMs:5,counterId:0},{type:1,pcMode:0,channel:2,number:9,value:0,delayMs:5,counterId:0}];tab='Switches';render()`,context);

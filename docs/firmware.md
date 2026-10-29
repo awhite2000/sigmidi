@@ -89,7 +89,7 @@ The browser and LCD share one validated draft. One browser writer owns a renewab
 
 **Save** persists the draft and keeps setup open. **Save & Exit** also returns to performance; the access point shuts down after a short response grace period. **Discard** cancels unsaved edits. Exports/imports use versioned JSON, exclude Wi-Fi credentials and session tokens, and validate the whole configuration before applying it.
 
-The editor exposes switch lists, pedal settings, live ADC readings, ladder capture, pedal heel/toe capture, LED assignments, count and enclosure settings. Calibration voltage fields show whole millivolts. Untouched fields and captures keep stored measurement precision; explicit voltage edits use 1 mV steps.
+The editor exposes switch lists, pedal settings, live ADC readings, ladder capture, pedal heel/toe capture, LED assignments, count and enclosure settings. Calibration voltage fields show whole millivolts. Untouched fields and captures keep stored measurement precision; explicit voltage edits use 1 mV steps. Pedal heel/toe Capture stores the raw ADC millivolts without gain scaling, matching the on-device endpoint fields and potentiometer conversion.
 
 ## LED feedback
 

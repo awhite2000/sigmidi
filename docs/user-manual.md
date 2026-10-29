@@ -285,7 +285,7 @@ MAX OHMS determines resistor-mode scaling; HEEL/TOE determine potentiometer scal
 
 For a general parameter pedal, choose the MIDI Device's assigned CC and channel, MIN VALUE 0, MAX VALUE 127 and Linear response first. Enable the input, save and exit, then move the pedal to test. A stationary pedal does not repeatedly send CC; invalid readings suppress output and appear as --- on the performance screen.
 
-The local pedal menu edits endpoint numbers; it has no live capture action. Use Wi-Fi live readings for measurements, then enter HEEL/TOE manually. Calibration and the v0.1 Capture-button limitation are explained on page 14.
+The local pedal menu edits endpoint numbers; it has no live capture action. Use Wi-Fi Calibration to capture HEEL/TOE, or enter the live mV readings manually. Both editors use the same unscaled endpoint values; see page 14.
 
 <!-- page -->
 
@@ -351,9 +351,9 @@ Voltage input fields display whole millivolts. Untouched values and switch captu
 | Electrical mode | Scaling to configure |
 |---|---|
 | Two-wire resistor, RESISTOR ON | Set MAX OHMS to its full-scale resistance, up to 10000. Conversion assumes a near-zero low end; HEEL/TOE do not scale this mode. |
-| Potentiometer, RESISTOR OFF | Read the input's live mV at both endpoints. Enter the lower value as HEEL and the higher as TOE; their difference must be at least 50 mV. |
+| Potentiometer, RESISTOR OFF | Measure both endpoints. Capture the lower-voltage endpoint as HEEL and the higher as TOE; their difference must be at least 50 mV. |
 
-Unplug before changing electrical mode. Save and exit so the saved mode is applied, reconnect the pedal, then return to setup to measure it. For v0.1 **enter pedal endpoints manually from the live readings**: the Wi-Fi Capture pedal heel/toe buttons apply a legacy scale factor and are unsuitable for this passive interface. This limitation does not affect switch-ladder Capture.
+Unplug before changing electrical mode. Save and exit so the saved mode is applied, reconnect the pedal, then return to setup to measure it. In Wi-Fi Calibration, move to the lower-voltage endpoint and click **Capture pedal 1 heel** (or input 2); move to the higher endpoint and click **Capture pedal 1 toe**. Captures store raw ADC millivolts without scaling and retain measurement precision. Fields display whole mV. You can also enter the live readings manually in Pedals or the local menu. Save the calibration before returning to performance.
 
 If the physical travel runs the opposite way, retain the valid low/high endpoint order and enable INVERT. Choose Linear first, then Logarithmic and CURVE if desired. Set the MIDI Device's assigned CC/channel and output range, enable the input, save and exit. Move the pedal after returning to performance to test its output. Calibrate inputs 1 and 2 separately.
 
@@ -377,7 +377,7 @@ Confirm MIDI READY; exercise every installed switch; check both pedal extremes a
 | Missing / wrong switch label | Check count, Modular/Linear and Left/Right. Capture Idle and each switch into the correctly named row. |
 | Can't enter setup | Release all switches and allow pending actions to finish, then click the encoder. |
 | Save does not exit | Read the notice. Check MIDI ranges, 32/128 message limits, ladder-window separation and pedal endpoint validity. |
-| Pedal OFF / --- / no change | Enable it, check saved electrical mode and endpoint range, then move it after leaving setup. Use manual endpoint entry in v0.1. |
+| Pedal OFF / --- / no change | Enable it, check saved electrical mode, recapture valid endpoints, then move it after leaving setup. |
 | Wi-Fi unavailable | Start WI-FI SETUP, join its network and open HTTP at 192.168.4.1. Save & exit stops the access point. |
 | Can't edit locally | BROWSER EDITING means browser ownership. Save/export there first; encoder hold takes over and discards the draft. |
 | LED dark / wrong color | Check chain enable, brightness, pixel assignment and saved RGB/timing choices. Performance actions require MIDI READY. |

@@ -2,9 +2,9 @@
   "name": "SIGMIDI Foot Controller",
   "version": "0.1",
   "firmware_name": "sigmidi-foot-controller-0.1.bin",
-  "build_id": "13c3f89041c5",
-  "built_at": "2026-10-29T10:31:49.506064+00:00",
-  "source_sha256": "13c3f89041c515b49f1b90a07940423a824c006a37258add9d71c20f1c846a7c",
+  "build_id": "eef991ea7349",
+  "built_at": "2026-10-29T11:59:48.384166+00:00",
+  "source_sha256": "eef991ea7349a9ef245b1fb77f0d4066266d9da5d478734a7ef8433231b8428e",
   "source_files": {
     "src/CMakeLists.txt": "4ff0343760e007707f6a894c8a04f1a1007c5a361bdba8b5ae2fa517592a5bac",
     "src/app.hpp": "434a5cae96be1bd505d3b3382103166aa4a832a8e07d18b08ab059fc8feb6b05",
@@ -27,16 +27,16 @@
     "src/storage.cpp": "36c651997183ea6f7b5ea5a4751ddae492487d854396ce21146a0d9bc5c27b79",
     "src/ui.cpp": "f881edbc24634a7649c278b20acd3f094495b72ad8f30196de9ed88691c465f9",
     "src/wifi.cpp": "bb4c516e5e937f4837520cf861472892a678251ae7b34923f269c982fdc0810c",
-    "web/index.html": "30dcd332fbe214dc3e4067e6823de4ebd685071de9cf0907d37ae2798f1cdbc8",
+    "web/index.html": "cac0fa988ce49454087a394055b69bd145d746179d604f99d663b17aebbf98be",
     "CMakeLists.txt": "d2b6a54beb7cf20478f15ccc126d5b6f1c83393b5a5eb73f0738124794d5c894",
     "platformio.ini": "8337ad02af99edbcbbda5690bd5f3d5edb56a468674833830749b4b82c7dc8c0",
     "sdkconfig.defaults": "d5be1d2d2cabfa1b86214ae157adcf835b6afd801d76789f87b6a9a084095041",
     "partitions.csv": "0fc87e012db3c478107e047978fd142c43f104edb0dfb5546537d16f49a95300"
   },
   "sha256": {
-    "bootloader.bin": "e8e0108aa5b16e4e53c81308d6415b60b68ecce7187237d925f0adc629eb1343",
+    "bootloader.bin": "33a2a85aa4416ece44688ebc62763b68a6dbe4c5c7af3ff605946a6cba193f06",
     "partitions.bin": "37f9719078927bf594a883c81ad80dd4e6d179c8db193fbded90851178aa39e7",
-    "firmware.bin": "44687fef96057900122d05dd66e0f6aa6d461a672665b169650fdf3f06d0bb4b"
+    "firmware.bin": "aadd92bcf22b33a860d8dc3a5e588baabcc75ae708b961efce8f53682d3ad20c"
   },
   "chip": "ESP32-C6",
   "flash_bytes": 4194304,
