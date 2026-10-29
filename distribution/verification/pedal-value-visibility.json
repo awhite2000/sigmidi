@@ -1,0 +1,20 @@
+{
+  "verified_UTC": "2026-10-29T14:33:18.471185+00:00",
+  "build_id": "d65cb3ec51b9",
+  "source_sha256": "d65cb3ec51b99bf7162ec75300889743beefb4ec7b076475b8f9efa590b211b0",
+  "pending_display": "--- with no position bar; MOVE prompt on MIDI READY",
+  "reveal": "independent per input after its first accepted performance CC send",
+  "checks": {
+    "full_host_suite_passed": true,
+    "both_inputs_and_variants": true,
+    "pending_values_hidden_offline": true,
+    "pending_frame_identical_for_values_0_and_127": true,
+    "revealed_frame_changes_with_value": true,
+    "disabled_OFF_and_invalid_reading_retained": true,
+    "stripe_and_rotation_checks_passed": true,
+    "log_sha256": "f7c34d1c40b44b3868b866aeff1825537621c843d114e1dd961530a6d5e45c7e"
+  },
+  "target_build_passed": true,
+  "preview_reviewed": true,
+  "physical_hardware_tested": false
+}

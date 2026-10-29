@@ -191,17 +191,19 @@ void renderDisplayStripe(const DisplayFrame &v, int firstY, int rows, uint16_t *
             c.text(x + 8, 151, label, 1, Muted, 18);
             if (!p.enabled)
                 snprintf(value, sizeof value, "OFF");
-            else if (p.value < 0)
+            else if (!p.valueVisible || p.value < 0)
                 snprintf(value, sizeof value, "---");
             else
                 snprintf(value, sizeof value, "%03d", std::clamp(p.value, 0, 127));
             c.text(x + 8, 164, value, 3, p.enabled ? (i ? Blue : Accent) : Muted, 4);
             if (p.needsMove)
                 c.text(x + 74, 173, "MOVE", 1, Amber, 4);
-            c.round(x + 8, 192, 104, 5, 2, Border);
-            if (p.enabled && p.value >= 0)
-                c.round(x + 8, 192, std::max(2, 104 * std::clamp(p.value, 0, 127) / 127), 5, 2,
-                        i ? Blue : Accent);
+            if (!p.enabled || p.valueVisible) {
+                c.round(x + 8, 192, 104, 5, 2, Border);
+                if (p.enabled && p.value >= 0)
+                    c.round(x + 8, 192, std::max(2, 104 * std::clamp(p.value, 0, 127) / 127), 5, 2,
+                            i ? Blue : Accent);
+            }
         }
         c.text(17, 214, v.notice, 1, Muted, 40);
     } else if (v.screen == Screen::Browser) {

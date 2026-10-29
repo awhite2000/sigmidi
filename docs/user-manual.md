@@ -68,7 +68,7 @@ The four-switch Left base reads **A B / 1 2** from left to right. Extensions add
 | PRESS / RELEASE counts | Numbers of configured messages in those two lists. They are not counters of messages already sent. |
 | READY at idle | No physical switch is held. The panel shows the installed count and BLE MIDI instead of a switch name. |
 | PEDAL 1 / CC11, etc. | Input number and configured CC. The MIDI channel is set in the pedal menu but is not displayed here. |
-| Pedal number and bar | Current calculated output, 000-127. The bar shows that value on the full MIDI scale, not percentage of physical travel. OFF means disabled; --- means no valid reading. |
+| Pedal number and bar | Hidden until that input first moves and sends a CC: --- is shown without a bar. Then the calculated output appears as 000-127 with a bar on the full MIDI scale. OFF means disabled; --- also indicates an invalid reading. |
 | MOVE beside a pedal / MOVE PEDAL... TO SYNC | Move each indicated pedal to change its CC value. Its initial value has not yet been sent since boot, BLE readiness change or setup exit. The marker clears after that input sends successfully to BLE; it does not confirm the MIDI Device received it. |
 | Notice line above footer | The most recent status or fault notice, such as a connection, save or ADC message. |
 | CLICK ENCODER: SETUP | Navigation hint. Enter setup when all switches and pending actions are idle. |

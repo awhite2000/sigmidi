@@ -4,12 +4,12 @@
   "WiFi": "Actual embedded editor served with simulated firmware-default state and example PC/CC actions; no hardware connection",
   "browser_errors": [],
   "source_sha256": {
-    "src/ui.cpp": "4837dbbe1f915b73456d63e4b363e9f0bab0e8ac66ae3ab230b10d0fcfa36687",
-    "src/display.cpp": "d549fd4ad2c66eb4076325b617a97a8ae96894dbad2bc25348e78e1edb25735b",
+    "src/ui.cpp": "c12c9a0e3bfa3254448e7422e4d6188b77e5f18d5aae5842021e2c59239762de",
+    "src/display.cpp": "21ee686968779d6c9e42cb893b16d3e4feb377ffb807108b18c090ae07478d20",
     "src/core.cpp": "41489476905ac012acad4380e5b06119a519e94019acc841605f1ed8d59db2d9",
     "src/config.cpp": "fd9094e730d2b2bfbff5a20d4cc71662f8d210e8f0db6a5284529a580cebde3f",
     "src/core.hpp": "d0b05afc7bedbe07874e5f9d68d4c1ad256db40ae09d351ea57a635d92020c7c",
-    "src/display.hpp": "6a0b045c6bcd511f54c2f9edb7e290302a6ac7ef93427366678d4d09f46c3602",
+    "src/display.hpp": "6d5885872d3007201fb1dc9567ef7df51db4b49e2f9398969164a9159bdd6b79",
     "tests/display_preview.cpp": "5219d559b3470ae35cc97bba41741453cc460eef95273b12bd3bdfb84dbd616d",
     "web/index.html": "cac0fa988ce49454087a394055b69bd145d746179d604f99d663b17aebbf98be",
     "scripts/preview_display.py": "45a4abc31eee52a09323d13ecb7951c1f771886fce95ae94687af2451d459aba",
@@ -23,7 +23,7 @@
     "scripts/brand_enclosure_previews.py": "d54debe916efcec3d9d8b4372e94d08f03479c0613d190c62cc1a1f05b85bf8c",
     "scripts/generate_ladder_variants.py": "521e585b884bacc161f674b88582ef412d145118d4014f76ac3b26679fee496c",
     "tests/config_test.cpp": "f30f2ca57399b7dba09d0123346587b06349b4d481af1bd88c2073682a0fcbbe",
-    "tests/ui_test.cpp": "f78ac875e4c811034d31dc47876ec42b048a2e01324993bbde4b8fe3a777e4d9",
+    "tests/ui_test.cpp": "2ccb2c3458ff428d7b5325c57994f503b016445b04bef9268acf1b74ebfb22c6",
     "tests/modular_test.cpp": "a5cac49e453cdba21555bb2615ca26950897b36b006840fafd02a5ff547214c6",
     "flasher/index.html": "d08f5ff0bfee9d74037e308e5177c318ea5957e92ca14a4281aca2b0cefdfce7",
     "flasher/style.css": "c6c453bf02a669a4160985e0863144942a4cf76c8bb9cb60c003dd5c6cb00d14",
@@ -53,7 +53,7 @@
     "src/leds.hpp": "cf61cf96d7687373c59b2b3a5d1b76424f04a83a9b9c3cbf45746908fce5b5a3",
     "tests/toggle_test.cpp": "75414e08edac4c7e71fce9f68a8dcf0f1b880a0a53d775e1ed6cc7bd93185231",
     "tests/led_test.cpp": "b0193b31ade7bdfa228e3219f9348d07d888dde8e47a636da7c9d465641a9a1a",
-    "tests/display_test.cpp": "b4895cb855c0acc7aa736d456dbf0dadcb5721eaad3e6fdf04754e1675693dd5"
+    "tests/display_test.cpp": "d9bd6227ff69ae74ba4cdb1062d7e03cba36f9da77f7acce88fe73e4515a9eaa"
   },
   "images": {
     "01.png": "15283466145579f2dd40a728510da0a483d5fb552b770be75d74bef90cc9a257",
@@ -75,7 +75,7 @@
     "17.png": "8b1d739b961f492971997a36c18732a8fd805236a98011856f6c940cab932a20",
     "18.png": "23f4eaca25831f03251284065dca92f7a08dea07e1d6238bd616f4e4a8929ce5",
     "display-overview.png": "e2472c60c330081196b4699bf566e396bb17ece91d3bdd6e535b10430719bcc6",
-    "display-preview.png": "fcd9a746fbfee23c77c22c32ddfe3f565233712654cb8853dbf6265354b68491",
+    "display-preview.png": "dd75f8900b91cf6ac643163f5945f6a8eade2a6e39052f3ed26eb37f84fdc5c4",
     "enclosure-menu-preview.png": "d8f38f3b6e02929427bc207e993867d82d15e62aec60be5bb2883e94196fa6f2",
     "enclosure-menus-both-variants.png": "805e3ee34ed90d16d3bcfabec79d958f5a7680741a0c95a411a3189abd8267aa",
     "enclosure-menus-scrolled.png": "b5ebe2c054614083a1767201552a382c02fc9cfd1cefb0dfc6f9ada6b1b06c54",
@@ -119,9 +119,9 @@
     "toggle-menu-preview.png": "c33fe61c752d74f31d6315fcb8297035880601710057a82a1cb9e83d33e7e431",
     "wifi-toggle.png": "2c89d0aa2a97879e3f3724fcffa7b86bb49d9bbfd6f4f8eacc9ff9df595f570a",
     "device-menu-preview.png": "511cacfe5493e75be942a1d8acf7e9135e6f32690af842bfedc2ed2523e5fbda",
-    "23.png": "fdcba469223d875e185fb21c7d4fa331f16df76a58b5b08424e0fa01a52621a7",
-    "24.png": "42b446ca7cf76dd862e47bc1a13796ce054cd7ad2495819776582b18d213ef3c",
-    "pedal-startup-preview.png": "354eae52f9d66da914ebfe0088b698819e0bfa55d641d43e9f0deb961a6126d5"
+    "23.png": "3a7a56a32ca0cde4a6aa9558cb2814b04362a255af1667a9b5c29c47459da1e2",
+    "24.png": "1ed7e7225f0733446c67524c10f6c4c6284506761d66260dbdde1510b36d7029",
+    "pedal-startup-preview.png": "d1b8b30b83a32965b89b8c584695ea4005befc08c67d8a66dbffdbc3300fa5f5"
   },
   "switch_labels": "Permanent tap labels retained; Right reads E-A / 5-1 and Left A-E / 1-5 across each row",
   "enclosure_variant": {
@@ -336,7 +336,7 @@
     ],
     "preferred_variant": "Left",
     "physical_hardware_capture": false,
-    "refreshed_UTC": "2026-10-29T12:23:10.497461+00:00"
+    "refreshed_UTC": "2026-10-29T14:33:18.471185+00:00"
   },
   "pedal_capture": {
     "raw_ADC_mV": true,
@@ -358,7 +358,8 @@
       "24.png"
     ],
     "reviewed": true,
-    "build_id": "0f755644622f",
-    "verification": "../distribution/verification/pedal-startup-prompt.json"
+    "build_id": "d65cb3ec51b9",
+    "verification": "../distribution/verification/pedal-value-visibility.json",
+    "pending_values_and_bars_hidden": true
   }
 }

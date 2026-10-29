@@ -29,6 +29,7 @@ int main() {
     foot::DisplayFrame prompt{};
     uiView(prompt);
     assert(!prompt.pedals[0].needsMove && !prompt.pedals[1].needsMove); // Offline.
+    assert(!prompt.pedals[0].valueVisible && !prompt.pedals[1].valueVisible);
     midiReady = true;
     for (int variant : {0, 1}) {
         state.saved.enclosureVariant = variant;
@@ -36,11 +37,13 @@ int main() {
         uiView(prompt);
         assert(!strcmp(prompt.action, "MOVE PEDALS 1+2 TO SYNC"));
         assert(prompt.pedals[0].needsMove && prompt.pedals[1].needsMove);
+        assert(!prompt.pedals[0].valueVisible && !prompt.pedals[1].valueVisible);
         assert(!strcmp(prompt.notice, "ADC calibration failed")); // Do not hide faults.
         state.pedalNeedsMove[0] = false;
         uiView(prompt);
         assert(!strcmp(prompt.action, "MOVE PEDAL 2 TO SYNC"));
         assert(!prompt.pedals[0].needsMove && prompt.pedals[1].needsMove);
+        assert(prompt.pedals[0].valueVisible && !prompt.pedals[1].valueVisible);
         state.key = 1;
         uiView(prompt);
         assert(!strncmp(prompt.action, "PRESS ", 6)); // Switch message counts remain visible.
@@ -58,6 +61,7 @@ int main() {
         state.pedalNeedsMove[1] = false;
         uiView(prompt);
         assert(!strcmp(prompt.action, "PRESS A FOOTSWITCH TO PLAY"));
+        assert(prompt.pedals[0].valueVisible && prompt.pedals[1].valueVisible);
     }
     state = State{};
     midiReady = false;

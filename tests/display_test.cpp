@@ -53,6 +53,7 @@ int main() {
         v.pedals[0] = {127, 11, true};
         v.pedals[1] = {32, 7, true};
         v.pedals[1].needsMove = true;
+        v.pedals[1].valueVisible = false;
         std::vector<uint16_t> full(DisplayWidth * DisplayHeight);
         renderDisplayStripe(v, 0, DisplayHeight, full.data());
         assert(*std::max_element(full.begin(), full.end()) != 0);
@@ -88,7 +89,27 @@ int main() {
                 assert(physical[i] == full[rotation == 180 ? full.size() - 1 - i : i]);
         }
     }
-    puts("Display tests passed: exact 0/180-degree SPI output, 280x240 offsets, stripe/frame "
+    // Before first movement, neither the digits nor bar may reveal the sampled position.
+    for (int input = 0; input < 2; ++input) {
+        DisplayFrame pending{};
+        auto &pedal = pending.pedals[input];
+        pedal.enabled = pedal.needsMove = true;
+        pedal.valueVisible = false;
+        std::vector<uint16_t> low(DisplayWidth * DisplayHeight), high(low.size());
+        pedal.value = 0;
+        renderDisplayStripe(pending, 0, DisplayHeight, low.data());
+        pedal.value = 127;
+        renderDisplayStripe(pending, 0, DisplayHeight, high.data());
+        assert(low == high);
+        pedal.valueVisible = true;
+        pedal.needsMove = false;
+        pedal.value = 0;
+        renderDisplayStripe(pending, 0, DisplayHeight, low.data());
+        pedal.value = 127;
+        renderDisplayStripe(pending, 0, DisplayHeight, high.data());
+        assert(low != high);
+    }
+    puts("Display tests passed: hidden pending pedal values/bars, exact 0/180-degree SPI output, 280x240 offsets, stripe/frame "
          "equivalence, clipping guards, "
          "three screens");
 }

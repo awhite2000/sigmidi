@@ -486,6 +486,7 @@ void uiView(foot::DisplayFrame &view) {
         view.pedals[i].value = state.pedal[i];
         view.pedals[i].enabled = state.saved.pedals[i].enabled;
         view.pedals[i].cc = state.saved.pedals[i].cc;
+        view.pedals[i].valueVisible = !state.pedalNeedsMove[i];
         view.pedals[i].needsMove = state.pedalNeedsMove[i] && view.pedals[i].enabled &&
                                   view.ble == 2 && view.pedals[i].value >= 0;
     }
