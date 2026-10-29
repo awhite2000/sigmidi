@@ -50,6 +50,7 @@ def main():
             canvas.paste(screens[index].resize((560, 480), Image.Resampling.NEAREST), (x, y + 30))
         canvas.save(out / filename)
     sheet(list(range(len(TITLES))), "display-preview.png")
+    sheet([1, 21, 18, 19, 3, 4], "device-menu-preview.png")
     sheet([0, 2, 3, 4], "display-overview.png")
     sheet([3, 4], "menu-editor-preview.png")
     sheet([7, 8], "led-menu-preview.png")

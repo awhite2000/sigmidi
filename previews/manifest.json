@@ -1,5 +1,5 @@
 {
-  "refreshed_UTC": "2026-10-29T10:32:46.190519+00:00",
+  "refreshed_UTC": "2026-10-29T10:35:34.735606+00:00",
   "LCD": "Actual production renderer and menu-navigation harness, 280x240",
   "WiFi": "Actual embedded editor served with simulated firmware-default state and example PC/CC actions; no hardware connection",
   "browser_errors": [],
@@ -12,7 +12,7 @@
     "src/display.hpp": "1a1bea047fc1a7ba40b554020bdcb7026867010ed25021084594d69b264974fe",
     "tests/display_preview.cpp": "cf523e1c51ae1625c8427ed766d122e722ba1a1323ecc620e312f4ce2b107f6e",
     "web/index.html": "30dcd332fbe214dc3e4067e6823de4ebd685071de9cf0907d37ae2798f1cdbc8",
-    "scripts/preview_display.py": "fafa8fc37fca5dc73be248948436e34819bfbc29209d49beb14ff92f7a9b26ce",
+    "scripts/preview_display.py": "8a9ca52243ddd62f8d917a1906f2040d47a2453746fb8a396f2e3cce5cec60eb",
     "scripts/preview_wifi.py": "16da97e98a6d33511aa2da547d0cfc00579abab51ab2344635652330768166b7",
     "tests/mirrored_test.cpp": "e3acca6ed1a080e676d842c2776c808202566cfef25903d4bfb592db1130982c",
     "scripts/compose_wifi_variant_previews.py": "0da69da91dd704269170984a8eae446b04c2a4abe283e46db2fa593361ba7314",
@@ -116,7 +116,8 @@
     "wifi-pc-counters.png": "8bbb640cbb5cdfd8949f55edd14989dc3b2ab547cdf4d8e7c049526fada2cbe7",
     "22.png": "cb2d80de820686cc668613c67a45a67c982fc0339bb65e4c78e147b0f0644b82",
     "toggle-menu-preview.png": "c33fe61c752d74f31d6315fcb8297035880601710057a82a1cb9e83d33e7e431",
-    "wifi-toggle.png": "2c89d0aa2a97879e3f3724fcffa7b86bb49d9bbfd6f4f8eacc9ff9df595f570a"
+    "wifi-toggle.png": "2c89d0aa2a97879e3f3724fcffa7b86bb49d9bbfd6f4f8eacc9ff9df595f570a",
+    "device-menu-preview.png": "511cacfe5493e75be942a1d8acf7e9135e6f32690af842bfedc2ed2523e5fbda"
   },
   "switch_labels": "Permanent tap labels retained; Right reads E-A / 5-1 and Left A-E / 1-5 across each row",
   "enclosure_variant": {
@@ -309,5 +310,27 @@
     "browser_enabled_disabled_verified": true,
     "hardware_checked": false,
     "build_id": "13c3f89041c5"
+  },
+  "LCD_refresh": {
+    "overview": "device-menu-preview.png",
+    "all_screens": "display-preview.png",
+    "native_screens": 22,
+    "native_size_px": [
+      280,
+      240
+    ],
+    "renderer": "production stripe renderer and real UI navigation harness",
+    "navigation_assertions_passed": true,
+    "configuration_schema": 6,
+    "overview_screens": [
+      "Setup",
+      "Switch toggle mode",
+      "PC+ / PC- message list",
+      "PC INCR mode",
+      "Static PC Program",
+      "CC Control and Value"
+    ],
+    "preferred_variant": "Left",
+    "physical_hardware_capture": false
   }
 }

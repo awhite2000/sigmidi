@@ -22,9 +22,9 @@ Renders come from native Fusion geometry; manifests record image hashes. Present
 
 ## Firmware LCD
 
-![LCD menus](display-preview.png)
+![Current device menus](device-menu-preview.png)
 
-The production renderer and `tests/display_preview.cpp` menu harness generate the 280×240 native screens `01.png`–`22.png` and contact sheets. Run `python3 scripts/preview_display.py` with Pillow, a C++17 compiler and ESP-IDF cJSON sources.
+The production renderer and `tests/display_preview.cpp` menu harness generate the 280×240 native screens `01.png`–`22.png` and contact sheets. [All device screens](display-preview.png) include both enclosure variants and calibration menus. Run `python3 scripts/preview_display.py` with Pillow, a C++17 compiler and ESP-IDF cJSON sources.
 
 [Switch toggle setting](toggle-menu-preview.png) · [PC counter menus: STATIC / INCR / DECR](pc-counter-menu-preview.png) · [Performance overview](display-overview.png) · [PC/CC forms](menu-editor-preview.png) · [LED settings](led-menu-preview.png) · [Enclosure selector](enclosure-menu-preview.png).
 
