@@ -231,5 +231,32 @@
       "pedal_socket_layout": "One ACJS-MHDC dual-TRS housing; pedal 1 above pedal 2 inside one J2 outline",
       "j2_outline_count": 1
     }
+  },
+  "kicad_schematic": {
+    "updated_UTC": "2026-10-29T08:08:16.214098+00:00",
+    "preview": "kicad-schematic.html",
+    "source": "design/kicad/sigmidi-foot-controller.kicad_sch",
+    "validation": {
+      "components": 44,
+      "nets": 39,
+      "connected_terminals": 138,
+      "unused_terminals": 21,
+      "connectivity_matches_source": true,
+      "dfrobot_physical_order": true,
+      "dfrobot_P1_offset_pitches": 4,
+      "display_physical_order": true
+    },
+    "sha256": {
+      "previews/kicad-schematic.html": "4840423144cd13c5bdd896ab288110f647e3a5b9b063931a79215441e02853a3",
+      "previews/kicad-schematic.svg": "143ce8ff3430506d4b72c5e1add52dfd5bf4a8a068df6f17846ef8078407977b",
+      "previews/kicad-schematic.png": "80d26ded9a2f3715441e96a0601dbf39eaee5b768f6c0d0b821a2940fca96773",
+      "design/kicad/sigmidi-foot-controller.kicad_sch": "866d17850b2621c3ce7e685a5f08a2f8651b5485e73b8648609e412dcb9e6dfe",
+      "design/kicad/sigmidi-foot-controller.net": "7b7cdc8755b867e207c1f35006bfa12fd15d4232b2bdf08757fcdc3b8f158c9f",
+      "previews/kicad-schematic-browser.png": "8f355df2cfdfda92dd7abd536a5acf6b406dcd2684727507fa6e2011de07b59a"
+    },
+    "browser_zoom_controls_checked": [
+      100,
+      250
+    ]
   }
 }

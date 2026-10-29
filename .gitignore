@@ -11,3 +11,9 @@ tmp/
 .pytest_cache/
 *.py[cod]
 distribution/web-flasher-*/
+
+# KiCad machine-local UI state, locks and recovery files.
+design/kicad/*.kicad_prl
+design/kicad/~*
+design/kicad/_autosave-*
+design/kicad/*-backups/

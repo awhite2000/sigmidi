@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+
+  (lib (name "SIGMIDI") (type "KiCad") (uri "${KIPRJMOD}/SIGMIDI.kicad_sym") (options "") (descr "")))

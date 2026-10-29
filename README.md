@@ -39,6 +39,7 @@ On the controller, enter **Wi-Fi Setup**, join the displayed `SIGMIDI-xxxx` netw
 | Area | Guide |
 |---|---|
 | Electrical wiring and GPIO | [Hardware](docs/hardware.md) |
+| Editable electrical schematic | [KiCad project](design/kicad/README.md) |
 | Modular taps and resistor values | [Resistor ladder](docs/resistor-ladders.md) |
 | Menus, configuration and MIDI behavior | [Firmware](docs/firmware.md) |
 | Building and commissioning | [Bring-up](docs/bringup.md) |

@@ -5,6 +5,7 @@ A unified single-page schematic and seven detailed vector sheets document the cu
 - [Single-page A0 electrical diagram](../../output/pdf/sigmidi-electrical-single-page.pdf) / [SVG](single-page.svg)
 - [Detailed A3 landscape PDF](../../output/pdf/sigmidi-electrical-diagram.pdf)
 - [Browser preview](../../previews/electrical-diagram.html)
+- [Editable KiCad schematic](../kicad/README.md)
 - `01` controller and LCD; `02` power and encoder; `03` modular ladder; `04` and `05` independent pedal inputs; `06` optional LEDs; `07` assembly reference.
 - `connections.csv`: every external terminal, including deliberately unconnected terminals.
 - `netlist.json`: component-to-net connectivity and manufacturer sources.
