@@ -1,10 +1,11 @@
 #pragma once
 #include "core.hpp"
+#include "board.hpp"
 
 namespace foot {
 inline constexpr const char *LedOrders[] = {"RGB", "GRB", "BRG", "BGR", "RBG", "GBR"};
 inline constexpr const char *LedProtocols[] = {"2535", "OLD 800K", "OLD 400K"};
-constexpr int LedDataGpio = 16, LedBytes = MaxSwitches * 3, LedSymbols = LedBytes * 8 + 1;
+constexpr int LedDataGpio = board::LedData, LedBytes = MaxSwitches * 3, LedSymbols = LedBytes * 8 + 1;
 constexpr uint32_t LedRefreshMs = 250;
 struct LedFrame {
     std::array<uint8_t, LedBytes> bytes{};

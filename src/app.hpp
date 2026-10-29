@@ -36,6 +36,10 @@ void startCounterStorage();
 bool bleReady();
 bool bleConnected();
 void bleStart();
+void usbStart();
+bool usbReady();
+bool usbSend(const foot::Message &, uint32_t, void *);
+inline bool midiAvailable() { return bleReady() || usbReady(); }
 bool bleSend(const foot::Message &, uint32_t, void *);
 void hardwareStart();
 void ledsStart();

@@ -1,7 +1,9 @@
 {
-  "README.txt": "51318a5b338066c50c96a051a1329e9783f8be44cc0508976139ca9691222dc8",
-  "bootloader.bin": "ed09a3152d14ed7e23264c6873223610c8b68f191204d3b1eefed0d20a6e146a",
-  "build-info.json": "7a8d7eb050b8d6f697e5908047a4030543f3f672b54ce9fa180dd8ec5c2f7597",
-  "firmware.bin": "840ade5f93e56840516051f9959018f3652ae5829d7dff7d20eacb10ef0b1ecd",
+  "Apache-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  "README.txt": "3ee64a0b1c382f98da621b6f66e803aecf90eed5bb14fde08b45e2f4b2a93fbf",
+  "TinyUSB-MIT.txt": "b171720e8a442e7a3957d83c62cd3299dbb29da3db534cc626f9dded0de2ca44",
+  "bootloader.bin": "4ea9db1c2793e589499e063010f691cadb28af42d22a6ecfddeec90accc1cc88",
+  "build-info.json": "6c2af6279bebdbd231cc32312d0759ae59c0458ae4fea6acce81aec5f73dd22f",
+  "firmware.bin": "b0193d79dba6fa95749a7d1d7f2af8c48f9d6ed8cf47b5c396e5b40252ea1081",
   "partitions.bin": "37f9719078927bf594a883c81ad80dd4e6d179c8db193fbded90851178aa39e7"
 }

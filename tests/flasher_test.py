@@ -13,8 +13,8 @@ from package_web_flasher import read_build
 def image(length):
     data = bytearray(length)
     data[0] = 0xE9
-    data[2:4] = bytes([2, 0x20])
-    data[12] = 13
+    data[2:4] = bytes([2, 0x40])
+    data[12] = 9
     return bytes(data)
 
 
@@ -42,7 +42,7 @@ class FlasherArtifacts(unittest.TestCase):
         self.assertEqual(validate_images(image(256), image(1024), table())['nvs'][2], 0x9000)
 
     def test_wrong_chip_and_flash_settings(self):
-        for index, value in [(0, 0), (12, 5), (2, 0), (3, 0x30)]:
+        for index, value in [(0, 0), (12, 5), (12, 13), (2, 0), (3, 0x30)]:
             bad = bytearray(image(256)); bad[index] = value
             with self.assertRaises(ValueError):
                 validate_images(bytes(bad), image(1024), table())

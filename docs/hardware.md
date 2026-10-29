@@ -1,47 +1,65 @@
 # SIGMIDI Foot Controller v0.1 — Hardware and wiring
 
-Target: DFRobot DFR1075 FireBeetle 2 ESP32-C6, using its internal ADC, and Waveshare 24382 1.69-inch ST7789V2 color LCD, used in landscape at 280×240. The harness requires bench validation; verify against the actual board revision before assembly. All logic and analog circuits use 3.3 V and common ground. Only one footswitch needs to be detected at a time.
+Target: Arduino Nano ESP32 (ABX00083, ESP32-S3), using its internal ADC, and Waveshare 24382 1.69-inch ST7789V2 color LCD, used in landscape at 280×240. The harness requires bench validation; verify against the actual board revision before assembly. All logic and analog circuits use 3.3 V and common ground. Only one footswitch needs to be detected at a time.
 
 ## Alternate power input
 
-Use a **9 V DC center-negative 2.1 × 5.5 mm barrel supply** through the Pololu S13V10F5 (Pololu 4083 / Kamami 1178565). Its regulated VOUT goes to the DFR1075 **5 V input (VIN/VCC)** and GND goes to **GND**. Raw 9 V connects only to the converter input. See [power wiring, source selection, budget and mounting](power.md). USB programming remains available through the board's existing power-selection circuit. No firmware/GPIO changes are required.
+Use a **9 V DC center-negative 2.1 × 5.5 mm barrel supply**. The positive sleeve feeds **Nano VIN** and Pololu VIN; the negative centre feeds common GND. The Pololu S13V10F5 (4083 / Kamami 1178565) supplies regulated **5 V to the optional LEDs**, not Nano VIN. Nano VIN requires 6–21 V. USB can power the Nano independently; do not tie external 5 V to USB VBUS. See [power wiring](power.md). The Nano has no LiPo charging circuit.
 
 ## Wi-Fi configuration access
 
-Use the ESP32-C6 onboard Wi-Fi radio for the configuration editor. No additional module, wiring, or GPIO is required. Wi-Fi is enabled explicitly for setup and disabled when returning to performance mode; see the firmware specification for connection and save behavior.
+Use the Nano ESP32 onboard Wi-Fi radio for the configuration editor. No additional module, wiring, or GPIO is required. Wi-Fi is enabled explicitly for setup and disabled when returning to performance mode; see the firmware specification for connection and save behavior.
 
 ## GPIO assignments
 
-Use GPIO numbers in firmware, not Arduino D-label numbers. Do not connect a second display through the GDI connector: some signals below share its nets.
+The firmware uses **ESP32 GPIO numbers**, independently of Arduino IDE pin-numbering preferences. The Nano's board labels and corresponding GPIOs are:
 
-| Function | ESP32-C6 GPIO | Connection |
-| --- | --- | --- |
-| Switch ladder | 1 / ADC1_CH1 | Ladder sense node |
-| Pedal 1 | 2 / ADC1_CH2 | Direct passive pedal 1 TIP |
-| Pedal 2 | 3 / ADC1_CH3 | Direct passive pedal 2 TIP |
-| LCD DIN | 22 | SPI MOSI |
-| LCD CLK | 23 | SPI SCK |
-| LCD CS | 18 | Active-low chip select |
-| LCD DC | 19 | Data/command |
-| LCD RST | 14 | Active-low reset |
-| LCD BL | 3V3 | Always-on backlight |
-| Pedal 1 mode | 20 | 10k bias: HIGH in resistor mode, high impedance otherwise |
-| Pedal 2 mode | 21 | 10k bias: HIGH in resistor mode, high impedance otherwise |
-| Encoder A | 6 | Quadrature contact A |
-| Encoder B | 7 | Quadrature contact B |
-| Encoder click | 17 | Normally open push switch |
-| Pololu 2535 LED data (optional) | 16 / TX | Directly to first Pololu 2535 DIN |
+| Function | Nano label | ESP32-S3 GPIO | Connection |
+|---|---|---:|---|
+| Switch ladder | A0 | 1 / ADC1_CH0 | Ladder sense |
+| Pedal 1 | A1 | 2 / ADC1_CH1 | Direct TIP |
+| Pedal 2 | A3 | 4 / ADC1_CH3 | Direct TIP |
+| Pedal 1 bias | D2 | 5 | 10 kΩ to pedal 1 TIP |
+| Pedal 2 bias | D3 | 6 | 10 kΩ to pedal 2 TIP |
+| Encoder A | D4 | 7 | Contact A |
+| Encoder B | D5 | 8 | Contact B |
+| Encoder click | D6 | 9 | Contact to GND |
+| Optional LED DIN | D7 | 10 | Direct to first Pololu 2535 DIN |
+| LCD CLK | D8 | 17 | SPI clock (routed through GPIO matrix) |
+| LCD DC | D9 | 18 | Data/command |
+| LCD CS | D10 | 21 | Active-low select |
+| LCD DIN | D11 | 38 | SPI MOSI |
+| LCD RST | D12 | 47 | Active-low reset |
+| USB VBUS sense | A4 | 11 | 100 kΩ / 150 kΩ divider below |
+| LCD VCC and BL | 3V3 | — | Always-on backlight |
+| All grounds | GND | — | Common return |
 
-LCD VCC → 3V3 and GND → GND; use the factory four-wire SPI configuration. No MISO signal is needed. Connect BL to 3V3 for always-on backlight; no additional GPIO is allocated. The display is not touch-sensitive. The module uses its supplied GH1.25 eight-pin connector; follow the signal names on the module, rather than wire colors. Landscape orientation uses a 280×240 drawing area, MADCTL 0x70 (RGB), RGB565 pixels, inversion on, and column/row offsets (20, 0): controller columns 20–299 and rows 0–239. The driver runs SPI at 10 MHz and applies the landscape mapping after vendor initialization. The saved Enclosure variant selects Right (0° screen, Right switch order) or Left (180° screen, mirrored switch order) through software stripe/window mapping; controller register settings remain the same. New configurations default to the preferred Left enclosure with the screen and ribbon on the left. For an existing saved setup choose Left, using Wi-Fi Settings → Enclosure variant or LCD EDIT CONFIG → ENCLOSURE. Verify physical viewing direction and red/blue color order on the actual module. Leave GPIO0 for the board's battery measurement and GPIO9 for BOOT. The assignment avoids GPIO4/5/8/15 strapping functions and USB pins 12/13. Confirm GPIO2 and GPIO3 header locations against the board pinout; these are chip GPIO numbers.
+The display's eight-pin connector stays in physical order **VCC, GND, DIN, CLK, CS, DC, RST, BL**. Connect to the signals above. The Nano's D13/default SPI-clock pin is deliberately unused because it also drives the onboard LED. GPIO19/20 are exclusively USB D−/D+ inside the USB-C connection. Avoid GPIO0/3/45/46 strapping pins and leave unused Nano pins disconnected. The three analog inputs all use ADC1, including during Wi-Fi operation. Pin constants and uniqueness checks are in `src/board.hpp`.
+
+### USB VBUS detection
+
+Install these **two resistors even if you initially use only BLE**:
+
+```text
+Nano VBUS (USB 5 V) --- 100 kΩ ---+--- A4 / GPIO11
+                                 |
+                               150 kΩ
+                                 |
+                                GND
+```
+
+Use 1% resistors. The divider gives about 3.0 V with a 5 V USB supply and discharges the sense input when unplugged. Never connect 5 V directly to GPIO11. This monitors host VBUS while the controller remains powered through VIN; it does not supply power or join external 5 V to USB. Native USB MIDI uses the existing USB-C connector and needs no external USB adapter.
+
+LCD VCC → 3V3 and GND → GND; use the factory four-wire SPI configuration. No MISO signal is needed. Connect BL to 3V3 for always-on backlight; no additional GPIO is allocated. The display is not touch-sensitive. The module uses its supplied GH1.25 eight-pin connector; follow the signal names on the module, rather than wire colors. Landscape orientation uses a 280×240 drawing area, MADCTL 0x70 (RGB), RGB565 pixels, inversion on, and column/row offsets (20, 0): controller columns 20–299 and rows 0–239. The driver runs SPI at 10 MHz and applies the landscape mapping after vendor initialization. The saved Enclosure variant selects Right (0° screen, Right switch order) or Left (180° screen, mirrored switch order) through software stripe/window mapping; controller register settings remain the same. New configurations default to the preferred Left enclosure with the screen and ribbon on the left. For an existing saved setup choose Left, using Wi-Fi Settings → Enclosure variant or LCD EDIT CONFIG → ENCLOSURE. Verify physical viewing direction and red/blue color order on the actual module. The pin assignment reserves native USB and boot straps.
 
 ## Rotary encoder
 
 Add a passive incremental quadrature encoder with 20 detents per revolution and an independent momentary push switch. Confirm the selected part's pulses-per-revolution and detent phase relationship: 20 detents does not necessarily mean 20 complete quadrature cycles.
 
-- Connect encoder common C to GND, A directly to D12 / GPIO6 (P1:12), and B directly to D11 / GPIO7 (P1:13).
-- Connect one push-switch terminal directly to RX / GPIO17 (P2:18) and the other to GND.
+- Connect encoder common C to GND, A directly to D4 / GPIO7, and B directly to D5 / GPIO8.
+- Connect one push-switch terminal directly to D6 / GPIO9 and the other to GND.
 - No external resistors or capacitors are required. Firmware enables the GPIO internal pull-ups for A, B and click, decodes quadrature transitions and debounces the click in software. Keep encoder wires short.
-- Use GPIO6/7 for encoder input; external pin-based JTAG is unavailable. Use GPIO17 for the encoder click; UART0 RX is unavailable; do not attach a UART transmitter there. Use native USB for programming/debugging. Confirm header locations on the DFR1075 pinout.
+
 - Use a bare contact encoder or a module explicitly compatible with 3.3 V; verify terminal identification from the selected encoder datasheet.
 
 Validate one menu step per physical detent in both directions, including slow turns, quick turns, reversal, and rotation while clicking. The encoder operates independently of the footswitch ladder.
@@ -97,10 +115,10 @@ Each input needs **only two resistors inside the controller**, with no op-amp, M
 
 | Connection | Pedal 1 | Pedal 2 |
 | --- | --- | --- |
-| TIP directly to ADC | A1 / GPIO2 (P1:9) | A2 / GPIO3 (P1:8) |
+| TIP directly to ADC | A1 / GPIO2 | A3 / GPIO4 |
 | RING reference | 3V3 through 5.1 kΩ | 3V3 through 5.1 kΩ |
 | SLEEVE | GND | GND |
-| 10 kΩ from bias pin to TIP | SCL / GPIO20 (P1:4) | MISO / GPIO21 (P2:8) |
+| 10 kΩ from bias pin to TIP | D2 / GPIO5 | D3 / GPIO6 |
 
 Use 1% resistors. A 5.1 kΩ ring resistor limits a ring-to-ground short to about 0.65 mA at 3.3 V. It also limits a 10 kΩ potentiometer's nominal full-travel voltage to `3300 × 10000 / (5100 + 10000) = 2185 mV`; lower-resistance pots have a lower full-travel voltage. TIP is measured directly without a gain correction. A 10 kΩ pot's maximum source impedance is approximately 3.78 kΩ; validate acquisition settling and noise on the actual harness.
 
@@ -112,17 +130,18 @@ Boot and disabled-input states also leave the bias GPIO at high impedance. The f
 
 ## ADC and prototype validation
 
-Use calibrated ESP32-C6 ADC readings with attenuation selected for at least the connected-pedal 0–2.2 V operating span. Current ESP32-C6 datasheets specify an ATTEN3 calibrated range up to 3.3 V for qualifying chip date codes, with up to ±40 mV total error. The 2.2 V ceiling retains headroom; per-switch calibration remains necessary because absolute ADC error can exceed half the smallest ladder gap. Reserve margin for reference and resistor tolerance; check the current ESP-IDF C6 ADC limits. Schedule ladder samples every 1–2 ms and each pedal initially at 200 samples/s. Measure multiplexer settling, noise, and endpoint error; tune filtering from observations. Connect only unpowered passive pedals. This minimal two-resistor interface adds no external ESD protection; its noise and transient performance must be checked on hardware.
+Use calibrated ESP32-S3 ADC1 readings at 12 dB attenuation, 12-bit resolution and the ESP-IDF curve-fitting scheme, with one calibration handle per input. Connected pedals and idle ladder remain within the nominal 0–2.2 V design span. Calibrate actual switch centres and pedal endpoints on the Nano; do not reuse DFR1075 ADC captures without recapturing them. Absolute ADC error, acquisition settling and noise still require bench checks. Ladder scans run about every 1 ms; pedal sampling starts at 200 samples/s. Connect only unpowered passive pedals. The two-resistor pedal interface adds no external ESD protection.
 
-Before building the harness, verify idle and all N installed ladder states, individual press/release detection, and all four combinations of pedal modes. Test with BLE and LCD active, USB and intended battery/power operation, and the longest intended pedal cables. Inspect the regulator rating for the actual DFR1075 revision. No external ADC or GPIO expander is included.
+Before building the harness, verify idle and all N installed ladder states, individual press/release detection, and all four combinations of pedal modes. Test with BLE and LCD active, USB and 9 V power operation, and the longest intended pedal cables. Check the Nano and LED supply budgets. No external ADC or GPIO expander is included.
 
 ## Optional switch LEDs
 
-The optional chain uses one [Pololu 2535 5 mm LED](https://www.pololu.com/product/2535) per switch, initially paired in switch-number order. Use **5 V, RGB byte order and the 2535 (800 kbit/s) profile**. The side-view lead order is DIN / +5 V / GND / DOUT, from the side opposite the flat toward the flat; follow the orientation diagram in the LED guide. GPIO16/TX is reserved for its hardware-timed data output; the firmware console remains on USB. Connect GPIO16 directly to the first DIN, each DOUT to the next DIN, and every LED to the regulated 5 V supply and common ground. The chain contains only LEDs and wires. Ten LEDs draw about 0.5 A at full white; a separate LED supply should allow at least 1 A plus controller headroom. When using the optional Pololu 4083 source, its 1 A rating is the total controller-plus-LED budget; follow the limitations in the [power guide](power.md). Never power this part above 5 V. Chain output is disabled by default, with 64/255 brightness and white/yellow press/release colors. Pololu LEDs power up blue until a data command; firmware clears them at initialization and refreshes the chain every 250 ms. See [exact lead orientation, wiring and configuration](leds.md).
+The optional chain uses one [Pololu 2535 5 mm LED](https://www.pololu.com/product/2535) per switch, initially paired in switch-number order. Use **5 V, RGB byte order and the 2535 (800 kbit/s) profile**. The side-view lead order is DIN / +5 V / GND / DOUT, from the side opposite the flat toward the flat; follow the orientation diagram in the LED guide. D7 / GPIO10 is reserved for its hardware-timed data output. The application exposes USB MIDI rather than a serial console. Connect GPIO10 directly to the first DIN, each DOUT to the next DIN, and every LED to the regulated 5 V supply and common ground. The chain contains only LEDs and wires. Ten LEDs draw about 0.5 A at full white; a separate LED supply should allow at least 1 A plus controller headroom. When using the optional Pololu 4083 source, its 1 A rating is the total controller-plus-LED budget; follow the limitations in the [power guide](power.md). Never power this part above 5 V. Chain output is disabled by default, with 64/255 brightness and white/yellow press/release colors. Pololu LEDs power up blue until a data command; firmware clears them at initialization and refreshes the chain every 250 ms. See [exact lead orientation, wiring and configuration](leds.md).
 
 ## Sources
 
-- [DFRobot DFR1075 documentation](https://wiki.dfrobot.com/dfr1075/): board pinout, onboard battery sensing, SPI/GDI signal assignments, and revision details.
-- [Waveshare 24382 product](https://www.waveshare.com/1.69inch-lcd-module.htm), [module wiki](https://www.waveshare.com/wiki/1.69inch_LCD_Module) and [mechanical drawing](https://files.waveshare.com/upload/4/41/1.69inch_LCD_Module_2Ddrawing.pdf): ST7789V2, interface configuration, wiring and PCB dimensions.
-- [Espressif ESP32-C6 GPIO reference](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c6/api-reference/peripherals/gpio.html): ADC channels and restricted pins.
-- [ESP32-C6 datasheet](https://documentation.espressif.com/esp32-c6_datasheet_en.html): ADC ranges, calibration error and date-code qualifications.
+- [Arduino Nano ESP32 documentation](https://docs.arduino.cc/hardware/nano-esp32/) and [physical pinout](https://docs.arduino.cc/resources/pinouts/ABX00083-full-pinout.pdf).
+- [Espressif USB device stack](https://docs.espressif.com/projects/esp-usb/en/latest/esp32s3/usb_device.html): native USB and self-powered VBUS detection.
+- [Waveshare 24382 module wiki](https://www.waveshare.com/wiki/1.69inch_LCD_Module): ST7789V2, interface configuration and physical connector.
+
+The existing DFR1075 electrical schematic/previews are retained reference artifacts and do not describe this Nano harness. Use this pin table for the port; the enclosure uses the [two-insert Nano mount kit](../design/fusion/nano-esp32/README.md).

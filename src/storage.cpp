@@ -4,7 +4,7 @@
 #include "esp_system.h"
 #include "esp_log.h"
 #include <cstdlib>
-// ESP32-C6 has only RTC FAST/LP SRAM; RTC_NOINIT_ATTR uses that retained region.
+// ESP32-S3 .rtc_noinit is in retained RTC SLOW memory (FAST placement disabled).
 static RTC_NOINIT_ATTR foot::CounterMemory retainedCounters;
 foot::PcCounters &pcCounters() {
     static foot::PcCounters bank(retainedCounters);

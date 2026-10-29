@@ -61,13 +61,13 @@ for (const kind of ['missing', 'truncated', 'corrupt']) {
   const files = new Map(good); files.set('manifest.json', Buffer.from('{"bad":true}'));
   await assert.rejects(loadRelease(fetcher(files), webcrypto), /Manifest integrity/); checks++;
 }
-// Even self-consistent hashes cannot turn a different chip image into a valid release.
-{
+// Even self-consistent hashes cannot relabel another chip, including the old C6 release.
+for (const chip of [5, 13]) {
   const files = new Map(good), altered = structuredClone(release), key = release.files[1].path;
-  const data = Buffer.from(files.get(key)); data[12] = 5;
+  const data = Buffer.from(files.get(key)); data[12] = chip;
   files.set(key, data); altered.files[1].sha256 = await sha256(data, webcrypto);
   files.set('release.json', Buffer.from(JSON.stringify(altered)));
-  await assert.rejects(loadRelease(fetcher(files), webcrypto), /ESP32-C6/); checks++;
+  await assert.rejects(loadRelease(fetcher(files), webcrypto), /ESP32-S3/); checks++;
 }
 assert.equal(browserCapability({ secure: true, serial: true }).ok, true); checks++;
 assert.equal(browserCapability({ secure: true, serial: false }).ok, false); checks++;

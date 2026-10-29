@@ -2,7 +2,7 @@
 
 <img src="design/branding/sigmidi-mark.svg" width="96" alt="SIGMIDI logotype">
 
-SIGMIDI is a programmable BLE MIDI foot controller built around the DFRobot DFR1075 FireBeetle 2 ESP32-C6 and Waveshare 24382 color LCD. It sends MIDI to an iPad and provides encoder menus and a Wi-Fi configuration editor.
+SIGMIDI is a programmable USB and BLE MIDI foot controller built around the Arduino Nano ESP32 (ESP32-S3, 16 MB flash) and Waveshare 24382 color LCD. It sends PC/CC messages over native USB MIDI and BLE MIDI simultaneously when both links are ready, including to an iPad and provides encoder menus and a Wi-Fi configuration editor.
 
 ## Features
 
@@ -12,7 +12,7 @@ SIGMIDI is a programmable BLE MIDI foot controller built around the DFRobot DFR1
 - A 280 × 240 landscape LCD and a 20-detent encoder with click for local setup.
 - An offline Wi-Fi editor for configuration, calibration, MIDI tests and JSON backups.
 - Optional Pololu 2535 indicators, one per switch: white for a performed press action and yellow for release in momentary mode; white/off in Toggle mode.
-- USB power and an optional 9 V center-negative input through a Pololu S13V10F5 regulator.
+- Native class-compliant USB MIDI plus BLE MIDI output. USB power or an optional 9 V center-negative input to Nano VIN; Pololu S13V10F5 supplies the optional LED rail.
 
 ## Enclosures and switch identity
 
@@ -22,6 +22,8 @@ Select **Settings → Enclosure variant** in the Wi-Fi editor or **EDIT CONFIG �
 
 The main enclosure measures **350 × 92 × 54 mm**, with a 30 mm raised row, 65 mm horizontal pitch, 32.5 mm stagger and 53 mm row spacing. The Left electronics shell has a 25 mm-wide icon raised 0.6 mm between A and B. Main and modular assemblies are available for both variants.
 
+The original bottom shells are retained with the [two-insert Nano mounting kit](design/fusion/nano-esp32/README.md). Use the [Nano pin/power map](docs/hardware.md); retained DFR1075 schematic previews are not the Nano harness.
+
 ## Install and configure
 
 Use the preserved [release bundles](distribution/README.md). From the project root:
@@ -30,7 +32,7 @@ Use the preserved [release bundles](distribution/README.md). From the project ro
 python3 scripts/serve_flasher.py
 ```
 
-Open **http://localhost:8766/** in desktop Chrome or Edge, connect the DFR1075 over USB-C and choose **Connect & install**. Leave **Erase device** unchecked to keep compatible saved settings. The flasher serves the complete local installer from `distribution/web-flasher/`.
+Open **http://localhost:8766/** in desktop Chrome or Edge, connect the Nano over USB-C in ROM download mode (jumper B1 to GND, tap RST, remove the jumper) and choose **Connect & install**. Leave **Erase device** unchecked to keep compatible saved settings. The flasher serves the complete local installer from `distribution/web-flasher/`.
 
 On the controller, enter **Wi-Fi Setup**, join the displayed `SIGMIDI-xxxx` network, and open **http://192.168.4.1/**. Choose the enclosure, ladder wiring and installed switch count, calibrate the inputs, configure MIDI actions and save. Normal performance runs with Wi-Fi off. The BLE name is **SIGMIDI Foot Controller v0.1**.
 
@@ -56,7 +58,7 @@ The [complete Fusion model](design/fusion/sigmidi-foot-controller-0.1.f3d) conta
 
 ## Validation status
 
-The ESP-IDF 5.3.1 firmware compiles for ESP32-C6. Host tests cover configuration, MIDI scheduling, UI navigation, display mapping, switch identity and LED feedback. CAD, mesh and slicer checks accompany the manufacturing files. Physical USB flashing, iPad interoperability, printed fit/load strength and sustained thermal operation require validation on the assembled hardware.
+The firmware targets ESP-IDF 5.3.1 on ESP32-S3. Host tests cover configuration, MIDI scheduling, UI navigation, display mapping, switch identity and LED feedback. CAD, mesh and slicer checks accompany the manufacturing files. Physical USB flashing, iPad interoperability, printed fit/load strength and sustained thermal operation require validation on the assembled hardware.
 
 ![SIGMIDI preferred Left enclosure](previews/sigmidi-left-main.png)
 

@@ -108,12 +108,12 @@
       "page": 25
     }
   ],
-  "source_sha256": "2b44b8cf4d8339ece7bac57bbd4d725800f70fb75fd9d2f4641dbb4a1ed97bc1",
-  "pdf_sha256": "58a55164dbec023b0b9c8a542cb22dd71a4d19230d063229651eb7d011a110d9",
+  "source_sha256": "cd9319ea6d29ac9a3dff4798b8acb0e50f4adedde225f1566e6621dc226f0cc5",
+  "pdf_sha256": "39246107371ea132aab34050b8803e6727f5c3ae9589b361022e73c50ff19f49",
   "images": {
     "docs/device-workflows/other-menus-workflow.png": "e52054757b0b8a61e06e72e0901307fd9ea6b2bccb16d5af83050c4c58823d83",
     "docs/device-workflows/save-exit.png": "2389a6ede143232a5f2853c703e2c6d5720228086e15ac56f800f2ae3e82f730",
-    "docs/device-workflows/switch-message-workflow.png": "958ff6fec32e6ba22426728a89acd52300be1cc58ad6ee6979851ffb0e606e38",
+    "docs/device-workflows/switch-message-workflow.png": "73382d607643ac5a53c98822fbe9e9db81cd3ff5ccbd762e05ebd11b1c9790c8",
     "docs/manual-wifi-example.png": "6808a3abe72eb560d9bbc291455cf4f04fb914ec66a959134c912a785ad73af3",
     "previews/01.png": "15283466145579f2dd40a728510da0a483d5fb552b770be75d74bef90cc9a257",
     "previews/02.png": "da2cae36620f1ed74b5765e595bdc7c3cf2ffec0f7fb2e5e54d1387d4b94c9a3",
@@ -126,7 +126,7 @@
     "previews/19.png": "056b695e3c1d9a2e12c0442f995ea17a8d945f3c9c06f94048cba71014fdf7d3",
     "previews/20.png": "31346776d8213e4fbf6b02b00d632a4f8e01f520a36e6e39d0236cb72a451007",
     "previews/22.png": "cb2d80de820686cc668613c67a45a67c982fc0339bb65e4c78e147b0f0644b82",
-    "previews/23.png": "3a7a56a32ca0cde4a6aa9558cb2814b04362a255af1667a9b5c29c47459da1e2",
+    "previews/23.png": "dc7dfe4c4f2807438d8374eb48d55b98a4160ddba59ad7ed96a421f2d0f6ce46",
     "previews/sigmidi-left-main.png": "f35a3efbe48c88a0cb3fe394b2fb13fc28a4f78d3291670ef8fa6aaff26a0400"
   },
   "HX_reference": "Supplied CC table, cross-checked against official Line 6 sources",
@@ -139,79 +139,5 @@
     "src/counters.cpp",
     "web/index.html"
   ],
-  "HX_setup_in_appendix_only": true,
-  "firmware_build_id": "d65cb3ec51b9",
-  "firmware_source_sha256": "d65cb3ec51b99bf7162ec75300889743beefb4ec7b076475b8f9efa590b211b0",
-  "checked_source_sha256": {
-    "scripts/build_device_workflows.py": "0cb043f5d6a86513efd511097056889884da830e44b7394f84065afae40e14f8",
-    "scripts/build_user_manual.py": "42df15614cb05dc018ce17786701cd23485fdc618b89f0c90ab1b02f7db0a150",
-    "src/app.hpp": "6b6f65089acbbeeb5f5f6545c7a28c2c56ac86b097837e146eda867fe52c0364",
-    "src/config.cpp": "fd9094e730d2b2bfbff5a20d4cc71662f8d210e8f0db6a5284529a580cebde3f",
-    "src/core.cpp": "41489476905ac012acad4380e5b06119a519e94019acc841605f1ed8d59db2d9",
-    "src/core.hpp": "d0b05afc7bedbe07874e5f9d68d4c1ad256db40ae09d351ea57a635d92020c7c",
-    "src/counters.cpp": "8d17090ad44f4401d0321f5cfceead885ed8b3e97d27b1caca9341907cbde6fa",
-    "src/display.cpp": "21ee686968779d6c9e42cb893b16d3e4feb377ffb807108b18c090ae07478d20",
-    "src/display.hpp": "6d5885872d3007201fb1dc9567ef7df51db4b49e2f9398969164a9159bdd6b79",
-    "src/leds.hpp": "cf61cf96d7687373c59b2b3a5d1b76424f04a83a9b9c3cbf45746908fce5b5a3",
-    "src/main.cpp": "8e4e18b1eecea95616a1b28853d0b04e8dee2c98fc69908ad0fc83e07d6f3728",
-    "src/ui.cpp": "c12c9a0e3bfa3254448e7422e4d6188b77e5f18d5aae5842021e2c59239762de",
-    "tests/device_workflow_preview.cpp": "50adace47f42b77d7077e87fe14be65abbab7b1050fd624728cbd5505cdee09c",
-    "web/index.html": "cac0fa988ce49454087a394055b69bd145d746179d604f99d663b17aebbf98be"
-  },
-  "validation": {
-    "pages_rendered_and_visually_reviewed": 25,
-    "expected_chapter_pages_verified": true,
-    "all_device_menu_options_checked_against_firmware": true,
-    "performance_screen_elements_explained": true,
-    "compact_MIDI_examples_range_checked": 33,
-    "text_and_horizontal_margins_checked": true,
-    "source_links": 5,
-    "hardware_dongle_tested": false,
-    "pedal_capture_workaround_documented": false,
-    "HX_specific_instructions_only_in_appendix": true,
-    "reviewed_on": "2026-10-29",
-    "raw_mV_pedal_capture_instructions": true,
-    "pedal_movement_prompt_documented": true,
-    "pending_pedal_values_hidden_documented": true,
-    "screen_path_pages": [
-      6,
-      7
-    ],
-    "workflow_native_frames": 20,
-    "workflow_navigation_targets_asserted": true,
-    "workflow_encoder_actions_labeled": true,
-    "page_references_updated": true,
-    "firmware_sources_unchanged": true
-  },
-  "rendered_page_sha256": {
-    "1": "659e143f4a2a7067267adadfd5c921447cf141f36e0d6931f51881b817ec734e",
-    "2": "4588363fe113a965585c5ce2ca15a2cb3dbe9e4466af9b8ef76a6deadf191cc5",
-    "3": "ce7bf1301ebaa625944bd1d859553693fad39aab71032b6ae9fc2788bc713419",
-    "4": "cc5aa3c5692d402df079eb40d3a791c9d8ef12bf087c52eedbea019f115d75ae",
-    "5": "9fa50b2b15da5cbeba67ddce3c71707d9dbef5cf5e740faba9b2c1904cd664ad",
-    "6": "c55f9b51f476e451fc90b0e6ad1039c3187cbee06b0aaf046aaed0d9afcb1713",
-    "7": "a3d3abc22a83625a00c86cd71313e3d9533afe68637046d0fb702a17d4b3da0a",
-    "8": "8bc72b2b8a82c3ca04dac6c3812192c1cec172ee69956ba964f03fc11c234c20",
-    "9": "18ca2ab025644947ef7f1900e5215fc717a04180e892f5f83b4c04e83bd91e6e",
-    "10": "63143ca3ad21be554f034b75dd0eef0ab78f6b48a37530bfdfc51e488dacafe4",
-    "11": "178098fe643afe6eda7e32983f8e75c574cd6b73a496b82c4a8189caddcae4ee",
-    "12": "e293efc84e41bb51accf5081d89b682fff04b6fadbe419c01ebc621026271849",
-    "13": "43ddf6dc8dc6337fd213e37f69a2325ca521ea7008e519fc70b274c503263c09",
-    "14": "4290f4a6847ffec7435704e12fae021f61e347611903f35f71ee880d21628dcf",
-    "15": "4e3a6aafa53e42ef823d65ced90fe6aad1f9dc083c12cb85df8cf7d5a685bae9",
-    "16": "f67962ca126e9be393a5bade95f622dde182253ff180bc5158167d0742e3b988",
-    "17": "514b4ccf6e1c506a6786853869e6b78ddfd3bca5ccdfda613bca1922ed2402f8",
-    "18": "9c06f0be5719082f43f4a0e1828d79f48eb23f5085058e3146a6b1f4ad435ce9",
-    "19": "9547060fb2c8269ff14ecf7fbf6bbaf80bfbe183180d3801a3e654a5c5e9ccf6",
-    "20": "39025df8744d3295ed52a99fc256523dbf96c172d6ff1e88b99a914446d84a9b",
-    "21": "6ea9d90dc5ee21f34019bf868f9b0b585c1aff38367cab9d444249a848538dd0",
-    "22": "119614f70f7eb8df50599ef3a7ed35b47be6b0f1b61e92de712c19035c7188f1",
-    "23": "91e1e8dfb51fe6ba748712615ff827f2713584e62c92da3d3120c90d9e79cbd2",
-    "24": "4c6fa3bbd10ce9ec0b71758fc9319eff771267c195a2adb62e01b6b8cf2fa3cf",
-    "25": "007182a2344c6b5a2838e5021d74d1ec7bf1fae6b9025569e91b00794e039ebb"
-  },
-  "device_workflows": {
-    "manifest": "docs/device-workflows/manifest.json",
-    "sha256": "3aefb2ec28e795e817fd8e573389d8dd0b9d183e1774c4d366832b6db117fb81"
-  }
+  "HX_setup_in_appendix_only": true
 }

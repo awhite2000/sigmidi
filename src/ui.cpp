@@ -318,7 +318,7 @@ void uiStep(int rotation, int click) {
                                             1,
                                         !strcmp(n->string, "release"));
                     snprintf(state.notice, sizeof state.notice, "%s",
-                             ok ? "Test queued" : "BLE offline or busy");
+                             ok ? "Test queued" : "MIDI offline or busy");
                 }
                 return;
             }
@@ -472,6 +472,7 @@ static void label(cJSON *parent, cJSON *v, int index, char *out, size_t len,
 void uiView(foot::DisplayFrame &view) {
     view = foot::DisplayFrame{};
     view.displayRotation = state.saved.leftVariant() ? 180 : 0;
+    view.usb = usbReady();
     view.ble = bleReady() ? 2 : bleConnected() ? 1 : 0;
     view.switchCount = state.saved.switchCount;
     view.activeSwitch =
@@ -488,7 +489,7 @@ void uiView(foot::DisplayFrame &view) {
         view.pedals[i].cc = state.saved.pedals[i].cc;
         view.pedals[i].valueVisible = !state.pedalNeedsMove[i];
         view.pedals[i].needsMove = state.pedalNeedsMove[i] && view.pedals[i].enabled &&
-                                  view.ble == 2 && view.pedals[i].value >= 0;
+                                  (view.usb || view.ble == 2) && view.pedals[i].value >= 0;
     }
     if (!state.setup) {
         view.screen = foot::Screen::Performance;
@@ -498,7 +499,7 @@ void uiView(foot::DisplayFrame &view) {
             snprintf(view.action, sizeof view.action, "PRESS %d / RELEASE %d MESSAGES",
                      sw.press.count, sw.release.count);
         } else {
-            snprintf(view.switchName, sizeof view.switchName, "%d SWITCHES / BLE MIDI",
+            snprintf(view.switchName, sizeof view.switchName, "%d SWITCHES / USB + BLE",
                      state.saved.switchCount);
             snprintf(view.action, sizeof view.action, "PRESS A FOOTSWITCH TO PLAY");
             if (view.pedals[0].needsMove || view.pedals[1].needsMove)

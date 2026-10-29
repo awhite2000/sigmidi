@@ -5,8 +5,9 @@
 State state;
 SemaphoreHandle_t stateMutex;
 uint32_t nowMs() { return 0; }
-static bool midiReady = false;
+static bool midiReady = false, usbOnline = false;
 bool bleReady() { return midiReady; }
+bool usbReady() { return usbOnline; }
 bool bleConnected() { return midiReady; }
 bool wifiStart() { return false; }
 bool saveConfig(const foot::Config &) { return true; }
@@ -30,6 +31,10 @@ int main() {
     uiView(prompt);
     assert(!prompt.pedals[0].needsMove && !prompt.pedals[1].needsMove); // Offline.
     assert(!prompt.pedals[0].valueVisible && !prompt.pedals[1].valueVisible);
+    usbOnline = true;
+    uiView(prompt);
+    assert(prompt.usb && prompt.ble == 0 && prompt.pedals[0].needsMove);
+    usbOnline = false;
     midiReady = true;
     for (int variant : {0, 1}) {
         state.saved.enclosureVariant = variant;

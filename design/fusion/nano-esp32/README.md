@@ -46,7 +46,7 @@ These are nominal CAD and slicing checks. Printed pilot fit, adhesive strength, 
 
 ## Electrical compatibility
 
-This kit is a **mechanical conversion**. The current distribution firmware and existing DFR1075 wiring diagrams target ESP32-C6 and must not be used unchanged with the ESP32-S3-based Nano ESP32. GPIO remapping, ADC setup and native USB MIDI firmware are separate from the mount geometry.
+The firmware and current distribution now target the Nano ESP32 (ESP32-S3), with USB MIDI and BLE MIDI output. Use the [Nano GPIO and VBUS-divider wiring](../../../docs/hardware.md) and [ROM flashing procedure](../../../docs/web-flasher.md). DFR1075 harness pin assignments and C6 firmware are incompatible. Recalibrate analog inputs on the Nano after importing settings.
 
 The Nano's recommended **VIN is 6–21 V**, so the existing regulated 5 V controller connection cannot simply be transferred to VIN. With the enclosure's 9 V centre-negative supply, feed the Nano VIN from the **positive barrel sleeve (+9 V)** and GND from the negative centre, with the intended input protection. Keep the Pololu 5 V output for the optional LED supply and share ground. Do not connect the Pololu output directly to USB VBUS; the Nano VBUS pin is tied to USB power and is not a 5 V output when powered from VIN. USB-only operation does not power the separate converter/LED rail. Final power routing must be checked alongside the Nano wiring and USB implementation.
 

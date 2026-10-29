@@ -28,5 +28,5 @@
   "component_face_down": true,
   "headers_fitted": false,
   "fit_check": "assembly-clearance.json",
-  "firmware_migration": "Separate electrical and firmware migration required; current C6 firmware cannot run on Nano ESP32"
+  "firmware_migration": "Nano firmware port and GPIO/power map: docs/firmware.md and docs/hardware.md"
 }

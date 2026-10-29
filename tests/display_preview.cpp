@@ -8,8 +8,10 @@
 State state;
 SemaphoreHandle_t stateMutex;
 uint32_t nowMs() { return 0; }
-bool bleReady() { return true; }
-bool bleConnected() { return true; }
+static bool bleOnline = true, usbOnline = false;
+bool bleReady() { return bleOnline; }
+bool usbReady() { return usbOnline; }
+bool bleConnected() { return bleOnline; }
 bool wifiStart() { return true; }
 bool saveConfig(const foot::Config &) { return true; }
 bool queueTest(int, bool) { return true; }
@@ -165,4 +167,9 @@ int main(int argc, char **argv) {
     uiStep(3, 1); // toggle at index 4, after press at index 1
     uiStep(1, 1); // ON
     capture(argv[1], "22", "NAME");
+    state.setup = false; state.saved = foot::defaults(); state.key = 0;
+    strcpy(state.notice, "Ready"); usbOnline = true; bleOnline = false;
+    capture(argv[1], "25");
+    bleOnline = true; capture(argv[1], "26");
+
 }

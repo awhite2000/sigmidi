@@ -17,3 +17,6 @@ design/kicad/*.kicad_prl
 design/kicad/~*
 design/kicad/_autosave-*
 design/kicad/*-backups/
+
+sdkconfig.nano_esp32
+managed_components/

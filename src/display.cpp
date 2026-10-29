@@ -217,9 +217,10 @@ void renderDisplayStripe(const DisplayFrame &v, int firstY, int rows, uint16_t *
            v.screen == Screen::Performance ? BrandName : v.title, 2, Text, 14);
     if (v.screen == Screen::Performance)
         c.text(16, 28, FirmwareLabel, 1, Muted, 24);
-    const char *ble = v.ble == 2 ? "MIDI READY" : v.ble == 1 ? "CONNECTED" : "OFFLINE";
-    c.round(190, 10, 74, 19, 5, v.ble == 2 ? Selected : Panel);
-    c.text(197, 16, ble, 1, v.ble == 2 ? Accent : Muted, 10);
+    const bool ready = v.usb || v.ble == 2;
+    const char *ble = v.usb ? (v.ble == 2 ? "USB+BLE" : "USB MIDI") : v.ble == 2 ? "MIDI READY" : v.ble == 1 ? "CONNECTED" : "OFFLINE";
+    c.round(190, 10, 74, 19, 5, ready ? Selected : Panel);
+    c.text(197, 16, ble, 1, ready ? Accent : Muted, 10);
     c.rect(16, 36, 248, 1, Border);
     if (v.screen == Screen::Performance) {
         c.round(16, 48, 248, 83, 8, Panel);

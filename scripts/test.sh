@@ -9,6 +9,8 @@ COUNTER_BIN=$(mktemp /tmp/midi-foot-counter.XXXXXX)
 trap 'rm -f "$TEST_BIN" "$COUNTER_BIN"' EXIT
 c++ -std=c++17 -Wall -Wextra -Werror -Isrc src/core.cpp src/counters.cpp tests/counter_test.cpp -o "$COUNTER_BIN"
 "$COUNTER_BIN"
+c++ -std=c++17 -Wall -Wextra -Werror -Isrc src/core.cpp src/counters.cpp src/midi_router.cpp tests/midi_router_test.cpp -o "$COUNTER_BIN"
+"$COUNTER_BIN"
 rm -f "$COUNTER_BIN"
 DISPLAY_BIN=$(mktemp /tmp/midi-foot-display.XXXXXX)
 trap 'rm -f "$TEST_BIN" "$DISPLAY_BIN"' EXIT

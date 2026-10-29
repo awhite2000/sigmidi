@@ -4,7 +4,7 @@
   "new_install_prompt_erase": true,
   "builds": [
     {
-      "chipFamily": "ESP32-C6",
+      "chipFamily": "ESP32-S3",
       "improv": false,
       "parts": [
         {

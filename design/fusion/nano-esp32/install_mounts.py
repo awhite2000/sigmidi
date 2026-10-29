@@ -46,7 +46,7 @@ def run(_context: str):
  kit_occ.isLightBulbOn=False
  unchanged=all(b.revisionId==preserved[b.entityToken] for o in r.allOccurrences for b in o.component.bRepBodies if b.entityToken in preserved)
  assert unchanged,'An original enclosure body changed'
- data={'board':'Arduino Nano ESP32 ABX00083','instances':installed,'original_enclosure_body_revisions_unchanged':unchanged,'enclosure_geometry_modified':False,'existing_USB_cutout_modified':False,'component_face_down':True,'headers_fitted':False,'fit_check':'assembly-clearance.json','firmware_migration':'Separate electrical and firmware migration required; current C6 firmware cannot run on Nano ESP32'}
+ data={'board':'Arduino Nano ESP32 ABX00083','instances':installed,'original_enclosure_body_revisions_unchanged':unchanged,'enclosure_geometry_modified':False,'existing_USB_cutout_modified':False,'component_face_down':True,'headers_fitted':False,'fit_check':'assembly-clearance.json','firmware_migration':'Nano firmware port and GPIO/power map: docs/firmware.md and docs/hardware.md'}
  r.attributes.add('SIGMIDI','nano_esp32_mounts',json.dumps(data))
  with open(OUT/'installation.json','w') as f:json.dump(data,f,indent=2)
  kit_occ.isLightBulbOn=True

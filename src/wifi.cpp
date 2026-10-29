@@ -137,13 +137,15 @@ static esp_err_t api(httpd_req_t *r) {
                 return error(r, "400 Bad Request", "Invalid test");
             extern bool queueTest(int, bool);
             if (!queueTest(sw->valueint, !strcmp(edge->valuestring, "release")))
-                return error(r, "409 Conflict", "BLE not ready or test busy");
+                return error(r, "409 Conflict", "MIDI not ready or test busy");
         } else
             return error(r, "400 Bad Request", "Unknown action");
     }
     auto out = cJSON_CreateObject();
     cJSON_AddNumberToObject(out, "revision", state.revision);
     cJSON_AddBoolToObject(out, "bleReady", bleReady());
+    cJSON_AddBoolToObject(out, "usbReady", usbReady());
+    cJSON_AddBoolToObject(out, "midiReady", midiAvailable());
     cJSON_AddBoolToObject(out, "adcCalibrated", state.calibrated);
     cJSON_AddNumberToObject(out, "key",
                             foot::switchNumber(state.saved.ladderLayout, state.saved.switchCount,

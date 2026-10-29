@@ -1,11 +1,11 @@
-"""Shared source fingerprint and ESP32-C6 artifact validation for releases."""
+"""Shared source fingerprint and ESP32-S3 artifact validation for releases."""
 import hashlib
 from pathlib import Path
 import struct
 import re
 
 SOURCE_INPUTS = ('src', 'web', 'CMakeLists.txt', 'platformio.ini', 'sdkconfig.defaults', 'partitions.csv')
-FLASH_BYTES = 4 * 1024 * 1024
+FLASH_BYTES = 16 * 1024 * 1024
 NVS_START, NVS_END = 0x9000, 0x19000
 APP_OFFSET, APP_SIZE = 0x20000, 0x3E0000
 
@@ -36,11 +36,11 @@ def source_fingerprint(root):
 
 def validate_images(boot, app, table):
     for label, data in [('bootloader', boot), ('application', app)]:
-        if len(data) < 24 or data[0] != 0xE9 or struct.unpack_from('<H', data, 12)[0] != 13:
-            raise ValueError(f'{label}: expected an ESP32-C6 image (chip ID 13)')
-        # Match the compiled image headers: DIO, 40MHz, 4MB. No upload-time patch required.
-        if data[2] != 2 or data[3] != 0x20:
-            raise ValueError(f'{label}: expected DIO / 40MHz / 4MB image headers')
+        if len(data) < 24 or data[0] != 0xE9 or struct.unpack_from('<H', data, 12)[0] != 9:
+            raise ValueError(f'{label}: expected an ESP32-S3 image (chip ID 9)')
+        # Match the compiled image headers: DIO, 40MHz, 16MB. No upload-time patch required.
+        if data[2] != 2 or data[3] != 0x40:
+            raise ValueError(f'{label}: expected DIO / 40MHz / 16MB image headers')
     if len(boot) > 0x8000 or len(app) > APP_SIZE or len(table) > 0x1000:
         raise ValueError('Image exceeds its flash region')
     entries = {}
@@ -55,7 +55,7 @@ def validate_images(boot, app, table):
                 'phy_init': (1, 1, 0x19000, 0x1000, 0),
                 'factory': (0, 0, APP_OFFSET, APP_SIZE, 0)}
     if entries != expected:
-        raise ValueError('Partition table differs from the supported 4MB controller layout')
+        raise ValueError('Partition table differs from the supported 16MB controller layout')
     return entries
 
 
@@ -69,16 +69,20 @@ def preserve_firmware(root, info, images):
     validate_images(images['bootloader.bin'], images['firmware.bin'], images['partitions.bin'])
     for name, data in images.items():
         (firmware / name).write_bytes(data)
+    (firmware / 'TinyUSB-MIT.txt').write_bytes((root / 'licenses/TinyUSB-MIT.txt').read_bytes())
+    (firmware / 'Apache-2.0.txt').write_bytes((root / 'LICENSE').read_bytes())
     release_info = {**info, 'sha256': {name: sha256(data) for name, data in images.items()}}
     (firmware / 'build-info.json').write_text(json.dumps(release_info, indent=2) + '\n')
     application = f"sigmidi-foot-controller-{info['version']}.bin"
     (output / application).write_bytes(images['firmware.bin'])
     guide = ('SIGMIDI Foot Controller v' + info['version'] + '\n\n'
-             'ESP32-C6 / DFRobot DFR1075. For first installation, use the web flasher.\n'
+             'Arduino Nano ESP32 / ESP32-S3. USB MIDI + BLE MIDI. Use the web flasher in ROM download mode.\n'
              'Pedal interface: two controller resistors per input (5.1k ring reference, 10k GPIO bias to TIP).\n'
              'TIP goes directly to ADC. Enabled resistor mode drives bias HIGH; pot/disabled mode is high impedance.\n'
              'Use passive 0-10k pedals and recapture heel/toe after rewiring. No active pedal interface or 1.5x scaling.\n'
              'Manual esptool write_flash offsets: bootloader.bin 0x0, partitions.bin 0x8000, firmware.bin 0x20000.\n'
+             'Download mode: jumper B1 to GND, tap RST, remove jumper, then select the new USB serial port.\n'
+             'Native MIDI replaces factory Arduino DFU firmware; double-reset DFU is not provided.\n'
              'The versioned application alone requires an existing compatible bootloader and partition table.\n'
              'Export controller settings before updating; avoid full erase to preserve compatible NVS settings.\n')
     (firmware / 'README.txt').write_text(guide)

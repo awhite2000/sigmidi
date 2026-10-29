@@ -1,4 +1,5 @@
 #include "app.hpp"
+#include "midi_router.hpp"
 #include "esp_timer.h"
 #include "nvs_flash.h"
 #include <cmath>
@@ -7,8 +8,12 @@ State state;
 SemaphoreHandle_t stateMutex;
 uint32_t nowMs() { return esp_timer_get_time() / 1000; }
 static foot::Engine engine;
+static foot::MidiRouter router;
+static bool sendMidi(const foot::Message &m, uint32_t now, void *ctx) {
+    return router.send(m, now, bleSend, usbSend, ctx);
+}
 static bool sendConfigured(const foot::Message &m, uint32_t now, void *ctx) {
-    return pcCounters().transmit(m, now, bleSend, ctx);
+    return pcCounters().transmit(m, now, sendMidi, ctx);
 }
 static bool canSetup = false;
 static foot::Sequence test;
@@ -18,7 +23,7 @@ static int testLed = 0;
 static bool testRelease = false, testToggle = false;
 static void actionFeedback(int led, bool release, bool toggle, void *) { state.leds.action(led, release, toggle); }
 bool queueTest(int sw, bool release) {
-    if (!state.setup || sw < 0 || sw >= state.draft.switchCount || !bleReady() || testIndex >= 0)
+    if (!state.setup || sw < 0 || sw >= state.draft.switchCount || !midiAvailable() || testIndex >= 0)
         return false;
     if (state.discardCounterDraft) {
         pcCounters().reconcile(state.saved);
@@ -104,9 +109,11 @@ extern "C" void app_main() {
     state.leds.configure(state.saved);
     ledsStart();
     bleStart();
+    usbStart();
     xTaskCreate(uiTask, "ui", 8192, nullptr, 3, nullptr);
     foot::Debouncer debounce;
     bool wasReady = false, wasSetup = false;
+    unsigned previousLinks = 0;
     int lastPedal[2] = {-1, -1};
     uint32_t lastSent[2]{}, lastRead = 0;
     float filtered[2] = {-1, -1};
@@ -134,9 +141,12 @@ extern "C" void app_main() {
             state.leds.configure(state.saved);
             int code = mv < 0 ? -1 : foot::decodeLadder(state.saved, mv);
             state.key = debounce.update(code, now, state.saved.debounceMs);
-            bool ready = bleReady();
+            unsigned links = (bleReady() ? 1u : 0u) | (usbReady() ? 2u : 0u);
+            router.ready(links);
+            bool ready = links != 0;
             if (ready != wasReady || state.setup != wasSetup) {
                 engine.reset();
+                router.clear();
                 state.leds.clear();
                 debounce.reset();
                 testIndex = -1;
@@ -149,6 +159,14 @@ extern "C" void app_main() {
                 if (!state.setup)
                     pedalModes(state.saved);
             }
+            if (links != previousLinks) {
+                for (int i = 0; i < 2; ++i) {
+                    lastPedal[i] = -1;
+                    state.pedalNeedsMove[i] = true;
+                }
+                previousLinks = links;
+            }
+            router.tick(bleSend, usbSend, nullptr);
             if (!state.setup && ready) {
                 engine.input(state.key, state.saved, now);
                 engine.tick(now, sendConfigured, nullptr, actionFeedback);
@@ -189,7 +207,7 @@ extern "C" void app_main() {
                     m.channel = p.channel;
                     m.number = p.cc;
                     m.value = value;
-                    if (bleSend(m, now, nullptr)) {
+                    if (sendMidi(m, now, nullptr)) {
                         lastPedal[i] = value;
                         lastSent[i] = now;
                         state.pedalNeedsMove[i] = false;

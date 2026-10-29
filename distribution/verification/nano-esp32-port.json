@@ -1,0 +1,53 @@
+{
+  "project": "SIGMIDI Foot Controller",
+  "version": "0.1",
+  "board": "Arduino Nano ESP32 ABX00083",
+  "chip": "ESP32-S3",
+  "flash_bytes": 16777216,
+  "build_id": "67d65d080ba7",
+  "source_sha256": "67d65d080ba75305bf13f097899fb5ec18f1220d2524f441728c53b006054719",
+  "verified_at": "2026-10-30T00:32:18.584062+01:00",
+  "target_build": "passed: PlatformIO espressif32 6.9.0 / ESP-IDF 5.3.1 / Xtensa 13.2.0",
+  "static_RAM_bytes": 120152,
+  "app_usage_bytes": 1211060,
+  "counter_RTC_section": {
+    "name": ".rtc_noinit",
+    "address": "0x50000000",
+    "bytes": 2068,
+    "region": "RTC SLOW"
+  },
+  "USB": {
+    "protocol": "USB MIDI 1.0, one cable, PC and CC",
+    "VID_PID": "303a:4008 (Espressif/TinyUSB development defaults)",
+    "manufacturer": "SIGMIDI",
+    "serial": "unique MAC-derived",
+    "self_powered_VBUS_sense": "A4/GPIO11; VBUS--100k--sense--150k--GND",
+    "incoming_MIDI": "drained and ignored",
+    "CDC_serial": false,
+    "Arduino_DFU_runtime": false
+  },
+  "host_checks": [
+    "core and PC counters",
+    "USB event packets for CC and PC",
+    "USB-only, BLE-only and both outputs",
+    "partial failures retry only the unsent link",
+    "FIFO ordering and bounded backpressure",
+    "PC counter resolved and committed once",
+    "disconnect drops stale per-link copies",
+    "LCD USB-only readiness and pedal movement prompts",
+    "all existing display, menus, modular identity, mirrored variants, LEDs, Toggle, Pong, config and editor regressions"
+  ],
+  "flasher_checks": 20,
+  "wrong_C6_image_rejected": true,
+  "browser_flasher": "Arduino Nano ESP32 / ESP32-S3 / 16MB; SHA-256 verified; install enabled without writing a device",
+  "PDF_checks": {
+    "manual_pages": 25,
+    "BOM_pages": 6,
+    "rendered_and_visually_checked": true
+  },
+  "hardware_flash_tested": false,
+  "USB_MIDI_hardware_tested": false,
+  "BLE_MIDI_hardware_tested": false,
+  "ADC_hardware_tested": false,
+  "limits": "Bench validation of native USB enumeration, simultaneous USB/BLE delivery, ADC calibration/noise, 9V/USB operation and physical flashing remains required. Existing DFR1075 schematic assets are retained reference, not the Nano pin map."
+}

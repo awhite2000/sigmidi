@@ -13,6 +13,7 @@ struct DisplayPedal {
 };
 struct DisplayFrame {
     Screen screen = Screen::Performance;
+    bool usb = false;
     int ble = 0, activeSwitch = 0, switchCount = 10;
     int displayRotation = 0;
     char title[DisplayText]{}, breadcrumb[DisplayText]{}, notice[DisplayText]{},

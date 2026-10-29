@@ -1,10 +1,19 @@
 {
   "project": "SIGMIDI Foot Controller",
   "version": "0.1",
-  "BOM_lines": 44,
-  "electrical_reference_count": 44,
-  "electrical_refs_match_exports": true,
-  "main_CAD_hardware_counts": {
+  "BOM_lines": 49,
+  "shared_electrical_reference_count": 44,
+  "total_electrical_instances_main": 46,
+  "shared_electrical_refs_match_reference_exports": true,
+  "USB_VBUS_divider_BOM_ids": [
+    "E16",
+    "E17"
+  ],
+  "Nano_mount_hardware": {
+    "M1.6x5": 4,
+    "M1.6x6": 2
+  },
+  "original_enclosure_reference_hardware_counts": {
     "base_M2x6": 8,
     "display_M2x5": 4,
     "MCU_M1_6": 4
@@ -17,47 +26,23 @@
     "main_10": 10
   },
   "source_sha256": {
-    "docs/bom-items.json": "5a1fc12f956769dcd0a75cbb14fb6d2979ca475c0593467f348056301f2d3907",
-    "docs/bill-of-materials.md": "f52df359aeb3b611e36804e3b264ad3a34115030aa936b5ab4263841f5cea980",
-    "scripts/build_bom.py": "4d8caab2e5e96f9270cf242f9a4efd75f6cc0fb299e36896b655636cb8087bec",
+    "docs/bom-items.json": "e627d57eb6d87ee1b2c95e8098377fd24ceb73102d14c91355d1f98a50ecaa83",
+    "docs/bill-of-materials.md": "bae44b1ee3b550390f0d9dacd72f131764520413ebac79c3b4f7e47fb013226f",
+    "scripts/build_bom.py": "846f28c9071cb0e4821ab50557a19f7b11a7a3c1c56cc4cf19408a89b1984172",
     "design/electrical/bom.csv": "aae6f279ac78a802bd989597a86713c0f198d6a9ac2ab92775616072cb537b26",
     "design/electrical/netlist.json": "af311d8ad42c162babf381cbbc32c5493003d9582ffe5d9ba6061ced54fb33f3",
     "design/fusion/mirrored/layout.json": "7c357963dd24552da748f04e48d4aab69394bea25b45ff5b9d6e26b49a379306",
-    "design/fusion/mirrored/README.md": "adb34cf26dbb03a4ba94d7ea8b2b61c217bde0913390c6d83ff26d6ed935288a",
+    "design/fusion/mirrored/README.md": "34c3389fec3f7ba31ba98d91b03daef873861c674ee838711100b1ebc67a38ba",
     "design/fusion/README.md": "8c1e68a4ef41ab1447bea671f0e61d0b54f31aa9f718a572414da9241557434a",
     "design/fusion/datasheets/double-trs-ACJS-MHDC.pdf": "cf064025759af13229b2930116f74c2eb0c3a9675ed1c8e6eadcfdd8939f70f5",
-    "docs/hardware.md": "3342367db6937d7ae2f448617657937cd7db7db88b3e47a7239712287b7e5f5d",
-    "docs/power.md": "107aea37af623a90510cb9b40e1125223983ec9909067bff962ef29383864e87",
-    "scripts/build_user_manual.py": "9aa72529ec1c699a66902c662e64af4ddfa67c772454bcd37c6bb5180dc8c132"
+    "docs/hardware.md": "fc1dcf924d21ec12b7fd080d9bf07426345e2a57043ce5a6b73f4094f5920d5c",
+    "docs/power.md": "299910572a130a002406a4a0aa52907f51867d25ab15b705543aa2c0ca4e9ffa",
+    "scripts/build_user_manual.py": "42df15614cb05dc018ce17786701cd23485fdc618b89f0c90ab1b02f7db0a150"
   },
   "outputs": {
-    "docs/bill-of-materials.csv": "9252582686f92b01a5f8b565feb5bd5543cf7bc317984f3985f59bf71e033a35",
-    "output/pdf/sigmidi-foot-controller-0.1-bill-of-materials.pdf": "308b176aa89d2a7ff5a7aedcc2c74b071652b47aeef54c0444679f2f7d5689f2"
+    "docs/bill-of-materials.csv": "6fb66f67885628c7b455e4d013a199f5af0bbb5c1c67b1ec2f1bf8796b681c86",
+    "output/pdf/sigmidi-foot-controller-0.1-bill-of-materials.pdf": "dc71d65d411767300b8c3c748215fea417cf13d47137c3c3382c2422ce9468ef"
   },
   "physical_fit_qualified": false,
-  "purchased_parts_inside_boards_itemized": false,
-  "validation": {
-    "PDF_pages": 6,
-    "bookmarks_pages": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
-    ],
-    "CSV_rows": 44,
-    "PDF_text_and_page_bounds": "pass",
-    "source_and_output_hashes": "pass",
-    "visual_review": "All six pages inspected; no clipping, overlap or broken glyphs. Page 3 re-rendered and inspected after final quantity-label edit.",
-    "physical_assembly_tested": false,
-    "render_sha256": {
-      "page-1": "4699abff1fdaa63554883020c5187fa6a5dbc2eb23c11c3aab30c4ee2db1e1b3",
-      "page-2": "453644d6c3291fa863946610ba7c3ba2e83e0a70ba5a8b5c51a98c0f4ae32f06",
-      "page-3": "f6eafa8963dee03328534f066ce2a59dce58deed1faf73349ff16b1c3ef3d6e5",
-      "page-4": "88a7f339fcd5c06214c5c12adc56b450558182f72e75f5dc58dbbf200c4b23aa",
-      "page-5": "079c378adb1ad6b198d24d55cddd040409f5862afdff77caa6b7b28ed9607931",
-      "page-6": "c0febe9676d82a2bbd3d2997ccf7f791df3159837c1dbba4b9951884d301b9c4"
-    }
-  }
+  "purchased_parts_inside_boards_itemized": false
 }

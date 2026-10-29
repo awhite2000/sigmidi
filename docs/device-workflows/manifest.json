@@ -181,12 +181,12 @@
     }
   ],
   "source_sha256": {
-    "src/ui.cpp": "c12c9a0e3bfa3254448e7422e4d6188b77e5f18d5aae5842021e2c59239762de",
-    "src/display.cpp": "13da018d9a87908ed19a9b3ffd0d600e94b6ade476ffc7b90804759b969d1286",
-    "src/display.hpp": "bc1cc3821c7b7b89fb88575089be61ec2defe2713f65de11b130e57636a5c356",
+    "src/ui.cpp": "533e80c8deef30ca5db5f271faa14fa6bc58e982208397165e8b1864b7da0b58",
+    "src/display.cpp": "706266cc2dc1c086db3a5de0ff6a87cce9ffdce6f8bfdc80c42be69c8938e110",
+    "src/display.hpp": "3d00292595a38b449c7fd41aa8e3dcf48f10c90c858d8cbb393263fdf68b8381",
     "src/config.cpp": "fd9094e730d2b2bfbff5a20d4cc71662f8d210e8f0db6a5284529a580cebde3f",
     "src/core.cpp": "41489476905ac012acad4380e5b06119a519e94019acc841605f1ed8d59db2d9",
-    "tests/device_workflow_preview.cpp": "50adace47f42b77d7077e87fe14be65abbab7b1050fd624728cbd5505cdee09c",
+    "tests/device_workflow_preview.cpp": "a833f80fd91ce16149c46551a001d44355fe8e329b50a96d9c014654036801c1",
     "scripts/build_device_workflows.py": "0cb043f5d6a86513efd511097056889884da830e44b7394f84065afae40e14f8"
   },
   "images": {
@@ -203,15 +203,15 @@
     "pc-editor.png": "2b2ac0a36bb5d14f81e0fa03bde34598d2d238d30f3df312e839a5d258ff640f",
     "pedal-list.png": "f221a9dbf61ca5d911b501dbba408ecc517a7ad9b9b58fe059f72dcae2f1d924",
     "pedal-settings.png": "117bf9c5d547436907bdd848dd0f5e36d2c0e19bb3136503269a8f890dbeaf47",
-    "performance.png": "f5037ed90ee101e7e7d30439c80156fa6513bf3c672390f1cfbb0c02c3f657a2",
+    "performance.png": "abe666ec87f8bb435b3956720542cc8ffbf0935a30dd7d5d2c88c6cbcf303ff4",
     "press-list.png": "666c966f55e9a5c7303f55a8d23b4059c7f8eb698a844518e47e71b87ca26737",
     "program-edit.png": "f13ecb6bc2fc3656a06c4b763858e6c9388f0e66f2537be3ea03a1d0ded20262",
     "save-exit.png": "2389a6ede143232a5f2853c703e2c6d5720228086e15ac56f800f2ae3e82f730",
-    "save-workflow.png": "89cdc666aa7af925309605e453d8c21e1a3168f078323ff226cbf7b115ac9e9d",
-    "saved-performance.png": "283408c0856568c798c49c6dd53ae6049e1daeaad899d93352a8a0fc2f253947",
+    "save-workflow.png": "81a92b91c4b466169cefac2727f3b36726eb4ff90ec0dcc5c295a77f3585b0fc",
+    "saved-performance.png": "1d55c92ee9cb0dbfa5772c5dad89093cd41726fa058638cbd8af208f4d568261",
     "setup-edit.png": "1ed63df731dac0532d60bae5add91792f30f629057acc2731fea476d704ecb1c",
     "switch-list.png": "b6be62fbb7e9fc3065b0e52e9329e76d25bbae281272a4e59cef8f4f86208111",
-    "switch-message-workflow.png": "958ff6fec32e6ba22426728a89acd52300be1cc58ad6ee6979851ffb0e606e38",
+    "switch-message-workflow.png": "73382d607643ac5a53c98822fbe9e9db81cd3ff5ccbd762e05ebd11b1c9790c8",
     "switch-press.png": "9ec96c0ce463c66b182c0ab56bd2bb32036ec932324cbc6334a6b39751b00b2a"
   }
 }

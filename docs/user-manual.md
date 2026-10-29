@@ -27,12 +27,14 @@ Firmware v0.1, configuration schema 6. Illustrations use current 280 x 240 firmw
 
 ## Connect your MIDI Device
 
-A **MIDI Device** is the equipment or software you want to control. SIGMIDI sends MIDI control data over BLE MIDI; it does not carry audio. The receiving connection must act as a BLE MIDI central and subscribe to notifications from SIGMIDI, which acts as the peripheral.
+A **MIDI Device** is the equipment or software you want to control. SIGMIDI sends MIDI over USB and BLE, with the same PC/CC values on both ready links. For USB, connect Nano USB-C to a MIDI host and select SIGMIDI. For BLE, the receiver acts as central and subscribes to SIGMIDI notifications. Neither carries audio.
 
 1. Power SIGMIDI through USB-C, or its fitted 9 V DC center-negative, 5.5 x 2.1 mm input. Power the MIDI Device as required by its manufacturer.
-2. In the MIDI Device's BLE MIDI connection screen, select **SIGMIDI Foot Controller v0.1**. For an iPad, use the music application's BLE MIDI connection interface. A general Bluetooth pairing entry alone does not establish MIDI readiness.
+2. For USB, connect Nano USB-C to the MIDI host and select **SIGMIDI Foot Controller v0.1**. For BLE, select that name in the MIDI Device's BLE MIDI connection screen; on iPad use the music app's BLE MIDI interface, rather than general Bluetooth pairing.
 3. If the MIDI Device has only a DIN MIDI input, use a compatible BLE MIDI central adapter. Appendix A describes a complete dongle example and pairing procedure.
-4. Wait for **MIDI READY** on SIGMIDI. Match each message's channel to the MIDI Device's receive channel, and enable reception of the required PC/CC commands there.
+4. Wait for **USB MIDI**, **USB+BLE** or **MIDI READY** on SIGMIDI. Match each message's channel to the MIDI Device's receive channel, and enable reception of the required PC/CC commands there.
+For USB, the badge is **USB MIDI**, or **USB+BLE** when both links are ready. For Nano wiring and ROM flashing (B1 to GND, RST, release B1), see the [hardware guide](hardware.md) and [installer guide](web-flasher.md).
+
 5. Release all switches. Configure one simple action, save and exit setup, then test its result on the MIDI Device.
 
 SIGMIDI advertises its BLE service automatically; there is no pairing command in its setup menu. The receiving central establishes the connection. Persistent Bluetooth bonding is not implemented. Re-establish the connection through the receiver when needed; a connection does not replay missed actions.
@@ -62,11 +64,11 @@ The four-switch Left base reads **A B / 1 2** from left to right. Extensions add
 | Screen element | What it tells you |
 |---|---|
 | Icon, SIGMIDI and version | Controller identity and installed firmware version, at the top left. |
-| BLE badge, top right | OFFLINE: no connection. CONNECTED: linked but notifications not subscribed. MIDI READY: BLE can accept outgoing messages. |
+| MIDI badge, top right | USB MIDI: USB ready. USB+BLE: both ready. MIDI READY: BLE ready. CONNECTED: BLE linked without subscription. OFFLINE: no ready link. |
 | Large SW label | The currently physically held switch, such as SW B. It is not a latched toggle-state display. |
 | Name below the label | Your configured switch name; LEAD in the example. Long names use smaller text. |
 | PRESS / RELEASE counts | Numbers of configured messages in those two lists. They are not counters of messages already sent. |
-| READY at idle | No physical switch is held. The panel shows the installed count and BLE MIDI instead of a switch name. |
+| READY at idle | No physical switch is held. The panel shows the installed count and USB + BLE instead of a switch name. |
 | PEDAL 1 / CC11, etc. | Input number and configured CC. The MIDI channel is set in the pedal menu but is not displayed here. |
 | Pedal number and bar | Hidden until that input first moves and sends a CC: --- is shown without a bar. Then the calculated output appears as 000-127 with a bar on the full MIDI scale. OFF means disabled; --- also indicates an invalid reading. |
 | MOVE beside a pedal / MOVE PEDAL... TO SYNC | Move each indicated pedal to change its CC value. Its initial value has not yet been sent since boot, BLE readiness change or setup exit. The marker clears after that input sends successfully to BLE; it does not confirm the MIDI Device received it. |
@@ -96,7 +98,7 @@ For a one-shot preset or command, use TOGGLE OFF with an empty Release list. For
 
 With the optional chain enabled and a pixel assigned, momentary Press lights white and Release lights yellow. In toggle mode ON lights white and OFF goes dark. The color changes when the first message in that phase is accepted by BLE. Empty momentary lists leave the color alone; empty toggle lists still update the LED. A rejected action does not change the toggle state.
 
-Each switch toggles independently. Runtime ON/OFF state is not saved: reboot, setup entry/exit and BLE readiness changes reset all toggles to OFF, clear queued actions and clear LEDs. PC message counters have a separate persistence system (page 12). Manual operation or program changes on the MIDI Device can leave its state different from SIGMIDI's; explicitly establish a known starting state.
+Each switch toggles independently. Runtime ON/OFF state is not saved: reboot, setup entry/exit and all-MIDI offline/online transitions reset all toggles to OFF, clear queued actions and clear LEDs. PC message counters have a separate persistence system (page 12). Manual operation or program changes on the MIDI Device can leave its state different from SIGMIDI's; explicitly establish a known starting state.
 
 ## Timing and playing technique
 
@@ -333,7 +335,7 @@ Open the **LADDER navigation row**, rather than the LADDER wiring selector. **ID
 | RGB ORDER | RGB, GRB, BRG, BGR, RBG or GBR; choose RGB for Pololu 2535. |
 | PROTOCOL | 2535, OLD 800K or OLD 400K. Choose 2535 for the specified LEDs; the OLD choices are legacy timing profiles. |
 
-Assign a switch's pixel under its **LED NO.**, not here. White/yellow indicates momentary Press/Release; white/dark indicates toggle ON/OFF. Feedback is local to an accepted BLE send, not a response from the MIDI Device. Save before testing changed chain settings: explicit Test actions use the saved LED configuration. Startup, setup transitions and readiness changes clear latched colors.
+Assign a switch's pixel under its **LED NO.**, not here. White/yellow indicates momentary Press/Release; white/dark indicates toggle ON/OFF. Feedback is local to an accepted MIDI send, not a response from the MIDI Device. Save before testing changed chain settings: explicit Test actions use the saved LED configuration. Startup, setup transitions and readiness changes clear latched colors.
 
 Hold back to EDIT CONFIG, hold again to SETUP, then SAVE & EXIT. If the browser owns the draft, the BROWSER EDITING screen replaces local menus; page 5 explains how to return ownership without accidentally losing work.
 

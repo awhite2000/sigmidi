@@ -66,10 +66,12 @@ def package(root):
         page.write_text(page.read_text().replace('__PROJECT_VERSION__', info['version']))
         firmware = site / 'firmware'
         firmware.mkdir()
+        shutil.copy2(root / 'licenses/TinyUSB-MIT.txt', firmware / 'TinyUSB-MIT.txt')
+        shutil.copy2(root / 'LICENSE', firmware / 'Apache-2.0.txt')
         # Merge only the boot/partition region, deliberately stopping before NVS.
         subprocess.run(esptool_command() + [
-            '--chip', 'esp32c6', 'merge_bin', '--flash_mode', 'dio', '--flash_freq', '40m',
-            '--flash_size', '4MB', '-o', str(firmware / 'boot-region.bin'),
+            '--chip', 'esp32s3', 'merge_bin', '--flash_mode', 'dio', '--flash_freq', '40m',
+            '--flash_size', '16MB', '-o', str(firmware / 'boot-region.bin'),
             '0x0', str(build_output / 'bootloader.bin'), '0x8000', str(build_output / 'partitions.bin'),
         ], check=True)
         boot_region = (firmware / 'boot-region.bin').read_bytes()
@@ -80,12 +82,12 @@ def package(root):
         parts = [{'path': 'firmware/boot-region.bin', 'offset': 0},
                  {'path': 'firmware/application.bin', 'offset': APP_OFFSET}]
         manifest = {'name': 'SIGMIDI Foot Controller', 'version': info['version'], 'new_install_prompt_erase': True,
-                    'builds': [{'chipFamily': 'ESP32-C6', 'improv': False, 'parts': parts}]}
+                    'builds': [{'chipFamily': 'ESP32-S3', 'improv': False, 'parts': parts}]}
         manifest_bytes = (json.dumps(manifest, indent=2) + '\n').encode()
         (site / 'manifest.json').write_bytes(manifest_bytes)
         release = {'schema': 1, 'name': 'SIGMIDI Foot Controller', 'version': info['version'],
                    'built_at': info['built_at'], 'packaged_at': datetime.now(timezone.utc).isoformat(),
-                   'chip': 'ESP32-C6', 'flash_bytes': 4194304, 'source_sha256': info['source_sha256'],
+                   'chip': 'ESP32-S3', 'flash_bytes': 16777216, 'source_sha256': info['source_sha256'],
                    'manifest_sha256': sha256(manifest_bytes), 'installer': 'esp-web-tools@' + provenance['version'],
                    'preserved_regions': [{'name': 'nvs', 'offset': 0x9000, 'bytes': 0x10000},
                                          {'name': 'phy_init', 'offset': 0x19000, 'bytes': 0x1000}],
@@ -126,9 +128,12 @@ def package(root):
         shutil.move(str(archive_path), output / archive_path.name)
     report = {'version': info['version'], 'directory': str(target), 'ZIP': str(output / archive_name),
               'ZIP_sha256': sha256((output / archive_name).read_bytes()), 'files': len(hashes) + 1,
-              'preserves_NVS_when_erase_unchecked': True, 'chip': 'ESP32-C6', 'hardware_flash_tested': False}
+              'preserves_NVS_when_erase_unchecked': True, 'chip': 'ESP32-S3', 'hardware_flash_tested': False}
     preserve_firmware(root, info, images)
     (output / 'web-flasher-package.json').write_text(json.dumps(report, indent=2) + '\n')
+    hashes = {p.relative_to(output).as_posix(): sha256(p.read_bytes()) for p in sorted(output.rglob('*'))
+              if p.is_file() and p != output / 'SHA256.json'}
+    (output / 'SHA256.json').write_text(json.dumps(hashes, indent=2) + '\n')
     print(json.dumps(report, indent=2))
     return report
 

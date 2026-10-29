@@ -6,19 +6,19 @@ Preferred build: **Left**, with electronics on the left and modular extensions t
 
 | Profile | Installed switches N | Pair extensions | Base M2x6 screws | Printed enclosure pieces |
 |---|---|---|---|---|
-| Modular 4 | 4 | 0 | 4 | 3 |
-| Modular 6 | 6 | 1 | 6 | 5 |
-| Modular 8 | 8 | 2 | 8 | 7 |
-| Modular 10 | 10 | 3 | 10 | 9 |
-| Main 10, fixed split chassis | 10 | Not applicable | 8 | 4 |
+| Modular 4 | 4 | 0 | 4 | 5 |
+| Modular 6 | 6 | 1 | 6 | 7 |
+| Modular 8 | 8 | 2 | 8 | 9 |
+| Modular 10 | 10 | 3 | 10 | 11 |
+| Main 10, fixed split chassis | 10 | Not applicable | 8 | 6 |
 
-Use **N** below for the chosen installed switch count. **AR** means as required. Optional feature quantities apply only when that feature is fitted. Parts inside purchased boards are not itemized; no separate MCU, ADC, expander or BLE radio is required.
+Use **N** below for the chosen installed switch count. **AR** means as required. Optional feature quantities apply only when that feature is fitted. Parts inside boards are not itemized. Counts include the two Nano mounting adapters. Use the Nano GPIO/power map; retained DFR1075 schematics are reference only.
 
 ## 1. Required control electronics
 
 | ID / references | Fitted qty | Part and specification |
 |---|---|---|
-| E01 / U1 | 1 piece | **DFRobot DFR1075**. FireBeetle 2 ESP32-C6; current design uses V1.1 geometry, 25.4 x 60 mm PCB. |
+| E01 / U1 | 1 piece | **Arduino Nano ESP32 ABX00083**. ESP32-S3, 16 MB flash; 43.18 x 17.78 mm PCB; without headers. |
 | E02 / U2 | 1 piece | **Waveshare 24382**. 1.69inch LCD Module; ST7789V2; 240 x 280 native / 280 x 240 landscape; 31.5 x 39 mm PCB. |
 | E03 / SW11 | 1 piece | **Rotary encoder with push switch**. Passive quadrature, 20 detents/revolution; normally-open click; 15 x 15 mm body. |
 | E04 / SW1-SW10 | N piece | **Momentary footswitch**. Normally open, non-latching; 12 mm mounting thread; 30 x 13 x 15 mm body; shaft offset 9 mm from short end. |
@@ -26,8 +26,10 @@ Use **N** below for the chosen installed switch count. **AR** means as required.
 | E06 / R8 | 1 piece | **20 kOhm idle resistor**. 1% metal-film, through-hole; 0.25 W procurement choice. |
 | E07 / R9-R18 | N piece | **1 kOhm ladder sections**. 1% metal-film, through-hole; 0.25 W procurement choice. |
 | E08 / C5 | 1 piece | **100 nF ladder filter capacitor**. Ceramic, through-hole; >=10 V rating (50 V is suitable). |
+| E16 | 1 piece | **USB VBUS sense upper resistor**. 100 kOhm, 1%, 0.25 W. |
+| E17 | 1 piece | **USB VBUS sense lower resistor**. 150 kOhm, 1%, 0.25 W. |
 
-All discrete resistors are 1% metal-film; 0.25 W through-hole is a practical procurement choice. Higher precision is optional. The 100 nF capacitor belongs to the switch ladder. Four 1 kOhm sections are in the base; each two-switch extension adds two. No resistor terminates the final tap.
+E16/E17 form the required USB VBUS divider at A4/GPIO11. All discrete resistors are 1% metal-film; 0.25 W through-hole is a practical procurement choice. Higher precision is optional. The 100 nF capacitor belongs to the switch ladder. Four 1 kOhm sections are in the base; each two-switch extension adds two. No resistor terminates the final tap.
 
 <!-- page -->
 
@@ -51,7 +53,7 @@ Fit J2 once for one or both pedal inputs. Each populated input adds one 10 kOhm 
 | E13 / U3 | 1 piece | **Pololu S13V10F5 #4083**. 5 V, nominal 1 A step-up/step-down regulator; about 8.9 x 12.1 mm. |
 | E14 / C1 | 1 piece | **47 uF input capacitor**. Polarized electrolytic; 35 V minimum; compact radial package. |
 
-J1, U3 and C1 are omitted as a group in a USB-only electrical build. The existing chassis still contains their openings and mount features. Pololu 4083 is a **buck-boost** module, not just a step-down regulator; Kamami's 1178565 listing refers to this part. The 1 A rating is shared by controller, display and optional LEDs and is subject to thermal conditions. [S3]
+J1, U3 and C1 are omitted as a group in a USB-only electrical build. The existing chassis still contains their openings and mount features. Pololu 4083 is a **buck-boost** module, not just a step-down regulator; Kamami's 1178565 listing refers to this part. Nano VIN takes the positive 9 V sleeve directly; Pololu VOUT supplies the LED rail only. The converter 1 A rating is subject to thermal conditions. Do not feed its 5 V to Nano VIN or USB VBUS. [S3]
 
 ## Optional LED feedback
 
@@ -69,12 +71,13 @@ Pololu 2535 is sold as a **10-pack**: buy one pack for any single 4-10 switch bu
 |---|---|---|
 | H01 | See p.1 | **Base screws**. M2 x 6 mm countersunk. |
 | H02 | 4 piece | **Display screws**. M2 x 5 mm countersunk. |
-| H03 | 4 piece | **MCU mounting screws**. M1.6; head style and under-head length to confirm before ordering. |
+| H03 | 4 piece | **Nano PCB screws**. M1.6 x 5 mm pan head. |
 | H04 | N set | **Footswitch mounting hardware**. Matching nuts and washer set supplied for each selected footswitch. |
 | H05 | 1 piece | **Encoder knob**. 15 mm diameter x 5 mm height; bore matched to selected shaft. |
 | H06 | 1 set | **Encoder panel hardware**. Matching retaining nut and washer. |
 | H07 | 1 set | **TRS panel hardware**. Two nickel nuts and two black fiber washers for ACJS-MHDC. |
 | H08 | 1 piece | **DC socket retaining nut**. Matching 8 mm thread; 2 mm thick. |
+| H09 | 2 piece | **Nano bridge screws**. M1.6 x 6 mm pan head. |
 
 **Avoid double counting included hardware.** H04 is one complete footswitch hardware set per switch; the reference drawing shows two nuts and one washer. H06 is the encoder's nut/washer set. H07 is J2's two nickel nuts and two fiber washers, shown in the attached manufacturer drawing. H08 is J1's 2 mm retaining nut. Check the seller's package contents before ordering any of these separately.
 
@@ -82,7 +85,7 @@ Pololu 2535 is sold as a **10-pack**: buy one pack for any single 4-10 switch bu
 
 **Display fit:** four M2x5 screws pass through the printed hollow mounts into the factory blind studs. Nominal engagement is 1.39 mm; confirm head seating and usable stud depth on the delivered display. Do not substitute the base's M2x6 screws for the display screws.
 
-**MCU fit remains to confirm:** the four M1.6 reference screw bodies have about 7.2 mm overall modeled height including the head. The project does not define an orderable under-head length or head standard. Measure PCB thickness and usable printed pilot depth, then select the length. Do not order from the 7.2 mm overall dimension.
+**Nano mounting:** four H03 M1.6x5 pan-head screws attach the board to its two adapters; two H09 M1.6x6 screws attach the bridge to existing base poles. Glue the USB-side adapter foot to the original floor. Print P09/P10 without supports, component face down in the assembled mount. Check screw fit and USB cable seating before bonding.
 
 **Control fit remains to confirm:** no exact footswitch or encoder manufacturer SKU is selected. Match the specified switch body and shaft offset, actuator height, encoder bushing length through the 3 mm roof, shaft form and knob bore. The encoder's 6 mm shaft and 8 mm body height are CAD assumptions. These checks determine the final orderable parts, not a change to the enclosure geometry.
 
@@ -102,6 +105,8 @@ Choose **one enclosure family**, not both. Main 10 is 350 mm wide; modular width
 | P06 Cap-adjacent pair upper | 0 | 1 | 1 | 1 | 0 |
 | P07 Universal pair base | 0 | 1 | 2 | 3 | 0 |
 | P08 Integral-floor end cap | 1 | 1 | 1 | 1 | 0 |
+| P09 Nano USB-side glue insert | 1 | 1 | 1 | 1 | 1 |
+| P10 Nano opposite-end bridge | 1 | 1 | 1 | 1 | 1 |
 
 ## Preferred Left print selection
 
@@ -164,25 +169,25 @@ USB and 9 V sources are alternative power options. Choose each supply for the co
 
 | Item | Required check |
 |---|---|
-| DFRobot DFR1075 | Current design uses V1.1 mounting and USB-C geometry. Compare a newer board revision before buying. |
+| Arduino Nano ESP32 | ABX00083 without headers; direct wiring and two printed adapters. Recalibrate analog inputs on the new board. |
 | Waveshare 24382 | Non-touch 1.69inch LCD Module; verify rear M2 studs and GH1.25 8-pin cable. Do not substitute a similar touch display. |
 | Footswitch / encoder | Exact supplier SKUs remain open; match the dimensional and contact requirements on pages 1 and 3. |
 | J1 power socket | Match 8 mm thread, 8 mm threaded length, 18 mm total envelope and 2 mm nut; flange and nut outside diameters still require fit confirmation. |
-| MCU screws | M1.6 quantity is fixed at four; select head style and under-head length from actual engagement measurements. |
+| MCU screws | Four M1.6x5 and two M1.6x6 pan head; verify printed pilot engagement. |
 | Bundled hardware | Check cable, header, nuts and washers already supplied with the boards and controls. Do not buy duplicate sets. |
 
 ## Quantity and source checks
 
-The existing maximum electrical BOM/netlist contains **44 distinct component instances**: three purchased boards, two socket assemblies, one encoder, ten footswitches, sixteen resistors, two capacitors and ten LEDs. This is the fully fitted ten-switch case, including both pedal inputs, 9 V power and LEDs. The similarly sized CSV line count is coincidental: CSV rows also include grouped hardware, printed parts and external accessories.
+The existing maximum electrical BOM/netlist contains **44 shared reference component instances**: three purchased boards, two socket assemblies, one encoder, ten footswitches, sixteen resistors, two capacitors and ten LEDs. The Nano build adds two USB VBUS resistors, for 46 electrical instances at ten switches. The shared reference includes both pedals, 9 V power and LEDs. The similarly sized CSV line count is coincidental: CSV rows also include grouped hardware, printed parts and external accessories.
 
-For all optional circuits fitted, electrical instance totals are **26 / 32 / 38 / 44** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 44 reference designators against both electrical exports and verifies the main 8/4/4 base/display/MCU screw counts against the CAD body inventory.
+For all optional circuits fitted, electrical instance totals are **28 / 34 / 40 / 46** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 44 reference designators against both electrical exports and verifies the main 8/4/4 base/display/MCU screw counts against the CAD body inventory.
 
 ## References
 
-**[S1]** [DFRobot DFR1075 documentation](https://wiki.dfrobot.com/dfr1075/): board identity and manufacturer dimensions. **[S2]** [Waveshare 24382 documentation](https://www.waveshare.com/wiki/1.69inch_LCD_Module): module, connector and mechanical specification.
+**[S1]** [Arduino Nano ESP32 documentation](https://docs.arduino.cc/hardware/nano-esp32/): board identity and manufacturer dimensions. **[S2]** [Waveshare 24382 documentation](https://www.waveshare.com/wiki/1.69inch_LCD_Module): module, connector and mechanical specification.
 
 **[S3]** [Pololu S13V10F5 #4083](https://www.pololu.com/product/4083): regulator, current/thermal limits and input transient capacitor guidance. **[S4]** [Pololu 2535](https://www.pololu.com/product/2535): 10-pack, supply and LED package.
 
 Local basis: design/electrical/bom.csv and netlist.json; design/fusion/mirrored/layout.json; enclosure assembly guides; docs/hardware.md and power.md; and design/fusion/datasheets/double-trs-ACJS-MHDC.pdf. The manufacturer's TRS drawing shows the included nuts/washers and optional PCB support hole; no extra saddle screw is specified in this assembly.
 
-Prepared 29 October 2026 for SIGMIDI v0.1. Existing schematic, firmware and Fusion geometry are unchanged. Values and CAD fit describe the current prototype; purchased-part fit, direct LED drive, power/thermal performance and physical assembly still require bench checks. Edit docs/bom-items.json and rerun scripts/build_bom.py to refresh the PDF, Markdown and shopping CSV.
+Prepared 30 October 2026 for SIGMIDI v0.1. The Nano firmware, harness and two adapters are specified here; original enclosure solids are retained. Values and CAD fit describe the current prototype; purchased-part fit, direct LED drive, power/thermal performance and physical assembly still require bench checks. Edit docs/bom-items.json and rerun scripts/build_bom.py to refresh the PDF, Markdown and shopping CSV.

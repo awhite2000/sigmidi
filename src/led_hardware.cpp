@@ -58,7 +58,7 @@ void ledsStart() {
     config.gpio_num = static_cast<gpio_num_t>(foot::LedDataGpio);
     config.clk_src = RMT_CLK_SRC_DEFAULT;
     config.resolution_hz = 20000000;
-    config.mem_block_symbols = 96; // both C6 TX memory blocks, no competing RMT peripheral
+    config.mem_block_symbols = 64; // One ESP32-S3 RMT memory block; driver refills while sending
     config.trans_queue_depth = 1;
     config.intr_priority = 3;
     auto err = rmt_new_tx_channel(&config, &channel);

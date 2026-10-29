@@ -1,4 +1,6 @@
 #include "app.hpp"
+#include "board.hpp"
+using namespace foot::board;
 #include "driver/gpio.h"
 #include "driver/spi_master.h"
 #include "esp_adc/adc_cali.h"
@@ -9,7 +11,7 @@
 #include <cctype>
 #include <cstring>
 static adc_oneshot_unit_handle_t adc;
-static adc_cali_handle_t calibration;
+static adc_cali_handle_t calibration[3]{};
 static spi_device_handle_t display;
 static uint16_t *frame;
 static portMUX_TYPE encMux = portMUX_INITIALIZER_UNLOCKED;
@@ -21,7 +23,7 @@ static volatile int quarter = 0;
 #define EDGES_PER_DETENT 4
 #endif
 static void IRAM_ATTR encoderISR(void *) {
-    int next = (gpio_get_level(GPIO_NUM_6) << 1) | gpio_get_level(GPIO_NUM_7);
+    int next = (gpio_get_level(static_cast<gpio_num_t>(EncoderA)) << 1) | gpio_get_level(static_cast<gpio_num_t>(EncoderB));
     static const int8_t transitions[16] = {0, -1, 1, 0, 1, 0, 0, -1, -1, 0, 0, 1, 0, 1, -1, 0};
     portENTER_CRITICAL_ISR(&encMux);
     if ((previous ^ next) == 3)
@@ -40,7 +42,7 @@ static void IRAM_ATTR encoderISR(void *) {
     portEXIT_CRITICAL_ISR(&encMux);
 }
 static void spi(const uint8_t *d, size_t n, bool data) {
-    gpio_set_level(GPIO_NUM_19, data);
+    gpio_set_level(static_cast<gpio_num_t>(LcdDc), data);
     spi_transaction_t t{};
     t.length = n * 8;
     t.tx_buffer = d;
@@ -53,25 +55,25 @@ static void pair(uint8_t c, uint8_t v) {
 }
 void hardwareStart() {
     gpio_config_t g{};
-    g.pin_bit_mask = (1ULL << 19) | (1ULL << 14);
+    g.pin_bit_mask = (1ULL << LcdDc) | (1ULL << LcdReset);
     g.mode = GPIO_MODE_OUTPUT;
     ESP_ERROR_CHECK(gpio_config(&g));
     // Passive pedal bias pins start disconnected. Never drive them LOW:
     // each is connected through 10k directly to its pedal ADC input.
     g = {};
-    g.pin_bit_mask = (1ULL << 20) | (1ULL << 21);
+    g.pin_bit_mask = (1ULL << Pedal1Bias) | (1ULL << Pedal2Bias);
     g.mode = GPIO_MODE_DISABLE;
     ESP_ERROR_CHECK(gpio_config(&g));
-    ESP_ERROR_CHECK(gpio_set_level(GPIO_NUM_20, 1));
-    ESP_ERROR_CHECK(gpio_set_level(GPIO_NUM_21, 1));
+    ESP_ERROR_CHECK(gpio_set_level(static_cast<gpio_num_t>(Pedal1Bias), 1));
+    ESP_ERROR_CHECK(gpio_set_level(static_cast<gpio_num_t>(Pedal2Bias), 1));
     g = {};
-    g.pin_bit_mask = (1ULL << 6) | (1ULL << 7) | (1ULL << 17);
+    g.pin_bit_mask = (1ULL << EncoderA) | (1ULL << EncoderB) | (1ULL << EncoderClick);
     g.mode = GPIO_MODE_INPUT;
     g.pull_up_en = GPIO_PULLUP_ENABLE;
     ESP_ERROR_CHECK(gpio_config(&g));
-    previous = (gpio_get_level(GPIO_NUM_6) << 1) | gpio_get_level(GPIO_NUM_7);
+    previous = (gpio_get_level(static_cast<gpio_num_t>(EncoderA)) << 1) | gpio_get_level(static_cast<gpio_num_t>(EncoderB));
     ESP_ERROR_CHECK(gpio_install_isr_service(0));
-    for (auto pin : {GPIO_NUM_6, GPIO_NUM_7}) {
+    for (auto pin : {static_cast<gpio_num_t>(EncoderA), static_cast<gpio_num_t>(EncoderB)}) {
         gpio_set_intr_type(pin, GPIO_INTR_ANYEDGE);
         gpio_isr_handler_add(pin, encoderISR, nullptr);
     }
@@ -81,17 +83,21 @@ void hardwareStart() {
     adc_oneshot_chan_cfg_t channel{};
     channel.atten = ADC_ATTEN_DB_12;
     channel.bitwidth = ADC_BITWIDTH_12;
-    for (int i = 1; i <= 3; i++)
+    for (int i : AdcChannels)
         ESP_ERROR_CHECK(adc_oneshot_config_channel(adc, (adc_channel_t)i, &channel));
     adc_cali_curve_fitting_config_t cal{};
     cal.unit_id = ADC_UNIT_1;
     cal.atten = ADC_ATTEN_DB_12;
     cal.bitwidth = ADC_BITWIDTH_12;
-    state.calibrated = adc_cali_create_scheme_curve_fitting(&cal, &calibration) == ESP_OK;
+    state.calibrated = true;
+    for (unsigned i = 0; i < AdcChannels.size(); ++i) {
+        cal.chan = (adc_channel_t)AdcChannels[i];
+        state.calibrated &= adc_cali_create_scheme_curve_fitting(&cal, &calibration[i]) == ESP_OK;
+    }
     spi_bus_config_t bus{};
-    bus.mosi_io_num = 22;
+    bus.mosi_io_num = LcdMosi;
     bus.miso_io_num = -1;
-    bus.sclk_io_num = 23;
+    bus.sclk_io_num = LcdClock;
     bus.quadwp_io_num = -1;
     bus.quadhd_io_num = -1;
     bus.max_transfer_sz = foot::DisplayWidth * foot::DisplayStripeRows * 2;
@@ -99,15 +105,15 @@ void hardwareStart() {
     spi_device_interface_config_t device{};
     device.clock_speed_hz = 10000000;
     device.mode = 0;
-    device.spics_io_num = 18;
+    device.spics_io_num = LcdCs;
     device.queue_size = 1;
     ESP_ERROR_CHECK(spi_bus_add_device(SPI2_HOST, &device, &display));
     frame = (uint16_t *)heap_caps_calloc(foot::DisplayWidth * foot::DisplayStripeRows, 2,
                                          MALLOC_CAP_DMA);
     assert(frame);
-    gpio_set_level(GPIO_NUM_14, 0);
+    gpio_set_level(static_cast<gpio_num_t>(LcdReset), 0);
     vTaskDelay(pdMS_TO_TICKS(20));
-    gpio_set_level(GPIO_NUM_14, 1);
+    gpio_set_level(static_cast<gpio_num_t>(LcdReset), 1);
     vTaskDelay(pdMS_TO_TICKS(100));
     // Waveshare 24382 / ST7789V2, 280x240 landscape, RGB565.
     // Register parameters follow Waveshare's LCD_1IN69 example; set landscape last.
@@ -147,10 +153,11 @@ void hardwareStart() {
     vTaskDelay(pdMS_TO_TICKS(100));
 }
 float readMv(int index) {
+    if (index < 0 || index >= 3) return -1;
     int raw = 0, mv = 0;
-    if (adc_oneshot_read(adc, (adc_channel_t)(index + 1), &raw) != ESP_OK)
+    if (adc_oneshot_read(adc, (adc_channel_t)AdcChannels.at(index), &raw) != ESP_OK)
         return -1;
-    if (!calibration || adc_cali_raw_to_voltage(calibration, raw, &mv) != ESP_OK)
+    if (!calibration[index] || adc_cali_raw_to_voltage(calibration[index], raw, &mv) != ESP_OK)
         return -1;
     return mv;
 }
@@ -162,7 +169,7 @@ void encoderRead(foot::EncoderInput &input) {
 int clickEvent(uint32_t now) {
     static bool raw = false, stable = false, held = false, armed = false;
     static uint32_t changed = 0, down = 0;
-    bool r = !gpio_get_level(GPIO_NUM_17);
+    bool r = !gpio_get_level(static_cast<gpio_num_t>(EncoderClick));
     if (r != raw) {
         raw = r;
         changed = now;
@@ -188,7 +195,7 @@ int clickEvent(uint32_t now) {
     return 0;
 }
 void pedalModes(const foot::Config &c) {
-    const gpio_num_t pins[] = {GPIO_NUM_20, GPIO_NUM_21};
+    const gpio_num_t pins[] = {static_cast<gpio_num_t>(Pedal1Bias), static_cast<gpio_num_t>(Pedal2Bias)};
     for (int i = 0; i < 2; ++i) {
         // Float before changing the output latch, so mode changes cannot
         // momentarily ground the pedal signal through the bias resistor.

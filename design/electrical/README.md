@@ -1,5 +1,7 @@
 # SIGMIDI Foot Controller v0.1 - electrical review
 
+**DFR1075 reference schematic:** the current firmware targets Arduino Nano ESP32. These retained drawings use the former C6 board and power circuit; use the [Nano pin/power map](../../docs/hardware.md) for the new harness.
+
 A unified single-page schematic and seven detailed vector sheets document the current wiring, physical connector references and two-resistor passive pedal inputs. The unified drawing places U1 once and uses continuous wires to connect all component terminals, including supply and return rails. Dots mark electrical junctions; arched crossings remain unconnected. `single-page-wiring.json` records the drawn terminals and wire segments; the generator checks every connected net against `netlist.json`, requires continuous wire paths and rejects wires through component bodies or overlaps between different nets. These are assembly schematics, not PCB fabrication files. The circuits have not been bench qualified.
 
 - [Single-page A0 electrical diagram](../../output/pdf/sigmidi-electrical-single-page.pdf) / [SVG](single-page.svg)

@@ -4,9 +4,9 @@ The specified part is **[Pololu 2535](https://www.pololu.com/product/2535)**: a 
 
 The chain is **disabled by default**, with brightness **64/255**. With it enabled, a press action sets the assigned LED to **white**; a release action sets it to **yellow**. Colors remain until the next action or a reset condition. Each LED is independent, so operating another switch does not erase previous indicators.
 
-A performed action means the BLE transport accepts its first MIDI message for notification. LEDs do not claim acknowledgement by the receiving iPad. Empty lists leave the LED unchanged, failed sends wait without changing it, and rejected/unarmed switch events do not light it. Delayed press and release lists retain FIFO order; LED changes occur when their respective first messages are accepted, not at the raw switch edge. The switch-to-LED assignment is captured with the MIDI lists on press. Explicit MIDI Test actions also drive the selected LED.
+A performed action means at least one ready MIDI transport accepts its first MIDI message for notification. LEDs do not claim acknowledgement by the receiving iPad. Empty lists leave the LED unchanged, failed sends wait without changing it, and rejected/unarmed switch events do not light it. Delayed press and release lists retain FIFO order; LED changes occur when their respective first messages are accepted, not at the raw switch edge. The switch-to-LED assignment is captured with the MIDI lists on press. Explicit MIDI Test actions also drive the selected LED.
 
-Firmware sends an all-off frame during startup, then clears the indicators on setup entry/exit, BLE readiness changes, or changes to saved LED settings, switch count or assignments. Draft changes take effect for normal operation after saving. Save the global chain settings before explicit MIDI tests; a test uses the draft switch's assignment. With a missing or disabled chain the controller continues operating normally. LED output failures do not abort MIDI processing.
+Firmware sends an all-off frame during startup, then clears the indicators on setup entry/exit, changes between offline and ready MIDI, or changes to saved LED settings, switch count or assignments. Draft changes take effect for normal operation after saving. Save the global chain settings before explicit MIDI tests; a test uses the draft switch's assignment. With a missing or disabled chain the controller continues operating normally. LED output failures do not abort MIDI processing.
 
 ## Variant and lead identification
 
@@ -16,7 +16,7 @@ Identify leads before trimming. In the [manufacturer's side-view diagram](https:
 
 | Position in that view | Signal | Connection |
 | --- | --- | --- |
-| Top, farthest from flat side | DIN | DFRobot TX / GPIO16 directly for LED 1; preceding LED's DOUT for LEDs 2–N |
+| Top, farthest from flat side | DIN | Nano D7 / GPIO10 directly for LED 1; preceding LED's DOUT for LEDs 2–N |
 | Second | +5 V | Regulated LED supply, in parallel to every LED |
 | Third | GND | Common ground, in parallel to every LED and the controller |
 | Bottom, nearest flat side | DOUT | Next LED's DIN; leave the final LED's DOUT unconnected |
@@ -25,24 +25,24 @@ This side view is not a bottom view; turning the LED over reverses the visible o
 
 ## Wiring
 
-Use **GPIO16 / IO16 / TX** on the DFR1075 header for LED data. The project's console uses USB Serial/JTAG, leaving that UART TX pad available. The data GPIO is independent of switch, LCD, pedal and encoder connections. The pin assignment follows the [DFRobot board documentation](https://wiki.dfrobot.com/dfr1075/) and its [V1.1 schematic](../design/fusion/datasheets/dfr1075-schematic-v11.pdf).
+Use **D7 / GPIO10** on the Nano ESP32 header for LED data. RMT supplies hardware-timed output independently of the encoder, display and pedals. The application uses native USB MIDI; it does not provide a serial console. Follow the [Nano pin map](hardware.md).
 
-The LED chain contains only the Pololu 2535 LEDs and wiring. Connect the DFRobot data output directly to the first LED's DIN. Supply every LED from the regulated 5 V rail and common ground, in parallel. The WS2811 driver is already inside each LED; no additional driver, buffer, series resistor, pulldown or capacitor is fitted in the chain.
+The LED chain contains only the Pololu 2535 LEDs and wiring. Connect the Nano D7 / GPIO10 data output directly to the first LED's DIN. Supply every LED from the regulated 5 V rail and common ground, in parallel. The WS2811 driver is already inside each LED; no additional driver, buffer, series resistor, pulldown or capacitor is fitted in the chain.
 
 ```text
-DFRobot TX / GPIO16 (P2:17) -------- LED1 DIN
+Nano D7 / GPIO10 -------- LED1 DIN
 LED1 DOUT ------------------------ LED2 DIN
 LED2 DOUT ------------------------ LED3 DIN ... final LED DOUT open
 Regulated +5V -------------------- every LED's 5V lead
 Supply GND ----------------------- every LED's GND lead
-DFRobot GND (P1:3 or P2:4) -------- supply GND
+Nano GND -------- supply GND
 ```
 
 Each LED box in the electrical diagram uses the actual package side-view lead order: lens left, flat down, with DIN / 5V / GND / DOUT on the right from top to bottom. Use the flat-side reference before cutting or bending leads. The source photograph is included unchanged in the diagram. A raised wire hop crosses the +5 V rail without connecting to it.
 
 The GPIO signal is 3.3 V while LED power is 5 V. The Pololu product page does not specify a guaranteed 3.3 V DIN threshold; verify direct-drive operation with the purchased LED batch and actual harness. Keep the data wire short and alongside a ground return. Firmware sends an all-off frame at initialization; no added component holds the data input low during MCU reset.
 
-Power this chain from a **regulated 5.0 V rail that does not exceed 5 V at the LEDs**, with common ground to the controller. Do not use a 12 V LED supply or the DFR1075 3V3 output. For a dedicated supply, allow at least **1 A for the LED rail** plus any shared controller load. The Pololu 4083 has a **1 A total** limit; validate the combined load as described in the power guide. The default 64/255 brightness gives about 0.13 A for ten white LEDs by PWM scaling, plus driver overhead; size the supply for the full-white setting. Avoid joining independent positive supply outputs together. Make or change wiring only with power off.
+Power this chain from a **regulated 5.0 V rail that does not exceed 5 V at the LEDs**, with common ground to the controller. Do not use a 12 V LED supply or the Nano ESP32 3V3 output. For a dedicated supply, allow at least **1 A for the LED rail** plus any shared controller load. The Pololu 4083 has a **1 A total** limit; validate the combined load as described in the power guide. The default 64/255 brightness gives about 0.13 A for ten white LEDs by PWM scaling, plus driver overhead; size the supply for the full-white setting. Avoid joining independent positive supply outputs together. Make or change wiring only with power off.
 
 **Power-on blue is normal for this variant.** Pololu states that these LEDs illuminate blue until the first color command. A brief blue indication can occur before firmware initializes, even with LED feedback disabled. The initial black frame clears it; frames are also refreshed approximately every 250 ms so an independently restarted LED supply receives the intended colors again. A startup indication before firmware runs cannot be eliminated by a software setting. [Pololu power-up behavior](https://www.pololu.com/product/2535).
 

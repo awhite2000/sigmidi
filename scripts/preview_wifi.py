@@ -31,7 +31,7 @@ def main():
         def send(self,data,kind='application/json'):
             body=data if isinstance(data,bytes) else json.dumps(data).encode()
             self.send_response(200);self.send_header('Content-Type',kind);self.send_header('Cache-Control','no-store');self.end_headers();self.wfile.write(body)
-        def state(self):return {'config':config,'revision':revision,'bleReady':True,'adcCalibrated':True,'mv':[2200,100,200],'key':0}
+        def state(self):return {'config':config,'revision':revision,'bleReady':True,'usbReady':True,'midiReady':True,'adcCalibrated':True,'mv':[2200,100,200],'key':0}
         def do_GET(self):
             if self.path=='/':
                 html=(ROOT/'web/index.html').read_text().replace('<h1>','<p class="muted">Preview · Simulated controller · No hardware connection</p><h1>',1)

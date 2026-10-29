@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#172b29">
-  <meta name="description" content="Install SIGMIDI Foot Controller firmware on a DFRobot FireBeetle 2 ESP32-C6 over USB.">
+  <meta name="description" content="Install SIGMIDI Foot Controller firmware on a Arduino Nano ESP32 over USB.">
   <title>SIGMIDI Foot Controller v0.1 · Firmware installer</title>
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./style.css">
@@ -24,12 +24,12 @@
         <div class="card-top"><h2 id="install-heading" class="eyebrow">SIGMIDI FOOT CONTROLLER</h2><span class="version-badge">VERSION 0.1</span></div>
         <figure class="device-scene">
           <img class="controller-render" src="./assets/enclosure-left.png" width="1800" height="1100" alt="SIGMIDI Left enclosure with a stepped top, ten metal footswitches, switch LEDs, and the display and encoder on the left.">
-          <figcaption class="device-caption">Left variant · BLE MIDI · 4–10 switches</figcaption>
+          <figcaption class="device-caption">Left variant · USB + BLE MIDI · 4–10 switches</figcaption>
         </figure>
         <div class="supported-hardware">
           <p class="hardware-label">Supported hardware:</p>
-          <p class="board-name">DFRobot FireBeetle 2</p>
-          <p class="board-subtitle">DFR1075 · ESP32-C6 · 4 MB flash</p>
+          <p class="board-name">Arduino Nano ESP32</p>
+          <p class="board-subtitle">ESP32-S3 · 16 MB flash · USB + BLE MIDI</p>
         </div>
         <div class="release-row"><div><span class="field-label">BUNDLED BUILD</span><strong id="version">Checking firmware…</strong></div><span id="verified" class="verified" hidden>✓ SHA-256 verified</span></div>
         <p id="status" class="status" role="status" aria-live="polite">Checking the firmware package and your browser…</p>
@@ -48,13 +48,14 @@
         <h2>Plug in. Install. Play.</h2>
         <ol class="steps">
           <li><span class="step-number">01</span><div><h3>Connect over USB-C</h3><p>Use a data cable and open this page in desktop Chrome or Edge. Close any serial monitor using the controller.</p></div></li>
-          <li><span class="step-number">02</span><div><h3>Choose your controller</h3><p>Click <strong>Connect &amp; install</strong> and select the USB serial device. Confirm installation in the dialog.</p></div></li>
+          <li><span class="step-number">02</span><div><h3>Choose your controller</h3><p>Put the Nano in ROM download mode: jumper B1 to GND, tap RST, then remove the jumper. Click <strong>Connect &amp; install</strong> and select the new USB serial device. Confirm installation in the dialog.</p></div></li>
           <li><span class="step-number">03</span><div><h3>Wait for the restart</h3><p>Keep the cable connected until installation completes. The controller restarts with the new firmware.</p></div></li>
         </ol>
         <div class="after-install"><span class="eyebrow">AFTER INSTALLATION</span><h3>Make it yours.</h3><p>On the controller, open <strong>Wi-Fi Setup</strong>. Join the network shown on its display, then open <a href="http://192.168.4.1" target="_blank" rel="noopener">192.168.4.1</a> to edit your MIDI actions.</p></div>
-        <details><summary>Controller isn’t detected?</summary><p>Try another USB data cable. Hold <strong>BOOT</strong>, tap <strong>RESET</strong>, then release BOOT and connect again. The serial port may change when entering download mode. Select the new port. If the controller stays in download mode after installation, tap RESET once.</p></details>
+        <details><summary>Controller isn’t detected?</summary><p>Try another USB data cable. Jumper <strong>B1 to GND</strong>, tap <strong>RST</strong>, then remove the jumper and connect again. The serial port may change when entering download mode. Select the new port. If the controller stays in download mode after installation, tap RESET once.</p></details>
         <details><summary>Will my settings be kept?</summary><p>For this project’s existing partition layout, leave <strong>Erase device</strong> unchecked. The installer writes around the saved-settings region. Export a JSON backup from the Wi-Fi editor first. If replacing unrelated firmware or recovering corrupt settings, select Erase device; this removes all saved mappings, calibration and settings.</p></details>
-        <details><summary>Can I use my iPad?</summary><p>Use a desktop browser with Web Serial for USB installation. After installation, use your iPad for BLE MIDI and the controller’s Wi-Fi configuration editor.</p></details>
+        <details><summary>Arduino bootloader and future updates</summary><p>This installer replaces the factory Arduino firmware with an ESP-IDF USB MIDI application. It does not provide Arduino’s double-reset DFU mode. Enter B1/GND + RST ROM download mode for every update. Export settings before the first installation; the factory partition layout differs. After installing SIGMIDI once, leaving erase unchecked preserves compatible SIGMIDI settings.</p></details>
+        <details><summary>Can I use my iPad?</summary><p>Use a desktop browser with Web Serial for USB installation. After installation, use USB MIDI or BLE MIDI with your MIDI host, and your iPad for the controller’s Wi-Fi configuration editor.</p></details>
       </aside>
     </div>
     <footer><span>SIGMIDI <span class="footer-dot">/</span> OPEN HARDWARE, PERSONAL CONTROL.</span><span>Powered by <a href="https://esphome.github.io/esp-web-tools/" target="_blank" rel="noopener">ESP Web Tools</a> · <a href="./vendor/esp-web-tools/LICENSE">License</a></span></footer>

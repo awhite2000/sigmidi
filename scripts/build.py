@@ -36,7 +36,7 @@ with tempfile.TemporaryDirectory(prefix='midi-foot-', dir='/tmp') as temp:
     subprocess.run([pio, 'run', '--project-dir', str(stage)], env=env, check=True)
     if source_fingerprint(root)[0] != source_sha:
         raise SystemExit('Firmware sources changed during the build; rerun before packaging.')
-    artifacts = stage / '.pio/build/firebeetle2_c6'
+    artifacts = stage / '.pio/build/nano_esp32'
     output = root / 'build'
     output.mkdir(exist_ok=True)
     for name in ('firmware.bin', 'firmware.elf', 'bootloader.bin', 'partitions.bin', 'firmware.map'):
@@ -57,7 +57,7 @@ with tempfile.TemporaryDirectory(prefix='midi-foot-', dir='/tmp') as temp:
         'firmware_name': firmware_name, 'build_id': source_sha[:12],
         'built_at': datetime.now(timezone.utc).isoformat(),
         'source_sha256': source_sha, 'source_files': source_files,
-        'sha256': manifest, 'chip': 'ESP32-C6', 'flash_bytes': 4194304,
+        'sha256': manifest, 'chip': 'ESP32-S3', 'flash_bytes': 16777216,
         'flash_mode': 'dio', 'flash_frequency_mhz': 40,
     }, indent=2) + '\n')
     print(f'Build complete: {output}')
