@@ -100,8 +100,8 @@
       "page": 23
     }
   ],
-  "source_sha256": "47c8ff851bf4e5c149652dc1e0b0f7aad2580dc00c4e947b08fbc36a6ddc55e0",
-  "pdf_sha256": "98df676e3a0dfd38b3e2ef7d5952b98a043f87a63ef69782a169187b06afcf65",
+  "source_sha256": "95f140ce7f436f54e3d17b21b49e481cf5ccdc88f9beacc1603f53e100568124",
+  "pdf_sha256": "43be37b929aacea26d83982c09c6accecb31c60272e76fbdbab9bdca98750add",
   "images": {
     "docs/manual-wifi-example.png": "6808a3abe72eb560d9bbc291455cf4f04fb914ec66a959134c912a785ad73af3",
     "previews/01.png": "15283466145579f2dd40a728510da0a483d5fb552b770be75d74bef90cc9a257",
@@ -116,6 +116,7 @@
     "previews/19.png": "056b695e3c1d9a2e12c0442f995ea17a8d945f3c9c06f94048cba71014fdf7d3",
     "previews/20.png": "31346776d8213e4fbf6b02b00d632a4f8e01f520a36e6e39d0236cb72a451007",
     "previews/22.png": "cb2d80de820686cc668613c67a45a67c982fc0339bb65e4c78e147b0f0644b82",
+    "previews/23.png": "fdcba469223d875e185fb21c7d4fa331f16df76a58b5b08424e0fa01a52621a7",
     "previews/sigmidi-left-main.png": "f35a3efbe48c88a0cb3fe394b2fb13fc28a4f78d3291670ef8fa6aaff26a0400"
   },
   "HX_reference": "Supplied CC table, cross-checked against official Line 6 sources",
@@ -129,19 +130,21 @@
     "web/index.html"
   ],
   "HX_setup_in_appendix_only": true,
-  "firmware_build_id": "eef991ea7349",
-  "firmware_source_sha256": "eef991ea7349a9ef245b1fb77f0d4066266d9da5d478734a7ef8433231b8428e",
+  "firmware_build_id": "0f755644622f",
+  "firmware_source_sha256": "0f755644622f68b4812e25be7d3f7d30d968f91a54416165d592891c52718a82",
   "checked_source_sha256": {
-    "src/ui.cpp": "f881edbc24634a7649c278b20acd3f094495b72ad8f30196de9ed88691c465f9",
-    "src/display.cpp": "4dbd1edafaceab7567403486db88d120527cd24053a2f26e8df73dbaa8080fb4",
     "src/config.cpp": "fd9094e730d2b2bfbff5a20d4cc71662f8d210e8f0db6a5284529a580cebde3f",
     "src/core.cpp": "41489476905ac012acad4380e5b06119a519e94019acc841605f1ed8d59db2d9",
     "src/counters.cpp": "8d17090ad44f4401d0321f5cfceead885ed8b3e97d27b1caca9341907cbde6fa",
+    "src/display.cpp": "d549fd4ad2c66eb4076325b617a97a8ae96894dbad2bc25348e78e1edb25735b",
+    "src/leds.hpp": "cf61cf96d7687373c59b2b3a5d1b76424f04a83a9b9c3cbf45746908fce5b5a3",
+    "src/ui.cpp": "4837dbbe1f915b73456d63e4b363e9f0bab0e8ac66ae3ab230b10d0fcfa36687",
     "web/index.html": "cac0fa988ce49454087a394055b69bd145d746179d604f99d663b17aebbf98be",
     "src/core.hpp": "d0b05afc7bedbe07874e5f9d68d4c1ad256db40ae09d351ea57a635d92020c7c",
-    "src/leds.hpp": "cf61cf96d7687373c59b2b3a5d1b76424f04a83a9b9c3cbf45746908fce5b5a3",
-    "src/main.cpp": "bd64f14ab4314f988942d599d61af82f011832f3af02e24c8dc75ff313bd4bca",
-    "scripts/build_user_manual.py": "4c164c485378f3d021d5c36fd21a58cdb8f91f5632f15dc1bcd7cf111a6e4b90"
+    "scripts/build_user_manual.py": "4c164c485378f3d021d5c36fd21a58cdb8f91f5632f15dc1bcd7cf111a6e4b90",
+    "src/display.hpp": "6a0b045c6bcd511f54c2f9edb7e290302a6ac7ef93427366678d4d09f46c3602",
+    "src/app.hpp": "6b6f65089acbbeeb5f5f6545c7a28c2c56ac86b097837e146eda867fe52c0364",
+    "src/main.cpp": "8e4e18b1eecea95616a1b28853d0b04e8dee2c98fc69908ad0fc83e07d6f3728"
   },
   "validation": {
     "pages_rendered_and_visually_reviewed": 23,
@@ -157,17 +160,17 @@
     "reviewed_on": "2026-10-29",
     "raw_mV_pedal_capture_instructions": true,
     "changed_pages_rendered_and_visually_reviewed": [
-      11,
-      14,
-      15
+      3,
+      4
     ],
-    "other_pages_pixel_identical_to_previous_review": true
+    "other_pages_pixel_identical_to_previous_review": true,
+    "pedal_movement_prompt_documented": true
   },
   "rendered_page_sha256": {
     "1": "2b2e8ce79849d6f4a6cf9e291fdb2919fe3a1fb9d1f8e10aa1afa3b2940cd6c3",
     "2": "4588363fe113a965585c5ce2ca15a2cb3dbe9e4466af9b8ef76a6deadf191cc5",
-    "3": "89be406feddbd12e0ba61a3bb84eacb85d34e565a7e17d66e5b0f08476883e23",
-    "4": "97a906721da8b422d67ede2a82bdf8632628e8b83e197298a83f896b68dba71f",
+    "3": "bf7e447c5d160e7ffba895f229284b5c0ddd0642f7944d4065486c01aa05b4f7",
+    "4": "f5dc7bd7d79ca305105adf9088171b0eff2fde67903602f6533fe7abd71b8f64",
     "5": "16f0e8af6e4ac4080a0232c8eb9a107291dd9279ab6f7e02d52ec10a5fb35513",
     "6": "20c63f7427e759aaaa6b9ef005892aef8da89bb879f459db88f1ba7c19a05219",
     "7": "3f729cce9c9d7070cdd5b92618dce50e28052ae127d3ff50b279de02d885bacf",

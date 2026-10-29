@@ -15,6 +15,7 @@ struct State {
     bool discardCounterDraft = false;
     float mv[3]{};
     int pedal[2] = {-1, -1}, key = -1;
+    bool pedalNeedsMove[2] = {true, true};
     char notice[80] = "Ready", ssid[33]{}, password[17]{};
     std::string owner;
     foot::LedFeedback leds;

@@ -179,7 +179,9 @@ void renderDisplayStripe(const DisplayFrame &v, int firstY, int rows, uint16_t *
             snprintf(number, sizeof number, "READY");
         c.text(29, 57, number, 4, v.activeSwitch > 0 ? Accent : Text, 8);
         c.fit(29, 94, v.switchName, Text, 223);
-        c.text(29, 116, v.action, 1, Muted, 36);
+        c.text(29, 116, v.action, 1,
+               v.activeSwitch <= 0 && (v.pedals[0].needsMove || v.pedals[1].needsMove)
+                   ? Amber : Muted, 36);
         for (int i = 0; i < 2; ++i) {
             int x = 16 + i * 128;
             const auto &p = v.pedals[i];
@@ -194,6 +196,8 @@ void renderDisplayStripe(const DisplayFrame &v, int firstY, int rows, uint16_t *
             else
                 snprintf(value, sizeof value, "%03d", std::clamp(p.value, 0, 127));
             c.text(x + 8, 164, value, 3, p.enabled ? (i ? Blue : Accent) : Muted, 4);
+            if (p.needsMove)
+                c.text(x + 74, 173, "MOVE", 1, Amber, 4);
             c.round(x + 8, 192, 104, 5, 2, Border);
             if (p.enabled && p.value >= 0)
                 c.round(x + 8, 192, std::max(2, 104 * std::clamp(p.value, 0, 127) / 127), 5, 2,

@@ -486,6 +486,8 @@ void uiView(foot::DisplayFrame &view) {
         view.pedals[i].value = state.pedal[i];
         view.pedals[i].enabled = state.saved.pedals[i].enabled;
         view.pedals[i].cc = state.saved.pedals[i].cc;
+        view.pedals[i].needsMove = state.pedalNeedsMove[i] && view.pedals[i].enabled &&
+                                  view.ble == 2 && view.pedals[i].value >= 0;
     }
     if (!state.setup) {
         view.screen = foot::Screen::Performance;
@@ -498,6 +500,10 @@ void uiView(foot::DisplayFrame &view) {
             snprintf(view.switchName, sizeof view.switchName, "%d SWITCHES / BLE MIDI",
                      state.saved.switchCount);
             snprintf(view.action, sizeof view.action, "PRESS A FOOTSWITCH TO PLAY");
+            if (view.pedals[0].needsMove || view.pedals[1].needsMove)
+                snprintf(view.action, sizeof view.action, "MOVE PEDAL%s TO SYNC",
+                         view.pedals[0].needsMove && view.pedals[1].needsMove ? "S 1+2" :
+                         view.pedals[0].needsMove ? " 1" : " 2");
         }
         strcpy(view.footer, "CLICK ENCODER: SETUP");
         return;

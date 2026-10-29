@@ -55,7 +55,7 @@ The four-switch Left base reads **A B / 1 2** from left to right. Extensions add
 
 # 2. Performance Mode
 
-![Performance screen: switch B named LEAD, with example pedal values](../previews/01.png)
+![Performance: switch B named LEAD](../previews/01.png) ![Move enabled pedals to send their initial values](../previews/23.png)
 
 ## Every element on the main screen
 
@@ -69,6 +69,7 @@ The four-switch Left base reads **A B / 1 2** from left to right. Extensions add
 | READY at idle | No physical switch is held. The panel shows the installed count and BLE MIDI instead of a switch name. |
 | PEDAL 1 / CC11, etc. | Input number and configured CC. The MIDI channel is set in the pedal menu but is not displayed here. |
 | Pedal number and bar | Current calculated output, 000-127. The bar shows that value on the full MIDI scale, not percentage of physical travel. OFF means disabled; --- means no valid reading. |
+| MOVE beside a pedal / MOVE PEDAL... TO SYNC | Move each indicated pedal to change its CC value. Its initial value has not yet been sent since boot, BLE readiness change or setup exit. The marker clears after that input sends successfully to BLE; it does not confirm the MIDI Device received it. |
 | Notice line above footer | The most recent status or fault notice, such as a connection, save or ADC message. |
 | CLICK ENCODER: SETUP | Navigation hint. Enter setup when all switches and pending actions are idle. |
 
@@ -101,7 +102,7 @@ Each switch toggles independently. Runtime ON/OFF state is not saved: reboot, se
 
 Use one footswitch at a time; simultaneous presses are unsupported. Holding a switch does not repeat its action. Every list runs in order, with the configured delay before each message. A quick release waits behind that switch's pending Press messages. Rapid accepted actions are queued; a full queue reports a notice.
 
-After boot, leaving setup or a BLE readiness change, release all switches to rearm input detection. A lost connection clears pending actions; reconnecting does not replay them. Setup pauses normal switch and pedal MIDI, so leave setup before playing. Explicit menu Test commands are the exception.
+After boot, leaving setup or a BLE readiness change, release all switches to rearm input detection. Move each enabled pedal until its MOVE marker disappears. A resting pedal sends no initial value, so the MIDI Device may retain its previous expression setting until you move it. A lost connection clears pending actions; reconnecting does not replay them. Setup pauses normal switch and pedal MIDI, so leave setup before playing. Explicit menu Test commands are the exception.
 
 <!-- page -->
 

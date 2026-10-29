@@ -52,6 +52,7 @@ int main() {
         v.editing = true;
         v.pedals[0] = {127, 11, true};
         v.pedals[1] = {32, 7, true};
+        v.pedals[1].needsMove = true;
         std::vector<uint16_t> full(DisplayWidth * DisplayHeight);
         renderDisplayStripe(v, 0, DisplayHeight, full.data());
         assert(*std::max_element(full.begin(), full.end()) != 0);

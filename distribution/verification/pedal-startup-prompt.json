@@ -1,0 +1,26 @@
+{
+  "verified_UTC": "2026-10-29T12:23:10.497461+00:00",
+  "version": "0.1",
+  "build_id": "0f755644622f",
+  "source_sha256": "0f755644622f68b4812e25be7d3f7d30d968f91a54416165d592891c52718a82",
+  "behavior": "Performance Mode MOVE markers per enabled valid pedal on MIDI READY; idle hint identifies pending inputs; clear only after accepted performance CC",
+  "rearm": "boot, BLE readiness transitions and setup transitions",
+  "MIDI_behavior": "unchanged: first sample seeds without sending; output remains change-driven",
+  "tests": {
+    "full_host_suite_passed": true,
+    "both_enclosure_variants": true,
+    "offline_disabled_invalid_inputs_suppress_prompt": true,
+    "independent_input_markers": true,
+    "switch_counts_and_fault_notices_preserved": true,
+    "production_runtime_loop_checked": true,
+    "failed_sends_retain_prompt": true,
+    "BLE_reconnection_and_setup_exit_rearm": true,
+    "silent_baseline_stationary_offline_setup": true,
+    "stripe_and_rotated_output_passed": true,
+    "full_suite_log_sha256": "7b98b0e62e5ada597eb054e5efd27eb8c5efc2251a59a9692a3293ac1bfce258",
+    "runtime_log_sha256": "6d9d2b40d49fca1b379b05c14fd64f35e47c2cde7e7b8e1574dad7aedd34a749"
+  },
+  "preview": "previews/pedal-startup-preview.png",
+  "target_build_passed": true,
+  "physical_hardware_tested": false
+}

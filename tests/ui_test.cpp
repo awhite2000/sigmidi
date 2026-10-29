@@ -5,8 +5,9 @@
 State state;
 SemaphoreHandle_t stateMutex;
 uint32_t nowMs() { return 0; }
-bool bleReady() { return false; }
-bool bleConnected() { return false; }
+static bool midiReady = false;
+bool bleReady() { return midiReady; }
+bool bleConnected() { return midiReady; }
 bool wifiStart() { return false; }
 bool saveConfig(const foot::Config &) { return true; }
 bool queueTest(int, bool) { return false; }
@@ -19,6 +20,47 @@ static bool shown(const char *text) {
     return false;
 }
 int main() {
+    // Initial pedal values are not transmitted: prompt each enabled input until its first send.
+    state.key = 0;
+    state.saved.pedals[0].enabled = state.saved.pedals[1].enabled = true;
+    state.pedal[0] = 84;
+    state.pedal[1] = 32;
+    strcpy(state.notice, "ADC calibration failed");
+    foot::DisplayFrame prompt{};
+    uiView(prompt);
+    assert(!prompt.pedals[0].needsMove && !prompt.pedals[1].needsMove); // Offline.
+    midiReady = true;
+    for (int variant : {0, 1}) {
+        state.saved.enclosureVariant = variant;
+        state.pedalNeedsMove[0] = state.pedalNeedsMove[1] = true;
+        uiView(prompt);
+        assert(!strcmp(prompt.action, "MOVE PEDALS 1+2 TO SYNC"));
+        assert(prompt.pedals[0].needsMove && prompt.pedals[1].needsMove);
+        assert(!strcmp(prompt.notice, "ADC calibration failed")); // Do not hide faults.
+        state.pedalNeedsMove[0] = false;
+        uiView(prompt);
+        assert(!strcmp(prompt.action, "MOVE PEDAL 2 TO SYNC"));
+        assert(!prompt.pedals[0].needsMove && prompt.pedals[1].needsMove);
+        state.key = 1;
+        uiView(prompt);
+        assert(!strncmp(prompt.action, "PRESS ", 6)); // Switch message counts remain visible.
+        assert(prompt.pedals[1].needsMove);
+        state.key = 0;
+        state.saved.pedals[1].enabled = false;
+        uiView(prompt);
+        assert(!prompt.pedals[1].needsMove);
+        assert(!strcmp(prompt.action, "PRESS A FOOTSWITCH TO PLAY"));
+        state.saved.pedals[1].enabled = true;
+        state.pedal[1] = -1;
+        uiView(prompt);
+        assert(!prompt.pedals[1].needsMove); // Invalid reading stays --- rather than MOVE.
+        state.pedal[1] = 32;
+        state.pedalNeedsMove[1] = false;
+        uiView(prompt);
+        assert(!strcmp(prompt.action, "PRESS A FOOTSWITCH TO PLAY"));
+    }
+    state = State{};
+    midiReady = false;
     state.saved.enclosureVariant = 0; // Explicit Right fixture for existing navigation cases.
     for (int count = 6; count <= 10; ++count) {
         state.setup = true;

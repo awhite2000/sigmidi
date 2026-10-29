@@ -49,8 +49,16 @@ int main(int argc, char **argv) {
     state.pedal[0] = 84;
     state.pedal[1] = 32;
     state.key = 1;
+    state.pedalNeedsMove[0] = state.pedalNeedsMove[1] = false;
     strcpy(state.notice, "BLE MIDI CONNECTED");
     capture(argv[1], "01");
+    state.key = 0;
+    state.pedalNeedsMove[0] = state.pedalNeedsMove[1] = true;
+    capture(argv[1], "23");
+    state.pedalNeedsMove[0] = false;
+    capture(argv[1], "24");
+    state.pedalNeedsMove[1] = false;
+    state.key = 1;
     state.setup = true;
     state.draft = state.saved;
     state.revision++;

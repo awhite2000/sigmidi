@@ -8,7 +8,7 @@ enum class MenuRowKind { Navigation, Parameter, Action, Message };
 constexpr int MenuValueX = 164;
 struct DisplayPedal {
     int value = -1, cc = 11;
-    bool enabled = false;
+    bool enabled = false, needsMove = false;
 };
 struct DisplayFrame {
     Screen screen = Screen::Performance;

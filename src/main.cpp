@@ -131,8 +131,10 @@ extern "C" void app_main() {
                 state.leds.clear();
                 debounce.reset();
                 testIndex = -1;
-                for (int i = 0; i < 2; i++)
+                for (int i = 0; i < 2; i++) {
                     lastPedal[i] = -1;
+                    state.pedalNeedsMove[i] = true;
+                }
                 wasReady = ready;
                 wasSetup = state.setup;
                 if (!state.setup)
@@ -181,6 +183,7 @@ extern "C" void app_main() {
                     if (bleSend(m, now, nullptr)) {
                         lastPedal[i] = value;
                         lastSent[i] = now;
+                        state.pedalNeedsMove[i] = false;
                     }
                 }
             }
