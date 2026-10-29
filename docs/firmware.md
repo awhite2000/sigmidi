@@ -1,6 +1,6 @@
 # SIGMIDI Foot Controller v0.1 — Firmware
 
-The firmware uses ESP-IDF 5.3.1 on ESP32-C6. Release version is **0.1**; configuration schema is **4**. Default settings select Left enclosure, Modular wiring and ten switches. MIDI mappings are empty; pedals and LED feedback are disabled.
+The firmware uses ESP-IDF 5.3.1 on ESP32-C6. Release version is **0.1**; configuration schema is **5**. Default settings select Left enclosure, Modular wiring and ten switches. MIDI mappings are empty; pedals and LED feedback are disabled.
 
 ## MIDI actions
 
@@ -9,14 +9,28 @@ Each physical switch stores separate `press` and `release` lists. Each list supp
 A message object in an exported configuration has this form:
 
 ```json
-{"type": 0, "channel": 3, "number": 17, "value": 127, "delayMs": 5}
+{"type": 0, "pcMode": 0, "channel": 3, "number": 17, "value": 127, "delayMs": 5, "counterId": 0}
 ```
 
-`type` is 0 for CC and 1 for PC. `number` holds the controller or program number. PC editors label it **Program** and hide **Value**; CC editors show **Control** on LCD, **Controller** in the browser, and **Value**. PC display numbering is 0–127; `pcOffset` is a stored field without a display effect.
+`type` is 0 for CC and 1 for PC. `number` holds the controller or program number. STATIC PC editors label it **Program** and hide **Value**; INCR/DECR PC editors hide both fields; CC editors show **Control** on LCD, **Controller** in the browser, and **Value**. PC display numbering is 0–127; `pcOffset` is a stored field without a display effect.
 
-Action lists show compact entries such as `PC24/2` and `CC17:127/3`. Select an entry to edit, insert before it or delete it. Append adds at the end; ordering controls move messages within a list. An empty release list sends nothing.
+Action lists show compact entries such as `PC24/2`, `PC+/2`, `PC-/3` and `CC17:127/3`. Select an entry to edit, insert before it or delete it. Append adds at the end; ordering controls move messages within a list. An empty release list sends nothing.
 
 The action engine snapshots both lists and the LED assignment at press. It preserves each switch's press-then-release order, including release during a delayed press. It schedules due messages without blocking input scans and supports 16 outstanding jobs. A full queue reports rejection. Holding a switch does not repeat its list.
+
+## PC counters
+
+PC messages have a **MODE** selector on the LCD and **PC mode** in Wi-Fi: **STATIC** (`pcMode: 0`), **INCR** (`1`) or **DECR** (`2`). STATIC sends the configured Program as before. Each INCR/DECR message has an independent counter, including messages on the same channel and separate press/release messages. New counters start at 0. INCR sends `(counter + 1) % 128`; DECR sends `(counter + 127) % 128`. On the first successful invocation after reboot, either mode sends its restored value unchanged (0 for a new counter). The second invocation of a new INCR sends 1; the second invocation of a new DECR sends 127. Values always use MIDI wire numbering 0–127.
+
+The counter changes only after the BLE transport accepts that message. A failed send retries without another step. Successful sends immediately update retained RTC memory and its modified flag. A background FreeRTOS task checks every **300000 ms (5 minutes)**, writes a checksummed NVS blob only when modified and clears the flag only after a successful commit. If MIDI changes a counter during that flash write, the flag stays set for the next checkpoint. Write failures also leave it set for retry. Configuration saves and counter checkpoints use separate NVS keys.
+
+ESP32-C6 has RTC FAST memory rather than a separate RTC SLOW bank. `RTC_NOINIT_ATTR` places the counter state in its available retained RTC/LP SRAM; [Espressif documents the C6 RTC mapping](https://docs.espressif.com/projects/esp-idf/en/v5.3/esp32c6/api-reference/system/sleep_modes.html#power-down-of-rtc-peripherals-and-memories). The state has a format marker and checksum. Startup restores valid retained state after a warm reset when available, otherwise the most recent valid flash checkpoint, otherwise 0. Power loss can lose changes since the last five-minute checkpoint.
+
+No PC values are transmitted automatically on startup or BLE connection. Each message has a volatile first-invocation marker that resets on reboot and is set only after a successful send. Its first successful action sends the restored counter value **without stepping it or setting the modified flag**; later actions step before sending. Failed sends leave the marker unchanged. Press and release messages each have their own marker, and reconnection or a configuration reorder does not reset it.
+
+`counterId` is a stable per-message identity, separate from array position; `nextCounterId` in the configuration allocates new identities monotonically. Reordering or inserting messages, switching enclosure variant, changing channel or hiding an extension preserves existing counters. Deleting a message removes its counter from the active set; a new message receives a new identity. IDs are included in JSON backups and hidden from both editors. Backups contain counter identities and mode, not live counter values; NVS stores values separately. Schemas 1–4 migrate to 5 with STATIC as the missing-mode default. Duplicated counter IDs and invalid mode values are rejected.
+
+Explicit MIDI Test actions use the same counter behavior. Counters for unsaved test-only messages are discarded with the draft and are not reused by later newly created messages.
 
 ## Switch count, wiring and identity
 
@@ -77,6 +91,6 @@ The optional Pololu 2535 chain defaults to RGB, protocol 2535, brightness 64/255
 
 ## Implementation and verification
 
-`core.cpp` implements validation, tap mapping, scanning and scheduling; `config.cpp` serializes configuration; `hardware.cpp` handles GPIO/ADC/LCD/encoder; `ui.cpp` and `display.cpp` implement menus and graphics; `wifi.cpp` hosts the editor; `storage.cpp` persists settings in NVS.
+`core.cpp` implements validation, tap mapping, scanning and scheduling; `config.cpp` serializes configuration; `hardware.cpp` handles GPIO/ADC/LCD/encoder; `ui.cpp` and `display.cpp` implement menus and graphics; `wifi.cpp` hosts the editor; `storage.cpp` persists settings and periodic counter checkpoints in NVS; `counters.cpp` implements counter identities, retained state and first-invocation behavior.
 
 Run `scripts/test.sh` for host tests. Display previews use the production renderer and menu harness. Firmware compilation and host tests do not qualify actual LCD timing, Wi-Fi/BLE coexistence, iPad delivery or input noise. See [bring-up checks](bringup.md).

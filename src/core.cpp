@@ -3,6 +3,7 @@
 #include <cmath>
 #include <cstdio>
 #include <cstring>
+#include <climits>
 namespace foot {
 Config defaults() {
     Config c;
@@ -62,13 +63,43 @@ void switchLabel(int layout, int count, int tap, char *out, size_t size) {
     }
 }
 static bool finite(float v) { return std::isfinite(v); }
+bool assignCounterIds(Config &c) {
+    int next = c.nextCounterId;
+    if (next < 1)
+        return false;
+    for (auto &s : c.switches)
+        for (auto seq : {&s.press, &s.release}) {
+            if (seq->count < 0 || seq->count > MaxMessages)
+                return false;
+            for (int i = 0; i < seq->count; ++i) {
+                int id = seq->messages[i].counterId;
+                if (id < 0 || id == INT_MAX)
+                    return false;
+                next = std::max(next, id + 1);
+            }
+        }
+    for (auto &s : c.switches)
+        for (auto seq : {&s.press, &s.release})
+            for (int i = 0; i < seq->count; ++i) {
+                auto &m = seq->messages[i];
+                if (m.type == 1 && m.pcMode != Static && !m.counterId) {
+                    if (next == INT_MAX)
+                        return false;
+                    m.counterId = next++;
+                }
+            }
+    c.nextCounterId = next;
+    return true;
+}
 bool validate(const Config &c, char *e, size_t n) {
     auto fail = [&](const char *s) {
         snprintf(e, n, "%s", s);
         return false;
     };
-    if (c.version != 4)
+    if (c.version != 5)
         return fail("Unsupported configuration version");
+    if (c.nextCounterId < 1)
+        return fail("Invalid next PC counter identity");
     if (c.enclosureVariant < 0 || c.enclosureVariant > 1)
         return fail("Enclosure variant must be Right or Left");
     if (!validSwitchCount(c.ladderLayout, c.switchCount))
@@ -87,7 +118,8 @@ bool validate(const Config &c, char *e, size_t n) {
             if (std::fabs(c.ladder[i] - c.ladder[j]) <= 2 * c.windowMv)
                 return fail("Ladder windows overlap");
     }
-    int totalMessages = 0;
+    int totalMessages = 0, idCount = 0;
+    int ids[MaxTotalMessages]{};
     for (auto &s : c.switches) {
         if (s.led < 0 || s.led > MaxSwitches)
             return fail("LED assignment must be 0 to 10");
@@ -97,7 +129,7 @@ bool validate(const Config &c, char *e, size_t n) {
             if (seq->count < 0 || seq->count > 32)
                 return fail("Maximum 32 messages per edge");
             totalMessages += seq->count;
-            if (totalMessages > 128)
+            if (totalMessages > MaxTotalMessages)
                 return fail("Maximum 128 messages across all switches");
             for (int i = 0; i < seq->count; i++) {
                 auto m = seq->messages[i];
@@ -105,6 +137,16 @@ bool validate(const Config &c, char *e, size_t n) {
                     m.number > 127 || m.value < 0 || m.value > 127 || m.delayMs < 0 ||
                     m.delayMs > 10000)
                     return fail("Invalid MIDI message");
+                if (m.pcMode < Static || m.pcMode > Decrement || m.counterId < 0 ||
+                    m.counterId >= c.nextCounterId ||
+                    (m.type == 1 && m.pcMode != Static && !m.counterId))
+                    return fail("Invalid PC mode or counter identity");
+                if (m.counterId) {
+                    for (int k = 0; k < idCount; ++k)
+                        if (ids[k] == m.counterId)
+                            return fail("PC counter identities must be unique per message");
+                    ids[idCount++] = m.counterId;
+                }
             }
         }
     }

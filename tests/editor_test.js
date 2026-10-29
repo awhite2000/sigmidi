@@ -195,4 +195,30 @@ const testButton=walk(ids.get('content').children[0]).find(n=>n.tagName==='butto
  console.log('Calibration display tests passed: whole mV in both variants, integer editing, exact untouched/captured/saved values and unrounded non-voltage parameters');
 
 
+ // Per-message PC counters keep identities when the list is edited.
+ vm.runInContext(`config=${JSON.stringify(sample)};config.switchCount=4;config.enclosureVariant=0;config.switches[0].press=[{type:1,pcMode:0,channel:2,number:24,value:0,delayMs:5,counterId:0},{type:1,pcMode:0,channel:2,number:9,value:0,delayMs:5,counterId:0}];tab='Switches';render()`,context);
+ function messageBox(i){return walk(ids.get('content').children[0]).filter(n=>n.tagName==='details'&&n.className==='messageEditor')[i]}
+ function messageField(i,name){return walk(messageBox(i)).find(n=>n.tagName==='label'&&n.textContent===name)?.children[0]}
+ assert.deepEqual(messageField(0,'PC mode').children.map(n=>n.textContent),['STATIC','INCR','DECR']);
+ messageField(0,'PC mode').value='1';messageField(0,'PC mode').onchange();
+ const id1=vm.runInContext('config.switches[0].press[0].counterId',context);
+ assert.ok(id1>0); assert.equal(messageField(0,'Program'),undefined); assert.equal(messageField(0,'Value'),undefined);
+ assert.ok(walk(messageBox(0)).some(n=>n.tagName==='summary'&&n.textContent==='PC+/2'));
+ messageField(1,'PC mode').value='2';messageField(1,'PC mode').onchange();
+ const id2=vm.runInContext('config.switches[0].press[1].counterId',context);
+ assert.ok(id2>id1);
+ walk(messageBox(1)).find(n=>n.tagName==='button'&&n.textContent==='↑').onclick();
+ assert.equal(vm.runInContext('config.switches[0].press[1].counterId',context),id1);
+ assert.equal(vm.runInContext('config.switches[0].press[0].counterId',context),id2);
+ assert.ok(walk(messageBox(0)).some(n=>n.tagName==='summary'&&n.textContent==='PC-/2'));
+ messageField(1,'PC mode').value='0';messageField(1,'PC mode').onchange();
+ assert.equal(Number(messageField(1,'Program').value),24);
+ assert.equal(vm.runInContext('config.switches[0].press[1].counterId',context),id1);
+ walk(messageBox(0)).find(n=>n.tagName==='button'&&n.textContent==='Insert before').onclick();
+ assert.equal(vm.runInContext('config.switches[0].press[1].counterId',context),id2);
+ assert.equal(messageField(0,'PC mode'),undefined); // CC retains Controller/Value form.
+ assert.ok(messageField(0,'Controller')&&messageField(0,'Value'));
+ console.log('PC editor modes passed: STATIC/INCR/DECR, compact summaries, hidden static number/value, independent stable identities during reorder/insert');
+
+
 })().catch(e=>{console.error(e);process.exitCode=1});

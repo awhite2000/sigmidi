@@ -5,6 +5,11 @@ TEST_BIN=$(mktemp /tmp/midi-foot-test.XXXXXX)
 trap 'rm -f "$TEST_BIN"' EXIT
 c++ -std=c++17 -Wall -Wextra -Werror -Isrc src/core.cpp tests/core_test.cpp -o "$TEST_BIN"
 "$TEST_BIN"
+COUNTER_BIN=$(mktemp /tmp/midi-foot-counter.XXXXXX)
+trap 'rm -f "$TEST_BIN" "$COUNTER_BIN"' EXIT
+c++ -std=c++17 -Wall -Wextra -Werror -Isrc src/core.cpp src/counters.cpp tests/counter_test.cpp -o "$COUNTER_BIN"
+"$COUNTER_BIN"
+rm -f "$COUNTER_BIN"
 DISPLAY_BIN=$(mktemp /tmp/midi-foot-display.XXXXXX)
 trap 'rm -f "$TEST_BIN" "$DISPLAY_BIN"' EXIT
 c++ -std=c++17 -Wall -Wextra -Werror -Isrc src/display.cpp tests/display_test.cpp -o "$DISPLAY_BIN"

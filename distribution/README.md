@@ -13,3 +13,5 @@ Build intermediates are disposable. `scripts/build.py` publishes firmware and we
 These bundles use the [passive pedal wiring](../docs/hardware.md#two-selectable-pedal-inputs): two resistors per input (5.1 kΩ ring reference and 10 kΩ GPIO bias), TIP directly to ADC, and HIGH/high-impedance bias selection. Use unpowered 0–10 kΩ pedals and recapture endpoint calibration after rewiring.
 
 Run `python3 scripts/verify_distribution.py` to check release hashes, ZIP contents, firmware compatibility and the full native Fusion archive. `verification/` contains build/test records. Physical flashing and print testing remain unverified.
+
+PC messages support STATIC, INCR (`PC+`) and DECR (`PC-`), with an independent persistent counter per message. No values are sent at startup. The first invocation after reboot sends the stored value unchanged; later invocations step and wrap within 0–127. Changed counters are checkpointed to flash every five minutes. Configuration schema 5 migrates older backups. See [firmware behavior](../docs/firmware.md).

@@ -4,8 +4,11 @@
 #include <cstdint>
 namespace foot {
 constexpr int MinSwitches = 4, MaxSwitches = 10, MaxMessages = 32;
+constexpr int MaxTotalMessages = 128;
+enum PcMode { Static = 0, Increment = 1, Decrement = 2 };
 struct Message {
     int type = 0, channel = 1, number = 0, value = 0, delayMs = 5;
+    int pcMode = Static, counterId = 0;
 }; // 0 CC, 1 PC
 struct Sequence {
     int count = 0;
@@ -26,7 +29,7 @@ struct Pedal {
     float maxOhms = 10000, heel = 0, toe = 3300, curve = 9;
 };
 struct Config {
-    int version = 4, switchCount = MaxSwitches, debounceMs = 10, pcOffset = 0;
+    int version = 5, switchCount = MaxSwitches, debounceMs = 10, pcOffset = 0;
     int ladderLayout = 1;     // 0 legacy tap order, 1 modular base + extension pairs
     int enclosureVariant = 1; // Default Left; 0 Right, 1 Left (mirrored order and 180-degree LCD)
     bool leftVariant() const { return enclosureVariant == 1; }
@@ -35,6 +38,7 @@ struct Config {
     std::array<float, MaxSwitches + 1> ladder{};
     float windowMv = 20;
     LedConfig leds;
+    int nextCounterId = 1; // Monotonic message identity; never derived from list position.
 };
 Config defaults();
 bool validSwitchCount(int layout, int count);
@@ -45,6 +49,7 @@ int switchNumber(int layout, int count, int tap, bool mirrored = false); // posi
 void switchLabel(int layout, int count, int tap, char *out, size_t size);
 
 bool validate(const Config &, char *error, size_t size);
+bool assignCounterIds(Config &); // Normalize new/imported dynamic PC messages with id=0.
 size_t midiPacket(const Message &, uint32_t ms, uint8_t out[5]);
 int decodeLadder(const Config &, float mv); // -1 invalid, 0 idle, permanent taps T1..TN
 int pedalValue(const Pedal &, float adcMv, int previous = -1); // -1 invalid

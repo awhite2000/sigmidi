@@ -13,7 +13,7 @@ static cJSON *beforeEdit = nullptr;
 static int actionMessage = -1, actionRow = 0;
 static cJSON *newMessage() {
     auto m = cJSON_CreateObject();
-    for (auto key : {"type", "channel", "number", "value", "delayMs"})
+    for (auto key : {"type", "pcMode", "channel", "number", "value", "delayMs", "counterId"})
         cJSON_AddNumberToObject(m, key,
                                 !strcmp(key, "channel") ? 1 : !strcmp(key, "delayMs") ? 5 : 0);
     return m;
@@ -49,6 +49,9 @@ static cJSON *node() {
     return n;
 }
 static bool hidden(cJSON *parent, cJSON *child) {
+    if (child->string && (!strcmp(child->string, "counterId") ||
+                          !strcmp(child->string, "nextCounterId")))
+        return true;
     auto switchCount = cJSON_GetObjectItemCaseSensitive(tree, "switchCount");
     if (parent && parent->string && cJSON_IsNumber(switchCount) &&
         (!strcmp(parent->string, "switches") || !strcmp(parent->string, "ladder"))) {
@@ -60,8 +63,12 @@ static bool hidden(cJSON *parent, cJSON *child) {
             return true;
     }
     auto type = cJSON_GetObjectItemCaseSensitive(parent, "type");
-    return cJSON_IsNumber(type) && type->valueint == 1 && child->string &&
-           !strcmp(child->string, "value");
+    if (!cJSON_IsNumber(type) || !child->string)
+        return false;
+    auto mode = cJSON_GetObjectItemCaseSensitive(parent, "pcMode");
+    return (type->valueint == 0 && !strcmp(child->string, "pcMode")) ||
+           (type->valueint == 1 && (!strcmp(child->string, "value") ||
+             (mode && mode->valueint != 0 && !strcmp(child->string, "number"))));
 }
 static cJSON *visibleChild(cJSON *parent, int index) {
     if (parent && parent->string &&
@@ -95,6 +102,19 @@ static bool syncDraft() {
     char error[80];
     bool ok = configParse(tree, *c, error, sizeof error);
     if (ok) {
+        // Parser-assigned identities must survive subsequent edits of this JSON tree.
+        auto switches = cJSON_GetObjectItemCaseSensitive(tree, "switches");
+        for (int sw = 0; sw < foot::MaxSwitches; ++sw) {
+            auto s = cJSON_GetArrayItem(switches, sw);
+            for (auto edge : {"press", "release"}) {
+                auto list = cJSON_GetObjectItemCaseSensitive(s, edge);
+                const auto &seq = !strcmp(edge, "press") ? c->switches[sw].press : c->switches[sw].release;
+                for (int i = 0; i < seq.count; ++i)
+                    cJSON_SetNumberValue(cJSON_GetObjectItemCaseSensitive(cJSON_GetArrayItem(list, i), "counterId"),
+                                         seq.messages[i].counterId);
+            }
+        }
+        cJSON_SetNumberValue(cJSON_GetObjectItemCaseSensitive(tree, "nextCounterId"), c->nextCounterId);
         state.draft = *c;
         state.revision++;
         seenRevision = state.revision;
@@ -112,8 +132,11 @@ static void finish(bool save) {
             return;
         }
         state.saved = state.draft;
-    } else
+        ++state.savedRevision;
+    } else {
         state.draft = state.saved;
+        state.discardCounterDraft = true;
+    }
     state.revision++;
     state.owner.clear();
     state.setup = false;
@@ -131,6 +154,7 @@ void uiStep(int rotation, int click) {
         if (click == 2) {
             state.owner.clear();
             state.draft = state.saved;
+            state.discardCounterDraft = true;
             state.revision++;
             refresh();
             strcpy(state.notice, "Browser draft discarded");
@@ -235,6 +259,8 @@ void uiStep(int rotation, int click) {
                 cJSON_SetNumberValue(v, std::clamp(v->valueint + rotation, 0, 1));
             } else if (v->string && !strcmp(v->string, "type"))
                 cJSON_SetNumberValue(v, std::clamp(v->valueint + rotation, 0, 1));
+            else if (v->string && !strcmp(v->string, "pcMode"))
+                cJSON_SetNumberValue(v, std::clamp(v->valueint + rotation, 0, 2));
             else if (v->string && !strcmp(v->string, "led"))
                 cJSON_SetNumberValue(v, std::clamp(v->valueint + rotation, 0, foot::MaxSwitches));
             else if (v->string && !strcmp(v->string, "brightness"))
@@ -358,6 +384,7 @@ static const char *parameterName(cJSON *parent, const char *key) {
                                      {"resistor", "RESISTOR"},
                                      {"invert", "INVERT"},
                                      {"type", "TYPE"},
+                                     {"pcMode", "MODE"},
                                      {"value", "VALUE"},
                                      {"name", "NAME"},
                                      {"version", "SCHEMA"},
@@ -385,8 +412,13 @@ static void label(cJSON *parent, cJSON *v, int index, char *out, size_t len,
         auto channel = cJSON_GetObjectItemCaseSensitive(v, "channel");
         auto value = cJSON_GetObjectItemCaseSensitive(v, "value");
         if (type && number && channel && value) {
-            if (type->valueint == 1)
-                snprintf(out, len, "PC%d/%d", number->valueint, channel->valueint);
+            if (type->valueint == 1) {
+                auto mode = cJSON_GetObjectItemCaseSensitive(v, "pcMode");
+                if (mode && mode->valueint)
+                    snprintf(out, len, "PC%s/%d", mode->valueint == 1 ? "+" : "-", channel->valueint);
+                else
+                    snprintf(out, len, "PC%d/%d", number->valueint, channel->valueint);
+            }
             else
                 snprintf(out, len, "CC%d:%d/%d", number->valueint, value->valueint,
                          channel->valueint);
@@ -414,6 +446,8 @@ static void label(cJSON *parent, cJSON *v, int index, char *out, size_t len,
         snprintf(value, sizeof value, "%s", v->valueint ? "LEFT" : "RIGHT");
     else if (cJSON_IsNumber(v) && k && !strcmp(k, "type"))
         snprintf(value, sizeof value, "%s", v->valueint == 1 ? "PC" : "CC");
+    else if (cJSON_IsNumber(v) && k && !strcmp(k, "pcMode"))
+        snprintf(value, sizeof value, "%s", v->valueint == 1 ? "INCR" : v->valueint == 2 ? "DECR" : "STATIC");
     else if (cJSON_IsNumber(v) && k && !strcmp(k, "colorOrder"))
         snprintf(value, sizeof value, "%s", foot::LedOrders[std::clamp(v->valueint, 0, 5)]);
     else if (cJSON_IsNumber(v) && k && !strcmp(k, "protocol"))

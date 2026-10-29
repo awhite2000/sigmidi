@@ -7,6 +7,9 @@ State state;
 SemaphoreHandle_t stateMutex;
 uint32_t nowMs() { return esp_timer_get_time() / 1000; }
 static foot::Engine engine;
+static bool sendConfigured(const foot::Message &m, uint32_t now, void *ctx) {
+    return pcCounters().transmit(m, now, bleSend, ctx);
+}
 static bool canSetup = false;
 static foot::Sequence test;
 static int testIndex = -1;
@@ -17,6 +20,11 @@ static void actionFeedback(int led, bool release, void *) { state.leds.action(le
 bool queueTest(int sw, bool release) {
     if (!state.setup || sw < 0 || sw >= state.draft.switchCount || !bleReady() || testIndex >= 0)
         return false;
+    if (state.discardCounterDraft) {
+        pcCounters().reconcile(state.saved);
+        state.discardCounterDraft = false;
+    }
+    pcCounters().reconcile(state.saved, &state.draft);
     test = release ? state.draft.switches[sw].release : state.draft.switches[sw].press;
     testLed = state.draft.switches[sw].led;
     testRelease = release;
@@ -36,6 +44,7 @@ static void uiTask(void *) {
                 if (canSetup) {
                     state.setup = true;
                     state.draft = state.saved;
+                    state.discardCounterDraft = true;
                     state.revision++;
                     strcpy(state.notice, "Setup");
                 } else
@@ -74,6 +83,8 @@ extern "C" void app_main() {
     } else
         strcpy(state.notice, "Defaults: mappings empty");
     delete loaded;
+    startCounterStorage();
+    unsigned savedRevision = state.savedRevision;
     hardwareStart();
     if (!state.calibrated)
         strcpy(state.notice, "ADC calibration failed");
@@ -99,6 +110,14 @@ extern "C" void app_main() {
         }
         {
             Lock l;
+            if (state.discardCounterDraft) {
+                pcCounters().reconcile(state.saved);
+                state.discardCounterDraft = false;
+            }
+            if (savedRevision != state.savedRevision) {
+                pcCounters().reconcile(state.saved, state.setup ? &state.draft : nullptr);
+                savedRevision = state.savedRevision;
+            }
             state.mv[0] = mv;
             state.leds.configure(state.saved);
             int code = mv < 0 ? -1 : foot::decodeLadder(state.saved, mv);
@@ -118,7 +137,7 @@ extern "C" void app_main() {
             }
             if (!state.setup && ready) {
                 engine.input(state.key, state.saved, now);
-                engine.tick(now, bleSend, nullptr, actionFeedback);
+                engine.tick(now, sendConfigured, nullptr, actionFeedback);
             }
             canSetup = state.key == 0 && engine.idle();
             if (engine.rejected != rejected) {
@@ -126,7 +145,7 @@ extern "C" void app_main() {
                 strcpy(state.notice, "Action queue full");
             }
             if (state.setup && testIndex >= 0 && ready && (int32_t)(now - testDue) >= 0) {
-                if (bleSend(test.messages[testIndex], now, nullptr)) {
+                if (sendConfigured(test.messages[testIndex], now, nullptr)) {
                     if (testIndex == 0)
                         actionFeedback(testLed, testRelease, nullptr);
                     testIndex++;

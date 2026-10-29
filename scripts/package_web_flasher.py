@@ -105,15 +105,23 @@ def package(root):
             for name, checksum in hashes.items():
                 if sha256(archive.read(name)) != checksum:
                     raise ValueError('Packaged flasher file mismatch: ' + name)
-        # Replace only this script's generated output directory after all checks pass.
+        # Publish by copying: the published directory must not retain ownership by
+        # the temporary-directory cleanup lifecycle after a directory rename.
         previous = Path(temp) / 'previous'
         if target.exists():
-            target.rename(previous)
+            shutil.copytree(target, previous)
         try:
-            site.rename(target)
-        except OSError:
+            if target.exists():
+                shutil.rmtree(target)
+            shutil.copytree(site, target)
+            for name, checksum in hashes.items():
+                if sha256((target / name).read_bytes()) != checksum:
+                    raise ValueError('Published flasher file mismatch: ' + name)
+        except (OSError, ValueError):
+            if target.exists():
+                shutil.rmtree(target)
             if previous.exists():
-                previous.rename(target)
+                shutil.copytree(previous, target)
             raise
         shutil.move(str(archive_path), output / archive_path.name)
     report = {'version': info['version'], 'directory': str(target), 'ZIP': str(output / archive_name),

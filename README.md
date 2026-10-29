@@ -7,7 +7,7 @@ SIGMIDI is a programmable BLE MIDI foot controller built around the DFRobot DFR1
 ## Features
 
 - A four-switch base with up to three two-switch extensions: 4, 6, 8 or 10 momentary switches, detected individually through one resistor ladder.
-- Independent ordered press and release lists of PC and CC messages, with channels 1–16 and a delay per message. Added messages default to 5 ms.
+- Independent ordered press and release lists of PC and CC messages, with channels 1–16 and a delay per message. PC supports STATIC, INCR and DECR with independent persistent counters. Added messages default to 5 ms.
 - Two pedal inputs, independently selectable as two-wire resistors or three-wire potentiometers, with maximum resistance up to 10 kΩ, calibration, linear/log response and CC output.
 - A 280 × 240 landscape LCD and a 20-detent encoder with click for local setup.
 - An offline Wi-Fi editor for configuration, calibration, MIDI tests and JSON backups.

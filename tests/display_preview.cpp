@@ -135,4 +135,21 @@ int main(int argc, char **argv) {
     capture(argv[1], "17", "IDLE MV");
     uiStep(100, 0);
     capture(argv[1], "18", "SW B MV");
+    state.draft = foot::defaults();
+    state.saved.enclosureVariant = 1;
+    auto &counterPress = state.draft.switches[0].press;
+    counterPress.count = 2;
+    counterPress.messages[0] = {1, 2, 0, 0, 5, foot::Increment};
+    counterPress.messages[1] = {1, 3, 0, 0, 5, foot::Decrement};
+    assert(foot::assignCounterIds(state.draft));
+    ++state.revision;
+    uiStep(0, 0);
+    uiStep(6, 1);
+    uiStep(1, 1); // Left B / T1
+    uiStep(1, 1); // press
+    capture(argv[1], "19", "PC+/2");
+    uiStep(0, 1); uiStep(0, 1); uiStep(1, 0);
+    capture(argv[1], "20", "TYPE");
+    uiStep(0, 2); uiStep(1, 1); uiStep(0, 1); uiStep(1, 0);
+    capture(argv[1], "21", "TYPE");
 }

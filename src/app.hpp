@@ -1,6 +1,7 @@
 #pragma once
 #include "cJSON.h"
 #include "core.hpp"
+#include "counters.hpp"
 #include "display.hpp"
 #include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
@@ -10,6 +11,8 @@ struct State {
     foot::Config saved = foot::defaults(), draft = saved;
     bool setup = false, wifi = false, calibrated = false;
     unsigned revision = 1;
+    unsigned savedRevision = 0;
+    bool discardCounterDraft = false;
     float mv[3]{};
     int pedal[2] = {-1, -1}, key = -1;
     char notice[80] = "Ready", ssid[33]{}, password[17]{};
@@ -27,6 +30,8 @@ cJSON *configJson(const foot::Config &);
 bool configParse(const cJSON *, foot::Config &, char *, size_t);
 bool loadConfig(foot::Config &);
 bool saveConfig(const foot::Config &);
+foot::PcCounters &pcCounters();
+void startCounterStorage();
 bool bleReady();
 bool bleConnected();
 void bleStart();

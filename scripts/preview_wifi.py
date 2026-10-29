@@ -14,8 +14,9 @@ def demo_config():
 #include <cstdio>
 #include <cstring>
 int main(){auto c=foot::defaults();strcpy(c.switches[0].name,"Lead");
-auto &s=c.switches[0];s.press.count=2;s.release.count=1;
+auto &s=c.switches[0];s.press.count=4;s.release.count=1;
 s.press.messages[0]={1,2,24,0,5};s.press.messages[1]={0,3,17,127,5};s.release.messages[0]={0,3,17,0,5};
+s.press.messages[2]={1,2,0,0,5,foot::Increment,1};s.press.messages[3]={1,3,0,0,5,foot::Decrement,2};c.nextCounterId=3;
 auto j=configJson(c);auto text=cJSON_Print(j);puts(text);cJSON_free(text);cJSON_Delete(j);}
 ''')
         subprocess.run(['cc','-x','c','-c',str(source/'cJSON.c'),'-o',str(p/'json.o')],check=True)

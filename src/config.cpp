@@ -3,13 +3,15 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <climits>
 namespace {
 void num(cJSON *j, const char *k, double v) { cJSON_AddNumberToObject(j, k, v); }
 void boolean(cJSON *j, const char *k, bool v) { cJSON_AddBoolToObject(j, k, v); }
 bool integer(const cJSON *j, const char *k, int &v) {
     auto x = cJSON_GetObjectItemCaseSensitive(j, k);
     if (!cJSON_IsNumber(x) || !std::isfinite(x->valuedouble) ||
-        x->valuedouble != std::floor(x->valuedouble) || std::fabs(x->valuedouble) > 1000000)
+        x->valuedouble != std::floor(x->valuedouble) || x->valuedouble < INT_MIN ||
+        x->valuedouble > INT_MAX)
         return false;
     v = x->valueint;
     return true;
@@ -34,10 +36,12 @@ cJSON *sequence(const foot::Sequence &s) {
         auto j = cJSON_CreateObject();
         auto m = s.messages[i];
         num(j, "type", m.type);
+        num(j, "pcMode", m.pcMode);
         num(j, "channel", m.channel);
         num(j, "number", m.number);
         num(j, "value", m.value);
         num(j, "delayMs", m.delayMs);
+        num(j, "counterId", m.counterId);
         cJSON_AddItemToArray(a, j);
     }
     return a;
@@ -49,10 +53,16 @@ bool sequenceRead(const cJSON *a, foot::Sequence &s) {
     for (int i = 0; i < s.count; i++) {
         auto j = cJSON_GetArrayItem(a, i);
         auto &m = s.messages[i];
+        m = foot::Message{};
         if (!integer(j, "type", m.type) || !integer(j, "channel", m.channel) ||
             !integer(j, "number", m.number) || !integer(j, "value", m.value) ||
             !integer(j, "delayMs", m.delayMs))
             return false;
+        for (auto field : {"pcMode", "counterId"}) {
+            int &value = !strcmp(field, "pcMode") ? m.pcMode : m.counterId;
+            if (cJSON_GetObjectItemCaseSensitive(j, field) && !integer(j, field, value))
+                return false;
+        }
     }
     return true;
 }
@@ -100,6 +110,7 @@ cJSON *configJson(const foot::Config &c) {
     num(leds, "protocol", c.leds.protocol);
     num(j, "ladderLayout", c.ladderLayout);
     num(j, "enclosureVariant", c.enclosureVariant);
+    num(j, "nextCounterId", c.nextCounterId);
     return j;
 }
 bool configParse(const cJSON *j, foot::Config &c, char *e, size_t n) {
@@ -117,15 +128,19 @@ bool configParse(const cJSON *j, foot::Config &c, char *e, size_t n) {
         if (cJSON_GetObjectItemCaseSensitive(j, "switchCount"))
             return bad();
         c.switchCount = foot::MaxSwitches;
-    } else if ((c.version != 2 && c.version != 3 && c.version != 4) ||
+    } else if ((c.version != 2 && c.version != 3 && c.version != 4 && c.version != 5) ||
                !integer(j, "switchCount", c.switchCount)) {
         return bad();
     }
     // Old wiring must retain its original tap numbering; no silent remapping.
     c.ladderLayout = 0;
-    if (sourceVersion == 4 && !integer(j, "ladderLayout", c.ladderLayout))
+    if (sourceVersion >= 4 && !integer(j, "ladderLayout", c.ladderLayout))
         return bad();
-    c.version = 4;
+    c.version = 5;
+    c.nextCounterId = 1;
+    if (cJSON_GetObjectItemCaseSensitive(j, "nextCounterId") &&
+        !integer(j, "nextCounterId", c.nextCounterId))
+        return bad();
     // One selector controls both screen direction and switch presentation.
     c.enclosureVariant = 0;
     if (cJSON_GetObjectItemCaseSensitive(j, "enclosureVariant")) {
@@ -185,5 +200,7 @@ bool configParse(const cJSON *j, foot::Config &c, char *e, size_t n) {
             !real(o, "curve", p.curve))
             return bad();
     }
+    if (!foot::assignCounterIds(c))
+        return bad();
     return foot::validate(c, e, n);
 }

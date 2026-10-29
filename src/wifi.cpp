@@ -114,14 +114,17 @@ static esp_err_t api(httpd_req_t *r) {
                 return error(r, "500 Internal Server Error", "Flash save failed");
             }
             state.draft = *next;
-            if (saving)
+            if (saving) {
                 state.saved = *next;
+                ++state.savedRevision;
+            }
             delete next;
             state.revision++;
             if (!strcmp(action->valuestring, "exit"))
                 state.setup = false;
         } else if (!strcmp(action->valuestring, "discard")) {
             state.draft = state.saved;
+            state.discardCounterDraft = true;
             state.revision++;
         } else if (!strcmp(action->valuestring, "release")) {
             state.owner.clear();

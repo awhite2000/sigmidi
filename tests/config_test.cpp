@@ -103,7 +103,7 @@ int main() {
         assert(cJSON_GetArraySize(cJSON_GetObjectItem(j, "switches")) == 10);
         assert(cJSON_GetArraySize(cJSON_GetObjectItem(j, "ladder")) == 11);
         assert(configParse(j, parsed, error, sizeof error));
-        assert(parsed.version == 4 && parsed.switchCount == count);
+        assert(parsed.version == 5 && parsed.switchCount == count);
         assert(parsed.switches[9].release.messages[0].number == 103);
         assert(parsed.ladder[10] == 1321);
         auto field = cJSON_GetObjectItem(j, "switchCount");
@@ -117,10 +117,10 @@ int main() {
         assert(!configParse(j, parsed, error, sizeof error)); // mandatory in v2/v3
         cJSON_SetNumberValue(cJSON_GetObjectItem(j, "version"), 1);
         assert(configParse(j, parsed, error, sizeof error)); // old backup/NVS migration
-        assert(parsed.version == 4 && parsed.switchCount == 10 && !parsed.leds.enabled);
+        assert(parsed.version == 5 && parsed.switchCount == 10 && !parsed.leds.enabled);
         assert(parsed.switches[9].release.messages[0].number == 103);
         assert(parsed.ladder[10] == 1321);
-        cJSON_SetNumberValue(cJSON_GetObjectItem(j, "version"), 5);
+        cJSON_SetNumberValue(cJSON_GetObjectItem(j, "version"), 6);
         assert(!configParse(j, parsed, error, sizeof error));
         cJSON_Delete(j);
     }
@@ -134,7 +134,7 @@ int main() {
         cJSON_DeleteItemFromObject(cJSON_GetArrayItem(switches, i), "led");
     parsed.leds.enabled = true;
     assert(configParse(j, parsed, error, sizeof error));
-    assert(parsed.version == 4 && !parsed.leds.enabled && parsed.leds.brightness == 64);
+    assert(parsed.version == 5 && !parsed.leds.enabled && parsed.leds.brightness == 64);
     for (int i = 0; i < 10; ++i)
         assert(parsed.switches[i].led == i + 1);
     cJSON_Delete(j);
@@ -180,5 +180,43 @@ int main() {
     cJSON_Delete(j);
     c.switches[4].press.count = 1;
     assert(!foot::validate(c, error, sizeof error));
+    // Dynamic PC messages receive durable identities; array position is not identity.
+    c = foot::defaults();
+    c.switches[0].press.count = 2;
+    c.switches[0].press.messages[0] = {1, 2, 24, 0, 5, foot::Increment};
+    c.switches[0].press.messages[1] = {1, 3, 17, 0, 5, foot::Decrement};
+    j = configJson(c);
+    assert(configParse(j, parsed, error, sizeof error));
+    auto &a = parsed.switches[0].press;
+    const int first = a.messages[0].counterId, second = a.messages[1].counterId;
+    assert(first && second && first != second && parsed.nextCounterId > second);
+    assert(a.messages[0].pcMode == foot::Increment && a.messages[1].pcMode == foot::Decrement);
+    cJSON_Delete(j);
+    c = parsed;
+    std::swap(c.switches[0].press.messages[0], c.switches[0].press.messages[1]);
+    j = configJson(c);
+    assert(configParse(j, parsed, error, sizeof error));
+    assert(parsed.switches[0].press.messages[1].counterId == first);
+    cJSON_Delete(j);
+    c.switches[0].press.messages[0].counterId = first;
+    j = configJson(c);
+    assert(!configParse(j, parsed, error, sizeof error));
+    cJSON_Delete(j);
+    c = foot::defaults(); c.switches[0].press.count = 1;
+    c.switches[0].press.messages[0] = {1, 2, 24, 0, 5};
+    j = configJson(c);
+    cJSON_SetNumberValue(cJSON_GetObjectItem(j, "version"), 4);
+    cJSON_DeleteItemFromObject(j, "nextCounterId");
+    auto msg = cJSON_GetArrayItem(cJSON_GetObjectItem(cJSON_GetArrayItem(cJSON_GetObjectItem(j, "switches"), 0), "press"), 0);
+    cJSON_DeleteItemFromObject(msg, "pcMode"); cJSON_DeleteItemFromObject(msg, "counterId");
+    assert(configParse(j, parsed, error, sizeof error));
+    assert(parsed.version == 5 && parsed.switches[0].press.messages[0].pcMode == foot::Static);
+    for (auto invalid : {"3", "-1", "1.5", "true", "\"INCR\"", "null"}) {
+        cJSON_ReplaceItemInObjectCaseSensitive(msg, "pcMode", cJSON_Parse(invalid));
+        if (!cJSON_GetObjectItemCaseSensitive(msg, "pcMode"))
+            cJSON_AddItemToObject(msg, "pcMode", cJSON_Parse(invalid));
+        assert(!configParse(j, parsed, error, sizeof error));
+    }
+    cJSON_Delete(j);
     puts("Configuration tests passed: roundtrip, strict types, missing fields, maximum capacity");
 }

@@ -1,0 +1,31 @@
+{
+  "verified_UTC": "2026-10-29T09:59:22.266068+00:00",
+  "version": "0.1",
+  "build_id": "e4053c07771d",
+  "source_sha256": "e4053c07771dcfca5181fd13159e7fc1cc03d1373ec034071e3b6ee13403c58f",
+  "configuration_schema": 5,
+  "counter_identity": "separate stable identity per configured message",
+  "compact_UI_labels": [
+    "PC+",
+    "PC-"
+  ],
+  "startup_or_connection_sends": false,
+  "first_successful_invocation_after_reboot": "stored counter value unchanged",
+  "subsequent_invocations": "step before sending, modulo 128; failed sends do not advance",
+  "persistence": {
+    "RTC_section": ".rtc_noinit",
+    "RTC_bytes": 2068,
+    "RTC_address": "0x50000004",
+    "ESP32_C6_memory": "RTC FAST / LP SRAM",
+    "flash_checkpoint_ms": 300000,
+    "dirty_only": true,
+    "concurrent_snapshot_acknowledgement_tested": true,
+    "power_loss_limit": "Changes since last checkpoint may be lost"
+  },
+  "host_tests_passed": true,
+  "host_test_log_sha256": "941eabc6998ada59474c52bd0f2a4563fae32b73a454674bd4e6b4e215e3315f",
+  "target_build_passed": true,
+  "LCD_preview": "previews/pc-counter-menu-preview.png",
+  "WiFi_preview": "previews/wifi-pc-counters.png",
+  "physical_hardware_tested": false
+}

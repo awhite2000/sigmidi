@@ -81,11 +81,26 @@ int main() {
     uiStep(0, 1); // edit PC
     uiView(view);
     assert(!strcmp(view.rows[0], "TYPE") && !strcmp(view.values[0], "PC"));
-    assert(!strcmp(view.rows[2], "PROGRAM") && !strcmp(view.values[2], "24"));
-    assert(!strcmp(view.rows[3], "DELAY MS") && !strcmp(view.values[3], "5"));
+    assert(!strcmp(view.rows[3], "PROGRAM") && !strcmp(view.values[3], "24"));
+    assert(!strcmp(view.rows[4], "DELAY MS") && !strcmp(view.values[4], "5"));
     for (int i = 0; i < view.rowCount; ++i)
         assert(strcmp(view.rows[i], "VALUE"));
-    assert(view.rowKinds[4] == foot::MenuRowKind::Action);
+    assert(view.rowKinds[5] == foot::MenuRowKind::Action);
+    assert(!strcmp(view.rows[1], "MODE") && !strcmp(view.values[1], "STATIC"));
+    uiStep(1, 1); // PC mode
+    uiStep(1, 1); // INCR
+    uiView(view);
+    assert(!strcmp(view.values[1], "INCR"));
+    for (int i = 0; i < view.rowCount; ++i)
+        assert(strcmp(view.rows[i], "PROGRAM") && strcmp(view.rows[i], "VALUE"));
+    uiStep(0, 2);
+    uiView(view);
+    assert(!strcmp(view.rows[0], "PC+/2"));
+    uiStep(0, 1); uiStep(0, 1); // edit message again
+    uiStep(1, 1); uiStep(1, 1); // DECR
+    uiView(view);
+    assert(!strcmp(view.values[1], "DECR"));
+    uiStep(0, 1); uiStep(-2, 1); // restore STATIC
     uiStep(0, 2); // list
     uiStep(1, 1); // CC actions
     uiStep(0, 1); // edit CC
