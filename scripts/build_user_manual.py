@@ -44,7 +44,7 @@ def signal_path():
     d = Drawing(CONTENT, 100)
     boxes = [(2, 136, 'SIGMIDI', 'BLE MIDI peripheral'),
              (186, 136, 'BLE MIDI dongle', 'Central + DIN output'),
-             (370, 132, 'HX STOMP', 'MIDI IN')]
+             (370, 132, 'MIDI DEVICE', 'MIDI IN')]
     for x, w, title, sub in boxes:
         d.add(Rect(x, 24, w, 65, rx=8, ry=8, fillColor=PALE,
                    strokeColor=TEAL, strokeWidth=1))
@@ -123,6 +123,8 @@ def main():
                     images.append(path)
                     w, h = PILImage.open(path).size
                     available = (CONTENT-12)/2 if len(refs) == 2 else CONTENT
+                    if len(refs) == 2 and w == 280:
+                        available = min(available, 215)
                     if len(refs) == 1 and w == 280:
                         available = 215
                     target_h = available * h/w
@@ -155,8 +157,6 @@ def main():
                 weights = [max(7, sum(min(len(row[c]), 90) for row in rows)/len(rows))**.6
                            for c in range(n)]
                 widths = [CONTENT*w/sum(weights) for w in weights]
-                if n == 2 and page_index == 11:
-                    widths = [CONTENT*.29, CONTENT*.71]
                 if n == 2 and page_index == 0:
                     widths = [CONTENT*.87, CONTENT*.13]
                 content = [[Paragraph(('<b>'+inline(v)+'</b>') if j == 0 else inline(v),
@@ -182,7 +182,7 @@ def main():
                     paragraph.append(lines[i].strip())
                     i += 1
                 text = ' '.join(paragraph)
-                style = s['SmallCopy'] if page_index == 11 and text.startswith('**[') else s['Copy']
+                style = s['SmallCopy'] if text.startswith('**[S') else s['Copy']
                 story.append(Paragraph(inline(text), style))
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     doc = Manual(str(OUTPUT), pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN,
@@ -202,7 +202,7 @@ def main():
         canvas.setStrokeColor(colors.HexColor('#c9d8d3'))
         canvas.line(MARGIN, 32, WIDTH-MARGIN, 32)
         canvas.setFillColor(colors.HexColor('#506268'))
-        canvas.drawString(MARGIN, 20, 'Performance  /  Editing  /  HX Stomp')
+        canvas.drawString(MARGIN, 20, 'Performance Mode  /  Editing Mode  /  MIDI Device')
         canvas.drawRightString(WIDTH-MARGIN, 20, str(_doc.page))
         canvas.restoreState()
 
@@ -221,6 +221,9 @@ def main():
                    for p in sorted(set(images))},
         'HX_reference': 'Supplied CC table, cross-checked against official Line 6 sources',
         'BLE_dongle_hardware_tested': False,
+        'device_menu_sources': ['src/ui.cpp', 'src/display.cpp', 'src/config.cpp',
+                                'src/core.cpp', 'src/counters.cpp', 'web/index.html'],
+        'HX_setup_in_appendix_only': True,
     }
     (ROOT/'docs/user-manual-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print(json.dumps({'pdf':str(OUTPUT),'pages':len(sections)},indent=2))

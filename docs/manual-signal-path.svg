@@ -17,7 +17,7 @@
 			<text x="210.308837890625" y="63" style="font-family: ManualBold; font-size: 11px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,126) scale(1,-1)">BLE MIDI dongle</text>
 			<text x="215.139892578125" y="43" style="font-family: Manual; font-size: 8.5px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,86) scale(1,-1)">Central + DIN output</text>
 			<rect x="370" y="24" width="132" height="65" rx="8" ry="8" style="stroke: rgb(9%,47%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
-			<text x="407.275390625" y="63" style="font-family: ManualBold; font-size: 11px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,126) scale(1,-1)">HX STOMP</text>
+			<text x="402.385009765625" y="63" style="font-family: ManualBold; font-size: 11px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,126) scale(1,-1)">MIDI DEVICE</text>
 			<text x="421.59814453125" y="43" style="font-family: Manual; font-size: 8.5px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,86) scale(1,-1)">MIDI IN</text>
 			<path d="M 141,58 L 177,58 Z" style="stroke: rgb(40%,37%,60%); stroke-linecap: butt; stroke-width: 2;"/>
 			<polygon points="182 58, 175 62, 175 54" style="stroke: rgb(40%,37%,60%); stroke-linecap: butt; stroke-width: 1; fill: rgb(40%,37%,60%); fill-rule: evenodd;"/>
