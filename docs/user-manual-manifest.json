@@ -1,0 +1,106 @@
+{
+  "title": "SIGMIDI Foot Controller v0.1 User manual",
+  "configuration_schema": 6,
+  "pages": 13,
+  "page_size": "A4",
+  "preferred_variant": "Left",
+  "source": "docs/user-manual.md",
+  "pdf": "output/pdf/sigmidi-foot-controller-0.1-user-manual.pdf",
+  "chapters": [
+    {
+      "title": "SIGMIDI Foot Controller",
+      "page": 1
+    },
+    {
+      "title": "1. Connect and get ready",
+      "page": 2
+    },
+    {
+      "title": "2. Performance mode",
+      "page": 3
+    },
+    {
+      "title": "3. Edit on the device",
+      "page": 4
+    },
+    {
+      "title": "4. Edit over Wi-Fi",
+      "page": 5
+    },
+    {
+      "title": "5. Calibrate switches and pedals",
+      "page": 6
+    },
+    {
+      "title": "6. Prepare existing HX Stomp patches",
+      "page": 7
+    },
+    {
+      "title": "7. Snapshots and ordered actions",
+      "page": 8
+    },
+    {
+      "title": "8. Control effects and parameters",
+      "page": 9
+    },
+    {
+      "title": "9. Tap, step and count programs",
+      "page": 10
+    },
+    {
+      "title": "10. An example stage layout",
+      "page": 11
+    },
+    {
+      "title": "11. MIDI reference for these recipes",
+      "page": 12
+    },
+    {
+      "title": "12. Troubleshooting and sources",
+      "page": 13
+    }
+  ],
+  "source_sha256": "266cd453d66b4b77e23eb22e33194b43bb3aba98a46c3e8c449c0d0e40ef5fde",
+  "pdf_sha256": "916a8546ae6ab863b0cec4cfd5061a4f4c49b3d5c101a2f29ec73bdf15a9e1bf",
+  "images": {
+    "docs/manual-wifi-example.png": "6808a3abe72eb560d9bbc291455cf4f04fb914ec66a959134c912a785ad73af3",
+    "previews/01.png": "15283466145579f2dd40a728510da0a483d5fb552b770be75d74bef90cc9a257",
+    "previews/02.png": "da2cae36620f1ed74b5765e595bdc7c3cf2ffec0f7fb2e5e54d1387d4b94c9a3",
+    "previews/03.png": "2c0b5285f77d9c24d9ab5fdf5c1137368b5bdfa441ee018ca4aa1eeac6757d01",
+    "previews/05.png": "2153cdc2858bb28c466f57a8a0da227c3aef5440d85d07a8456b82aff7986617",
+    "previews/11.png": "d71456cdc6e235b7c2da714cb110959e565c2af62c6e9e21ff22c3bfe896f3e3",
+    "previews/12.png": "308656715df35805d910ee8a4d5286f80fbab4617daba588463acfe7cc752d48",
+    "previews/19.png": "056b695e3c1d9a2e12c0442f995ea17a8d945f3c9c06f94048cba71014fdf7d3",
+    "previews/20.png": "31346776d8213e4fbf6b02b00d632a4f8e01f520a36e6e39d0236cb72a451007",
+    "previews/22.png": "cb2d80de820686cc668613c67a45a67c982fc0339bb65e4c78e147b0f0644b82",
+    "previews/sigmidi-left-main.png": "f35a3efbe48c88a0cb3fe394b2fb13fc28a4f78d3291670ef8fa6aaff26a0400"
+  },
+  "HX_reference": "Supplied CC table, cross-checked against official Line 6 sources",
+  "BLE_dongle_hardware_tested": false,
+  "validation": {
+    "pages_rendered_and_visually_reviewed": 13,
+    "expected_chapter_pages_verified": true,
+    "compact_MIDI_examples_range_checked": 35,
+    "text_and_horizontal_margins_checked": true,
+    "source_links": 5,
+    "hardware_dongle_tested": false,
+    "pedal_capture_workaround_documented": true
+  },
+  "rendered_page_sha256": {
+    "1": "b3dd8cb7271207651c95ed25d7ba9702ea68bf569ef5967bd5e65eee597a70d5",
+    "2": "0ac3b3792da2ced28ed0209807ec3947e6a4bdc91b660cf3abb8ab0d183e2f66",
+    "3": "a5cb3cb12cdb5b13fa7f1c8768e6c325b1fad73f23868a788ec056ec99779391",
+    "4": "47854b571f63b7a77d7522dac761b5fc43c9d289519728369fe97d1404b1f9c7",
+    "5": "23a24546b1c3b6fa13349049e99d788c01686e132af601d0dc551848259a1e43",
+    "6": "b3ae8c050ea581e65709dd3a3cec184ca3b42fb4fc24c61e108ace7c117ecdc5",
+    "7": "bec7e4ab1df2a7426fc72c0cad74189f26795f009f007edb7c1d6fbcaf76cab5",
+    "8": "f6f2b084cc5346cd431d71c136b05b01de86db491b81b1920b264acfac37541f",
+    "9": "3923b5fd94f138fa0f3a85d219ecaf2a692d9f91ee4ec5f990bbd60d758d7f8d",
+    "10": "9185806f95f2e0adaa3d64bec52a9d18495b35c880da7c3e94aa058b8a27cfb5",
+    "11": "82b51b28f68bbb1903f16ee4b6e7faa2a94b40623b287a4d49f54f97e3f1ffba",
+    "12": "95f7afaf8289cf45ce7ce7205103e1ce23421e85095771530bda90b2312c4cc3",
+    "13": "eb308851821801368219f83443698c756645482ecd9ad5901c5779b78e1e67b4"
+  },
+  "firmware_build_id": "13c3f89041c5",
+  "firmware_source_sha256": "13c3f89041c515b49f1b90a07940423a824c006a37258add9d71c20f1c846a7c"
+}

@@ -38,6 +38,7 @@ On the controller, enter **Wi-Fi Setup**, join the displayed `SIGMIDI-xxxx` netw
 
 | Area | Guide |
 |---|---|
+| Operating guide and HX Stomp examples | [User manual PDF](output/pdf/sigmidi-foot-controller-0.1-user-manual.pdf) · [Editable source](docs/user-manual.md) |
 | Electrical wiring and GPIO | [Hardware](docs/hardware.md) |
 | Editable electrical schematic | [KiCad project](design/kicad/README.md) |
 | Modular taps and resistor values | [Resistor ladder](docs/resistor-ladders.md) |

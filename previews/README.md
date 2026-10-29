@@ -1,5 +1,7 @@
 # SIGMIDI Foot Controller v0.1 — Previews
 
+The illustrated [User manual](../output/pdf/sigmidi-foot-controller-0.1-user-manual.pdf) combines device and Wi-Fi screens with performance, editing and HX Stomp examples. Its [editable source](../docs/user-manual.md) is rebuilt with `scripts/build_user_manual.py` using ReportLab, Pillow and Arial fonts.
+
 ## Enclosure renderings
 
 **Left is preferred**, with electronics on the left and extensions to the right. [Left main](sigmidi-left-main.png) · [Left modular](sigmidi-left-modular.png) · [Right main](sigmidi-right-main.png) · [Right modular](sigmidi-right-modular.png).
