@@ -23,7 +23,7 @@ static bool send(const foot::Message &m, uint32_t, void *p) {
     static_cast<Output *>(p)->values.push_back(m.value);
     return true;
 }
-static void action(int led, bool, void *p) { static_cast<Output *>(p)->leds.push_back(led); }
+static void action(int led, bool, bool, void *p) { static_cast<Output *>(p)->leds.push_back(led); }
 int main() {
     // Independent expected row-first orders, including all three requested sizes.
     const std::vector<std::vector<int>> orders = {{1, 2, 3, 4},
@@ -34,7 +34,7 @@ int main() {
     char error[100];
     auto c = foot::defaults();
     c.enclosureVariant = 0; // This suite exercises original Right row order.
-    assert(c.version == 5 && c.ladderLayout == 1);
+    assert(c.version == 6 && c.ladderLayout == 1);
     for (int i = 0; i < 10; ++i) {
         c.switches[i].press.count = c.switches[i].release.count = 1;
         c.switches[i].press.messages[0] = {0, 1, 17, i + 1, 5};
@@ -109,7 +109,7 @@ int main() {
     cJSON_DeleteItemFromObject(json, "ladderLayout");
     cJSON_SetNumberValue(cJSON_GetObjectItem(json, "version"), 3);
     assert(configParse(json, parsed, error, sizeof error));
-    assert(parsed.version == 5 && parsed.ladderLayout == 0 && parsed.switchCount == 6);
+    assert(parsed.version == 6 && parsed.ladderLayout == 0 && parsed.switchCount == 6);
     assert(parsed.switches[4].press.messages[0].value == 5 && parsed.switches[4].led == 5);
     assert(parsed.ladder[10] == c.ladder[10]);
     cJSON_Delete(json);

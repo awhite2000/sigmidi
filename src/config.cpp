@@ -84,6 +84,7 @@ cJSON *configJson(const foot::Config &c) {
         cJSON_AddItemToObject(o, "press", sequence(s.press));
         cJSON_AddItemToObject(o, "release", sequence(s.release));
         num(o, "led", s.led);
+        boolean(o, "toggle", s.toggle);
         cJSON_AddItemToArray(switches, o);
     }
     auto pedals = cJSON_AddArrayToObject(j, "pedals");
@@ -128,7 +129,7 @@ bool configParse(const cJSON *j, foot::Config &c, char *e, size_t n) {
         if (cJSON_GetObjectItemCaseSensitive(j, "switchCount"))
             return bad();
         c.switchCount = foot::MaxSwitches;
-    } else if ((c.version != 2 && c.version != 3 && c.version != 4 && c.version != 5) ||
+    } else if ((c.version != 2 && c.version != 3 && c.version != 4 && c.version != 5 && c.version != 6) ||
                !integer(j, "switchCount", c.switchCount)) {
         return bad();
     }
@@ -136,7 +137,7 @@ bool configParse(const cJSON *j, foot::Config &c, char *e, size_t n) {
     c.ladderLayout = 0;
     if (sourceVersion >= 4 && !integer(j, "ladderLayout", c.ladderLayout))
         return bad();
-    c.version = 5;
+    c.version = 6;
     c.nextCounterId = 1;
     if (cJSON_GetObjectItemCaseSensitive(j, "nextCounterId") &&
         !integer(j, "nextCounterId", c.nextCounterId))
@@ -179,6 +180,10 @@ bool configParse(const cJSON *j, foot::Config &c, char *e, size_t n) {
         if (!cJSON_IsString(name) || strlen(name->valuestring) > 24)
             return bad();
         strcpy(c.switches[i].name, name->valuestring);
+        c.switches[i].toggle = false;
+        if ((sourceVersion >= 6 || cJSON_GetObjectItemCaseSensitive(o, "toggle")) &&
+            !flag(o, "toggle", c.switches[i].toggle))
+            return bad();
         c.switches[i].led = i + 1;
         if (sourceVersion >= 3 && !integer(o, "led", c.switches[i].led))
             return bad();

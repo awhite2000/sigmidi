@@ -17,6 +17,7 @@ struct Sequence {
 struct Switch {
     char name[25]{};
     Sequence press, release;
+    bool toggle = false; // alternate Press/Release lists on successive physical presses
     int led = 0; // physical pixel 1..10, 0 disables this switch's indicator
 };
 struct LedConfig {
@@ -29,7 +30,7 @@ struct Pedal {
     float maxOhms = 10000, heel = 0, toe = 3300, curve = 9;
 };
 struct Config {
-    int version = 5, switchCount = MaxSwitches, debounceMs = 10, pcOffset = 0;
+    int version = 6, switchCount = MaxSwitches, debounceMs = 10, pcOffset = 0;
     int ladderLayout = 1;     // 0 legacy tap order, 1 modular base + extension pairs
     int enclosureVariant = 1; // Default Left; 0 Right, 1 Left (mirrored order and 180-degree LCD)
     bool leftVariant() const { return enclosureVariant == 1; }
@@ -65,16 +66,17 @@ class Debouncer {
     }
 };
 using Send = bool (*)(const Message &, uint32_t, void *);
-using Action = void (*)(int led, bool release, void *);
+using Action = void (*)(int led, bool release, bool toggle, void *);
 class Engine {
     struct Job {
-        bool used = false, released = false;
+        bool used = false, released = false, toggle = false, toggleOff = false;
         int sw = 0, index = 0, led = 0;
         uint32_t due = 0;
         uint64_t order = 0;
         Sequence press, release;
     };
     std::array<Job, 16> jobs{};
+    std::array<bool, MaxSwitches> toggled{};
     int active = -1;
     bool armed = false;
     uint64_t nextOrder = 0;

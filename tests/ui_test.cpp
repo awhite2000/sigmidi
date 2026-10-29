@@ -144,6 +144,12 @@ int main() {
     uiStep(0, 2); // cancel
     uiView(view);
     assert(!strcmp(view.values[3], "1"));
+    uiStep(1, 1); // Toggle, appended after LED assignment
+    uiView(view);
+    assert(!strcmp(view.rows[4], "TOGGLE") && !strcmp(view.values[4], "OFF"));
+    uiStep(1, 1); // ON, accept
+    uiView(view);
+    assert(!strcmp(view.values[4], "ON"));
     uiStep(0, 2); // switch list
     uiStep(0, 2); // config root
     uiStep(4, 1); // ENCLOSURE at root index 10, after switches at 6
@@ -164,6 +170,7 @@ int main() {
     uiStep(2, 1); // Save & exit
     uiView(view);
     assert(!state.setup && state.saved.enclosureVariant == 1 && view.displayRotation == 180);
+    assert(state.saved.switches[0].toggle);
     // A new draft can select 0, but discard and browser ownership retain saved orientation.
     state.setup = true;
     state.draft = state.saved;

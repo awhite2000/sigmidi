@@ -27,7 +27,7 @@ class LedFeedback {
   public:
     void configure(const Config &); // clear latched colors when saved settings change
     void clear() { phases.fill(0); }
-    void action(int physicalLed, bool release);
+    void action(int physicalLed, bool release, bool toggle = false);
     LedFrame frame() const;
 };
 } // namespace foot

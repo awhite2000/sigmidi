@@ -393,6 +393,7 @@ static const char *parameterName(cJSON *parent, const char *key) {
                                      {"toe", "TOE"},
                                      {"curve", "CURVE"},
                                      {"led", "LED NO."},
+                                     {"toggle", "TOGGLE"},
                                      {"leds", "LED CHAIN"},
                                      {"brightness", "BRIGHTNESS"},
                                      {"colorOrder", "RGB ORDER"},

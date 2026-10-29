@@ -1,0 +1,39 @@
+{
+  "verified_UTC": "2026-10-29T10:32:46.190519+00:00",
+  "version": "0.1",
+  "build_id": "13c3f89041c5",
+  "source_sha256": "13c3f89041c515b49f1b90a07940423a824c006a37258add9d71c20f1c846a7c",
+  "configuration_schema": 6,
+  "setting": "per-switch boolean toggle; disabled by default; migrated from older schemas",
+  "behavior": {
+    "first_press": "Press list and LED white",
+    "next_press": "Release list and LED dark",
+    "physical_release": "no action",
+    "held_switch": "no repeat",
+    "state": "independent by physical switch",
+    "reset": "OFF after reboot, setup transitions or BLE readiness changes",
+    "persistence": "mode saved; runtime ON/OFF state not persisted"
+  },
+  "host_tests": {
+    "alternating_lists": true,
+    "ignored_physical_release": true,
+    "held_switch": true,
+    "independent_switches": true,
+    "LED_white_and_off": true,
+    "transport_retries": true,
+    "same_switch_FIFO": true,
+    "captured_assignments_and_messages": true,
+    "empty_actions": true,
+    "queue_full_does_not_toggle": true,
+    "reset": true,
+    "configuration_migration_and_strict_boolean": true,
+    "LCD_edit_save": true,
+    "WiFi_edit_and_physical_identity": true,
+    "log_sha256": "079e9cf00896c7c78f4d0a4d1cb175ed12a7e37dd2248d717874116c9cb1d440"
+  },
+  "target_build_passed": true,
+  "LCD_preview": "previews/toggle-menu-preview.png",
+  "WiFi_preview": "previews/wifi-toggle.png",
+  "browser_checkbox_and_headings_checked": true,
+  "physical_hardware_tested": false
+}

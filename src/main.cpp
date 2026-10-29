@@ -15,8 +15,8 @@ static foot::Sequence test;
 static int testIndex = -1;
 static uint32_t testDue = 0;
 static int testLed = 0;
-static bool testRelease = false;
-static void actionFeedback(int led, bool release, void *) { state.leds.action(led, release); }
+static bool testRelease = false, testToggle = false;
+static void actionFeedback(int led, bool release, bool toggle, void *) { state.leds.action(led, release, toggle); }
 bool queueTest(int sw, bool release) {
     if (!state.setup || sw < 0 || sw >= state.draft.switchCount || !bleReady() || testIndex >= 0)
         return false;
@@ -28,6 +28,9 @@ bool queueTest(int sw, bool release) {
     test = release ? state.draft.switches[sw].release : state.draft.switches[sw].press;
     testLed = state.draft.switches[sw].led;
     testRelease = release;
+    testToggle = state.draft.switches[sw].toggle;
+    if (!test.count && testToggle)
+        actionFeedback(testLed, testRelease, true, nullptr);
     testIndex = test.count ? 0 : -1;
     testDue = nowMs() + (test.count ? test.messages[0].delayMs : 0);
     return true;
@@ -147,7 +150,7 @@ extern "C" void app_main() {
             if (state.setup && testIndex >= 0 && ready && (int32_t)(now - testDue) >= 0) {
                 if (sendConfigured(test.messages[testIndex], now, nullptr)) {
                     if (testIndex == 0)
-                        actionFeedback(testLed, testRelease, nullptr);
+                        actionFeedback(testLed, testRelease, testToggle, nullptr);
                     testIndex++;
                     if (testIndex >= test.count)
                         testIndex = -1;

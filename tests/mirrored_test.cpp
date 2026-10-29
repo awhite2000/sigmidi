@@ -42,7 +42,7 @@ static bool send(const foot::Message &m, uint32_t, void *p) {
     out.values.push_back(m.value);
     return true;
 }
-static void action(int led, bool, void *p) { static_cast<Output *>(p)->leds.push_back(led); }
+static void action(int led, bool, bool, void *p) { static_cast<Output *>(p)->leds.push_back(led); }
 int main() {
     const std::vector<std::vector<int>> left = {{2, 1, 4, 3},
                                                 {2, 1, 5, 4, 3, 6},

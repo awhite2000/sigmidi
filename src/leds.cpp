@@ -15,9 +15,9 @@ void LedFeedback::configure(const Config &c) {
     if (changed)
         clear();
 }
-void LedFeedback::action(int physicalLed, bool release) {
+void LedFeedback::action(int physicalLed, bool release, bool toggle) {
     if (settings.enabled && physicalLed >= 1 && physicalLed <= MaxSwitches)
-        phases[physicalLed - 1] = release ? 2 : 1;
+        phases[physicalLed - 1] = release ? (toggle ? 0 : 2) : 1;
 }
 LedFrame LedFeedback::frame() const {
     LedFrame result;

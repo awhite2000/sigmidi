@@ -1,6 +1,6 @@
 # SIGMIDI Foot Controller v0.1 — Firmware
 
-The firmware uses ESP-IDF 5.3.1 on ESP32-C6. Release version is **0.1**; configuration schema is **5**. Default settings select Left enclosure, Modular wiring and ten switches. MIDI mappings are empty; pedals and LED feedback are disabled.
+The firmware uses ESP-IDF 5.3.1 on ESP32-C6. Release version is **0.1**; configuration schema is **6**. Default settings select Left enclosure, Modular wiring and ten switches. MIDI mappings are empty; pedals and LED feedback are disabled.
 
 ## MIDI actions
 
@@ -18,6 +18,14 @@ Action lists show compact entries such as `PC24/2`, `PC+/2`, `PC-/3` and `CC17:1
 
 The action engine snapshots both lists and the LED assignment at press. It preserves each switch's press-then-release order, including release during a delayed press. It schedules due messages without blocking input scans and supports 16 outstanding jobs. A full queue reports rejection. Holding a switch does not repeat its list.
 
+## Switch toggle mode
+
+Each switch has a saved **TOGGLE** setting on the LCD and **Toggle mode** in the Wi-Fi editor (`toggle: true` in JSON). It defaults to OFF, preserving momentary press/release behavior. When enabled, the first physical press queues the Press list and turns the assigned LED white; the next physical press queues the Release list and turns it off. Physical releases and holding a switch send nothing. Each physical switch alternates independently, across either enclosure layout.
+
+Toggle actions keep message ordering, delays, retries, PC counters and captured LED assignments. The LED changes after the first accepted MIDI message; an empty list still changes the LED without sending MIDI. A full queue rejects the action without changing the toggle state. Rapid presses on one switch stay in FIFO order. The runtime ON/OFF state is not saved: reboot, entering/leaving setup and BLE readiness changes reset all switches to OFF and clear their LEDs. Explicit Test press/Test release buttons preview the corresponding list and LED state without advancing the performance toggle state.
+
+Schema 6 requires a boolean `toggle` on each switch. Older configurations migrate with it disabled when absent; MIDI lists, counter IDs, calibration and LED assignments are preserved.
+
 ## PC counters
 
 PC messages have a **MODE** selector on the LCD and **PC mode** in Wi-Fi: **STATIC** (`pcMode: 0`), **INCR** (`1`) or **DECR** (`2`). STATIC sends the configured Program as before. Each INCR/DECR message has an independent counter, including messages on the same channel and separate press/release messages. New counters start at 0. INCR sends `(counter + 1) % 128`; DECR sends `(counter + 127) % 128`. On the first successful invocation after reboot, either mode sends its restored value unchanged (0 for a new counter). The second invocation of a new INCR sends 1; the second invocation of a new DECR sends 127. Values always use MIDI wire numbering 0–127.
@@ -28,7 +36,7 @@ ESP32-C6 has RTC FAST memory rather than a separate RTC SLOW bank. `RTC_NOINIT_A
 
 No PC values are transmitted automatically on startup or BLE connection. Each message has a volatile first-invocation marker that resets on reboot and is set only after a successful send. Its first successful action sends the restored counter value **without stepping it or setting the modified flag**; later actions step before sending. Failed sends leave the marker unchanged. Press and release messages each have their own marker, and reconnection or a configuration reorder does not reset it.
 
-`counterId` is a stable per-message identity, separate from array position; `nextCounterId` in the configuration allocates new identities monotonically. Reordering or inserting messages, switching enclosure variant, changing channel or hiding an extension preserves existing counters. Deleting a message removes its counter from the active set; a new message receives a new identity. IDs are included in JSON backups and hidden from both editors. Backups contain counter identities and mode, not live counter values; NVS stores values separately. Schemas 1–4 migrate to 5 with STATIC as the missing-mode default. Duplicated counter IDs and invalid mode values are rejected.
+`counterId` is a stable per-message identity, separate from array position; `nextCounterId` in the configuration allocates new identities monotonically. Reordering or inserting messages, switching enclosure variant, changing channel or hiding an extension preserves existing counters. Deleting a message removes its counter from the active set; a new message receives a new identity. IDs are included in JSON backups and hidden from both editors. Backups contain counter identities and mode, not live counter values; NVS stores values separately. Schemas 1–5 migrate to 6 with STATIC as the missing-mode default. Duplicated counter IDs and invalid mode values are rejected.
 
 Explicit MIDI Test actions use the same counter behavior. Counters for unsaved test-only messages are discarded with the draft and are not reused by later newly created messages.
 
@@ -85,7 +93,7 @@ The editor exposes switch lists, pedal settings, live ADC readings, ladder captu
 
 ## LED feedback
 
-The optional Pololu 2535 chain defaults to RGB, protocol 2535, brightness 64/255 and tap-to-pixel assignments 1:1. Assignment 0 disables a switch's indicator. Feedback triggers when the first message in a phase is accepted by the BLE transport: white for press, yellow for release. Empty phases and rejected sends do not trigger it. This indicates local queuing, not acknowledgement from the iPad.
+The optional Pololu 2535 chain defaults to RGB, protocol 2535, brightness 64/255 and tap-to-pixel assignments 1:1. Assignment 0 disables a switch's indicator. Feedback triggers when the first message in a phase is accepted by the BLE transport: white for press and yellow for release in momentary mode; white for ON and dark for OFF in Toggle mode. Empty momentary phases and rejected sends do not trigger it; empty toggle lists still update the indicator. This indicates local queuing, not acknowledgement from the iPad.
 
 `leds.cpp` holds colors; `led_hardware.cpp` transmits through RMT in a separate task. Ten pixel addresses are sent, with unused outputs cleared. Frames refresh at startup, on changes and every 250 ms. Setup/readiness transitions and saved LED/count/mapping changes clear the state. LED driver faults report a notice while MIDI processing continues. See [wiring and commissioning](leds.md).
 

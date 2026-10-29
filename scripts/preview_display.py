@@ -14,7 +14,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_IDF = Path(os.environ.get("PLATFORMIO_CORE_DIR", "/tmp/midi-foot-toolchain")) / "packages/framework-espidf"
 JSON_DIR = Path(os.environ.get("IDF_PATH", DEFAULT_IDF)) / "components/json/cJSON"
-TITLES = ["Performance", "Setup", "Press / release message list", "PC message: Program", "CC message: Control + Value", "Wi-Fi setup", "Browser editing", "Pololu 2535 LED chain", "Switch / LED assignment", "Enclosure variant: Left", "Left variant: switches", "Left variant: calibration", "Left: switches, scrolled down", "Left: calibration, scrolled down", "Right variant: switches", "Right: switches, scrolled down", "Right variant: calibration", "Right: calibration, scrolled down", "PC counter message list", "PC mode: INCR", "PC mode: DECR"]
+TITLES = ["Performance", "Setup", "Press / release message list", "PC message: Program", "CC message: Control + Value", "Wi-Fi setup", "Browser editing", "Pololu 2535 LED chain", "Switch / LED assignment", "Enclosure variant: Left", "Left variant: switches", "Left variant: calibration", "Left: switches, scrolled down", "Left: calibration, scrolled down", "Right variant: switches", "Right: switches, scrolled down", "Right variant: calibration", "Right: calibration, scrolled down", "PC counter message list", "PC mode: INCR", "PC mode: DECR", "Switch toggle mode"]
 
 
 def main():
@@ -57,6 +57,7 @@ def main():
     sheet([10, 14, 11, 16], "enclosure-menus-both-variants.png")
     sheet([12, 15, 13, 17], "enclosure-menus-scrolled.png")
     sheet([18, 19, 20], "pc-counter-menu-preview.png")
+    sheet([21], "toggle-menu-preview.png")
     print(out / "display-preview.png")
 
 

@@ -152,4 +152,9 @@ int main(int argc, char **argv) {
     capture(argv[1], "20", "TYPE");
     uiStep(0, 2); uiStep(1, 1); uiStep(0, 1); uiStep(1, 0);
     capture(argv[1], "21", "TYPE");
+    uiStep(0, 2); // list
+    uiStep(0, 2); // switch
+    uiStep(3, 1); // toggle at index 4, after press at index 1
+    uiStep(1, 1); // ON
+    capture(argv[1], "22", "NAME");
 }

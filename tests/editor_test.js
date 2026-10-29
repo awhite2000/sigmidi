@@ -222,3 +222,17 @@ const testButton=walk(ids.get('content').children[0]).find(n=>n.tagName==='butto
 
 
 })().catch(e=>{console.error(e);process.exitCode=1});
+
+// Per-physical-switch toggle option survives variant changes and edits no MIDI/LED data.
+vm.runInContext("tab='Switches';render()",context);
+let toggleField=walk(ids.get('content').children[0]).find(n=>n.tagName==='label'&&n.textContent==='Toggle mode').children[0];
+const toggleTap=vm.runInContext('switchOrder()[0]',context);
+const oldActions=vm.runInContext(`JSON.stringify(config.switches[${toggleTap}].press)`,context);
+toggleField.checked=true;toggleField.onchange();
+assert.equal(vm.runInContext(`config.switches[${toggleTap}].toggle`,context),true);
+assert.equal(vm.runInContext(`JSON.stringify(config.switches[${toggleTap}].press)`,context),oldActions);
+assert.ok(walk(ids.get('content').children[0]).some(n=>n.tagName==='h2'&&n.textContent==='Toggle ON · first press'));
+assert.ok(walk(ids.get('content').children[0]).some(n=>n.tagName==='h2'&&n.textContent==='Toggle OFF · next press'));
+vm.runInContext('config.enclosureVariant=1-config.enclosureVariant;render()',context);
+assert.equal(vm.runInContext(`config.switches[${toggleTap}].toggle`,context),true);
+console.log('Toggle editor passed: per-switch setting, physical identity, action headings and unchanged MIDI lists');

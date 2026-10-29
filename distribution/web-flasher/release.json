@@ -2,11 +2,11 @@
   "schema": 1,
   "name": "SIGMIDI Foot Controller",
   "version": "0.1",
-  "built_at": "2026-10-29T09:54:45.122112+00:00",
-  "packaged_at": "2026-10-29T09:54:45.353090+00:00",
+  "built_at": "2026-10-29T10:31:49.506064+00:00",
+  "packaged_at": "2026-10-29T10:31:49.753249+00:00",
   "chip": "ESP32-C6",
   "flash_bytes": 4194304,
-  "source_sha256": "e4053c07771dcfca5181fd13159e7fc1cc03d1373ec034071e3b6ee13403c58f",
+  "source_sha256": "13c3f89041c515b49f1b90a07940423a824c006a37258add9d71c20f1c846a7c",
   "manifest_sha256": "e39ff1c85541cd89166165904c1f376ef6572b12ebd9161d3500c4414b0e3883",
   "installer": "esp-web-tools@10.4.0",
   "preserved_regions": [
@@ -26,13 +26,13 @@
       "path": "firmware/boot-region.bin",
       "offset": 0,
       "bytes": 35840,
-      "sha256": "1fe13d32cc21c12756d6db952ae82366a7047a32d3ee408512d911af9844e28a"
+      "sha256": "b1ef42970127a5b0ca26bb88b13dc5199c34fe5538ae16c342fdda1aef7be4fe"
     },
     {
       "path": "firmware/application.bin",
       "offset": 131072,
-      "bytes": 1375440,
-      "sha256": "556f5cec6e678f5f2726a68098fde78fdd16007a82a3f0069226bb88caae1e05"
+      "bytes": 1376336,
+      "sha256": "44687fef96057900122d05dd66e0f6aa6d461a672665b169650fdf3f06d0bb4b"
     }
   ]
 }

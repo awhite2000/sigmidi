@@ -24,9 +24,9 @@ Renders come from native Fusion geometry; manifests record image hashes. Present
 
 ![LCD menus](display-preview.png)
 
-The production renderer and `tests/display_preview.cpp` menu harness generate the 280×240 native screens `01.png`–`21.png` and contact sheets. Run `python3 scripts/preview_display.py` with Pillow, a C++17 compiler and ESP-IDF cJSON sources.
+The production renderer and `tests/display_preview.cpp` menu harness generate the 280×240 native screens `01.png`–`22.png` and contact sheets. Run `python3 scripts/preview_display.py` with Pillow, a C++17 compiler and ESP-IDF cJSON sources.
 
-[PC counter menus: STATIC / INCR / DECR](pc-counter-menu-preview.png) · [Performance overview](display-overview.png) · [PC/CC forms](menu-editor-preview.png) · [LED settings](led-menu-preview.png) · [Enclosure selector](enclosure-menu-preview.png).
+[Switch toggle setting](toggle-menu-preview.png) · [PC counter menus: STATIC / INCR / DECR](pc-counter-menu-preview.png) · [Performance overview](display-overview.png) · [PC/CC forms](menu-editor-preview.png) · [LED settings](led-menu-preview.png) · [Enclosure selector](enclosure-menu-preview.png).
 
 [Left/Right switch and calibration menus](enclosure-menus-both-variants.png) · [Scrolled continuation](enclosure-menus-scrolled.png). Left is the left column; Right is the right column. Captures use ten-switch defaults and are upright for the matching enclosure.
 
@@ -34,7 +34,7 @@ The production renderer and `tests/display_preview.cpp` menu harness generate th
 
 ![Wi-Fi editor](wifi-editor.png)
 
-[PC+ / PC− counter editor](wifi-pc-counters.png) · [Static PC editor](wifi-pc-editor.png) · [CC editor](wifi-cc-editor.png) · [Settings](wifi-settings.png) · [Calibration](wifi-calibration.png).
+[Toggle mode editor](wifi-toggle.png) · [PC+ / PC− counter editor](wifi-pc-counters.png) · [Static PC editor](wifi-pc-editor.png) · [CC editor](wifi-cc-editor.png) · [Settings](wifi-settings.png) · [Calibration](wifi-calibration.png).
 
 [Both switch lists](wifi-switches-both-variants.png) · [Both calibration lists](wifi-calibration-both-variants.png). Left reads A–E / 1–5; Right reverses each row. Calibration fields display whole millivolts. Actions, calibration and LED assignments remain attached to physical taps.
 

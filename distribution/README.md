@@ -14,4 +14,6 @@ These bundles use the [passive pedal wiring](../docs/hardware.md#two-selectable-
 
 Run `python3 scripts/verify_distribution.py` to check release hashes, ZIP contents, firmware compatibility and the full native Fusion archive. `verification/` contains build/test records. Physical flashing and print testing remain unverified.
 
-PC messages support STATIC, INCR (`PC+`) and DECR (`PC-`), with an independent persistent counter per message. No values are sent at startup. The first invocation after reboot sends the stored value unchanged; later invocations step and wrap within 0–127. Changed counters are checkpointed to flash every five minutes. Configuration schema 5 migrates older backups. See [firmware behavior](../docs/firmware.md).
+PC messages support STATIC, INCR (`PC+`) and DECR (`PC-`), with an independent persistent counter per message. No values are sent at startup. The first invocation after reboot sends the stored value unchanged; later invocations step and wrap within 0–127. Changed counters are checkpointed to flash every five minutes. Configuration schema 6 migrates older backups. See [firmware behavior](../docs/firmware.md).
+
+Per-switch Toggle mode alternates the Press and Release lists on successive presses, with white/off LED feedback and no physical-release action. It defaults to disabled; runtime toggle state starts OFF after reboot, setup or BLE readiness changes.

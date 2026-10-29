@@ -96,7 +96,7 @@ bool validate(const Config &c, char *e, size_t n) {
         snprintf(e, n, "%s", s);
         return false;
     };
-    if (c.version != 5)
+    if (c.version != 6)
         return fail("Unsupported configuration version");
     if (c.nextCounterId < 1)
         return fail("Invalid next PC counter identity");
@@ -213,6 +213,7 @@ void Engine::reset() {
         j.used = false;
     active = -1;
     armed = false;
+    toggled.fill(false);
 }
 bool Engine::idle() const {
     for (auto &j : jobs)
@@ -261,8 +262,18 @@ void Engine::input(int code, const Config &c, uint32_t now) {
     j.press = c.switches[j.sw].press;
     j.release = c.switches[j.sw].release;
     j.led = c.switches[j.sw].led;
+    j.toggle = c.switches[j.sw].toggle;
+    if (j.toggle) {
+        j.toggleOff = toggled[j.sw];
+        if (j.toggleOff)
+            j.press = j.release;
+        j.release = {};
+        j.released = true; // physical release never schedules another action
+        toggled[j.sw] = !toggled[j.sw];
+    }
     j.due = now + (j.press.count ? j.press.messages[0].delayMs : 0);
-    active = slot;
+    if (!j.toggle)
+        active = slot;
 }
 void Engine::tick(uint32_t now, Send send, void *ctx, Action action) {
     Job *chosen = nullptr;
@@ -270,7 +281,7 @@ void Engine::tick(uint32_t now, Send send, void *ctx, Action action) {
         if (!j.used)
             continue;
         int total = j.press.count + j.release.count;
-        if (j.released && j.index >= total) {
+        if (j.released && j.index >= total && !(j.toggle && total == 0)) {
             j.used = false;
             continue;
         }
@@ -289,12 +300,18 @@ void Engine::tick(uint32_t now, Send send, void *ctx, Action action) {
     if (!chosen)
         return;
     auto &j = *chosen;
+    if (j.toggle && j.press.count == 0) {
+        if (action)
+            action(j.led, j.toggleOff, true, ctx);
+        j.used = false;
+        return;
+    }
     auto &m = j.index < j.press.count ? j.press.messages[j.index]
                                       : j.release.messages[j.index - j.press.count];
     if (!send(m, now, ctx))
         return;
     if (action && (j.index == 0 || j.index == j.press.count))
-        action(j.led, j.index >= j.press.count, ctx);
+        action(j.led, j.toggle ? j.toggleOff : j.index >= j.press.count, j.toggle, ctx);
     j.index++;
     int total = j.press.count + j.release.count;
     if (j.index < j.press.count)

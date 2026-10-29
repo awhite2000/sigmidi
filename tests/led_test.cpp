@@ -20,10 +20,10 @@ static bool send(const Message &, uint32_t, void *ctx) {
         ++t.sent;
     return t.accept;
 }
-static void action(int led, bool release, void *ctx) {
+static void action(int led, bool release, bool toggle, void *ctx) {
     auto &t = *static_cast<Trace *>(ctx);
     t.events.emplace_back(led, release);
-    t.feedback.action(led, release);
+    t.feedback.action(led, release, toggle);
 }
 int main() {
     auto c = defaults();

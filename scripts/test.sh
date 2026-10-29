@@ -18,6 +18,8 @@ LED_BIN=$(mktemp /tmp/midi-foot-led.XXXXXX)
 trap 'rm -f "$TEST_BIN" "$DISPLAY_BIN" "$LED_BIN"' EXIT
 c++ -std=c++17 -Wall -Wextra -Werror -Isrc src/core.cpp src/leds.cpp tests/led_test.cpp -o "$LED_BIN"
 "$LED_BIN"
+c++ -std=c++17 -Wall -Wextra -Werror -Isrc src/core.cpp src/leds.cpp tests/toggle_test.cpp -o "$LED_BIN"
+"$LED_BIN"
 JSON_DIR="${IDF_PATH:-${PLATFORMIO_CORE_DIR:-/tmp/midi-foot-toolchain}/packages/framework-espidf}/components/json/cJSON"
 if [ -f "$JSON_DIR/cJSON.c" ]; then
     JSON_OBJ=$(mktemp /tmp/midi-foot-json.XXXXXX)
