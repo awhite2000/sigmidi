@@ -1,0 +1,217 @@
+{
+  "renderer": "Production firmware UI and stripe renderer",
+  "variant": "Left",
+  "switch": "A",
+  "all_navigation_targets_asserted": true,
+  "runtime_firmware_modified": false,
+  "frames": [
+    {
+      "file": "performance",
+      "title": "",
+      "breadcrumb": "",
+      "editing": false
+    },
+    {
+      "file": "setup-edit",
+      "title": "SETUP",
+      "breadcrumb": "CONFIGURATION / CONNECTION",
+      "editing": false,
+      "selected": "EDIT CONFIG",
+      "value": "",
+      "kind": 0
+    },
+    {
+      "file": "config-switches",
+      "title": "SETUP",
+      "breadcrumb": "CONTROLLER SETTINGS",
+      "editing": false,
+      "selected": "switches",
+      "value": "",
+      "kind": 0
+    },
+    {
+      "file": "switch-list",
+      "title": "SETUP",
+      "breadcrumb": "switches",
+      "editing": false,
+      "selected": "A",
+      "value": "",
+      "kind": 0
+    },
+    {
+      "file": "switch-press",
+      "title": "SETUP",
+      "breadcrumb": "switches / A",
+      "editing": false,
+      "selected": "press",
+      "value": "",
+      "kind": 0
+    },
+    {
+      "file": "press-list",
+      "title": "ON PRESS",
+      "breadcrumb": "switches / A / press",
+      "editing": false,
+      "selected": "PC24/2",
+      "value": "",
+      "kind": 3
+    },
+    {
+      "file": "message-actions",
+      "title": "MESSAGE ACTION",
+      "breadcrumb": "PC24/2",
+      "editing": false,
+      "selected": "EDIT",
+      "value": "",
+      "kind": 2
+    },
+    {
+      "file": "pc-editor",
+      "title": "MIDI MESSAGE",
+      "breadcrumb": "switches / A / press / 1",
+      "editing": false,
+      "selected": "PROGRAM",
+      "value": "24",
+      "kind": 1
+    },
+    {
+      "file": "program-edit",
+      "title": "MIDI MESSAGE",
+      "breadcrumb": "switches / A / press / 1",
+      "editing": true,
+      "selected": "PROGRAM",
+      "value": "24",
+      "kind": 1
+    },
+    {
+      "file": "config-pedals",
+      "title": "SETUP",
+      "breadcrumb": "CONTROLLER SETTINGS",
+      "editing": false,
+      "selected": "pedals",
+      "value": "",
+      "kind": 0
+    },
+    {
+      "file": "pedal-list",
+      "title": "SETUP",
+      "breadcrumb": "pedals",
+      "editing": false,
+      "selected": "1",
+      "value": "",
+      "kind": 0
+    },
+    {
+      "file": "pedal-settings",
+      "title": "SETUP",
+      "breadcrumb": "pedals / 1",
+      "editing": false,
+      "selected": "RESISTOR",
+      "value": "ON",
+      "kind": 1
+    },
+    {
+      "file": "config-ladder",
+      "title": "SETUP",
+      "breadcrumb": "CONTROLLER SETTINGS",
+      "editing": false,
+      "selected": "ladder",
+      "value": "",
+      "kind": 0
+    },
+    {
+      "file": "ladder-centers",
+      "title": "SETUP",
+      "breadcrumb": "ladder",
+      "editing": false,
+      "selected": "IDLE MV",
+      "value": "2200",
+      "kind": 1
+    },
+    {
+      "file": "config-leds",
+      "title": "SETUP",
+      "breadcrumb": "CONTROLLER SETTINGS",
+      "editing": false,
+      "selected": "LED CHAIN",
+      "value": "",
+      "kind": 0
+    },
+    {
+      "file": "led-settings",
+      "title": "LED CHAIN",
+      "breadcrumb": "leds",
+      "editing": false,
+      "selected": "ENABLED",
+      "value": "OFF",
+      "kind": 1
+    },
+    {
+      "file": "config-enclosure",
+      "title": "SETUP",
+      "breadcrumb": "CONTROLLER SETTINGS",
+      "editing": false,
+      "selected": "ENCLOSURE",
+      "value": "LEFT",
+      "kind": 1
+    },
+    {
+      "file": "enclosure-edit",
+      "title": "SETUP",
+      "breadcrumb": "CONTROLLER SETTINGS",
+      "editing": true,
+      "selected": "ENCLOSURE",
+      "value": "LEFT",
+      "kind": 1
+    },
+    {
+      "file": "save-exit",
+      "title": "SETUP",
+      "breadcrumb": "CONFIGURATION / CONNECTION",
+      "editing": false,
+      "selected": "SAVE & EXIT",
+      "value": "",
+      "kind": 2
+    },
+    {
+      "file": "saved-performance",
+      "title": "",
+      "breadcrumb": "",
+      "editing": false
+    }
+  ],
+  "source_sha256": {
+    "src/ui.cpp": "c12c9a0e3bfa3254448e7422e4d6188b77e5f18d5aae5842021e2c59239762de",
+    "src/display.cpp": "21ee686968779d6c9e42cb893b16d3e4feb377ffb807108b18c090ae07478d20",
+    "src/display.hpp": "6d5885872d3007201fb1dc9567ef7df51db4b49e2f9398969164a9159bdd6b79",
+    "src/config.cpp": "fd9094e730d2b2bfbff5a20d4cc71662f8d210e8f0db6a5284529a580cebde3f",
+    "src/core.cpp": "41489476905ac012acad4380e5b06119a519e94019acc841605f1ed8d59db2d9",
+    "tests/device_workflow_preview.cpp": "50adace47f42b77d7077e87fe14be65abbab7b1050fd624728cbd5505cdee09c",
+    "scripts/build_device_workflows.py": "0cb043f5d6a86513efd511097056889884da830e44b7394f84065afae40e14f8"
+  },
+  "images": {
+    "config-enclosure.png": "e385fdbd6001374ea0265fac64fb55e7741651d75859093df56a3253244b9243",
+    "config-ladder.png": "8bdb16199632e9a7113095b8726b796e3a6892c00c6ebf6f2204f16fbf88e5a8",
+    "config-leds.png": "65a0dcd53335e1c99dba0380f8b2830129c1ab8e07e5e65ab411f071b748d250",
+    "config-pedals.png": "1f072b0f0a087e441a847fe40ef58db1859ea4d3e8e7b420b3776321dcf2b463",
+    "config-switches.png": "0089e753ecf6e085ad9d2ed46da6162244d2aec020e062b35d238c9ee3512816",
+    "enclosure-edit.png": "65b8a0a68342507a2a0fa623e7473a557ac5037aa1d44e0ca2caeca6a0147ad0",
+    "ladder-centers.png": "7610c9cef83c91ebf4ef78b04949ac104751d8fe7dabd0e549808b2c0dc25d2c",
+    "led-settings.png": "d34911e3ce6412d340fe879fcbc0cc5084e96f4d22c01713fca7249c51b8ae6b",
+    "message-actions.png": "c4b6a8adc10dfdcb050f728e541ebcd77c3f4d363a7e933e0733496e28dcb536",
+    "other-menus-workflow.png": "e52054757b0b8a61e06e72e0901307fd9ea6b2bccb16d5af83050c4c58823d83",
+    "pc-editor.png": "2b2ac0a36bb5d14f81e0fa03bde34598d2d238d30f3df312e839a5d258ff640f",
+    "pedal-list.png": "f221a9dbf61ca5d911b501dbba408ecc517a7ad9b9b58fe059f72dcae2f1d924",
+    "pedal-settings.png": "117bf9c5d547436907bdd848dd0f5e36d2c0e19bb3136503269a8f890dbeaf47",
+    "performance.png": "f5037ed90ee101e7e7d30439c80156fa6513bf3c672390f1cfbb0c02c3f657a2",
+    "press-list.png": "666c966f55e9a5c7303f55a8d23b4059c7f8eb698a844518e47e71b87ca26737",
+    "program-edit.png": "f13ecb6bc2fc3656a06c4b763858e6c9388f0e66f2537be3ea03a1d0ded20262",
+    "save-exit.png": "2389a6ede143232a5f2853c703e2c6d5720228086e15ac56f800f2ae3e82f730",
+    "save-workflow.png": "89cdc666aa7af925309605e453d8c21e1a3168f078323ff226cbf7b115ac9e9d",
+    "saved-performance.png": "283408c0856568c798c49c6dd53ae6049e1daeaad899d93352a8a0fc2f253947",
+    "setup-edit.png": "1ed63df731dac0532d60bae5add91792f30f629057acc2731fea476d704ecb1c",
+    "switch-list.png": "b6be62fbb7e9fc3065b0e52e9329e76d25bbae281272a4e59cef8f4f86208111",
+    "switch-message-workflow.png": "958ff6fec32e6ba22426728a89acd52300be1cc58ad6ee6979851ffb0e606e38",
+    "switch-press.png": "9ec96c0ce463c66b182c0ab56bd2bb32036ec932324cbc6334a6b39751b00b2a"
+  }
+}

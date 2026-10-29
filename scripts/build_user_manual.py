@@ -128,6 +128,9 @@ def main():
                     if len(refs) == 1 and w == 280:
                         available = 215
                     target_h = available * h/w
+                    if relative.endswith('-workflow.png') and target_h > 600:
+                        available *= 600 / target_h
+                        target_h = 600
                     if page_index == 0:
                         # Keep the whole branded render without clipping its geometry.
                         target_h = min(target_h, 232)

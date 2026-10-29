@@ -15,9 +15,9 @@ Each switch can send ordered lists of PC and CC messages on independent channels
 | Getting ready and connecting a MIDI Device | 2 |
 | Performance Mode: screen and switch behavior | 3-4 |
 | Editing Mode: workflow and encoder controls | 5 |
-| Editing on Device: every screen and option | 6-12 |
-| Editing over Wi-Fi / calibration / troubleshooting | 13 / 14 / 15 |
-| Appendix A: HX Stomp + BLE MIDI dongle example | 16-23 |
+| Editing on Device: screen paths and every option | 6-14 |
+| Editing over Wi-Fi / calibration / troubleshooting | 15 / 16 / 17 |
+| Appendix A: HX Stomp + BLE MIDI dongle example | 18-25 |
 
 Firmware v0.1, configuration schema 6. Illustrations use current 280 x 240 firmware menus and example settings. Left is the preferred enclosure; Right reverses the order within each row. Device-specific recipes are confined to Appendix A.
 
@@ -96,7 +96,7 @@ For a one-shot preset or command, use TOGGLE OFF with an empty Release list. For
 
 With the optional chain enabled and a pixel assigned, momentary Press lights white and Release lights yellow. In toggle mode ON lights white and OFF goes dark. The color changes when the first message in that phase is accepted by BLE. Empty momentary lists leave the color alone; empty toggle lists still update the LED. A rejected action does not change the toggle state.
 
-Each switch toggles independently. Runtime ON/OFF state is not saved: reboot, setup entry/exit and BLE readiness changes reset all toggles to OFF, clear queued actions and clear LEDs. PC message counters have a separate persistence system (page 10). Manual operation or program changes on the MIDI Device can leave its state different from SIGMIDI's; explicitly establish a known starting state.
+Each switch toggles independently. Runtime ON/OFF state is not saved: reboot, setup entry/exit and BLE readiness changes reset all toggles to OFF, clear queued actions and clear LEDs. PC message counters have a separate persistence system (page 12). Manual operation or program changes on the MIDI Device can leave its state different from SIGMIDI's; explicitly establish a known starting state.
 
 ## Timing and playing technique
 
@@ -108,7 +108,7 @@ After boot, leaving setup or a BLE readiness change, release all switches to rea
 
 # 3. Editing Mode
 
-![Setup: choose local editing, Wi-Fi or an exit action](../previews/02.png) ![Browser owns the draft: hold only if you intend to discard it](../previews/07.png)
+![Setup: choose local editing, Wi-Fi or an exit action](../previews/02.png) ![Select SAVE & EXIT after editing to store the draft and resume performance](device-workflows/save-exit.png)
 
 Editing Mode is the controller's **SETUP** state. It uses a draft configuration; Performance Mode uses the last saved configuration. Normal footswitch and pedal MIDI are paused throughout setup. Explicit Test actions can still send messages to the MIDI Device.
 
@@ -129,11 +129,35 @@ Click the encoder from Performance Mode when all switches and pending actions ar
 
 Gray parameter names have aligned white values. Purple rows are actions. PC list entries are cyan and CC entries orange. The selected row has a highlight and > marker; an active edit uses amber and *. Breadcrumbs show the current path, and the right-hand scrollbar shows list position.
 
-One editor owns the draft at a time. **BROWSER EDITING** means the browser has ownership. Holding the encoder takes ownership back **and discards the draft**. Save or export browser work before doing this. Wi-Fi saving and backup commands are on page 13.
+One editor owns the draft at a time. **BROWSER EDITING** means the browser has ownership. Holding the encoder takes ownership back **and discards the draft**. Save or export browser work before doing this. Wi-Fi saving and backup commands are on page 15.
 
 <!-- page -->
 
 # 3.1 Editing on Device
+
+## Follow the screens to an existing message
+
+Read left to right, then continue on the next row. At each menu, **turn to highlight the named item, then click**. This example edits an existing PC message on switch A in the Left variant; the same path works for another switch, its RELEASE list, or a CC message.
+
+![From Performance to a switch's Program field: the screens and encoder actions in order](device-workflows/switch-message-workflow.png)
+
+## Start with an empty list or change a different field
+
+If PRESS is empty at step 6, select **APPEND MSG** to open a new message directly; there is no existing-entry MESSAGE ACTION screen. For a populated list, MESSAGE ACTION also offers INSERT BEFORE and DELETE. In step 8, choose TYPE, MODE, CHANNEL or another field instead of PROGRAM as needed.
+
+A click in step 9 accepts the field into the draft. Hold about 0.7 seconds to cancel an active edit, or to return one level while browsing. Hold once per level to reach the configuration root for the routes on the next page. Hold once more to return to SETUP, then choose SAVE & EXIT to store the draft and play, or DISCARD & EXIT to cancel it. The SETUP screen and save controls are shown on page 5.
+
+<!-- page -->
+
+# 3.1 Screen paths to other menus
+
+Use the common Performance > SETUP > EDIT CONFIG entry path on the previous page. Each row below starts at the **Controller settings** root. Turn to select the indicated row and click; only the highlighted item opens or edits.
+
+![Routes to pedal settings, switch calibration, LED settings and a controller parameter](device-workflows/other-menus-workflow.png)
+
+<!-- page -->
+
+# 3.1.1 Controller settings
 
 ## Screen map: start at EDIT CONFIG
 
@@ -146,10 +170,10 @@ The following pages walk through every local menu. Uppercase labels below match 
 | DEBOUNCE MS | Stable-input time before a switch change is accepted; 2-100 ms, default 10. Increase only as needed for reliable switching. |
 | PC OFFSET | Stored 0/1 preference. In v0.1 it has no display effect: Program fields, lists and transmitted numbers remain 0-127. |
 | WINDOW MV | Acceptance half-width around each ladder center; 3-100 mV, default 20. All installed windows must be separated. |
-| LADDER, opens a list | Idle and individual switch center voltages. See page 12. This is distinct from the later LADDER wiring selector. |
-| SWITCHES, opens a list | Choose a physical switch, then its name, actions, LED and toggle setting. See page 7. |
-| PEDALS | Choose input 1 or 2, then its electrical mode, response and CC settings. See page 11. |
-| LED CHAIN | Enable and configure the optional LED chain. See page 12. |
+| LADDER, opens a list | Idle and individual switch center voltages. See page 14. This is distinct from the later LADDER wiring selector. |
+| SWITCHES, opens a list | Choose a physical switch, then its name, actions, LED and toggle setting. See page 9. |
+| PEDALS | Choose input 1 or 2, then its electrical mode, response and CC settings. See page 13. |
+| LED CHAIN | Enable and configure the optional LED chain. See page 14. |
 | LADDER, MODULAR / LINEAR | Wiring/identity scheme. MODULAR is the four-switch base plus pairs; LINEAR is legacy tap order. Select the one actually wired. |
 | ENCLOSURE, LEFT / RIGHT | One setting selects both screen rotation and row order. LEFT is default, screen on left; RIGHT is screen on right. |
 
@@ -161,7 +185,7 @@ The root also validates hidden mappings. If a save reports an invalid field or o
 
 <!-- page -->
 
-# 3.1.1 Switch screens
+# 3.1.2 Switch screens
 
 ![Switch selection in Left row order](../previews/11.png) ![A switch's parameters, with TOGGLE enabled](../previews/22.png)
 
@@ -187,7 +211,7 @@ Click accepts each setting into the draft. Hold back through the switch list and
 
 <!-- page -->
 
-# 3.1.2 Action lists and message actions
+# 3.1.3 Action lists and message actions
 
 ![ON PRESS list: messages are shown in their execution order](../previews/03.png)
 
@@ -209,7 +233,7 @@ Test sends can change the MIDI Device and advance PC counters. Testing one list 
 
 <!-- page -->
 
-# 3.1.3 MIDI message editor
+# 3.1.4 MIDI message editor
 
 ![Static PC: Program field, no Value](../previews/04.png) ![CC: Control and Value fields](../previews/05.png)
 
@@ -220,7 +244,7 @@ TYPE offers **PC** or **CC**. For PC, MODE selects STATIC, INCR or DECR; the lat
 | Field / action | Options and effect |
 |---|---|
 | TYPE | PC recalls a program/preset; CC sets or triggers a controller function assigned by the MIDI Device. |
-| MODE, PC only | STATIC sends PROGRAM; INCR uses PC+; DECR uses PC-. Counter behavior is on page 10. Hidden for CC. |
+| MODE, PC only | STATIC sends PROGRAM; INCR uses PC+; DECR uses PC-. Counter behavior is on page 12. Hidden for CC. |
 | CHANNEL | 1-16, independently for each message. Must match the intended receiver. |
 | PROGRAM, STATIC PC only | MIDI program number 0-127. No VALUE field is shown or transmitted. |
 | CONTROL, CC only | MIDI controller number 0-127; called Controller in Wi-Fi. Its meaning depends on the MIDI Device. |
@@ -236,7 +260,7 @@ Programs are always entered as wire numbers 0-127. If the MIDI Device displays 1
 
 <!-- page -->
 
-# 3.1.4 PC+ and PC- counters
+# 3.1.5 PC+ and PC- counters
 
 ![Independent counter messages in one action](../previews/19.png) ![PC editor with MODE INCR](../previews/20.png)
 
@@ -263,7 +287,7 @@ Reordering a message preserves its counter; inserting a new message creates anot
 
 <!-- page -->
 
-# 3.1.5 Pedal screens
+# 3.1.6 Pedal screens
 
 Open **EDIT CONFIG > PEDALS**, then input **1** or **2**. Each has the same options below; both inputs are configured independently. The external pedal is passive: either a two-wire variable resistor or a three-terminal potentiometer, up to 10 kOhm.
 
@@ -278,7 +302,7 @@ Open **EDIT CONFIG > PEDALS**, then input **1** or **2**. Each has the same opti
 | MIN VALUE | Output at the low end of the normalized travel; 0-127, default 0. |
 | MAX VALUE | Output at the high end; 0-127, default 127. A narrower range limits the controlled parameter's excursion. |
 | MAX OHMS | Full-scale resistance in resistor mode: greater than 0, up to 10000 ohms. Default 10000; encoder steps by 100 ohms. |
-| HEEL | Lower measured endpoint in potentiometer mode, in mV. Default 0. See calibration procedure on page 14. |
+| HEEL | Lower measured endpoint in potentiometer mode, in mV. Default 0. See calibration procedure on page 16. |
 | TOE | Upper measured endpoint in potentiometer mode, in mV. Default 3300; at least 50 mV above HEEL. |
 | CURVE | Log response strength, 0.1-100, default 9; larger values give more output earlier in the travel. Ignored when LOG CURVE is OFF. |
 
@@ -286,11 +310,11 @@ MAX OHMS determines resistor-mode scaling; HEEL/TOE determine potentiometer scal
 
 For a general parameter pedal, choose the MIDI Device's assigned CC and channel, MIN VALUE 0, MAX VALUE 127 and Linear response first. Enable the input, save and exit, then move the pedal to test. A stationary pedal does not repeatedly send CC; invalid readings suppress output and appear as --- on the performance screen.
 
-The local pedal menu edits endpoint numbers; it has no live capture action. Use Wi-Fi Calibration to capture HEEL/TOE, or enter the live mV readings manually. Both editors use the same unscaled endpoint values; see page 14.
+The local pedal menu edits endpoint numbers; it has no live capture action. Use Wi-Fi Calibration to capture HEEL/TOE, or enter the live mV readings manually. Both editors use the same unscaled endpoint values; see page 16.
 
 <!-- page -->
 
-# 3.1.6 Ladder and LED screens
+# 3.1.7 Ladder and LED screens
 
 ![LADDER: calibration centers in Left order](../previews/12.png) ![LED CHAIN: optional feedback settings](../previews/08.png)
 
@@ -298,7 +322,7 @@ The local pedal menu edits endpoint numbers; it has no live capture action. Use 
 
 Open the **LADDER navigation row**, rather than the LADDER wiring selector. **IDLE MV** is the voltage with no switch held. **SW A MV**, etc. are the measured centers for installed switches, in the selected enclosure's order. Click, turn and accept a voltage in mV; values must be 0-3300. There is no local Capture command or live ADC display on this screen.
 
-**WINDOW MV** is edited one level above, at the configuration root. It is the allowed deviation on each side of a center, not the full window width. Choose 3-100 mV and less than half the smallest gap between installed centers, including Idle. Windows touching or overlapping fail validation. Use the Wi-Fi procedure on page 14 to capture actual measurements.
+**WINDOW MV** is edited one level above, at the configuration root. It is the allowed deviation on each side of a center, not the full window width. Choose 3-100 mV and less than half the smallest gap between installed centers, including Idle. Windows touching or overlapping fail validation. Use the Wi-Fi procedure on page 16 to capture actual measurements.
 
 ## LED CHAIN menu
 
@@ -408,7 +432,7 @@ The dongle must connect as BLE MIDI **central** to SIGMIDI. A peripheral-only do
 
 On HX Stomp set MIDI Base Channel to **1** and enable MIDI PC reception from DIN (MIDI or MIDI+USB, as offered by its firmware). All appendix recipes use channel 1. Keep guitar/audio routing on HX Stomp; SIGMIDI sends control data only. [S1, p.60]
 
-First try one static PC as on page 17, then add CC assignments. If pairing fails, check dongle power, central role, competing connections and SIGMIDI readiness before debugging preset numbers. Consult the current dongle guide for firmware-dependent pairing controls; there is no SIGMIDI pairing menu.
+First try one static PC as on page 19, then add CC assignments. If pairing fails, check dongle power, central role, competing connections and SIGMIDI readiness before debugging preset numbers. Consult the current dongle guide for firmware-dependent pairing controls; there is no SIGMIDI pairing menu.
 
 <!-- page -->
 
@@ -436,7 +460,7 @@ For switch **A**, set NAME to MUPPETS and TOGGLE OFF. In PRESS, append PC, mode 
 
 To recall the manual's unmodified example directly, use `PC61/1` only if your current HX readout confirms PC061 for Pastor of Muppets. Program changes select a whole preset; they do not require per-block CC assignments.
 
-**Use valid MIDI numbers.** The supplied reference's CC128 row is a joke, not a usable message. CC numbers stop at 127. The guide uses only valid messages; the full curated command list is on page 22.
+**Use valid MIDI numbers.** The supplied reference's CC128 row is a joke, not a usable message. CC numbers stop at 127. The guide uses only valid messages; the full curated command list is on page 24.
 
 <!-- page -->
 
@@ -518,13 +542,13 @@ HX footswitch emulation CC49-53 acts on the switch's current assigned function, 
 
 ## PC counters versus HX-relative stepping
 
-PC+ and PC- are independent absolute program counters (page 10), not a shared next/previous control tracking HX's selected preset. Use the CC72 recipes above for relative HX navigation. Keep their Release lists empty so lifting your foot does not trigger a second step.
+PC+ and PC- are independent absolute program counters (page 12), not a shared next/previous control tracking HX's selected preset. Use the CC72 recipes above for relative HX navigation. Keep their Release lists empty so lifting your foot does not trigger a second step.
 
 ## Control HX parameters with continuous pedals
 
-In SIGMIDI Pedals select channel 1, CC1 for HX EXP1 or CC2 for EXP2, output range 0-127 and Linear response to start. Enable the input and calibrate it using page 14. The HX preset must assign the intended parameter to the corresponding expression controller. [U]
+In SIGMIDI Pedals select channel 1, CC1 for HX EXP1 or CC2 for EXP2, output range 0-127 and Linear response to start. Enable the input and calibrate it using page 16. The HX preset must assign the intended parameter to the corresponding expression controller. [U]
 
-Alternatively, use CC21 and assign it directly to the desired HX parameter as on page 19. Save both devices, leave SIGMIDI setup and move the pedal. The parameter's HX Min/Max settings determine its sound range; SIGMIDI's output is MIDI data, not a literal amp Drive or effect Mix value.
+Alternatively, use CC21 and assign it directly to the desired HX parameter as on page 21. Save both devices, leave SIGMIDI setup and move the pedal. The parameter's HX Min/Max settings determine its sound range; SIGMIDI's output is MIDI data, not a literal amp Drive or effect Mix value.
 
 <!-- page -->
 
@@ -532,7 +556,7 @@ Alternatively, use CC21 and assign it directly to the desired HX parameter as on
 
 ## Start with four switches, extend when needed
 
-This layout uses the practice addresses on page 17. All MIDI channels are 1 and all new-message delays are 5 ms. Add the snapshot message after A's PC in the order shown. Except DELAY, leave TOGGLE OFF and RELEASE empty. Use the Left layout for A-E / 1-5 from left to right; Right reverses the physical order within each row.
+This layout uses the practice addresses on page 19. All MIDI channels are 1 and all new-message delays are 5 ms. Add the snapshot message after A's PC in the order shown. Except DELAY, leave TOGGLE OFF and RELEASE empty. Use the Left layout for A-E / 1-5 from left to right; Right reverses the physical order within each row.
 
 | Switch | Name | Press list | Release list / mode |
 |---|---|---|---|
@@ -614,9 +638,9 @@ SIGMIDI v0.1 sends PC and CC only, with per-message channels and delays. It does
 
 **[S5]** [Line 6 firmware release notes, 3.15 features](https://line6.com/software/index.html?hardware=HX+Stomp&name=Firmware&submit_form=set): global parameter controls and the CC74 preset-save note.
 
-SIGMIDI behavior and illustrations were checked against this project's current firmware, menus and documentation on 29 October 2026. The examples leave existing firmware and hardware configuration untouched; validate the full wireless rig before relying on it live. General troubleshooting is on page 15. Recheck all assignments after changing HX presets or dongle firmware.
+SIGMIDI behavior and illustrations were checked against this project's current firmware, menus and documentation on 29 October 2026. The examples leave existing firmware and hardware configuration untouched; validate the full wireless rig before relying on it live. General troubleshooting is on page 17. Recheck all assignments after changing HX presets or dongle firmware.
 ## Validate this example rig
 
 Verify one PC, one assigned CC, every snapshot command, both pedal endpoints and each toggle's two presses. Test after reboot and after reconnecting BLE. A dark toggle LED does not prove the HX block is bypassed. Use an explicit command or known preset state before playing.
 
-The example patch destinations PC010/011/012 are practice locations, not guaranteed factory addresses. Read HX's actual PC helper before entering a Program value. Save changes on HX as well as SIGMIDI and export the SIGMIDI JSON. Follow the dongle maker's current pairing instructions if its application or firmware differs from the example on page 16.
+The example patch destinations PC010/011/012 are practice locations, not guaranteed factory addresses. Read HX's actual PC helper before entering a Program value. Save changes on HX as well as SIGMIDI and export the SIGMIDI JSON. Follow the dongle maker's current pairing instructions if its application or firmware differs from the example on page 18.

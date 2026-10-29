@@ -1,7 +1,7 @@
 {
   "title": "SIGMIDI Foot Controller v0.1 User manual",
   "configuration_schema": 6,
-  "pages": 23,
+  "pages": 25,
   "page_size": "A4",
   "preferred_variant": "Left",
   "source": "docs/user-manual.md",
@@ -32,84 +32,94 @@
       "page": 6
     },
     {
-      "title": "3.1.1 Switch screens",
+      "title": "3.1 Screen paths to other menus",
       "page": 7
     },
     {
-      "title": "3.1.2 Action lists and message actions",
+      "title": "3.1.1 Controller settings",
       "page": 8
     },
     {
-      "title": "3.1.3 MIDI message editor",
+      "title": "3.1.2 Switch screens",
       "page": 9
     },
     {
-      "title": "3.1.4 PC+ and PC- counters",
+      "title": "3.1.3 Action lists and message actions",
       "page": 10
     },
     {
-      "title": "3.1.5 Pedal screens",
+      "title": "3.1.4 MIDI message editor",
       "page": 11
     },
     {
-      "title": "3.1.6 Ladder and LED screens",
+      "title": "3.1.5 PC+ and PC- counters",
       "page": 12
     },
     {
-      "title": "3.2 Editing over Wi-Fi",
+      "title": "3.1.6 Pedal screens",
       "page": 13
     },
     {
-      "title": "3.3 Calibration workflow",
+      "title": "3.1.7 Ladder and LED screens",
       "page": 14
     },
     {
-      "title": "4. Troubleshooting",
+      "title": "3.2 Editing over Wi-Fi",
       "page": 15
     },
     {
-      "title": "Appendix A. HX Stomp example",
+      "title": "3.3 Calibration workflow",
       "page": 16
     },
     {
-      "title": "A.2 Prepare existing patches",
+      "title": "4. Troubleshooting",
       "page": 17
     },
     {
-      "title": "A.3 Snapshots and ordered actions",
+      "title": "Appendix A. HX Stomp example",
       "page": 18
     },
     {
-      "title": "A.4 Control effects and parameters",
+      "title": "A.2 Prepare existing patches",
       "page": 19
     },
     {
-      "title": "A.5 Commands and expression control",
+      "title": "A.3 Snapshots and ordered actions",
       "page": 20
     },
     {
-      "title": "A.6 Stage layout and looper",
+      "title": "A.4 Control effects and parameters",
       "page": 21
     },
     {
-      "title": "A.7 HX MIDI reference",
+      "title": "A.5 Commands and expression control",
       "page": 22
     },
     {
-      "title": "A.8 Example sources and checks",
+      "title": "A.6 Stage layout and looper",
       "page": 23
+    },
+    {
+      "title": "A.7 HX MIDI reference",
+      "page": 24
+    },
+    {
+      "title": "A.8 Example sources and checks",
+      "page": 25
     }
   ],
-  "source_sha256": "b74e1bb70dc80e69d1d6f1872086ae41dc051cfbbfac6376cede99e64f64601c",
-  "pdf_sha256": "f3b23fc348bef64db7632e4d43e10082e5d30afde0f84b1e2d203a1aa9056904",
+  "source_sha256": "2b44b8cf4d8339ece7bac57bbd4d725800f70fb75fd9d2f4641dbb4a1ed97bc1",
+  "pdf_sha256": "58a55164dbec023b0b9c8a542cb22dd71a4d19230d063229651eb7d011a110d9",
   "images": {
+    "docs/device-workflows/other-menus-workflow.png": "e52054757b0b8a61e06e72e0901307fd9ea6b2bccb16d5af83050c4c58823d83",
+    "docs/device-workflows/save-exit.png": "2389a6ede143232a5f2853c703e2c6d5720228086e15ac56f800f2ae3e82f730",
+    "docs/device-workflows/switch-message-workflow.png": "958ff6fec32e6ba22426728a89acd52300be1cc58ad6ee6979851ffb0e606e38",
     "docs/manual-wifi-example.png": "6808a3abe72eb560d9bbc291455cf4f04fb914ec66a959134c912a785ad73af3",
     "previews/01.png": "15283466145579f2dd40a728510da0a483d5fb552b770be75d74bef90cc9a257",
     "previews/02.png": "da2cae36620f1ed74b5765e595bdc7c3cf2ffec0f7fb2e5e54d1387d4b94c9a3",
     "previews/03.png": "2c0b5285f77d9c24d9ab5fdf5c1137368b5bdfa441ee018ca4aa1eeac6757d01",
     "previews/04.png": "3aa8792430b4873c5021f4d070596d9c8b633cb48b760ac4cc9ea68d85b9479e",
     "previews/05.png": "2153cdc2858bb28c466f57a8a0da227c3aef5440d85d07a8456b82aff7986617",
-    "previews/07.png": "62398f87cf186cc2c96cfa2b6944e99edbb54738c1550c18062320c39dbfbc07",
     "previews/08.png": "84ed73ae4e60075abaa721db507d68ea91d967a8764d9d3a67fa909ff0dfeb7e",
     "previews/11.png": "d71456cdc6e235b7c2da714cb110959e565c2af62c6e9e21ff22c3bfe896f3e3",
     "previews/12.png": "308656715df35805d910ee8a4d5286f80fbab4617daba588463acfe7cc752d48",
@@ -133,7 +143,8 @@
   "firmware_build_id": "d65cb3ec51b9",
   "firmware_source_sha256": "d65cb3ec51b99bf7162ec75300889743beefb4ec7b076475b8f9efa590b211b0",
   "checked_source_sha256": {
-    "scripts/build_user_manual.py": "4c164c485378f3d021d5c36fd21a58cdb8f91f5632f15dc1bcd7cf111a6e4b90",
+    "scripts/build_device_workflows.py": "0cb043f5d6a86513efd511097056889884da830e44b7394f84065afae40e14f8",
+    "scripts/build_user_manual.py": "42df15614cb05dc018ce17786701cd23485fdc618b89f0c90ab1b02f7db0a150",
     "src/app.hpp": "6b6f65089acbbeeb5f5f6545c7a28c2c56ac86b097837e146eda867fe52c0364",
     "src/config.cpp": "fd9094e730d2b2bfbff5a20d4cc71662f8d210e8f0db6a5284529a580cebde3f",
     "src/core.cpp": "41489476905ac012acad4380e5b06119a519e94019acc841605f1ed8d59db2d9",
@@ -144,10 +155,11 @@
     "src/leds.hpp": "cf61cf96d7687373c59b2b3a5d1b76424f04a83a9b9c3cbf45746908fce5b5a3",
     "src/main.cpp": "8e4e18b1eecea95616a1b28853d0b04e8dee2c98fc69908ad0fc83e07d6f3728",
     "src/ui.cpp": "c12c9a0e3bfa3254448e7422e4d6188b77e5f18d5aae5842021e2c59239762de",
+    "tests/device_workflow_preview.cpp": "50adace47f42b77d7077e87fe14be65abbab7b1050fd624728cbd5505cdee09c",
     "web/index.html": "cac0fa988ce49454087a394055b69bd145d746179d604f99d663b17aebbf98be"
   },
   "validation": {
-    "pages_rendered_and_visually_reviewed": 23,
+    "pages_rendered_and_visually_reviewed": 25,
     "expected_chapter_pages_verified": true,
     "all_device_menu_options_checked_against_firmware": true,
     "performance_screen_elements_explained": true,
@@ -159,36 +171,47 @@
     "HX_specific_instructions_only_in_appendix": true,
     "reviewed_on": "2026-10-29",
     "raw_mV_pedal_capture_instructions": true,
-    "changed_pages_rendered_and_visually_reviewed": [
-      3
-    ],
-    "other_pages_pixel_identical_to_previous_review": true,
     "pedal_movement_prompt_documented": true,
-    "pending_pedal_values_hidden_documented": true
+    "pending_pedal_values_hidden_documented": true,
+    "screen_path_pages": [
+      6,
+      7
+    ],
+    "workflow_native_frames": 20,
+    "workflow_navigation_targets_asserted": true,
+    "workflow_encoder_actions_labeled": true,
+    "page_references_updated": true,
+    "firmware_sources_unchanged": true
   },
   "rendered_page_sha256": {
-    "1": "2b2e8ce79849d6f4a6cf9e291fdb2919fe3a1fb9d1f8e10aa1afa3b2940cd6c3",
+    "1": "659e143f4a2a7067267adadfd5c921447cf141f36e0d6931f51881b817ec734e",
     "2": "4588363fe113a965585c5ce2ca15a2cb3dbe9e4466af9b8ef76a6deadf191cc5",
     "3": "ce7bf1301ebaa625944bd1d859553693fad39aab71032b6ae9fc2788bc713419",
-    "4": "f5dc7bd7d79ca305105adf9088171b0eff2fde67903602f6533fe7abd71b8f64",
-    "5": "16f0e8af6e4ac4080a0232c8eb9a107291dd9279ab6f7e02d52ec10a5fb35513",
-    "6": "20c63f7427e759aaaa6b9ef005892aef8da89bb879f459db88f1ba7c19a05219",
-    "7": "3f729cce9c9d7070cdd5b92618dce50e28052ae127d3ff50b279de02d885bacf",
-    "8": "ae0b6c5e3124bb7e07a434bdc783c1576fc1ecc601a4dd56db5a07dd7e17b925",
-    "9": "3d3d86cd51ff27611ab5a49cc43449478943b4090c2cf333c33d3a633dacf176",
-    "10": "9ee6c706369e995241a0ee59d97662789362059fce2aec91c9e0fb9189769484",
-    "11": "8ff9d5177f623e7983d11ec6742333235859a12981dcef83ad0b8b66e7fb7320",
-    "12": "b2ca12ebba2dba78eba4e5ae35b20be7f4675dc4fc16515a99b0112f0c8aac0d",
-    "13": "4405c2a0862ae31ae2701c2435bed4fd5e75d717f1a846d50388aaefdba23b0b",
-    "14": "e22071e9034dec31aa0164f254769fe1bdf3acb1c2cd052532a32c146828dc39",
-    "15": "2d382cc7f896a9a452ce7ab4d075748d3900b45e228711e298741484048ea55d",
-    "16": "960b75e9cafec11cd24fff2184f1681b6fd2a0716de8789e7a4283376fa2384a",
-    "17": "da1eacfca6992d7511bebd0338cde49028312532b36b4c65be46a538b1bb6c83",
-    "18": "85f9752cb881e5ce53a769b418d286fa721ff8e97b58cb93e9ceac4c9a66c056",
-    "19": "9a4a05db8da0e93cee9f93a8145f810b2313ac3aab207841b8949bd8d4b64d8e",
-    "20": "fbb5ebcf0a5d0bec091276fc15dc4d4d506b63857de46c1b33325159f9d65a63",
-    "21": "71ec873ab352bf7eb3c1d69105320ea00d6c84fed5e2e6fae3b239ecbc9f9f2b",
-    "22": "83d13eea64208d66997333d96866a95fe1f4c47201fdf0df3e9d9da019727263",
-    "23": "b78624d24b1616e67abee9be64e661b66e56ac2b38a3aed343f692ece24aff36"
+    "4": "cc5aa3c5692d402df079eb40d3a791c9d8ef12bf087c52eedbea019f115d75ae",
+    "5": "9fa50b2b15da5cbeba67ddce3c71707d9dbef5cf5e740faba9b2c1904cd664ad",
+    "6": "c55f9b51f476e451fc90b0e6ad1039c3187cbee06b0aaf046aaed0d9afcb1713",
+    "7": "a3d3abc22a83625a00c86cd71313e3d9533afe68637046d0fb702a17d4b3da0a",
+    "8": "8bc72b2b8a82c3ca04dac6c3812192c1cec172ee69956ba964f03fc11c234c20",
+    "9": "18ca2ab025644947ef7f1900e5215fc717a04180e892f5f83b4c04e83bd91e6e",
+    "10": "63143ca3ad21be554f034b75dd0eef0ab78f6b48a37530bfdfc51e488dacafe4",
+    "11": "178098fe643afe6eda7e32983f8e75c574cd6b73a496b82c4a8189caddcae4ee",
+    "12": "e293efc84e41bb51accf5081d89b682fff04b6fadbe419c01ebc621026271849",
+    "13": "43ddf6dc8dc6337fd213e37f69a2325ca521ea7008e519fc70b274c503263c09",
+    "14": "4290f4a6847ffec7435704e12fae021f61e347611903f35f71ee880d21628dcf",
+    "15": "4e3a6aafa53e42ef823d65ced90fe6aad1f9dc083c12cb85df8cf7d5a685bae9",
+    "16": "f67962ca126e9be393a5bade95f622dde182253ff180bc5158167d0742e3b988",
+    "17": "514b4ccf6e1c506a6786853869e6b78ddfd3bca5ccdfda613bca1922ed2402f8",
+    "18": "9c06f0be5719082f43f4a0e1828d79f48eb23f5085058e3146a6b1f4ad435ce9",
+    "19": "9547060fb2c8269ff14ecf7fbf6bbaf80bfbe183180d3801a3e654a5c5e9ccf6",
+    "20": "39025df8744d3295ed52a99fc256523dbf96c172d6ff1e88b99a914446d84a9b",
+    "21": "6ea9d90dc5ee21f34019bf868f9b0b585c1aff38367cab9d444249a848538dd0",
+    "22": "119614f70f7eb8df50599ef3a7ed35b47be6b0f1b61e92de712c19035c7188f1",
+    "23": "91e1e8dfb51fe6ba748712615ff827f2713584e62c92da3d3120c90d9e79cbd2",
+    "24": "4c6fa3bbd10ce9ec0b71758fc9319eff771267c195a2adb62e01b6b8cf2fa3cf",
+    "25": "007182a2344c6b5a2838e5021d74d1ec7bf1fae6b9025569e91b00794e039ebb"
+  },
+  "device_workflows": {
+    "manifest": "docs/device-workflows/manifest.json",
+    "sha256": "3aefb2ec28e795e817fd8e573389d8dd0b9d183e1774c4d366832b6db117fb81"
   }
 }
