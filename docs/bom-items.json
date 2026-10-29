@@ -1,0 +1,909 @@
+{
+  "project": "SIGMIDI Foot Controller",
+  "version": "0.1",
+  "basis": "One completed controller; feature-conditioned fitted quantities, excluding spares",
+  "profiles": {
+    "modular_4": 4,
+    "modular_6": 6,
+    "modular_8": 8,
+    "modular_10": 10,
+    "main_10": 10
+  },
+  "items": [
+    {
+      "id": "E01",
+      "group": "Core",
+      "part": "DFRobot DFR1075",
+      "specification": "FireBeetle 2 ESP32-C6; current design uses V1.1 geometry, 25.4 x 60 mm PCB",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [
+        "U1"
+      ],
+      "purchase_unit": "Each",
+      "notes": "One complete board. Compare delivered revision, holes and USB-C location with CAD; do not substitute ESP32-E/S3.",
+      "source": "https://wiki.dfrobot.com/dfr1075/"
+    },
+    {
+      "id": "E02",
+      "group": "Core",
+      "part": "Waveshare 24382",
+      "specification": "1.69inch LCD Module; ST7789V2; 240 x 280 native / 280 x 240 landscape; 31.5 x 39 mm PCB",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [
+        "U2"
+      ],
+      "purchase_unit": "Each",
+      "notes": "Non-touch version. Supply/logic 3.3 V in this project; four factory rear M2 studs.",
+      "source": "https://www.waveshare.com/wiki/1.69inch_LCD_Module"
+    },
+    {
+      "id": "E03",
+      "group": "Core",
+      "part": "Rotary encoder with push switch",
+      "specification": "Passive quadrature, 20 detents/revolution; normally-open click; 15 x 15 mm body",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [
+        "SW11"
+      ],
+      "purchase_unit": "Each",
+      "notes": "Exact manufacturer part not selected. Verify shaft, bushing and detent phase; CAD assumes 6 mm shaft and 8 mm housing height. No external encoder resistors/capacitors.",
+      "source": "Project design"
+    },
+    {
+      "id": "E04",
+      "group": "Core",
+      "part": "Momentary footswitch",
+      "specification": "Normally open, non-latching; 12 mm mounting thread; 30 x 13 x 15 mm body; shaft offset 9 mm from short end",
+      "quantity": {
+        "modular_4": 4,
+        "modular_6": 6,
+        "modular_8": 8,
+        "modular_10": 10,
+        "main_10": 10
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [
+        "SW1",
+        "SW2",
+        "SW3",
+        "SW4",
+        "SW5",
+        "SW6",
+        "SW7",
+        "SW8",
+        "SW9",
+        "SW10"
+      ],
+      "purchase_unit": "Each",
+      "notes": "One per installed switch. Match supplied drawing and CAD actuator height; exact orderable part remains to be selected. Do not buy latching switches.",
+      "source": "Project design"
+    },
+    {
+      "id": "E05",
+      "group": "Core",
+      "part": "10 kOhm ladder pull-up",
+      "specification": "1% metal-film, through-hole; 0.25 W procurement choice",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [
+        "R7"
+      ],
+      "purchase_unit": "Each",
+      "notes": "",
+      "source": "Project design"
+    },
+    {
+      "id": "E06",
+      "group": "Core",
+      "part": "20 kOhm idle resistor",
+      "specification": "1% metal-film, through-hole; 0.25 W procurement choice",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [
+        "R8"
+      ],
+      "purchase_unit": "Each",
+      "notes": "",
+      "source": "Project design"
+    },
+    {
+      "id": "E07",
+      "group": "Core",
+      "part": "1 kOhm ladder sections",
+      "specification": "1% metal-film, through-hole; 0.25 W procurement choice",
+      "quantity": {
+        "modular_4": 4,
+        "modular_6": 6,
+        "modular_8": 8,
+        "modular_10": 10,
+        "main_10": 10
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [
+        "R9",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "purchase_unit": "Each",
+      "notes": "Four in electronics base, plus two per extension. No end-termination resistor.",
+      "source": "Project design"
+    },
+    {
+      "id": "E08",
+      "group": "Core",
+      "part": "100 nF ladder filter capacitor",
+      "specification": "Ceramic, through-hole; >=10 V rating (50 V is suitable)",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [
+        "C5"
+      ],
+      "purchase_unit": "Each",
+      "notes": "Connect at GPIO1 / SENSE to ground.",
+      "source": "Project design"
+    },
+    {
+      "id": "E09",
+      "group": "Pedals",
+      "part": "Amphenol ACJS-MHDC",
+      "specification": "One dual 6.35 mm switched TRS socket housing; fitted horizontally in chassis",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Fit pedal interface",
+      "electrical_refs": [
+        "J2"
+      ],
+      "purchase_unit": "Each",
+      "notes": "One part provides both pedal inputs. Buy with two nickel nuts and two fiber washers; included hardware is listed separately as fitted content.",
+      "source": "design/fusion/datasheets/double-trs-ACJS-MHDC.pdf"
+    },
+    {
+      "id": "E10",
+      "group": "Pedals",
+      "part": "10 kOhm pedal bias resistors",
+      "specification": "1% metal-film, through-hole; 0.25 W",
+      "quantity": {
+        "modular_4": 2,
+        "modular_6": 2,
+        "modular_8": 2,
+        "modular_10": 2,
+        "main_10": 2
+      },
+      "unit": "piece",
+      "fit_condition": "Fit both pedal inputs",
+      "electrical_refs": [
+        "R21",
+        "R31"
+      ],
+      "purchase_unit": "Each",
+      "notes": "One per fitted input. If only one input is wired, fit one resistor of this value.",
+      "source": "Project design"
+    },
+    {
+      "id": "E11",
+      "group": "Pedals",
+      "part": "5.1 kOhm pedal reference resistors",
+      "specification": "1% metal-film, through-hole; 0.25 W",
+      "quantity": {
+        "modular_4": 2,
+        "modular_6": 2,
+        "modular_8": 2,
+        "modular_10": 2,
+        "main_10": 2
+      },
+      "unit": "piece",
+      "fit_condition": "Fit both pedal inputs",
+      "electrical_refs": [
+        "R20",
+        "R30"
+      ],
+      "purchase_unit": "Each",
+      "notes": "One per fitted input. Pedals are entirely passive; no external active interface.",
+      "source": "Project design"
+    },
+    {
+      "id": "E12",
+      "group": "Power",
+      "part": "Barrel power socket",
+      "specification": "5.5 x 2.1 mm; external thread diameter 8 mm, length 8 mm; 4 mm flange/body + 6 mm terminals = 18 mm total",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Fit 9 V input",
+      "electrical_refs": [
+        "J1"
+      ],
+      "purchase_unit": "Each",
+      "notes": "2 mm retaining nut. Exact supplier part unselected; check flange/nut diameter against CAD. Wire center negative, sleeve positive.",
+      "source": "Project design"
+    },
+    {
+      "id": "E13",
+      "group": "Power",
+      "part": "Pololu S13V10F5 #4083",
+      "specification": "5 V, nominal 1 A step-up/step-down regulator; about 8.9 x 12.1 mm",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Fit 9 V input",
+      "electrical_refs": [
+        "U3"
+      ],
+      "purchase_unit": "Each",
+      "notes": "Kamami listing 1178565 identifies this module. Use the molded PETG clip mount; no extra screw mount. Current/temperature depend on input and cooling.",
+      "source": "https://www.pololu.com/product/4083"
+    },
+    {
+      "id": "E14",
+      "group": "Power",
+      "part": "47 uF input capacitor",
+      "specification": "Polarized electrolytic; 35 V minimum; compact radial package",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Fit 9 V input",
+      "electrical_refs": [
+        "C1"
+      ],
+      "purchase_unit": "Each",
+      "notes": "Across converter VIN/GND. Chosen value in current schematic; Pololu recommends at least 33 uF for input transients. Verify package clearance.",
+      "source": "https://www.pololu.com/product/4083"
+    },
+    {
+      "id": "E15",
+      "group": "LEDs",
+      "part": "Pololu 2535",
+      "specification": "5 mm diffused through-hole RGB pixel with integrated WS2811; 5 V; four leads DIN/5V/GND/DOUT",
+      "quantity": {
+        "modular_4": 4,
+        "modular_6": 6,
+        "modular_8": 8,
+        "modular_10": 10,
+        "main_10": 10
+      },
+      "unit": "piece",
+      "fit_condition": "Optional LED feedback",
+      "electrical_refs": [
+        "LED1",
+        "LED2",
+        "LED3",
+        "LED4",
+        "LED5",
+        "LED6",
+        "LED7",
+        "LED8",
+        "LED9",
+        "LED10"
+      ],
+      "purchase_unit": "10-pack; one pack covers any 4-10 switch build",
+      "notes": "Installed count is LEDs, not packs. No separate driver, buffer, resistor or capacitor is fitted in this chain. Direct GPIO16 data requires batch/harness verification.",
+      "source": "https://www.pololu.com/product/2535"
+    },
+    {
+      "id": "H01",
+      "group": "Hardware",
+      "part": "Base screws",
+      "specification": "M2 x 6 mm countersunk",
+      "quantity": {
+        "modular_4": 4,
+        "modular_6": 6,
+        "modular_8": 8,
+        "modular_10": 10,
+        "main_10": 8
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Modular: four in electronics base plus two per extension; integral cap uses none. Main enclosure uses eight.",
+      "source": "Project design"
+    },
+    {
+      "id": "H02",
+      "group": "Hardware",
+      "part": "Display screws",
+      "specification": "M2 x 5 mm countersunk",
+      "quantity": {
+        "modular_4": 4,
+        "modular_6": 4,
+        "modular_8": 4,
+        "modular_10": 4,
+        "main_10": 4
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Four hollow posts and factory blind M2 studs. Nominal engagement 1.39 mm; verify actual screws do not bottom out.",
+      "source": "Project design"
+    },
+    {
+      "id": "H03",
+      "group": "Hardware",
+      "part": "MCU mounting screws",
+      "specification": "M1.6; head style and under-head length to confirm before ordering",
+      "quantity": {
+        "modular_4": 4,
+        "modular_6": 4,
+        "modular_8": 4,
+        "modular_10": 4,
+        "main_10": 4
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Four reference screws in CAD. Overall modeled height about 7.2 mm includes head; it is not a purchasing length. Confirm PCB thickness and usable printed pilot depth.",
+      "source": "Project design"
+    },
+    {
+      "id": "H04",
+      "group": "Hardware",
+      "part": "Footswitch mounting hardware",
+      "specification": "Matching nuts and washer set supplied for each selected footswitch",
+      "quantity": {
+        "modular_4": 4,
+        "modular_6": 6,
+        "modular_8": 8,
+        "modular_10": 10,
+        "main_10": 10
+      },
+      "unit": "set",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Included with footswitch; verify contents",
+      "notes": "Reference drawing shows two nuts and one washer per switch. Do not double-order included sets.",
+      "source": "Project design"
+    },
+    {
+      "id": "H05",
+      "group": "Hardware",
+      "part": "Encoder knob",
+      "specification": "15 mm diameter x 5 mm height; bore matched to selected shaft",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "CAD assumes 6 mm shaft diameter; shaft form/length not specified. Knob is not one of the enclosure print files.",
+      "source": "Project design"
+    },
+    {
+      "id": "H06",
+      "group": "Hardware",
+      "part": "Encoder panel hardware",
+      "specification": "Matching retaining nut and washer",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "set",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Included with encoder where supplied",
+      "notes": "Check bushing length through the 3 mm roof.",
+      "source": "Project design"
+    },
+    {
+      "id": "H07",
+      "group": "Hardware",
+      "part": "TRS panel hardware",
+      "specification": "Two nickel nuts and two black fiber washers for ACJS-MHDC",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "set",
+      "fit_condition": "Fit pedal interface",
+      "electrical_refs": [],
+      "purchase_unit": "Included with J2 where supplied",
+      "notes": "Count as contents of the socket assembly; no additional saddle screw is specified.",
+      "source": "Project design"
+    },
+    {
+      "id": "H08",
+      "group": "Hardware",
+      "part": "DC socket retaining nut",
+      "specification": "Matching 8 mm thread; 2 mm thick",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Fit 9 V input",
+      "electrical_refs": [],
+      "purchase_unit": "Included with J1 where supplied",
+      "notes": "",
+      "source": "Project design"
+    },
+    {
+      "id": "W01",
+      "group": "Wiring",
+      "part": "LCD cable",
+      "specification": "GH1.25, 8-pin mating cable; verify orientation and signal labels",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Check Waveshare package before buying separately",
+      "notes": "One cable assembly. No MISO required; BL tied to 3.3 V.",
+      "source": "Project design"
+    },
+    {
+      "id": "W02",
+      "group": "Wiring",
+      "part": "Signal hookup wire",
+      "specification": "Stranded, insulated 26-28 AWG; assorted purpose colors",
+      "quantity": {
+        "modular_4": "AR",
+        "modular_6": "AR",
+        "modular_8": "AR",
+        "modular_10": "AR",
+        "main_10": "AR"
+      },
+      "unit": "length",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Planning allowance: about 5 m total",
+      "notes": "Allowance, not a measured cut list. Include switch ladder, encoder, pedal, control and optional LED data routes.",
+      "source": "Project design"
+    },
+    {
+      "id": "W03",
+      "group": "Wiring",
+      "part": "Supply/return wire",
+      "specification": "Stranded, insulated 22-24 AWG",
+      "quantity": {
+        "modular_4": "AR",
+        "modular_6": "AR",
+        "modular_8": "AR",
+        "modular_10": "AR",
+        "main_10": "AR"
+      },
+      "unit": "length",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Planning allowance: about 2 m total",
+      "notes": "Regulated supply, common ground and optional LED distribution; check actual voltage drop and load.",
+      "source": "Project design"
+    },
+    {
+      "id": "W04",
+      "group": "Wiring",
+      "part": "Insulated solder support",
+      "specification": "Small perfboard or insulated solder strip for discrete resistors/capacitors",
+      "quantity": {
+        "modular_4": "AR",
+        "modular_6": "AR",
+        "modular_8": "AR",
+        "modular_10": "AR",
+        "main_10": "AR"
+      },
+      "unit": "set",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "No custom carrier PCB or connector family is finalized; allocate space and mounting before cutting board.",
+      "source": "Project design"
+    },
+    {
+      "id": "W05",
+      "group": "Wiring",
+      "part": "Insulation and strain relief",
+      "specification": "Heat-shrink, small ties/anchors and insulating sleeves",
+      "quantity": {
+        "modular_4": "AR",
+        "modular_6": "AR",
+        "modular_8": "AR",
+        "modular_10": "AR",
+        "main_10": "AR"
+      },
+      "unit": "set",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Leave slack between upper-shell ports and removable base; keep vents and USB withdrawal path clear.",
+      "source": "Project design"
+    },
+    {
+      "id": "M01",
+      "group": "Assembly",
+      "part": "PETG filament",
+      "specification": "For the selected supplied enclosure print files",
+      "quantity": {
+        "modular_4": "AR",
+        "modular_6": "AR",
+        "modular_8": "AR",
+        "modular_10": "AR",
+        "main_10": "AR"
+      },
+      "unit": "mass",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "A 1 kg spool is a practical stock allowance, not part consumption",
+      "notes": "Current profiles: Prusa MK3S+, 0.6 mm nozzle, 0.3 mm layers. Use slicer mass including supports, brim and coupons.",
+      "source": "Project design"
+    },
+    {
+      "id": "M02",
+      "group": "Assembly",
+      "part": "PETG-compatible adhesive",
+      "specification": "For upper joint chain and removable-base joint chain",
+      "quantity": {
+        "modular_4": "AR",
+        "modular_6": "AR",
+        "modular_8": "AR",
+        "modular_10": "AR",
+        "main_10": "AR"
+      },
+      "unit": "set",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Select adhesive rated for PETG and test a coupon. Do not glue removable bases to upper shells or cap-floor butt seam.",
+      "source": "Project design"
+    },
+    {
+      "id": "M03",
+      "group": "Assembly",
+      "part": "Non-slip feet / clearance pads",
+      "specification": "Maintain >=3 mm open space beneath floor vents",
+      "quantity": {
+        "modular_4": 4,
+        "modular_6": 4,
+        "modular_8": 4,
+        "modular_10": 4,
+        "main_10": 4
+      },
+      "unit": "piece",
+      "fit_condition": "Recommended; not CAD-modeled",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Place away from vent slots and screws. Verify stability; fit additional pads if needed.",
+      "source": "Project design"
+    },
+    {
+      "id": "P01",
+      "group": "Printed parts",
+      "part": "Electronics upper shell",
+      "specification": "PETG enclosure solid; print one selected orientation per listed piece",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Left: mirrored/main/shell-left; modular reuses same electronics geometry.",
+      "source": "Project design"
+    },
+    {
+      "id": "P02",
+      "group": "Printed parts",
+      "part": "Electronics base",
+      "specification": "PETG enclosure solid; print one selected orientation per listed piece",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Left: mirrored/main/base-left; modular reuses same geometry.",
+      "source": "Project design"
+    },
+    {
+      "id": "P03",
+      "group": "Printed parts",
+      "part": "Main outer upper shell",
+      "specification": "PETG enclosure solid; print one selected orientation per listed piece",
+      "quantity": {
+        "modular_4": 0,
+        "modular_6": 0,
+        "modular_8": 0,
+        "modular_10": 0,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Left main shell-right only; omit for modular.",
+      "source": "Project design"
+    },
+    {
+      "id": "P04",
+      "group": "Printed parts",
+      "part": "Main outer base",
+      "specification": "PETG enclosure solid; print one selected orientation per listed piece",
+      "quantity": {
+        "modular_4": 0,
+        "modular_6": 0,
+        "modular_8": 0,
+        "modular_10": 0,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Left main base-right only; omit for modular.",
+      "source": "Project design"
+    },
+    {
+      "id": "P05",
+      "group": "Printed parts",
+      "part": "Repeatable pair upper",
+      "specification": "PETG enclosure solid; print one selected orientation per listed piece",
+      "quantity": {
+        "modular_4": 0,
+        "modular_6": 0,
+        "modular_8": 1,
+        "modular_10": 2,
+        "main_10": 0
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Left modular: C/3 then D/4; choose correct engraved variant.",
+      "source": "Project design"
+    },
+    {
+      "id": "P06",
+      "group": "Printed parts",
+      "part": "Cap-adjacent pair upper",
+      "specification": "PETG enclosure solid; print one selected orientation per listed piece",
+      "quantity": {
+        "modular_4": 0,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 0
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Left modular: final C/3, D/4 or E/5 at the cap.",
+      "source": "Project design"
+    },
+    {
+      "id": "P07",
+      "group": "Printed parts",
+      "part": "Universal pair base",
+      "specification": "PETG enclosure solid; print one selected orientation per listed piece",
+      "quantity": {
+        "modular_4": 0,
+        "modular_6": 1,
+        "modular_8": 2,
+        "modular_10": 3,
+        "main_10": 0
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Same pair-base at every extension, including next to cap.",
+      "source": "Project design"
+    },
+    {
+      "id": "P08",
+      "group": "Printed parts",
+      "part": "Integral-floor end cap",
+      "specification": "PETG enclosure solid; print one selected orientation per listed piece",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 0
+      },
+      "unit": "piece",
+      "fit_condition": "Required",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Left modular right-cap; no detachable floor or cap screws.",
+      "source": "Project design"
+    },
+    {
+      "id": "A01",
+      "group": "External accessories",
+      "part": "USB-C data cable",
+      "specification": "Suitable USB host/source end",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "For flashing / USB power",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Do not use a charge-only cable for flashing.",
+      "source": "Project design"
+    },
+    {
+      "id": "A02",
+      "group": "External accessories",
+      "part": "USB 5 V source",
+      "specification": "Capacity for measured controller and any USB-powered LED load",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "If using USB supply",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Do not assume converter-side LED power is present when only USB is connected.",
+      "source": "Project design"
+    },
+    {
+      "id": "A03",
+      "group": "External accessories",
+      "part": "9 V DC adapter / pedalboard output",
+      "specification": "Center-negative 5.5 x 2.1 mm; >=1 A procurement allowance",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "If using 9 V input",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "Supply allowance does not raise the Pololu module output/thermal rating.",
+      "source": "Project design"
+    },
+    {
+      "id": "A04",
+      "group": "External accessories",
+      "part": "Passive continuous pedal",
+      "specification": "Variable resistor or potentiometer, up to 10 kOhm",
+      "quantity": {
+        "modular_4": 2,
+        "modular_6": 2,
+        "modular_8": 2,
+        "modular_10": 2,
+        "main_10": 2
+      },
+      "unit": "piece",
+      "fit_condition": "Optional; one per used input",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "User-owned pedals; verify TS/TRS wiring and calibrate. May fit zero, one or two.",
+      "source": "Project design"
+    },
+    {
+      "id": "A05",
+      "group": "External accessories",
+      "part": "BLE MIDI DIN dongle",
+      "specification": "Central-role support and third-party peripheral compatibility",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "For direct HX Stomp connection",
+      "electrical_refs": [],
+      "purchase_unit": "Each",
+      "notes": "External to controller. Exact dongle not specified; verify pairing with SIGMIDI. HX Stomp/iPad and their power supplies are not controller BOM parts.",
+      "source": "Project design"
+    }
+  ]
+}
