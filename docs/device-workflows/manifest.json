@@ -182,8 +182,8 @@
   ],
   "source_sha256": {
     "src/ui.cpp": "c12c9a0e3bfa3254448e7422e4d6188b77e5f18d5aae5842021e2c59239762de",
-    "src/display.cpp": "21ee686968779d6c9e42cb893b16d3e4feb377ffb807108b18c090ae07478d20",
-    "src/display.hpp": "6d5885872d3007201fb1dc9567ef7df51db4b49e2f9398969164a9159bdd6b79",
+    "src/display.cpp": "13da018d9a87908ed19a9b3ffd0d600e94b6ade476ffc7b90804759b969d1286",
+    "src/display.hpp": "bc1cc3821c7b7b89fb88575089be61ec2defe2713f65de11b130e57636a5c356",
     "src/config.cpp": "fd9094e730d2b2bfbff5a20d4cc71662f8d210e8f0db6a5284529a580cebde3f",
     "src/core.cpp": "41489476905ac012acad4380e5b06119a519e94019acc841605f1ed8d59db2d9",
     "tests/device_workflow_preview.cpp": "50adace47f42b77d7077e87fe14be65abbab7b1050fd624728cbd5505cdee09c",

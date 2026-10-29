@@ -118,7 +118,58 @@ void credentials(Canvas &c, const DisplayFrame &v, int y) {
     c.text(23, y + 55, "HTTP", 1, Muted);
     c.text(60, y + 53, "192.168.4.1", 2, Text, 16);
 }
+void pongScreen(Canvas &c, const PongFrame &p) {
+    c.text(16, 12, "PONG", 2, Text);
+    c.text(100, 9, "YOU", 1, Accent);
+    c.text(207, 9, "CPU", 1, Blue);
+    char score[4];
+    snprintf(score, sizeof score, "%d", p.playerScore);
+    c.text(106, 22, score, 2, Accent, 2);
+    snprintf(score, sizeof score, "%d", p.computerScore);
+    c.text(213, 22, score, 2, Blue, 2);
+    c.rect(12, PongFrame::Top - 2, 256, 2, Border);
+    c.rect(12, PongFrame::Bottom, 256, 2, Border);
+    for (int y = PongFrame::Top + 5; y < PongFrame::Bottom; y += 12)
+        c.rect(139, y, 2, 6, Border);
+    c.round(16, int(p.player) - PongFrame::PaddleHeight / 2, 4,
+            PongFrame::PaddleHeight, 2, Accent);
+    c.round(260, int(p.computer) - PongFrame::PaddleHeight / 2, 4,
+            PongFrame::PaddleHeight, 2, Blue);
+    if (p.phase == PongPhase::Playing)
+        c.round(int(p.ballX) - 3, int(p.ballY) - 3, 6, 6, 2, Text);
+    else {
+        c.round(39, 94, 202, 62, 6, Panel);
+        const char *title = p.phase == PongPhase::Ready ? "PLAYER VS CPU" :
+                            p.phase == PongPhase::Point ? "POINT!" :
+                            p.playerScore == 7 ? "YOU WIN!" : "CPU WINS";
+        int x = (DisplayWidth - int(std::strlen(title)) * 12) / 2;
+        c.text(x, 104, title, 2, p.phase == PongPhase::Finished ? Amber : Text);
+        const char *hint = p.phase == PongPhase::Point ? "FIRST TO 7" : "CLICK TO START";
+        c.text((DisplayWidth - int(std::strlen(hint)) * 6) / 2, 134, hint, 1, Muted);
+    }
+    c.text(32, 216, "TURN: MOVE / CLICK: RESTART", 1, Muted);
+    c.text(86, 231, "HOLD: EXIT", 1, Accent);
+}
 } // namespace
+bool pongStripeChanged(const PongFrame &a, const PongFrame &b, int firstY, int rows) {
+    if (a.phase != b.phase)
+        return true;
+    auto overlaps = [=](int y, int height) { return y < firstY + rows && y + height > firstY; };
+    if (a.playerScore != b.playerScore || a.computerScore != b.computerScore) {
+        if (b.phase == PongPhase::Finished || overlaps(9, 27))
+            return true;
+    }
+    auto paddleChanged = [&](float previous, float next) {
+        return int(previous) != int(next) &&
+               (overlaps(int(previous) - PongFrame::PaddleHeight / 2, PongFrame::PaddleHeight) ||
+                overlaps(int(next) - PongFrame::PaddleHeight / 2, PongFrame::PaddleHeight));
+    };
+    if (paddleChanged(a.player, b.player) || paddleChanged(a.computer, b.computer))
+        return true;
+    return b.phase == PongPhase::Playing &&
+           (int(a.ballX) != int(b.ballX) || int(a.ballY) != int(b.ballY)) &&
+           (overlaps(int(a.ballY) - 3, 6) || overlaps(int(b.ballY) - 3, 6));
+}
 bool displayWindow(int firstY, int rows, DisplayWindow &window, int rotation) {
     if (firstY < 0 || firstY >= DisplayHeight || rows <= 0 || rows > DisplayHeight - firstY ||
         (rotation != 0 && rotation != 180))
@@ -147,6 +198,10 @@ void renderDisplayStripe(const DisplayFrame &v, int firstY, int rows, uint16_t *
         return;
     Canvas c{firstY, rows, pixels};
     c.rect(0, 0, DisplayWidth, DisplayHeight, Background);
+    if (v.screen == Screen::Pong) {
+        pongScreen(c, v.pong);
+        return;
+    }
     if (v.screen == Screen::Performance) {
         for (int y = 0; y < LogoHeight; ++y)
             for (int x = 0; x < LogoWidth; ++x) {

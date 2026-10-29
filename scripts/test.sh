@@ -14,6 +14,8 @@ DISPLAY_BIN=$(mktemp /tmp/midi-foot-display.XXXXXX)
 trap 'rm -f "$TEST_BIN" "$DISPLAY_BIN"' EXIT
 c++ -std=c++17 -Wall -Wextra -Werror -Isrc src/display.cpp tests/display_test.cpp -o "$DISPLAY_BIN"
 "$DISPLAY_BIN"
+c++ -std=c++17 -Wall -Wextra -Werror -Isrc src/pong.cpp src/display.cpp tests/pong_test.cpp -o "$DISPLAY_BIN"
+"$DISPLAY_BIN"
 LED_BIN=$(mktemp /tmp/midi-foot-led.XXXXXX)
 trap 'rm -f "$TEST_BIN" "$DISPLAY_BIN" "$LED_BIN"' EXIT
 c++ -std=c++17 -Wall -Wextra -Werror -Isrc src/core.cpp src/leds.cpp tests/led_test.cpp -o "$LED_BIN"

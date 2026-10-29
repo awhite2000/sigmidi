@@ -2,7 +2,7 @@
   "version": "0.1",
   "directory": "/Users/ab/Documents/ChatGPT/MIDI controller 3/distribution/web-flasher",
   "ZIP": "/Users/ab/Documents/ChatGPT/MIDI controller 3/distribution/sigmidi-foot-controller-0.1-web-flasher.zip",
-  "ZIP_sha256": "70ee0ba779086f67282e5ec2502ca77e8ff93be4f82eda9b64da6e24a08964b1",
+  "ZIP_sha256": "7546ecd07506cbf3fd1a47c093c6313c5441b77a83a93b8c41d8b28e6908c199",
   "files": 43,
   "preserves_NVS_when_erase_unchecked": true,
   "chip": "ESP32-C6",

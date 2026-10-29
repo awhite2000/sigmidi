@@ -37,13 +37,18 @@ bool queueTest(int sw, bool release) {
 }
 static void uiTask(void *) {
     uint32_t shutdownAt = 0;
+    foot::HiddenPong pong;
     for (;;) {
         foot::DisplayFrame view{};
         bool stop = false;
         {
             Lock l;
-            int rotate = encoderDelta(), click = clickEvent(nowMs());
-            if (!state.setup && click == 1) {
+            uint32_t now = nowMs();
+            foot::EncoderInput input;
+            encoderRead(input);
+            int click = clickEvent(now);
+            bool consumed = pong.update(!state.setup, input, click, now);
+            if (!consumed && !state.setup && click == 1) {
                 if (canSetup) {
                     state.setup = true;
                     state.draft = state.saved;
@@ -52,9 +57,13 @@ static void uiTask(void *) {
                     strcpy(state.notice, "Setup");
                 } else
                     strcpy(state.notice, "Release switches first");
-            } else
-                uiStep(rotate, click);
+            } else if (!consumed)
+                uiStep(input.rotation, click);
             uiView(view);
+            if (pong.active()) {
+                view.screen = foot::Screen::Pong;
+                view.pong = pong.frame();
+            }
             if (!state.setup && state.wifi) {
                 if (!shutdownAt)
                     shutdownAt = nowMs() + 1000;

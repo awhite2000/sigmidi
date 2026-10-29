@@ -1,9 +1,10 @@
 #pragma once
 #include <cstdint>
+#include "pong.hpp"
 namespace foot {
 constexpr int DisplayWidth = 280, DisplayHeight = 240, DisplayStripeRows = 16;
 constexpr int MenuRows = 7, DisplayText = 41;
-enum class Screen { Performance, Menu, Browser };
+enum class Screen { Performance, Menu, Browser, Pong };
 enum class MenuRowKind { Navigation, Parameter, Action, Message };
 constexpr int MenuValueX = 164;
 struct DisplayPedal {
@@ -24,6 +25,7 @@ struct DisplayFrame {
     bool editing = false, showWifiCredentials = false;
     char ssid[33]{}, password[17]{};
     DisplayPedal pedals[2]{};
+    PongFrame pong{};
 };
 struct DisplayWindow {
     uint8_t columns[4]{}, rows[4]{};
@@ -33,4 +35,5 @@ bool displayWindow(int firstY, int rows, DisplayWindow &, int rotation = 0);
 bool prepareDisplayStripe(uint16_t *pixels, int rows, int rotation);
 // Pure host-testable RGB565 renderer. Only one 8.75KiB DMA stripe is needed.
 void renderDisplayStripe(const DisplayFrame &, int firstY, int rows, uint16_t *pixels);
+bool pongStripeChanged(const PongFrame &previous, const PongFrame &next, int firstY, int rows);
 } // namespace foot

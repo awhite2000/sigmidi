@@ -13,7 +13,7 @@ static adc_cali_handle_t calibration;
 static spi_device_handle_t display;
 static uint16_t *frame;
 static portMUX_TYPE encMux = portMUX_INITIALIZER_UNLOCKED;
-static volatile int encSteps = 0;
+static foot::EncoderTurns encTurns;
 static volatile uint8_t previous = 0;
 static volatile int quarter = 0;
 // Full-cycle decoder. Set EDGES_PER_DETENT=2 for encoders with half-cycle detents.
@@ -30,11 +30,11 @@ static void IRAM_ATTR encoderISR(void *) {
         quarter += transitions[(previous << 2) | next];
     previous = next;
     if (quarter >= EDGES_PER_DETENT) {
-        encSteps++;
+        encTurns.push(1);
         quarter = 0;
     }
     if (quarter <= -EDGES_PER_DETENT) {
-        encSteps--;
+        encTurns.push(-1);
         quarter = 0;
     }
     portEXIT_CRITICAL_ISR(&encMux);
@@ -154,12 +154,10 @@ float readMv(int index) {
         return -1;
     return mv;
 }
-int encoderDelta() {
+void encoderRead(foot::EncoderInput &input) {
     portENTER_CRITICAL(&encMux);
-    int n = encSteps;
-    encSteps = 0;
+    encTurns.read(input);
     portEXIT_CRITICAL(&encMux);
-    return std::clamp(n, -20, 20);
 }
 int clickEvent(uint32_t now) {
     static bool raw = false, stable = false, held = false, armed = false;
@@ -208,6 +206,13 @@ void lcdDraw(const foot::DisplayFrame &view) {
         return;
     for (int y = 0; y < foot::DisplayHeight; y += foot::DisplayStripeRows) {
         int rows = std::min(foot::DisplayStripeRows, foot::DisplayHeight - y);
+        // The game typically changes only a few stripes; keep the 10 MHz display
+        // responsive without another framebuffer or changing the SPI clock.
+        if (!first && view.screen == foot::Screen::Pong &&
+            previousFrame.screen == foot::Screen::Pong &&
+            view.displayRotation == previousFrame.displayRotation &&
+            !foot::pongStripeChanged(previousFrame.pong, view.pong, y, rows))
+            continue;
         foot::renderDisplayStripe(view, y, rows, frame);
         foot::DisplayWindow window{};
         // Rotation and MSB-first SPI conversion share the existing DMA stripe.

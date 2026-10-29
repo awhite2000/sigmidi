@@ -23,7 +23,7 @@ int main() {
     assert(!prepareDisplayStripe(invalid.data() + 1, 0, 0));
     assert(!prepareDisplayStripe(invalid.data() + 1, DisplayStripeRows + 1, 180));
     assert(std::all_of(invalid.begin(), invalid.end(), [](auto p) { return p == 0xf00f; }));
-    for (Screen screen : {Screen::Performance, Screen::Menu, Screen::Browser}) {
+    for (Screen screen : {Screen::Performance, Screen::Menu, Screen::Browser, Screen::Pong}) {
         DisplayFrame v{};
         v.screen = screen;
         v.ble = 2;
@@ -111,5 +111,5 @@ int main() {
     }
     puts("Display tests passed: hidden pending pedal values/bars, exact 0/180-degree SPI output, 280x240 offsets, stripe/frame "
          "equivalence, clipping guards, "
-         "three screens");
+         "four screens");
 }

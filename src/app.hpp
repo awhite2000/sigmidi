@@ -40,7 +40,7 @@ bool bleSend(const foot::Message &, uint32_t, void *);
 void hardwareStart();
 void ledsStart();
 float readMv(int index);
-int encoderDelta();
+void encoderRead(foot::EncoderInput &);
 int clickEvent(uint32_t now);
 void pedalModes(const foot::Config &);
 void lcdDraw(const foot::DisplayFrame &);

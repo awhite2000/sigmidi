@@ -1,0 +1,18 @@
+{
+  "verified_UTC": "2026-10-29T16:39:06.072160+00:00",
+  "build_id": "75031f6c86ea",
+  "source_sha256": "75031f6c86ea312974961a13dc9529a038f5c51db7ba32f6f3874074f510c2e5",
+  "host_suite": "tests/pong_test.cpp",
+  "checks": {
+    "pong_suite_passed": true,
+    "initial_full_crossing_measured_ms": 4000,
+    "fastest_full_crossing_measured_ms": 2010,
+    "center_serve_measured_ms": 2140,
+    "gesture_controls_physics_scoring_restart_exit": true,
+    "incremental_stripes_match_complete_frames": true,
+    "test_log_sha256": "5223e32b4eed32687c4f6bb4e815d32c87f842da954067089f255ae508b7f90a",
+    "web_flasher_integrity_checks_passed": true
+  },
+  "target_build_passed": true,
+  "physical_hardware_tested": false
+}
