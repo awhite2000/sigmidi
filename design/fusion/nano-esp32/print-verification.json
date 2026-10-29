@@ -1,0 +1,40 @@
+{
+  "printer": "Prusa MK3S+",
+  "material": "PETG",
+  "nozzle_mm": 0.6,
+  "layer_mm": 0.3,
+  "orientation": "Flat foot/bridge plate on bed; screw pilots up",
+  "parts": [
+    {
+      "part": "usb-side-glue-insert",
+      "triangles": 924,
+      "watertight_edges": true,
+      "signed_volume_mm3": 466.11371692861377,
+      "dimensions_mm": [
+        19.24,
+        7.85,
+        12.84
+      ],
+      "STL_sha256": "fb6d8dbe6eb4c273071678af1e8a7aaea0594f976714af46fd3f7fd799530167",
+      "estimated_time": "4m 43s",
+      "filament_g": "0.79",
+      "support_material": false
+    },
+    {
+      "part": "existing-pole-insert",
+      "triangles": 1248,
+      "watertight_edges": true,
+      "signed_volume_mm3": 618.3136764228894,
+      "dimensions_mm": [
+        27.6,
+        21.004,
+        4.09
+      ],
+      "STL_sha256": "cbd139e45b5fde5d7c1e99f809d6855b513e4ef599adaed08198d80148c6c344",
+      "estimated_time": "4m 45s",
+      "filament_g": "1.18",
+      "support_material": false
+    }
+  ],
+  "limits": "Nominal CAD and slicing checks. Adhesive strength, cable seating and small screw fit require physical testing."
+}

@@ -1,7 +1,7 @@
 {
   "project": "SIGMIDI Foot Controller",
   "version": "0.1",
-  "native_document": "MIDI Foot Controller - VERIFIED chassis v108",
+  "native_document": "MIDI Foot Controller - VERIFIED chassis v111",
   "path": "sigmidi-foot-controller-0.1.f3d",
   "scope": "Entire native design, including original Right and preferred Left main/modular assemblies and part libraries",
   "top_level_components": [
@@ -41,7 +41,9 @@
     "ALT Engraved pair print variants - NOT assembly",
     "ALT Mirrored MAIN - left electronics - 10 switches",
     "ALT Mirrored MODULAR - right extensions - 8 switches",
-    "ALT Mirrored modular upper print library - NOT assembly"
+    "ALT Mirrored modular upper print library - NOT assembly",
+    "ALT Arduino Nano ESP32 mount kit - original base unchanged",
+    "ALT Arduino Nano ESP32 mount kit - original base unchanged"
   ],
   "embossed_icon": {
     "revision": "sigmidi_embossed_icon_25mm",
@@ -105,8 +107,8 @@
     "native_backup": "../archive/pre-sigmidi-25mm-emboss.f3d",
     "UTC": "2026-10-28T16:00:30.445670+00:00"
   },
-  "sha256": "a81f035d862e873f7be3cb23985cb1e554708806f41633e62f33baea1ba23768",
-  "bytes": 30939015,
+  "sha256": "015438b07c80b0b3d20d586d09a18ec2a8cea8d65fffe1958083bbfb88c9b324",
+  "bytes": 15680803,
   "archive_CRC_verified": true,
-  "exported_UTC": "2026-10-28T16:43:14.918568+00:00"
+  "exported_UTC": "2026-10-29T23:08:34.011354+00:00"
 }

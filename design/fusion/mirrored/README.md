@@ -2,6 +2,8 @@
 
 **Left is the preferred enclosure and firmware default.** Its display, encoder and electronics are on the left; switch-pair extensions attach on the right. Main and modular assemblies have independent CAD files and matching print parts. The [full Fusion archive](../sigmidi-foot-controller-0.1.f3d) includes all component hierarchies and part libraries.
 
+The complete Fusion archive also includes the [Arduino Nano ESP32 adapter kit](../nano-esp32/README.md) in all four assemblies. It uses two separate inserts and preserves every existing enclosure solid. The standalone enclosure packages below retain their DFR1075 hardware references; print parts are the same for the Nano conversion.
+
 ## Dimensions and components
 
 The main body measures **350 × 92 × 54 mm**, with 65 mm switch pitch, 32.5 mm stagger, 53 mm row spacing and 30 mm upper-deck elevation. Roofs are 3 mm and sides at least 2 mm. The 25 × 20.183 mm icon between A and B is raised 0.6 mm on the full roof, giving 54.6 mm local height. [Icon detail](main/embossed-icon.png).

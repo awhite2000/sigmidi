@@ -1,0 +1,32 @@
+{
+  "board": "Arduino Nano ESP32 ABX00083",
+  "instances": [
+    {
+      "variant": "Left main",
+      "translation_X_mm": 0,
+      "existing_board_hidden": true
+    },
+    {
+      "variant": "Left modular",
+      "translation_X_mm": 0,
+      "existing_board_hidden": true
+    },
+    {
+      "variant": "Right main",
+      "translation_X_mm": 151.37672319982553,
+      "existing_board_hidden": true
+    },
+    {
+      "variant": "Right modular",
+      "translation_X_mm": 151.37672319982553,
+      "existing_board_hidden": true
+    }
+  ],
+  "original_enclosure_body_revisions_unchanged": true,
+  "enclosure_geometry_modified": false,
+  "existing_USB_cutout_modified": false,
+  "component_face_down": true,
+  "headers_fitted": false,
+  "fit_check": "assembly-clearance.json",
+  "firmware_migration": "Separate electrical and firmware migration required; current C6 firmware cannot run on Nano ESP32"
+}

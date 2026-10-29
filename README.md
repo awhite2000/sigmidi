@@ -49,6 +49,7 @@ On the controller, enter **Wi-Fi Setup**, join the displayed `SIGMIDI-xxxx` netw
 | LED wiring and configuration | [LEDs](docs/leds.md) |
 | Power wiring and load budget | [Power](docs/power.md) |
 | CAD and manufacturing files | [Design](design/README.md) |
+| Arduino Nano ESP32 mechanical conversion; original base retained | [Two-insert mounting kit](design/fusion/nano-esp32/README.md) |
 | Screenshots and enclosure renders | [Previews](previews/README.md) |
 
 The [complete Fusion model](design/fusion/sigmidi-foot-controller-0.1.f3d) contains the native component hierarchy for all four assemblies and the modular part libraries. Firmware source is in `src/`, the embedded editor in `web/`, and tests in `tests/`. Release binaries and installers are in `distribution/`; `build/` contains disposable compiler outputs when a build is run.

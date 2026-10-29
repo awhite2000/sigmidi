@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "variant": "Left main",
+      "collisions": [],
+      "objects_checked": 263,
+      "target_bodies": 176
+    },
+    {
+      "variant": "Left modular",
+      "collisions": [],
+      "objects_checked": 263,
+      "target_bodies": 78
+    },
+    {
+      "variant": "Right main",
+      "collisions": [],
+      "objects_checked": 263,
+      "target_bodies": 132
+    },
+    {
+      "variant": "Right modular",
+      "collisions": [],
+      "objects_checked": 263,
+      "target_bodies": 78
+    }
+  ],
+  "all_variants_collision_free": true,
+  "physical_hardware_tested": false,
+  "source_geometry": "Official Nano STEP, corrected PCB bores, complete native enclosure BReps",
+  "threaded_engagements": "New screw-to-pilot intersections intended; original MCU screws omitted",
+  "minimum_distance_measurement": "Not available for imported USB reference faces; collision booleans completed for all four variants"
+}
