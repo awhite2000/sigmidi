@@ -2,8 +2,8 @@
 
 ## Git
 
-- After finishing changes, always execute `git commit` with a short commit message.
-- Absolutely NEVER push to `origin`. Keep commits local.
+- Never run `git commit` and never `git push` until the user specifically requests it. Each request authorises only the action it names, once; after that, return to not committing or pushing.
+- When explicitly asked to push, never push to `origin` without that explicit instruction. Keep all work local by default.
 
 ## Documentation
 
