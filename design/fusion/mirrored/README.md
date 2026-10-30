@@ -14,7 +14,7 @@ The main body measures **350 × 92 × 54 mm**, with 65 mm switch pitch, 32.5 mm 
 | Dual TRS ports | 22.725 / 39.275 | Rear panel |
 | Display PCB centre | 42.598 | Lower deck |
 | A / 1 | 42.6 / 75.1 | Raised / lower row |
-| DFRobot board | 99.31 | Below raised row, USB-C to rear |
+| Nano ESP32 | 99.31 | Below raised row, USB-C to rear |
 | B / 2 | 107.6 / 140.1 | Raised / lower row |
 | Pololu converter | 123.968 | Vented base clip mount |
 | 9 V socket | 140.0 | Rear panel |
@@ -22,7 +22,7 @@ The main body measures **350 × 92 × 54 mm**, with 65 mm switch pitch, 32.5 mm 
 | D / 4 | 237.6 / 270.1 | Raised / lower row |
 | E / 5 | 302.6 / 335.1 | Raised / lower row |
 
-Coordinates span different rows and heights. The Waveshare 24382 PCB has its ribbon on the left, glass flush at Z0 and four hollow mounts for M2×5 screws. DFR1075 and the display use actual PCB shapes with their component faces up. USB-C, TRS and DC ports face the rear. Wiring follows physical pin labels.
+Coordinates span different rows and heights. The Waveshare 24382 PCB has its ribbon on the left, glass flush at Z0 and four hollow mounts for M2×5 screws. The Nano uses its manufacturer PCB model, component-side down on the two adapters; the display uses its actual PCB shape. USB-C, TRS and DC ports face the rear. Wiring follows physical pin labels.
 
 Switch labels read **A B C D E / 1 2 3 4 5** across the rows. Arial Bold outlines are 8 mm high, recessed 0.8 mm to the left of each LED, leaving 2.2 mm roof backing. Electrical tap IDs determine MIDI actions, calibration and LED assignments. Select **ENCLOSURE → LEFT** in firmware for 180° LCD rotation and matching menu order.
 
@@ -58,11 +58,11 @@ Use one `right-cap` and the electronics shell/base at every size. Every pair use
 
 Use **Prusa MK3S+, PETG, 0.6 mm nozzle, 0.3 mm layers** with the supplied profiles. Main shells print on their outer ends, seams upward. Pair shells print left mating edge down, right edge upward. The cap prints closed-right-end down. Bases print outside-floor down, mounts upward, without supports. Upper parts use automatic snug supports at 40°. Test both fit coupons first. [Tolerances](../printing-tolerances.md).
 
-Glue upper and removable-base chains separately. Each pair base uses two M2×6 screws; electronics use four. The main and eight-switch modular assemblies each use eight base screws. The display uses four M2×5 countersunk screws; DFR1075 uses M1.6 hardware. Check the display's 1.39 mm nominal stud engagement against its actual blind holes.
+Glue upper and removable-base chains separately. Each pair base uses two M2×6 screws; electronics use four. The main and eight-switch modular assemblies each use eight base screws. The display uses four M2×5 countersunk screws; the Nano uses four M1.6x5 PCB screws and two M1.6x6 adapter screws. Check the display's 1.39 mm nominal stud engagement against its actual blind holes.
 
 Remove all twelve 0.6 mm rear vent membranes before operation. Optional LED holes have 0.8 mm covers; leave them closed when omitting LEDs. Provide at least 3 mm clearance below the base vents. The converter uses 4.8 mm-wide PETG clips and has 8.65 mm free space below its lowest component. Its regulated 5 V / 1 A output supplies the controller and optional LEDs. [Power](../power.md) · [LEDs](../leds.md).
 
-For base removal, release the DFR1075 from its posts and withdraw USB-C from the protective pocket partition. Leave slack in wires between upper-shell sockets and base electronics.
+For base removal, release the Nano from its adapters and withdraw USB-C from the protective pocket partition. Leave slack in wires between upper-shell sockets and base electronics.
 
 ## Deliverables and verification
 

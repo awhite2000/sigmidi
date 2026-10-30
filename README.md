@@ -22,7 +22,7 @@ Select **Settings → Enclosure variant** in the Wi-Fi editor or **EDIT CONFIG �
 
 The main enclosure measures **350 × 92 × 54 mm**, with a 30 mm raised row, 65 mm horizontal pitch, 32.5 mm stagger and 53 mm row spacing. The Left electronics shell has a 25 mm-wide icon raised 0.6 mm between A and B. Main and modular assemblies are available for both variants.
 
-The original bottom shells are retained with the [two-insert Nano mounting kit](design/fusion/nano-esp32/README.md). Use the [Nano pin/power map](docs/hardware.md); retained DFR1075 schematic previews are not the Nano harness.
+The original bottom shells are retained with the [two-insert Nano mounting kit](design/fusion/nano-esp32/README.md). Use the [Nano pin/power map](docs/hardware.md), [electrical diagrams](design/electrical/README.md) and [editable KiCad schematic](design/kicad/README.md).
 
 ## Install and configure
 

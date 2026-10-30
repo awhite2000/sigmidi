@@ -351,7 +351,7 @@
         "LED10"
       ],
       "purchase_unit": "10-pack; one pack covers any 4-10 switch build",
-      "notes": "Installed count is LEDs, not packs. No separate driver, buffer, resistor or capacitor is fitted in this chain. Direct GPIO16 data requires batch/harness verification.",
+      "notes": "Installed count is LEDs, not packs. No separate driver, buffer, resistor or capacitor is fitted in this chain. Direct D7/GPIO10 data requires batch/harness verification.",
       "source": "https://www.pololu.com/product/2535"
     },
     {
@@ -919,7 +919,9 @@
       },
       "unit": "piece",
       "fit_condition": "Required",
-      "electrical_refs": [],
+      "electrical_refs": [
+        "R50"
+      ],
       "purchase_unit": "Each",
       "notes": "VBUS to A4 / GPIO11 divider node; required for self-powered USB operation.",
       "source": ""
@@ -938,7 +940,9 @@
       },
       "unit": "piece",
       "fit_condition": "Required",
-      "electrical_refs": [],
+      "electrical_refs": [
+        "R51"
+      ],
       "purchase_unit": "Each",
       "notes": "A4 / GPIO11 divider node to GND. Never connect VBUS directly to GPIO.",
       "source": ""

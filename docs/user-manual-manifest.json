@@ -108,8 +108,8 @@
       "page": 25
     }
   ],
-  "source_sha256": "cd9319ea6d29ac9a3dff4798b8acb0e50f4adedde225f1566e6621dc226f0cc5",
-  "pdf_sha256": "39246107371ea132aab34050b8803e6727f5c3ae9589b361022e73c50ff19f49",
+  "source_sha256": "b1f44976c60db9ef3c3c499e33063f32bc81b7726a580879b7b3728f7d5a96e2",
+  "pdf_sha256": "64afa6eee008bedea0566dae7e564db6ee0aeffba124d1217b61e8fcc85cdc46",
   "images": {
     "docs/device-workflows/other-menus-workflow.png": "e52054757b0b8a61e06e72e0901307fd9ea6b2bccb16d5af83050c4c58823d83",
     "docs/device-workflows/save-exit.png": "2389a6ede143232a5f2853c703e2c6d5720228086e15ac56f800f2ae3e82f730",

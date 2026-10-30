@@ -2,9 +2,9 @@
   "project": "SIGMIDI Foot Controller",
   "version": "0.1",
   "BOM_lines": 49,
-  "shared_electrical_reference_count": 44,
+  "electrical_reference_count": 46,
   "total_electrical_instances_main": 46,
-  "shared_electrical_refs_match_reference_exports": true,
+  "electrical_refs_match_exports": true,
   "USB_VBUS_divider_BOM_ids": [
     "E16",
     "E17"
@@ -13,10 +13,9 @@
     "M1.6x5": 4,
     "M1.6x6": 2
   },
-  "original_enclosure_reference_hardware_counts": {
+  "enclosure_hardware_counts": {
     "base_M2x6": 8,
-    "display_M2x5": 4,
-    "MCU_M1_6": 4
+    "display_M2x5": 4
   },
   "profiles": {
     "modular_4": 4,
@@ -26,22 +25,23 @@
     "main_10": 10
   },
   "source_sha256": {
-    "docs/bom-items.json": "e627d57eb6d87ee1b2c95e8098377fd24ceb73102d14c91355d1f98a50ecaa83",
-    "docs/bill-of-materials.md": "bae44b1ee3b550390f0d9dacd72f131764520413ebac79c3b4f7e47fb013226f",
-    "scripts/build_bom.py": "846f28c9071cb0e4821ab50557a19f7b11a7a3c1c56cc4cf19408a89b1984172",
-    "design/electrical/bom.csv": "aae6f279ac78a802bd989597a86713c0f198d6a9ac2ab92775616072cb537b26",
-    "design/electrical/netlist.json": "af311d8ad42c162babf381cbbc32c5493003d9582ffe5d9ba6061ced54fb33f3",
+    "docs/bom-items.json": "49f37259439b05584c178750c2b84d72b3779290c01f7c11d384259196251dce",
+    "docs/bill-of-materials.md": "3ec53fa2dbed83133b86712f24d3b6567f231e2f7838ffaa5df0d7149fb3fd36",
+    "scripts/build_bom.py": "3769ecf94b7162bebb389896856ad6f80ecd885865b0192fcdb1e8d3fb415445",
+    "design/electrical/bom.csv": "495c4015597123b2c98f1639e3ecbaf1fae34e09f555b87459632ee7fa9bf4c6",
+    "design/electrical/netlist.json": "2267e1b0a654212ef16386f61ddbc9a47e312421421e163f757127318dd4331c",
     "design/fusion/mirrored/layout.json": "7c357963dd24552da748f04e48d4aab69394bea25b45ff5b9d6e26b49a379306",
-    "design/fusion/mirrored/README.md": "34c3389fec3f7ba31ba98d91b03daef873861c674ee838711100b1ebc67a38ba",
-    "design/fusion/README.md": "8c1e68a4ef41ab1447bea671f0e61d0b54f31aa9f718a572414da9241557434a",
+    "design/fusion/nano-esp32/mount-fit.json": "ac5a6d0bc73f8ffca35a4e2fad8706384be21535dd9f705b912f8fc93ccf778e",
+    "design/fusion/mirrored/README.md": "03331e1acd232a3fdb63b5533e124bbcfec09190d6a9be8e07e334f681cbffac",
+    "design/fusion/README.md": "a778d6597b0e448951476d6584f1c0db99949b03ccd8bb8a2d001e27f4e1b422",
     "design/fusion/datasheets/double-trs-ACJS-MHDC.pdf": "cf064025759af13229b2930116f74c2eb0c3a9675ed1c8e6eadcfdd8939f70f5",
-    "docs/hardware.md": "fc1dcf924d21ec12b7fd080d9bf07426345e2a57043ce5a6b73f4094f5920d5c",
+    "docs/hardware.md": "b372e52e7f73b4602c639a86cf8f16d85535ad08967bc742fc4671f93692432e",
     "docs/power.md": "299910572a130a002406a4a0aa52907f51867d25ab15b705543aa2c0ca4e9ffa",
     "scripts/build_user_manual.py": "42df15614cb05dc018ce17786701cd23485fdc618b89f0c90ab1b02f7db0a150"
   },
   "outputs": {
-    "docs/bill-of-materials.csv": "6fb66f67885628c7b455e4d013a199f5af0bbb5c1c67b1ec2f1bf8796b681c86",
-    "output/pdf/sigmidi-foot-controller-0.1-bill-of-materials.pdf": "dc71d65d411767300b8c3c748215fea417cf13d47137c3c3382c2422ce9468ef"
+    "docs/bill-of-materials.csv": "c37617101a2fd6e63530fc387d49564cd0eb5db89c6785ece10556811da3458b",
+    "output/pdf/sigmidi-foot-controller-0.1-bill-of-materials.pdf": "d7607020f65e6e31094181413b336fd14b43e169c20b0a456289a1faf7afb1bf"
   },
   "physical_fit_qualified": false,
   "purchased_parts_inside_boards_itemized": false

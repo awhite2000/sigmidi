@@ -19,7 +19,7 @@
     "tolerance": 0.05
   },
   "check_schematic_overlaps": {
-    "bounds_resolved": 46,
+    "bounds_resolved": 48,
     "bounds_unresolved": [],
     "overlap_count": 0,
     "overlaps": []
@@ -63,16 +63,17 @@
     "written": false
   },
   "independent_netlist_and_pin_order": {
-    "components": 44,
-    "nets": 39,
-    "connected_terminals": 138,
-    "unused_terminals": 21,
+    "components": 46,
+    "nets": 41,
+    "connected_terminals": 143,
+    "unused_terminals": 18,
     "connectivity_matches_source": true,
-    "dfrobot_physical_order": true,
-    "dfrobot_P1_offset_pitches": 4,
+    "nano_physical_order": true,
+    "nano_JP2_order": "15 to 1, top to bottom",
+    "nano_header_tops_aligned": true,
     "display_physical_order": true
   },
-  "timestamp": "2026-10-28T23:07:44.282929+00:00",
+  "timestamp": "2026-10-30T07:42:38.332168+00:00",
   "konnect_version": "0.13.0",
   "kicad_version": "10.0.7",
   "authority": "Saved native schematic plus direct KiCad XML/ERC/render exports; no suppressed ERC rules.",
@@ -84,20 +85,21 @@
     "large_annotations_readable_at_zoom": true
   },
   "sha256": {
-    "design/electrical/netlist.json": "af311d8ad42c162babf381cbbc32c5493003d9582ffe5d9ba6061ced54fb33f3",
-    "design/electrical/single-page-wiring.json": "36a6ed249872e1b2f892ac95530bb5411f9090bb8ffb544de22bc6d1e2166d6c",
-    "design/kicad/README.md": "c29bf3b630b0d23128d2c1cf9884659bfa4261ddb63151d11cab11e0cd661846",
-    "design/kicad/SIGMIDI.kicad_sym": "a279445bb7b7783af127d12c8ec5191202883c7280907a1df424bfa1c3ed8700",
+    "design/electrical/netlist.json": "2267e1b0a654212ef16386f61ddbc9a47e312421421e163f757127318dd4331c",
+    "design/electrical/single-page-wiring.json": "1cd663d9ac87751692b7c7486c9fde1dde74c4527cff126ce49b4625e34d9c1c",
+    "design/kicad/README.md": "76320e8761cc64145d446a27d25b4cdeec20d38615ff1d479013c24563dd666f",
+    "design/kicad/SIGMIDI.kicad_sym": "da3a36574770d4fa520c7a61c78fbc6e2947881cc1fd633291ac9c22482f7a86",
     "design/kicad/sigmidi-foot-controller.kicad_pcb": "d339432e9703afe9d86e25ef344078522aa166b4c78db6f36e6141cb87bb7690",
+    "design/kicad/sigmidi-foot-controller.kicad_prl": "9798abdb7242bf9b19d4fef8eaeb4cbfde6a25dc5b4cbf91f7e3eb4e9394a8ea",
     "design/kicad/sigmidi-foot-controller.kicad_pro": "45192d9c23f0fa1310e6926b03631a9f5004c6ba2790738f2b109f5f91374854",
-    "design/kicad/sigmidi-foot-controller.kicad_sch": "866d17850b2621c3ce7e685a5f08a2f8651b5485e73b8648609e412dcb9e6dfe",
-    "design/kicad/sigmidi-foot-controller.net": "7b7cdc8755b867e207c1f35006bfa12fd15d4232b2bdf08757fcdc3b8f158c9f",
-    "design/kicad/sigmidi-foot-controller.png": "80d26ded9a2f3715441e96a0601dbf39eaee5b768f6c0d0b821a2940fca96773",
-    "design/kicad/sigmidi-foot-controller.svg": "143ce8ff3430506d4b72c5e1add52dfd5bf4a8a068df6f17846ef8078407977b",
+    "design/kicad/sigmidi-foot-controller.kicad_sch": "3d4ae1353eb2d20d4710f00cb9345e02572305c379f862d6f0f6214b241516e8",
     "design/kicad/sym-lib-table": "4b06b7e3ce4efb245b90ee0c05ff15a3db99ccc58b504aef1373338c7a495b94",
+    "design/kicad/sigmidi-foot-controller.net": "756f9b442244afc1b0677e28f9de55067a7f18bb89d7fd2af8a5c82d5a458a94",
+    "design/kicad/sigmidi-foot-controller.svg": "0f37444e60e0c20c041866dabace238f0804706c7f707452af1af3b988a005e0",
+    "design/kicad/sigmidi-foot-controller.png": "108d594ab78e3771ee314241d3ed22f6ebcabfd98107ea0e0b0c747578e3840c",
     "design/kicad/verification/erc.json": "9fe8bea2883538794f6f2e2f0ac3e33a9392d36fa5de817c2484811d5a9f3e0b",
-    "design/kicad/verification/physical-pin-map.json": "39acb290e00239d7b07033d38e2545fd5d43f77aedca2c0d3439b5fea0584b89",
-    "design/kicad/verification/pin-locations.json": "64eaae5d87e37f39f0467d6eb133379ae0dc06eb959a6c61bb83dbc855aa545a",
-    "output/pdf/sigmidi-kicad-schematic.pdf": "e2c99672ef5eb47e78061e3cc62d50802c76882fd97ef9da0070dad7e296576e"
+    "design/kicad/verification/physical-pin-map.json": "95ea9bc472e49f4ee9883f75c2ba6a3a126d4b62bd95a6c1d888b3f3e51171e0",
+    "design/kicad/verification/pin-locations.json": "783e8fc28bba656cf188bc94116a8d95306a6c2f698d13c5a135f3685e9dc019",
+    "output/pdf/sigmidi-kicad-schematic.pdf": "0e9d4afece0ed727cab07d231965aed32ebf0f9eabcbcfc8d6461b124763fbbf"
   }
 }

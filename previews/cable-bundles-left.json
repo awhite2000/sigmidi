@@ -1,6 +1,8 @@
 {
   "variant": "Left main, ten switches",
   "source": "design/fusion/mirrored/layout.json",
+  "nano_mount_source": "design/fusion/nano-esp32/mount-fit.json",
+  "nano_mount_sha256": "ac5a6d0bc73f8ffca35a4e2fad8706384be21535dd9f705b912f8fc93ccf778e",
   "source_sha256": "7c357963dd24552da748f04e48d4aab69394bea25b45ff5b9d6e26b49a379306",
   "status": "routing proposal; no native CAD changes",
   "component_footprints": [
@@ -114,15 +116,6 @@
       ]
     },
     {
-      "component": "Mirrored DFRobot DFR1075 - manufacturer STEP - PCB thickness corrected to 1.6",
-      "bounds_XY_mm": [
-        86.61179000000102,
-        3.7762937308724087,
-        112.07002431507904,
-        65.00022780610101
-      ]
-    },
-    {
       "component": "Mirrored Double TRS ACJS-MHDC - X319 - horizontal ports - 3mm rear wall",
       "bounds_XY_mm": [
         9.725000000000001,
@@ -157,18 +150,29 @@
         147.50555349946512,
         12.0
       ]
+    },
+    {
+      "component": "Arduino Nano ESP32 ABX00083",
+      "bounds_XY_mm": [
+        90.42163840008723,
+        5.1882488505894635,
+        108.20163840008723,
+        48.36824885058946
+      ],
+      "source": "design/fusion/nano-esp32/mount-fit.json",
+      "component_face_down": true
     }
   ],
   "bundles": {
     "dc": [
       "9 V input",
-      "Sleeve +9 V \u2192 VIN; centre \u2192 GND",
+      "Sleeve +9 V \u2192 Nano VIN + Pololu VIN",
       "2 wires \u00b7 J-PWR",
       "power"
     ],
     "supply": [
       "Regulated 5 V",
-      "Pololu VOUT \u2192 DFRobot VIN / LED rail",
+      "Pololu VOUT \u2192 optional LED rail only",
       "Supply + return travel together",
       "power"
     ],
@@ -186,25 +190,25 @@
     ],
     "pedal": [
       "Expression pedals",
-      "Passive TRS \u2192 2 resistors/input \u2192 GPIO2 / 3",
-      "6 wires at sockets \u00b7 modes GPIO20 / 21",
+      "Passive TRS \u2192 2 resistors/input \u2192 A1 / GPIO2 and A3 / GPIO4",
+      "6 wires at sockets \u00b7 bias D2 / GPIO5 and D3 / GPIO6",
       "controls"
     ],
     "display": [
       "LCD / SPI",
-      "GPIO22, 23, 18, 19, 14; 3V3 + GND",
+      "D8\u2013D12 / GPIO17, 18, 21, 38, 47; 3V3 + GND",
       "7 wires \u00b7 backlight tied to 3V3 locally",
       "controls"
     ],
     "encoder": [
       "Encoder + click",
-      "GPIO6 / 7 / 17 + common GND",
+      "D4\u2013D6 / GPIO7, 8, 9 + common GND",
       "4 wires \u00b7 J-ENC",
       "controls"
     ],
     "led": [
       "Optional Pololu 2535",
-      "GPIO16 \u2192 first LED DIN, directly",
+      "D7 / GPIO10 \u2192 first LED DIN, directly",
       "5V + GND + data; preserve tap assignments",
       "led"
     ]
@@ -273,22 +277,26 @@
       "description": "Socket centre negative to converter GND"
     },
     {
-      "purpose": "supply",
+      "purpose": "dc",
       "points_XY_mm": [
         [
-          119.21,
-          27.91
+          142,
+          20
         ],
         [
-          110.73,
-          27.91
+          114,
+          20
         ],
         [
-          110.73,
-          26.79
+          114,
+          44
+        ],
+        [
+          108.2,
+          44
         ]
       ],
-      "description": "Converter VOUT to DFRobot VIN"
+      "description": "9V input to Nano VIN; no converter 5V connection to Nano"
     },
     {
       "purpose": "ground",
@@ -298,15 +306,19 @@
           30.45
         ],
         [
-          110.73,
+          114,
           30.45
         ],
         [
-          110.73,
-          31.87
+          114,
+          42
+        ],
+        [
+          108.2,
+          42
         ]
       ],
-      "description": "Converter return to DFRobot ground"
+      "description": "Converter return to Nano ground"
     },
     {
       "purpose": "supply",
@@ -382,22 +394,22 @@
           32
         ],
         [
-          86.6,
+          90.4,
           35
         ]
       ],
-      "description": "Direct TIP ADC signals, two bias GPIOs, reference and ground to DFRobot"
+      "description": "Direct TIP ADC signals, two bias GPIOs, reference and ground to Nano"
     },
     {
       "purpose": "display",
       "points_XY_mm": [
         [
-          86.6,
-          45
+          90.4,
+          43
         ],
         [
           82.5,
-          45
+          43
         ],
         [
           82.5,
@@ -438,17 +450,17 @@
           41
         ],
         [
-          86.6,
-          43
+          90.4,
+          41
         ]
       ],
-      "description": "A, B, click and common ground to DFRobot"
+      "description": "A, B, click and common ground to Nano"
     },
     {
       "purpose": "ladder",
       "points_XY_mm": [
         [
-          86.6,
+          90.4,
           38
         ],
         [
@@ -654,7 +666,7 @@
       "purpose": "led",
       "points_XY_mm": [
         [
-          86.6,
+          90.4,
           38
         ],
         [

@@ -62,126 +62,105 @@ def render(m):
         s.line(x-15,y-6,x+15,y-6);s.line(x-15,y+6,x+15,y+6)
         text(x+24,y-48 if ref=='C1' else y-10,ref,19);text(x+24,y-23 if ref=='C1' else y+18,m.COMPONENTS[ref]['value'],21)
         if ref=='C1':text(x-20,y-10,'+',18,bold=True)
-    # Physical DFR1075 top view: P2 left (18 pads), P1 right (14 pads),
-    # with P1 starting four pad pitches lower. Never reorder these terminals.
-    box(1500,300,900,1250,'#f6f8fa')
+    # Physical Nano top view, USB up. Header pad IDs are from Arduino's schematic.
+    box(1500,300,900,1050,'#f6f8fa')
     s.rect(1835,274,230,44,fill='white',stroke=m.INK)
-    text(1950,305,'USB-C',22,anchor='middle',bold=True)
-    text(1950,355,'U1  DFRobot DFR1075',29,anchor='middle',bold=True)
-    text(1950,387,'Physical top view / USB-C up',19,anchor='middle',color=m.MUTED)
+    text(1950,305,'USB-C / MIDI',22,anchor='middle',bold=True)
+    text(1950,355,'U1  Arduino Nano ESP32',29,anchor='middle',bold=True)
+    text(1950,387,'Component-side top view / USB-C up',19,anchor='middle',color=m.MUTED)
     up={};data=m.external_pin_data()
-    for header,count,right in [('P2',18,False),('P1',14,True)]:
+    for header,rows,right in m.HEADERS:
         x=2400 if right else 1500
-        for n in range(1,count+1):
-            ref=f'{header}:{n}';y=400+60*(n-1+(4 if right else 0))
+        for i,(n,_,_) in enumerate(rows):
+            ref=f'{header}:{n}';y=400+60*i
             up[ref]=(x,y);pin('U1',ref,x,y)
             pad=data[ref];tx=x-25 if right else x+25;anchor='end' if right else 'start'
             subtitle=ref+(f' / {pad["logical_name"]}' if pad['net'] else '')
             text(tx,y-18,subtitle,18,anchor=anchor,color=color(pad['net']) if pad['net'] else m.MUTED)
             text(tx,y+8,pad['physical_label'],21,anchor=anchor,bold=True)
-    assert [up[f'P2:{n}'][1] for n in range(1,19)]==list(range(400,1421,60))
-    assert [up[f'P1:{n}'][1] for n in range(1,15)]==list(range(640,1421,60))
-    assert up['P1:1'][1]-up['P2:1'][1]==4*60
-    text(1950,1485,'All printed labels retained; unused pads left unwired.',18,anchor='middle',color=m.MUTED)
-    # Power and return rails skirt the outside of the surrounding components.
-    wire('3V3',(60,250),(3400,250))
-    wire('3V3',(60,250),(60,1270),(760,1270),(760,1160),(700,1160))
-    wire('3V3',up['P2:2'],(1100,460),(1100,250))
-    wire('3V3',up['P1:2'],(2620,700),(2620,250))
-    wire('3V3',(60,1270),(60,2445),(1100,2445),(1100,2140))
-    wire('+5V',(80,200),(3700,200),(3700,410))
-    wire('+5V',up['P1:1'],(2500,640),(2500,200))
+    assert [up[f'JP1:{n}'][1] for n in range(1,16)]==list(range(400,1241,60))
+    assert [up[f'JP2:{n}'][1] for n in range(15,0,-1)]==list(range(400,1241,60))
+    text(1950,1310,'All printed labels retained; unused pads left unwired.',18,anchor='middle',color=m.MUTED)
+    # Power and return rails run outside component outlines.
+    wire('3V3',(60,250),(2740,250))
+    wire('3V3',up['JP1:2'],(1100,460),(1100,250))
+    wire('3V3',(60,250),(60,2445),(1100,2445),(1100,2140))
+    wire('3V3',(1100,460),(1100,550),(780,550),(780,900))
+    wire('+5V',(80,200),(3700,200))
     wire('+5V',(80,200),(80,1325),(500,1325),(500,2430))
-    wire('GND',(40,330),(40,2460),(3750,2460),(3750,540),(2680,540))
-    wire('GND',up['P2:4'],(1000,580),(1000,330),(40,330))
-    wire('GND',up['P1:3'],(2680,760),(2680,540))
-    wire('GND',(40,1315),(600,1315),(600,2460))
-    text(1120,228,'3V3 / U1 logic supply',22,bold=True,color=color('3V3'))
-    text(3716,228,'+5V',23,bold=True,color=m.RED)
+    wire('GND',(40,480),(40,2460),(3750,2460),(3750,1060))
+    wire('GND',up['JP1:14'],(1400,1180),(1400,1500),(1080,1500))
+    wire('GND',up['JP2:4'],(3750,1060))
+    wire('GND',(600,1325),(600,2460))
+    text(1120,228,'3V3 / Nano logic supply',22,bold=True,color=color('3V3'))
+    text(3700,228,'+5V LED',23,bold=True,color=m.RED,anchor='end')
     text(3710,2435,'COMMON GND',21,anchor='end',bold=True)
-    # Preserve the display's physical eight-pin external connector order.
-    box(100,490,600,750,'#edf4fc')
-    text(125,535,'U2  Waveshare 24382',28,bold=True)
-    text(125,569,'External P2 / GH1.25 / SPI',20)
-    text(125,647,'Pin 1 at top / pin 8 at bottom',19,color=m.MUTED)
-    lcd={n:600+(n-1)*80 for n in range(1,9)}
-    for n,y in lcd.items():pin('U2',f'P2:{n}',700,y,f'{n}  {m.LCD[n-1][1]}')
-    assert [lcd[n] for n in range(1,9)]==list(range(600,1161,80))
-    wire('3V3',(1100,460),(900,460),(900,600),(700,600))
-    wire('GND',(700,1080),(740,1080),(740,1315),(600,1315))
-    for n,ref,ch in [(5,'P2:6',1080),(6,'P2:7',1200),
-                     (3,'P2:10',1160),(4,'P2:12',1120),(2,'P2:15',1240)]:
-        a=up[ref];y=lcd[n]
-        wire(m.COMPONENTS['U2']['pins'][f'P2:{n}'],a,(ch,a[1]),(ch,y),(700,y))
-    text(125,1211,'Pins 1-8 in connector order',20,color=m.BLUE)
-    # Power entry stays entirely to the upper right of the controller.
-    box(2800,290,300,190,'#fff8ef')
-    text(2820,328,'J1  5.5 x 2.1mm',23,bold=True)
-    pin('J1','CENTER',2950,480);text(2950,463,'CENTER (-)',21,anchor='middle',bold=True)
-    pin('J1','SLEEVE',3100,410,'SLEEVE (+)')
-    text(2815,365,'9V DC / center-negative',19)
-    box(3300,290,350,190,'#fff8ef')
-    text(3320,328,'U3  S13V10F5',25,bold=True)
-    text(3320,356,'Pololu #4083 / 1178565',18)
-    pin('U3','VIN',3300,410,'VIN',side='left')
-    pin('U3','VOUT',3650,410,'5V OUT')
-    pin('U3','GND',3480,480);text(3480,463,'GND',20,anchor='middle',bold=True)
-    wire('+9V',(3100,410),(3300,410));cap('C1',(3160,410),(3160,540))
-    wire('GND',(2950,480),(2950,540))
-    wire('GND',(3480,480),(3480,540))
-    wire('+5V',(3650,410),(3700,410))
-    # The two pedal ports share one purchased socket housing and one outline.
-    box(3300,760,360,1080,'#eef8f8')
-    text(3480,812,'J2  ACJS-MHDC',26,anchor='middle',bold=True)
-    text(3480,855,'Dual TRS socket',21,anchor='middle')
-    text(3480,899,'TOP / pedal 1',23,anchor='middle',bold=True)
-    pin('J2','11',3300,940,'11  RING',side='left')
-    pin('J2','12',3300,1120,'12  TIP',side='left')
-    pin('J2','10',3660,1180,'10  SLEEVE')
-    text(3320,1222,'7/8/9: NC',18,color=m.MUTED)
-    s.line(3320,1270,3640,1270,m.GRID)
-    text(3480,1332,'BOTTOM / pedal 2',23,anchor='middle',bold=True)
-    pin('J2','5',3300,1420,'5  RING',side='left')
-    pin('J2','6',3300,1660,'6  TIP',side='left')
-    pin('J2','4',3660,1740,'4  SLEEVE')
-    text(3320,1788,'1/2/3: NC',18,color=m.MUTED)
-    text(3320,1818,'Pad 13: mechanical / NC',18,color=m.MUTED)
-    # Reference resistors are beside the socket; the reference trunk stays
-    # outside the controller-to-encoder signal corridor.
-    wire('3V3',(2740,250),(2740,600),(3220,600),(3220,1420))
-    res('R20',(3220,940),(3300,940))
-    res('R30',(3220,1420),(3300,1420))
-    wire('P1_MODE',up['P1:4'],(2700,820));res('R21',(2700,820),(2800,820))
-    wire('P1_ADC',(2800,820),(2860,820),(2860,1120),(3300,1120))
-    wire('P1_ADC',up['P1:9'],(3300,1120))
-    # GPIO21 follows the open corridor below both boards and the socket. Its
-    # resistor is below J2, so the route avoids the power entry above the MCU.
-    wire('P2_MODE',up['P2:8'],(1420,820),(1420,1980),(3120,1980))
-    res('R31',(3120,1980),(3240,1980))
-    wire('P2_ADC',(3240,1980),(3280,1980),(3280,1660),(3300,1660))
-    wire('P2_ADC',up['P1:8'],(3180,1060),(3180,1660),(3300,1660))
-    wire('GND',(3660,1180),(3750,1180))
-    wire('GND',(3660,1740),(3750,1740))
-    # Move the encoder beside its two physical A/B pins for straight wires.
-    box(2700,1220,420,300,'#f1f8f3')
-    text(2910,1261,'SW11  ENCODER',25,anchor='middle',bold=True)
-    for p,ref,y in [('A','P1:12',1300),('B','P1:13',1360)]:
-        pin('SW11',p,2700,y,p,side='left')
-        wire(m.COMPONENTS['SW11']['pins'][p],up[ref],(2700,y))
-    pin('SW11','SW1',2900,1520)
-    text(2900,1504,'SW1 / click',21,anchor='middle',bold=True)
-    wire('ENC_SW',up['P2:18'],(1460,1420),(1460,1580),(2900,1580),(2900,1520))
-    for p,x in [('C',3040),('SW2',3090)]:
-        pin('SW11',p,x,1520);text(x,1504,p,21,anchor='middle',bold=True)
-        wire('GND',(x,1520),(x,1560),(3160,1560))
-    wire('GND',(3160,1560),(3160,1880),(3750,1880))
-    text(2750,1328,'20 detents',21)
-    text(2750,1400,'Internal pull-ups',19)
-    text(2750,1436,'No external R/C',19)
+    # The display stays in actual physical connector order, pin 1 at top.
+    box(2800,350,600,650,'#edf4fc')
+    text(3070,390,'U2  Waveshare 24382',26,anchor='middle',bold=True)
+    lcd={n:410+(n-1)*80 for n in range(1,9)}
+    for n,y in lcd.items():pin('U2',f'P2:{n}',2800,y,f'{n}  {m.LCD[n-1][1]}',side='left')
+    wire('3V3',(2740,250),(2740,410),(2800,410))
+    wire('3V3',(2720,250),(2720,970),(2800,970))
+    wire('GND',(2800,890),(2700,890),(2700,1100),(3750,1100))
+    for n,ref,ch in [(2,'JP2:15',2500),(6,'JP2:14',2540),(4,'JP2:13',2580),(3,'JP2:12',2620),(5,'JP2:11',2660)]:
+        a=up[ref];wire(m.COMPONENTS['U2']['pins'][f'P2:{n}'],a,(ch,a[1]),(ch,lcd[n]),(2800,lcd[n]))
+    text(3070,1028,'P2 / GH1.25 / SPI / pins 1-8',19,anchor='middle',color=m.BLUE)
+    # External DC feeds Nano VIN and converter VIN; converter 5V feeds LEDs only.
+    box(100,290,300,160,'#fff8ef')
+    text(120,328,'J1  5.5 x 2.1mm',23,bold=True)
+    text(115,365,'9V DC / center-negative',19)
+    pin('J1','CENTER',250,450);text(250,433,'CENTER (-)',21,anchor='middle',bold=True)
+    pin('J1','SLEEVE',400,410,'SLEEVE (+)')
+    box(700,290,300,160,'#fff8ef')
+    text(720,328,'U3  S13V10F5',25,bold=True)
+    text(720,356,'Pololu #4083 / 1178565',18)
+    pin('U3','VIN',700,410,'VIN',side='left')
+    pin('U3','VOUT',1000,410,'5V OUT')
+    pin('U3','GND',850,450);text(850,433,'GND',20,anchor='middle',bold=True)
+    wire('+9V',(400,410),(700,410));cap('C1',(500,410),(500,480))
+    wire('+9V',(650,410),(650,280),(1360,280),(1360,1480),(1380,1480),(1380,1240),up['JP1:15'])
+    wire('GND',(250,450),(250,480),(40,480))
+    wire('GND',(850,450),(850,480),(250,480))
+    wire('+5V',(1000,410),(1040,410),(1040,200))
+    # USB host VBUS is isolated from the external LED rail.
+    res('R50',(900,1220),(1000,1220))
+    res('R51',(1000,1220),(1000,1340))
+    wire('USB_VBUS',up['JP1:12'],(1300,1060),(1300,1180),(900,1180),(900,1220))
+    wire('USB_SENSE',up['JP1:8'],(1120,820),(1120,1220),(1000,1220))
+    wire('GND',(1000,1340),(1080,1340),(1080,2460))
+    text(900,1150,'USB VBUS sense / 3.0V at 5V',19,color=m.BLUE)
+    # Both pedal ports in one purchased dual-TRS housing.
+    box(100,490,600,650,'#eef8f8')
+    text(120,535,'J2  ACJS-MHDC / passive pedals',25,bold=True)
+    text(120,570,'TOP / pedal 1',21,bold=True)
+    for p,y,label in [('11',600,'11 RING'),('12',720,'12 TIP'),('5',900,'5 RING'),('6',1020,'6 TIP')]:pin('J2',p,700,y,label)
+    for p,y in [('10',780),('4',1080)]:
+        pin('J2',p,100,y,f'{p} SLEEVE',side='left');wire('GND',(100,y),(40,y))
+    text(120,835,'BOTTOM / pedal 2',21,bold=True)
+    text(120,1120,'1/2/3/7/8/9: NC; pad 13: mechanical / NC',18,color=m.MUTED)
+    res('R20',(780,600),(700,600));res('R30',(780,900),(700,900))
+    wire('P1_ADC',up['JP1:5'],(1200,640),(1200,720),(700,720))
+    wire('P2_ADC',up['JP1:7'],(1160,760),(1160,1020),(700,1020))
+    wire('P1_MODE',up['JP2:5'],(2480,1000),(2480,1580),(920,1580))
+    res('R21',(920,1580),(800,1580));wire('P1_ADC',(800,1580),(800,720))
+    wire('P2_MODE',up['JP2:6'],(2520,940),(2520,1660),(920,1660))
+    res('R31',(920,1660),(820,1660));wire('P2_ADC',(820,1660),(820,1020))
+    # Encoder pins align with the digital header neighborhood.
+    box(2800,1200,500,400,'#f1f8f3')
+    text(3050,1240,'SW11  ENCODER',25,anchor='middle',bold=True)
+    for p,ref,y,ch in [('A','JP2:7',1280,2560),('B','JP2:8',1360,2600),('SW1','JP2:9',1440,2640)]:
+        pin('SW11',p,2800,y,p,side='left');a=up[ref]
+        wire(m.COMPONENTS['SW11']['pins'][p],a,(ch,a[1]),(ch,y),(2800,y))
+    for p,y in [('C',1500),('SW2',1560)]:
+        pin('SW11',p,3300,y,p);wire('GND',(3300,y),(3750,y))
+    text(2840,1320,'20 detents + click',20)
+    text(2840,1400,'Internal pull-ups',19)
+    text(2840,1480,'No external R/C',19)
     # All ladder taps are below the component bodies, clear of the LED rails.
     text(1600,2070,'MODULAR FOOTSWITCH LADDER',25,bold=True,color=m.AMBER)
     res('R7',(1100,2140),(1250,2140))
-    wire('LADDER',up['P2:13'],(1320,1120),(1320,2080),(1250,2080),(1250,2140))
+    wire('LADDER',up['JP1:4'],(1440,580),(1440,2080),(1250,2080),(1250,2140))
     res('R8',(1250,2140),(1250,2350));wire('GND',(1250,2350),(1250,2460))
     wire('LADDER',(1250,2140),(1350,2140));cap('C5',(1350,2140),(1350,2350));wire('GND',(1350,2350),(1350,2460))
     previous=(1350,2140)
@@ -196,8 +175,8 @@ def render(m):
         text(x+18,2232,ref,20);text(x+18,2270,m.TAPS[i-1][0],25,bold=True)
         text(x,2410,f'T{i} / LED{i}',18,anchor='middle')
         previous=node
-    # Put the LED chain below the display, beside the real GPIO16/TX pad.
-    text(800,1320,'Pololu 2535 / optional LEDs',25,bold=True,color=m.PURPLE)
+    # The LED lead order follows the actual Pololu side view.
+    text(100,1298,'Pololu 2535 / optional LEDs',25,bold=True,color=m.PURPLE)
     for i in range(1,11):
         y=1342+(i-1)*110
         box(100,y,230,100,'#f9f5fd')
@@ -210,7 +189,7 @@ def render(m):
             s.line(330,y+90,380,y+90,m.PURPLE)
             s.line(375,y+85,385,y+95,m.PURPLE);s.line(375,y+95,385,y+85,m.PURPLE)
             text(392,y+96,'NC',19,color=m.PURPLE)
-    wire('LED_GPIO',up['P2:17'],(330,1360))
+    wire('LED_GPIO',up['JP2:10'],(2440,700),(2440,1400),(720,1400),(720,1360),(330,1360))
     # The generated wire model must cover every connected netlist terminal and
     # must form exactly one continuous external wire network for each net.
     expected={f'{r}.{p}':n for r,c in m.COMPONENTS.items() for p,n in c['pins'].items() if n is not None}
@@ -265,20 +244,20 @@ def render(m):
     s.text(42,64,'SIGMIDI FOOT CONTROLLER',36,bold=True)
     s.text(42,104,'v0.1  /  UNIFIED ELECTRICAL SCHEMATIC  /  external board pins only',22)
     s.text(42,142,'Continuous wires connect every fitted terminal. Dots = junctions; arched crossings = no connection. Component placement is schematic.',19,color=m.MUTED)
-    s.text(42,178,'DFRobot and display pins keep physical order. DFRobot: P2 left, P1 right, USB-C up. Outlines and distances are schematic.',20,color=m.MUTED)
+    s.text(42,178,'Nano and LCD pins keep physical order. Nano: JP1 left 1-15, JP2 right 15-1, USB-C up. Outlines are schematic.',20,color=m.MUTED)
     s.line(42,2490,3750,2490,m.GRID)
     s.text(60,2520,'PASSIVE PEDALS',22,bold=True)
     s.lines(60,2550,['Pot: outer legs RING / SLEEVE; wiper TIP.', 'Variable resistor: TIP to SLEEVE; RING unused.', '0-10k per input. Bias HIGH in resistor mode;', 'high impedance in pot / disabled / boot states.'],17,step=22)
     s.text(1100,2520,'ASSEMBLY',22,bold=True)
-    s.lines(1100,2550,['Set 4 / 6 / 8 / 10 switches; calibrate installed taps.', 'SW11 contact pin arrangement is functional.', 'U1 printed MO / MI mean MOSI / MISO.', 'USB-only supply does not power the external LED rail.'],17,step=22)
+    s.lines(1100,2550,['Set 4 / 6 / 8 / 10 switches; calibrate installed taps.', 'SW11 contact pin arrangement is functional.', 'Native USB-C carries USB MIDI and ROM flashing.', 'USB-only supply does not power the external LED rail.'],17,step=22)
     s.text(2240,2520,'LED PACKAGE',22,bold=True)
-    s.lines(2240,2550,['Lens left, leads right, flat side down.', 'Top to bottom: DIN / 5V / GND / DOUT.', 'Only LEDs and wires; direct GPIO16 data.', 'Check 3.3V data acceptance on the actual LED batch.'],17,step=22)
-    s.text(60,2650,'Netlist, BOM and pin references: design/electrical/. All 44 components and 39 nets are checked against the connected wire drawing.',18,color=m.MUTED)
+    s.lines(2240,2550,['Lens left, leads right, flat side down.', 'Top to bottom: DIN / 5V / GND / DOUT.', 'Only LEDs and wires; direct D7 / GPIO10 data.', 'Check 3.3V data acceptance on the actual LED batch.'],17,step=22)
+    s.text(60,2650,f'Netlist, BOM and pin references: design/electrical/. All {len(m.COMPONENTS)} components and {len(bynet)} nets checked against the connected drawing.',18,color=m.MUTED)
     s.svg.append('</svg>');content='\n'.join(s.svg)
     m.C.showPage();m.C.save()
     (m.OUT/'single-page.svg').write_text(content)
-    (m.OUT/'single-page-wiring.json').write_text(json.dumps({'description':'Connected wire geometry validated against netlist.json','units':'schematic coordinates','components':len(m.COMPONENTS),'nets':len(bynet),'terminals':terminals,'wires':[{'net':n,'a':a,'b':b} for n,a,b in wires],'crossing_bridges':len(hops),'dfrobot_pin_layout':'Physical top view: P2 left, P1 right, USB-C up; 60-unit pitch and four-pitch P1 offset; all 32 pad positions and printed labels preserved','lcd_pin_layout':'External P2 pins 1-8 in physical connector order: BL, RST, D/C, CS, SCL/CLK, SDA/DIN, GND, VCC','pedal_socket_layout':'One ACJS-MHDC dual-TRS housing; pedal 1 above pedal 2 inside one J2 outline','dfrobot_connected_pin_label_pt':21,'dfrobot_header_gpio_label_pt':18,'validation':'All connected terminals present; each net continuous; no body crossings or overlapping different-net segments.'},indent=2)+'\n')
+    (m.OUT/'single-page-wiring.json').write_text(json.dumps({'description':'Connected wire geometry validated against netlist.json','units':'schematic coordinates','components':len(m.COMPONENTS),'nets':len(bynet),'terminals':terminals,'wires':[{'net':n,'a':a,'b':b} for n,a,b in wires],'crossing_bridges':len(hops),'nano_pin_layout':'Component-side top view: JP1 left 1-15, JP2 right 15-1, USB-C up; 60-unit pitch, aligned rows; all 30 header pads and printed labels preserved','lcd_pin_layout':'External P2 pins 1-8 in physical connector order: BL, RST, D/C, CS, SCL/CLK, SDA/DIN, GND, VCC','pedal_socket_layout':'One ACJS-MHDC dual-TRS housing; pedal 1 above pedal 2 inside one J2 outline','nano_connected_pin_label_pt':21,'nano_header_gpio_label_pt':18,'validation':'All connected terminals present; each net continuous; no body crossings or overlapping different-net segments.'},indent=2)+'\n')
     (m.PREVIEW.parent/'electrical-single-page.html').write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SIGMIDI v0.1 - unified electrical schematic</title><style>
 *{box-sizing:border-box}body{margin:0;background:#eaf0f4;color:#183044;font:15px system-ui,sans-serif}header{padding:20px 28px;background:#183044;color:white;display:flex;justify-content:space-between;gap:20px}h1{font-size:22px;margin:0 0 7px}p{margin:0;color:#c5d4df}a{color:inherit}main{padding:22px;overflow:auto}svg{display:block;width:100%;min-width:2400px;height:auto;background:white;box-shadow:0 3px 22px #18304419}button{padding:8px 12px;margin:8px 6px 0 0;border:0;border-radius:5px;cursor:pointer}@media print{header{display:none}main{padding:0}svg{min-width:0;width:100%;box-shadow:none}@page{size:A0 landscape;margin:0}}
-</style><header><div><h1>SIGMIDI Foot Controller / unified electrical schematic</h1><p>v0.1 - continuous wires from one DFRobot board to all components. Zoom or scroll for detail.</p><button id="fit">Fit width</button><button id="detail">Enlarge</button></div><a href="electrical-diagram.html">Detailed sheets</a></header><main>'''+content+'''</main><script>document.querySelector('#fit').onclick=()=>document.querySelector('svg').style.minWidth='0';document.querySelector('#detail').onclick=()=>document.querySelector('svg').style.minWidth='3800px';</script></html>''')
+</style><header><div><h1>SIGMIDI Foot Controller / unified electrical schematic</h1><p>v0.1 - continuous wires from one Arduino Nano ESP32 to all components. Zoom or scroll for detail.</p><button id="fit">Fit width</button><button id="detail">Enlarge</button></div><a href="electrical-diagram.html">Detailed sheets</a></header><main>'''+content+'''</main><script>document.querySelector('#fit').onclick=()=>document.querySelector('svg').style.minWidth='0';document.querySelector('#detail').onclick=()=>document.querySelector('svg').style.minWidth='3800px';</script></html>''')
     m.W,m.H,m.C=old

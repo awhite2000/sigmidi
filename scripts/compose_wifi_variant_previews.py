@@ -2,7 +2,7 @@
 """Compose readable comparisons from real browser screenshots and DOM crop bounds.
 
 Capture metadata and full-page originals live in previews/wifi-variants-captures.json.
-No application UI is redrawn or restyled; only blank right-hand space is cropped.
+No application UI is redrawn or restyled; complete content panels are retained.
 """
 from pathlib import Path
 from firmware_artifacts import project_version
@@ -29,15 +29,17 @@ for view in ['switches','calibration']:
         region=r['region'].get('focus',r['region'])
         # Keep labels, all menu buttons and inputs; exclude the unused wide right side.
         x,y=math.floor(region['x']),math.floor(region['y'])
-        width=440;height=math.ceil(region['height'])
+        width=min(440,math.ceil(region['width'])) if view=='calibration' else math.ceil(region['width'])
+        height=math.ceil(region['height'])
         assert x+width<=image.width and y+height<=image.height
         crops.append(image.crop((x,y,x+width,y+height)))
         r['comparison_crop_px']=[x,y,width,height]
         r['source_sha256']=hashlib.sha256((P/r['path']).read_bytes()).hexdigest()
     h=max(c.height for c in crops)
-    canvas=Image.new('RGB',(940,h+100),'#101719');draw=ImageDraw.Draw(canvas)
+    panel_width=max(c.width for c in crops)
+    canvas=Image.new('RGB',(panel_width*2+60,h+100),'#101719');draw=ImageDraw.Draw(canvas)
     for i,side in enumerate(['Left','Right']):
-        x=20+i*460
+        x=20+i*(panel_width+20)
         draw.text((x,15),f'{side} variant · {view}',font=font,fill='#e9f0ed')
         canvas.paste(crops[i],(x,53))
     canvas.paste(mark,(20,h+66),mark)

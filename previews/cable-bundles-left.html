@@ -56,8 +56,6 @@
 <circle cx="381.10000000000014" cy="528.8" r="10" fill="#e8dff4" stroke="#a58bc0"/>
 <rect x="172.39" y="386.94" width="156.00" height="126.00" rx="5" class="board"/>
 <text x="250.39" y="455.14" text-anchor="middle" class="tiny">LCD / SPI</text>
-<rect x="426.45" y="217.11" width="101.83" height="244.90" rx="5" class="board"/>
-<text x="477.36" y="478.00" text-anchor="middle" class="tiny">DFR1075</text>
 <rect x="118.90" y="202.00" width="149.20" height="109.60" rx="5" class="body"/>
 <text x="193.50" y="262.00" text-anchor="middle" class="tiny">Dual TRS</text>
 <rect x="551.74" y="306.00" width="48.26" height="35.56" rx="5" class="board"/>
@@ -66,8 +64,14 @@
 <text x="130.00" y="465.20" text-anchor="middle" class="tiny">ENC</text>
 <rect x="609.98" y="202.00" width="60.04" height="48.00" rx="5" class="body"/>
 <text x="640.00" y="231.20" text-anchor="middle" class="tiny">9 V DC</text>
+<rect x="441.69" y="222.75" width="71.12" height="172.72" rx="4" class="board"/>
+<text x="477.25" y="386.00" text-anchor="middle" class="tiny">face down</text>
+<circle cx="446.7665536003489" cy="227.83299540235785" r="3.32" fill="white" stroke="#72957b"/>
+<circle cx="507.72655360034895" cy="227.83299540235785" r="3.32" fill="white" stroke="#72957b"/>
+<circle cx="446.7665536003489" cy="390.3929954023578" r="3.32" fill="white" stroke="#72957b"/>
+<circle cx="507.72655360034895" cy="390.3929954023578" r="3.32" fill="white" stroke="#72957b"/>
 <rect x="460.00" y="202.00" width="36.00" height="20.00" rx="3" class="body"/>
-<text x="478.00" y="186.00" text-anchor="middle" class="small">USB-C</text>
+<text x="478.00" y="186.00" text-anchor="middle" class="small">Nano ESP32 / USB-C</text>
 <text x="172.00" y="186.00" text-anchor="middle" class="small">TRS 1 / 2</text>
 <text x="640.00" y="186.00" text-anchor="middle" class="small">9 V · centre negative</text>
 <path d="M444 398V442" stroke="#adc3c1" stroke-width="5" opacity=".6"/>
@@ -78,19 +82,18 @@
 <path d="M560 398V442" stroke="#adc3c1" stroke-width="5" opacity=".6"/>
 <path d="M584 398V442" stroke="#adc3c1" stroke-width="5" opacity=".6"/>
 <rect x="324" y="322" width="80" height="40" rx="6" fill="#fff" stroke="#6b7d91" stroke-width="1.7" stroke-dasharray="5 4"/>
-<text x="364.00" y="338.00" text-anchor="middle" class="tiny">Pedal resistors</text>
-<text x="364.00" y="354.00" text-anchor="middle" class="tiny">location TBD</text>
+<text x="364.00" y="318.00" text-anchor="middle" class="tiny">Pedal + USB resistors</text>
 <g class="route" data-bundle="dc"><title>9 V input: Socket sleeve +9 V to converter VIN</title><polyline points="648.00,250.00 648.00,282.00 536.00,282.00 536.00,333.92 556.84,333.92" class="wire" stroke="#fff" stroke-width="6.3"/><polyline points="648.00,250.00 648.00,282.00 536.00,282.00 536.00,333.92 556.84,333.92" class="wire" stroke="#d65e21" stroke-width="4"/></g>
 <g class="route" data-bundle="ground"><title>Ground / returns: Socket centre negative to converter GND</title><polyline points="632.00,250.00 632.00,274.00 544.00,274.00 544.00,323.80 556.84,323.80" class="wire" stroke="#fff" stroke-width="4.9"/><polyline points="632.00,250.00 632.00,274.00 544.00,274.00 544.00,323.80 556.84,323.80" class="wire" stroke="#303a48" stroke-width="2.6"/></g>
-<g class="route" data-bundle="supply"><title>Regulated 5 V: Converter VOUT to DFRobot VIN</title><polyline points="556.84,313.64 522.92,313.64 522.92,309.16" class="wire" stroke="#fff" stroke-width="6.3"/><polyline points="556.84,313.64 522.92,313.64 522.92,309.16" class="wire" stroke="#cf3144" stroke-width="4"/></g>
-<g class="route" data-bundle="ground"><title>Ground / returns: Converter return to DFRobot ground</title><polyline points="556.84,323.80 522.92,323.80 522.92,329.48" class="wire" stroke="#fff" stroke-width="4.9"/><polyline points="556.84,323.80 522.92,323.80 522.92,329.48" class="wire" stroke="#303a48" stroke-width="2.6"/></g>
+<g class="route" data-bundle="dc"><title>9 V input: 9V input to Nano VIN; no converter 5V connection to Nano</title><polyline points="648.00,282.00 536.00,282.00 536.00,378.00 512.80,378.00" class="wire" stroke="#fff" stroke-width="6.3"/><polyline points="648.00,282.00 536.00,282.00 536.00,378.00 512.80,378.00" class="wire" stroke="#d65e21" stroke-width="4"/></g>
+<g class="route" data-bundle="ground"><title>Ground / returns: Converter return to Nano ground</title><polyline points="556.84,323.80 536.00,323.80 536.00,370.00 512.80,370.00" class="wire" stroke="#fff" stroke-width="4.9"/><polyline points="556.84,323.80 536.00,323.80 536.00,370.00 512.80,370.00" class="wire" stroke="#303a48" stroke-width="2.6"/></g>
 <g class="route" data-bundle="supply"><title>Regulated 5 V: LED +5V distribution; pair with return</title><polyline points="556.00,314.00 556.00,342.00 404.00,342.00" class="wire" stroke="#fff" stroke-width="5.5"/><polyline points="556.00,314.00 556.00,342.00 404.00,342.00" class="wire" stroke="#cf3144" stroke-width="3.2"/></g>
 <g class="route" data-bundle="ground"><title>Ground / returns: LED supply return, routed directly to supply point</title><polyline points="556.00,324.00 562.00,348.00 404.00,348.00" class="wire" stroke="#fff" stroke-width="4.9"/><polyline points="556.00,324.00 562.00,348.00 404.00,348.00" class="wire" stroke="#303a48" stroke-width="2.6"/></g>
 <g class="route" data-bundle="pedal"><title>Expression pedals: Six TRS conductors to passive resistor connections</title><polyline points="188.00,311.60 188.00,326.00 304.00,326.00 304.00,334.00 324.00,334.00" class="wire" stroke="#fff" stroke-width="6.8999999999999995"/><polyline points="188.00,311.60 188.00,326.00 304.00,326.00 304.00,334.00 324.00,334.00" class="wire" stroke="#008b95" stroke-width="4.6"/></g>
-<g class="route" data-bundle="pedal"><title>Expression pedals: Direct TIP ADC signals, two bias GPIOs, reference and ground to DFRobot</title><polyline points="404.00,330.00 416.00,330.00 426.40,342.00" class="wire" stroke="#fff" stroke-width="6.3"/><polyline points="404.00,330.00 416.00,330.00 426.40,342.00" class="wire" stroke="#008b95" stroke-width="4.0"/></g>
-<g class="route" data-bundle="display"><title>LCD / SPI: Short SPI loom to display; J-LCD service disconnect</title><polyline points="426.40,382.00 410.00,382.00 410.00,370.00 252.00,370.00 252.00,386.92" class="wire" stroke="#fff" stroke-width="6.7"/><polyline points="426.40,382.00 410.00,382.00 410.00,370.00 252.00,370.00 252.00,386.92" class="wire" stroke="#2b74cc" stroke-width="4.4"/></g>
-<g class="route" data-bundle="encoder"><title>Encoder + click: A, B, click and common ground to DFRobot</title><polyline points="130.00,430.00 130.00,386.00 308.00,386.00 308.00,366.00 418.00,366.00 426.40,374.00" class="wire" stroke="#fff" stroke-width="6.1"/><polyline points="130.00,430.00 130.00,386.00 308.00,386.00 308.00,366.00 418.00,366.00 426.40,374.00" class="wire" stroke="#45933b" stroke-width="3.8"/></g>
-<g class="route" data-bundle="ladder"><title>Footswitch ladder: Raised-row switched ladder harness</title><polyline points="426.40,354.00 412.00,354.00 412.00,286.00 1432.00,286.00" class="wire" stroke="#fff" stroke-width="6.1"/><polyline points="426.40,354.00 412.00,354.00 412.00,286.00 1432.00,286.00" class="wire" stroke="#b47a00" stroke-width="3.8"/></g>
+<g class="route" data-bundle="pedal"><title>Expression pedals: Direct TIP ADC signals, two bias GPIOs, reference and ground to Nano</title><polyline points="404.00,330.00 416.00,330.00 441.60,342.00" class="wire" stroke="#fff" stroke-width="6.3"/><polyline points="404.00,330.00 416.00,330.00 441.60,342.00" class="wire" stroke="#008b95" stroke-width="4.0"/></g>
+<g class="route" data-bundle="display"><title>LCD / SPI: Short SPI loom to display; J-LCD service disconnect</title><polyline points="441.60,374.00 410.00,374.00 410.00,370.00 252.00,370.00 252.00,386.92" class="wire" stroke="#fff" stroke-width="6.7"/><polyline points="441.60,374.00 410.00,374.00 410.00,370.00 252.00,370.00 252.00,386.92" class="wire" stroke="#2b74cc" stroke-width="4.4"/></g>
+<g class="route" data-bundle="encoder"><title>Encoder + click: A, B, click and common ground to Nano</title><polyline points="130.00,430.00 130.00,386.00 308.00,386.00 308.00,366.00 418.00,366.00 441.60,366.00" class="wire" stroke="#fff" stroke-width="6.1"/><polyline points="130.00,430.00 130.00,386.00 308.00,386.00 308.00,366.00 418.00,366.00 441.60,366.00" class="wire" stroke="#45933b" stroke-width="3.8"/></g>
+<g class="route" data-bundle="ladder"><title>Footswitch ladder: Raised-row switched ladder harness</title><polyline points="441.60,354.00 412.00,354.00 412.00,286.00 1432.00,286.00" class="wire" stroke="#fff" stroke-width="6.1"/><polyline points="441.60,354.00 412.00,354.00 412.00,286.00 1432.00,286.00" class="wire" stroke="#b47a00" stroke-width="3.8"/></g>
 <g class="route" data-bundle="ladder"><title>Footswitch ladder: Base and lower-row ladder harness; descent proposal</title><polyline points="412.00,286.00 300.00,286.00 300.00,364.00 336.00,364.00 336.00,506.00 1432.00,506.00" class="wire" stroke="#fff" stroke-width="6.1"/><polyline points="412.00,286.00 300.00,286.00 300.00,364.00 336.00,364.00 336.00,506.00 1432.00,506.00" class="wire" stroke="#b47a00" stroke-width="3.8"/></g>
 <g class="route" data-bundle="ladder"><title>Footswitch ladder: Local switch branch / series tap resistor</title><polyline points="250.40,274.00 250.40,286.00" class="wire" stroke="#fff" stroke-width="5.1"/><polyline points="250.40,274.00 250.40,286.00" class="wire" stroke="#b47a00" stroke-width="2.8"/></g>
 <g class="route" data-bundle="ladder"><title>Footswitch ladder: Local switch branch / series tap resistor</title><polyline points="510.40,274.00 510.40,286.00" class="wire" stroke="#fff" stroke-width="5.1"/><polyline points="510.40,274.00 510.40,286.00" class="wire" stroke="#b47a00" stroke-width="2.8"/></g>
@@ -103,7 +106,7 @@
 <g class="route" data-bundle="ladder"><title>Footswitch ladder: Local switch branch / series tap resistor</title><polyline points="1160.40,496.00 1160.40,506.00" class="wire" stroke="#fff" stroke-width="5.1"/><polyline points="1160.40,496.00 1160.40,506.00" class="wire" stroke="#b47a00" stroke-width="2.8"/></g>
 <g class="route" data-bundle="ladder"><title>Footswitch ladder: Local switch branch / series tap resistor</title><polyline points="1420.40,496.00 1420.40,506.00" class="wire" stroke="#fff" stroke-width="5.1"/><polyline points="1420.40,496.00 1420.40,506.00" class="wire" stroke="#b47a00" stroke-width="2.8"/></g>
 <g class="route" data-bundle="ladder"><title>Footswitch ladder: Base A branch</title><polyline points="250.40,286.00 340.00,286.00" class="wire" stroke="#fff" stroke-width="6.1"/><polyline points="250.40,286.00 340.00,286.00" class="wire" stroke="#b47a00" stroke-width="3.8"/></g>
-<g class="route" data-bundle="led"><title>Optional Pololu 2535: Upper LED harness in CAD reference envelope Z17..21</title><polyline points="426.40,354.00 296.00,354.00 296.00,331.60 118.00,331.60 118.00,306.80 1300.00,306.80" class="wire" stroke="#fff" stroke-width="6.8999999999999995"/><polyline points="426.40,354.00 296.00,354.00 296.00,331.60 118.00,331.60 118.00,306.80 1300.00,306.80" class="wire" stroke="#9251c7" stroke-width="4.6"/></g>
+<g class="route" data-bundle="led"><title>Optional Pololu 2535: Upper LED harness in CAD reference envelope Z17..21</title><polyline points="441.60,354.00 296.00,354.00 296.00,331.60 118.00,331.60 118.00,306.80 1300.00,306.80" class="wire" stroke="#fff" stroke-width="6.8999999999999995"/><polyline points="441.60,354.00 296.00,354.00 296.00,331.60 118.00,331.60 118.00,306.80 1300.00,306.80" class="wire" stroke="#9251c7" stroke-width="4.6"/></g>
 <g class="route" data-bundle="led"><title>Optional Pololu 2535: Left descent / lower LED harness; lower bus Z-12..-9</title><polyline points="118.00,331.60 118.00,540.00 1432.00,540.00" class="wire" stroke="#fff" stroke-width="6.8999999999999995"/><polyline points="118.00,331.60 118.00,540.00 1432.00,540.00" class="wire" stroke="#9251c7" stroke-width="4.6"/></g>
 <g class="route" data-bundle="led"><title>Optional Pololu 2535: LED branch; connect DIN/DOUT in electrical tap order</title><polyline points="250.40,306.80 250.40,314.00" class="wire" stroke="#fff" stroke-width="4.9"/><polyline points="250.40,306.80 250.40,314.00" class="wire" stroke="#9251c7" stroke-width="2.6"/></g>
 <g class="route" data-bundle="led"><title>Optional Pololu 2535: LED branch; connect DIN/DOUT in electrical tap order</title><polyline points="510.40,306.80 510.40,314.00" class="wire" stroke="#fff" stroke-width="4.9"/><polyline points="510.40,306.80 510.40,314.00" class="wire" stroke="#9251c7" stroke-width="2.6"/></g>
@@ -154,12 +157,12 @@
 <g data-legend="dc"><rect x="80" y="727" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>
 <path d="M98 748H127" stroke="#d65e21" stroke-width="5" stroke-linecap="round"/>
 <text x="140" y="752" class="label">9 V input</text>
-<text x="140" y="771" class="small">Sleeve +9 V → VIN; centre → GND</text>
+<text x="140" y="771" class="small">Sleeve +9 V → Nano VIN + Pololu VIN</text>
 <text x="140" y="786" class="tiny muted">2 wires · J-PWR</text></g>
 <g data-legend="supply"><rect x="790" y="727" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>
 <path d="M808 748H837" stroke="#cf3144" stroke-width="5" stroke-linecap="round"/>
 <text x="850" y="752" class="label">Regulated 5 V</text>
-<text x="850" y="771" class="small">Pololu VOUT → DFRobot VIN / LED rail</text>
+<text x="850" y="771" class="small">Pololu VOUT → optional LED rail only</text>
 <text x="850" y="786" class="tiny muted">Supply + return travel together</text></g>
 <g data-legend="ground"><rect x="80" y="801" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>
 <path d="M98 822H127" stroke="#303a48" stroke-width="5" stroke-linecap="round"/>
@@ -174,24 +177,24 @@
 <g data-legend="pedal"><rect x="80" y="875" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>
 <path d="M98 896H127" stroke="#008b95" stroke-width="5" stroke-linecap="round"/>
 <text x="140" y="900" class="label">Expression pedals</text>
-<text x="140" y="919" class="small">Passive TRS → 2 resistors/input → GPIO2 / 3</text>
-<text x="140" y="934" class="tiny muted">6 wires at sockets · modes GPIO20 / 21</text></g>
+<text x="140" y="919" class="small">Passive TRS → 2 resistors/input → A1 / GPIO2 and A3 / GPIO4</text>
+<text x="140" y="934" class="tiny muted">6 wires at sockets · bias D2 / GPIO5 and D3 / GPIO6</text></g>
 <g data-legend="display"><rect x="790" y="875" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>
 <path d="M808 896H837" stroke="#2b74cc" stroke-width="5" stroke-linecap="round"/>
 <text x="850" y="900" class="label">LCD / SPI</text>
-<text x="850" y="919" class="small">GPIO22, 23, 18, 19, 14; 3V3 + GND</text>
+<text x="850" y="919" class="small">D8–D12 / GPIO17, 18, 21, 38, 47; 3V3 + GND</text>
 <text x="850" y="934" class="tiny muted">7 wires · backlight tied to 3V3 locally</text></g>
 <g data-legend="encoder"><rect x="80" y="949" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>
 <path d="M98 970H127" stroke="#45933b" stroke-width="5" stroke-linecap="round"/>
 <text x="140" y="974" class="label">Encoder + click</text>
-<text x="140" y="993" class="small">GPIO6 / 7 / 17 + common GND</text>
+<text x="140" y="993" class="small">D4–D6 / GPIO7, 8, 9 + common GND</text>
 <text x="140" y="1008" class="tiny muted">4 wires · J-ENC</text></g>
 <g data-legend="led"><rect x="790" y="949" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>
 <path d="M808 970H837" stroke="#9251c7" stroke-width="5" stroke-linecap="round"/>
 <text x="850" y="974" class="label">Optional Pololu 2535</text>
-<text x="850" y="993" class="small">GPIO16 → first LED DIN, directly</text>
+<text x="850" y="993" class="small">D7 / GPIO10 → first LED DIN, directly</text>
 <text x="850" y="1008" class="tiny muted">5V + GND + data; preserve tap assignments</text></g>
 <text x="80" y="1045" class="small">Lines represent bundle corridors, not electrical junctions. Connect ladder taps and pixels in the stated order.</text>
-<text x="80" y="1068" class="small muted">Power/LED reference corridors come from Fusion. Components at different heights overlap in projection.</text>
-<text x="80" y="1090" class="small muted">Other routes, carrier and connectors are proposals; verify vertical transitions, fasteners and base clearance.</text>
+<text x="80" y="1068" class="small muted">Nano pose comes from the verified mount kit; other footprints from Fusion. Different Z levels overlap in this view.</text>
+<text x="80" y="1090" class="small muted">Routes are bundle corridors, not pin positions. VBUS → 100k → A4; A4 → 150k → GND. Verify service-loop clearances.</text>
 </svg></main><footer>Routing preview only. No firmware settings or Fusion geometry changed.</footer><script>for(const b of document.querySelectorAll('button[data-focus]'))b.addEventListener('click',()=>{const k=b.dataset.focus;for(const p of document.querySelectorAll('.route'))p.classList.toggle('dimmed',k!=='all'&&p.dataset.bundle!==k);for(const q of document.querySelectorAll('button[data-focus]'))q.setAttribute('aria-pressed',String(q===b));});</script></html>

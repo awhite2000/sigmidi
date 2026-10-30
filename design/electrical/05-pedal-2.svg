@@ -7,7 +7,7 @@
 <line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
 <line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
 <text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
-<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">5 / 7  |  28 OCT 2026</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">5 / 7  |  30 OCT 2026</text>
 <text x="42" y="155" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Inside the controller - only two resistors</text>
 <rect x="700" y="190" width="230" height="390" fill="#f6f8fa" stroke="#183044"/>
 <text x="715" y="217" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#183044" text-anchor="start">J2  BOTTOM</text>
@@ -26,7 +26,7 @@
 <circle cx="80" cy="365" r="2.6" stroke="#087e89" fill="#087e89"/>
 <text x="88" y="360" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#087e89" text-anchor="start">P2_ADC</text>
 <line x1="80" y1="365" x2="700" y2="365" stroke="#087e89" stroke-width="1.8"/>
-<text x="80" y="398" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">U1 A2 / GPIO3 (P1:8)</text>
+<text x="80" y="398" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">U1 A3 / GPIO4 (JP1:7)</text>
 <circle cx="700" cy="365" r="4" stroke="#087e89" fill="white"/>
 <text x="715" y="370" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">6  TIP / signal</text>
 <circle cx="80" cy="475" r="2.6" stroke="#087e89" fill="#087e89"/>
@@ -40,7 +40,7 @@
 <line x1="470" y1="475" x2="550" y2="475" stroke="#087e89" stroke-width="1.8"/>
 <line x1="550" y1="475" x2="550" y2="365" stroke="#087e89" stroke-width="1.8"/>
 <circle cx="550" cy="365" r="3" stroke="#087e89" fill="#087e89"/>
-<text x="80" y="509" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">U1 MISO / GPIO21 (P2:8)</text>
+<text x="80" y="509" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">U1 D3 / GPIO6 (JP2:6)</text>
 <line x1="80" y1="550" x2="700" y2="550" stroke="#183044" stroke-width="1.8"/>
 <line x1="80" y1="550" x2="80" y2="559" stroke="#183044" stroke-width="1.8"/>
 <line x1="70" y1="559" x2="90" y2="559" stroke="#183044" stroke-width="1.8"/>

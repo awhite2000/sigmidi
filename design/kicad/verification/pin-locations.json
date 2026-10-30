@@ -2,147 +2,21 @@
   "components": [
     {
       "component_x": 520.7,
-      "component_y": 260.35,
+      "component_y": 234.95,
       "pins": [
         {
           "length_mm": 2.54,
-          "name": "VIN/VCC",
-          "number": "P1:1",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 187.96000000000004
-        },
-        {
-          "length_mm": 2.54,
-          "name": "3V3/3V3",
-          "number": "P1:2",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 203.20000000000002
-        },
-        {
-          "length_mm": 2.54,
-          "name": "GND/GND",
-          "number": "P1:3",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 218.44000000000003
-        },
-        {
-          "length_mm": 2.54,
-          "name": "SCL/GPIO20",
-          "number": "P1:4",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 233.68
-        },
-        {
-          "length_mm": 2.54,
-          "name": "SDA",
-          "number": "P1:5",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 248.92000000000002
-        },
-        {
-          "length_mm": 2.54,
-          "name": "5/A4/LP_TX",
-          "number": "P1:6",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 264.16
-        },
-        {
-          "length_mm": 2.54,
-          "name": "4/A3/LP_RX",
-          "number": "P1:7",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 279.40000000000003
-        },
-        {
-          "length_mm": 2.54,
-          "name": "3/A2/GPIO3",
-          "number": "P1:8",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 294.64000000000004
-        },
-        {
-          "length_mm": 2.54,
-          "name": "2/A1/GPIO2",
-          "number": "P1:9",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 309.88
-        },
-        {
-          "length_mm": 2.54,
-          "name": "NC",
-          "number": "P1:10",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 325.12
-        },
-        {
-          "length_mm": 2.54,
-          "name": "15/D13",
-          "number": "P1:11",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 340.36
-        },
-        {
-          "length_mm": 2.54,
-          "name": "6/D12/LP_SDA/GPIO6",
-          "number": "P1:12",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 355.6
-        },
-        {
-          "length_mm": 2.54,
-          "name": "7/D11/LP_SCL/GPIO7",
-          "number": "P1:13",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 370.84000000000003
-        },
-        {
-          "length_mm": 2.54,
-          "name": "NC",
-          "number": "P1:14",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 635.0,
-          "y": 386.08000000000004
-        },
-        {
-          "length_mm": 2.54,
-          "name": "RST",
-          "number": "P2:1",
+          "name": "D13",
+          "number": "JP1:1",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
-          "y": 127.00000000000003
+          "y": 126.99999999999999
         },
         {
           "length_mm": 2.54,
           "name": "3V3/3V3",
-          "number": "P2:2",
+          "number": "JP1:2",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
@@ -150,98 +24,98 @@
         },
         {
           "length_mm": 2.54,
-          "name": "NC",
-          "number": "P2:3",
+          "name": "B0",
+          "number": "JP1:3",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
-          "y": 157.48000000000002
+          "y": 157.48
         },
         {
           "length_mm": 2.54,
-          "name": "GND/GND",
-          "number": "P2:4",
+          "name": "A0/GPIO1",
+          "number": "JP1:4",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
-          "y": 172.72000000000003
+          "y": 172.72
         },
         {
           "length_mm": 2.54,
-          "name": "NC",
-          "number": "P2:5",
+          "name": "A1/GPIO2",
+          "number": "JP1:5",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
-          "y": 187.96000000000004
+          "y": 187.95999999999998
         },
         {
           "length_mm": 2.54,
-          "name": "23/SCK/GPIO23",
-          "number": "P2:6",
+          "name": "A2",
+          "number": "JP1:6",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
-          "y": 203.20000000000002
+          "y": 203.2
         },
         {
           "length_mm": 2.54,
-          "name": "22/MO/GPIO22",
-          "number": "P2:7",
+          "name": "A3/GPIO4",
+          "number": "JP1:7",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
-          "y": 218.44000000000003
+          "y": 218.44
         },
         {
           "length_mm": 2.54,
-          "name": "21/MI/GPIO21",
-          "number": "P2:8",
+          "name": "A4/GPIO11",
+          "number": "JP1:8",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
-          "y": 233.68
+          "y": 233.67999999999998
         },
         {
           "length_mm": 2.54,
-          "name": "20/SCL",
-          "number": "P2:9",
+          "name": "A5",
+          "number": "JP1:9",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
-          "y": 248.92000000000002
+          "y": 248.92
         },
         {
           "length_mm": 2.54,
-          "name": "19/SDA/GPIO19",
-          "number": "P2:10",
+          "name": "A6",
+          "number": "JP1:10",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
-          "y": 264.16
+          "y": 264.15999999999997
         },
         {
           "length_mm": 2.54,
-          "name": "9/D9",
-          "number": "P2:11",
+          "name": "A7",
+          "number": "JP1:11",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
-          "y": 279.40000000000003
+          "y": 279.4
         },
         {
           "length_mm": 2.54,
-          "name": "18/D7/GPIO18",
-          "number": "P2:12",
+          "name": "VBUS/VUSB/VBUS",
+          "number": "JP1:12",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
-          "y": 294.64000000000004
+          "y": 294.64
         },
         {
           "length_mm": 2.54,
-          "name": "1/D6/GPIO1",
-          "number": "P2:13",
+          "name": "B1",
+          "number": "JP1:13",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
@@ -249,8 +123,8 @@
         },
         {
           "length_mm": 2.54,
-          "name": "NC",
-          "number": "P2:14",
+          "name": "GND/GND",
+          "number": "JP1:14",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
@@ -258,8 +132,8 @@
         },
         {
           "length_mm": 2.54,
-          "name": "14/D3/GPIO14",
-          "number": "P2:15",
+          "name": "VIN/VIN",
+          "number": "JP1:15",
           "orientation_degrees": 180.0,
           "unit": 1,
           "x": 406.40000000000003,
@@ -267,30 +141,138 @@
         },
         {
           "length_mm": 2.54,
-          "name": "8/D2",
-          "number": "P2:16",
-          "orientation_degrees": 180.0,
+          "name": "D12/GPIO47",
+          "number": "JP2:15",
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 406.40000000000003,
-          "y": 355.6
+          "x": 635.0,
+          "y": 126.99999999999999
         },
         {
           "length_mm": 2.54,
-          "name": "16/TX/GPIO16",
-          "number": "P2:17",
-          "orientation_degrees": 180.0,
+          "name": "D11/GPIO38",
+          "number": "JP2:14",
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 406.40000000000003,
-          "y": 370.84000000000003
+          "x": 635.0,
+          "y": 142.24
         },
         {
           "length_mm": 2.54,
-          "name": "17/RX/GPIO17",
-          "number": "P2:18",
-          "orientation_degrees": 180.0,
+          "name": "D10/GPIO21",
+          "number": "JP2:13",
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 406.40000000000003,
-          "y": 386.08000000000004
+          "x": 635.0,
+          "y": 157.48
+        },
+        {
+          "length_mm": 2.54,
+          "name": "D9/GPIO18",
+          "number": "JP2:12",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 172.72
+        },
+        {
+          "length_mm": 2.54,
+          "name": "D8/GPIO17",
+          "number": "JP2:11",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 187.95999999999998
+        },
+        {
+          "length_mm": 2.54,
+          "name": "D7/GPIO10",
+          "number": "JP2:10",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 203.2
+        },
+        {
+          "length_mm": 2.54,
+          "name": "D6/GPIO9",
+          "number": "JP2:9",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 218.44
+        },
+        {
+          "length_mm": 2.54,
+          "name": "D5/GPIO8",
+          "number": "JP2:8",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 233.67999999999998
+        },
+        {
+          "length_mm": 2.54,
+          "name": "D4/GPIO7",
+          "number": "JP2:7",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 248.92
+        },
+        {
+          "length_mm": 2.54,
+          "name": "D3/GPIO6",
+          "number": "JP2:6",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 264.15999999999997
+        },
+        {
+          "length_mm": 2.54,
+          "name": "D2/GPIO5",
+          "number": "JP2:5",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 279.4
+        },
+        {
+          "length_mm": 2.54,
+          "name": "GND/GND",
+          "number": "JP2:4",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 294.64
+        },
+        {
+          "length_mm": 2.54,
+          "name": "RST",
+          "number": "JP2:3",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 309.88
+        },
+        {
+          "length_mm": 2.54,
+          "name": "D0/RX0",
+          "number": "JP2:2",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 325.12
+        },
+        {
+          "length_mm": 2.54,
+          "name": "D1/TX0",
+          "number": "JP2:1",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 635.0,
+          "y": 340.36
         }
       ],
       "reference": "U1",
@@ -301,143 +283,17 @@
           "pins": [
             {
               "length_mm": 2.54,
-              "name": "VIN/VCC",
-              "number": "P1:1",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 187.96000000000004
-            },
-            {
-              "length_mm": 2.54,
-              "name": "3V3/3V3",
-              "number": "P1:2",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 203.20000000000002
-            },
-            {
-              "length_mm": 2.54,
-              "name": "GND/GND",
-              "number": "P1:3",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 218.44000000000003
-            },
-            {
-              "length_mm": 2.54,
-              "name": "SCL/GPIO20",
-              "number": "P1:4",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 233.68
-            },
-            {
-              "length_mm": 2.54,
-              "name": "SDA",
-              "number": "P1:5",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 248.92000000000002
-            },
-            {
-              "length_mm": 2.54,
-              "name": "5/A4/LP_TX",
-              "number": "P1:6",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 264.16
-            },
-            {
-              "length_mm": 2.54,
-              "name": "4/A3/LP_RX",
-              "number": "P1:7",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 279.40000000000003
-            },
-            {
-              "length_mm": 2.54,
-              "name": "3/A2/GPIO3",
-              "number": "P1:8",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 294.64000000000004
-            },
-            {
-              "length_mm": 2.54,
-              "name": "2/A1/GPIO2",
-              "number": "P1:9",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 309.88
-            },
-            {
-              "length_mm": 2.54,
-              "name": "NC",
-              "number": "P1:10",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 325.12
-            },
-            {
-              "length_mm": 2.54,
-              "name": "15/D13",
-              "number": "P1:11",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 340.36
-            },
-            {
-              "length_mm": 2.54,
-              "name": "6/D12/LP_SDA/GPIO6",
-              "number": "P1:12",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 355.6
-            },
-            {
-              "length_mm": 2.54,
-              "name": "7/D11/LP_SCL/GPIO7",
-              "number": "P1:13",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 370.84000000000003
-            },
-            {
-              "length_mm": 2.54,
-              "name": "NC",
-              "number": "P1:14",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 635.0,
-              "y": 386.08000000000004
-            },
-            {
-              "length_mm": 2.54,
-              "name": "RST",
-              "number": "P2:1",
+              "name": "D13",
+              "number": "JP1:1",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
-              "y": 127.00000000000003
+              "y": 126.99999999999999
             },
             {
               "length_mm": 2.54,
               "name": "3V3/3V3",
-              "number": "P2:2",
+              "number": "JP1:2",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
@@ -445,98 +301,98 @@
             },
             {
               "length_mm": 2.54,
-              "name": "NC",
-              "number": "P2:3",
+              "name": "B0",
+              "number": "JP1:3",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
-              "y": 157.48000000000002
+              "y": 157.48
             },
             {
               "length_mm": 2.54,
-              "name": "GND/GND",
-              "number": "P2:4",
+              "name": "A0/GPIO1",
+              "number": "JP1:4",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
-              "y": 172.72000000000003
+              "y": 172.72
             },
             {
               "length_mm": 2.54,
-              "name": "NC",
-              "number": "P2:5",
+              "name": "A1/GPIO2",
+              "number": "JP1:5",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
-              "y": 187.96000000000004
+              "y": 187.95999999999998
             },
             {
               "length_mm": 2.54,
-              "name": "23/SCK/GPIO23",
-              "number": "P2:6",
+              "name": "A2",
+              "number": "JP1:6",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
-              "y": 203.20000000000002
+              "y": 203.2
             },
             {
               "length_mm": 2.54,
-              "name": "22/MO/GPIO22",
-              "number": "P2:7",
+              "name": "A3/GPIO4",
+              "number": "JP1:7",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
-              "y": 218.44000000000003
+              "y": 218.44
             },
             {
               "length_mm": 2.54,
-              "name": "21/MI/GPIO21",
-              "number": "P2:8",
+              "name": "A4/GPIO11",
+              "number": "JP1:8",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
-              "y": 233.68
+              "y": 233.67999999999998
             },
             {
               "length_mm": 2.54,
-              "name": "20/SCL",
-              "number": "P2:9",
+              "name": "A5",
+              "number": "JP1:9",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
-              "y": 248.92000000000002
+              "y": 248.92
             },
             {
               "length_mm": 2.54,
-              "name": "19/SDA/GPIO19",
-              "number": "P2:10",
+              "name": "A6",
+              "number": "JP1:10",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
-              "y": 264.16
+              "y": 264.15999999999997
             },
             {
               "length_mm": 2.54,
-              "name": "9/D9",
-              "number": "P2:11",
+              "name": "A7",
+              "number": "JP1:11",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
-              "y": 279.40000000000003
+              "y": 279.4
             },
             {
               "length_mm": 2.54,
-              "name": "18/D7/GPIO18",
-              "number": "P2:12",
+              "name": "VBUS/VUSB/VBUS",
+              "number": "JP1:12",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
-              "y": 294.64000000000004
+              "y": 294.64
             },
             {
               "length_mm": 2.54,
-              "name": "1/D6/GPIO1",
-              "number": "P2:13",
+              "name": "B1",
+              "number": "JP1:13",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
@@ -544,8 +400,8 @@
             },
             {
               "length_mm": 2.54,
-              "name": "NC",
-              "number": "P2:14",
+              "name": "GND/GND",
+              "number": "JP1:14",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
@@ -553,8 +409,8 @@
             },
             {
               "length_mm": 2.54,
-              "name": "14/D3/GPIO14",
-              "number": "P2:15",
+              "name": "VIN/VIN",
+              "number": "JP1:15",
               "orientation_degrees": 180.0,
               "unit": 1,
               "x": 406.40000000000003,
@@ -562,116 +418,224 @@
             },
             {
               "length_mm": 2.54,
-              "name": "8/D2",
-              "number": "P2:16",
-              "orientation_degrees": 180.0,
+              "name": "D12/GPIO47",
+              "number": "JP2:15",
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 406.40000000000003,
-              "y": 355.6
+              "x": 635.0,
+              "y": 126.99999999999999
             },
             {
               "length_mm": 2.54,
-              "name": "16/TX/GPIO16",
-              "number": "P2:17",
-              "orientation_degrees": 180.0,
+              "name": "D11/GPIO38",
+              "number": "JP2:14",
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 406.40000000000003,
-              "y": 370.84000000000003
+              "x": 635.0,
+              "y": 142.24
             },
             {
               "length_mm": 2.54,
-              "name": "17/RX/GPIO17",
-              "number": "P2:18",
-              "orientation_degrees": 180.0,
+              "name": "D10/GPIO21",
+              "number": "JP2:13",
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 406.40000000000003,
-              "y": 386.08000000000004
+              "x": 635.0,
+              "y": 157.48
+            },
+            {
+              "length_mm": 2.54,
+              "name": "D9/GPIO18",
+              "number": "JP2:12",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 172.72
+            },
+            {
+              "length_mm": 2.54,
+              "name": "D8/GPIO17",
+              "number": "JP2:11",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 187.95999999999998
+            },
+            {
+              "length_mm": 2.54,
+              "name": "D7/GPIO10",
+              "number": "JP2:10",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 203.2
+            },
+            {
+              "length_mm": 2.54,
+              "name": "D6/GPIO9",
+              "number": "JP2:9",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 218.44
+            },
+            {
+              "length_mm": 2.54,
+              "name": "D5/GPIO8",
+              "number": "JP2:8",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 233.67999999999998
+            },
+            {
+              "length_mm": 2.54,
+              "name": "D4/GPIO7",
+              "number": "JP2:7",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 248.92
+            },
+            {
+              "length_mm": 2.54,
+              "name": "D3/GPIO6",
+              "number": "JP2:6",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 264.15999999999997
+            },
+            {
+              "length_mm": 2.54,
+              "name": "D2/GPIO5",
+              "number": "JP2:5",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 279.4
+            },
+            {
+              "length_mm": 2.54,
+              "name": "GND/GND",
+              "number": "JP2:4",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 294.64
+            },
+            {
+              "length_mm": 2.54,
+              "name": "RST",
+              "number": "JP2:3",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 309.88
+            },
+            {
+              "length_mm": 2.54,
+              "name": "D0/RX0",
+              "number": "JP2:2",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 325.12
+            },
+            {
+              "length_mm": 2.54,
+              "name": "D1/TX0",
+              "number": "JP2:1",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 635.0,
+              "y": 340.36
             }
           ],
           "rotation": 0.0,
           "unit": 1,
           "x": 520.7,
-          "y": 260.35
+          "y": 234.95
         }
       ],
       "x": 520.7,
-      "y": 260.35
+      "y": 234.95
     },
     {
-      "component_x": 127.0,
-      "component_y": 245.11,
+      "component_x": 812.8,
+      "component_y": 196.85,
       "pins": [
         {
           "length_mm": 2.54,
           "name": "BL",
           "number": "P2:1",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 203.2,
-          "y": 177.8
+          "x": 736.5999999999999,
+          "y": 129.54
         },
         {
           "length_mm": 2.54,
           "name": "RST",
           "number": "P2:2",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 203.2,
-          "y": 198.12
+          "x": 736.5999999999999,
+          "y": 149.85999999999999
         },
         {
           "length_mm": 2.54,
           "name": "D/C",
           "number": "P2:3",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 203.2,
-          "y": 218.44
+          "x": 736.5999999999999,
+          "y": 170.18
         },
         {
           "length_mm": 2.54,
           "name": "CS",
           "number": "P2:4",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 203.2,
-          "y": 238.76000000000002
+          "x": 736.5999999999999,
+          "y": 190.5
         },
         {
           "length_mm": 2.54,
           "name": "SCL/CLK",
           "number": "P2:5",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 203.2,
-          "y": 259.08000000000004
+          "x": 736.5999999999999,
+          "y": 210.82
         },
         {
           "length_mm": 2.54,
           "name": "SDA/DIN",
           "number": "P2:6",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 203.2,
-          "y": 279.40000000000003
+          "x": 736.5999999999999,
+          "y": 231.14
         },
         {
           "length_mm": 2.54,
           "name": "GND",
           "number": "P2:7",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 203.2,
-          "y": 299.72
+          "x": 736.5999999999999,
+          "y": 251.45999999999998
         },
         {
           "length_mm": 2.54,
           "name": "VCC",
           "number": "P2:8",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 203.2,
-          "y": 320.04
+          "x": 736.5999999999999,
+          "y": 271.78
         }
       ],
       "reference": "U2",
@@ -684,87 +648,87 @@
               "length_mm": 2.54,
               "name": "BL",
               "number": "P2:1",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 203.2,
-              "y": 177.8
+              "x": 736.5999999999999,
+              "y": 129.54
             },
             {
               "length_mm": 2.54,
               "name": "RST",
               "number": "P2:2",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 203.2,
-              "y": 198.12
+              "x": 736.5999999999999,
+              "y": 149.85999999999999
             },
             {
               "length_mm": 2.54,
               "name": "D/C",
               "number": "P2:3",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 203.2,
-              "y": 218.44
+              "x": 736.5999999999999,
+              "y": 170.18
             },
             {
               "length_mm": 2.54,
               "name": "CS",
               "number": "P2:4",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 203.2,
-              "y": 238.76000000000002
+              "x": 736.5999999999999,
+              "y": 190.5
             },
             {
               "length_mm": 2.54,
               "name": "SCL/CLK",
               "number": "P2:5",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 203.2,
-              "y": 259.08000000000004
+              "x": 736.5999999999999,
+              "y": 210.82
             },
             {
               "length_mm": 2.54,
               "name": "SDA/DIN",
               "number": "P2:6",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 203.2,
-              "y": 279.40000000000003
+              "x": 736.5999999999999,
+              "y": 231.14
             },
             {
               "length_mm": 2.54,
               "name": "GND",
               "number": "P2:7",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 203.2,
-              "y": 299.72
+              "x": 736.5999999999999,
+              "y": 251.45999999999998
             },
             {
               "length_mm": 2.54,
               "name": "VCC",
               "number": "P2:8",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 203.2,
-              "y": 320.04
+              "x": 736.5999999999999,
+              "y": 271.78
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 127.0,
-          "y": 245.11
+          "x": 812.8,
+          "y": 196.85
         }
       ],
-      "x": 127.0,
-      "y": 245.11
+      "x": 812.8,
+      "y": 196.85
     },
     {
-      "component_x": 774.7,
-      "component_y": 123.19,
+      "component_x": 88.9,
+      "component_y": 119.38,
       "pins": [
         {
           "length_mm": 2.54,
@@ -772,8 +736,8 @@
           "number": "CENTER",
           "orientation_degrees": 270.0,
           "unit": 1,
-          "x": 774.7,
-          "y": 147.32
+          "x": 88.9,
+          "y": 139.7
         },
         {
           "length_mm": 2.54,
@@ -781,7 +745,7 @@
           "number": "SLEEVE",
           "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 812.8000000000001,
+          "x": 127.0,
           "y": 129.54
         }
       ],
@@ -797,8 +761,8 @@
               "number": "CENTER",
               "orientation_degrees": 270.0,
               "unit": 1,
-              "x": 774.7,
-              "y": 147.32
+              "x": 88.9,
+              "y": 139.7
             },
             {
               "length_mm": 2.54,
@@ -806,22 +770,22 @@
               "number": "SLEEVE",
               "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 812.8000000000001,
+              "x": 127.0,
               "y": 129.54
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 774.7,
-          "y": 123.19
+          "x": 88.9,
+          "y": 119.38
         }
       ],
-      "x": 774.7,
-      "y": 123.19
+      "x": 88.9,
+      "y": 119.38
     },
     {
-      "component_x": 908.05,
-      "component_y": 123.19,
+      "component_x": 241.3,
+      "component_y": 119.38,
       "pins": [
         {
           "length_mm": 2.54,
@@ -829,7 +793,7 @@
           "number": "VIN",
           "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 863.5999999999999,
+          "x": 203.20000000000002,
           "y": 129.54
         },
         {
@@ -838,8 +802,8 @@
           "number": "GND",
           "orientation_degrees": 270.0,
           "unit": 1,
-          "x": 909.3199999999999,
-          "y": 147.32
+          "x": 241.3,
+          "y": 139.7
         },
         {
           "length_mm": 2.54,
@@ -847,7 +811,7 @@
           "number": "VOUT",
           "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 952.5,
+          "x": 279.40000000000003,
           "y": 129.54
         }
       ],
@@ -863,7 +827,7 @@
               "number": "VIN",
               "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 863.5999999999999,
+              "x": 203.20000000000002,
               "y": 129.54
             },
             {
@@ -872,8 +836,8 @@
               "number": "GND",
               "orientation_degrees": 270.0,
               "unit": 1,
-              "x": 909.3199999999999,
-              "y": 147.32
+              "x": 241.3,
+              "y": 139.7
             },
             {
               "length_mm": 2.54,
@@ -881,22 +845,22 @@
               "number": "VOUT",
               "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 952.5,
+              "x": 279.40000000000003,
               "y": 129.54
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 908.05,
-          "y": 123.19
+          "x": 241.3,
+          "y": 119.38
         }
       ],
-      "x": 908.05,
-      "y": 123.19
+      "x": 241.3,
+      "y": 119.38
     },
     {
-      "component_x": 828.04,
-      "component_y": 146.05,
+      "component_x": 152.4,
+      "component_y": 138.43,
       "pins": [
         {
           "length_mm": 2.794,
@@ -904,8 +868,8 @@
           "number": "1",
           "orientation_degrees": 90.0,
           "unit": 1,
-          "x": 828.04,
-          "y": 142.24
+          "x": 152.4,
+          "y": 134.62
         },
         {
           "length_mm": 2.794,
@@ -913,8 +877,8 @@
           "number": "2",
           "orientation_degrees": 270.0,
           "unit": 1,
-          "x": 828.04,
-          "y": 149.86
+          "x": 152.4,
+          "y": 142.24
         }
       ],
       "reference": "C1",
@@ -929,8 +893,8 @@
               "number": "1",
               "orientation_degrees": 90.0,
               "unit": 1,
-              "x": 828.04,
-              "y": 142.24
+              "x": 152.4,
+              "y": 134.62
             },
             {
               "length_mm": 2.794,
@@ -938,22 +902,136 @@
               "number": "2",
               "orientation_degrees": 270.0,
               "unit": 1,
-              "x": 828.04,
-              "y": 149.86
+              "x": 152.4,
+              "y": 142.24
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 828.04,
-          "y": 146.05
+          "x": 152.4,
+          "y": 138.43
         }
       ],
-      "x": 828.04,
-      "y": 146.05
+      "x": 152.4,
+      "y": 138.43
     },
     {
-      "component_x": 764.54,
-      "component_y": 373.38,
+      "component_x": 266.7,
+      "component_y": 335.28,
+      "pins": [
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "1",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 262.89,
+          "y": 335.28
+        },
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "2",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 270.51,
+          "y": 335.28
+        }
+      ],
+      "reference": "R50",
+      "rotation": 90.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "1",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 262.89,
+              "y": 335.28
+            },
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "2",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 270.51,
+              "y": 335.28
+            }
+          ],
+          "rotation": 90.0,
+          "unit": 1,
+          "x": 266.7,
+          "y": 335.28
+        }
+      ],
+      "x": 266.7,
+      "y": 335.28
+    },
+    {
+      "component_x": 279.4,
+      "component_y": 350.52,
+      "pins": [
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "1",
+          "orientation_degrees": 90.0,
+          "unit": 1,
+          "x": 279.4,
+          "y": 346.71
+        },
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "2",
+          "orientation_degrees": 270.0,
+          "unit": 1,
+          "x": 279.4,
+          "y": 354.33
+        }
+      ],
+      "reference": "R51",
+      "rotation": 0.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "1",
+              "orientation_degrees": 90.0,
+              "unit": 1,
+              "x": 279.4,
+              "y": 346.71
+            },
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "2",
+              "orientation_degrees": 270.0,
+              "unit": 1,
+              "x": 279.4,
+              "y": 354.33
+            }
+          ],
+          "rotation": 0.0,
+          "unit": 1,
+          "x": 279.4,
+          "y": 350.52
+        }
+      ],
+      "x": 279.4,
+      "y": 350.52
+    },
+    {
+      "component_x": 800.1,
+      "component_y": 381.0,
       "pins": [
         {
           "length_mm": 2.54,
@@ -961,8 +1039,8 @@
           "number": "A",
           "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 711.1999999999999,
-          "y": 355.6
+          "x": 736.6,
+          "y": 350.52
         },
         {
           "length_mm": 2.54,
@@ -970,35 +1048,35 @@
           "number": "B",
           "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 711.1999999999999,
+          "x": 736.6,
           "y": 370.84
         },
         {
           "length_mm": 2.54,
           "name": "C",
           "number": "C",
-          "orientation_degrees": 270.0,
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 797.56,
-          "y": 411.48
+          "x": 863.6,
+          "y": 406.4
         },
         {
           "length_mm": 2.54,
           "name": "SW1",
           "number": "SW1",
-          "orientation_degrees": 270.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 762.0,
-          "y": 411.48
+          "x": 736.6,
+          "y": 391.16
         },
         {
           "length_mm": 2.54,
           "name": "SW2",
           "number": "SW2",
-          "orientation_degrees": 270.0,
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 810.26,
-          "y": 411.48
+          "x": 863.6,
+          "y": 421.64
         }
       ],
       "reference": "SW11",
@@ -1013,8 +1091,8 @@
               "number": "A",
               "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 711.1999999999999,
-              "y": 355.6
+              "x": 736.6,
+              "y": 350.52
             },
             {
               "length_mm": 2.54,
@@ -1022,45 +1100,45 @@
               "number": "B",
               "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 711.1999999999999,
+              "x": 736.6,
               "y": 370.84
             },
             {
               "length_mm": 2.54,
               "name": "C",
               "number": "C",
-              "orientation_degrees": 270.0,
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 797.56,
-              "y": 411.48
+              "x": 863.6,
+              "y": 406.4
             },
             {
               "length_mm": 2.54,
               "name": "SW1",
               "number": "SW1",
-              "orientation_degrees": 270.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 762.0,
-              "y": 411.48
+              "x": 736.6,
+              "y": 391.16
             },
             {
               "length_mm": 2.54,
               "name": "SW2",
               "number": "SW2",
-              "orientation_degrees": 270.0,
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 810.26,
-              "y": 411.48
+              "x": 863.6,
+              "y": 421.64
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 764.54,
-          "y": 373.38
+          "x": 800.1,
+          "y": 381.0
         }
       ],
-      "x": 764.54,
-      "y": 373.38
+      "x": 800.1,
+      "y": 381.0
     },
     {
       "component_x": 323.85,
@@ -2374,35 +2452,35 @@
       "y": 596.9
     },
     {
-      "component_x": 909.32,
-      "component_y": 355.6,
+      "component_x": 127.0,
+      "component_y": 232.41,
       "pins": [
         {
           "length_mm": 2.54,
           "name": "PEDAL1SLEEVE",
           "number": "10",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 955.0400000000001,
-          "y": 325.12
+          "x": 50.8,
+          "y": 223.51999999999998
         },
         {
           "length_mm": 2.54,
           "name": "PEDAL1RING",
           "number": "11",
-          "orientation_degrees": 180.0,
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 863.6,
-          "y": 264.16
+          "x": 203.2,
+          "y": 177.8
         },
         {
           "length_mm": 2.54,
           "name": "PEDAL1TIP",
           "number": "12",
-          "orientation_degrees": 180.0,
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 863.6,
-          "y": 309.88
+          "x": 203.2,
+          "y": 208.28
         },
         {
           "length_mm": 2.54,
@@ -2410,8 +2488,8 @@
           "number": "7",
           "orientation_degrees": 270.0,
           "unit": 1,
-          "x": 873.76,
-          "y": 492.76
+          "x": 66.03999999999999,
+          "y": 314.96
         },
         {
           "length_mm": 2.54,
@@ -2419,8 +2497,8 @@
           "number": "8",
           "orientation_degrees": 270.0,
           "unit": 1,
-          "x": 883.9200000000001,
-          "y": 492.76
+          "x": 78.74000000000001,
+          "y": 314.96
         },
         {
           "length_mm": 2.54,
@@ -2428,35 +2506,35 @@
           "number": "9",
           "orientation_degrees": 270.0,
           "unit": 1,
-          "x": 894.08,
-          "y": 492.76
+          "x": 91.44,
+          "y": 314.96
         },
         {
           "length_mm": 2.54,
           "name": "PEDAL2SLEEVE",
           "number": "4",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 955.0400000000001,
-          "y": 467.36
+          "x": 50.8,
+          "y": 299.72
         },
         {
           "length_mm": 2.54,
           "name": "PEDAL2RING",
           "number": "5",
-          "orientation_degrees": 180.0,
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 863.6,
-          "y": 386.08000000000004
+          "x": 203.2,
+          "y": 254.0
         },
         {
           "length_mm": 2.54,
           "name": "PEDAL2TIP",
           "number": "6",
-          "orientation_degrees": 180.0,
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 863.6,
-          "y": 447.04
+          "x": 203.2,
+          "y": 284.48
         },
         {
           "length_mm": 2.54,
@@ -2464,8 +2542,8 @@
           "number": "1",
           "orientation_degrees": 270.0,
           "unit": 1,
-          "x": 904.24,
-          "y": 492.76
+          "x": 104.14,
+          "y": 314.96
         },
         {
           "length_mm": 2.54,
@@ -2473,8 +2551,8 @@
           "number": "2",
           "orientation_degrees": 270.0,
           "unit": 1,
-          "x": 914.4000000000001,
-          "y": 492.76
+          "x": 116.84,
+          "y": 314.96
         },
         {
           "length_mm": 2.54,
@@ -2482,8 +2560,8 @@
           "number": "3",
           "orientation_degrees": 270.0,
           "unit": 1,
-          "x": 924.5600000000001,
-          "y": 492.76
+          "x": 129.54,
+          "y": 314.96
         },
         {
           "length_mm": 2.54,
@@ -2491,8 +2569,8 @@
           "number": "13",
           "orientation_degrees": 270.0,
           "unit": 1,
-          "x": 934.72,
-          "y": 492.76
+          "x": 142.24,
+          "y": 314.96
         }
       ],
       "reference": "J2",
@@ -2505,28 +2583,28 @@
               "length_mm": 2.54,
               "name": "PEDAL1SLEEVE",
               "number": "10",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 955.0400000000001,
-              "y": 325.12
+              "x": 50.8,
+              "y": 223.51999999999998
             },
             {
               "length_mm": 2.54,
               "name": "PEDAL1RING",
               "number": "11",
-              "orientation_degrees": 180.0,
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 863.6,
-              "y": 264.16
+              "x": 203.2,
+              "y": 177.8
             },
             {
               "length_mm": 2.54,
               "name": "PEDAL1TIP",
               "number": "12",
-              "orientation_degrees": 180.0,
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 863.6,
-              "y": 309.88
+              "x": 203.2,
+              "y": 208.28
             },
             {
               "length_mm": 2.54,
@@ -2534,8 +2612,8 @@
               "number": "7",
               "orientation_degrees": 270.0,
               "unit": 1,
-              "x": 873.76,
-              "y": 492.76
+              "x": 66.03999999999999,
+              "y": 314.96
             },
             {
               "length_mm": 2.54,
@@ -2543,8 +2621,8 @@
               "number": "8",
               "orientation_degrees": 270.0,
               "unit": 1,
-              "x": 883.9200000000001,
-              "y": 492.76
+              "x": 78.74000000000001,
+              "y": 314.96
             },
             {
               "length_mm": 2.54,
@@ -2552,35 +2630,35 @@
               "number": "9",
               "orientation_degrees": 270.0,
               "unit": 1,
-              "x": 894.08,
-              "y": 492.76
+              "x": 91.44,
+              "y": 314.96
             },
             {
               "length_mm": 2.54,
               "name": "PEDAL2SLEEVE",
               "number": "4",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 955.0400000000001,
-              "y": 467.36
+              "x": 50.8,
+              "y": 299.72
             },
             {
               "length_mm": 2.54,
               "name": "PEDAL2RING",
               "number": "5",
-              "orientation_degrees": 180.0,
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 863.6,
-              "y": 386.08000000000004
+              "x": 203.2,
+              "y": 254.0
             },
             {
               "length_mm": 2.54,
               "name": "PEDAL2TIP",
               "number": "6",
-              "orientation_degrees": 180.0,
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 863.6,
-              "y": 447.04
+              "x": 203.2,
+              "y": 284.48
             },
             {
               "length_mm": 2.54,
@@ -2588,8 +2666,8 @@
               "number": "1",
               "orientation_degrees": 270.0,
               "unit": 1,
-              "x": 904.24,
-              "y": 492.76
+              "x": 104.14,
+              "y": 314.96
             },
             {
               "length_mm": 2.54,
@@ -2597,8 +2675,8 @@
               "number": "2",
               "orientation_degrees": 270.0,
               "unit": 1,
-              "x": 914.4000000000001,
-              "y": 492.76
+              "x": 116.84,
+              "y": 314.96
             },
             {
               "length_mm": 2.54,
@@ -2606,8 +2684,8 @@
               "number": "3",
               "orientation_degrees": 270.0,
               "unit": 1,
-              "x": 924.5600000000001,
-              "y": 492.76
+              "x": 129.54,
+              "y": 314.96
             },
             {
               "length_mm": 2.54,
@@ -2615,44 +2693,44 @@
               "number": "13",
               "orientation_degrees": 270.0,
               "unit": 1,
-              "x": 934.72,
-              "y": 492.76
+              "x": 142.24,
+              "y": 314.96
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 909.32,
-          "y": 355.6
+          "x": 127.0,
+          "y": 232.41
         }
       ],
-      "x": 909.32,
-      "y": 355.6
+      "x": 127.0,
+      "y": 232.41
     },
     {
-      "component_x": 853.44,
-      "component_y": 264.16,
+      "component_x": 213.36,
+      "component_y": 177.8,
       "pins": [
         {
           "length_mm": 1.27,
           "name": "",
           "number": "1",
-          "orientation_degrees": 180.0,
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 849.6300000000001,
-          "y": 264.16
+          "x": 217.17000000000002,
+          "y": 177.8
         },
         {
           "length_mm": 1.27,
           "name": "",
           "number": "2",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 857.25,
-          "y": 264.16
+          "x": 209.55,
+          "y": 177.8
         }
       ],
       "reference": "R20",
-      "rotation": 90.0,
+      "rotation": 270.0,
       "unit_count": 1,
       "units": [
         {
@@ -2661,55 +2739,55 @@
               "length_mm": 1.27,
               "name": "",
               "number": "1",
-              "orientation_degrees": 180.0,
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 849.6300000000001,
-              "y": 264.16
+              "x": 217.17000000000002,
+              "y": 177.8
             },
             {
               "length_mm": 1.27,
               "name": "",
               "number": "2",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 857.25,
-              "y": 264.16
+              "x": 209.55,
+              "y": 177.8
             }
           ],
-          "rotation": 90.0,
+          "rotation": 270.0,
           "unit": 1,
-          "x": 853.44,
-          "y": 264.16
+          "x": 213.36,
+          "y": 177.8
         }
       ],
-      "x": 853.44,
-      "y": 264.16
+      "x": 213.36,
+      "y": 177.8
     },
     {
-      "component_x": 723.9,
-      "component_y": 233.68,
+      "component_x": 243.84,
+      "component_y": 426.72,
       "pins": [
         {
           "length_mm": 1.27,
           "name": "",
           "number": "1",
-          "orientation_degrees": 180.0,
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 720.09,
-          "y": 233.68
+          "x": 247.65,
+          "y": 426.72
         },
         {
           "length_mm": 1.27,
           "name": "",
           "number": "2",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 727.7099999999999,
-          "y": 233.68
+          "x": 240.03,
+          "y": 426.72
         }
       ],
       "reference": "R21",
-      "rotation": 90.0,
+      "rotation": 270.0,
       "unit_count": 1,
       "units": [
         {
@@ -2718,55 +2796,55 @@
               "length_mm": 1.27,
               "name": "",
               "number": "1",
-              "orientation_degrees": 180.0,
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 720.09,
-              "y": 233.68
+              "x": 247.65,
+              "y": 426.72
             },
             {
               "length_mm": 1.27,
               "name": "",
               "number": "2",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 727.7099999999999,
-              "y": 233.68
+              "x": 240.03,
+              "y": 426.72
             }
           ],
-          "rotation": 90.0,
+          "rotation": 270.0,
           "unit": 1,
-          "x": 723.9,
-          "y": 233.68
+          "x": 243.84,
+          "y": 426.72
         }
       ],
-      "x": 723.9,
-      "y": 233.68
+      "x": 243.84,
+      "y": 426.72
     },
     {
-      "component_x": 853.44,
-      "component_y": 386.08,
+      "component_x": 213.36,
+      "component_y": 254.0,
       "pins": [
         {
           "length_mm": 1.27,
           "name": "",
           "number": "1",
-          "orientation_degrees": 180.0,
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 849.6300000000001,
-          "y": 386.08
+          "x": 217.17000000000002,
+          "y": 254.0
         },
         {
           "length_mm": 1.27,
           "name": "",
           "number": "2",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 857.25,
-          "y": 386.08
+          "x": 209.55,
+          "y": 254.0
         }
       ],
       "reference": "R30",
-      "rotation": 90.0,
+      "rotation": 270.0,
       "unit_count": 1,
       "units": [
         {
@@ -2775,55 +2853,55 @@
               "length_mm": 1.27,
               "name": "",
               "number": "1",
-              "orientation_degrees": 180.0,
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 849.6300000000001,
-              "y": 386.08
+              "x": 217.17000000000002,
+              "y": 254.0
             },
             {
               "length_mm": 1.27,
               "name": "",
               "number": "2",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 857.25,
-              "y": 386.08
+              "x": 209.55,
+              "y": 254.0
             }
           ],
-          "rotation": 90.0,
+          "rotation": 270.0,
           "unit": 1,
-          "x": 853.44,
-          "y": 386.08
+          "x": 213.36,
+          "y": 254.0
         }
       ],
-      "x": 853.44,
-      "y": 386.08
+      "x": 213.36,
+      "y": 254.0
     },
     {
-      "component_x": 833.12,
-      "component_y": 528.32,
+      "component_x": 246.38,
+      "component_y": 447.04,
       "pins": [
         {
           "length_mm": 1.27,
           "name": "",
           "number": "1",
-          "orientation_degrees": 180.0,
+          "orientation_degrees": 0.0,
           "unit": 1,
-          "x": 829.3100000000001,
-          "y": 528.32
+          "x": 250.19,
+          "y": 447.04
         },
         {
           "length_mm": 1.27,
           "name": "",
           "number": "2",
-          "orientation_degrees": 0.0,
+          "orientation_degrees": 180.0,
           "unit": 1,
-          "x": 836.93,
-          "y": 528.32
+          "x": 242.57,
+          "y": 447.04
         }
       ],
       "reference": "R31",
-      "rotation": 90.0,
+      "rotation": 270.0,
       "unit_count": 1,
       "units": [
         {
@@ -2832,32 +2910,32 @@
               "length_mm": 1.27,
               "name": "",
               "number": "1",
-              "orientation_degrees": 180.0,
+              "orientation_degrees": 0.0,
               "unit": 1,
-              "x": 829.3100000000001,
-              "y": 528.32
+              "x": 250.19,
+              "y": 447.04
             },
             {
               "length_mm": 1.27,
               "name": "",
               "number": "2",
-              "orientation_degrees": 0.0,
+              "orientation_degrees": 180.0,
               "unit": 1,
-              "x": 836.93,
-              "y": 528.32
+              "x": 242.57,
+              "y": 447.04
             }
           ],
-          "rotation": 90.0,
+          "rotation": 270.0,
           "unit": 1,
-          "x": 833.12,
-          "y": 528.32
+          "x": 246.38,
+          "y": 447.04
         }
       ],
-      "x": 833.12,
-      "y": 528.32
+      "x": 246.38,
+      "y": 447.04
     },
     {
-      "component_x": 81.28,
+      "component_x": 80.01,
       "component_y": 378.46,
       "pins": [
         {
@@ -2868,6 +2946,15 @@
           "unit": 1,
           "x": 109.22,
           "y": 370.84
+        },
+        {
+          "length_mm": 2.54,
+          "name": "DOUT",
+          "number": "DOUT",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 109.22,
+          "y": 388.62
         },
         {
           "length_mm": 2.54,
@@ -2886,15 +2973,6 @@
           "unit": 1,
           "x": 109.22,
           "y": 383.53999999999996
-        },
-        {
-          "length_mm": 2.54,
-          "name": "DOUT",
-          "number": "DOUT",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 109.22,
-          "y": 388.62
         }
       ],
       "reference": "LED1",
@@ -2914,6 +2992,15 @@
             },
             {
               "length_mm": 2.54,
+              "name": "DOUT",
+              "number": "DOUT",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 109.22,
+              "y": 388.62
+            },
+            {
+              "length_mm": 2.54,
               "name": "5V",
               "number": "+5V",
               "orientation_degrees": 0.0,
@@ -2929,28 +3016,19 @@
               "unit": 1,
               "x": 109.22,
               "y": 383.53999999999996
-            },
-            {
-              "length_mm": 2.54,
-              "name": "DOUT",
-              "number": "DOUT",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 109.22,
-              "y": 388.62
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 81.28,
+          "x": 80.01,
           "y": 378.46
         }
       ],
-      "x": 81.28,
+      "x": 80.01,
       "y": 378.46
     },
     {
-      "component_x": 81.28,
+      "component_x": 80.01,
       "component_y": 406.4,
       "pins": [
         {
@@ -2961,6 +3039,15 @@
           "unit": 1,
           "x": 109.22,
           "y": 398.78
+        },
+        {
+          "length_mm": 2.54,
+          "name": "DOUT",
+          "number": "DOUT",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 109.22,
+          "y": 416.56
         },
         {
           "length_mm": 2.54,
@@ -2979,15 +3066,6 @@
           "unit": 1,
           "x": 109.22,
           "y": 411.47999999999996
-        },
-        {
-          "length_mm": 2.54,
-          "name": "DOUT",
-          "number": "DOUT",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 109.22,
-          "y": 416.56
         }
       ],
       "reference": "LED2",
@@ -3007,6 +3085,15 @@
             },
             {
               "length_mm": 2.54,
+              "name": "DOUT",
+              "number": "DOUT",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 109.22,
+              "y": 416.56
+            },
+            {
+              "length_mm": 2.54,
               "name": "5V",
               "number": "+5V",
               "orientation_degrees": 0.0,
@@ -3022,28 +3109,19 @@
               "unit": 1,
               "x": 109.22,
               "y": 411.47999999999996
-            },
-            {
-              "length_mm": 2.54,
-              "name": "DOUT",
-              "number": "DOUT",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 109.22,
-              "y": 416.56
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 81.28,
+          "x": 80.01,
           "y": 406.4
         }
       ],
-      "x": 81.28,
+      "x": 80.01,
       "y": 406.4
     },
     {
-      "component_x": 81.28,
+      "component_x": 80.01,
       "component_y": 434.34,
       "pins": [
         {
@@ -3054,6 +3132,15 @@
           "unit": 1,
           "x": 109.22,
           "y": 426.71999999999997
+        },
+        {
+          "length_mm": 2.54,
+          "name": "DOUT",
+          "number": "DOUT",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 109.22,
+          "y": 444.5
         },
         {
           "length_mm": 2.54,
@@ -3072,15 +3159,6 @@
           "unit": 1,
           "x": 109.22,
           "y": 439.41999999999996
-        },
-        {
-          "length_mm": 2.54,
-          "name": "DOUT",
-          "number": "DOUT",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 109.22,
-          "y": 444.5
         }
       ],
       "reference": "LED3",
@@ -3100,6 +3178,15 @@
             },
             {
               "length_mm": 2.54,
+              "name": "DOUT",
+              "number": "DOUT",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 109.22,
+              "y": 444.5
+            },
+            {
+              "length_mm": 2.54,
               "name": "5V",
               "number": "+5V",
               "orientation_degrees": 0.0,
@@ -3115,28 +3202,19 @@
               "unit": 1,
               "x": 109.22,
               "y": 439.41999999999996
-            },
-            {
-              "length_mm": 2.54,
-              "name": "DOUT",
-              "number": "DOUT",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 109.22,
-              "y": 444.5
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 81.28,
+          "x": 80.01,
           "y": 434.34
         }
       ],
-      "x": 81.28,
+      "x": 80.01,
       "y": 434.34
     },
     {
-      "component_x": 81.28,
+      "component_x": 80.01,
       "component_y": 462.28,
       "pins": [
         {
@@ -3147,6 +3225,15 @@
           "unit": 1,
           "x": 109.22,
           "y": 454.65999999999997
+        },
+        {
+          "length_mm": 2.54,
+          "name": "DOUT",
+          "number": "DOUT",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 109.22,
+          "y": 472.44
         },
         {
           "length_mm": 2.54,
@@ -3165,15 +3252,6 @@
           "unit": 1,
           "x": 109.22,
           "y": 467.35999999999996
-        },
-        {
-          "length_mm": 2.54,
-          "name": "DOUT",
-          "number": "DOUT",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 109.22,
-          "y": 472.44
         }
       ],
       "reference": "LED4",
@@ -3193,6 +3271,15 @@
             },
             {
               "length_mm": 2.54,
+              "name": "DOUT",
+              "number": "DOUT",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 109.22,
+              "y": 472.44
+            },
+            {
+              "length_mm": 2.54,
               "name": "5V",
               "number": "+5V",
               "orientation_degrees": 0.0,
@@ -3208,28 +3295,19 @@
               "unit": 1,
               "x": 109.22,
               "y": 467.35999999999996
-            },
-            {
-              "length_mm": 2.54,
-              "name": "DOUT",
-              "number": "DOUT",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 109.22,
-              "y": 472.44
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 81.28,
+          "x": 80.01,
           "y": 462.28
         }
       ],
-      "x": 81.28,
+      "x": 80.01,
       "y": 462.28
     },
     {
-      "component_x": 81.28,
+      "component_x": 80.01,
       "component_y": 490.22,
       "pins": [
         {
@@ -3240,6 +3318,15 @@
           "unit": 1,
           "x": 109.22,
           "y": 482.6
+        },
+        {
+          "length_mm": 2.54,
+          "name": "DOUT",
+          "number": "DOUT",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 109.22,
+          "y": 500.38000000000005
         },
         {
           "length_mm": 2.54,
@@ -3258,15 +3345,6 @@
           "unit": 1,
           "x": 109.22,
           "y": 495.3
-        },
-        {
-          "length_mm": 2.54,
-          "name": "DOUT",
-          "number": "DOUT",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 109.22,
-          "y": 500.38000000000005
         }
       ],
       "reference": "LED5",
@@ -3286,6 +3364,15 @@
             },
             {
               "length_mm": 2.54,
+              "name": "DOUT",
+              "number": "DOUT",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 109.22,
+              "y": 500.38000000000005
+            },
+            {
+              "length_mm": 2.54,
               "name": "5V",
               "number": "+5V",
               "orientation_degrees": 0.0,
@@ -3301,28 +3388,19 @@
               "unit": 1,
               "x": 109.22,
               "y": 495.3
-            },
-            {
-              "length_mm": 2.54,
-              "name": "DOUT",
-              "number": "DOUT",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 109.22,
-              "y": 500.38000000000005
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 81.28,
+          "x": 80.01,
           "y": 490.22
         }
       ],
-      "x": 81.28,
+      "x": 80.01,
       "y": 490.22
     },
     {
-      "component_x": 81.28,
+      "component_x": 80.01,
       "component_y": 518.16,
       "pins": [
         {
@@ -3333,6 +3411,15 @@
           "unit": 1,
           "x": 109.22,
           "y": 510.53999999999996
+        },
+        {
+          "length_mm": 2.54,
+          "name": "DOUT",
+          "number": "DOUT",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 109.22,
+          "y": 528.3199999999999
         },
         {
           "length_mm": 2.54,
@@ -3351,15 +3438,6 @@
           "unit": 1,
           "x": 109.22,
           "y": 523.24
-        },
-        {
-          "length_mm": 2.54,
-          "name": "DOUT",
-          "number": "DOUT",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 109.22,
-          "y": 528.3199999999999
         }
       ],
       "reference": "LED6",
@@ -3379,6 +3457,15 @@
             },
             {
               "length_mm": 2.54,
+              "name": "DOUT",
+              "number": "DOUT",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 109.22,
+              "y": 528.3199999999999
+            },
+            {
+              "length_mm": 2.54,
               "name": "5V",
               "number": "+5V",
               "orientation_degrees": 0.0,
@@ -3394,28 +3481,19 @@
               "unit": 1,
               "x": 109.22,
               "y": 523.24
-            },
-            {
-              "length_mm": 2.54,
-              "name": "DOUT",
-              "number": "DOUT",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 109.22,
-              "y": 528.3199999999999
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 81.28,
+          "x": 80.01,
           "y": 518.16
         }
       ],
-      "x": 81.28,
+      "x": 80.01,
       "y": 518.16
     },
     {
-      "component_x": 81.28,
+      "component_x": 80.01,
       "component_y": 546.1,
       "pins": [
         {
@@ -3426,6 +3504,15 @@
           "unit": 1,
           "x": 109.22,
           "y": 538.48
+        },
+        {
+          "length_mm": 2.54,
+          "name": "DOUT",
+          "number": "DOUT",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 109.22,
+          "y": 556.26
         },
         {
           "length_mm": 2.54,
@@ -3444,15 +3531,6 @@
           "unit": 1,
           "x": 109.22,
           "y": 551.1800000000001
-        },
-        {
-          "length_mm": 2.54,
-          "name": "DOUT",
-          "number": "DOUT",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 109.22,
-          "y": 556.26
         }
       ],
       "reference": "LED7",
@@ -3472,6 +3550,15 @@
             },
             {
               "length_mm": 2.54,
+              "name": "DOUT",
+              "number": "DOUT",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 109.22,
+              "y": 556.26
+            },
+            {
+              "length_mm": 2.54,
               "name": "5V",
               "number": "+5V",
               "orientation_degrees": 0.0,
@@ -3487,28 +3574,19 @@
               "unit": 1,
               "x": 109.22,
               "y": 551.1800000000001
-            },
-            {
-              "length_mm": 2.54,
-              "name": "DOUT",
-              "number": "DOUT",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 109.22,
-              "y": 556.26
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 81.28,
+          "x": 80.01,
           "y": 546.1
         }
       ],
-      "x": 81.28,
+      "x": 80.01,
       "y": 546.1
     },
     {
-      "component_x": 81.28,
+      "component_x": 80.01,
       "component_y": 574.04,
       "pins": [
         {
@@ -3519,6 +3597,15 @@
           "unit": 1,
           "x": 109.22,
           "y": 566.42
+        },
+        {
+          "length_mm": 2.54,
+          "name": "DOUT",
+          "number": "DOUT",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 109.22,
+          "y": 584.1999999999999
         },
         {
           "length_mm": 2.54,
@@ -3537,15 +3624,6 @@
           "unit": 1,
           "x": 109.22,
           "y": 579.12
-        },
-        {
-          "length_mm": 2.54,
-          "name": "DOUT",
-          "number": "DOUT",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 109.22,
-          "y": 584.1999999999999
         }
       ],
       "reference": "LED8",
@@ -3565,6 +3643,15 @@
             },
             {
               "length_mm": 2.54,
+              "name": "DOUT",
+              "number": "DOUT",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 109.22,
+              "y": 584.1999999999999
+            },
+            {
+              "length_mm": 2.54,
               "name": "5V",
               "number": "+5V",
               "orientation_degrees": 0.0,
@@ -3580,28 +3667,19 @@
               "unit": 1,
               "x": 109.22,
               "y": 579.12
-            },
-            {
-              "length_mm": 2.54,
-              "name": "DOUT",
-              "number": "DOUT",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 109.22,
-              "y": 584.1999999999999
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 81.28,
+          "x": 80.01,
           "y": 574.04
         }
       ],
-      "x": 81.28,
+      "x": 80.01,
       "y": 574.04
     },
     {
-      "component_x": 81.28,
+      "component_x": 80.01,
       "component_y": 601.98,
       "pins": [
         {
@@ -3612,6 +3690,15 @@
           "unit": 1,
           "x": 109.22,
           "y": 594.36
+        },
+        {
+          "length_mm": 2.54,
+          "name": "DOUT",
+          "number": "DOUT",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 109.22,
+          "y": 612.14
         },
         {
           "length_mm": 2.54,
@@ -3630,15 +3717,6 @@
           "unit": 1,
           "x": 109.22,
           "y": 607.0600000000001
-        },
-        {
-          "length_mm": 2.54,
-          "name": "DOUT",
-          "number": "DOUT",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 109.22,
-          "y": 612.14
         }
       ],
       "reference": "LED9",
@@ -3658,6 +3736,15 @@
             },
             {
               "length_mm": 2.54,
+              "name": "DOUT",
+              "number": "DOUT",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 109.22,
+              "y": 612.14
+            },
+            {
+              "length_mm": 2.54,
               "name": "5V",
               "number": "+5V",
               "orientation_degrees": 0.0,
@@ -3673,28 +3760,19 @@
               "unit": 1,
               "x": 109.22,
               "y": 607.0600000000001
-            },
-            {
-              "length_mm": 2.54,
-              "name": "DOUT",
-              "number": "DOUT",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 109.22,
-              "y": 612.14
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 81.28,
+          "x": 80.01,
           "y": 601.98
         }
       ],
-      "x": 81.28,
+      "x": 80.01,
       "y": 601.98
     },
     {
-      "component_x": 81.28,
+      "component_x": 80.01,
       "component_y": 629.92,
       "pins": [
         {
@@ -3705,6 +3783,15 @@
           "unit": 1,
           "x": 109.22,
           "y": 622.3
+        },
+        {
+          "length_mm": 2.54,
+          "name": "DOUT",
+          "number": "DOUT",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 109.22,
+          "y": 640.0799999999999
         },
         {
           "length_mm": 2.54,
@@ -3723,15 +3810,6 @@
           "unit": 1,
           "x": 109.22,
           "y": 635.0
-        },
-        {
-          "length_mm": 2.54,
-          "name": "DOUT",
-          "number": "DOUT",
-          "orientation_degrees": 0.0,
-          "unit": 1,
-          "x": 109.22,
-          "y": 640.0799999999999
         }
       ],
       "reference": "LED10",
@@ -3751,6 +3829,15 @@
             },
             {
               "length_mm": 2.54,
+              "name": "DOUT",
+              "number": "DOUT",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 109.22,
+              "y": 640.0799999999999
+            },
+            {
+              "length_mm": 2.54,
               "name": "5V",
               "number": "+5V",
               "orientation_degrees": 0.0,
@@ -3766,24 +3853,15 @@
               "unit": 1,
               "x": 109.22,
               "y": 635.0
-            },
-            {
-              "length_mm": 2.54,
-              "name": "DOUT",
-              "number": "DOUT",
-              "orientation_degrees": 0.0,
-              "unit": 1,
-              "x": 109.22,
-              "y": 640.0799999999999
             }
           ],
           "rotation": 0.0,
           "unit": 1,
-          "x": 81.28,
+          "x": 80.01,
           "y": 629.92
         }
       ],
-      "x": 81.28,
+      "x": 80.01,
       "y": 629.92
     }
   ]

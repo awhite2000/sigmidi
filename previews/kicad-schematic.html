@@ -14,13 +14,13 @@ button:hover{background:#e3edf7}a{color:#225a96}output{min-width:48px;font-varia
 img{display:block;width:100%;height:auto}small{color:#53697a} @media(max-width:700px){.links{margin-left:0}.viewport{height:70vh}}
 </style></head><body>
 <header><h1>SIGMIDI Foot Controller v0.1 · KiCad schematic</h1>
-<p>External board pins only. DFRobot and display connectors retain physical pin order.</p>
-<small>44 components · 39 nets · 138 connected terminals · connectivity and pin order verified against the electrical diagram.</small>
+<p>External board pins only. Arduino Nano ESP32 and display connectors retain physical pin order.</p>
+<small>46 components · 41 nets · 143 connected terminals · connectivity and pin order verified against the electrical diagram.</small>
 <div class="bar"><button id="fit">Fit</button><button id="minus" aria-label="Zoom out">−</button>
 <output id="zoom">100%</output><button id="plus" aria-label="Zoom in">+</button>
 <button id="detail">Readable detail</button><span class="links"><a href="kicad-schematic.svg" target="_blank" rel="noopener">Open vector drawing</a>
 <a href="kicad-schematic.png" target="_blank" rel="noopener">PNG</a></span></div></header>
-<main class="viewport" id="viewport"><div class="sheet" id="sheet"><img src="kicad-schematic.svg" alt="Complete SIGMIDI KiCad schematic with physically ordered DFRobot and display pins"></div></main>
+<main class="viewport" id="viewport"><div class="sheet" id="sheet"><img src="kicad-schematic.svg" alt="Complete SIGMIDI KiCad schematic with physically ordered Arduino Nano ESP32 and display pins"></div></main>
 <script>
 const view=document.getElementById('viewport'),sheet=document.getElementById('sheet');let scale=1;
 function draw(){sheet.style.width=Math.max(400,(view.clientWidth-40)*scale)+'px';document.getElementById('zoom').textContent=Math.round(scale*100)+'%'}

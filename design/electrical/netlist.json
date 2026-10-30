@@ -3,167 +3,163 @@
   "version": "0.1",
   "status": "electrical review - not bench qualified",
   "board_detail": "external pins only; passive pedals use two controller resistors per input",
-  "dfrobot_external_pins": {
-    "P1:1": {
-      "physical_label": "VIN",
-      "logical_name": "VCC",
-      "net": "+5V"
+  "nano_external_pins": {
+    "JP1:1": {
+      "physical_label": "D13",
+      "logical_name": "GPIO48",
+      "net": null
     },
-    "P1:2": {
+    "JP1:2": {
       "physical_label": "3V3",
       "logical_name": "3V3",
       "net": "3V3"
     },
-    "P1:3": {
+    "JP1:3": {
+      "physical_label": "B0",
+      "logical_name": "GPIO46",
+      "net": null
+    },
+    "JP1:4": {
+      "physical_label": "A0",
+      "logical_name": "GPIO1",
+      "net": "LADDER"
+    },
+    "JP1:5": {
+      "physical_label": "A1",
+      "logical_name": "GPIO2",
+      "net": "P1_ADC"
+    },
+    "JP1:6": {
+      "physical_label": "A2",
+      "logical_name": "GPIO3",
+      "net": null
+    },
+    "JP1:7": {
+      "physical_label": "A3",
+      "logical_name": "GPIO4",
+      "net": "P2_ADC"
+    },
+    "JP1:8": {
+      "physical_label": "A4",
+      "logical_name": "GPIO11",
+      "net": "USB_SENSE"
+    },
+    "JP1:9": {
+      "physical_label": "A5",
+      "logical_name": "GPIO12",
+      "net": null
+    },
+    "JP1:10": {
+      "physical_label": "A6",
+      "logical_name": "GPIO13",
+      "net": null
+    },
+    "JP1:11": {
+      "physical_label": "A7",
+      "logical_name": "GPIO14",
+      "net": null
+    },
+    "JP1:12": {
+      "physical_label": "VBUS / VUSB",
+      "logical_name": "VBUS",
+      "net": "USB_VBUS"
+    },
+    "JP1:13": {
+      "physical_label": "B1",
+      "logical_name": "GPIO0",
+      "net": null
+    },
+    "JP1:14": {
       "physical_label": "GND",
       "logical_name": "GND",
       "net": "GND"
     },
-    "P1:4": {
-      "physical_label": "SCL",
-      "logical_name": "GPIO20",
-      "net": "P1_MODE"
+    "JP1:15": {
+      "physical_label": "VIN",
+      "logical_name": "VIN",
+      "net": "+9V"
     },
-    "P1:5": {
-      "physical_label": "SDA",
-      "logical_name": "GPIO19",
-      "net": null
+    "JP2:15": {
+      "physical_label": "D12",
+      "logical_name": "GPIO47",
+      "net": "LCD_RST"
     },
-    "P1:6": {
-      "physical_label": "5/A4/LP_TX",
-      "logical_name": "GPIO5",
-      "net": null
+    "JP2:14": {
+      "physical_label": "D11",
+      "logical_name": "GPIO38",
+      "net": "LCD_DIN"
     },
-    "P1:7": {
-      "physical_label": "4/A3/LP_RX",
-      "logical_name": "GPIO4",
-      "net": null
+    "JP2:13": {
+      "physical_label": "D10",
+      "logical_name": "GPIO21",
+      "net": "LCD_CS"
     },
-    "P1:8": {
-      "physical_label": "3/A2",
-      "logical_name": "GPIO3",
-      "net": "P2_ADC"
+    "JP2:12": {
+      "physical_label": "D9",
+      "logical_name": "GPIO18",
+      "net": "LCD_DC"
     },
-    "P1:9": {
-      "physical_label": "2/A1",
-      "logical_name": "GPIO2",
-      "net": "P1_ADC"
+    "JP2:11": {
+      "physical_label": "D8",
+      "logical_name": "GPIO17",
+      "net": "LCD_CLK"
     },
-    "P1:10": {
-      "physical_label": "NC",
-      "logical_name": "NC",
-      "net": null
+    "JP2:10": {
+      "physical_label": "D7",
+      "logical_name": "GPIO10",
+      "net": "LED_GPIO"
     },
-    "P1:11": {
-      "physical_label": "15/D13",
-      "logical_name": "GPIO15",
-      "net": null
+    "JP2:9": {
+      "physical_label": "D6",
+      "logical_name": "GPIO9",
+      "net": "ENC_SW"
     },
-    "P1:12": {
-      "physical_label": "6/D12/LP_SDA",
-      "logical_name": "GPIO6",
-      "net": "ENC_A"
-    },
-    "P1:13": {
-      "physical_label": "7/D11/LP_SCL",
-      "logical_name": "GPIO7",
+    "JP2:8": {
+      "physical_label": "D5",
+      "logical_name": "GPIO8",
       "net": "ENC_B"
     },
-    "P1:14": {
-      "physical_label": "NC",
-      "logical_name": "NC",
-      "net": null
+    "JP2:7": {
+      "physical_label": "D4",
+      "logical_name": "GPIO7",
+      "net": "ENC_A"
     },
-    "P2:1": {
+    "JP2:6": {
+      "physical_label": "D3",
+      "logical_name": "GPIO6",
+      "net": "P2_MODE"
+    },
+    "JP2:5": {
+      "physical_label": "D2",
+      "logical_name": "GPIO5",
+      "net": "P1_MODE"
+    },
+    "JP2:4": {
+      "physical_label": "GND",
+      "logical_name": "GND",
+      "net": "GND"
+    },
+    "JP2:3": {
       "physical_label": "RST",
       "logical_name": "RST",
       "net": null
     },
-    "P2:2": {
-      "physical_label": "3V3",
-      "logical_name": "3V3",
-      "net": "3V3"
-    },
-    "P2:3": {
-      "physical_label": "NC",
-      "logical_name": "NC",
+    "JP2:2": {
+      "physical_label": "D0 / RX0",
+      "logical_name": "GPIO44",
       "net": null
     },
-    "P2:4": {
-      "physical_label": "GND",
-      "logical_name": "GND",
-      "net": "GND"
-    },
-    "P2:5": {
-      "physical_label": "NC",
-      "logical_name": "NC",
+    "JP2:1": {
+      "physical_label": "D1 / TX0",
+      "logical_name": "GPIO43",
       "net": null
-    },
-    "P2:6": {
-      "physical_label": "23/SCK",
-      "logical_name": "GPIO23",
-      "net": "LCD_CLK"
-    },
-    "P2:7": {
-      "physical_label": "22/MO",
-      "logical_name": "GPIO22",
-      "net": "LCD_DIN"
-    },
-    "P2:8": {
-      "physical_label": "21/MI",
-      "logical_name": "GPIO21",
-      "net": "P2_MODE"
-    },
-    "P2:9": {
-      "physical_label": "20/SCL",
-      "logical_name": "GPIO20",
-      "net": null
-    },
-    "P2:10": {
-      "physical_label": "19/SDA",
-      "logical_name": "GPIO19",
-      "net": "LCD_DC"
-    },
-    "P2:11": {
-      "physical_label": "9/D9",
-      "logical_name": "GPIO9",
-      "net": null
-    },
-    "P2:12": {
-      "physical_label": "18/D7",
-      "logical_name": "GPIO18",
-      "net": "LCD_CS"
-    },
-    "P2:13": {
-      "physical_label": "1/D6",
-      "logical_name": "GPIO1",
-      "net": "LADDER"
-    },
-    "P2:14": {
-      "physical_label": "NC",
-      "logical_name": "NC",
-      "net": null
-    },
-    "P2:15": {
-      "physical_label": "14/D3",
-      "logical_name": "GPIO14",
-      "net": "LCD_RST"
-    },
-    "P2:16": {
-      "physical_label": "8/D2",
-      "logical_name": "GPIO8",
-      "net": null
-    },
-    "P2:17": {
-      "physical_label": "16/TX",
-      "logical_name": "GPIO16",
-      "net": "LED_GPIO"
-    },
-    "P2:18": {
-      "physical_label": "17/RX",
-      "logical_name": "GPIO17",
-      "net": "ENC_SW"
     }
+  },
+  "firmware_pin_verification": {
+    "source": "src/board.hpp",
+    "sha256": "88db0c90739cde67be4f7b827fe0670054b07946b4170098ea1792f88d0788c3",
+    "used_signal_pins": 15,
+    "all_assignments_match": true
   },
   "units": {
     "resistors": "ohms (k = 1000)",
@@ -171,41 +167,39 @@
   },
   "components": {
     "U1": {
-      "value": "DFRobot DFR1075 V1.1",
-      "package": "ESP32-C6 board",
+      "value": "Arduino Nano ESP32 ABX00083",
+      "package": "ESP32-S3 board",
       "pins": {
-        "P1:1": "+5V",
-        "P1:2": "3V3",
-        "P1:3": "GND",
-        "P1:4": "P1_MODE",
-        "P1:5": null,
-        "P1:6": null,
-        "P1:7": null,
-        "P1:8": "P2_ADC",
-        "P1:9": "P1_ADC",
-        "P1:10": null,
-        "P1:11": null,
-        "P1:12": "ENC_A",
-        "P1:13": "ENC_B",
-        "P1:14": null,
-        "P2:1": null,
-        "P2:2": "3V3",
-        "P2:3": null,
-        "P2:4": "GND",
-        "P2:5": null,
-        "P2:6": "LCD_CLK",
-        "P2:7": "LCD_DIN",
-        "P2:8": "P2_MODE",
-        "P2:9": null,
-        "P2:10": "LCD_DC",
-        "P2:11": null,
-        "P2:12": "LCD_CS",
-        "P2:13": "LADDER",
-        "P2:14": null,
-        "P2:15": "LCD_RST",
-        "P2:16": null,
-        "P2:17": "LED_GPIO",
-        "P2:18": "ENC_SW"
+        "JP1:1": null,
+        "JP1:2": "3V3",
+        "JP1:3": null,
+        "JP1:4": "LADDER",
+        "JP1:5": "P1_ADC",
+        "JP1:6": null,
+        "JP1:7": "P2_ADC",
+        "JP1:8": "USB_SENSE",
+        "JP1:9": null,
+        "JP1:10": null,
+        "JP1:11": null,
+        "JP1:12": "USB_VBUS",
+        "JP1:13": null,
+        "JP1:14": "GND",
+        "JP1:15": "+9V",
+        "JP2:15": "LCD_RST",
+        "JP2:14": "LCD_DIN",
+        "JP2:13": "LCD_CS",
+        "JP2:12": "LCD_DC",
+        "JP2:11": "LCD_CLK",
+        "JP2:10": "LED_GPIO",
+        "JP2:9": "ENC_SW",
+        "JP2:8": "ENC_B",
+        "JP2:7": "ENC_A",
+        "JP2:6": "P2_MODE",
+        "JP2:5": "P1_MODE",
+        "JP2:4": "GND",
+        "JP2:3": null,
+        "JP2:2": null,
+        "JP2:1": null
       },
       "note": ""
     },
@@ -248,6 +242,24 @@
       "package": "capacitor",
       "pins": {
         "1": "+9V",
+        "2": "GND"
+      },
+      "note": ""
+    },
+    "R50": {
+      "value": "100k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "USB_VBUS",
+        "2": "USB_SENSE"
+      },
+      "note": ""
+    },
+    "R51": {
+      "value": "150k",
+      "package": "1% resistor",
+      "pins": {
+        "1": "USB_SENSE",
         "2": "GND"
       },
       "note": ""
@@ -640,7 +652,6 @@
   },
   "nets": {
     "+5V": [
-      "U1.P1:1",
       "U3.VOUT",
       "LED1.+5V",
       "LED2.+5V",
@@ -654,13 +665,13 @@
       "LED10.+5V"
     ],
     "+9V": [
+      "U1.JP1:15",
       "J1.SLEEVE",
       "U3.VIN",
       "C1.1"
     ],
     "3V3": [
-      "U1.P1:2",
-      "U1.P2:2",
+      "U1.JP1:2",
       "U2.P2:1",
       "U2.P2:8",
       "R7.1",
@@ -668,24 +679,25 @@
       "R30.1"
     ],
     "ENC_A": [
-      "U1.P1:12",
+      "U1.JP2:7",
       "SW11.A"
     ],
     "ENC_B": [
-      "U1.P1:13",
+      "U1.JP2:8",
       "SW11.B"
     ],
     "ENC_SW": [
-      "U1.P2:18",
+      "U1.JP2:9",
       "SW11.SW1"
     ],
     "GND": [
-      "U1.P1:3",
-      "U1.P2:4",
+      "U1.JP1:14",
+      "U1.JP2:4",
       "U2.P2:7",
       "J1.CENTER",
       "U3.GND",
       "C1.2",
+      "R51.2",
       "SW11.C",
       "SW11.SW2",
       "R8.2",
@@ -750,43 +762,43 @@
       "LED10.DIN"
     ],
     "LADDER": [
-      "U1.P2:13",
+      "U1.JP1:4",
       "R7.2",
       "R8.1",
       "C5.1",
       "R9.1"
     ],
     "LCD_CLK": [
-      "U1.P2:6",
+      "U1.JP2:11",
       "U2.P2:5"
     ],
     "LCD_CS": [
-      "U1.P2:12",
+      "U1.JP2:13",
       "U2.P2:4"
     ],
     "LCD_DC": [
-      "U1.P2:10",
+      "U1.JP2:12",
       "U2.P2:3"
     ],
     "LCD_DIN": [
-      "U1.P2:7",
+      "U1.JP2:14",
       "U2.P2:6"
     ],
     "LCD_RST": [
-      "U1.P2:15",
+      "U1.JP2:15",
       "U2.P2:2"
     ],
     "LED_GPIO": [
-      "U1.P2:17",
+      "U1.JP2:10",
       "LED1.DIN"
     ],
     "P1_ADC": [
-      "U1.P1:9",
+      "U1.JP1:5",
       "J2.12",
       "R21.2"
     ],
     "P1_MODE": [
-      "U1.P1:4",
+      "U1.JP2:5",
       "R21.1"
     ],
     "P1_RING": [
@@ -794,12 +806,12 @@
       "R20.2"
     ],
     "P2_ADC": [
-      "U1.P1:8",
+      "U1.JP1:7",
       "J2.6",
       "R31.2"
     ],
     "P2_MODE": [
-      "U1.P2:8",
+      "U1.JP2:6",
       "R31.1"
     ],
     "P2_RING": [
@@ -854,18 +866,27 @@
       "R17.2",
       "SW9.1",
       "R18.1"
+    ],
+    "USB_SENSE": [
+      "U1.JP1:8",
+      "R50.2",
+      "R51.1"
+    ],
+    "USB_VBUS": [
+      "U1.JP1:12",
+      "R50.1"
     ]
   },
   "sources": [
     {
-      "title": "DFRobot DFR1075 V1.1 schematic",
-      "description": "Local: design/fusion/datasheets/dfr1075-schematic-v11.pdf",
-      "url": "https://wiki.dfrobot.com/dfr1075/"
+      "title": "Arduino Nano ESP32 ABX00083 pinout",
+      "description": "Component-side top view, USB-C up; all 30 header pads",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00083-full-pinout.pdf"
     },
     {
-      "title": "DFRobot external pinout / printed labels",
-      "description": "Top view; P2 left, P1 right, USB-C upper edge",
-      "url": "https://dfimg.dfrobot.com/5d57611a3416442fa39bffca/wiki/1fa8b29bf6d340347ccdc39f4648b949_0x0.png.webp"
+      "title": "Arduino Nano ESP32 schematic V0.3",
+      "description": "JP1: 1-15 top-down; JP2: 15-1 top-down",
+      "url": "https://docs.arduino.cc/resources/schematics/ABX00083-schematics.pdf"
     },
     {
       "title": "Waveshare 24382 external P2 connector",
@@ -888,9 +909,9 @@
       "url": "https://www.pololu.com/product/2535"
     },
     {
-      "title": "Espressif ESP32-C6 ADC / GPIO",
-      "description": "ADC calibrated mV; bias output HIGH or disabled with pulls off",
-      "url": "https://documentation.espressif.com/esp32-c6_datasheet_en.html"
+      "title": "Espressif self-powered USB devices",
+      "description": "VBUS sense: 100k / 150k divider to A4 / GPIO11",
+      "url": "https://docs.espressif.com/projects/esp-usb/en/latest/esp32s3/usb_device.html"
     }
   ]
 }

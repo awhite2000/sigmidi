@@ -1,9 +1,11 @@
 Quantity (10-switch maximum),References,Value,Package / type
-1,U1,DFRobot DFR1075 V1.1,ESP32-C6 board
+1,U1,Arduino Nano ESP32 ABX00083,ESP32-S3 board
 1,U2,Waveshare 24382,1.69 inch ST7789V2 LCD module
 1,J1,5.5x2.1mm center-negative,18mm barrel socket / M8
 1,U3,Pololu S13V10F5 #4083,5V 1A step-up/down module
 1,C1,47uF / 35V,capacitor
+1,R50,100k,1% resistor
+1,R51,150k,1% resistor
 1,SW11,20-detent rotary encoder + NO click,passive encoder
 3,R7 R21 R31,10k,1% resistor
 1,R8,20k,1% resistor

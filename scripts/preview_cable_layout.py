@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create an uncommitted routing proposal using the Left enclosure's CAD footprints."""
+"""Create a routing proposal using the Left enclosure's CAD footprints."""
 from pathlib import Path
 import json,html,hashlib
 R=Path(__file__).resolve().parents[1];P=R/'previews';rows=json.loads((R/'design/fusion/mirrored/layout.json').read_text())['bodies']
@@ -7,14 +7,14 @@ rows=[r for r in rows if r['assembly']=='main'];groups={}
 for r in rows:groups.setdefault(r['component_path'].split('/')[-1],[]).append(r)
 colors={'dc':'#d65e21','supply':'#cf3144','ground':'#303a48','ladder':'#b47a00','pedal':'#008b95','display':'#2b74cc','encoder':'#45933b','led':'#9251c7'}
 meta={
-'dc':('9 V input','Sleeve +9 V → VIN; centre → GND','2 wires · J-PWR', 'power'),
-'supply':('Regulated 5 V','Pololu VOUT → DFRobot VIN / LED rail','Supply + return travel together','power'),
+'dc':('9 V input','Sleeve +9 V → Nano VIN + Pololu VIN','2 wires · J-PWR', 'power'),
+'supply':('Regulated 5 V','Pololu VOUT → optional LED rail only','Supply + return travel together','power'),
 'ground':('Ground / returns','Common reference; LED return to supply','Dark lines beside power and signals','power'),
 'ladder':('Footswitch ladder','Series taps T1–T10; each adds 1 kΩ','TAIL + GND between sections','controls'),
-'pedal':('Expression pedals','Passive TRS → 2 resistors/input → GPIO2 / 3','6 wires at sockets · modes GPIO20 / 21','controls'),
-'display':('LCD / SPI','GPIO22, 23, 18, 19, 14; 3V3 + GND','7 wires · backlight tied to 3V3 locally','controls'),
-'encoder':('Encoder + click','GPIO6 / 7 / 17 + common GND','4 wires · J-ENC','controls'),
-'led':('Optional Pololu 2535','GPIO16 → first LED DIN, directly','5V + GND + data; preserve tap assignments','led')}
+'pedal':('Expression pedals','Passive TRS → 2 resistors/input → A1 / GPIO2 and A3 / GPIO4','6 wires at sockets · bias D2 / GPIO5 and D3 / GPIO6','controls'),
+'display':('LCD / SPI','D8–D12 / GPIO17, 18, 21, 38, 47; 3V3 + GND','7 wires · backlight tied to 3V3 locally','controls'),
+'encoder':('Encoder + click','D4–D6 / GPIO7, 8, 9 + common GND','4 wires · J-ENC','controls'),
+'led':('Optional Pololu 2535','D7 / GPIO10 → first LED DIN, directly','5V + GND + data; preserve tap assignments','led')}
 S=4;OX=80;OY=202
 X=lambda x:OX+x*S
 Y=lambda y:OY+y*S
@@ -49,20 +49,28 @@ for name,items in groups.items():
  elif 'Pololu 2535' in name:
   q=bbox(items);cx=(q[0]+q[2])/2;cy=(q[1]+q[3])/2
   out.append(f'<circle cx="{X(cx)}" cy="{Y(cy)}" r="10" fill="#e8dff4" stroke="#a58bc0"/>')
-for needle,label,cls in [('LCD Waveshare','LCD / SPI','board'),('DFRobot DFR1075','DFR1075','board'),('Double TRS','Dual TRS','body'),('Pololu S13V10F5','5V','board'),('Encoder 15x15','ENC','body'),('DC power socket','9 V DC','body')]:
+for needle,label,cls in [('LCD Waveshare','LCD / SPI','board'),('Double TRS','Dual TRS','body'),('Pololu S13V10F5','5V','board'),('Encoder 15x15','ENC','body'),('DC power socket','9 V DC','body')]:
  name,items=next((n,v) for n,v in groups.items() if needle in n);q=bbox(items);x0,y0,x1,y1=q
  rect(x0,max(0,y0),x1-x0,y1-max(0,y0),cls,5)
- txt((x0+x1)/2,69 if label=='DFR1075' else (max(0,y0)+y1)/2+1.3,label,'tiny')
+ txt((x0+x1)/2,(max(0,y0)+y1)/2+1.3,label,'tiny')
  footprints.append({'component':name,'bounds_XY_mm':q})
+# Nano placement from the manufacturer's PCB pose verified with the adapter kit.
+fit=json.loads((R/'design/fusion/nano-esp32/mount-fit.json').read_text())
+holes=fit['board_holes_XY_mm'];x0=min(q[0] for q in holes)-1.27;x1=max(q[0] for q in holes)+1.27
+y0=-max(q[1] for q in holes)-1.27;y1=-min(q[1] for q in holes)+1.27
+rect(x0,y0,x1-x0,y1-y0,'board',4)
+txt((x0+x1)/2,46,'face down','tiny')
+for hx,hy in holes:out.append(f'<circle cx="{X(hx)}" cy="{Y(-hy)}" r="3.32" fill="white" stroke="#72957b"/>')
+footprints.append({'component':'Arduino Nano ESP32 ABX00083','bounds_XY_mm':[x0,y0,x1,y1],'source':'design/fusion/nano-esp32/mount-fit.json','component_face_down':True})
 # USB connector and nominal rear socket centres.
-rect(95,0,9,5,'body');txt(99.5,-4,'USB-C','small')
+rect(95,0,9,5,'body');txt(99.5,-4,'Nano ESP32 / USB-C','small')
 txt(23,-4,'TRS 1 / 2','small');txt(140,-4,'9 V · centre negative','small')
 # Existing vent area is crosshatched rather than available for tie mounts.
 for x in [91,96,101,106,111,120,126]:
  out.append(f'<path d="M{X(x)} {Y(49)}V{Y(60)}" stroke="#adc3c1" stroke-width="5" opacity=".6"/>')
 # Carrier area is a functional placeholder, clearly distinct from CAD components.
 out.append(f'<rect x="{X(61)}" y="{Y(30)}" width="80" height="40" rx="6" fill="#fff" stroke="#6b7d91" stroke-width="1.7" stroke-dasharray="5 4"/>')
-txt(71,34,'Pedal resistors','tiny');txt(71,38,'location TBD','tiny')
+txt(71,29,'Pedal + USB resistors','tiny')
 paths=[]
 def route(kind,points,width=.8,label=''):
  pts=' '.join(f'{X(x):.2f},{Y(y):.2f}' for x,y in points)
@@ -71,16 +79,16 @@ def route(kind,points,width=.8,label=''):
 # Power follows the model's five-segment reference envelopes.
 route('dc',[(142,12),(142,20),(114,20),(114,32.98),(119.21,32.98)],1,'Socket sleeve +9 V to converter VIN')
 route('ground',[(138,12),(138,18),(116,18),(116,30.45),(119.21,30.45)],.65,'Socket centre negative to converter GND')
-route('supply',[(119.21,27.91),(110.73,27.91),(110.73,26.79)],1,'Converter VOUT to DFRobot VIN')
-route('ground',[(119.21,30.45),(110.73,30.45),(110.73,31.87)],.65,'Converter return to DFRobot ground')
+route('dc',[(142,20),(114,20),(114,44),(108.2,44)],1,'9V input to Nano VIN; no converter 5V connection to Nano')
+route('ground',[(119.21,30.45),(114,30.45),(114,42),(108.2,42)],.65,'Converter return to Nano ground')
 route('supply',[(119,28),(119,35),(81,35)],.8,'LED +5V distribution; pair with return')
 route('ground',[(119,30.5),(120.5,36.5),(81,36.5)],.65,'LED supply return, routed directly to supply point')
 route('pedal',[(27,27.4),(27,31),(56,31),(56,33),(61,33)],1.15,'Six TRS conductors to passive resistor connections')
-route('pedal',[(81,32),(84,32),(86.6,35)],1.0,'Direct TIP ADC signals, two bias GPIOs, reference and ground to DFRobot')
-route('display',[(86.6,45),(82.5,45),(82.5,42),(43,42),(43,46.23)],1.1,'Short SPI loom to display; J-LCD service disconnect')
-route('encoder',[(12.5,57),(12.5,46),(57,46),(57,41),(84.5,41),(86.6,43)],.95,'A, B, click and common ground to DFRobot')
+route('pedal',[(81,32),(84,32),(90.4,35)],1.0,'Direct TIP ADC signals, two bias GPIOs, reference and ground to Nano')
+route('display',[(90.4,43),(82.5,43),(82.5,42),(43,42),(43,46.23)],1.1,'Short SPI loom to display; J-LCD service disconnect')
+route('encoder',[(12.5,57),(12.5,46),(57,46),(57,41),(84.5,41),(90.4,41)],.95,'A, B, click and common ground to Nano')
 # Lines mark harness corridors, not common electrical nets. Tap resistors stay in electrical order.
-route('ladder',[(86.6,38),(83,38),(83,21),(338,21)],.95,'Raised-row switched ladder harness')
+route('ladder',[(90.4,38),(83,38),(83,21),(338,21)],.95,'Raised-row switched ladder harness')
 route('ladder',[(83,21),(55,21),(55,40.5),(64,40.5),(64,76),(338,76)],.95,'Base and lower-row ladder harness; descent proposal')
 for x in [42.6,107.6,172.6,237.6,302.6]:
  route('ladder',[(x,18),(x,21)],.7,'Local switch branch / series tap resistor')
@@ -88,7 +96,7 @@ for x in [75.1,140.1,205.1,270.1,335.1]:
  route('ladder',[(x,73.5),(x,76)],.7,'Local switch branch / series tap resistor')
 route('ladder',[(42.6,21),(65,21)],.95,'Base A branch')
 # Optional pixel harness follows the model's left descent and upper/lower wire envelopes.
-route('led',[(86.6,38),(54,38),(54,32.4),(9.5,32.4),(9.5,26.2),(305,26.2)],1.15,'Upper LED harness in CAD reference envelope Z17..21')
+route('led',[(90.4,38),(54,38),(54,32.4),(9.5,32.4),(9.5,26.2),(305,26.2)],1.15,'Upper LED harness in CAD reference envelope Z17..21')
 route('led',[(9.5,32.4),(9.5,84.5),(338,84.5)],1.15,'Left descent / lower LED harness; lower bus Z-12..-9')
 for x in [42.6,107.6,172.6,237.6,302.6]:route('led',[(x,26.2),(x,28)],.65,'LED branch; connect DIN/DOUT in electrical tap order')
 for x in [75.1,140.1,205.1,270.1,335.1]:route('led',[(x,84.5),(x,81.7)],.65,'LED branch; connect DIN/DOUT in electrical tap order')
@@ -116,12 +124,12 @@ for i,(kind,(title,details,note,group)) in enumerate(meta.items()):
  col=i%2;row=i//2;x=80+col*710;y=727+row*74
  out += [f'<g data-legend="{kind}"><rect x="{x}" y="{y}" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>',f'<path d="M{x+18} {y+21}H{x+47}" stroke="{colors[kind]}" stroke-width="5" stroke-linecap="round"/>',f'<text x="{x+60}" y="{y+25}" class="label">{html.escape(title)}</text>',f'<text x="{x+60}" y="{y+44}" class="small">{html.escape(details)}</text>',f'<text x="{x+60}" y="{y+59}" class="tiny muted">{html.escape(note)}</text></g>']
 out += ['<text x="80" y="1045" class="small">Lines represent bundle corridors, not electrical junctions. Connect ladder taps and pixels in the stated order.</text>',
-'<text x="80" y="1068" class="small muted">Power/LED reference corridors come from Fusion. Components at different heights overlap in projection.</text>',
-'<text x="80" y="1090" class="small muted">Other routes, carrier and connectors are proposals; verify vertical transitions, fasteners and base clearance.</text>','</svg>']
+'<text x="80" y="1068" class="small muted">Nano pose comes from the verified mount kit; other footprints from Fusion. Different Z levels overlap in this view.</text>',
+'<text x="80" y="1090" class="small muted">Routes are bundle corridors, not pin positions. VBUS → 100k → A4; A4 → 150k → GND. Verify service-loop clearances.</text>','</svg>']
 svg='\n'.join(out);(P/'cable-bundles-left.svg').write_text(svg)
 detail_inner=svg[svg.index('>')+1:svg.rindex('</svg>')]
 (P/'cable-bundles-left-detail.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1000" viewBox="0 0 1560 1000"><rect width="1560" height="1000" fill="#f5f7fa"/><text x="40" y="44" font-family="Arial,sans-serif" font-size="26" fill="#26354b">SIGMIDI · electronics harness detail · Left</text><svg x="20" y="70" width="1520" height="860" viewBox="60 193 655 390">'+detail_inner+'</svg><text x="40" y="970" font-family="Arial,sans-serif" font-size="18" fill="#617087">Routing proposal. Dashed interface is not a fitted CAD part; vertical clearances require review.</text></svg>')
-data={'variant':'Left main, ten switches','source':'design/fusion/mirrored/layout.json','source_sha256':hashlib.sha256((R/'design/fusion/mirrored/layout.json').read_bytes()).hexdigest(),'status':'routing proposal; no native CAD changes','component_footprints':footprints,'bundles':meta,'colors':colors,'routes':paths,'notes':['XY corridors only; crossings do not connect nets','Native LED/power references used; other routing and unmodeled interface carrier need clearance validation','Electrical tap and LED assignments remain unchanged','Disconnect shell controls and withdraw MCU USB before base removal']}
+data={'variant':'Left main, ten switches','source':'design/fusion/mirrored/layout.json','nano_mount_source':'design/fusion/nano-esp32/mount-fit.json','nano_mount_sha256':hashlib.sha256((R/'design/fusion/nano-esp32/mount-fit.json').read_bytes()).hexdigest(),'source_sha256':hashlib.sha256((R/'design/fusion/mirrored/layout.json').read_bytes()).hexdigest(),'status':'routing proposal; no native CAD changes','component_footprints':footprints,'bundles':meta,'colors':colors,'routes':paths,'notes':['XY corridors only; crossings do not connect nets','Native LED/power references used; other routing and unmodeled interface carrier need clearance validation','Electrical tap and LED assignments remain unchanged','Disconnect shell controls and withdraw MCU USB before base removal']}
 (P/'cable-bundles-left.json').write_text(json.dumps(data,indent=2)+'\n')
 buttons=''.join(f'<button data-focus="{k}" style="--bundle:{colors[k]}">{html.escape(meta[k][0])}</button>' for k in meta)
 page='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>SIGMIDI cable routing preview</title><style>body{margin:0;background:#f5f7fa;color:#26354b;font:14px Arial,sans-serif}nav{padding:18px 5%;display:flex;gap:8px;flex-wrap:wrap;align-items:center;border-bottom:1px solid #dae1e8}button,a{font:inherit}button{border:1px solid #c6ced8;border-left:5px solid var(--bundle,#26354b);background:white;color:#26354b;padding:8px 12px;border-radius:6px;cursor:pointer}button[aria-pressed=true]{background:#26354b;color:white}nav a{margin-left:auto;color:#265f99}main{max-width:1700px;margin:auto}svg{width:100%;height:auto;display:block}footer{padding:12px 5%;color:#617087}</style><nav aria-label="Cable bundle filters"><strong>Show:</strong><button data-focus="all" aria-pressed="true">All bundles</button>'''+buttons+'''<a href="cable-bundles-left-detail.svg">Electronics zoom</a><a href="cable-bundles-left.svg">Download SVG</a></nav><main>'''+svg+'''</main><footer>Routing preview only. No firmware settings or Fusion geometry changed.</footer><script>for(const b of document.querySelectorAll('button[data-focus]'))b.addEventListener('click',()=>{const k=b.dataset.focus;for(const p of document.querySelectorAll('.route'))p.classList.toggle('dimmed',k!=='all'&&p.dataset.bundle!==k);for(const q of document.querySelectorAll('button[data-focus]'))q.setAttribute('aria-pressed',String(q===b));});</script></html>'''

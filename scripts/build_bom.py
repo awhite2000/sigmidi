@@ -35,7 +35,7 @@ def main():
     # Reconcile at the assembly boundary. Do not parse or edit KiCad source files.
     netlist = json.loads((ROOT/'design/electrical/netlist.json').read_text())
     refs = [ref for item in items for ref in item['electrical_refs']]
-    assert len(refs) == len(set(refs)) == 44
+    assert len(refs) == len(set(refs)) == 46
     assert set(refs) == set(netlist['components'])
     for item in items:
         if item['electrical_refs']:
@@ -49,11 +49,15 @@ def main():
     hardware_counts = {
         'base_M2x6':sum('Base fasteners' in b['component_path'] for b in main),
         'display_M2x5':sum('PCB screws' in b['component_path'] and b['body'].startswith('LCD24382') for b in main),
-        'MCU_M1_6':sum('PCB screws' in b['component_path'] and b['body'].startswith('DFR1075') for b in main),
+
     }
-    assert hardware_counts == {'base_M2x6':8,'display_M2x5':4,'MCU_M1_6':4}
+    assert hardware_counts == {'base_M2x6':8,'display_M2x5':4}
+    mount=json.loads((ROOT/'design/fusion/nano-esp32/mount-fit.json').read_text())
+    assert len(mount['board_holes_XY_mm'])==4 and len(mount['existing_post_centers_XY_mm'])==2
+    assert mount['PCB_screws']=='Four M1.6x5 pan head'
+    assert mount['bridge_fasteners']=='Two M1.6x6 pan head into existing far-end posts'
     for p,n in data['profiles'].items():
-        assert sum(i['quantity'][p] for i in items if i['electrical_refs']) == 14+3*n
+        assert sum(i['quantity'][p] for i in items if i['electrical_refs']) == 16+3*n
         assert by_id['H01']['quantity'][p] == (8 if p=='main_10' else 4+2*((n-4)//2))
         printed = sum(i['quantity'][p] for i in items if i['group']=='Printed parts')
         assert printed == (6 if p=='main_10' else 5+2*((n-4)//2))
@@ -110,7 +114,7 @@ Preferred build: **Left**, with electronics on the left and modular extensions t
 | Modular 10 | 10 | 3 | 10 | 11 |
 | Main 10, fixed split chassis | 10 | Not applicable | 8 | 6 |
 
-Use **N** below for the chosen installed switch count. **AR** means as required. Optional feature quantities apply only when that feature is fitted. Parts inside boards are not itemized. Counts include the two Nano mounting adapters. Use the Nano GPIO/power map; retained DFR1075 schematics are reference only.
+Use **N** below for the chosen installed switch count. **AR** means as required. Optional feature quantities apply only when that feature is fitted. Parts inside boards are not itemized. Counts include the two Nano mounting adapters. Electrical reference designators match the Nano wiring diagrams and KiCad schematic.
 
 ## 1. Required control electronics
 
@@ -218,9 +222,9 @@ USB and 9 V sources are alternative power options. Choose each supply for the co
 
 ## Quantity and source checks
 
-The existing maximum electrical BOM/netlist contains **44 shared reference component instances**: three purchased boards, two socket assemblies, one encoder, ten footswitches, sixteen resistors, two capacitors and ten LEDs. The Nano build adds two USB VBUS resistors, for 46 electrical instances at ten switches. The shared reference includes both pedals, 9 V power and LEDs. The similarly sized CSV line count is coincidental: CSV rows also include grouped hardware, printed parts and external accessories.
+The maximum electrical BOM/netlist contains **46 component instances**: three purchased boards, two socket assemblies, one encoder, ten footswitches, eighteen resistors, two capacitors and ten LEDs. This includes the two required USB VBUS sense resistors R50/R51, both pedals, 9 V power and optional LEDs. The similarly sized CSV line count is coincidental: CSV rows also include grouped hardware, printed parts and external accessories.
 
-For all optional circuits fitted, electrical instance totals are **28 / 34 / 40 / 46** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 44 reference designators against both electrical exports and verifies the main 8/4/4 base/display/MCU screw counts against the CAD body inventory.
+For all optional circuits fitted, electrical instance totals are **28 / 34 / 40 / 46** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 46 reference designators against both electrical exports. It verifies eight base and four display screws against the CAD body inventory, and four M1.6x5 PCB screws plus two M1.6x6 bridge screws against the Nano mount specification.
 
 ## References
 
@@ -237,19 +241,19 @@ Prepared 30 October 2026 for SIGMIDI v0.1. The Nano firmware, harness and two ad
     render(doc)
     source_files = ['docs/bom-items.json','docs/bill-of-materials.md','scripts/build_bom.py',
                     'design/electrical/bom.csv','design/electrical/netlist.json',
-                    'design/fusion/mirrored/layout.json','design/fusion/mirrored/README.md',
+                    'design/fusion/mirrored/layout.json','design/fusion/nano-esp32/mount-fit.json','design/fusion/mirrored/README.md',
                     'design/fusion/README.md','design/fusion/datasheets/double-trs-ACJS-MHDC.pdf',
                     'docs/hardware.md','docs/power.md','scripts/build_user_manual.py']
     digest = lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
     manifest = {'project':data['project'],'version':data['version'],'BOM_lines':len(items),
-                'shared_electrical_reference_count':len(refs), 'total_electrical_instances_main':len(refs)+2,'shared_electrical_refs_match_reference_exports':True,'USB_VBUS_divider_BOM_ids':['E16','E17'],'Nano_mount_hardware':{'M1.6x5':4,'M1.6x6':2},
-                'original_enclosure_reference_hardware_counts':hardware_counts,'profiles':data['profiles'],
+                'electrical_reference_count':len(refs), 'total_electrical_instances_main':len(refs),'electrical_refs_match_exports':True,'USB_VBUS_divider_BOM_ids':['E16','E17'],'Nano_mount_hardware':{'M1.6x5':4,'M1.6x6':2},
+                'enclosure_hardware_counts':hardware_counts,'profiles':data['profiles'],
                 'source_sha256':{n:digest(ROOT/n) for n in source_files},
                 'outputs':{n:digest(ROOT/n) for n in ['docs/bill-of-materials.csv',str(PDF.relative_to(ROOT))]},
                 'physical_fit_qualified':False,'purchased_parts_inside_boards_itemized':False}
     (ROOT/'docs/bom-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print(json.dumps({'PDF':str(PDF),'pages':6,'BOM_lines':len(items),
-                      'shared_reference_instances':len(refs), 'electrical_instances_main':len(refs)+2,'main_hardware':hardware_counts},indent=2))
+                      'electrical_reference_instances':len(refs), 'electrical_instances_main':len(refs),'main_hardware':hardware_counts},indent=2))
 
 
 def render(markdown):

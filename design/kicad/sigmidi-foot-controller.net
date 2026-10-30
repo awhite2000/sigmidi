@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/ab/Documents/ChatGPT/MIDI controller 3/design/kicad/sigmidi-foot-controller.kicad_sch</source>
-    <date>2026-10-29T00:06:31</date>
+    <date>2026-10-30T08:37:35</date>
     <tool>Eeschema 10.0.7</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -38,7 +38,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="CP_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5d94ea65-e521-404e-aee9-1209e235fce0</tstamps>
+      <tstamps>c9fbd315-970e-4dcf-9ef4-ce384d65f928</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -62,7 +62,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>70d71677-feea-4719-864f-a56c1111d647</tstamps>
+      <tstamps>9a6922da-2b75-4940-b01c-1c7a687eee9b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -83,7 +83,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>035617e5-426c-46fe-b57d-f5ead8b19862</tstamps>
+      <tstamps>33d028bc-6db5-4061-b9ce-9cb9c6473727</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -104,14 +104,12 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>86537354-01fa-4448-ad19-8dd40a250275</tstamps>
+      <tstamps>1bdb4b44-3b2a-42aa-956b-0f8e82b6ba06</tstamps>
       <units>
         <unit name="A">
           <pins>
-            <pin num="11"/>
-            <pin num="12"/>
-            <pin num="5"/>
-            <pin num="6"/>
+            <pin num="10"/>
+            <pin num="4"/>
             <pin num="7"/>
             <pin num="8"/>
             <pin num="9"/>
@@ -119,8 +117,10 @@
             <pin num="2"/>
             <pin num="3"/>
             <pin num="13"/>
-            <pin num="10"/>
-            <pin num="4"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="5"/>
+            <pin num="6"/>
           </pins>
         </unit>
       </units>
@@ -137,7 +137,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a6b10f92-af68-4eb4-a7ce-e5cad5aae1d9</tstamps>
+      <tstamps>5cec697d-c42f-4a00-aacd-dfa420dba881</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -161,7 +161,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5ac64377-b8aa-457a-b1ac-20d37aa439ce</tstamps>
+      <tstamps>9629c906-4fbe-4b0f-adab-ccc65713d3a9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -185,7 +185,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f9fd4146-4e0f-4f52-aa51-dda488ffabd8</tstamps>
+      <tstamps>7b094cdf-40df-4159-9ced-16759a6b08e2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -209,7 +209,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6c829c74-6118-4b9b-92df-314d4da1946b</tstamps>
+      <tstamps>2dc2adb8-f7a1-4329-8689-2ecf5296a358</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -233,7 +233,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ea1fbedc-ab83-4d4f-8389-972cb81cc822</tstamps>
+      <tstamps>c5abc09c-7013-40a2-a7de-cbb9de1a60fd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -257,7 +257,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2432836e-3c72-4d30-b712-64f5423356e2</tstamps>
+      <tstamps>51b40128-cd41-46c2-932d-3bee77de6169</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -281,7 +281,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>1ca43ce3-c2f7-4c10-a04d-cab1ab1620c7</tstamps>
+      <tstamps>1bcca546-a5e8-4511-b8b6-036d5be0a561</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -305,7 +305,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>62a1d66c-5db7-4d6d-8b04-7a2b0446b165</tstamps>
+      <tstamps>fb31b0a8-c519-4602-818d-7fed5762bfa7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -329,7 +329,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6a763976-72ec-40a0-a6a6-60e2be7917d5</tstamps>
+      <tstamps>e3ce5df3-111e-4bbf-b372-e0e5c6cc421e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -353,7 +353,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7409baa5-2b60-4835-ac86-c42adb5efb62</tstamps>
+      <tstamps>dcb61368-21aa-4ce4-ac0f-eaf169f9ddc0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -379,7 +379,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b6da5cb3-02cb-4d0b-a9cb-5e1f2ec4aef6</tstamps>
+      <tstamps>62095488-d0f5-4084-9864-2a2cbe066be6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -403,7 +403,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>fe21858c-0e27-44cd-8d8a-3174c2373cd1</tstamps>
+      <tstamps>71ef158e-5f61-48e7-8c27-73342a7a78b9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -427,7 +427,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>13fbf239-cbd4-4a4d-b265-fef0a97a9a0c</tstamps>
+      <tstamps>957a9a82-2993-4b5d-8ffe-837a1070a0ac</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -451,7 +451,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ba6e6699-4512-4421-a6b9-8e0099f2a9ba</tstamps>
+      <tstamps>b836d361-b9db-4345-b89d-f5bd7ba33f19</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -475,7 +475,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3a67df8f-1f8c-4325-a3a8-8fee1944f650</tstamps>
+      <tstamps>b5b88aaa-845b-4320-af8e-a86f9c8ffe31</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -499,7 +499,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e4bf5c49-bad4-480f-ab09-8307d20fb181</tstamps>
+      <tstamps>adac5359-9281-44cf-b09c-67e0ca71fa41</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -523,7 +523,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5ce0b3f2-3a36-4bc3-b958-f1517a0b6170</tstamps>
+      <tstamps>639ae66b-ba06-4641-8418-5621985078af</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -547,7 +547,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f81f993b-c998-4b82-9b22-e827e2ed5c2f</tstamps>
+      <tstamps>3f087c60-6c85-4bbb-9725-49205fc70f5a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -571,7 +571,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>868548b6-d0aa-432e-9117-50a22e8c6fc1</tstamps>
+      <tstamps>6a201780-5822-4124-8751-1d9307b998a3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -595,7 +595,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>1bff03b5-9ff0-4ef1-9f46-b679c44fde33</tstamps>
+      <tstamps>1b2a07a2-af51-457d-997c-fb8360f1e9a0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -619,7 +619,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8770d12b-6658-43cc-8b60-56a724887f3b</tstamps>
+      <tstamps>0c20f18f-b4b6-4a72-a5ff-6e7b14271b5b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -643,7 +643,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b24f2636-b4ae-4dde-a97d-ef666078dcbf</tstamps>
+      <tstamps>62bba33b-cbbb-48a1-9dac-bb61e90617d7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -667,7 +667,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>93d5a7ec-8c4f-4397-90d9-5d29b0ea361f</tstamps>
+      <tstamps>3420af0e-b2c9-43d6-839c-c14b0f5fb08a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -691,7 +691,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2727b7f4-e910-4065-9f89-70e52e7e2ccf</tstamps>
+      <tstamps>ec95ba8b-733f-4503-90fa-01e7853d092c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -715,7 +715,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0ce683b9-1bef-4c61-9e6f-3489cd7a3c1b</tstamps>
+      <tstamps>08bf22b8-dfbf-4780-9f14-e06d1a79f3eb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -739,7 +739,55 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bd77d1ae-4cdc-42aa-8111-93f850163a8c</tstamps>
+      <tstamps>2c158d27-fa19-4a9e-90a3-d29b77a96cb6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R50">
+      <value>100k</value>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="sigmidi-foot-controller"/>
+      <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>797e2206-f043-45ca-bce0-940cfa1baa78</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R51">
+      <value>150k</value>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="sigmidi-foot-controller"/>
+      <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>30e4288d-d1f5-4973-90b3-8d4a62e91834</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -762,7 +810,7 @@
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7d5ef38c-d868-4c5c-a7e2-520d3952ae83</tstamps>
+      <tstamps>303bf94f-3577-4cac-9de7-45aac7dbd0b9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -785,7 +833,7 @@
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5ea55940-953a-4031-bd58-6f5f126c8773</tstamps>
+      <tstamps>5d9003bf-0c89-405b-8562-71fc21804a93</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -808,7 +856,7 @@
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f6e323e3-9a67-4f27-8c53-0fdb5c354d6a</tstamps>
+      <tstamps>b594e592-1f27-470d-bcda-08f91640382b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -831,7 +879,7 @@
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e3d15db6-e7d8-4c88-b17c-e15bd4420e26</tstamps>
+      <tstamps>d7853c0e-e7f7-4903-8f46-79c6fced1aa1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -854,7 +902,7 @@
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5618dbd6-2f96-4195-9425-b96cab094dce</tstamps>
+      <tstamps>ff7c3fbf-1de8-43a3-a72f-c420bb43f33d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -877,7 +925,7 @@
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b62bc76d-a2bf-4d49-a818-b1422955b548</tstamps>
+      <tstamps>9bd576e2-b22a-431b-b5fd-848918979a6b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -900,7 +948,7 @@
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>84721d1c-5a5b-4203-811d-8bb302aa68c1</tstamps>
+      <tstamps>6255a265-fcb5-41ed-9146-8b02668caa05</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -923,7 +971,7 @@
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>60d2f56f-3feb-4a44-b4de-e687a2368282</tstamps>
+      <tstamps>665055b2-80f3-4378-802c-0d015e21b564</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -946,7 +994,7 @@
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e74cc81b-9b87-4850-bb10-63c794754e5c</tstamps>
+      <tstamps>b18627d3-ca94-46fd-ad0d-e938477a6809</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -969,7 +1017,7 @@
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e253ec5a-1356-4970-86bf-cae633bcc19a</tstamps>
+      <tstamps>7d4c505f-cbf6-4e11-9796-e14959978512</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -990,7 +1038,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8092464a-c121-4017-973c-ef6af824d5fd</tstamps>
+      <tstamps>40dc13cd-84e7-4c58-815d-45a0e4b66b5f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1004,53 +1052,51 @@
       </units>
     </comp>
     <comp ref="U1">
-      <value>DFRobot DFR1075 V1.1</value>
-      <datasheet>https://wiki.dfrobot.com/dfr1075/</datasheet>
+      <value>Arduino Nano ESP32 ABX00083</value>
+      <datasheet>https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf</datasheet>
       <fields>
         <field name="Footprint"/>
-        <field name="Datasheet">https://wiki.dfrobot.com/dfr1075/</field>
+        <field name="Datasheet">https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf</field>
         <field name="Description"/>
       </fields>
-      <libsource lib="SIGMIDI" part="DFR1075_Physical" description=""/>
+      <libsource lib="SIGMIDI" part="Arduino_Nano_ESP32_Physical" description=""/>
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bac108cc-cfab-4bfd-8255-9f3eb8852b17</tstamps>
+      <tstamps>83a5b08d-9e06-4d14-bc1f-2937303a6caa</tstamps>
       <units>
         <unit name="A">
           <pins>
-            <pin num="P2:1"/>
-            <pin num="P2:2"/>
-            <pin num="P2:3"/>
-            <pin num="P2:4"/>
-            <pin num="P2:5"/>
-            <pin num="P2:6"/>
-            <pin num="P2:7"/>
-            <pin num="P2:8"/>
-            <pin num="P2:9"/>
-            <pin num="P2:10"/>
-            <pin num="P2:11"/>
-            <pin num="P2:12"/>
-            <pin num="P2:13"/>
-            <pin num="P2:14"/>
-            <pin num="P2:15"/>
-            <pin num="P2:16"/>
-            <pin num="P2:17"/>
-            <pin num="P2:18"/>
-            <pin num="P1:1"/>
-            <pin num="P1:2"/>
-            <pin num="P1:3"/>
-            <pin num="P1:4"/>
-            <pin num="P1:5"/>
-            <pin num="P1:6"/>
-            <pin num="P1:7"/>
-            <pin num="P1:8"/>
-            <pin num="P1:9"/>
-            <pin num="P1:10"/>
-            <pin num="P1:11"/>
-            <pin num="P1:12"/>
-            <pin num="P1:13"/>
-            <pin num="P1:14"/>
+            <pin num="JP1:1"/>
+            <pin num="JP1:2"/>
+            <pin num="JP1:3"/>
+            <pin num="JP1:4"/>
+            <pin num="JP1:5"/>
+            <pin num="JP1:6"/>
+            <pin num="JP1:7"/>
+            <pin num="JP1:8"/>
+            <pin num="JP1:9"/>
+            <pin num="JP1:10"/>
+            <pin num="JP1:11"/>
+            <pin num="JP1:12"/>
+            <pin num="JP1:13"/>
+            <pin num="JP1:14"/>
+            <pin num="JP1:15"/>
+            <pin num="JP2:15"/>
+            <pin num="JP2:14"/>
+            <pin num="JP2:13"/>
+            <pin num="JP2:12"/>
+            <pin num="JP2:11"/>
+            <pin num="JP2:10"/>
+            <pin num="JP2:9"/>
+            <pin num="JP2:8"/>
+            <pin num="JP2:7"/>
+            <pin num="JP2:6"/>
+            <pin num="JP2:5"/>
+            <pin num="JP2:4"/>
+            <pin num="JP2:3"/>
+            <pin num="JP2:2"/>
+            <pin num="JP2:1"/>
           </pins>
         </unit>
       </units>
@@ -1067,7 +1113,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d09d5776-9103-4f6c-af90-2fc2ea54020d</tstamps>
+      <tstamps>b8583a54-9fdc-4b6f-bd3e-684cf9f9a7db</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1095,7 +1141,7 @@
       <property name="Sheetname" value="sigmidi-foot-controller"/>
       <property name="Sheetfile" value="sigmidi-foot-controller.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c3b348d5-eb86-4a0b-8e2a-3806f49e26f2</tstamps>
+      <tstamps>ee6403a6-dd66-4a2f-99cd-a53d5766e628</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1183,6 +1229,48 @@
         <pin num="13" name="MECH" type="no_connect"/>
       </pins>
     </libpart>
+    <libpart lib="SIGMIDI" part="Arduino_Nano_ESP32_Physical">
+      <docs>https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Arduino Nano ESP32 ABX00083</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="JP1:1" name="D13" type="bidirectional"/>
+        <pin num="JP1:2" name="3V3/3V3" type="power_out"/>
+        <pin num="JP1:3" name="B0" type="bidirectional"/>
+        <pin num="JP1:4" name="A0/GPIO1" type="input"/>
+        <pin num="JP1:5" name="A1/GPIO2" type="input"/>
+        <pin num="JP1:6" name="A2" type="bidirectional"/>
+        <pin num="JP1:7" name="A3/GPIO4" type="input"/>
+        <pin num="JP1:8" name="A4/GPIO11" type="input"/>
+        <pin num="JP1:9" name="A5" type="bidirectional"/>
+        <pin num="JP1:10" name="A6" type="bidirectional"/>
+        <pin num="JP1:11" name="A7" type="bidirectional"/>
+        <pin num="JP1:12" name="VBUS/VUSB/VBUS" type="power_out"/>
+        <pin num="JP1:13" name="B1" type="bidirectional"/>
+        <pin num="JP1:14" name="GND/GND" type="power_in"/>
+        <pin num="JP1:15" name="VIN/VIN" type="power_in"/>
+        <pin num="JP2:1" name="D1/TX0" type="bidirectional"/>
+        <pin num="JP2:2" name="D0/RX0" type="bidirectional"/>
+        <pin num="JP2:3" name="RST" type="input"/>
+        <pin num="JP2:4" name="GND/GND" type="power_in"/>
+        <pin num="JP2:5" name="D2/GPIO5" type="output"/>
+        <pin num="JP2:6" name="D3/GPIO6" type="output"/>
+        <pin num="JP2:7" name="D4/GPIO7" type="input"/>
+        <pin num="JP2:8" name="D5/GPIO8" type="input"/>
+        <pin num="JP2:9" name="D6/GPIO9" type="input"/>
+        <pin num="JP2:10" name="D7/GPIO10" type="output"/>
+        <pin num="JP2:11" name="D8/GPIO17" type="output"/>
+        <pin num="JP2:12" name="D9/GPIO18" type="output"/>
+        <pin num="JP2:13" name="D10/GPIO21" type="output"/>
+        <pin num="JP2:14" name="D11/GPIO38" type="output"/>
+        <pin num="JP2:15" name="D12/GPIO47" type="output"/>
+      </pins>
+    </libpart>
     <libpart lib="SIGMIDI" part="Barrel_CenterNegative">
       <fields>
         <field name="Reference">J</field>
@@ -1194,50 +1282,6 @@
       <pins>
         <pin num="CENTER" name="CENTER" type="passive"/>
         <pin num="SLEEVE" name="SLEEVE" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="SIGMIDI" part="DFR1075_Physical">
-      <docs>https://wiki.dfrobot.com/dfr1075/</docs>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">DFRobot DFR1075 V1.1</field>
-        <field name="Footprint"/>
-        <field name="Datasheet">https://wiki.dfrobot.com/dfr1075/</field>
-        <field name="Description"/>
-      </fields>
-      <pins>
-        <pin num="P1:1" name="VIN/VCC" type="power_in"/>
-        <pin num="P1:2" name="3V3/3V3" type="power_out"/>
-        <pin num="P1:3" name="GND/GND" type="power_in"/>
-        <pin num="P1:4" name="SCL/GPIO20" type="output"/>
-        <pin num="P1:5" name="SDA" type="bidirectional"/>
-        <pin num="P1:6" name="5/A4/LP_TX" type="bidirectional"/>
-        <pin num="P1:7" name="4/A3/LP_RX" type="bidirectional"/>
-        <pin num="P1:8" name="3/A2/GPIO3" type="input"/>
-        <pin num="P1:9" name="2/A1/GPIO2" type="input"/>
-        <pin num="P1:10" name="NC" type="no_connect"/>
-        <pin num="P1:11" name="15/D13" type="bidirectional"/>
-        <pin num="P1:12" name="6/D12/LP_SDA/GPIO6" type="input"/>
-        <pin num="P1:13" name="7/D11/LP_SCL/GPIO7" type="input"/>
-        <pin num="P1:14" name="NC" type="no_connect"/>
-        <pin num="P2:1" name="RST" type="bidirectional"/>
-        <pin num="P2:2" name="3V3/3V3" type="passive"/>
-        <pin num="P2:3" name="NC" type="no_connect"/>
-        <pin num="P2:4" name="GND/GND" type="power_in"/>
-        <pin num="P2:5" name="NC" type="no_connect"/>
-        <pin num="P2:6" name="23/SCK/GPIO23" type="output"/>
-        <pin num="P2:7" name="22/MO/GPIO22" type="output"/>
-        <pin num="P2:8" name="21/MI/GPIO21" type="output"/>
-        <pin num="P2:9" name="20/SCL" type="bidirectional"/>
-        <pin num="P2:10" name="19/SDA/GPIO19" type="output"/>
-        <pin num="P2:11" name="9/D9" type="bidirectional"/>
-        <pin num="P2:12" name="18/D7/GPIO18" type="output"/>
-        <pin num="P2:13" name="1/D6/GPIO1" type="input"/>
-        <pin num="P2:14" name="NC" type="no_connect"/>
-        <pin num="P2:15" name="14/D3/GPIO14" type="output"/>
-        <pin num="P2:16" name="8/D2" type="bidirectional"/>
-        <pin num="P2:17" name="16/TX/GPIO16" type="output"/>
-        <pin num="P2:18" name="17/RX/GPIO17" type="input"/>
       </pins>
     </libpart>
     <libpart lib="SIGMIDI" part="Encoder_20Detent_Click">
@@ -1257,12 +1301,11 @@
       </pins>
     </libpart>
     <libpart lib="SIGMIDI" part="Pololu_2535_SideView">
-      <docs>https://www.pololu.com/product/2535</docs>
       <fields>
         <field name="Reference">LED</field>
         <field name="Value">Pololu 2535</field>
         <field name="Footprint"/>
-        <field name="Datasheet">https://www.pololu.com/product/2535</field>
+        <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <pins>
@@ -1273,12 +1316,11 @@
       </pins>
     </libpart>
     <libpart lib="SIGMIDI" part="Pololu_S13V10F5">
-      <docs>https://www.pololu.com/product/4083</docs>
       <fields>
         <field name="Reference">U</field>
         <field name="Value">Pololu S13V10F5 #4083</field>
         <field name="Footprint"/>
-        <field name="Datasheet">https://www.pololu.com/product/4083</field>
+        <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <pins>
@@ -1288,12 +1330,11 @@
       </pins>
     </libpart>
     <libpart lib="SIGMIDI" part="Waveshare_24382_P2">
-      <docs>https://www.waveshare.com/wiki/1.69inch_LCD_Module</docs>
       <fields>
         <field name="Reference">U</field>
         <field name="Value">Waveshare 24382</field>
         <field name="Footprint"/>
-        <field name="Datasheet">https://www.waveshare.com/wiki/1.69inch_LCD_Module</field>
+        <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <pins>
@@ -1345,34 +1386,33 @@
       <node ref="LED7" pin="+5V" pinfunction="5V_+5V" pintype="power_in"/>
       <node ref="LED8" pin="+5V" pinfunction="5V_+5V" pintype="power_in"/>
       <node ref="LED9" pin="+5V" pinfunction="5V_+5V" pintype="power_in"/>
-      <node ref="U1" pin="P1:1" pinfunction="VIN/VCC_P1:1" pintype="power_in"/>
       <node ref="U3" pin="VOUT" pinfunction="VOUT_VOUT" pintype="power_out"/>
     </net>
     <net code="2" name="/+9V" class="Default">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="J1" pin="SLEEVE" pinfunction="SLEEVE_SLEEVE" pintype="passive"/>
+      <node ref="U1" pin="JP1:15" pinfunction="VIN/VIN_JP1:15" pintype="power_in"/>
       <node ref="U3" pin="VIN" pinfunction="VIN_VIN" pintype="power_in"/>
     </net>
     <net code="3" name="/3V3" class="Default">
       <node ref="R20" pin="1" pintype="passive"/>
       <node ref="R30" pin="1" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
-      <node ref="U1" pin="P1:2" pinfunction="3V3/3V3_P1:2" pintype="power_out"/>
-      <node ref="U1" pin="P2:2" pinfunction="3V3/3V3_P2:2" pintype="passive"/>
+      <node ref="U1" pin="JP1:2" pinfunction="3V3/3V3_JP1:2" pintype="power_out"/>
       <node ref="U2" pin="P2:1" pinfunction="BL_P2:1" pintype="input"/>
       <node ref="U2" pin="P2:8" pinfunction="VCC_P2:8" pintype="power_in"/>
     </net>
     <net code="4" name="/ENC_A" class="Default">
       <node ref="SW11" pin="A" pinfunction="A_A" pintype="passive"/>
-      <node ref="U1" pin="P1:12" pinfunction="6/D12/LP_SDA/GPIO6_P1:12" pintype="input"/>
+      <node ref="U1" pin="JP2:7" pinfunction="D4/GPIO7_JP2:7" pintype="input"/>
     </net>
     <net code="5" name="/ENC_B" class="Default">
       <node ref="SW11" pin="B" pinfunction="B_B" pintype="passive"/>
-      <node ref="U1" pin="P1:13" pinfunction="7/D11/LP_SCL/GPIO7_P1:13" pintype="input"/>
+      <node ref="U1" pin="JP2:8" pinfunction="D5/GPIO8_JP2:8" pintype="input"/>
     </net>
     <net code="6" name="/ENC_SW" class="Default">
       <node ref="SW11" pin="SW1" pinfunction="SW1_SW1" pintype="passive"/>
-      <node ref="U1" pin="P2:18" pinfunction="17/RX/GPIO17_P2:18" pintype="input"/>
+      <node ref="U1" pin="JP2:9" pinfunction="D6/GPIO9_JP2:9" pintype="input"/>
     </net>
     <net code="7" name="/GND" class="Default">
       <node ref="C1" pin="2" pintype="passive"/>
@@ -1390,6 +1430,7 @@
       <node ref="LED7" pin="GND" pinfunction="GND_GND" pintype="power_in"/>
       <node ref="LED8" pin="GND" pinfunction="GND_GND" pintype="power_in"/>
       <node ref="LED9" pin="GND" pinfunction="GND_GND" pintype="power_in"/>
+      <node ref="R51" pin="2" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="SW10" pin="2" pinfunction="2_2" pintype="passive"/>
@@ -1403,8 +1444,8 @@
       <node ref="SW7" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="SW8" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="SW9" pin="2" pinfunction="2_2" pintype="passive"/>
-      <node ref="U1" pin="P1:3" pinfunction="GND/GND_P1:3" pintype="power_in"/>
-      <node ref="U1" pin="P2:4" pinfunction="GND/GND_P2:4" pintype="power_in"/>
+      <node ref="U1" pin="JP1:14" pinfunction="GND/GND_JP1:14" pintype="power_in"/>
+      <node ref="U1" pin="JP2:4" pinfunction="GND/GND_JP2:4" pintype="power_in"/>
       <node ref="U2" pin="P2:7" pinfunction="GND_P2:7" pintype="power_in"/>
       <node ref="U3" pin="GND" pinfunction="GND_GND" pintype="power_in"/>
     </net>
@@ -1449,40 +1490,40 @@
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="R8" pin="1" pintype="passive"/>
       <node ref="R9" pin="1" pintype="passive"/>
-      <node ref="U1" pin="P2:13" pinfunction="1/D6/GPIO1_P2:13" pintype="input"/>
+      <node ref="U1" pin="JP1:4" pinfunction="A0/GPIO1_JP1:4" pintype="input"/>
     </net>
     <net code="18" name="/LCD_CLK" class="Default">
-      <node ref="U1" pin="P2:6" pinfunction="23/SCK/GPIO23_P2:6" pintype="output"/>
+      <node ref="U1" pin="JP2:11" pinfunction="D8/GPIO17_JP2:11" pintype="output"/>
       <node ref="U2" pin="P2:5" pinfunction="SCL/CLK_P2:5" pintype="input"/>
     </net>
     <net code="19" name="/LCD_CS" class="Default">
-      <node ref="U1" pin="P2:12" pinfunction="18/D7/GPIO18_P2:12" pintype="output"/>
+      <node ref="U1" pin="JP2:13" pinfunction="D10/GPIO21_JP2:13" pintype="output"/>
       <node ref="U2" pin="P2:4" pinfunction="CS_P2:4" pintype="input"/>
     </net>
     <net code="20" name="/LCD_DC" class="Default">
-      <node ref="U1" pin="P2:10" pinfunction="19/SDA/GPIO19_P2:10" pintype="output"/>
+      <node ref="U1" pin="JP2:12" pinfunction="D9/GPIO18_JP2:12" pintype="output"/>
       <node ref="U2" pin="P2:3" pinfunction="D/C_P2:3" pintype="input"/>
     </net>
     <net code="21" name="/LCD_DIN" class="Default">
-      <node ref="U1" pin="P2:7" pinfunction="22/MO/GPIO22_P2:7" pintype="output"/>
+      <node ref="U1" pin="JP2:14" pinfunction="D11/GPIO38_JP2:14" pintype="output"/>
       <node ref="U2" pin="P2:6" pinfunction="SDA/DIN_P2:6" pintype="input"/>
     </net>
     <net code="22" name="/LCD_RST" class="Default">
-      <node ref="U1" pin="P2:15" pinfunction="14/D3/GPIO14_P2:15" pintype="output"/>
+      <node ref="U1" pin="JP2:15" pinfunction="D12/GPIO47_JP2:15" pintype="output"/>
       <node ref="U2" pin="P2:2" pinfunction="RST_P2:2" pintype="input"/>
     </net>
     <net code="23" name="/LED_GPIO" class="Default">
       <node ref="LED1" pin="DIN" pinfunction="DIN_DIN" pintype="input"/>
-      <node ref="U1" pin="P2:17" pinfunction="16/TX/GPIO16_P2:17" pintype="output"/>
+      <node ref="U1" pin="JP2:10" pinfunction="D7/GPIO10_JP2:10" pintype="output"/>
     </net>
     <net code="24" name="/P1_ADC" class="Default">
       <node ref="J2" pin="12" pinfunction="PEDAL1TIP_12" pintype="passive"/>
       <node ref="R21" pin="2" pintype="passive"/>
-      <node ref="U1" pin="P1:9" pinfunction="2/A1/GPIO2_P1:9" pintype="input"/>
+      <node ref="U1" pin="JP1:5" pinfunction="A1/GPIO2_JP1:5" pintype="input"/>
     </net>
     <net code="25" name="/P1_MODE" class="Default">
       <node ref="R21" pin="1" pintype="passive"/>
-      <node ref="U1" pin="P1:4" pinfunction="SCL/GPIO20_P1:4" pintype="output"/>
+      <node ref="U1" pin="JP2:5" pinfunction="D2/GPIO5_JP2:5" pintype="output"/>
     </net>
     <net code="26" name="/P1_RING" class="Default">
       <node ref="J2" pin="11" pinfunction="PEDAL1RING_11" pintype="passive"/>
@@ -1491,11 +1532,11 @@
     <net code="27" name="/P2_ADC" class="Default">
       <node ref="J2" pin="6" pinfunction="PEDAL2TIP_6" pintype="passive"/>
       <node ref="R31" pin="2" pintype="passive"/>
-      <node ref="U1" pin="P1:8" pinfunction="3/A2/GPIO3_P1:8" pintype="input"/>
+      <node ref="U1" pin="JP1:7" pinfunction="A3/GPIO4_JP1:7" pintype="input"/>
     </net>
     <net code="28" name="/P2_MODE" class="Default">
       <node ref="R31" pin="1" pintype="passive"/>
-      <node ref="U1" pin="P2:8" pinfunction="21/MI/GPIO21_P2:8" pintype="output"/>
+      <node ref="U1" pin="JP2:6" pinfunction="D3/GPIO6_JP2:6" pintype="output"/>
     </net>
     <net code="29" name="/P2_RING" class="Default">
       <node ref="J2" pin="5" pinfunction="PEDAL2RING_5" pintype="passive"/>
@@ -1550,68 +1591,68 @@
       <node ref="R18" pin="2" pintype="passive"/>
       <node ref="SW10" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="40" name="unconnected-(J2-MECH-Pad13)" class="Default">
+    <net code="40" name="/USB_SENSE" class="Default">
+      <node ref="R50" pin="2" pintype="passive"/>
+      <node ref="R51" pin="1" pintype="passive"/>
+      <node ref="U1" pin="JP1:8" pinfunction="A4/GPIO11_JP1:8" pintype="input"/>
+    </net>
+    <net code="41" name="/USB_VBUS" class="Default">
+      <node ref="R50" pin="1" pintype="passive"/>
+      <node ref="U1" pin="JP1:12" pinfunction="VBUS/VUSB/VBUS_JP1:12" pintype="power_out"/>
+    </net>
+    <net code="42" name="unconnected-(J2-MECH-Pad13)" class="Default">
       <node ref="J2" pin="13" pinfunction="MECH_13" pintype="no_connect"/>
     </net>
-    <net code="41" name="unconnected-(J2-NC-Pad1)" class="Default">
+    <net code="43" name="unconnected-(J2-NC-Pad1)" class="Default">
       <node ref="J2" pin="1" pinfunction="NC_1" pintype="no_connect"/>
     </net>
-    <net code="42" name="unconnected-(J2-NC-Pad2)" class="Default">
+    <net code="44" name="unconnected-(J2-NC-Pad2)" class="Default">
       <node ref="J2" pin="2" pinfunction="NC_2" pintype="no_connect"/>
     </net>
-    <net code="43" name="unconnected-(J2-NC-Pad3)" class="Default">
+    <net code="45" name="unconnected-(J2-NC-Pad3)" class="Default">
       <node ref="J2" pin="3" pinfunction="NC_3" pintype="no_connect"/>
     </net>
-    <net code="44" name="unconnected-(J2-NC-Pad7)" class="Default">
+    <net code="46" name="unconnected-(J2-NC-Pad7)" class="Default">
       <node ref="J2" pin="7" pinfunction="NC_7" pintype="no_connect"/>
     </net>
-    <net code="45" name="unconnected-(J2-NC-Pad8)" class="Default">
+    <net code="47" name="unconnected-(J2-NC-Pad8)" class="Default">
       <node ref="J2" pin="8" pinfunction="NC_8" pintype="no_connect"/>
     </net>
-    <net code="46" name="unconnected-(J2-NC-Pad9)" class="Default">
+    <net code="48" name="unconnected-(J2-NC-Pad9)" class="Default">
       <node ref="J2" pin="9" pinfunction="NC_9" pintype="no_connect"/>
     </net>
-    <net code="47" name="unconnected-(LED10-PadDOUT)" class="Default">
+    <net code="49" name="unconnected-(LED10-PadDOUT)" class="Default">
       <node ref="LED10" pin="DOUT" pinfunction="DOUT_DOUT" pintype="output+no_connect"/>
     </net>
-    <net code="48" name="unconnected-(U1-4/A3/LP_RX-PadP1:7)" class="Default">
-      <node ref="U1" pin="P1:7" pinfunction="4/A3/LP_RX_P1:7" pintype="bidirectional+no_connect"/>
+    <net code="50" name="unconnected-(U1-A2-PadJP1:6)" class="Default">
+      <node ref="U1" pin="JP1:6" pinfunction="A2_JP1:6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="49" name="unconnected-(U1-5/A4/LP_TX-PadP1:6)" class="Default">
-      <node ref="U1" pin="P1:6" pinfunction="5/A4/LP_TX_P1:6" pintype="bidirectional+no_connect"/>
+    <net code="51" name="unconnected-(U1-A5-PadJP1:9)" class="Default">
+      <node ref="U1" pin="JP1:9" pinfunction="A5_JP1:9" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="50" name="unconnected-(U1-8/D2-PadP2:16)" class="Default">
-      <node ref="U1" pin="P2:16" pinfunction="8/D2_P2:16" pintype="bidirectional+no_connect"/>
+    <net code="52" name="unconnected-(U1-A6-PadJP1:10)" class="Default">
+      <node ref="U1" pin="JP1:10" pinfunction="A6_JP1:10" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="51" name="unconnected-(U1-9/D9-PadP2:11)" class="Default">
-      <node ref="U1" pin="P2:11" pinfunction="9/D9_P2:11" pintype="bidirectional+no_connect"/>
+    <net code="53" name="unconnected-(U1-A7-PadJP1:11)" class="Default">
+      <node ref="U1" pin="JP1:11" pinfunction="A7_JP1:11" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="52" name="unconnected-(U1-15/D13-PadP1:11)" class="Default">
-      <node ref="U1" pin="P1:11" pinfunction="15/D13_P1:11" pintype="bidirectional+no_connect"/>
+    <net code="54" name="unconnected-(U1-B0-PadJP1:3)" class="Default">
+      <node ref="U1" pin="JP1:3" pinfunction="B0_JP1:3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="53" name="unconnected-(U1-20/SCL-PadP2:9)" class="Default">
-      <node ref="U1" pin="P2:9" pinfunction="20/SCL_P2:9" pintype="bidirectional+no_connect"/>
+    <net code="55" name="unconnected-(U1-B1-PadJP1:13)" class="Default">
+      <node ref="U1" pin="JP1:13" pinfunction="B1_JP1:13" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="54" name="unconnected-(U1-NC-PadP1:10)" class="Default">
-      <node ref="U1" pin="P1:10" pinfunction="NC_P1:10" pintype="no_connect"/>
+    <net code="56" name="unconnected-(U1-D0/RX0-PadJP2:2)" class="Default">
+      <node ref="U1" pin="JP2:2" pinfunction="D0/RX0_JP2:2" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="55" name="unconnected-(U1-NC-PadP1:14)" class="Default">
-      <node ref="U1" pin="P1:14" pinfunction="NC_P1:14" pintype="no_connect"/>
+    <net code="57" name="unconnected-(U1-D1/TX0-PadJP2:1)" class="Default">
+      <node ref="U1" pin="JP2:1" pinfunction="D1/TX0_JP2:1" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="56" name="unconnected-(U1-NC-PadP2:3)" class="Default">
-      <node ref="U1" pin="P2:3" pinfunction="NC_P2:3" pintype="no_connect"/>
+    <net code="58" name="unconnected-(U1-D13-PadJP1:1)" class="Default">
+      <node ref="U1" pin="JP1:1" pinfunction="D13_JP1:1" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="57" name="unconnected-(U1-NC-PadP2:5)" class="Default">
-      <node ref="U1" pin="P2:5" pinfunction="NC_P2:5" pintype="no_connect"/>
-    </net>
-    <net code="58" name="unconnected-(U1-NC-PadP2:14)" class="Default">
-      <node ref="U1" pin="P2:14" pinfunction="NC_P2:14" pintype="no_connect"/>
-    </net>
-    <net code="59" name="unconnected-(U1-RST-PadP2:1)" class="Default">
-      <node ref="U1" pin="P2:1" pinfunction="RST_P2:1" pintype="bidirectional+no_connect"/>
-    </net>
-    <net code="60" name="unconnected-(U1-SDA-PadP1:5)" class="Default">
-      <node ref="U1" pin="P1:5" pinfunction="SDA_P1:5" pintype="bidirectional+no_connect"/>
+    <net code="59" name="unconnected-(U1-RST-PadJP2:3)" class="Default">
+      <node ref="U1" pin="JP2:3" pinfunction="RST_JP2:3" pintype="input+no_connect"/>
     </net>
   </nets>
 </export>

@@ -17,7 +17,7 @@ Upper parts meet at continuous hooked joints with 2 × 2 mm bevels, 0.20 mm incl
 
 ## Controls and mounts
 
-The Waveshare 24382 glass is flush with the lower deck. Four hollow towers have 2 mm walls and recessed head seats for **M2×5 countersunk screws**. Nominal factory-stud engagement is 1.39 mm; check the actual blind holes. The encoder body is 15 × 15 mm with a 15 mm-diameter, 5 mm-high knob. DFR1075 uses M1.6 hardware, with USB-C facing the rear through a recessed protective pocket.
+The Waveshare 24382 glass is flush with the lower deck. Four hollow towers have 2 mm walls and recessed head seats for **M2×5 countersunk screws**. Nominal factory-stud engagement is 1.39 mm; check the actual blind holes. The encoder body is 15 × 15 mm with a 15 mm-diameter, 5 mm-high knob. Arduino Nano ESP32 is mounted component-side down using the [two-insert mounting kit](nano-esp32/README.md), with USB-C facing the rear protective pocket. The existing shell and posts are retained.
 
 Switch labels are Arial Bold, 8 mm high, recessed 0.8 mm, leaving 2.2 mm roof backing. Left labels sit to the left of each LED; Right labels sit to its right. Left electronics shells carry a 25 × 20.183 mm icon raised 0.6 mm between A and B, giving 54.6 mm local body height.
 
@@ -25,11 +25,11 @@ Each optional Pololu 2535 LED has a 5.4 mm bore, 6.4 × 0.8 mm flange recess and
 
 ## Power and cooling
 
-The rear input is **9 V DC, center-negative, 5.5 × 2.1 mm**. The socket has an 8 mm thread, 8 mm threaded length, 4 mm flange/body, 6 mm terminals and 2 mm nut; its panel bore is 8.4 mm. The Pololu S13V10F5 #4083 supplies regulated 5 V to DFR1075 VIN/VCC and GND. Its 1 A rating covers all connected loads.
+The rear input is **9 V DC, center-negative, 5.5 × 2.1 mm**. The socket has an 8 mm thread, 8 mm threaded length, 4 mm flange/body, 6 mm terminals and 2 mm nut; its panel bore is 8.4 mm. The Pololu S13V10F5 #4083 supplies regulated 5 V to the optional LEDs. The same 9 V input feeds Nano VIN directly; all returns share GND. Converter 5 V and USB VBUS stay separate.
 
 The converter rests on three bare-edge seats held by two PETG clips: 4.8 mm wide, 1.6 mm bending thickness, with 0.8 mm root gussets at 45°. It has 8.65 mm clearance below its lowest component. Spread the leaves about 0.6 mm for insertion/removal and keep wires clear of the springs.
 
-The base has six 2.4 mm-wide slots around the converter and seven below DFR1075. The rear has three columns of four 2.4 mm-high slots, with a 7.6 mm solid upper rim. A full-height internal rib between two columns has a 2 mm crest, 45° side chamfers and nominal base contact. It merges with the USB-pocket chamfer. All twelve rear slots have **0.6 mm internal print membranes**; remove them before use. Finished rear open area is 380.16 mm². Provide at least 3 mm free space below the base vents. See [power and thermal assembly](power.md).
+The base has six 2.4 mm-wide slots around the converter and seven below the controller mounting area. The rear has three columns of four 2.4 mm-high slots, with a 7.6 mm solid upper rim. A full-height internal rib between two columns has a 2 mm crest, 45° side chamfers and nominal base contact. It merges with the USB-pocket chamfer. All twelve rear slots have **0.6 mm internal print membranes**; remove them before use. Finished rear open area is 380.16 mm². Provide at least 3 mm free space below the base vents. See [power and thermal assembly](power.md).
 
 ## Manufacturing files
 

@@ -7,27 +7,27 @@
 <line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
 <line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
 <text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
-<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">7 / 7  |  28 OCT 2026</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">7 / 7  |  30 OCT 2026</text>
 <text x="42" y="155" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Harness and assembly rules</text>
 <text x="42" y="185" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">All GND symbols are the same electrical net. Run analog returns separately to the controller ground point.</text>
 <text x="42" y="210" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Keep LADDER and pedal signals away from LED power/data and the DC converter. Pair signals with ground.</text>
-<text x="42" y="235" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Feed LED +5V/GND directly from the power distribution, rather than through the DFRobot headers.</text>
+<text x="42" y="235" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Feed LED +5V/GND directly from the power distribution, rather than through the Nano headers.</text>
 <text x="42" y="260" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">The 10-pixel chain can draw about 0.5A at full white. Keep total load within the 1A converter rating.</text>
 <text x="42" y="285" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">LED lead order, lens pointing left and leads right, flat side down: top DIN, +5V, GND, bottom DOUT.</text>
-<text x="42" y="310" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">The LED chain contains only Pololu 2535 LEDs and wiring: GPIO16 directly to the first DIN.</text>
+<text x="42" y="310" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">The LED chain contains only Pololu 2535 LEDs and wiring: GPIO10 directly to the first DIN.</text>
 <text x="42" y="335" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Encoder terminal labels are functions; a specific encoder package pin numbering has not been selected.</text>
 <text x="42" y="360" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">GPIO numbers are logical; D/A labels and SCK/MOSI/TX names identify the external board pins.</text>
 <text x="42" y="428" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Prototype verification</text>
 <text x="42" y="457" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">With power disconnected: continuity-check TRS terminals, power polarity, ground and all off-sheet nets.</text>
 <text x="42" y="482" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Verify regulated +5V, then U1 3V3. Flash the passive-input firmware and recalibrate both pedals.</text>
-<text x="42" y="507" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Check resistor-mode HIGH / pot-mode high impedance, ADC ranges, ladder taps, encoder and BLE MIDI.</text>
+<text x="42" y="507" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Check resistor-mode HIGH / pot-mode high impedance, ADC ranges, ladder taps, encoder, USB MIDI and BLE MIDI.</text>
 <text x="42" y="532" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Each passive pedal input uses two resistors. Connect only unpowered variable-resistor or pot pedals.</text>
 <text x="42" y="557" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">This document does not establish ESD compliance, measured analog accuracy or simultaneous-supply qualification.</text>
 <text x="42" y="596" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Source documents checked</text>
-<text x="42" y="623" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">DFRobot DFR1075 V1.1 schematic</text>
-<text x="445" y="623" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">Local: design/fusion/datasheets/dfr1075-schematic-v11.pdf</text>
-<text x="42" y="650" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">DFRobot external pinout / printed labels</text>
-<text x="445" y="650" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">Top view; P2 left, P1 right, USB-C upper edge</text>
+<text x="42" y="623" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">Arduino Nano ESP32 ABX00083 pinout</text>
+<text x="445" y="623" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">Component-side top view, USB-C up; all 30 header pads</text>
+<text x="42" y="650" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">Arduino Nano ESP32 schematic V0.3</text>
+<text x="445" y="650" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">JP1: 1-15 top-down; JP2: 15-1 top-down</text>
 <text x="42" y="677" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">Waveshare 24382 external P2 connector</text>
 <text x="445" y="677" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">Local: design/fusion/datasheets/waveshare-24382-schematic.pdf</text>
 <text x="42" y="704" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">Amphenol ACJS-MHDC socket drawing</text>
@@ -36,7 +36,7 @@
 <text x="445" y="731" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">5V, 1A step-up/down regulator; retailer item 1178565</text>
 <text x="42" y="758" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">Pololu #2535</text>
 <text x="445" y="758" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">5mm addressable RGB LED / WS2811 / 5V / 800kHz</text>
-<text x="42" y="785" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">Espressif ESP32-C6 ADC / GPIO</text>
-<text x="445" y="785" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ADC calibrated mV; bias output HIGH or disabled with pulls off</text>
+<text x="42" y="785" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">Espressif self-powered USB devices</text>
+<text x="445" y="785" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">VBUS sense: 100k / 150k divider to A4 / GPIO11</text>
 <text x="42" y="918" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">Source URLs, BOM, exact terminal connectivity and generated SVG sheets are in design/electrical/.</text>
 </svg>

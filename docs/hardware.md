@@ -34,18 +34,20 @@ The firmware uses **ESP32 GPIO numbers**, independently of Arduino IDE pin-numbe
 | LCD VCC and BL | 3V3 | — | Always-on backlight |
 | All grounds | GND | — | Common return |
 
-The display's eight-pin connector stays in physical order **VCC, GND, DIN, CLK, CS, DC, RST, BL**. Connect to the signals above. The Nano's D13/default SPI-clock pin is deliberately unused because it also drives the onboard LED. GPIO19/20 are exclusively USB D−/D+ inside the USB-C connection. Avoid GPIO0/3/45/46 strapping pins and leave unused Nano pins disconnected. The three analog inputs all use ADC1, including during Wi-Fi operation. Pin constants and uniqueness checks are in `src/board.hpp`.
+The display's eight-pin connector stays in physical order **BL, RST, D/C, CS, SCL/CLK, SDA/DIN, GND, VCC**. Connect to the signals above. The Nano's D13/default SPI-clock pin is deliberately unused because it also drives the onboard LED. GPIO19/20 are exclusively USB D−/D+ inside the USB-C connection. Avoid GPIO0/3/45/46 strapping pins and leave unused Nano pins disconnected. The three analog inputs all use ADC1, including during Wi-Fi operation. Pin constants and uniqueness checks are in `src/board.hpp`.
+
+The electrical diagrams show the component-side Nano top view with USB-C up: JP1 left, pads 1–15 downward; JP2 right, pads 15–1 downward. These are the official schematic pad IDs. Board labels and GPIO names are both retained. The physical installation is component-side down, so use the top-view reference when identifying pads before soldering.
 
 ### USB VBUS detection
 
 Install these **two resistors even if you initially use only BLE**:
 
 ```text
-Nano VBUS (USB 5 V) --- 100 kΩ ---+--- A4 / GPIO11
-                                 |
-                               150 kΩ
-                                 |
-                                GND
+Nano VBUS (USB 5 V) --- R50 100 kΩ ---+--- A4 / GPIO11
+                                      |
+                                  R51 150 kΩ
+                                      |
+                                     GND
 ```
 
 Use 1% resistors. The divider gives about 3.0 V with a 5 V USB supply and discharges the sense input when unplugged. Never connect 5 V directly to GPIO11. This monitors host VBUS while the controller remains powered through VIN; it does not supply power or join external 5 V to USB. Native USB MIDI uses the existing USB-C connector and needs no external USB adapter.
@@ -126,11 +128,11 @@ For an enabled **two-wire variable resistor**, firmware drives the bias pin HIGH
 
 For a **three-wire potentiometer**, connect the outer legs to RING and SLEEVE and the wiper to TIP. Firmware leaves the bias GPIO at high impedance with both internal pulls disabled. Capture the actual heel and toe voltages before use; these endpoints set the position scale independently of pot resistance. A floating wiper is not a dependable unplug detector. The external pedal contains only the resistor or potentiometer, without any powered electronics.
 
-Boot and disabled-input states also leave the bias GPIO at high impedance. The firmware preloads HIGH before enabling its output and never drives the bias LOW. Change mode with the pedal unplugged. This wiring requires the passive-input firmware; the earlier active-interface firmware drives the bias incorrectly and applies an incompatible 1.5× conversion. Repeat pedal endpoint calibration after rewiring; switch actions, ladder calibration and LED identities remain unchanged. Internal weak pull-ups are not used as precision resistance references.
+Boot and disabled-input states also leave the bias GPIO at high impedance. The firmware preloads HIGH before enabling its output and never drives the bias LOW. Change mode with the pedal unplugged and repeat endpoint calibration after rewiring. ADC voltages are used directly without a gain multiplier. Internal weak pull-ups are not used as precision resistance references.
 
 ## ADC and prototype validation
 
-Use calibrated ESP32-S3 ADC1 readings at 12 dB attenuation, 12-bit resolution and the ESP-IDF curve-fitting scheme, with one calibration handle per input. Connected pedals and idle ladder remain within the nominal 0–2.2 V design span. Calibrate actual switch centres and pedal endpoints on the Nano; do not reuse DFR1075 ADC captures without recapturing them. Absolute ADC error, acquisition settling and noise still require bench checks. Ladder scans run about every 1 ms; pedal sampling starts at 200 samples/s. Connect only unpowered passive pedals. The two-resistor pedal interface adds no external ESD protection.
+Use calibrated ESP32-S3 ADC1 readings at 12 dB attenuation, 12-bit resolution and the ESP-IDF curve-fitting scheme, with one calibration handle per input. Connected pedals and idle ladder remain within the nominal 0–2.2 V design span. Calibrate actual switch centres and pedal endpoints on the installed Nano. Absolute ADC error, acquisition settling and noise still require bench checks. Ladder scans run about every 1 ms; pedal sampling starts at 200 samples/s. Connect only unpowered passive pedals. The two-resistor pedal interface adds no external ESD protection.
 
 Before building the harness, verify idle and all N installed ladder states, individual press/release detection, and all four combinations of pedal modes. Test with BLE and LCD active, USB and 9 V power operation, and the longest intended pedal cables. Check the Nano and LED supply budgets. No external ADC or GPIO expander is included.
 
@@ -144,4 +146,4 @@ The optional chain uses one [Pololu 2535 5 mm LED](https://www.pololu.com/produc
 - [Espressif USB device stack](https://docs.espressif.com/projects/esp-usb/en/latest/esp32s3/usb_device.html): native USB and self-powered VBUS detection.
 - [Waveshare 24382 module wiki](https://www.waveshare.com/wiki/1.69inch_LCD_Module): ST7789V2, interface configuration and physical connector.
 
-The existing DFR1075 electrical schematic/previews are retained reference artifacts and do not describe this Nano harness. Use this pin table for the port; the enclosure uses the [two-insert Nano mount kit](../design/fusion/nano-esp32/README.md).
+The [electrical diagrams](../design/electrical/README.md) and [KiCad schematic](../design/kicad/README.md) use this Nano GPIO/power map and preserve physical pin order. The enclosure uses the [two-insert Nano mount kit](../design/fusion/nano-esp32/README.md).

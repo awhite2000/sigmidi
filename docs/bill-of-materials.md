@@ -12,7 +12,7 @@ Preferred build: **Left**, with electronics on the left and modular extensions t
 | Modular 10 | 10 | 3 | 10 | 11 |
 | Main 10, fixed split chassis | 10 | Not applicable | 8 | 6 |
 
-Use **N** below for the chosen installed switch count. **AR** means as required. Optional feature quantities apply only when that feature is fitted. Parts inside boards are not itemized. Counts include the two Nano mounting adapters. Use the Nano GPIO/power map; retained DFR1075 schematics are reference only.
+Use **N** below for the chosen installed switch count. **AR** means as required. Optional feature quantities apply only when that feature is fitted. Parts inside boards are not itemized. Counts include the two Nano mounting adapters. Electrical reference designators match the Nano wiring diagrams and KiCad schematic.
 
 ## 1. Required control electronics
 
@@ -26,8 +26,8 @@ Use **N** below for the chosen installed switch count. **AR** means as required.
 | E06 / R8 | 1 piece | **20 kOhm idle resistor**. 1% metal-film, through-hole; 0.25 W procurement choice. |
 | E07 / R9-R18 | N piece | **1 kOhm ladder sections**. 1% metal-film, through-hole; 0.25 W procurement choice. |
 | E08 / C5 | 1 piece | **100 nF ladder filter capacitor**. Ceramic, through-hole; >=10 V rating (50 V is suitable). |
-| E16 | 1 piece | **USB VBUS sense upper resistor**. 100 kOhm, 1%, 0.25 W. |
-| E17 | 1 piece | **USB VBUS sense lower resistor**. 150 kOhm, 1%, 0.25 W. |
+| E16 / R50 | 1 piece | **USB VBUS sense upper resistor**. 100 kOhm, 1%, 0.25 W. |
+| E17 / R51 | 1 piece | **USB VBUS sense lower resistor**. 150 kOhm, 1%, 0.25 W. |
 
 E16/E17 form the required USB VBUS divider at A4/GPIO11. All discrete resistors are 1% metal-film; 0.25 W through-hole is a practical procurement choice. Higher precision is optional. The 100 nF capacitor belongs to the switch ladder. Four 1 kOhm sections are in the base; each two-switch extension adds two. No resistor terminates the final tap.
 
@@ -178,9 +178,9 @@ USB and 9 V sources are alternative power options. Choose each supply for the co
 
 ## Quantity and source checks
 
-The existing maximum electrical BOM/netlist contains **44 shared reference component instances**: three purchased boards, two socket assemblies, one encoder, ten footswitches, sixteen resistors, two capacitors and ten LEDs. The Nano build adds two USB VBUS resistors, for 46 electrical instances at ten switches. The shared reference includes both pedals, 9 V power and LEDs. The similarly sized CSV line count is coincidental: CSV rows also include grouped hardware, printed parts and external accessories.
+The maximum electrical BOM/netlist contains **46 component instances**: three purchased boards, two socket assemblies, one encoder, ten footswitches, eighteen resistors, two capacitors and ten LEDs. This includes the two required USB VBUS sense resistors R50/R51, both pedals, 9 V power and optional LEDs. The similarly sized CSV line count is coincidental: CSV rows also include grouped hardware, printed parts and external accessories.
 
-For all optional circuits fitted, electrical instance totals are **28 / 34 / 40 / 46** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 44 reference designators against both electrical exports and verifies the main 8/4/4 base/display/MCU screw counts against the CAD body inventory.
+For all optional circuits fitted, electrical instance totals are **28 / 34 / 40 / 46** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 46 reference designators against both electrical exports. It verifies eight base and four display screws against the CAD body inventory, and four M1.6x5 PCB screws plus two M1.6x6 bridge screws against the Nano mount specification.
 
 ## References
 

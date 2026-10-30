@@ -18,22 +18,41 @@ def verify_physical_order(source_path, pin_locations_path):
     components = {c['reference']: c for c in queried['components']}
     board = {p['number']: p for p in components['U1']['pins']}
     assert set(board) == set(source['components']['U1']['pins'])
+    # The official Nano schematic numbers JP2 from TX at the bottom upwards;
+    # its top-view physical order is therefore JP2:15 down to JP2:1.
+    physical = source.get('controller_external_pins', source.get('nano_external_pins'))
+    assert physical is not None, 'Missing controller physical-pin metadata'
+    header_orders = {
+        'JP1': [f'JP1:{i}' for i in range(1, 16)],
+        'JP2': [f'JP2:{i}' for i in range(15, 0, -1)],
+    }
     headers = {}
-    for header, count in [('P2', 18), ('P1', 14)]:
-        pins = [board[f'{header}:{i}'] for i in range(1, count + 1)]
+    for header, order in header_orders.items():
+        pins = [board[number] for number in order]
         assert len({round(p['x'], 6) for p in pins}) == 1, header
         pitch = pins[1]['y'] - pins[0]['y']
         assert pitch > 0, header
         assert all(math.isclose(pins[i]['y'] - pins[i - 1]['y'], pitch,
-                                abs_tol=1e-6) for i in range(1, count)), header
+                                abs_tol=1e-6) for i in range(1, len(order))), header
         headers[header] = (pins, pitch)
-    left, pitch = headers['P2']
-    right, right_pitch = headers['P1']
+    left, pitch = headers['JP1']
+    right, right_pitch = headers['JP2']
     assert left[0]['x'] < right[0]['x']
     assert math.isclose(pitch, right_pitch, abs_tol=1e-6)
-    assert math.isclose(right[0]['y'] - left[0]['y'], 4 * pitch, abs_tol=1e-6)
-    for number, data in source['dfrobot_external_pins'].items():
-        assert board[number]['name'].startswith(data['physical_label']), (number, data)
+    assert math.isclose(right[0]['y'], left[0]['y'], abs_tol=1e-6)
+    expected_labels = {
+        'JP1': ['D13', '3V3', 'B0', 'A0', 'A1', 'A2', 'A3', 'A4', 'A5',
+                'A6', 'A7', 'VBUS', 'B1', 'GND', 'VIN'],
+        'JP2': ['D12', 'D11', 'D10', 'D9', 'D8', 'D7', 'D6', 'D5', 'D4',
+                'D3', 'D2', 'GND', 'RST', 'D0/RX', 'D1/TX'],
+    }
+    for header, order in header_orders.items():
+        for number, label in zip(order, expected_labels[header]):
+            data = physical[number]
+            # Printed RESET/VUSB aliases may be retained alongside RST/VBUS.
+            accepted = {'RST': ('RST', 'RESET'), 'VBUS': ('VBUS', 'VUSB')}.get(label, (label,))
+            assert data['physical_label'].replace(' ', '').startswith(accepted), (number, data)
+            assert board[number]['name'].startswith(data['physical_label'].replace(' ', '')), (number, data)
 
     lcd = {p['number']: p for p in components['U2']['pins']}
     expected_names = ['BL', 'RST', 'D/C', 'CS', 'SCL/CLK', 'SDA/DIN', 'GND', 'VCC']
@@ -42,7 +61,8 @@ def verify_physical_order(source_path, pin_locations_path):
     assert [p['name'].replace(' ', '') for p in pins] == expected_names
     assert len({round(p['x'], 6) for p in pins}) == 1
     assert all(pins[i]['y'] > pins[i - 1]['y'] for i in range(1, 8))
-    return {'dfrobot_physical_order': True, 'dfrobot_P1_offset_pitches': 4,
+    return {'nano_physical_order': True, 'nano_JP2_order': '15 to 1, top to bottom',
+            'nano_header_tops_aligned': True,
             'display_physical_order': True}
 
 

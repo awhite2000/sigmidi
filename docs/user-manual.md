@@ -283,7 +283,7 @@ Every configured counter message is independent, even on the same channel or in 
 
 ## Persistence and editing
 
-Changed values are retained immediately in the ESP32-C6's available RTC memory. Every five minutes a background task checks for changes and, if necessary, checkpoints them to flash. A warm reset may recover retained state; power loss restores the last valid flash checkpoint, so recent changes can be lost. If nothing is stored, the value is 0.
+Changed values are retained immediately in the ESP32-S3's RTC slow memory. Every five minutes a background task checks for changes and, if necessary, checkpoints them to flash. A warm reset may recover retained state; power loss restores the last valid flash checkpoint, so recent changes can be lost. If nothing is stored, the value is 0.
 
 Reordering a message preserves its counter; inserting a new message creates another counter. Changing channel or Left/Right does not allocate a new one. Deleting then recreating a message does. Explicit Test actions use the same counters. JSON export backs up mode and identity, not live counter values; saving configuration is not an immediate counter checkpoint.
 

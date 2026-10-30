@@ -32,7 +32,7 @@ Glue the removable base chain separately at straight butt seams with 2 mm-high i
 
 Each pair uses two M2×6 countersunk base screws; electronics use four. The eight-switch assembly uses eight base screws. The display uses four M2×5 countersunk screws, with 1.39 mm nominal engagement in its blind studs. MCU hardware is M1.6.
 
-Release the DFR1075 from its posts and withdraw its USB-C connector from the pocket partition before lowering the populated floor. Leave power-wire slack between the rear socket and the converter on the base. [Power wiring](../power.md) and [LED installation](../leds.md) apply to every size.
+Release the Nano from its adapters and withdraw its USB-C connector from the pocket partition before lowering the populated floor. Leave power-wire slack between the rear socket and the converter on the base. [Power wiring](../power.md) and [LED installation](../leds.md) apply to every size.
 
 ## Printing
 

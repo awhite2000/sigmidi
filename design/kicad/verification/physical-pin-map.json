@@ -3,14 +3,14 @@
   "created_using": "Konnect MCP0.13.0",
   "datasheet_sources": [
     {
-      "title": "DFRobot DFR1075 V1.1 schematic",
-      "description": "Local: design/fusion/datasheets/dfr1075-schematic-v11.pdf",
-      "url": "https://wiki.dfrobot.com/dfr1075/"
+      "title": "Arduino Nano ESP32 ABX00083 pinout",
+      "description": "Component-side top view, USB-C up; all 30 header pads",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00083-full-pinout.pdf"
     },
     {
-      "title": "DFRobot external pinout / printed labels",
-      "description": "Top view; P2 left, P1 right, USB-C upper edge",
-      "url": "https://dfimg.dfrobot.com/5d57611a3416442fa39bffca/wiki/1fa8b29bf6d340347ccdc39f4648b949_0x0.png.webp"
+      "title": "Arduino Nano ESP32 schematic V0.3",
+      "description": "JP1: 1-15 top-down; JP2: 15-1 top-down",
+      "url": "https://docs.arduino.cc/resources/schematics/ABX00083-schematics.pdf"
     },
     {
       "title": "Waveshare 24382 external P2 connector",
@@ -33,190 +33,36 @@
       "url": "https://www.pololu.com/product/2535"
     },
     {
-      "title": "Espressif ESP32-C6 ADC / GPIO",
-      "description": "ADC calibrated mV; bias output HIGH or disabled with pulls off",
-      "url": "https://documentation.espressif.com/esp32-c6_datasheet_en.html"
+      "title": "Espressif self-powered USB devices",
+      "description": "VBUS sense: 100k / 150k divider to A4 / GPIO11",
+      "url": "https://docs.espressif.com/projects/esp-usb/en/latest/esp32s3/usb_device.html"
     }
   ],
   "parts": [
     {
       "reference": "U1",
-      "value": "DFRobot DFR1075 V1.1",
-      "symbol_library_id": "SIGMIDI:DFR1075_Physical",
-      "drawing_view": "Top view, USB-C up; P2 left top-to-bottom; P1 right top-to-bottom starting four pitches lower.",
+      "value": "Arduino Nano ESP32 ABX00083",
+      "symbol_library_id": "SIGMIDI:Arduino_Nano_ESP32_Physical",
+      "drawing_view": "Component-side top view, USB-C up; JP1 left pads1-15, JP2 right pads15-1; aligned header rows.",
       "source": "design/electrical/netlist.json plus official references listed there",
       "schematic_only": true,
       "footprint_library_id": null,
       "rows": [
         {
-          "source_terminal": "P1:1",
-          "net": "+5V",
-          "symbol_pin": "P1:1",
-          "symbol_name": "VIN/VCC",
-          "schematic_xy_mm": [
-            635.0,
-            187.96000000000004
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:2",
-          "net": "3V3",
-          "symbol_pin": "P1:2",
-          "symbol_name": "3V3/3V3",
-          "schematic_xy_mm": [
-            635.0,
-            203.20000000000002
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:3",
-          "net": "GND",
-          "symbol_pin": "P1:3",
-          "symbol_name": "GND/GND",
-          "schematic_xy_mm": [
-            635.0,
-            218.44000000000003
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:4",
-          "net": "P1_MODE",
-          "symbol_pin": "P1:4",
-          "symbol_name": "SCL/GPIO20",
-          "schematic_xy_mm": [
-            635.0,
-            233.68
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:5",
+          "source_terminal": "JP1:1",
           "net": null,
-          "symbol_pin": "P1:5",
-          "symbol_name": "SDA",
-          "schematic_xy_mm": [
-            635.0,
-            248.92000000000002
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:6",
-          "net": null,
-          "symbol_pin": "P1:6",
-          "symbol_name": "5/A4/LP_TX",
-          "schematic_xy_mm": [
-            635.0,
-            264.16
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:7",
-          "net": null,
-          "symbol_pin": "P1:7",
-          "symbol_name": "4/A3/LP_RX",
-          "schematic_xy_mm": [
-            635.0,
-            279.40000000000003
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:8",
-          "net": "P2_ADC",
-          "symbol_pin": "P1:8",
-          "symbol_name": "3/A2/GPIO3",
-          "schematic_xy_mm": [
-            635.0,
-            294.64000000000004
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:9",
-          "net": "P1_ADC",
-          "symbol_pin": "P1:9",
-          "symbol_name": "2/A1/GPIO2",
-          "schematic_xy_mm": [
-            635.0,
-            309.88
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:10",
-          "net": null,
-          "symbol_pin": "P1:10",
-          "symbol_name": "NC",
-          "schematic_xy_mm": [
-            635.0,
-            325.12
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:11",
-          "net": null,
-          "symbol_pin": "P1:11",
-          "symbol_name": "15/D13",
-          "schematic_xy_mm": [
-            635.0,
-            340.36
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:12",
-          "net": "ENC_A",
-          "symbol_pin": "P1:12",
-          "symbol_name": "6/D12/LP_SDA/GPIO6",
-          "schematic_xy_mm": [
-            635.0,
-            355.6
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:13",
-          "net": "ENC_B",
-          "symbol_pin": "P1:13",
-          "symbol_name": "7/D11/LP_SCL/GPIO7",
-          "schematic_xy_mm": [
-            635.0,
-            370.84000000000003
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P1:14",
-          "net": null,
-          "symbol_pin": "P1:14",
-          "symbol_name": "NC",
-          "schematic_xy_mm": [
-            635.0,
-            386.08000000000004
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P2:1",
-          "net": null,
-          "symbol_pin": "P2:1",
-          "symbol_name": "RST",
+          "symbol_pin": "JP1:1",
+          "symbol_name": "D13",
           "schematic_xy_mm": [
             406.40000000000003,
-            127.00000000000003
+            126.99999999999999
           ],
           "footprint_pad": null
         },
         {
-          "source_terminal": "P2:2",
+          "source_terminal": "JP1:2",
           "net": "3V3",
-          "symbol_pin": "P2:2",
+          "symbol_pin": "JP1:2",
           "symbol_name": "3V3/3V3",
           "schematic_xy_mm": [
             406.40000000000003,
@@ -225,120 +71,120 @@
           "footprint_pad": null
         },
         {
-          "source_terminal": "P2:3",
+          "source_terminal": "JP1:3",
           "net": null,
-          "symbol_pin": "P2:3",
-          "symbol_name": "NC",
+          "symbol_pin": "JP1:3",
+          "symbol_name": "B0",
           "schematic_xy_mm": [
             406.40000000000003,
-            157.48000000000002
+            157.48
           ],
           "footprint_pad": null
         },
         {
-          "source_terminal": "P2:4",
-          "net": "GND",
-          "symbol_pin": "P2:4",
-          "symbol_name": "GND/GND",
-          "schematic_xy_mm": [
-            406.40000000000003,
-            172.72000000000003
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P2:5",
-          "net": null,
-          "symbol_pin": "P2:5",
-          "symbol_name": "NC",
-          "schematic_xy_mm": [
-            406.40000000000003,
-            187.96000000000004
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P2:6",
-          "net": "LCD_CLK",
-          "symbol_pin": "P2:6",
-          "symbol_name": "23/SCK/GPIO23",
-          "schematic_xy_mm": [
-            406.40000000000003,
-            203.20000000000002
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P2:7",
-          "net": "LCD_DIN",
-          "symbol_pin": "P2:7",
-          "symbol_name": "22/MO/GPIO22",
-          "schematic_xy_mm": [
-            406.40000000000003,
-            218.44000000000003
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P2:8",
-          "net": "P2_MODE",
-          "symbol_pin": "P2:8",
-          "symbol_name": "21/MI/GPIO21",
-          "schematic_xy_mm": [
-            406.40000000000003,
-            233.68
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P2:9",
-          "net": null,
-          "symbol_pin": "P2:9",
-          "symbol_name": "20/SCL",
-          "schematic_xy_mm": [
-            406.40000000000003,
-            248.92000000000002
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P2:10",
-          "net": "LCD_DC",
-          "symbol_pin": "P2:10",
-          "symbol_name": "19/SDA/GPIO19",
-          "schematic_xy_mm": [
-            406.40000000000003,
-            264.16
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P2:11",
-          "net": null,
-          "symbol_pin": "P2:11",
-          "symbol_name": "9/D9",
-          "schematic_xy_mm": [
-            406.40000000000003,
-            279.40000000000003
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P2:12",
-          "net": "LCD_CS",
-          "symbol_pin": "P2:12",
-          "symbol_name": "18/D7/GPIO18",
-          "schematic_xy_mm": [
-            406.40000000000003,
-            294.64000000000004
-          ],
-          "footprint_pad": null
-        },
-        {
-          "source_terminal": "P2:13",
+          "source_terminal": "JP1:4",
           "net": "LADDER",
-          "symbol_pin": "P2:13",
-          "symbol_name": "1/D6/GPIO1",
+          "symbol_pin": "JP1:4",
+          "symbol_name": "A0/GPIO1",
+          "schematic_xy_mm": [
+            406.40000000000003,
+            172.72
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP1:5",
+          "net": "P1_ADC",
+          "symbol_pin": "JP1:5",
+          "symbol_name": "A1/GPIO2",
+          "schematic_xy_mm": [
+            406.40000000000003,
+            187.95999999999998
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP1:6",
+          "net": null,
+          "symbol_pin": "JP1:6",
+          "symbol_name": "A2",
+          "schematic_xy_mm": [
+            406.40000000000003,
+            203.2
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP1:7",
+          "net": "P2_ADC",
+          "symbol_pin": "JP1:7",
+          "symbol_name": "A3/GPIO4",
+          "schematic_xy_mm": [
+            406.40000000000003,
+            218.44
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP1:8",
+          "net": "USB_SENSE",
+          "symbol_pin": "JP1:8",
+          "symbol_name": "A4/GPIO11",
+          "schematic_xy_mm": [
+            406.40000000000003,
+            233.67999999999998
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP1:9",
+          "net": null,
+          "symbol_pin": "JP1:9",
+          "symbol_name": "A5",
+          "schematic_xy_mm": [
+            406.40000000000003,
+            248.92
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP1:10",
+          "net": null,
+          "symbol_pin": "JP1:10",
+          "symbol_name": "A6",
+          "schematic_xy_mm": [
+            406.40000000000003,
+            264.15999999999997
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP1:11",
+          "net": null,
+          "symbol_pin": "JP1:11",
+          "symbol_name": "A7",
+          "schematic_xy_mm": [
+            406.40000000000003,
+            279.4
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP1:12",
+          "net": "USB_VBUS",
+          "symbol_pin": "JP1:12",
+          "symbol_name": "VBUS/VUSB/VBUS",
+          "schematic_xy_mm": [
+            406.40000000000003,
+            294.64
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP1:13",
+          "net": null,
+          "symbol_pin": "JP1:13",
+          "symbol_name": "B1",
           "schematic_xy_mm": [
             406.40000000000003,
             309.88
@@ -346,10 +192,10 @@
           "footprint_pad": null
         },
         {
-          "source_terminal": "P2:14",
-          "net": null,
-          "symbol_pin": "P2:14",
-          "symbol_name": "NC",
+          "source_terminal": "JP1:14",
+          "net": "GND",
+          "symbol_pin": "JP1:14",
+          "symbol_name": "GND/GND",
           "schematic_xy_mm": [
             406.40000000000003,
             325.12
@@ -357,10 +203,10 @@
           "footprint_pad": null
         },
         {
-          "source_terminal": "P2:15",
-          "net": "LCD_RST",
-          "symbol_pin": "P2:15",
-          "symbol_name": "14/D3/GPIO14",
+          "source_terminal": "JP1:15",
+          "net": "+9V",
+          "symbol_pin": "JP1:15",
+          "symbol_name": "VIN/VIN",
           "schematic_xy_mm": [
             406.40000000000003,
             340.36
@@ -368,35 +214,167 @@
           "footprint_pad": null
         },
         {
-          "source_terminal": "P2:16",
-          "net": null,
-          "symbol_pin": "P2:16",
-          "symbol_name": "8/D2",
+          "source_terminal": "JP2:15",
+          "net": "LCD_RST",
+          "symbol_pin": "JP2:15",
+          "symbol_name": "D12/GPIO47",
           "schematic_xy_mm": [
-            406.40000000000003,
-            355.6
+            635.0,
+            126.99999999999999
           ],
           "footprint_pad": null
         },
         {
-          "source_terminal": "P2:17",
+          "source_terminal": "JP2:14",
+          "net": "LCD_DIN",
+          "symbol_pin": "JP2:14",
+          "symbol_name": "D11/GPIO38",
+          "schematic_xy_mm": [
+            635.0,
+            142.24
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:13",
+          "net": "LCD_CS",
+          "symbol_pin": "JP2:13",
+          "symbol_name": "D10/GPIO21",
+          "schematic_xy_mm": [
+            635.0,
+            157.48
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:12",
+          "net": "LCD_DC",
+          "symbol_pin": "JP2:12",
+          "symbol_name": "D9/GPIO18",
+          "schematic_xy_mm": [
+            635.0,
+            172.72
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:11",
+          "net": "LCD_CLK",
+          "symbol_pin": "JP2:11",
+          "symbol_name": "D8/GPIO17",
+          "schematic_xy_mm": [
+            635.0,
+            187.95999999999998
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:10",
           "net": "LED_GPIO",
-          "symbol_pin": "P2:17",
-          "symbol_name": "16/TX/GPIO16",
+          "symbol_pin": "JP2:10",
+          "symbol_name": "D7/GPIO10",
           "schematic_xy_mm": [
-            406.40000000000003,
-            370.84000000000003
+            635.0,
+            203.2
           ],
           "footprint_pad": null
         },
         {
-          "source_terminal": "P2:18",
+          "source_terminal": "JP2:9",
           "net": "ENC_SW",
-          "symbol_pin": "P2:18",
-          "symbol_name": "17/RX/GPIO17",
+          "symbol_pin": "JP2:9",
+          "symbol_name": "D6/GPIO9",
           "schematic_xy_mm": [
-            406.40000000000003,
-            386.08000000000004
+            635.0,
+            218.44
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:8",
+          "net": "ENC_B",
+          "symbol_pin": "JP2:8",
+          "symbol_name": "D5/GPIO8",
+          "schematic_xy_mm": [
+            635.0,
+            233.67999999999998
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:7",
+          "net": "ENC_A",
+          "symbol_pin": "JP2:7",
+          "symbol_name": "D4/GPIO7",
+          "schematic_xy_mm": [
+            635.0,
+            248.92
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:6",
+          "net": "P2_MODE",
+          "symbol_pin": "JP2:6",
+          "symbol_name": "D3/GPIO6",
+          "schematic_xy_mm": [
+            635.0,
+            264.15999999999997
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:5",
+          "net": "P1_MODE",
+          "symbol_pin": "JP2:5",
+          "symbol_name": "D2/GPIO5",
+          "schematic_xy_mm": [
+            635.0,
+            279.4
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:4",
+          "net": "GND",
+          "symbol_pin": "JP2:4",
+          "symbol_name": "GND/GND",
+          "schematic_xy_mm": [
+            635.0,
+            294.64
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:3",
+          "net": null,
+          "symbol_pin": "JP2:3",
+          "symbol_name": "RST",
+          "schematic_xy_mm": [
+            635.0,
+            309.88
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:2",
+          "net": null,
+          "symbol_pin": "JP2:2",
+          "symbol_name": "D0/RX0",
+          "schematic_xy_mm": [
+            635.0,
+            325.12
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "JP2:1",
+          "net": null,
+          "symbol_pin": "JP2:1",
+          "symbol_name": "D1/TX0",
+          "schematic_xy_mm": [
+            635.0,
+            340.36
           ],
           "footprint_pad": null
         }
@@ -418,8 +396,8 @@
           "symbol_pin": "P2:1",
           "symbol_name": "BL",
           "schematic_xy_mm": [
-            203.2,
-            177.8
+            736.5999999999999,
+            129.54
           ],
           "footprint_pad": null
         },
@@ -429,8 +407,8 @@
           "symbol_pin": "P2:2",
           "symbol_name": "RST",
           "schematic_xy_mm": [
-            203.2,
-            198.12
+            736.5999999999999,
+            149.85999999999999
           ],
           "footprint_pad": null
         },
@@ -440,8 +418,8 @@
           "symbol_pin": "P2:3",
           "symbol_name": "D/C",
           "schematic_xy_mm": [
-            203.2,
-            218.44
+            736.5999999999999,
+            170.18
           ],
           "footprint_pad": null
         },
@@ -451,8 +429,8 @@
           "symbol_pin": "P2:4",
           "symbol_name": "CS",
           "schematic_xy_mm": [
-            203.2,
-            238.76000000000002
+            736.5999999999999,
+            190.5
           ],
           "footprint_pad": null
         },
@@ -462,8 +440,8 @@
           "symbol_pin": "P2:5",
           "symbol_name": "SCL/CLK",
           "schematic_xy_mm": [
-            203.2,
-            259.08000000000004
+            736.5999999999999,
+            210.82
           ],
           "footprint_pad": null
         },
@@ -473,8 +451,8 @@
           "symbol_pin": "P2:6",
           "symbol_name": "SDA/DIN",
           "schematic_xy_mm": [
-            203.2,
-            279.40000000000003
+            736.5999999999999,
+            231.14
           ],
           "footprint_pad": null
         },
@@ -484,8 +462,8 @@
           "symbol_pin": "P2:7",
           "symbol_name": "GND",
           "schematic_xy_mm": [
-            203.2,
-            299.72
+            736.5999999999999,
+            251.45999999999998
           ],
           "footprint_pad": null
         },
@@ -495,8 +473,8 @@
           "symbol_pin": "P2:8",
           "symbol_name": "VCC",
           "schematic_xy_mm": [
-            203.2,
-            320.04
+            736.5999999999999,
+            271.78
           ],
           "footprint_pad": null
         }
@@ -518,8 +496,8 @@
           "symbol_pin": "CENTER",
           "symbol_name": "CENTER",
           "schematic_xy_mm": [
-            774.7,
-            147.32
+            88.9,
+            139.7
           ],
           "footprint_pad": null
         },
@@ -529,7 +507,7 @@
           "symbol_pin": "SLEEVE",
           "symbol_name": "SLEEVE",
           "schematic_xy_mm": [
-            812.8000000000001,
+            127.0,
             129.54
           ],
           "footprint_pad": null
@@ -552,7 +530,7 @@
           "symbol_pin": "VIN",
           "symbol_name": "VIN",
           "schematic_xy_mm": [
-            863.5999999999999,
+            203.20000000000002,
             129.54
           ],
           "footprint_pad": null
@@ -563,8 +541,8 @@
           "symbol_pin": "GND",
           "symbol_name": "GND",
           "schematic_xy_mm": [
-            909.3199999999999,
-            147.32
+            241.3,
+            139.7
           ],
           "footprint_pad": null
         },
@@ -574,7 +552,7 @@
           "symbol_pin": "VOUT",
           "symbol_name": "VOUT",
           "schematic_xy_mm": [
-            952.5,
+            279.40000000000003,
             129.54
           ],
           "footprint_pad": null
@@ -597,8 +575,8 @@
           "symbol_pin": "A",
           "symbol_name": "A",
           "schematic_xy_mm": [
-            711.1999999999999,
-            355.6
+            736.6,
+            350.52
           ],
           "footprint_pad": null
         },
@@ -608,7 +586,7 @@
           "symbol_pin": "B",
           "symbol_name": "B",
           "schematic_xy_mm": [
-            711.1999999999999,
+            736.6,
             370.84
           ],
           "footprint_pad": null
@@ -619,8 +597,8 @@
           "symbol_pin": "C",
           "symbol_name": "C",
           "schematic_xy_mm": [
-            797.56,
-            411.48
+            863.6,
+            406.4
           ],
           "footprint_pad": null
         },
@@ -630,8 +608,8 @@
           "symbol_pin": "SW1",
           "symbol_name": "SW1",
           "schematic_xy_mm": [
-            762.0,
-            411.48
+            736.6,
+            391.16
           ],
           "footprint_pad": null
         },
@@ -641,8 +619,8 @@
           "symbol_pin": "SW2",
           "symbol_name": "SW2",
           "schematic_xy_mm": [
-            810.26,
-            411.48
+            863.6,
+            421.64
           ],
           "footprint_pad": null
         }
@@ -664,8 +642,8 @@
           "symbol_pin": "10",
           "symbol_name": "PEDAL1SLEEVE",
           "schematic_xy_mm": [
-            955.0400000000001,
-            325.12
+            50.8,
+            223.51999999999998
           ],
           "footprint_pad": null
         },
@@ -675,8 +653,8 @@
           "symbol_pin": "11",
           "symbol_name": "PEDAL1RING",
           "schematic_xy_mm": [
-            863.6,
-            264.16
+            203.2,
+            177.8
           ],
           "footprint_pad": null
         },
@@ -686,8 +664,8 @@
           "symbol_pin": "12",
           "symbol_name": "PEDAL1TIP",
           "schematic_xy_mm": [
-            863.6,
-            309.88
+            203.2,
+            208.28
           ],
           "footprint_pad": null
         },
@@ -697,8 +675,8 @@
           "symbol_pin": "7",
           "symbol_name": "NC",
           "schematic_xy_mm": [
-            873.76,
-            492.76
+            66.03999999999999,
+            314.96
           ],
           "footprint_pad": null
         },
@@ -708,8 +686,8 @@
           "symbol_pin": "8",
           "symbol_name": "NC",
           "schematic_xy_mm": [
-            883.9200000000001,
-            492.76
+            78.74000000000001,
+            314.96
           ],
           "footprint_pad": null
         },
@@ -719,8 +697,8 @@
           "symbol_pin": "9",
           "symbol_name": "NC",
           "schematic_xy_mm": [
-            894.08,
-            492.76
+            91.44,
+            314.96
           ],
           "footprint_pad": null
         },
@@ -730,8 +708,8 @@
           "symbol_pin": "4",
           "symbol_name": "PEDAL2SLEEVE",
           "schematic_xy_mm": [
-            955.0400000000001,
-            467.36
+            50.8,
+            299.72
           ],
           "footprint_pad": null
         },
@@ -741,8 +719,8 @@
           "symbol_pin": "5",
           "symbol_name": "PEDAL2RING",
           "schematic_xy_mm": [
-            863.6,
-            386.08000000000004
+            203.2,
+            254.0
           ],
           "footprint_pad": null
         },
@@ -752,8 +730,8 @@
           "symbol_pin": "6",
           "symbol_name": "PEDAL2TIP",
           "schematic_xy_mm": [
-            863.6,
-            447.04
+            203.2,
+            284.48
           ],
           "footprint_pad": null
         },
@@ -763,8 +741,8 @@
           "symbol_pin": "1",
           "symbol_name": "NC",
           "schematic_xy_mm": [
-            904.24,
-            492.76
+            104.14,
+            314.96
           ],
           "footprint_pad": null
         },
@@ -774,8 +752,8 @@
           "symbol_pin": "2",
           "symbol_name": "NC",
           "schematic_xy_mm": [
-            914.4000000000001,
-            492.76
+            116.84,
+            314.96
           ],
           "footprint_pad": null
         },
@@ -785,8 +763,8 @@
           "symbol_pin": "3",
           "symbol_name": "NC",
           "schematic_xy_mm": [
-            924.5600000000001,
-            492.76
+            129.54,
+            314.96
           ],
           "footprint_pad": null
         },
@@ -796,8 +774,8 @@
           "symbol_pin": "13",
           "symbol_name": "MECH",
           "schematic_xy_mm": [
-            934.72,
-            492.76
+            142.24,
+            314.96
           ],
           "footprint_pad": null
         }
@@ -825,6 +803,17 @@
           "footprint_pad": null
         },
         {
+          "source_terminal": "DOUT",
+          "net": "L1",
+          "symbol_pin": "DOUT",
+          "symbol_name": "DOUT",
+          "schematic_xy_mm": [
+            109.22,
+            388.62
+          ],
+          "footprint_pad": null
+        },
+        {
           "source_terminal": "+5V",
           "net": "+5V",
           "symbol_pin": "+5V",
@@ -845,27 +834,16 @@
             383.53999999999996
           ],
           "footprint_pad": null
-        },
-        {
-          "source_terminal": "DOUT",
-          "net": "L1",
-          "symbol_pin": "DOUT",
-          "symbol_name": "DOUT",
-          "schematic_xy_mm": [
-            109.22,
-            388.62
-          ],
-          "footprint_pad": null
         }
       ],
       "readback_pin_count": 4
     }
   ],
   "inspection": {
-    "disposable_project_rendered": true,
-    "scratch_project": "/tmp/sigmidi-kicad-physical-map",
-    "final_schematic_read_back": true,
-    "final_schematic_render_visually_inspected": true,
-    "footprint_validation": "Not applicable; no PCB layout or footprint assignment requested."
+    "symbol_pin_readback": true,
+    "saved_schematic_coordinates_queried": true,
+    "native_render_inspected": true,
+    "Nano_header_numbering_basis": "Arduino V0.3 schematic pad IDs, official full-pinout component-side top view",
+    "PCB_footprints_assigned": false
   }
 }

@@ -19,7 +19,7 @@ The assembled body is 350 × 92 × 54 mm. The roof is 3 mm, side walls at least 
 5. Install controls and insulated wiring. LEDs sit below the switches with nominal 0.8 mm dome exposure. Keep the vent openings and removable-base interface clear.
 6. Seat the shell on the base perimeter using its 1.8 mm positioning ribs. Attach with eight M2×6 countersunk screws. Base bores are Ø2.6 mm, countersinks Ø4.4 × 0.9 mm and shell pilots Ø1.9 × 6.5 mm.
 
-The populated DFR1075 USB-C connector engages the pocket partition. Release the MCU from its mounts and withdraw the connector before lowering a populated base. Leave slack between the rear socket and base-mounted converter. Provide at least 3 mm free space below the floor vents.
+The populated Nano ESP32 USB-C connector engages the pocket partition. Release the MCU from its mounts and withdraw the connector before lowering a populated base. Leave slack between the rear socket and base-mounted converter. Provide at least 3 mm free space below the floor vents.
 
 ## References
 

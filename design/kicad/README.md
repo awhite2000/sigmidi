@@ -1,40 +1,28 @@
 # SIGMIDI Foot Controller v0.1 — KiCad schematic
 
-Open `sigmidi-foot-controller.kicad_pro` in KiCad 10, then open its schematic. The project is an editable, single-sheet A0 assembly schematic created through Konnect MCP 0.13.0 from the current [electrical netlist](../electrical/netlist.json) and connected wire diagram.
+`sigmidi-foot-controller.kicad_pro` is an editable KiCad 10 assembly project. The single A0 landscape sheet contains **46 physical components, 41 named nets and 143 connected terminals**. Two additional PWR_FLAG symbols declare externally supplied power; they are not purchased parts. All connections use continuous wires. Net labels name those wires, and dots identify junctions. Purchased boards stop at their external pins.
 
-The schematic contains all 44 physical components, 39 named nets and 138 connected terminals. Its two `PWR_FLAG` markers describe the external supply to ERC; they are not additional physical components. Board internals are omitted.
+- [Browser preview](../../previews/kicad-schematic.html)
+- [Vector schematic](sigmidi-foot-controller.svg) and [PDF](../../output/pdf/sigmidi-kicad-schematic.pdf)
+- [Electrical drawing and connection schedule](../electrical/README.md)
+- `SIGMIDI.kicad_sym` and the project-relative `sym-lib-table` provide the custom external-module symbols.
 
-## Physical pin order
+## Physical pin references
 
-- **DFRobot DFR1075:** top view with USB-C up. P2 has 18 pins on the left, P1 has 14 on the right and starts four pin pitches lower. Every printed pad label remains visible. Connected pads also show their GPIO/logical name and header identifier. Unused pads have no external signal callouts and are marked with no-connect crosses.
-- **Waveshare 24382:** its external P2 connector retains physical order 1–8: BL, RST, D/C, CS, SCL/CLK, SDA/DIN, GND, VCC.
-- **Pololu 2535:** side view with lens left, flat down and leads to the right. Leads run top-to-bottom DIN, 5V, GND, DOUT. All ten optional pixels use their function names as pin identifiers; no unverified numeric pin numbering is introduced.
-- **ACJS-MHDC:** both pedal ports share one symbol. Terminals 10/11/12 are pedal 1 sleeve/ring/tip; 4/5/6 are pedal 2 sleeve/ring/tip. Normal contacts are unused; pad 13 is mechanical and unconnected.
-- **Encoder:** A/B/C/SW1/SW2 are functional terminal names. Verify their physical arrangement against the selected encoder before assembly.
+U1 is Arduino Nano ESP32 ABX00083, component-side top view with USB-C up. Its **JP1 is on the left, pads 1–15 top to bottom; JP2 is on the right, pads 15–1 top to bottom**. Pad IDs come from Arduino schematic V0.3; physical positions and D/A labels come from its official top-view pinout. The datasheet's functional-table row numbering is not used as JP2 pad numbering. VBUS is named VUSB in the pinout, and RST is RESET. Every printed header label remains visible, including unused pins; connected pins also show the ESP32 GPIO. The firmware uses GPIO numbers independently of Arduino's pin-numbering preference.
 
-[Physical pin records](verification/physical-pin-map.json) and [placed-pin readback](verification/pin-locations.json) preserve the source mappings and measured schematic coordinates. No PCB footprints are assigned. The empty `.kicad_pcb` is the project placeholder created by Konnect, not a PCB layout.
+The Waveshare 24382 external P2 connector retains **1 BL, 2 RST, 3 D/C, 4 CS, 5 SCL/CLK, 6 SDA/DIN, 7 GND, 8 VCC**. SCL/SDA are SPI signals. The display's internal FPC and circuitry are omitted.
 
-## Editing and exports
+Pololu 2535 LEDs use the actual package lead order: lens left, leads right, flat side down; top to bottom DIN, 5V, GND, DOUT. DIN/DOUT/+5V/GND are functional terminal identifiers, not invented package pad numbers. LED1 receives D7/GPIO10 directly; there are no added LED-chain parts. The final DOUT is marked NC.
 
-`SIGMIDI.kicad_sym` contains project-local external module, dual socket, encoder and pixel symbols. The portable `sym-lib-table` resolves it through `${KIPRJMOD}`. Resistors, capacitors and footswitches use standard KiCad library symbols, embedded in the schematic.
+J2 is ACJS-MHDC: manufacturer TOP is pedal 1 (10 sleeve, 11 ring, 12 tip); BOTTOM is pedal 2 (4 sleeve, 5 ring, 6 tip). Normal contacts are NC and pad 13 is mechanical. SW11 uses functional A/B/C/SW1/SW2 names; confirm the selected encoder terminal layout before soldering. The passive encoder uses internal GPIO pull-ups without external R/C.
 
-Large physical pin labels, titles, references and values are ordinary schematic text annotations for readability. When moving a component, select its associated annotations and wires as well. The native symbol pin numbers, names and electrical types remain available for connectivity and editing. Small native pin labels remain alongside the larger annotations.
+Nano VIN receives the barrel sleeve's +9V. The Pololu converter's 5V output powers optional LEDs only. USB VBUS stays separate and feeds R50 100k / R51 150k, with their junction at A4/GPIO11. ADC inputs are A0/GPIO1, A1/GPIO2 and A3/GPIO4; pedal bias outputs are D2/GPIO5 and D3/GPIO6.
 
-- [SVG preview](sigmidi-foot-controller.svg)
-- [PNG preview](sigmidi-foot-controller.png)
-- [PDF export](../../output/pdf/sigmidi-kicad-schematic.pdf)
-- [KiCad XML netlist](sigmidi-foot-controller.net)
+## Validation and scope
 
-Crossings without a junction dot are not connected. The complete circuit uses actual wires; matching labels name nets rather than replacing connections.
+The saved schematic is checked through Konnect and direct KiCad ERC/XML exports. `verification/checks.json` records the latest findings, tool versions and source/output hashes. `verification/pin-locations.json` records queried symbol coordinates. `verification/physical-pin-map.json` ties accepted terminal IDs and labels to those positions. Run `scripts/verify_kicad_netlist.py` to compare every exported net against the electrical drawing and verify physical Nano/LCD pin order independently of placement requests.
 
-## Verification
+No PCB footprints are assigned. The empty `.kicad_pcb` is a project placeholder; no routed board, manufacturable PCB or hardware qualification is claimed. Standard resistor, capacitor and push-switch symbols are used for discrete parts. Custom symbols describe purchased modules and functional terminals. Component fit, noise, power behaviour and direct LED data levels require bench verification.
 
-KiCad 10.0.7 ERC reports **0 errors and 0 warnings**, without suppressing rules. Konnect reports zero floating wire ends, unconnected component pins, shorted named nets, orphan items and symbol overlaps. All 46 placed symbols (44 components and two ERC markers) have resolved bounds. Annotation checking finds no duplicate or unassigned references.
-
-The independent source comparison checks all 44 components, all 39 nets, every one of the 138 connected terminals, all 21 unused terminals, both DFRobot header sequences and their four-pitch offset, and the display pin sequence:
-
-```bash
-python3 scripts/verify_kicad_netlist.py
-```
-
-[Verification evidence](verification/checks.json) binds those results and the exports to their file hashes. The native PNG and the rendered one-page PDF were visually inspected. This is an assembly schematic; PCB fabrication, electrical bench qualification and exact unspecified encoder/socket mechanical pin layouts are outside this deliverable.
+All protected KiCad source changes go through Konnect MCP. Regenerate the SVG/PNG/PDF/netlist there, then run `scripts/preview_kicad.py` to publish the verified preview.
