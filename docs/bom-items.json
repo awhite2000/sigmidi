@@ -351,7 +351,7 @@
         "LED10"
       ],
       "purchase_unit": "10-pack; one pack covers any 4-10 switch build",
-      "notes": "Installed count is LEDs, not packs. No separate driver, buffer, resistor or capacitor is fitted in this chain. Direct D7/GPIO10 data requires batch/harness verification.",
+      "notes": "Installed count is LEDs, not packs. Direct D7/GPIO10 data requires batch/harness verification.",
       "source": "https://www.pololu.com/product/2535"
     },
     {

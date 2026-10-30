@@ -22,7 +22,7 @@ Select **Settings → Enclosure variant** in the Wi-Fi editor or **EDIT CONFIG �
 
 The main enclosure measures **350 × 92 × 54 mm**, with a 30 mm raised row, 65 mm horizontal pitch, 32.5 mm stagger and 53 mm row spacing. The Left electronics shell has a 25 mm-wide icon raised 0.6 mm between A and B. Main and modular assemblies are available for both variants.
 
-The Nano mounts component-side up directly on four reinforced posts in each electronics base; the upper shells are unchanged. See the [direct Nano mounting guide](design/fusion/nano-esp32/README.md). Use the [Nano pin/power map](docs/hardware.md), [electrical diagrams](design/electrical/README.md) and [editable KiCad schematic](design/kicad/README.md).
+The Nano mounts component-side up directly on four reinforced posts in each electronics base. See the [direct Nano mounting guide](design/fusion/nano-esp32/README.md). Use the [Nano pin/power map](docs/hardware.md), [electrical diagrams](design/electrical/README.md) and [editable KiCad schematic](design/kicad/README.md).
 
 ## Install and configure
 

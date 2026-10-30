@@ -30,7 +30,7 @@ Upper sections have continuous vertical drop-down hooked joints with 0.20 mm inc
 
 Glue the removable base chain separately at straight butt seams with 2 mm-high internal glue lands and 45° runouts. Align flat floor surfaces. Keep the 0.30 mm seam between the cap's integral floor and the removable pair base free of glue. Positioning ribs are 1.8 mm thick, 3 mm high, with 0.5 mm lead-ins and 0.20 mm wall clearance.
 
-Each pair uses two M2×6 countersunk base screws; electronics use four. The eight-switch assembly uses eight base screws. The display uses four M2×5 countersunk screws, with 1.39 mm nominal engagement in its blind studs. The Nano mounts components up on four integral electronics-base posts using four M1.6×5 pan-head screws; no inserts or bridge fasteners are fitted.
+Each pair uses two M2×6 countersunk base screws; electronics use four. The eight-switch assembly uses eight base screws. The display uses four M2×5 countersunk screws, with 1.39 mm nominal engagement in its blind studs. The Nano mounts components up on four integral electronics-base posts using four M1.6×5 pan-head screws.
 
 Release the Nano from its four integral base posts and withdraw its USB-C connector from the pocket partition before lowering the populated floor. Leave power-wire slack between the rear socket and the converter on the base. [Power wiring](../power.md) and [LED installation](../leds.md) apply to every size.
 

@@ -42,7 +42,7 @@ For **Left Modular**, use [mirrored/modular](../design/fusion/mirrored/modular/)
 
 ## Direct Nano mounting and fasteners
 
-The electronics base already includes four reinforced Nano mounting posts. No separate inserts or mounting glue are needed. Print enclosure parts, not electronic reference bodies from the complete CAD assembly. [Direct mount details](../design/fusion/nano-esp32/README.md).
+The electronics base includes four reinforced Nano mounting posts. Print enclosure parts, not electronic reference bodies from the complete CAD assembly. [Direct mount details](../design/fusion/nano-esp32/README.md).
 
 | Fastener | Quantity | Use |
 |---|---|---|
@@ -50,7 +50,7 @@ The electronics base already includes four reinforced Nano mounting posts. No se
 | M2x5 countersunk | 4 | LCD hollow mounts into factory blind studs |
 | M1.6x5 pan head | 4 | Nano PCB directly to integral base posts |
 
-Total printed pieces: Main 4; Modular 4/6/8/10 uses 3/5/7/9. Nano posts are integral to the electronics base. Collect supplied switch nuts/washers, encoder hardware/knob, dual-TRS nuts/washers and the DC inlet nut if fitted. No heat-set inserts are specified. Verify actual screw engagement gently before installing electronics.
+Total printed pieces: Main 4; Modular 4/6/8/10 uses 3/5/7/9. Nano posts are integral to the electronics base. Collect supplied switch nuts/washers, encoder hardware/knob, dual-TRS nuts/washers and the DC inlet nut if fitted. Verify actual screw engagement gently before installing electronics.
 
 **Pass check:** one enclosure variant, one count, correct labeled uppers and a matching cap; all screws sorted by length.
 
@@ -61,17 +61,17 @@ Total printed pieces: Main 4; Modular 4/6/8/10 uses 3/5/7/9. Nano posts are inte
 ## Print and clean the empty parts
 
 1. Print fit coupons first. Use the supplied Prusa MK3S+ PETG profile: **0.6 mm nozzle, 0.3 mm layers, 6 mm brim**. Let parts cool before assessing fit. Keep global XY compensation at zero; check first-layer bulges and the profile's 0.2 mm elephant-foot compensation before altering dimensions.
-2. Main uppers print outer-end down, split up. Left pair uppers print left mating edge down; Right pairs print right mating edge down. Caps print closed outer-end down. Upper parts use snug supports at 40 degrees. Bases print outside-floor down, mounts up, without supports. The integral Nano posts print with the base; their 45-degree roots and vent channels need no separate support pieces.
+2. Main uppers print outer-end down, split up. Left pair uppers print left mating edge down; Right pairs print right mating edge down. Caps print closed outer-end down. Upper parts use snug supports at 40 degrees. Bases print outside-floor down, mounts up, without supports. The integral Nano posts print with the base; their 45-degree roots and vent channels print without supports.
 3. Remove brims, supports and loose strands. Clear screw accesses and inspect joint faces. Remove all **twelve 0.6 mm rear vent membranes**. Open the **0.8 mm LED covers only where LEDs will be fitted**. Do this before installing electronics; leave no plastic debris inside.
 
-![Sections of the snug upper hook and base positioning rib.](../design/fusion/snug-fit-sections.png) ![The upper wall rests on the widened base perimeter.](../design/fusion/print/perimeter-ledge-detail.png)
+![Sections of the snug upper hook and base positioning rib.](../design/fusion/snug-fit-sections.png) ![The upper wall rests on the base perimeter.](../design/fusion/print/perimeter-ledge-detail.png)
 
 ## Dry-fit, then glue the two chains separately
 
 4. Seat joints by hand without forcing them. **Left Main:** lower the right upper onto the left upper. **Right Main:** lower the left upper onto the right upper. Modular uppers assemble from the electronics section outward. The continuous hooked joint seats vertically downward with the chassis upright.
 5. Fit a modular cap from the outer side, held **2 mm high**, then lower it 2 mm. Dry-fit every removable base and screw hole. Confirm the perimeter seats flat and positioning ribs clear the upper walls. Nominal joint clearance is 0.20 mm; glued exterior seams are 0.25 mm.
 6. Bond the upper chain at its mating joints using a PETG-compatible adhesive and its specified surface preparation/cure. Bond the removable base chain **separately**, at its straight butt seams and internal glue lands, held on a flat surface. Keep glue off screw pilots and locating surfaces. Do not bond upper to removable base.
-7. The cap has an integral floor. **Keep its 0.30 mm fixed-floor/removable-base seam free of glue.** There is no separate cap base to screw on. Let the adhesive cure before installing hardware or applying foot loads.
+7. The cap has an integral floor. **Keep its 0.30 mm fixed-floor/removable-base seam free of glue.** Let the adhesive cure before installing hardware or applying foot loads.
 
 **Pass check:** both empty assemblies meet without rocking, hooks seat completely, every screw aligns, vents are open, and the removable floor releases without bending the shell.
 
@@ -99,17 +99,17 @@ Total printed pieces: Main 4; Modular 4/6/8/10 uses 3/5/7/9. Nano posts are inte
 
 # 4. Mount the Nano directly
 
-Use **Arduino Nano ESP32 ABX00083 without headers**. Four reinforced posts are part of the electronics base. The images show a cropped base detail, not an extra floor or adapter to print. All upper shells and their USB pockets retain their existing geometry.
+Use **Arduino Nano ESP32 ABX00083 without headers**. Four reinforced posts are part of the electronics base. The images show the mounting area of the electronics base and the rear-facing USB-C connector.
 
-![Installed: components face up; four screws secure the Nano directly to integral posts.](../design/fusion/nano-esp32/installed.png) ![Board and four screws above the integral posts; no separate inserts.](../design/fusion/nano-esp32/exploded.png)
+![Installed: components face up; four screws secure the Nano directly to integral posts.](../design/fusion/nano-esp32/installed.png) ![Exploded view: board and four screws above the integral posts.](../design/fusion/nano-esp32/exploded.png)
 
 ## Seat the board on its four posts
 
-1. Clean the pilot entrances and remove plastic strands. Check the posts and their vent channels are intact. The 6 mm post shafts have 8 mm root envelopes, 45-degree root transitions and rear flats at the USB-side pair. Chamfered arches under the opposite posts preserve the existing floor vent.
+1. Clean the pilot entrances and remove plastic strands. Check the posts and their vent channels are intact. The 6 mm post shafts have 8 mm root envelopes, 45-degree root transitions and rear flats at the USB-side pair. Chamfered arches under the opposite posts leave the floor vent open.
 2. Identify the board pads in component-side view with USB-C up (page 7). Solder the direct harness while access is easy, insulate the joints and leave service slack. Keep B1, GND and RST accessible. Do not add headers: their clearance is not included in the model.
 3. Place the Nano **components up**, USB-C toward the rear pocket. Its bare underside rests on the posts. Align the four 1.66 mm PCB holes with the post pilots, on a 40.64 x 15.24 mm rectangle. Do not trap wires or solder joints under the PCB.
-4. Start all **four M1.6x5 pan-head screws** loosely, then seat them gently. Nominal engagement through the 1.61 mm PCB is 3.39 mm in 4.3 mm-deep pilots. Check all four supports touch the PCB without bending it. No mounting adhesive or bridge fasteners are used.
-5. Dry-fit the unchanged upper shell and the actual USB cable plug. The USB connector keeps its X/Z alignment and is recessed 1.5 mm farther inside to retain full-thickness posts; the pocket is unchanged. Check full plug insertion, access to the four screw heads and a usable board/base removal path before closing. Do not pull the base against a trapped connector.
+4. Start all **four M1.6x5 pan-head screws** loosely, then seat them gently. Nominal engagement through the 1.61 mm PCB is 3.39 mm in 4.3 mm-deep pilots. Check all four supports touch the PCB without bending it.
+5. Dry-fit the upper shell and the actual USB cable plug in the rear protective pocket. Check full plug insertion, access to the four screw heads and a usable board/base removal path before closing. Do not pull the base against a trapped connector.
 
 ## Service access
 
@@ -139,7 +139,7 @@ Skip the DC socket, converter and input capacitor together for a USB-only build.
 
 # 6. Nano pin reference
 
-Identify pads in this **component-side view, USB-C up**. The board is installed with this face up and USB-C toward the rear; rotate the reference to match the chassis. JP1 numbers increase downward; JP2 numbers decrease downward. All printed board labels are retained. Gray unused pins have no peripheral wire; B1 and RST are used temporarily for flashing.
+Identify pads in this **component-side view, USB-C up**. The board is installed with this face up and USB-C toward the rear; rotate the reference to match the chassis. JP1 numbers increase downward; JP2 numbers decrease downward. The diagram shows all printed board labels. Gray unused pins have no peripheral wire; B1 and RST are used temporarily for flashing.
 
 ![Physical header order. Each used signal shows the board label, GPIO and destination; board internals are omitted.](assembly-nano-pins.svg)
 
@@ -175,7 +175,7 @@ Use the supplied **GH1.25 eight-pin cable** and confirm continuity against the a
 | 7 - GND | GND | JP1:14 or JP2:4 |
 | 8 - VCC | 3V3 | JP1:2 |
 
-No MISO or additional display board is fitted. Route the SPI cable away from the ladder sense lead where practical, without trapping it under the display mounts. The working drawing area is 280 x 240 in landscape. Set the matching Left/Right enclosure in firmware after flashing; there is no separate rotation setting.
+Route the SPI cable away from the ladder sense lead where practical, without trapping it under the display mounts. The working drawing area is 280 x 240 in landscape. Select the matching Left/Right enclosure in firmware after flashing to set display rotation and switch order.
 
 ## Passive encoder - no external resistors or capacitors
 
@@ -258,7 +258,7 @@ Use a tip/ring swap adapter if the pedal's actual wiring requires it. Unplug the
 
 # 10. Fit the optional LEDs
 
-Use **Pololu 2535, 5 mm diffused RGB LEDs with integrated WS2811**, one per installed switch. No extra driver, data resistor, level shifter or chain capacitor is specified in this chain. Direct 3.3 V data into the 5 V LEDs must be checked with the actual LEDs and harness.
+Use **Pololu 2535, 5 mm diffused RGB LEDs with integrated WS2811**, one per installed switch. Direct 3.3 V data into the 5 V LEDs must be checked with the actual LEDs and harness.
 
 ![Manufacturer side view: lens left, leads right, flat down. Read top to bottom: DIN, +5V, GND, DOUT. The opposite view is also shown.](../design/electrical/pololu-2535-pinout.jpg)
 
@@ -373,7 +373,7 @@ These voltages are **nominal diagnostic targets**, not measured acceptance toler
 ## Final mechanical closure
 
 1. Disconnect all power and pedals. Check that glue has cured, the twelve rear vent films are removed, no wire crosses a seam or screw seat, and the converter/LED harness is retained clear of the vents. Confirm all populated controls are secure.
-2. Bring the widened base under the upper shell, aligning the locating ribs and Nano USB pocket without forcing the connector. The **upper shell rests on the base perimeter**, rather than enclosing a full-height inserted floor. Check the cap's integral-floor butt seam remains free and the floor lies flat.
+2. Bring the base under the upper shell, aligning the locating ribs and Nano USB pocket without forcing the connector. The **upper shell rests on the base perimeter**. Check the cap's integral-floor butt seam remains free and the floor lies flat.
 3. Fit **M2x6 countersunk base screws**: eight for Main; four on Modular electronics plus two per pair. Start all screws before gently seating them. Stop if a screw binds or bows a seam. Do not put these longer screws into the LCD mounts.
 4. Fit non-slip feet to solid floor areas, providing at least **3 mm air clearance under the base grilles**. Keep foot/tape material off the vents. Check stability on the intended pedalboard and that foot pressure does not rock the jointed assembly.
 
@@ -399,6 +399,6 @@ Unplug all power and pedals before removing the base screws. Release the Nano fr
 
 [Bill of materials and quantities](bill-of-materials.md) - [Full electrical schematic](../output/pdf/sigmidi-electrical-single-page.pdf) - [Power](power.md) - [Current hardware map](hardware.md) - [User manual](user-manual.md).
 
-[Left CAD/part guide](../design/fusion/mirrored/README.md) - [Right Modular](../design/fusion/modular/README.md) - [Nano mounting kit](../design/fusion/nano-esp32/README.md) - [Complete Fusion archive](../design/fusion/sigmidi-foot-controller-0.1.f3d).
+[Left CAD/part guide](../design/fusion/mirrored/README.md) - [Right Modular](../design/fusion/modular/README.md) - [Nano mounting guide](../design/fusion/nano-esp32/README.md) - [Complete Fusion archive](../design/fusion/sigmidi-foot-controller-0.1.f3d).
 
-Manufacturer references: [Arduino ABX00083 drawing](../design/fusion/nano-esp32/datasheets/ABX00083-datasheet.pdf), [Waveshare 24382 drawing](../design/fusion/datasheets/waveshare-24382-drawing.pdf), [ACJS-MHDC socket drawing](../design/fusion/datasheets/double-trs-ACJS-MHDC.pdf), [Pololu 4083 module](https://www.pololu.com/product/4083), [Pololu 2535 LEDs](https://www.pololu.com/product/2535). LED image on page 11 is the unchanged manufacturer reference.
+Manufacturer references: [Arduino ABX00083 drawing](../design/fusion/nano-esp32/datasheets/ABX00083-datasheet.pdf), [Waveshare 24382 drawing](../design/fusion/datasheets/waveshare-24382-drawing.pdf), [ACJS-MHDC socket drawing](../design/fusion/datasheets/double-trs-ACJS-MHDC.pdf), [Pololu 4083 module](https://www.pololu.com/product/4083), [Pololu 2535 LEDs](https://www.pololu.com/product/2535). The LED image on page 11 is the manufacturer's lead-orientation reference.

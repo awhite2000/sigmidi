@@ -22,7 +22,7 @@ The illustrated [Assembly guide](../output/pdf/sigmidi-foot-controller-0.1-assem
 
 [Converter clips](../design/fusion/clip-mount.png) · [Base vents](../design/fusion/ventilation-base.png) · [Rear vents](../design/fusion/ventilation-rear.png) · [Vent membrane section](../design/fusion/rear-vent-membrane-section.png) · [Joint clearance sections](../design/fusion/snug-fit-sections.png).
 
-[Current Nano mounting detail](../design/fusion/nano-esp32/installed.png) · [Nano exploded mount](../design/fusion/nano-esp32/exploded.png) · [Direct mounting guide](../design/fusion/nano-esp32/README.md). The Nano sits component-side up on four integral base posts; the detail shows the current fit without separate inserts.
+[Current Nano mounting detail](../design/fusion/nano-esp32/installed.png) · [Nano exploded mount](../design/fusion/nano-esp32/exploded.png) · [Direct mounting guide](../design/fusion/nano-esp32/README.md). The Nano sits component-side up on four integral base posts, secured by four M1.6x5 screws.
 
 Exterior renders come from native Fusion geometry; manifests record image hashes. Presentation sheets are generated with `scripts/brand_enclosure_previews.py`.
 

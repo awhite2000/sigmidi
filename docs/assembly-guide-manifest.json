@@ -83,23 +83,23 @@
     "local_links_exist": true
   },
   "source_sha256": {
-    "docs/assembly-guide.md": "04159aff1f872f8e8698809efcab244ae082907112b1ab5789698a215858f3fd",
+    "docs/assembly-guide.md": "35d28363410ca27afff0aa7106eb325c23f8b6c7818a5ea438e9d52d0844e266",
     "scripts/build_assembly_guide.py": "b4e82a55bfb69965bf376d8e70613bb03a4f83b80325f1fbb6530d4daca047b6",
     "scripts/build_user_manual.py": "178b7b0e8521b97623738698e894e0c527addb13e2db2205f86739f709ad44f1",
     "src/board.hpp": "88db0c90739cde67be4f7b827fe0670054b07946b4170098ea1792f88d0788c3",
     "design/electrical/netlist.json": "2267e1b0a654212ef16386f61ddbc9a47e312421421e163f757127318dd4331c",
-    "docs/bom-items.json": "5dee8ce81e9c93c553b38b9963e60dc3358710b28cecaf3682de7cb6b48282d9",
+    "docs/bom-items.json": "75e73e854e95969958fe66fffd7bee2bbe62c4d651fc86b12d3d65f0a8dd89fd",
     "docs/power.md": "fe1c5d1c4e4719229f7964cf9150eeb5dc091ce5cb6a336b514a4f9dfd87e5cc",
-    "docs/hardware.md": "aefe93a3becba8b39c03db2001dfcc1a2431f30f182d0c0f52c47534271716ab",
-    "docs/leds.md": "e7db1c8221cc4d3cadb33715ea0798c2c27f307d221522f23cfdba4db73afbde",
-    "docs/resistor-ladders.md": "d5272f85e75fc4354ca711bdca86ef40300236a166f2dac9036a19e02a4f1351",
+    "docs/hardware.md": "c756916d0f4f42db27ff178f971768ae0171a3d20df20b2983edf0b2a2fba25f",
+    "docs/leds.md": "f4ab6c3c08fdfdeefaabb47ea6ea7d2c4014f160d3a76d805b6f818b4b31c801",
+    "docs/resistor-ladders.md": "029d1c03c51d820405d32c51dcfa68c46632e547312b33d68d731c36a2635ebb",
     "design/fusion/nano-esp32/mount-fit.json": "7c8620ac1407c3314f1aab5ede383f570c49900b9c6923b04b85a17cdb721daf",
-    "design/fusion/nano-esp32/README.md": "eea68eb73abcc71fdcea9a8a9387fcb4fc3975d4863cbfe231e2e038beabbb18",
-    "design/fusion/mirrored/README.md": "35f1505830b2a15ba99acab50aeb81c3fc4b8916f2a327fc39570e69f17c2409",
-    "design/fusion/modular/README.md": "8e1130b382bdc791c7c1e854911e661a5082c9311f487cc3678ac38387e2aebf",
+    "design/fusion/nano-esp32/README.md": "d95bdf567a34fa8b8fcda5f4595e9c4fbdba674b2ee660d2a7bbf49b6c33fd02",
+    "design/fusion/mirrored/README.md": "a4ba93fa8f4b9c96fee815d5f66e6cf6afa2ff90b5735e499e65fddd01ae0642",
+    "design/fusion/modular/README.md": "a8ca1c50a52e631a4f9cd1f6c210d3be4a537cf974353d3feee35492e1111f3a",
     "design/fusion/printing-tolerances.md": "200bb4341eefe9a792ca11417d28f109e5e2c5fcfb7f84db3e9560ffe1bc801b",
-    "docs/user-manual.md": "797d6c640693ecff1195236cd4145e660b32e7b3a952e423d59a50755808d41c",
-    "docs/bringup.md": "62270bf735d168d6fc207105be405f6c1f3d1de9f78aa731dee6042a2e623cab"
+    "docs/user-manual.md": "1648eb18d0db558ec871779d6ff51d538027570be32fc06c0bbbeb409ece366e",
+    "docs/bringup.md": "c8ba630cfcc91b48a7a7cb84c912769c18b6998aca0fbc818d0967dc56fca293"
   },
   "images": {
     "design/electrical/pololu-2535-pinout.jpg": "fe085fddcfece0e07f77d411620187e89b1fa7ea3fd9b6091aff43a63ddcdb49",
@@ -115,6 +115,6 @@
     "previews/sigmidi-left-main.png": "fc483734db42d3937930d1f476f123da02c0c01b4e5175461f7b5203bb473cd3"
   },
   "outputs": {
-    "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf": "d6dee89dd79acd0e1445dc9f075f58e542f9e927e5b15208e7660a0c96461235"
+    "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf": "b52fb94def8de8630ef055370deed3ac3daaf277e2952234c69249c29e5139cd"
   }
 }

@@ -22,8 +22,8 @@
   "files": [
     {
       "path": "README.md",
-      "sha256": "eea68eb73abcc71fdcea9a8a9387fcb4fc3975d4863cbfe231e2e038beabbb18",
-      "bytes": 5952
+      "sha256": "d95bdf567a34fa8b8fcda5f4595e9c4fbdba674b2ee660d2a7bbf49b6c33fd02",
+      "bytes": 5502
     },
     {
       "path": "assembly-clearance.json",
@@ -102,7 +102,7 @@
     },
     {
       "path": "packages.json",
-      "sha256": "eb672a13aa280b92bf767742e2da21a21479fee053bb0b28ddc0c552fb35a855",
+      "sha256": "125687a535131eaf9274dc0b6a4149964bd540b9444b9d23d136379e2fd7b585",
       "bytes": 880
     },
     {

@@ -10,7 +10,7 @@ Nano A0/GPIO1 reads the ladder; A1/GPIO2 and A3/GPIO4 read pedal TIPs. Each RING
 
 J2 is Amphenol ACJS-MHDC: manufacturer TOP is pedal 1 (10 SLEEVE, 11 RING, 12 TIP), BOTTOM is pedal 2 (4 SLEEVE, 5 RING, 6 TIP). Normal contacts stay unconnected; pad 13 is mechanical. SW11 uses A/B/click on D4/GPIO7, D5/GPIO8, D6/GPIO9 with internal pull-ups and common GND. Its pin labels are functional; verify terminal order on the purchased encoder.
 
-The optional Pololu 2535 chain contains only LEDs and wires. D7/GPIO10 goes directly to LED1 DIN; each DOUT goes to the next DIN. Final DOUT stays open. Supply every LED from regulated 5V and common GND, rather than Nano 3V3. Physical side view: lens left, leads right, flat side down; top to bottom DIN, 5V, GND, DOUT. The manufacturer photograph is included unchanged as orientation reference. Verify 3.3V data acceptance with the actual batch.
+The optional Pololu 2535 chain contains only LEDs and wires. D7/GPIO10 goes directly to LED1 DIN; each DOUT goes to the next DIN. Final DOUT stays open. Supply every LED from regulated 5V and common GND, rather than Nano 3V3. Physical side view: lens left, leads right, flat side down; top to bottom DIN, 5V, GND, DOUT. The manufacturer photograph shows the lead orientation. Verify 3.3V data acceptance with the actual batch.
 
 Populate four ladder stages for the base; each extension adds two 1k resistors and switches. Select 4/6/8/10 in software and calibrate the installed taps. No end termination is fitted. Fixed tap/LED identity: T1=B, T2=A, T3=2, T4=1, T5=C, T6=3, T7=D, T8=4, T9=E, T10=5.
 

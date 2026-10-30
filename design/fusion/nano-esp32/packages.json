@@ -4,22 +4,22 @@
     "Right main": {
       "path": "design/fusion/print/mk3s-petg-06-print-package.zip",
       "files": 38,
-      "sha256": "0e45ddbbb9b8c9d350e5f3263d831f05ebf6bdb1d95e198daa651d5c17d3a45e"
+      "sha256": "6a367ccb765f950ba5fcad952a67d6e66ce48f2cc2d6afe37bc4b23044866f85"
     },
     "Right modular": {
       "path": "design/fusion/modular/chainable-enclosure-mk3s-petg-06.zip",
       "files": 53,
-      "sha256": "d99750ea0ae46049fcc4806394583b30a3064d29eec6b467b445824ed94d673d"
+      "sha256": "70357203b70303aa601d60a6751abf21a297b41906a40e0d00f440c27b842314"
     },
     "Left main": {
       "path": "design/fusion/mirrored/mirrored-main-mk3s-petg-06.zip",
       "files": 43,
-      "sha256": "4576d56ba8a4a73572c069f045fe5a74cf114052e9a72db980953aa62a3bfdfe"
+      "sha256": "07d45788a56a049ece632e89f0aa6004cb9bd35a187de3738b86f4adfa4e1259"
     },
     "Left modular": {
       "path": "design/fusion/mirrored/mirrored-modular-mk3s-petg-06.zip",
       "files": 50,
-      "sha256": "88c5af3519d061ea41026f7dcdb84a35d4ffc29e93412d8d24093ded173e5ec0"
+      "sha256": "b839c999070d5b5255867f224ca9dec235a2b56844e0c430aea765e9789a5a6a"
     }
   }
 }

@@ -34,7 +34,7 @@ The application `.bin` alone requires a compatible bootloader and partition tabl
 
 ## Commissioning
 
-1. Verify the [Nano GPIO/harness wiring](hardware.md), mandatory VBUS divider and power rails. Recalibrate ladder and pedals on the Nano after importing old JSON settings. Start with USB, LCD, encoder and ladder. ADC calibration failure disables analog interpretation.
+1. Verify the [Nano GPIO/harness wiring](hardware.md), mandatory VBUS divider and power rails. Calibrate the ladder and pedals for the assembled hardware. Start with USB, LCD, encoder and ladder. ADC calibration failure disables analog interpretation.
 2. Verify the full 280×240 landscape display, RGB order, rounded-corner margins, USB/BLE badge, menus and pedal bars. Select **EDIT CONFIG → ENCLOSURE → LEFT** for the preferred display-on-left assembly or RIGHT for the other enclosure; save.
 3. Confirm one menu step per encoder detent in both directions. Default decoding uses four valid transitions; an appropriate half-cycle encoder can use `-DEDGES_PER_DETENT=2`. Hold for 700 ms to cancel/back.
 4. Set Modular wiring and **4/6/8/10** switches. Calibrate idle and every installed electrical tap with LCD/BLE active. Validate non-overlapping windows and stable press/release detection. Only one footswitch is supported at a time. [Ladder wiring](resistor-ladders.md).
@@ -48,7 +48,7 @@ The application `.bin` alone requires a compatible bootloader and partition tabl
 
 The Waveshare 24382 uses four 16.1 mm hollow supports with 2 mm walls. Factory rear M2 studs rest on the supports; fit **M2×5 countersunk screws from below** through Ø2.6 bores. Head-seat Z is −9.51 mm with Ø4.4 access. Nominal stud engagement is 1.39 mm. The factory holes are blind; verify screw engagement and seating without bottoming out.
 
-Base screws are M2×6. The [direct Nano mounts](../design/fusion/nano-esp32/README.md) use four M1.6×5 PCB screws into integral base posts, with components facing up. No mounting inserts or bridge screws are fitted. Remove rear vent films and open LED covers only for fitted indicators. Confirm the 9 V center-negative inlet and regulated 5 V output before connecting electronics. Provide 3 mm air space under base vents. [CAD/assembly guides](../design/README.md).
+Base screws are M2×6. The [direct Nano mounts](../design/fusion/nano-esp32/README.md) use four M1.6×5 PCB screws into integral base posts, with components facing up. Remove rear vent films and open LED covers only for fitted indicators. Confirm the 9 V center-negative inlet and regulated 5 V output before connecting electronics. Provide 3 mm air space under base vents. [CAD/assembly guides](../design/README.md).
 
 ## Operating limits
 

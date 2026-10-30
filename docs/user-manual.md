@@ -43,7 +43,7 @@ A **MIDI Device** is the equipment or software you want to control. Choose a USB
 | Step | Where / what to select |
 |---|---|
 | Match the enclosure | EDIT CONFIG > ENCLOSURE: LEFT or RIGHT. |
-| Match the switch wiring | LADDER: MODULAR for the base plus paired extensions; LINEAR for the legacy wiring. |
+| Match the switch wiring | LADDER: MODULAR for the base plus paired extensions; LINEAR for sequential tap wiring. |
 | Set the installed count | SWITCHES: 4/6/8/10 for Modular; 4-10 for Linear. Extensions are not detected automatically. |
 | Calibrate | Capture Idle and each switch in Wi-Fi Calibration, or enter measured centers under LADDER. |
 | Assign actions | SWITCHES > named switch > PRESS / RELEASE. New configurations have empty lists. |
@@ -229,7 +229,7 @@ The following pages walk through every local menu. Uppercase labels below match 
 | SWITCHES, opens a list | Choose a physical switch, then its name, actions, LED and toggle setting. See page 11. |
 | PEDALS | Choose input 1 or 2, then its electrical mode, response and CC settings. See page 15. |
 | LED CHAIN | Enable and configure the optional LED chain. See page 16. |
-| LADDER, MODULAR / LINEAR | Wiring/identity scheme. MODULAR is the four-switch base plus pairs; LINEAR is legacy tap order. Select the one actually wired. |
+| LADDER, MODULAR / LINEAR | Wiring/identity scheme. MODULAR is the four-switch base plus pairs; LINEAR uses sequential tap order. Select the one actually wired. |
 | ENCLOSURE, LEFT / RIGHT | One setting selects both screen rotation and row order. LEFT is default, screen on left; RIGHT is screen on right. |
 
 **Why labels repeat:** a numeric SWITCHES row sets the count; a SWITCHES navigation row opens switch configurations. A LADDER navigation row opens calibration values; the scalar LADDER row selects wiring. Navigation rows have no separate value column.
@@ -386,7 +386,7 @@ Open the **LADDER navigation row**, rather than the LADDER wiring selector. **ID
 | ENABLED | ON/OFF; default OFF. Enable only when the optional chain is installed. |
 | BRIGHTNESS | 0-255, default 64. Zero is dark even if the action is active. |
 | RGB ORDER | RGB, GRB, BRG, BGR, RBG or GBR; choose RGB for Pololu 2535. |
-| PROTOCOL | 2535, OLD 800K or OLD 400K. Choose 2535 for the specified LEDs; the OLD choices are legacy timing profiles. |
+| PROTOCOL | 2535, OLD 800K or OLD 400K. Choose 2535 for the specified LEDs; OLD 800K and OLD 400K select alternative timing profiles. |
 
 Assign a switch's pixel under its **LED NO.**, not here. White/yellow indicates momentary Press/Release; white/dark indicates toggle ON/OFF. Feedback is local to an accepted MIDI send, not a response from the MIDI Device. Save before testing changed chain settings: explicit Test actions use the saved LED configuration. Startup, setup transitions and readiness changes clear latched colors.
 

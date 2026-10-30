@@ -2,7 +2,7 @@
 
 **Left is the preferred enclosure and firmware default.** Its display, encoder and electronics are on the left; switch-pair extensions attach on the right. Main and modular assemblies have independent CAD files and matching print parts. The [full Fusion archive](../sigmidi-foot-controller-0.1.f3d) includes all component hierarchies and part libraries.
 
-The complete Fusion archive and enclosure packages include [Arduino Nano ESP32 direct mounting](../nano-esp32/README.md) in all four assemblies. Four reinforced posts are integral to each electronics base and support the board component-side up. Upper shells, USB pockets, switch positions and mating edges are unchanged.
+The complete Fusion archive and enclosure packages include [Arduino Nano ESP32 direct mounting](../nano-esp32/README.md) in all four assemblies. Four reinforced posts are integral to each electronics base and support the board component-side up.
 
 ## Dimensions and components
 
@@ -70,6 +70,6 @@ For base removal, release the Nano from its four posts and withdraw USB-C from t
 - [Modular package](mirrored-modular-mk3s-petg-06.zip): eight-switch example, pair/cap parts and label variants.
 - [Main top view](main/top.png), [assembly](main/assembled.png), [exploded view](main/exploded.png), [display mounting](main/display-underside.png).
 - [Modular top view](modular/top.png), [assembly](modular/assembled.png), [exploded view](modular/exploded.png).
-- [Current CAD/print package verification](../nano-esp32/package-verification.json), [Nano fit](../nano-esp32/assembly-clearance.json), [post wall sections and support-free slicing](../nano-esp32/print-verification.json). Upper print files retain their original verified hashes; native difference checks isolate the base changes to the Nano mounting areas.
+- [Current CAD/print package verification](../nano-esp32/package-verification.json), [Nano fit](../nano-esp32/assembly-clearance.json), [post wall sections and support-free slicing](../nano-esp32/print-verification.json). The reports cover assembly interference, board placement, post geometry, mesh integrity and print toolpaths.
 
 Current assembly exports include the components-up Nano and fitted hardware. Their solid counts are recorded in [export verification](../nano-esp32/exports.json); print only the designated enclosure STLs/3MFs. Nominal geometry and toolpaths are checked. Printed tolerances, strength and thermal performance require hardware tests.

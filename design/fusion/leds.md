@@ -1,6 +1,6 @@
 # SIGMIDI Foot Controller v0.1 — Pololu 2535 switch indicators (optional)
 
-The specified part is **[Pololu 2535](https://www.pololu.com/product/2535)**: a 10-pack of 5 mm diffused through-hole RGB LEDs with the WS2811 driver integrated into each LED. Fit one LED per installed footswitch (4/6/8/10 modular). Each package is one addressable pixel; no separate WS2811 IC or per-color current-limiting resistors are required. In modular wiring, initial assignments are physical tap T1 → LED 1 through T10 → LED 10. Route data through the four base switches first (upper-right B, upper-left A, lower-right 2, lower-left 1 in the preferred Left enclosure), then each right extension upper/lower pair, nearest section first. Displayed labels stay fixed as sections are added: base A/B and 1/2 from left to right, followed by C/3, D/4 and E/5 on extensions to the right. LED identity stays attached to the physical switch. See [modular ladder and LED ordering](resistor-ladders.md). Chain order is electrical DIN/DOUT order; use the per-switch assignment if the physical wiring order differs. Assignment 0 disables that switch's indicator. Duplicate assignments share a pixel; the most recent performed action wins.
+The specified part is **[Pololu 2535](https://www.pololu.com/product/2535)**: a 10-pack of 5 mm diffused through-hole RGB LEDs with the WS2811 driver integrated into each LED. Fit one LED per installed footswitch (4/6/8/10 modular). Each package is one addressable pixel with an integrated WS2811 driver and current control. In modular wiring, initial assignments are physical tap T1 → LED 1 through T10 → LED 10. Route data through the four base switches first (upper-right B, upper-left A, lower-right 2, lower-left 1 in the preferred Left enclosure), then each right extension upper/lower pair, nearest section first. Displayed labels stay fixed as sections are added: base A/B and 1/2 from left to right, followed by C/3, D/4 and E/5 on extensions to the right. LED identity stays attached to the physical switch. See [modular ladder and LED ordering](resistor-ladders.md). Chain order is electrical DIN/DOUT order; use the per-switch assignment if the physical wiring order differs. Assignment 0 disables that switch's indicator. Duplicate assignments share a pixel; the most recent performed action wins.
 
 The chain is **disabled by default**, with brightness **64/255**. With it enabled, a press action sets the assigned LED to **white**; a release action sets it to **yellow**. Colors remain until the next action or a reset condition. Each LED is independent, so operating another switch does not erase previous indicators.
 
@@ -27,7 +27,7 @@ This side view is not a bottom view; turning the LED over reverses the visible o
 
 Use **D7 / GPIO10** on the Nano ESP32 header for LED data. RMT supplies hardware-timed output independently of the encoder, display and pedals. The application uses native USB MIDI; it does not provide a serial console. Follow the [Nano pin map](../../docs/hardware.md).
 
-The LED chain contains only the Pololu 2535 LEDs and wiring. Connect the Nano D7 / GPIO10 data output directly to the first LED's DIN. Supply every LED from the regulated 5 V rail and common ground, in parallel. The WS2811 driver is already inside each LED; no additional driver, buffer, series resistor, pulldown or capacitor is fitted in the chain.
+The LED chain contains only the Pololu 2535 LEDs and wiring. Connect the Nano D7 / GPIO10 data output directly to the first LED's DIN. Supply every LED from the regulated 5 V rail and common ground, in parallel. Each LED package contains its WS2811 driver.
 
 ```text
 Nano D7 / GPIO10 -------- LED1 DIN
@@ -38,7 +38,7 @@ Supply GND ----------------------- every LED's GND lead
 Nano GND -------- supply GND
 ```
 
-Each LED box in the electrical diagram uses the actual package side-view lead order: lens left, flat down, with DIN / 5V / GND / DOUT on the right from top to bottom. Use the flat-side reference before cutting or bending leads. The source photograph is included unchanged in the diagram. A raised wire hop crosses the +5 V rail without connecting to it.
+Each LED box in the electrical diagram uses the actual package side-view lead order: lens left, flat down, with DIN / 5V / GND / DOUT on the right from top to bottom. Use the flat-side reference before cutting or bending leads. The diagram includes the manufacturer's lead-orientation photograph. A raised wire hop crosses the +5 V rail without connecting to it.
 
 The GPIO signal is 3.3 V while LED power is 5 V. The Pololu product page does not specify a guaranteed 3.3 V DIN threshold; verify direct-drive operation with the purchased LED batch and actual harness. Keep the data wire short and alongside a ground return. Firmware sends an all-off frame at initialization; no added component holds the data input low during MCU reset.
 
@@ -61,7 +61,7 @@ Power this chain from a **regulated 5.0 V rail that does not exceed 5 V at the L
 
 The **2535** profile uses 1.25 µs bits, most-significant bit first, RGB order and a 350 µs reset. OLD 800K and OLD 400K are selectable timing profiles for other two-speed WS2811 hardware. Use 2535 for the specified Pololu part.
 
-Configuration schema **4** stores global settings and a `led` assignment in each of ten switch entries:
+Configuration schema **6** stores global settings and a `led` assignment in each of ten switch entries:
 
 ```json
 "leds": {"enabled": false, "brightness": 64, "colorOrder": 0, "protocol": 0}

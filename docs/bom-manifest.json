@@ -25,23 +25,23 @@
     "main_10": 10
   },
   "source_sha256": {
-    "docs/bom-items.json": "5dee8ce81e9c93c553b38b9963e60dc3358710b28cecaf3682de7cb6b48282d9",
-    "docs/bill-of-materials.md": "6756725f46d9a917e7359012aa0b95e6804a57d7a78497175f7a572949089f32",
-    "scripts/build_bom.py": "a89cca826b9458a8091a9837017cc009ac7ea6ed95fcc7701093f48a97fa421b",
+    "docs/bom-items.json": "75e73e854e95969958fe66fffd7bee2bbe62c4d651fc86b12d3d65f0a8dd89fd",
+    "docs/bill-of-materials.md": "1a013a498e42d297efe237f1d964b50cc1287c5e606a9df5331b403930bb8f8f",
+    "scripts/build_bom.py": "1a165c1b45d9e0cb469c6daf88206896ceef21942028034d2212e218e5fa00f7",
     "design/electrical/bom.csv": "495c4015597123b2c98f1639e3ecbaf1fae34e09f555b87459632ee7fa9bf4c6",
     "design/electrical/netlist.json": "2267e1b0a654212ef16386f61ddbc9a47e312421421e163f757127318dd4331c",
     "design/fusion/mirrored/layout.json": "85b4582b4e00ae3eb994afe014bfcc2ee8799b8abf90cd20573c16eb08b8c8f0",
     "design/fusion/nano-esp32/mount-fit.json": "7c8620ac1407c3314f1aab5ede383f570c49900b9c6923b04b85a17cdb721daf",
-    "design/fusion/mirrored/README.md": "35f1505830b2a15ba99acab50aeb81c3fc4b8916f2a327fc39570e69f17c2409",
-    "design/fusion/README.md": "98a0716df9f014db7fac95046fec3e10e901bc73f333f8a2e357ce12a9d3909a",
+    "design/fusion/mirrored/README.md": "a4ba93fa8f4b9c96fee815d5f66e6cf6afa2ff90b5735e499e65fddd01ae0642",
+    "design/fusion/README.md": "ac621c1e951fb336bcc6a959b85e2070b0981762ca51faa9431c10c192595f34",
     "design/fusion/datasheets/double-trs-ACJS-MHDC.pdf": "cf064025759af13229b2930116f74c2eb0c3a9675ed1c8e6eadcfdd8939f70f5",
-    "docs/hardware.md": "aefe93a3becba8b39c03db2001dfcc1a2431f30f182d0c0f52c47534271716ab",
+    "docs/hardware.md": "c756916d0f4f42db27ff178f971768ae0171a3d20df20b2983edf0b2a2fba25f",
     "docs/power.md": "fe1c5d1c4e4719229f7964cf9150eeb5dc091ce5cb6a336b514a4f9dfd87e5cc",
     "scripts/build_user_manual.py": "178b7b0e8521b97623738698e894e0c527addb13e2db2205f86739f709ad44f1"
   },
   "outputs": {
-    "docs/bill-of-materials.csv": "80145a9487bd5eae9f2eb8575eb34f96183361a0d4ff1c81b8af8bb49272f9bd",
-    "output/pdf/sigmidi-foot-controller-0.1-bill-of-materials.pdf": "5f915bedf8bb249bb9e122ceaa895e6eeb1d1553a6e46bea352764acecb66e8b"
+    "docs/bill-of-materials.csv": "9061105d0fc02707fcf862faa746e1c667ef380a5845c843565c599db7c15946",
+    "output/pdf/sigmidi-foot-controller-0.1-bill-of-materials.pdf": "a97e7f63d259db1862e945bb4d8107b343488368dda8a414276357886c4ba571"
   },
   "physical_fit_qualified": false,
   "purchased_parts_inside_boards_itemized": false

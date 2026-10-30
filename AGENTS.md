@@ -5,6 +5,12 @@
 - After finishing changes, always execute `git commit` with a short commit message.
 - Absolutely NEVER push to `origin`. Keep commits local.
 
+## Documentation
+
+- Describe only the current design, parts, settings and assembly steps.
+- Do not record design history, superseded components, comparisons with removed designs, or statements that obsolete parts are no longer needed. Keep change history in Git.
+- Update documentation generators and packaged copies alongside their source documents.
+
 <!-- CODEGRAPH_START -->
 ## CodeGraph
 

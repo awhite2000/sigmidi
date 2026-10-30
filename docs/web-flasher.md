@@ -44,4 +44,4 @@ Tests cover corrupted/missing firmware, wrong chips, unsafe offsets, settings pr
 
 Publish the entire `distribution/web-flasher/` directory to an HTTPS static host. Preserve paths and MIME types, avoid caching release/manifest files during updates, and return errors for missing assets. Relative URLs support subdirectories. A restrictive Permissions Policy must allow `serial=(self)`.
 
-The app partition remains 0x3E0000 bytes at 0x20000; the remaining flash is unused. Nano PSRAM is not required or enabled. Do not use these binaries on DFR1075/ESP32-C6. The installer replaces the partition table: export any factory/previous data first. Settings preservation applies to compatible SIGMIDI installations, not arbitrary Nano factory firmware.
+The app partition is 0x3E0000 bytes at 0x20000; the remaining flash is unused. Nano PSRAM is not required or enabled. The installer replaces the partition table: export saved settings before installation. Settings preservation applies to compatible SIGMIDI installations, not arbitrary Nano factory firmware.

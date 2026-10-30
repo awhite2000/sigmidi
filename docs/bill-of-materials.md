@@ -12,7 +12,7 @@ Preferred build: **Left**, with electronics on the left and modular extensions t
 | Modular 10 | 10 | 3 | 10 | 9 |
 | Main 10, fixed split chassis | 10 | Not applicable | 8 | 4 |
 
-Use **N** below for the chosen installed switch count. **AR** means as required. Optional feature quantities apply only when that feature is fitted. Parts inside boards are not itemized. The Nano mounts directly on integral posts in the electronics base; no separate adapters are printed. Electrical reference designators match the Nano wiring diagrams and KiCad schematic.
+Use **N** below for the chosen installed switch count. **AR** means as required. Optional feature quantities apply only when that feature is fitted. Parts inside boards are not itemized. The Nano mounts directly on integral posts in the electronics base. Electrical reference designators match the Nano wiring diagrams and KiCad schematic.
 
 ## 1. Required control electronics
 
@@ -61,7 +61,7 @@ J1, U3 and C1 are omitted as a group in a USB-only electrical build. The existin
 |---|---|---|
 | E15 / LED1-LED10 | N piece | **Pololu 2535**. 5 mm diffused through-hole RGB pixel with integrated WS2811; 5 V; four leads DIN/5V/GND/DOUT. |
 
-Pololu 2535 is sold as a **10-pack**: buy one pack for any single 4-10 switch build and fit N LEDs. The current chain has LEDs, +5 V, GND and data wiring only; no extra driver, buffer, series resistor or chain capacitor is specified. C1 is the converter input capacitor, not an LED-chain component. Direct 3.3 V data into 5 V LEDs requires verification with the actual batch and harness. [S4]
+Pololu 2535 is sold as a **10-pack**: buy one pack for any single 4-10 switch build and fit N LEDs. The chain uses LEDs connected to +5 V, GND and data wiring. C1 is the converter input capacitor. Direct 3.3 V data into 5 V LEDs requires verification with the actual batch and harness. [S4]
 
 <!-- page -->
 
@@ -80,11 +80,11 @@ Pololu 2535 is sold as a **10-pack**: buy one pack for any single 4-10 switch bu
 
 **Avoid double counting included hardware.** H04 is one complete footswitch hardware set per switch; the reference drawing shows two nuts and one washer. H06 is the encoder's nut/washer set. H07 is J2's two nickel nuts and two fiber washers, shown in the attached manufacturer drawing. H08 is J1's 2 mm retaining nut. Check the seller's package contents before ordering any of these separately.
 
-**H01 quantity:** main enclosure = eight. Modular = four on the electronics base plus two per added pair. The cap has an integral floor and no base screws. Use countersunk heads for H01 and H02. No separate heat-set inserts or metal standoffs are specified in the current design.
+**H01 quantity:** main enclosure = eight. Modular = four on the electronics base plus two per added pair. The cap has an integral floor and no base screws. Use countersunk heads for H01 and H02.
 
 **Display fit:** four M2x5 screws pass through the printed hollow mounts into the factory blind studs. Nominal engagement is 1.39 mm; confirm head seating and usable stud depth on the delivered display. Do not substitute the base's M2x6 screws for the display screws.
 
-**Nano mounting:** four H03 M1.6x5 pan-head screws attach the board component-side up directly to four integral base posts. Posts have 6 mm shafts, 8 mm root envelopes, 45-degree root transitions and 4.3 mm-deep pilots. The USB-side pair has rear flats for pocket clearance; chamfered channels under the opposite pair preserve the vent. No mount adhesive or bridge screws are needed. Check screw fit and USB cable seating before tightening.
+**Nano mounting:** four H03 M1.6x5 pan-head screws attach the board component-side up directly to four integral base posts. Posts have 6 mm shafts, 8 mm root envelopes, 45-degree root transitions and 4.3 mm-deep pilots. The USB-side pair has rear flats for pocket clearance; chamfered channels under the opposite pair preserve the vent. Check screw fit and USB cable seating before tightening.
 
 **Control fit remains to confirm:** no exact footswitch or encoder manufacturer SKU is selected. Match the specified switch body and shaft offset, actuator height, encoder bushing length through the 3 mm roof, shaft form and knob bore. The encoder's 6 mm shaft and 8 mm body height are CAD assumptions. These checks determine the final orderable parts, not a change to the enclosure geometry.
 
@@ -185,6 +185,6 @@ For all optional circuits fitted, electrical instance totals are **28 / 34 / 40 
 
 **[S3]** [Pololu S13V10F5 #4083](https://www.pololu.com/product/4083): regulator, current/thermal limits and input transient capacitor guidance. **[S4]** [Pololu 2535](https://www.pololu.com/product/2535): 10-pack, supply and LED package.
 
-Local basis: design/electrical/bom.csv and netlist.json; design/fusion/mirrored/layout.json; enclosure assembly guides; docs/hardware.md and power.md; and design/fusion/datasheets/double-trs-ACJS-MHDC.pdf. The manufacturer's TRS drawing shows the included nuts/washers and optional PCB support hole; no extra saddle screw is specified in this assembly.
+Local basis: design/electrical/bom.csv and netlist.json; design/fusion/mirrored/layout.json; enclosure assembly guides; docs/hardware.md and power.md; and design/fusion/datasheets/double-trs-ACJS-MHDC.pdf. The manufacturer's TRS drawing shows the included nuts/washers and optional PCB support hole.
 
-Prepared 30 October 2026 for SIGMIDI v0.1. The Nano firmware, harness and integral components-up mounting are specified here. Electronics bases carry the four Nano posts; upper shells are unchanged. Values and CAD fit describe the current prototype; purchased-part fit, direct LED drive, power/thermal performance and physical assembly still require bench checks. Edit docs/bom-items.json and rerun scripts/build_bom.py to refresh the PDF, Markdown and shopping CSV.
+Prepared 30 October 2026 for SIGMIDI v0.1. The Nano firmware, harness and integral components-up mounting are specified here. Electronics bases carry four reinforced Nano mounting posts. Values and CAD fit describe the current prototype; purchased-part fit, direct LED drive, power/thermal performance and physical assembly still require bench checks. Edit docs/bom-items.json and rerun scripts/build_bom.py to refresh the PDF, Markdown and shopping CSV.

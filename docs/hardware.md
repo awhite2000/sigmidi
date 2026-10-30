@@ -36,7 +36,7 @@ The firmware uses **ESP32 GPIO numbers**, independently of Arduino IDE pin-numbe
 
 The display's eight-pin connector stays in physical order **BL, RST, D/C, CS, SCL/CLK, SDA/DIN, GND, VCC**. Connect to the signals above. The Nano's D13/default SPI-clock pin is deliberately unused because it also drives the onboard LED. GPIO19/20 are exclusively USB D−/D+ inside the USB-C connection. Avoid GPIO0/3/45/46 strapping pins and leave unused Nano pins disconnected. The three analog inputs all use ADC1, including during Wi-Fi operation. Pin constants and uniqueness checks are in `src/board.hpp`.
 
-The electrical diagrams show the component-side Nano top view with USB-C up: JP1 left, pads 1–15 downward; JP2 right, pads 15–1 downward. These are the official schematic pad IDs. Board labels and GPIO names are both retained. The physical installation is component-side up on four integral base posts, with USB-C to the rear. Rotate the reference to match the chassis when identifying pads.
+The electrical diagrams show the component-side Nano top view with USB-C up: JP1 left, pads 1–15 downward; JP2 right, pads 15–1 downward. These are the official schematic pad IDs. The diagrams show both board labels and GPIO names. The physical installation is component-side up on four integral base posts, with USB-C to the rear. Rotate the reference to match the chassis when identifying pads.
 
 ### USB VBUS detection
 
@@ -74,7 +74,7 @@ Tap identity is fixed: A=T2, B=T1, 1=T4, 2=T3; extensions add C/3=T5/T6, D/4=T7/
 
 The schematic below shows electrical tap order, independently of physical row order. Each SWn connects tap Tn to ground.
 
-Use 1% metal-film resistors (0.1% optional) and normally open switches. Build this exact series-tap topology rather than ten independent parallel resistor branches:
+Use 1% metal-film resistors (0.1% optional) and normally open switches. Build this series-tap topology:
 
 ```text
 3V3 -- 10k -- SENSE -- 1k -- T1 -- 1k -- T2 -- ... -- 1k -- T10
@@ -134,7 +134,7 @@ Boot and disabled-input states also leave the bias GPIO at high impedance. The f
 
 Use calibrated ESP32-S3 ADC1 readings at 12 dB attenuation, 12-bit resolution and the ESP-IDF curve-fitting scheme, with one calibration handle per input. Connected pedals and idle ladder remain within the nominal 0–2.2 V design span. Calibrate actual switch centres and pedal endpoints on the installed Nano. Absolute ADC error, acquisition settling and noise still require bench checks. Ladder scans run about every 1 ms; pedal sampling starts at 200 samples/s. Connect only unpowered passive pedals. The two-resistor pedal interface adds no external ESD protection.
 
-Before building the harness, verify idle and all N installed ladder states, individual press/release detection, and all four combinations of pedal modes. Test with BLE and LCD active, USB and 9 V power operation, and the longest intended pedal cables. Check the Nano and LED supply budgets. No external ADC or GPIO expander is included.
+Before building the harness, verify idle and all N installed ladder states, individual press/release detection, and all four combinations of pedal modes. Test with BLE and LCD active, USB and 9 V power operation, and the longest intended pedal cables. Check the Nano and LED supply budgets.
 
 ## Optional switch LEDs
 

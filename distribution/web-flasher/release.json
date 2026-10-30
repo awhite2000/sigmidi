@@ -3,7 +3,7 @@
   "name": "SIGMIDI Foot Controller",
   "version": "0.1",
   "built_at": "2026-10-29T23:17:51.317401+00:00",
-  "packaged_at": "2026-10-30T11:31:15.812070+00:00",
+  "packaged_at": "2026-10-30T11:49:19.914415+00:00",
   "chip": "ESP32-S3",
   "flash_bytes": 16777216,
   "source_sha256": "67d65d080ba75305bf13f097899fb5ec18f1220d2524f441728c53b006054719",
