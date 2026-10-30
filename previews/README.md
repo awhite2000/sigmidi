@@ -68,4 +68,4 @@ The unified schematic connects every fitted terminal with continuous wires, incl
 
 [Pedal startup / reconnection prompts](pedal-startup-preview.png) show both inputs pending and only pedal 2 still pending after pedal 1 sends. MOVE markers clear independently after accepted performance CC sends. Pending inputs show --- without a position bar; their numeric values appear only after the first accepted send.
 
-[On-device editing screen paths](../docs/device-workflows/README.md) show the encoder actions and intermediate screens used to reach switch messages, pedal settings, calibration, LED settings and controller parameters. Regenerate with `scripts/build_device_workflows.py`; the routes are included on pages 6-7 of the user manual.
+[On-device editing screen paths](../docs/device-workflows/README.md) show the encoder actions and intermediate screens used to reach switch messages, pedal settings, calibration, LED settings and controller parameters. Regenerate with `scripts/build_device_workflows.py`; the routes are included on pages 8-9 of the user manual.

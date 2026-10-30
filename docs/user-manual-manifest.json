@@ -1,7 +1,7 @@
 {
   "title": "SIGMIDI Foot Controller v0.1 User manual",
   "configuration_schema": 6,
-  "pages": 25,
+  "pages": 27,
   "page_size": "A4",
   "preferred_variant": "Left",
   "source": "docs/user-manual.md",
@@ -16,100 +16,114 @@
       "page": 2
     },
     {
-      "title": "2. Performance Mode",
+      "title": "1.1 USB MIDI connections",
       "page": 3
     },
     {
-      "title": "2.1 Switch behavior while playing",
+      "title": "1.2 BLE MIDI and simultaneous output",
       "page": 4
     },
     {
-      "title": "3. Editing Mode",
+      "title": "2. Performance Mode",
       "page": 5
     },
     {
-      "title": "3.1 Editing on Device",
+      "title": "2.1 Switch behavior while playing",
       "page": 6
     },
     {
-      "title": "3.1 Screen paths to other menus",
+      "title": "3. Editing Mode",
       "page": 7
     },
     {
-      "title": "3.1.1 Controller settings",
+      "title": "3.1 Editing on Device",
       "page": 8
     },
     {
-      "title": "3.1.2 Switch screens",
+      "title": "3.1 Screen paths to other menus",
       "page": 9
     },
     {
-      "title": "3.1.3 Action lists and message actions",
+      "title": "3.1.1 Controller settings",
       "page": 10
     },
     {
-      "title": "3.1.4 MIDI message editor",
+      "title": "3.1.2 Switch screens",
       "page": 11
     },
     {
-      "title": "3.1.5 PC+ and PC- counters",
+      "title": "3.1.3 Action lists and message actions",
       "page": 12
     },
     {
-      "title": "3.1.6 Pedal screens",
+      "title": "3.1.4 MIDI message editor",
       "page": 13
     },
     {
-      "title": "3.1.7 Ladder and LED screens",
+      "title": "3.1.5 PC+ and PC- counters",
       "page": 14
     },
     {
-      "title": "3.2 Editing over Wi-Fi",
+      "title": "3.1.6 Pedal screens",
       "page": 15
     },
     {
-      "title": "3.3 Calibration workflow",
+      "title": "3.1.7 Ladder and LED screens",
       "page": 16
     },
     {
-      "title": "4. Troubleshooting",
+      "title": "3.2 Editing over Wi-Fi",
       "page": 17
     },
     {
-      "title": "Appendix A. HX Stomp example",
+      "title": "3.3 Calibration workflow",
       "page": 18
     },
     {
-      "title": "A.2 Prepare existing patches",
+      "title": "4. Troubleshooting",
       "page": 19
     },
     {
-      "title": "A.3 Snapshots and ordered actions",
+      "title": "Appendix A. HX Stomp example",
       "page": 20
     },
     {
-      "title": "A.4 Control effects and parameters",
+      "title": "A.2 Prepare existing patches",
       "page": 21
     },
     {
-      "title": "A.5 Commands and expression control",
+      "title": "A.3 Snapshots and ordered actions",
       "page": 22
     },
     {
-      "title": "A.6 Stage layout and looper",
+      "title": "A.4 Control effects and parameters",
       "page": 23
     },
     {
-      "title": "A.7 HX MIDI reference",
+      "title": "A.5 Commands and expression control",
       "page": 24
     },
     {
-      "title": "A.8 Example sources and checks",
+      "title": "A.6 Stage layout and looper",
       "page": 25
+    },
+    {
+      "title": "A.7 HX MIDI reference",
+      "page": 26
+    },
+    {
+      "title": "A.8 Example sources and checks",
+      "page": 27
     }
   ],
-  "source_sha256": "b1f44976c60db9ef3c3c499e33063f32bc81b7726a580879b7b3728f7d5a96e2",
-  "pdf_sha256": "64afa6eee008bedea0566dae7e564db6ee0aeffba124d1217b61e8fcc85cdc46",
+  "source_sha256": "f3c63f79482c2111b33c2f75e83ae65c65e25def96f6e6af427fc9514984e5c9",
+  "pdf_sha256": "e4dc17ab3af794f53581f569f6513aea8e553a1b49fb7f397bd684d9a2a964b0",
+  "renderer_sha256": "085a688b273e23191f117ba7a398068d8cff82e65dd24fd1a489a057b7f22334",
+  "connection_diagrams": {
+    "manual-signal-path.svg": "474175b49be2b19d5d40116f8be7edf1d3cc1de9bfdbdb7ab795b7901da0794e",
+    "manual-usb-connection.svg": "40024e7dc34b5f480cb3673e2e8b9ed1dfa716c828f2840fe2c3b49bf62a034d",
+    "manual-ble-connection.svg": "c9fc4bf5bcd16ea317b0b99a89a19e275e200a03a2ff9a37388b3c24a3bc0438"
+  },
   "images": {
     "docs/device-workflows/other-menus-workflow.png": "e52054757b0b8a61e06e72e0901307fd9ea6b2bccb16d5af83050c4c58823d83",
     "docs/device-workflows/save-exit.png": "2389a6ede143232a5f2853c703e2c6d5720228086e15ac56f800f2ae3e82f730",
@@ -131,6 +145,7 @@
   },
   "HX_reference": "Supplied CC table, cross-checked against official Line 6 sources",
   "BLE_dongle_hardware_tested": false,
+  "USB_BLE_hardware_tested": false,
   "device_menu_sources": [
     "src/ui.cpp",
     "src/display.cpp",
@@ -139,5 +154,12 @@
     "src/counters.cpp",
     "web/index.html"
   ],
+  "connection_sources_sha256": {
+    "src/usb.cpp": "4e0292f794b093ddc810fd885d0a6b373094d64f54f8871b952406de5d1676ba",
+    "src/ble.cpp": "32215647da7c33cb74fd3fbc5c7f06efb1a2c7c9549c8d45adc77c0c6d39e11c",
+    "src/midi_router.cpp": "1cda76aaa025d6c8ba5afcbcf281b70979fbaf26d9ae24164f2d515e49e36ce6",
+    "src/main.cpp": "f8c0ff8b54f77cbabb2341997eeb2d3f844ffbe3ec1c339cb8acd9f8d2c602f3",
+    "src/branding.hpp": "8399cbd5f124434e18b0e7ed93c24ff178ee098b3ad23573fd95c6d6cd8c5b98"
+  },
   "HX_setup_in_appendix_only": true
 }

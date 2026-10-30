@@ -61,6 +61,26 @@ def signal_path():
     return d
 
 
+def connection_path(wireless=False):
+    """General USB/BLE roles, separate from the appendix's DIN dongle example."""
+    d = Drawing(CONTENT, 78)
+    boxes = [(2, 180, 'SIGMIDI', 'BLE MIDI peripheral' if wireless else 'USB MIDI device'),
+             (285, 217, 'MIDI HOST / RECEIVER',
+              'BLE MIDI central + MIDI app' if wireless else 'Computer / tablet / MIDI host')]
+    for x, width, title, subtitle in boxes:
+        d.add(Rect(x, 12, width, 54, rx=7, ry=7, fillColor=PALE,
+                   strokeColor=TEAL, strokeWidth=1))
+        d.add(String(x+width/2, 45, title, fontName='ManualBold', fontSize=10,
+                     textAnchor='middle', fillColor=INK))
+        d.add(String(x+width/2, 28, subtitle, fontName='Manual', fontSize=8.5,
+                     textAnchor='middle', fillColor=INK))
+    d.add(Line(186, 38, 275, 38, strokeColor=PURPLE, strokeWidth=2))
+    d.add(Polygon([282, 38, 274, 42, 274, 34], fillColor=PURPLE, strokeColor=PURPLE))
+    d.add(String(233, 51, 'BLE MIDI' if wireless else 'USB-C data cable',
+                 fontName='Manual', fontSize=8, textAnchor='middle', fillColor=PURPLE))
+    return d
+
+
 class Manual(SimpleDocTemplate):
     def afterFlowable(self, item):
         if isinstance(item, Paragraph) and item.style.name == 'Chapter':
@@ -91,8 +111,11 @@ def main():
     s.add(ParagraphStyle('Caption', parent=s['Copy'], fontSize=8.2, leading=10.5,
                         textColor=colors.HexColor('#506268'), alignment=TA_CENTER,
                         spaceBefore=4, spaceAfter=7))
-    path_diagram = signal_path()
-    renderSVG.drawToFile(path_diagram, str(ROOT/'docs/manual-signal-path.svg'))
+    path_diagrams = {'manual-signal-path.svg': signal_path(),
+                     'manual-usb-connection.svg': connection_path(),
+                     'manual-ble-connection.svg': connection_path(wireless=True)}
+    for filename, drawing in path_diagrams.items():
+        renderSVG.drawToFile(drawing, str(ROOT/'docs'/filename))
     story = []
     sections = SOURCE.read_text().split('<!-- page -->')
     images = []
@@ -116,8 +139,8 @@ def main():
                 refs = re.findall(r'!\[([^]]*)\]\(([^)]+)\)', line)
                 cells = []
                 for caption, relative in refs:
-                    if relative == 'manual-signal-path.svg':
-                        story.extend([path_diagram, Spacer(1, 5)])
+                    if relative in path_diagrams:
+                        story.extend([path_diagrams[relative], Spacer(1, 5)])
                         continue
                     path = (SOURCE.parent/relative).resolve()
                     images.append(path)
@@ -220,12 +243,20 @@ def main():
         'pdf': str(OUTPUT.relative_to(ROOT)), 'chapters': doc.chapters,
         'source_sha256': hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
         'pdf_sha256': hashlib.sha256(OUTPUT.read_bytes()).hexdigest(),
+        'renderer_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        'connection_diagrams': {name: hashlib.sha256((ROOT/'docs'/name).read_bytes()).hexdigest()
+                                for name in path_diagrams},
         'images': {str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
                    for p in sorted(set(images))},
         'HX_reference': 'Supplied CC table, cross-checked against official Line 6 sources',
         'BLE_dongle_hardware_tested': False,
+        'USB_BLE_hardware_tested': False,
         'device_menu_sources': ['src/ui.cpp', 'src/display.cpp', 'src/config.cpp',
                                 'src/core.cpp', 'src/counters.cpp', 'web/index.html'],
+        'connection_sources_sha256': {
+            name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
+            for name in ['src/usb.cpp', 'src/ble.cpp', 'src/midi_router.cpp',
+                         'src/main.cpp', 'src/branding.hpp']},
         'HX_setup_in_appendix_only': True,
     }
     (ROOT/'docs/user-manual-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')

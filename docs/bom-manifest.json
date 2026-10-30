@@ -37,7 +37,7 @@
     "design/fusion/datasheets/double-trs-ACJS-MHDC.pdf": "cf064025759af13229b2930116f74c2eb0c3a9675ed1c8e6eadcfdd8939f70f5",
     "docs/hardware.md": "b372e52e7f73b4602c639a86cf8f16d85535ad08967bc742fc4671f93692432e",
     "docs/power.md": "299910572a130a002406a4a0aa52907f51867d25ab15b705543aa2c0ca4e9ffa",
-    "scripts/build_user_manual.py": "42df15614cb05dc018ce17786701cd23485fdc618b89f0c90ab1b02f7db0a150"
+    "scripts/build_user_manual.py": "085a688b273e23191f117ba7a398068d8cff82e65dd24fd1a489a057b7f22334"
   },
   "outputs": {
     "docs/bill-of-materials.csv": "c37617101a2fd6e63530fc387d49564cd0eb5db89c6785ece10556811da3458b",

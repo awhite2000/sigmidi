@@ -8,16 +8,17 @@ Perform with your MIDI Device. Configure every action on the controller or over 
 
 ## Features at a glance
 
-Each switch can send ordered lists of PC and CC messages on independent channels. Choose momentary press/release behavior or a two-press toggle. PC+ and PC- provide independent remembered program counters. Two passive continuous pedals send CC values; optional LEDs show local action state. Modular builds support 4, 6, 8 or 10 switches. Left/Right selects the matching screen orientation and switch order.
+USB MIDI and BLE MIDI send the same actions to each ready connection. Each switch can send ordered lists of PC and CC messages on independent channels. Choose momentary press/release behavior or a two-press toggle. PC+ and PC- provide independent remembered program counters. Two passive continuous pedals send CC values; optional LEDs show local action state. Modular builds support 4, 6, 8 or 10 switches. Left/Right selects the matching screen orientation and switch order.
 
 | Find it | Pages |
 |---|---|
-| Getting ready and connecting a MIDI Device | 2 |
-| Performance Mode: screen and switch behavior | 3-4 |
-| Editing Mode: workflow and encoder controls | 5 |
-| Editing on Device: screen paths and every option | 6-14 |
-| Editing over Wi-Fi / calibration / troubleshooting | 15 / 16 / 17 |
-| Appendix A: HX Stomp + BLE MIDI dongle example | 18-25 |
+| Getting ready | 2 |
+| USB MIDI connections / BLE MIDI and simultaneous output | 3 / 4 |
+| Performance Mode: screen and switch behavior | 5-6 |
+| Editing Mode: workflow and encoder controls | 7 |
+| Editing on Device: screen paths and every option | 8-16 |
+| Editing over Wi-Fi / calibration / troubleshooting | 17 / 18 / 19 |
+| Appendix A: HX Stomp + BLE MIDI dongle example | 20-27 |
 
 Firmware v0.1, configuration schema 6. Illustrations use current 280 x 240 firmware menus and example settings. Left is the preferred enclosure; Right reverses the order within each row. Device-specific recipes are confined to Appendix A.
 
@@ -27,17 +28,13 @@ Firmware v0.1, configuration schema 6. Illustrations use current 280 x 240 firmw
 
 ## Connect your MIDI Device
 
-A **MIDI Device** is the equipment or software you want to control. SIGMIDI sends MIDI over USB and BLE, with the same PC/CC values on both ready links. For USB, connect Nano USB-C to a MIDI host and select SIGMIDI. For BLE, the receiver acts as central and subscribes to SIGMIDI notifications. Neither carries audio.
+A **MIDI Device** is the equipment or software you want to control. Choose a USB MIDI connection (page 3), BLE MIDI (page 4), or both. These connections carry PC/CC control messages; audio follows the MIDI Device's own audio path.
 
-1. Power SIGMIDI through USB-C, or its fitted 9 V DC center-negative, 5.5 x 2.1 mm input. Power the MIDI Device as required by its manufacturer.
-2. For USB, connect Nano USB-C to the MIDI host and select **SIGMIDI Foot Controller v0.1**. For BLE, select that name in the MIDI Device's BLE MIDI connection screen; on iPad use the music app's BLE MIDI interface, rather than general Bluetooth pairing.
-3. If the MIDI Device has only a DIN MIDI input, use a compatible BLE MIDI central adapter. Appendix A describes a complete dongle example and pairing procedure.
-4. Wait for **USB MIDI**, **USB+BLE** or **MIDI READY** on SIGMIDI. Match each message's channel to the MIDI Device's receive channel, and enable reception of the required PC/CC commands there.
-For USB, the badge is **USB MIDI**, or **USB+BLE** when both links are ready. For Nano wiring and ROM flashing (B1 to GND, RST, release B1), see the [hardware guide](hardware.md) and [installer guide](web-flasher.md).
-
-5. Release all switches. Configure one simple action, save and exit setup, then test its result on the MIDI Device.
-
-SIGMIDI advertises its BLE service automatically; there is no pairing command in its setup menu. The receiving central establishes the connection. Persistent Bluetooth bonding is not implemented. Re-establish the connection through the receiver when needed; a connection does not replay missed actions.
+1. Power SIGMIDI through USB-C, or its fitted 9 V DC center-negative, 5.5 x 2.1 mm input. Power the MIDI Device as its manufacturer requires.
+2. Connect USB to a MIDI host, or connect from a BLE MIDI receiver. Select **SIGMIDI Foot Controller v0.1** in the receiving software. A DIN-only MIDI Device needs a suitable MIDI interface or BLE central adapter; Appendix A gives a dongle example.
+3. Wait for **USB MIDI**, **MIDI READY** (BLE), or **USB+BLE**. Match the action's MIDI channel to the receiver and enable its required PC/CC reception or MIDI-learn assignment.
+4. Configure one simple action, save and exit setup, release all switches, then test its result. Default action lists are empty.
+5. Move every enabled pedal until its MOVE marker clears. A stationary pedal does not send an initial value automatically.
 
 ## First configuration checklist
 
@@ -52,6 +49,60 @@ SIGMIDI advertises its BLE service automatically; there is no pairing command in
 | Store and play | SAVE & EXIT; release all switches before the next performance press. |
 
 The four-switch Left base reads **A B / 1 2** from left to right. Extensions add C/3, D/4 and E/5 to the right. The full Right layout reads **E D C B A / 5 4 3 2 1**. Actions, calibration and LED assignments stay attached to the same physical switches when the variant changes.
+
+<!-- page -->
+
+# 1.1 USB MIDI connections
+
+![USB MIDI: controller to a host](manual-usb-connection.svg)
+
+## The receiver must be a USB host
+
+SIGMIDI is a **class-compliant USB MIDI 1.0 device** with one MIDI port. A computer, tablet or compatible hardware MIDI host receives its messages. No SIGMIDI-specific USB driver is required on a host that supports class-compliant MIDI. A USB socket on a sound module may also be a device port: two USB devices cannot communicate directly just by joining their cables. A passive USB-to-DIN cable is not a MIDI host.
+
+## Connect and select the MIDI input
+
+1. Use a **USB data cable** from Nano USB-C to the host. A charge-only cable can power the display without creating a MIDI connection. For a USB-A host, use a USB-A-to-USB-C data cable.
+2. Let the host detect the device. In your MIDI app or DAW, enable **SIGMIDI Foot Controller v0.1** as an input; some hosts also show the interface name **SIGMIDI MIDI**. A serial monitor or the web flasher is not needed for normal MIDI operation.
+3. Route that input to the intended MIDI Device, plug-in or MIDI-learn destination. Match the configured channel and assign the desired PC/CC command. SIGMIDI sends PC/CC, rather than keyboard notes.
+4. Check **USB MIDI** on the LCD, or **USB+BLE** if BLE is also ready. This confirms USB enumeration, not that an app has enabled its input or received the command. Leave setup, release all switches and test one configured action.
+
+## Tablets and power
+
+On a USB-C iPad, use a data-capable USB-C cable or an appropriate USB hub/adapter. A Lightning iPad needs a compatible **Lightning-to-USB camera adapter** and USB data cable. If the tablet reports insufficient accessory power, use a compatible powered adapter or hub. [Apple USB-C connections](https://support.apple.com/en-ie/108894) and [camera-adapter power guidance](https://support.apple.com/en-us/111811).
+
+USB can power the controller, display and inputs. The optional LED rail needs the fitted 9 V/converter supply in this wiring. External 9 V and a USB host connection can coexist; follow the hardware guide's power wiring. There is no USB power or MIDI mode to select in SETUP. Remove any flashing jumper and run the firmware normally; ROM download mode is only for installing firmware.
+
+## If USB is present but the sound does not change
+
+Confirm the app's input, routing, MIDI channel and PC/CC mapping. Try a known data cable and a direct host port if the device is absent. SIGMIDI does not receive external MIDI commands or pass USB messages through to BLE; it sends its own switch and pedal actions.
+
+<!-- page -->
+
+# 1.2 BLE MIDI and simultaneous output
+
+![BLE MIDI: advertising controller to a central receiver](manual-ble-connection.svg)
+
+## Connect from the receiver
+
+SIGMIDI advertises automatically as a **BLE MIDI peripheral**. The receiver must be a **BLE MIDI central**, such as a compatible music app, computer or central-capable dongle. A Bluetooth audio adapter or peripheral-only MIDI dongle cannot make this link. SIGMIDI has no pairing menu, PIN entry or persistent Bluetooth bonding; connect through the receiver's MIDI interface.
+
+1. Power SIGMIDI by USB or its fitted 9 V input, and enable Bluetooth on the receiver. Wireless MIDI does not provide power.
+2. On iPad, open the music app's **Bluetooth/BLE MIDI devices** screen, select **SIGMIDI Foot Controller v0.1** and connect. Use the app's MIDI interface rather than ordinary Bluetooth audio pairing. Allow Bluetooth access if the app requests it. [Apple's BLE MIDI example](https://support.apple.com/en-ae/guide/garageband-ipad/-chse356a0321/ipados).
+3. On macOS, use a BLE-capable app or **Audio MIDI Setup > Window > Show MIDI Studio > Configure Bluetooth**, then connect to SIGMIDI. On Windows or another platform, use an app/driver path that explicitly supports BLE MIDI. General Bluetooth pairing alone does not establish app MIDI routing. [Mac setup](https://support.apple.com/en-ie/guide/audio-midi-setup/ams33f013765/mac).
+4. Wait for **MIDI READY** (BLE only) or **USB+BLE**. **CONNECTED** means BLE is linked but the central has not enabled MIDI notifications; reconnect through its MIDI interface. Enable the resulting MIDI input in the receiving app, match the channel and test one action outside setup.
+
+Only one BLE central connects at a time. Disconnect a competing phone, app or dongle before using another receiver. For a DIN-only MIDI Device, follow the central dongle maker's procedure; the HX Stomp example and pairing steps stay in Appendix A.
+
+## Use USB and BLE together
+
+Both outputs are automatic. Each switch action, pedal CC and explicit Test message goes to every ready link with the **same channel and values**. There is no per-switch transport selector. PC+ and PC- advance once per message, not once per output. A newly connected receiver does not receive old actions or a dump of current settings.
+
+You can control two destinations this way. If USB and BLE both reach the same app or MIDI Device, enable only one of those inputs or filter its routes to prevent duplicate commands. SIGMIDI is not a USB-to-BLE bridge and does not read back external preset or effect state. The separate Wi-Fi network is for configuration, not network MIDI.
+
+## Reconnect and resume
+
+After any ready-link change, move each enabled pedal to initialize the receivers; MOVE clears after an accepted CC, not a receiver acknowledgement. If all MIDI links are lost, pending actions are cleared and toggles reset to OFF. When a link returns, release all switches to rearm, establish the intended device state and move the pedals. Missed actions are not replayed. If one link remains ready, it continues carrying actions while the other is disconnected.
 
 <!-- page -->
 
@@ -71,7 +122,7 @@ The four-switch Left base reads **A B / 1 2** from left to right. Extensions add
 | READY at idle | No physical switch is held. The panel shows the installed count and USB + BLE instead of a switch name. |
 | PEDAL 1 / CC11, etc. | Input number and configured CC. The MIDI channel is set in the pedal menu but is not displayed here. |
 | Pedal number and bar | Hidden until that input first moves and sends a CC: --- is shown without a bar. Then the calculated output appears as 000-127 with a bar on the full MIDI scale. OFF means disabled; --- also indicates an invalid reading. |
-| MOVE beside a pedal / MOVE PEDAL... TO SYNC | Move each indicated pedal to change its CC value. Its initial value has not yet been sent since boot, BLE readiness change or setup exit. The marker clears after that input sends successfully to BLE; it does not confirm the MIDI Device received it. |
+| MOVE beside a pedal / MOVE PEDAL... TO SYNC | Move each indicated pedal to change its CC value. Its initial value has not yet been sent since boot, a USB/BLE readiness change or setup exit. The marker clears after that input sends successfully to at least one ready MIDI output; it does not confirm the MIDI Device received it. |
 | Notice line above footer | The most recent status or fault notice, such as a connection, save or ADC message. |
 | CLICK ENCODER: SETUP | Navigation hint. Enter setup when all switches and pending actions are idle. |
 
@@ -96,15 +147,15 @@ For a one-shot preset or command, use TOGGLE OFF with an empty Release list. For
 
 ## LEDs and state resets
 
-With the optional chain enabled and a pixel assigned, momentary Press lights white and Release lights yellow. In toggle mode ON lights white and OFF goes dark. The color changes when the first message in that phase is accepted by BLE. Empty momentary lists leave the color alone; empty toggle lists still update the LED. A rejected action does not change the toggle state.
+With the optional chain enabled and a pixel assigned, momentary Press lights white and Release lights yellow. In toggle mode ON lights white and OFF goes dark. The color changes when the first message in that phase is accepted by at least one ready USB/BLE output. Empty momentary lists leave the color alone; empty toggle lists still update the LED. A rejected action does not change the toggle state.
 
-Each switch toggles independently. Runtime ON/OFF state is not saved: reboot, setup entry/exit and all-MIDI offline/online transitions reset all toggles to OFF, clear queued actions and clear LEDs. PC message counters have a separate persistence system (page 12). Manual operation or program changes on the MIDI Device can leave its state different from SIGMIDI's; explicitly establish a known starting state.
+Each switch toggles independently. Runtime ON/OFF state is not saved: reboot, setup entry/exit and all-MIDI offline/online transitions reset all toggles to OFF, clear queued actions and clear LEDs. PC message counters have a separate persistence system (page 14). Manual operation or program changes on the MIDI Device can leave its state different from SIGMIDI's; explicitly establish a known starting state.
 
 ## Timing and playing technique
 
 Use one footswitch at a time; simultaneous presses are unsupported. Holding a switch does not repeat its action. Every list runs in order, with the configured delay before each message. A quick release waits behind that switch's pending Press messages. Rapid accepted actions are queued; a full queue reports a notice.
 
-After boot, leaving setup or a BLE readiness change, release all switches to rearm input detection. Move each enabled pedal until its MOVE marker disappears. A resting pedal sends no initial value, so the MIDI Device may retain its previous expression setting until you move it. A lost connection clears pending actions; reconnecting does not replay them. Setup pauses normal switch and pedal MIDI, so leave setup before playing. Explicit menu Test commands are the exception.
+After boot, leaving setup or a transition from no ready MIDI links to at least one, release all switches to rearm input detection. Move each enabled pedal until its MOVE marker disappears. A resting pedal sends no initial value, so the MIDI Device may retain its previous expression setting until you move it. Losing all ready MIDI links clears pending actions; reconnecting does not replay them. A change to either ready link also marks enabled pedals for movement. Setup pauses normal switch and pedal MIDI, so leave setup before playing. Explicit menu Test commands are the exception.
 
 <!-- page -->
 
@@ -131,7 +182,7 @@ Click the encoder from Performance Mode when all switches and pending actions ar
 
 Gray parameter names have aligned white values. Purple rows are actions. PC list entries are cyan and CC entries orange. The selected row has a highlight and > marker; an active edit uses amber and *. Breadcrumbs show the current path, and the right-hand scrollbar shows list position.
 
-One editor owns the draft at a time. **BROWSER EDITING** means the browser has ownership. Holding the encoder takes ownership back **and discards the draft**. Save or export browser work before doing this. Wi-Fi saving and backup commands are on page 15.
+One editor owns the draft at a time. **BROWSER EDITING** means the browser has ownership. Holding the encoder takes ownership back **and discards the draft**. Save or export browser work before doing this. Wi-Fi saving and backup commands are on page 17.
 
 <!-- page -->
 
@@ -147,7 +198,7 @@ Read left to right, then continue on the next row. At each menu, **turn to highl
 
 If PRESS is empty at step 6, select **APPEND MSG** to open a new message directly; there is no existing-entry MESSAGE ACTION screen. For a populated list, MESSAGE ACTION also offers INSERT BEFORE and DELETE. In step 8, choose TYPE, MODE, CHANNEL or another field instead of PROGRAM as needed.
 
-A click in step 9 accepts the field into the draft. Hold about 0.7 seconds to cancel an active edit, or to return one level while browsing. Hold once per level to reach the configuration root for the routes on the next page. Hold once more to return to SETUP, then choose SAVE & EXIT to store the draft and play, or DISCARD & EXIT to cancel it. The SETUP screen and save controls are shown on page 5.
+A click in step 9 accepts the field into the draft. Hold about 0.7 seconds to cancel an active edit, or to return one level while browsing. Hold once per level to reach the configuration root for the routes on the next page. Hold once more to return to SETUP, then choose SAVE & EXIT to store the draft and play, or DISCARD & EXIT to cancel it. The SETUP screen and save controls are shown on page 7.
 
 <!-- page -->
 
@@ -172,10 +223,10 @@ The following pages walk through every local menu. Uppercase labels below match 
 | DEBOUNCE MS | Stable-input time before a switch change is accepted; 2-100 ms, default 10. Increase only as needed for reliable switching. |
 | PC OFFSET | Stored 0/1 preference. In v0.1 it has no display effect: Program fields, lists and transmitted numbers remain 0-127. |
 | WINDOW MV | Acceptance half-width around each ladder center; 3-100 mV, default 20. All installed windows must be separated. |
-| LADDER, opens a list | Idle and individual switch center voltages. See page 14. This is distinct from the later LADDER wiring selector. |
-| SWITCHES, opens a list | Choose a physical switch, then its name, actions, LED and toggle setting. See page 9. |
-| PEDALS | Choose input 1 or 2, then its electrical mode, response and CC settings. See page 13. |
-| LED CHAIN | Enable and configure the optional LED chain. See page 14. |
+| LADDER, opens a list | Idle and individual switch center voltages. See page 16. This is distinct from the later LADDER wiring selector. |
+| SWITCHES, opens a list | Choose a physical switch, then its name, actions, LED and toggle setting. See page 11. |
+| PEDALS | Choose input 1 or 2, then its electrical mode, response and CC settings. See page 15. |
+| LED CHAIN | Enable and configure the optional LED chain. See page 16. |
 | LADDER, MODULAR / LINEAR | Wiring/identity scheme. MODULAR is the four-switch base plus pairs; LINEAR is legacy tap order. Select the one actually wired. |
 | ENCLOSURE, LEFT / RIGHT | One setting selects both screen rotation and row order. LEFT is default, screen on left; RIGHT is screen on right. |
 
@@ -199,7 +250,7 @@ Open **EDIT CONFIG > SWITCHES** using the navigation row, then select A-E or 1-5
 | PRESS | Open the ordered Press list. In toggle mode this is the ON list. |
 | RELEASE | Open the ordered Release list. In toggle mode this is the OFF list, run on the next press rather than on foot lift. |
 | LED NO. | Physical chain pixel 1-10; OFF (0) disables this switch's indicator. Initial mapping pairs each electrical switch tap with the same-numbered pixel. |
-| TOGGLE | OFF = momentary Press/Release; ON = alternate the lists on successive presses. Default OFF. See page 4. |
+| TOGGLE | OFF = momentary Press/Release; ON = alternate the lists on successive presses. Default OFF. See page 6. |
 
 ## Edit NAME on the device
 
@@ -227,7 +278,7 @@ Open a switch's PRESS or RELEASE list. The title becomes **ON PRESS** or **ON RE
 
 Click an existing entry to open **MESSAGE ACTION**, whose breadcrumb identifies that message. Choose **EDIT** to open its fields, **INSERT BEFORE** to create a new message immediately ahead of it, or **DELETE** to remove it. Deletion acts immediately on the draft; there is no separate confirmation screen. Hold to return without choosing an action.
 
-At the list's end, **APPEND MSG** creates a new message after all existing entries and opens its editor. New and inserted messages start as CC, channel 1, controller 0, value 0 and delay 5 ms. Set all fields for the intended command before testing. **TEST SEQ** sends this draft list when MIDI READY and the action queue is available; a notice reports success or offline/busy status.
+At the list's end, **APPEND MSG** creates a new message after all existing entries and opens its editor. New and inserted messages start as CC, channel 1, controller 0, value 0 and delay 5 ms. Set all fields for the intended command before testing. **TEST SEQ** sends this draft list when at least one USB/BLE output is ready and the action queue is available; a notice reports success or offline/busy status.
 
 To reorder, open a message's editor and scroll to MOVE UP or MOVE DOWN. DELETE is also available there. Each Press/Release list allows 32 messages. The whole configuration allows 128 across all ten saved switches, including hidden extension mappings. Each message may use a different channel.
 
@@ -246,7 +297,7 @@ TYPE offers **PC** or **CC**. For PC, MODE selects STATIC, INCR or DECR; the lat
 | Field / action | Options and effect |
 |---|---|
 | TYPE | PC recalls a program/preset; CC sets or triggers a controller function assigned by the MIDI Device. |
-| MODE, PC only | STATIC sends PROGRAM; INCR uses PC+; DECR uses PC-. Counter behavior is on page 12. Hidden for CC. |
+| MODE, PC only | STATIC sends PROGRAM; INCR uses PC+; DECR uses PC-. Counter behavior is on page 14. Hidden for CC. |
 | CHANNEL | 1-16, independently for each message. Must match the intended receiver. |
 | PROGRAM, STATIC PC only | MIDI program number 0-127. No VALUE field is shown or transmitted. |
 | CONTROL, CC only | MIDI controller number 0-127; called Controller in Wi-Fi. Its meaning depends on the MIDI Device. |
@@ -304,7 +355,7 @@ Open **EDIT CONFIG > PEDALS**, then input **1** or **2**. Each has the same opti
 | MIN VALUE | Output at the low end of the normalized travel; 0-127, default 0. |
 | MAX VALUE | Output at the high end; 0-127, default 127. A narrower range limits the controlled parameter's excursion. |
 | MAX OHMS | Full-scale resistance in resistor mode: greater than 0, up to 10000 ohms. Default 10000; encoder steps by 100 ohms. |
-| HEEL | Lower measured endpoint in potentiometer mode, in mV. Default 0. See calibration procedure on page 16. |
+| HEEL | Lower measured endpoint in potentiometer mode, in mV. Default 0. See calibration procedure on page 18. |
 | TOE | Upper measured endpoint in potentiometer mode, in mV. Default 3300; at least 50 mV above HEEL. |
 | CURVE | Log response strength, 0.1-100, default 9; larger values give more output earlier in the travel. Ignored when LOG CURVE is OFF. |
 
@@ -312,7 +363,7 @@ MAX OHMS determines resistor-mode scaling; HEEL/TOE determine potentiometer scal
 
 For a general parameter pedal, choose the MIDI Device's assigned CC and channel, MIN VALUE 0, MAX VALUE 127 and Linear response first. Enable the input, save and exit, then move the pedal to test. A stationary pedal does not repeatedly send CC; invalid readings suppress output and appear as --- on the performance screen.
 
-The local pedal menu edits endpoint numbers; it has no live capture action. Use Wi-Fi Calibration to capture HEEL/TOE, or enter the live mV readings manually. Both editors use the same unscaled endpoint values; see page 16.
+The local pedal menu edits endpoint numbers; it has no live capture action. Use Wi-Fi Calibration to capture HEEL/TOE, or enter the live mV readings manually. Both editors use the same unscaled endpoint values; see page 18.
 
 <!-- page -->
 
@@ -324,7 +375,7 @@ The local pedal menu edits endpoint numbers; it has no live capture action. Use 
 
 Open the **LADDER navigation row**, rather than the LADDER wiring selector. **IDLE MV** is the voltage with no switch held. **SW A MV**, etc. are the measured centers for installed switches, in the selected enclosure's order. Click, turn and accept a voltage in mV; values must be 0-3300. There is no local Capture command or live ADC display on this screen.
 
-**WINDOW MV** is edited one level above, at the configuration root. It is the allowed deviation on each side of a center, not the full window width. Choose 3-100 mV and less than half the smallest gap between installed centers, including Idle. Windows touching or overlapping fail validation. Use the Wi-Fi procedure on page 16 to capture actual measurements.
+**WINDOW MV** is edited one level above, at the configuration root. It is the allowed deviation on each side of a center, not the full window width. Choose 3-100 mV and less than half the smallest gap between installed centers, including Idle. Windows touching or overlapping fail validation. Use the Wi-Fi procedure on page 18 to capture actual measurements.
 
 ## LED CHAIN menu
 
@@ -337,7 +388,7 @@ Open the **LADDER navigation row**, rather than the LADDER wiring selector. **ID
 
 Assign a switch's pixel under its **LED NO.**, not here. White/yellow indicates momentary Press/Release; white/dark indicates toggle ON/OFF. Feedback is local to an accepted MIDI send, not a response from the MIDI Device. Save before testing changed chain settings: explicit Test actions use the saved LED configuration. Startup, setup transitions and readiness changes clear latched colors.
 
-Hold back to EDIT CONFIG, hold again to SETUP, then SAVE & EXIT. If the browser owns the draft, the BROWSER EDITING screen replaces local menus; page 5 explains how to return ownership without accidentally losing work.
+Hold back to EDIT CONFIG, hold again to SETUP, then SAVE & EXIT. If the browser owns the draft, the BROWSER EDITING screen replaces local menus; page 7 explains how to return ownership without accidentally losing work.
 
 <!-- page -->
 
@@ -386,7 +437,7 @@ If the physical travel runs the opposite way, retain the valid low/high endpoint
 
 ## Check the result before performance
 
-Confirm MIDI READY; exercise every installed switch; check both pedal extremes and a mid-position. Verify optional LED assignments and brightness. Then export the configuration JSON. Recalibrate after changing the ladder, switch count or pedal wiring. A saved configuration does not establish the MIDI Device's effect states; use explicit actions to set a known state.
+Confirm USB MIDI, MIDI READY or USB+BLE; exercise every installed switch; check both pedal extremes and a mid-position. Verify optional LED assignments and brightness. Then export the configuration JSON. Recalibrate after changing the ladder, switch count or pedal wiring. A saved configuration does not establish the MIDI Device's effect states; use explicit actions to set a known state.
 
 <!-- page -->
 
@@ -394,9 +445,11 @@ Confirm MIDI READY; exercise every installed switch; check both pedal extremes a
 
 | Symptom | Check or corrective action |
 |---|---|
-| OFFLINE | Open the MIDI Device's BLE MIDI interface and reconnect to SIGMIDI. If using an adapter, follow its central-role procedure. |
+| OFFLINE | USB: check a data cable, host port and normal firmware mode. BLE: reconnect through the receiver's MIDI interface or central dongle. Connection steps are on pages 3-4. |
+| Display powered, USB absent | A charger/charge-only cable is not a MIDI host. Try a data cable and enable SIGMIDI in the host's MIDI app; check adapter power. |
 | CONNECTED but no MIDI | The receiving central must subscribe to BLE MIDI notifications; reconnect through its MIDI interface. |
-| MIDI READY, no response | Exit setup; check channel, the MIDI Device's PC/CC receive settings, command mapping and nonempty action list. Test one message. |
+| USB MIDI / MIDI READY / USB+BLE, no response | Exit setup; check channel, the MIDI Device's PC/CC receive settings, command mapping and nonempty action list. Test one message. |
+| Commands happen twice | USB and BLE may reach the same destination. Enable one input or filter duplicate routes in the host; both outputs are automatic. |
 | Wrong program | Confirm the MIDI Device's wire program number; fields are always 0-127, regardless of its display numbering. |
 | CC changes the wrong function | Check that device's CC map and per-program assignments. CC numbers have no universal effect or parameter meaning. |
 | Toggle LED disagrees with sound | LED state is local feedback. Program changes or manual controls can change the MIDI Device independently. Establish a known state. |
@@ -407,9 +460,9 @@ Confirm MIDI READY; exercise every installed switch; check both pedal extremes a
 | Pedal OFF / --- / no change | Enable it, check saved electrical mode, recapture valid endpoints, then move it after leaving setup. |
 | Wi-Fi unavailable | Start WI-FI SETUP, join its network and open HTTP at 192.168.4.1. Save & exit stops the access point. |
 | Can't edit locally | BROWSER EDITING means browser ownership. Save/export there first; encoder hold takes over and discards the draft. |
-| LED dark / wrong color | Check chain enable, brightness, pixel assignment and saved RGB/timing choices. Performance actions require MIDI READY. |
+| LED dark / wrong color | Check chain enable, brightness, pixel assignment and saved RGB/timing choices. Performance actions require at least one ready USB/BLE link. |
 
-This guide documents firmware v0.1 and configuration schema 6, checked against the current firmware on 29 October 2026. It describes operation and configuration; hardware wiring and mechanical assembly are covered by the project's Hardware, LEDs, Power, Resistor ladder and printing guides. Appendix A contains one device-specific practice rig; it does not change the general operating procedures above.
+This guide documents firmware v0.1 and configuration schema 6, checked against the current firmware on 30 October 2026. It describes operation and configuration; hardware wiring and mechanical assembly are covered by the project's Hardware, LEDs, Power, Resistor ladder and printing guides. Appendix A contains one device-specific practice rig; it does not change the general operating procedures above.
 
 <!-- page -->
 
@@ -434,7 +487,7 @@ The dongle must connect as BLE MIDI **central** to SIGMIDI. A peripheral-only do
 
 On HX Stomp set MIDI Base Channel to **1** and enable MIDI PC reception from DIN (MIDI or MIDI+USB, as offered by its firmware). All appendix recipes use channel 1. Keep guitar/audio routing on HX Stomp; SIGMIDI sends control data only. [S1, p.60]
 
-First try one static PC as on page 19, then add CC assignments. If pairing fails, check dongle power, central role, competing connections and SIGMIDI readiness before debugging preset numbers. Consult the current dongle guide for firmware-dependent pairing controls; there is no SIGMIDI pairing menu.
+First try one static PC as on page 21, then add CC assignments. If pairing fails, check dongle power, central role, competing connections and SIGMIDI readiness before debugging preset numbers. Consult the current dongle guide for firmware-dependent pairing controls; there is no SIGMIDI pairing menu.
 
 <!-- page -->
 
@@ -462,7 +515,7 @@ For switch **A**, set NAME to MUPPETS and TOGGLE OFF. In PRESS, append PC, mode 
 
 To recall the manual's unmodified example directly, use `PC61/1` only if your current HX readout confirms PC061 for Pastor of Muppets. Program changes select a whole preset; they do not require per-block CC assignments.
 
-**Use valid MIDI numbers.** The supplied reference's CC128 row is a joke, not a usable message. CC numbers stop at 127. The guide uses only valid messages; the full curated command list is on page 24.
+**Use valid MIDI numbers.** The supplied reference's CC128 row is a joke, not a usable message. CC numbers stop at 127. The guide uses only valid messages; the full curated command list is on page 26.
 
 <!-- page -->
 
@@ -544,13 +597,13 @@ HX footswitch emulation CC49-53 acts on the switch's current assigned function, 
 
 ## PC counters versus HX-relative stepping
 
-PC+ and PC- are independent absolute program counters (page 12), not a shared next/previous control tracking HX's selected preset. Use the CC72 recipes above for relative HX navigation. Keep their Release lists empty so lifting your foot does not trigger a second step.
+PC+ and PC- are independent absolute program counters (page 14), not a shared next/previous control tracking HX's selected preset. Use the CC72 recipes above for relative HX navigation. Keep their Release lists empty so lifting your foot does not trigger a second step.
 
 ## Control HX parameters with continuous pedals
 
-In SIGMIDI Pedals select channel 1, CC1 for HX EXP1 or CC2 for EXP2, output range 0-127 and Linear response to start. Enable the input and calibrate it using page 16. The HX preset must assign the intended parameter to the corresponding expression controller. [U]
+In SIGMIDI Pedals select channel 1, CC1 for HX EXP1 or CC2 for EXP2, output range 0-127 and Linear response to start. Enable the input and calibrate it using page 18. The HX preset must assign the intended parameter to the corresponding expression controller. [U]
 
-Alternatively, use CC21 and assign it directly to the desired HX parameter as on page 21. Save both devices, leave SIGMIDI setup and move the pedal. The parameter's HX Min/Max settings determine its sound range; SIGMIDI's output is MIDI data, not a literal amp Drive or effect Mix value.
+Alternatively, use CC21 and assign it directly to the desired HX parameter as on page 23. Save both devices, leave SIGMIDI setup and move the pedal. The parameter's HX Min/Max settings determine its sound range; SIGMIDI's output is MIDI data, not a literal amp Drive or effect Mix value.
 
 <!-- page -->
 
@@ -558,7 +611,7 @@ Alternatively, use CC21 and assign it directly to the desired HX parameter as on
 
 ## Start with four switches, extend when needed
 
-This layout uses the practice addresses on page 19. All MIDI channels are 1 and all new-message delays are 5 ms. Add the snapshot message after A's PC in the order shown. Except DELAY, leave TOGGLE OFF and RELEASE empty. Use the Left layout for A-E / 1-5 from left to right; Right reverses the physical order within each row.
+This layout uses the practice addresses on page 21. All MIDI channels are 1 and all new-message delays are 5 ms. Add the snapshot message after A's PC in the order shown. Except DELAY, leave TOGGLE OFF and RELEASE empty. Use the Left layout for A-E / 1-5 from left to right; Right reverses the physical order within each row.
 
 | Switch | Name | Press list | Release list / mode |
 |---|---|---|---|
@@ -640,9 +693,9 @@ SIGMIDI v0.1 sends PC and CC only, with per-message channels and delays. It does
 
 **[S5]** [Line 6 firmware release notes, 3.15 features](https://line6.com/software/index.html?hardware=HX+Stomp&name=Firmware&submit_form=set): global parameter controls and the CC74 preset-save note.
 
-SIGMIDI behavior and illustrations were checked against this project's current firmware, menus and documentation on 29 October 2026. The examples leave existing firmware and hardware configuration untouched; validate the full wireless rig before relying on it live. General troubleshooting is on page 17. Recheck all assignments after changing HX presets or dongle firmware.
+SIGMIDI behavior and illustrations were checked against this project's current firmware, menus and documentation on 29 October 2026. The examples leave existing firmware and hardware configuration untouched; validate the full wireless rig before relying on it live. General troubleshooting is on page 19. Recheck all assignments after changing HX presets or dongle firmware.
 ## Validate this example rig
 
 Verify one PC, one assigned CC, every snapshot command, both pedal endpoints and each toggle's two presses. Test after reboot and after reconnecting BLE. A dark toggle LED does not prove the HX block is bypassed. Use an explicit command or known preset state before playing.
 
-The example patch destinations PC010/011/012 are practice locations, not guaranteed factory addresses. Read HX's actual PC helper before entering a Program value. Save changes on HX as well as SIGMIDI and export the SIGMIDI JSON. Follow the dongle maker's current pairing instructions if its application or firmware differs from the example on page 18.
+The example patch destinations PC010/011/012 are practice locations, not guaranteed factory addresses. Read HX's actual PC helper before entering a Program value. Save changes on HX as well as SIGMIDI and export the SIGMIDI JSON. Follow the dongle maker's current pairing instructions if its application or firmware differs from the example on page 20.
