@@ -2,6 +2,8 @@
 
 The firmware targets Arduino Nano ESP32 / ESP32-S3 with 16 MB flash using PlatformIO espressif32 6.9.0 and ESP-IDF 5.3.1. It compiles and passes host tests. Hardware operation, iPad delivery and physical USB flashing require bench validation.
 
+For the complete physical build sequence, use the illustrated [assembly guide](assembly-guide.md) ([printable PDF](../output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf)). It covers part selection, printing, Nano adapters, wiring, inspection, calibration and closure.
+
 ## Build and test
 
 Install PlatformIO Core and a C++17 compiler. ESP-IDF requires paths without spaces; the helper builds in a temporary directory and publishes flashable releases to `distribution/`. Compiler/debug outputs go to disposable `build/`.

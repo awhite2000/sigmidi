@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="505.27559055118115" height="165" preserveAspectRatio="xMinYMin meet" viewBox="0 0 505 165" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>9 V center-negative power routing</title>
+	<desc>SIGMIDI Foot Controller v0.1 assembly guide diagram</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="505.27559055118115" height="165"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-165)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="69" width="123" height="58" rx="6" ry="6" style="stroke: rgb(9%,47%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="40.751220703125" y="111" style="font-family: Arial; font-weight: bold; font-size: 9px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,222) scale(1,-1)">DC INLET</text>
+			<text x="38.4632568359375" y="97" style="font-family: Arial; font-size: 8.5px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,194) scale(1,-1)">Sleeve: +9V</text>
+			<text x="36.93798828125" y="78" style="font-family: Arial; font-size: 8.5px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,156) scale(1,-1)">Center: GND</text>
+			<rect x="249" y="105" width="115" height="47" rx="6" ry="6" style="stroke: rgb(9%,47%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="277.990478515625" y="136" style="font-family: Arial; font-weight: bold; font-size: 9px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,272) scale(1,-1)">NANO ESP32</text>
+			<text x="289.3734130859375" y="122" style="font-family: Arial; font-size: 8.5px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,244) scale(1,-1)">VIN: +9V</text>
+			<rect x="249" y="37" width="115" height="47" rx="6" ry="6" style="stroke: rgb(9%,47%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="276.48974609375" y="68" style="font-family: Arial; font-weight: bold; font-size: 9px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,136) scale(1,-1)">POLOLU 4083</text>
+			<text x="289.3734130859375" y="54" style="font-family: Arial; font-size: 8.5px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,108) scale(1,-1)">VIN: +9V</text>
+			<text x="284.65234375" y="46" style="font-family: Arial; font-size: 8.5px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,92) scale(1,-1)">VOUT: +5V</text>
+			<rect x="424" y="37" width="80" height="47" rx="6" ry="6" style="stroke: rgb(9%,47%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="439.50048828125" y="68" style="font-family: Arial; font-weight: bold; font-size: 9px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,136) scale(1,-1)">LED CHAIN</text>
+			<text x="443.3331298828125" y="54" style="font-family: Arial; font-size: 8.5px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,108) scale(1,-1)">+5V / GND</text>
+			<path d="M 123,109 L 185,109 Z" style="stroke: rgb(40%,37%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 185,109 L 185,128 Z" style="stroke: rgb(40%,37%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 185,128 L 249,128 Z" style="stroke: rgb(40%,37%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 185,109 L 185,60 Z" style="stroke: rgb(40%,37%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 185,60 L 249,60 Z" style="stroke: rgb(40%,37%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="170.546875" y="143" style="font-family: Arial; font-size: 8px;fill: rgb(40%,37%,60%); stroke:none;" transform="translate(0,286) scale(1,-1)">+9V split</text>
+			<path d="M 364,60 L 424,60 Z" style="stroke: rgb(40%,37%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="386.771484375" y="72" style="font-family: Arial; font-size: 8px;fill: rgb(40%,37%,60%); stroke:none;" transform="translate(0,144) scale(1,-1)">+5V</text>
+			<text x="249" y="22" style="font-family: Arial; font-size: 8px;fill: rgb(9%,47%,43%); stroke:none;" transform="translate(0,44) scale(1,-1)">C1: 47 uF / 35 V across converter VIN and GND</text>
+			<text x="0" y="4" style="font-family: Arial; font-weight: bold; font-size: 9px;fill: rgb(8%,18%,19%); stroke:none;" transform="translate(0,8) scale(1,-1)">Common GND: inlet center, Nano, converter and all peripherals.</text>
+		</g>
+	</g>
+</svg>

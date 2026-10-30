@@ -1,5 +1,6 @@
 # SIGMIDI Foot Controller v0.1 — Design
 
+- [Illustrated assembly guide](../output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf): print selection, mechanical fitting, wiring and first power-up. [Editable source](../docs/assembly-guide.md).
 - [Complete native Fusion model](fusion/sigmidi-foot-controller-0.1.f3d): all Left/Right main and modular assemblies and part libraries.
 - [Left enclosure](fusion/mirrored/README.md): preferred electronics-on-left assemblies and manufacturing packages.
 - [Right enclosure](fusion/README.md): electronics-on-right assemblies.

@@ -40,6 +40,7 @@ On the controller, enter **Wi-Fi Setup**, join the displayed `SIGMIDI-xxxx` netw
 
 | Area | Guide |
 |---|---|
+| Step-by-step assembly, wiring and first power-up | [Assembly guide PDF](output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf) · [Editable source](docs/assembly-guide.md) |
 | USB/BLE connections, performance and editing; HX Stomp example in Appendix A | [User manual PDF](output/pdf/sigmidi-foot-controller-0.1-user-manual.pdf) · [Editable source](docs/user-manual.md) |
 | Parts, hardware and enclosure quantities | [Bill of materials PDF](output/pdf/sigmidi-foot-controller-0.1-bill-of-materials.pdf) · [Shopping CSV](docs/bill-of-materials.csv) · [Document source](docs/bill-of-materials.md) |
 | Electrical wiring and GPIO | [Hardware](docs/hardware.md) |

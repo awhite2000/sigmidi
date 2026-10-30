@@ -2,6 +2,8 @@
 
 The illustrated [User manual](../output/pdf/sigmidi-foot-controller-0.1-user-manual.pdf) combines device and Wi-Fi screens with performance, editing and HX Stomp examples. Its [editable source](../docs/user-manual.md) is rebuilt with `scripts/build_user_manual.py` using ReportLab, Pillow and Arial fonts.
 
+The illustrated [Assembly guide](../output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf) covers the Main and Modular builds in both handednesses, with physical-order Nano pins, LCD/encoder wiring, the switch ladder, passive pedals and optional power/LEDs. [Editable source](../docs/assembly-guide.md); rebuild with `scripts/build_assembly_guide.py` using ReportLab, Pillow, pypdf and Arial fonts.
+
 ## Enclosure renderings
 
 **Left is preferred**, with electronics on the left and extensions to the right. [Left main](sigmidi-left-main.png) · [Left modular](sigmidi-left-modular.png) · [Right main](sigmidi-right-main.png) · [Right modular](sigmidi-right-modular.png).

@@ -1,0 +1,120 @@
+{
+  "title": "SIGMIDI Foot Controller v0.1 Assembly guide",
+  "pages": 15,
+  "page_size": "A4",
+  "preferred_variant": "Left",
+  "hardware": "Arduino Nano ESP32 ABX00083 + Waveshare 24382",
+  "assemblies": [
+    "Left Main",
+    "Left Modular 4/6/8/10",
+    "Right Main",
+    "Right Modular 4/6/8/10"
+  ],
+  "chapters": [
+    {
+      "title": "SIGMIDI Foot Controller",
+      "page": 1
+    },
+    {
+      "title": "1. Select the parts",
+      "page": 2
+    },
+    {
+      "title": "2. Print, clean and join",
+      "page": 3
+    },
+    {
+      "title": "3. Install panel components",
+      "page": 4
+    },
+    {
+      "title": "4. Fit the Nano adapters",
+      "page": 5
+    },
+    {
+      "title": "5. Optional 9 V supply",
+      "page": 6
+    },
+    {
+      "title": "6. Nano pin reference",
+      "page": 7
+    },
+    {
+      "title": "7. Wire LCD and encoder",
+      "page": 8
+    },
+    {
+      "title": "8. Wire the switch ladder",
+      "page": 9
+    },
+    {
+      "title": "9. Wire the pedal sockets",
+      "page": 10
+    },
+    {
+      "title": "10. Fit the optional LEDs",
+      "page": 11
+    },
+    {
+      "title": "11. Route and inspect the harness",
+      "page": 12
+    },
+    {
+      "title": "12. Power up in stages",
+      "page": 13
+    },
+    {
+      "title": "13. Flash and calibrate",
+      "page": 14
+    },
+    {
+      "title": "14. Close and accept the build",
+      "page": 15
+    }
+  ],
+  "physical_fit_qualified": false,
+  "electrical_bench_qualified": false,
+  "checks": {
+    "used_nano_pins": 20,
+    "LCD_pins_in_physical_order": 8,
+    "tap_label_LED_rows": 10,
+    "discrete_values_and_nets_match": true,
+    "selected_print_files_exist": 56,
+    "local_links_exist": true
+  },
+  "source_sha256": {
+    "docs/assembly-guide.md": "cab0a2472277efd7b73555a5c051af019eb64ef847390f7936da159202123a85",
+    "scripts/build_assembly_guide.py": "cb49d586a44f9d53928d4471fff000386448ace69aa1a8bafdae5ec45aeb8f6b",
+    "scripts/build_user_manual.py": "085a688b273e23191f117ba7a398068d8cff82e65dd24fd1a489a057b7f22334",
+    "src/board.hpp": "88db0c90739cde67be4f7b827fe0670054b07946b4170098ea1792f88d0788c3",
+    "design/electrical/netlist.json": "2267e1b0a654212ef16386f61ddbc9a47e312421421e163f757127318dd4331c",
+    "docs/bom-items.json": "49f37259439b05584c178750c2b84d72b3779290c01f7c11d384259196251dce",
+    "docs/power.md": "299910572a130a002406a4a0aa52907f51867d25ab15b705543aa2c0ca4e9ffa",
+    "docs/hardware.md": "b372e52e7f73b4602c639a86cf8f16d85535ad08967bc742fc4671f93692432e",
+    "docs/leds.md": "e7db1c8221cc4d3cadb33715ea0798c2c27f307d221522f23cfdba4db73afbde",
+    "docs/resistor-ladders.md": "d5272f85e75fc4354ca711bdca86ef40300236a166f2dac9036a19e02a4f1351",
+    "design/fusion/nano-esp32/mount-fit.json": "ac5a6d0bc73f8ffca35a4e2fad8706384be21535dd9f705b912f8fc93ccf778e",
+    "design/fusion/nano-esp32/README.md": "17e1edcbc4afe1a33483f02bde59ef326ae1cb9b043050121415c27433deb4c2",
+    "design/fusion/mirrored/README.md": "03331e1acd232a3fdb63b5533e124bbcfec09190d6a9be8e07e334f681cbffac",
+    "design/fusion/modular/README.md": "f2d4149c808ee37b99c4585ef4423f7eaed5201424e3744f426eabb4d1d1db71",
+    "design/fusion/printing-tolerances.md": "200bb4341eefe9a792ca11417d28f109e5e2c5fcfb7f84db3e9560ffe1bc801b",
+    "docs/user-manual.md": "f3c63f79482c2111b33c2f75e83ae65c65e25def96f6e6af427fc9514984e5c9",
+    "docs/bringup.md": "e4b5671a2cb7b501bcfad9c91e04111498c32c2a35e89b1d617b390c48fd7047"
+  },
+  "images": {
+    "design/electrical/pololu-2535-pinout.jpg": "fe085fddcfece0e07f77d411620187e89b1fa7ea3fd9b6091aff43a63ddcdb49",
+    "design/fusion/display-m2x5-section.png": "e131f8bcfc2c77204f2d5a0cb8e105503daf6364e426e03b1943aeca61b7af81",
+    "design/fusion/nano-esp32/exploded.png": "69b248c988b0e8fd7048d0cba0fa9d135a4b10711a63b0e13075551c92020586",
+    "design/fusion/nano-esp32/installed.png": "828253b71553ba7fc32bdb8238630d4cee408c2dc6a5e3b69505929e5679af78",
+    "design/fusion/print/perimeter-ledge-detail.png": "1dc0b8d6625780f729604301cd6de42f390032824e0e22fa717effaa93552170",
+    "design/fusion/snug-fit-sections.png": "bf5c1044ea694f73824fd47989b12443eeef62ac5c193d364eb9f450ba42393a",
+    "docs/assembly-ladder.svg": "1809d34e910e7b7c91d2e5698c43be7c908b7eec15a77bc2917b3deafe0b03c2",
+    "docs/assembly-nano-pins.svg": "b01f5607857092dc7b2848f9d6fd75b8f7f4d80c0804e0a85897224511ae482b",
+    "docs/assembly-power.svg": "f284171c51352908b12d247c1109f36847d16259f7c79ce78262cd2207ecd463",
+    "previews/cable-bundles-left.png": "c096771079ec5b3d5f734d9652b7198dca6fb7b22c94d49a6a7c5dee44e05dee",
+    "previews/sigmidi-left-main.png": "f35a3efbe48c88a0cb3fe394b2fb13fc28a4f78d3291670ef8fa6aaff26a0400"
+  },
+  "outputs": {
+    "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf": "4680a18808fd759f41a54e2a5569d78bf7b633ff23ccd76f78c0326b12fe303b"
+  }
+}
