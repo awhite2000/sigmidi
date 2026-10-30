@@ -14,9 +14,9 @@
     "logo_source": "design/branding/sigmidi-mark-light.png",
     "logo_sha256": "93260dba79cbe47ce0e1e2447c9d6aab6ae9622dfd32002224e3200b24eebf63",
     "source": "design/fusion/mirrored/modular/assembled.png",
-    "source_sha256": "f02d410fc3053d18c0f03ab29fe19c6bd09daee1a7888c47a8d4ed40fac2f6e1",
+    "source_sha256": "eb8aa0e57a78b7a13529cbf42f0db787431cd57294b95c13ff751ad61aff5b18",
     "output": "previews/sigmidi-left-modular.png",
-    "sha256": "e7b96bae6e12e1b14864cf88ff2dce6f1cc796271e024d3acd8c29ac2cc95f40",
+    "sha256": "db76b143441d5054876d6a842d3b48782e344db5159a3837722e21261192de81",
     "geometry_modified": false
   },
   {
@@ -24,9 +24,9 @@
     "logo_source": "design/branding/sigmidi-mark-light.png",
     "logo_sha256": "93260dba79cbe47ce0e1e2447c9d6aab6ae9622dfd32002224e3200b24eebf63",
     "source": "design/fusion/assembled.png",
-    "source_sha256": "48d111f741860bf64788b8a57bbd0737bd3e66142e9884a79e93854c8cbb5c46",
+    "source_sha256": "42432618a53a685e44da343337fdc512589c95a5249dea3b9e737ca5103daeee",
     "output": "previews/sigmidi-right-main.png",
-    "sha256": "0a15a6cad5653bd883a7142ab99ec9665f8426f4050e2ad237d2fc555cbc69f1",
+    "sha256": "b38d13f39b4d6bb2ea16c36d4ec22ff2d0716753e4cc55d6b0e6ead41afb3834",
     "geometry_modified": false
   },
   {

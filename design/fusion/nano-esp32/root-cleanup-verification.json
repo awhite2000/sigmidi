@@ -1,0 +1,35 @@
+{
+  "assemblies": [
+    {
+      "assembly": "Left main",
+      "removed_mm3": 95.66979450116196,
+      "base_volume_mm3": 36154.998652249946,
+      "single_solid": true,
+      "root_regions_clear": true
+    },
+    {
+      "assembly": "Left modular",
+      "removed_mm3": 95.66979450116196,
+      "base_volume_mm3": 36154.998652249946,
+      "single_solid": true,
+      "root_regions_clear": true
+    },
+    {
+      "assembly": "Right main",
+      "removed_mm3": 95.66979450116924,
+      "base_volume_mm3": 36154.99865224995,
+      "single_solid": true,
+      "root_regions_clear": true
+    },
+    {
+      "assembly": "Right modular",
+      "removed_mm3": 95.66979450116924,
+      "base_volume_mm3": 36154.99865224995,
+      "single_solid": true,
+      "root_regions_clear": true
+    }
+  ],
+  "upper_geometry_unchanged": true,
+  "floor_cut_limit_Z_mm": -22,
+  "new_post_envelopes_and_rear_ribs_preserved": true
+}

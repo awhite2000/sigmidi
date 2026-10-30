@@ -22,6 +22,8 @@ def main():
  fit=json.loads((P/'mount-fit.json').read_text());exports=json.loads((P/'exports.json').read_text());printing=json.loads((P/'print-verification.json').read_text())
  assert fit['all_variants_collision_free'] and not fit['component_face_down'] and fit['separate_inserts']==0
  assert fit['upper_shell_revision_IDs_verified_unchanged'] and exports['upper_shell_print_files_byte_identical']
+ cleanup=json.loads((P/'root-cleanup-verification.json').read_text())
+ assert len(cleanup['assemblies'])==4 and all(v['root_regions_clear'] and v['single_solid'] for v in cleanup['assemblies'])
  assert fit['assembly_instance_placement_verified'] and len(exports['assembly_board_bounds_checks'])==4
  assert len(fit['checks'])==4 and all(not r['physical_collisions'] and not r['blocked_floor_slots'] for r in fit['checks'])
  assert all(r['unintended_added_mm3']<.001 and r['unintended_removed_mm3']<.001 for r in fit['checks'])
@@ -77,7 +79,7 @@ def main():
   for p in sorted(folder.iterdir()):
    if p.suffix in ['.stl','.3mf','.ini','.png']:entries.append((p,prefix+p.name))
   for ext in ['.f3d','.step']:entries.append((cad.with_suffix(ext),prefix+cad.name+ext))
-  for name in ['mount-fit.json','installation.json','assembly-clearance.json','print-verification.json','package-verification.json','exports.json','instance-placement.json']:
+  for name in ['mount-fit.json','installation.json','assembly-clearance.json','print-verification.json','package-verification.json','exports.json','instance-placement.json','root-cleanup-verification.json']:
    entries.append((P/name,'verification/'+name))
   for name in ['installed.png','exploded.png','posts.png']:entries.append((P/name,'nano/'+name))
   entries.extend([(guide,'README.md'),(P/'README.md','nano/README.md'),

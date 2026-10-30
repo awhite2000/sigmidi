@@ -117,7 +117,7 @@
     }
   ],
   "source_sha256": "1648eb18d0db558ec871779d6ff51d538027570be32fc06c0bbbeb409ece366e",
-  "pdf_sha256": "6aee5b72b2f6974c75215110793eaa8a039b9629b83056631d6e9f39938eadfc",
+  "pdf_sha256": "6e38af58aff24b248368331d1c52f2acb30b93da6635597276bb831388ff8402",
   "renderer_sha256": "178b7b0e8521b97623738698e894e0c527addb13e2db2205f86739f709ad44f1",
   "connection_diagrams": {
     "manual-signal-path.svg": "474175b49be2b19d5d40116f8be7edf1d3cc1de9bfdbdb7ab795b7901da0794e",

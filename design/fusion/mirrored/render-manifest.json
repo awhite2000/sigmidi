@@ -1,6 +1,6 @@
 {
   "revision": "nano_direct_base_components_up",
-  "captured_UTC": "2026-10-30T11:34:19.668718+00:00",
+  "captured_UTC": "2026-10-30T14:15:20.033699+00:00",
   "images": [
     {
       "path": "main/assembled.png",
@@ -12,11 +12,11 @@
     },
     {
       "path": "main/rear.png",
-      "sha256": "ee07601c12f42082a177a539efa953ee48158ed42202a869c70f79b1e09d74b9"
+      "sha256": "cfe9eab5aa4933378ab5716ca79880643e5cb4953a3af1d104a3aaddcc739a02"
     },
     {
       "path": "main/internal.png",
-      "sha256": "e7790a67b2bdd0ba8aac9bb8eaeb6c297f9924048f2a3f79bc8f6080c5a7417c"
+      "sha256": "82626ba3db669a10e65e4dd669fcb2612933ee5f802744fe868ec4fd74f5b1cb"
     },
     {
       "path": "main/display-underside.png",
@@ -24,15 +24,15 @@
     },
     {
       "path": "main/exploded.png",
-      "sha256": "678bccc1f2c68a67f9c1c10799ec8c439ff7f45408f07091e272b85532c59ec1"
+      "sha256": "4f0406282190c127b6fa16f26f64835bba1f9c19bd6d110e6620f9e83e097237"
     },
     {
       "path": "main/base-mounts.png",
-      "sha256": "d3058fd3c467767fb7f084bd1ff72dc2874dbc2728b6f8357f9a72fb95b59cf6"
+      "sha256": "d278f47da2b52f9f1efe1989d9827457cd55f094ba50b2757b8f32b9441dba5e"
     },
     {
       "path": "modular/assembled.png",
-      "sha256": "f02d410fc3053d18c0f03ab29fe19c6bd09daee1a7888c47a8d4ed40fac2f6e1"
+      "sha256": "eb8aa0e57a78b7a13529cbf42f0db787431cd57294b95c13ff751ad61aff5b18"
     },
     {
       "path": "modular/top.png",
@@ -53,11 +53,11 @@
     },
     {
       "path": "modular/rear.png",
-      "sha256": "b5b2eb2bcaea674931dd2b93e8a93ab3a07ef09322934c26057e483dc436f5af"
+      "sha256": "3be33eef8ed42c01645e42259c7a2b254fc6e4fab67bca3302d4da6979d54dfd"
     },
     {
       "path": "modular/internal.png",
-      "sha256": "c9560f8c8097f668d9b13c6f56ab9ea149748750ae5b347424c1fa206c0db84b"
+      "sha256": "e90c8ad61751e30c5d4a255ad71b494c70d192b84488afc9a0c28b48bd27c159"
     },
     {
       "path": "modular/base-mounts.png",

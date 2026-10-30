@@ -26,8 +26,8 @@
         },
         {
           "part": "base-right",
-          "STL_sha256": "8ca865d2b0c655678d38428e270d8dcc7c00e7894c9e27b85b42a716b0f0fa71",
-          "3MF_sha256": "779a2a6f988f6a7c2f3155ca0f9220c911145c451c1005d49868fb78166533a6"
+          "STL_sha256": "9660ebde697a15b3b0f5d47daf18102dfef92cbfa58135011bea26d8e8adc480",
+          "3MF_sha256": "64e18f74324db05641bfdc9e6c8fa621ae8ddf9a62b9bc3951a5bbc2bc18b8fc"
         },
         {
           "part": "fit-coupon-left",
@@ -56,8 +56,8 @@
       "parts": [
         {
           "part": "electronics-base",
-          "STL_sha256": "8ca865d2b0c655678d38428e270d8dcc7c00e7894c9e27b85b42a716b0f0fa71",
-          "3MF_sha256": "779a2a6f988f6a7c2f3155ca0f9220c911145c451c1005d49868fb78166533a6"
+          "STL_sha256": "9660ebde697a15b3b0f5d47daf18102dfef92cbfa58135011bea26d8e8adc480",
+          "3MF_sha256": "64e18f74324db05641bfdc9e6c8fa621ae8ddf9a62b9bc3951a5bbc2bc18b8fc"
         },
         {
           "part": "electronics-shell",
@@ -116,8 +116,8 @@
       "parts": [
         {
           "part": "base-left",
-          "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
-          "3MF_sha256": "f2e8407c59a285132608bec299542a5ae8f53c9578abd123a8d363ad3e1e12ef"
+          "STL_sha256": "def669e56b39b3fc4cfdea461e807f86c298f00dc84c6950185f45e91c56b51f",
+          "3MF_sha256": "78f0db385d98df5efd4b9eda09af1c9b1dff0857432f6b504ff042515008dd30"
         },
         {
           "part": "base-right",
@@ -151,8 +151,8 @@
       "parts": [
         {
           "part": "electronics-base-left",
-          "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
-          "3MF_sha256": "f2e8407c59a285132608bec299542a5ae8f53c9578abd123a8d363ad3e1e12ef"
+          "STL_sha256": "def669e56b39b3fc4cfdea461e807f86c298f00dc84c6950185f45e91c56b51f",
+          "3MF_sha256": "78f0db385d98df5efd4b9eda09af1c9b1dff0857432f6b504ff042515008dd30"
         },
         {
           "part": "electronics-shell-left",

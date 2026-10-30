@@ -8,7 +8,7 @@
   "unique_meshes": [
     {
       "file": "design/fusion/mirrored/main/base-left.stl",
-      "triangles": 8630,
+      "triangles": 7898,
       "bounds_mm": [
         [
           0.0,
@@ -25,8 +25,8 @@
       "nonmanifold_edges": 0,
       "inconsistent_winding_edges": 0,
       "degenerate_triangles": 0,
-      "volume_mm3": 36235.40264853098,
-      "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
+      "volume_mm3": 36140.236010958164,
+      "STL_sha256": "def669e56b39b3fc4cfdea461e807f86c298f00dc84c6950185f45e91c56b51f",
       "post_sections": [
         {
           "center_print_XY_mm": [
@@ -35,8 +35,8 @@
           ],
           "section_print_Z_mm": 9.963991764396592,
           "bore_min_radius_mm": 0.7720480750264784,
-          "outer_min_radius_mm": 2.98864761861706,
-          "minimum_section_wall_mm": 2.213643469633398
+          "outer_min_radius_mm": 2.989606971888206,
+          "minimum_section_wall_mm": 2.2146028229045442
         },
         {
           "center_print_XY_mm": [
@@ -45,8 +45,8 @@
           ],
           "section_print_Z_mm": 9.963991764396592,
           "bore_min_radius_mm": 0.7720480750264913,
-          "outer_min_radius_mm": 2.989608268889152,
-          "minimum_section_wall_mm": 2.2146041199054993
+          "outer_min_radius_mm": 2.98960893464166,
+          "minimum_section_wall_mm": 2.2146047856580076
         },
         {
           "center_print_XY_mm": [
@@ -72,7 +72,7 @@
     },
     {
       "file": "design/fusion/print/base-right.stl",
-      "triangles": 8630,
+      "triangles": 7898,
       "bounds_mm": [
         [
           0.0,
@@ -89,8 +89,8 @@
       "nonmanifold_edges": 0,
       "inconsistent_winding_edges": 0,
       "degenerate_triangles": 0,
-      "volume_mm3": 36235.39992056337,
-      "STL_sha256": "8ca865d2b0c655678d38428e270d8dcc7c00e7894c9e27b85b42a716b0f0fa71",
+      "volume_mm3": 36140.23335234533,
+      "STL_sha256": "9660ebde697a15b3b0f5d47daf18102dfef92cbfa58135011bea26d8e8adc480",
       "post_sections": [
         {
           "center_print_XY_mm": [
@@ -99,8 +99,8 @@
           ],
           "section_print_Z_mm": 9.963991764396592,
           "bore_min_radius_mm": 0.7720480750265107,
-          "outer_min_radius_mm": 2.9896079731854686,
-          "minimum_section_wall_mm": 2.2146038242018293
+          "outer_min_radius_mm": 2.989607757361374,
+          "minimum_section_wall_mm": 2.2146036083777347
         },
         {
           "center_print_XY_mm": [
@@ -109,8 +109,8 @@
           ],
           "section_print_Z_mm": 9.963991764396592,
           "bore_min_radius_mm": 0.7720471147430223,
-          "outer_min_radius_mm": 2.9886517264301315,
-          "minimum_section_wall_mm": 2.2136455581436842
+          "outer_min_radius_mm": 2.9896064547550383,
+          "minimum_section_wall_mm": 2.214600286468591
         },
         {
           "center_print_XY_mm": [
@@ -140,9 +140,9 @@
       "part": "base-left",
       "slice_exit_code": 0,
       "support_enabled": false,
-      "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
-      "estimated_time": "2h 5m 26s",
-      "filament_g": "47.73",
+      "STL_sha256": "def669e56b39b3fc4cfdea461e807f86c298f00dc84c6950185f45e91c56b51f",
+      "estimated_time": "2h 5m 33s",
+      "filament_g": "47.64",
       "support_extrusion_filament_mm": 0,
       "post_section_checks": [
         {
@@ -152,8 +152,8 @@
           ],
           "section_print_Z_mm": 9.963991764396592,
           "bore_min_radius_mm": 0.7720480750264784,
-          "outer_min_radius_mm": 2.98864761861706,
-          "minimum_section_wall_mm": 2.213643469633398
+          "outer_min_radius_mm": 2.989606971888206,
+          "minimum_section_wall_mm": 2.2146028229045442
         },
         {
           "center_print_XY_mm": [
@@ -162,8 +162,8 @@
           ],
           "section_print_Z_mm": 9.963991764396592,
           "bore_min_radius_mm": 0.7720480750264913,
-          "outer_min_radius_mm": 2.989608268889152,
-          "minimum_section_wall_mm": 2.2146041199054993
+          "outer_min_radius_mm": 2.98960893464166,
+          "minimum_section_wall_mm": 2.2146047856580076
         },
         {
           "center_print_XY_mm": [
@@ -192,9 +192,9 @@
       "part": "base-right",
       "slice_exit_code": 0,
       "support_enabled": false,
-      "STL_sha256": "8ca865d2b0c655678d38428e270d8dcc7c00e7894c9e27b85b42a716b0f0fa71",
-      "estimated_time": "2h 5m 43s",
-      "filament_g": "47.75",
+      "STL_sha256": "9660ebde697a15b3b0f5d47daf18102dfef92cbfa58135011bea26d8e8adc480",
+      "estimated_time": "2h 4m 41s",
+      "filament_g": "47.65",
       "support_extrusion_filament_mm": 0,
       "post_section_checks": [
         {
@@ -204,8 +204,8 @@
           ],
           "section_print_Z_mm": 9.963991764396592,
           "bore_min_radius_mm": 0.7720480750265107,
-          "outer_min_radius_mm": 2.9896079731854686,
-          "minimum_section_wall_mm": 2.2146038242018293
+          "outer_min_radius_mm": 2.989607757361374,
+          "minimum_section_wall_mm": 2.2146036083777347
         },
         {
           "center_print_XY_mm": [
@@ -214,8 +214,8 @@
           ],
           "section_print_Z_mm": 9.963991764396592,
           "bore_min_radius_mm": 0.7720471147430223,
-          "outer_min_radius_mm": 2.9886517264301315,
-          "minimum_section_wall_mm": 2.2136455581436842
+          "outer_min_radius_mm": 2.9896064547550383,
+          "minimum_section_wall_mm": 2.214600286468591
         },
         {
           "center_print_XY_mm": [

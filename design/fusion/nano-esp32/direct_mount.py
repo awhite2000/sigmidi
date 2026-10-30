@@ -130,7 +130,12 @@ def run(_context: str):
   oldxs=[350-x if right else x for x in [88.30579390305104,110.30622390305105]]
   for x in oldxs:
    for y in [-6.70103,-63.30265]:
-    base=cut(base,cyl(x,y,-22,0,2.8))
+    tool=cyl(x,y,-22,-20.3,4.5,2.8)
+    for lo,hi in [(80,85.30011390305106),(113.200113903051,119)]:
+     if right:lo,hi=350-hi,350-lo
+     tool=cut(tool,box(lo,-4.15,-22.1,hi,0,0))
+    base=cut(base,tool)
+    base=cut(base,cyl(x,y,-20.3,0,2.8))
   for a in post_sets[right]:base=union(base,mgr.copy(a))
   assert base.isSolid and base.lumps.count==1,(label,base.lumps.count)
   delta=cut(mgr.copy(base),mgr.copy(original));removed=cut(mgr.copy(original),mgr.copy(base))
@@ -138,7 +143,7 @@ def run(_context: str):
   allowed=None
   for x in oldxs:
    for y in [-6.70103,-63.30265]:
-    a=cyl(x,y,-22.01,0,2.81);allowed=union(allowed,a) if allowed else a
+    a=cyl(x,y,-22.01,0,4.51);allowed=union(allowed,a) if allowed else a
   for x,y in holes:
    a=cyl(x+dx,y,-22.11,seat+.01,4.01);allowed=union(allowed,a)
   unintended_removed=vol(cut(mgr.copy(removed),mgr.copy(allowed)))

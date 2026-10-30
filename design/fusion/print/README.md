@@ -34,6 +34,6 @@ The populated Nano ESP32 USB-C connector engages the pocket partition. Release t
 | shell-left | 1 | 6h 46m 20s |
 | shell-right | 1 | 6h 20m 1s |
 | base-left | 1 | 1h 56m 54s |
-| base-right | 1 | 2h 5m 43s |
+| base-right | 1 | 2h 4m 41s |
 
-Estimated total: **17h 8m, 344 g**, including brims/supports, excluding fit coupons.
+Estimated total: **17h 7m, 344 g**, including brims/supports, excluding fit coupons.

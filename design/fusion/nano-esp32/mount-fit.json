@@ -61,7 +61,7 @@
       "blocked_floor_slots": [],
       "unintended_removed_mm3": 0,
       "unintended_added_mm3": 0,
-      "base_volume_mm3": 36250.66844675111,
+      "base_volume_mm3": 36154.998652249946,
       "removed_old_posts_mm3": 233.9236836488058,
       "integral_posts_added_mm3": 322.1199955909392,
       "floor_exterior_added_mm3": 0
@@ -74,7 +74,7 @@
       "blocked_floor_slots": [],
       "unintended_removed_mm3": 0,
       "unintended_added_mm3": 0,
-      "base_volume_mm3": 36250.66844675111,
+      "base_volume_mm3": 36154.998652249946,
       "removed_old_posts_mm3": 233.9236836488058,
       "integral_posts_added_mm3": 322.1199955909392,
       "floor_exterior_added_mm3": 0
@@ -87,7 +87,7 @@
       "blocked_floor_slots": [],
       "unintended_removed_mm3": 0,
       "unintended_added_mm3": 0,
-      "base_volume_mm3": 36250.66844675112,
+      "base_volume_mm3": 36154.99865224995,
       "removed_old_posts_mm3": 233.92368364880662,
       "integral_posts_added_mm3": 322.1199955909389,
       "floor_exterior_added_mm3": 0
@@ -100,7 +100,7 @@
       "blocked_floor_slots": [],
       "unintended_removed_mm3": 0,
       "unintended_added_mm3": 0,
-      "base_volume_mm3": 36250.66844675112,
+      "base_volume_mm3": 36154.99865224995,
       "removed_old_posts_mm3": 233.92368364880662,
       "integral_posts_added_mm3": 322.1199955909389,
       "floor_exterior_added_mm3": 0
@@ -115,5 +115,6 @@
   "upper_shell_revision_IDs_verified_unchanged": true,
   "upper_shell_and_cap_bodies_verified": 47,
   "assembly_instance_placement_verified": true,
-  "instance_placement_report": "instance-placement.json"
+  "instance_placement_report": "instance-placement.json",
+  "root_geometry_verification": "root-cleanup-verification.json"
 }

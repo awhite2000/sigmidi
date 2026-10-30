@@ -85,7 +85,7 @@
   },
   {
     "file": "design/fusion/print/base-right.stl",
-    "triangles": 8630,
+    "triangles": 7898,
     "bounds_mm": [
       [
         0.0,
@@ -102,8 +102,8 @@
     "nonmanifold_edges": 0,
     "inconsistent_winding_edges": 0,
     "degenerate_triangles": 0,
-    "volume_mm3": 36235.39992056337,
-    "STL_sha256": "8ca865d2b0c655678d38428e270d8dcc7c00e7894c9e27b85b42a716b0f0fa71",
+    "volume_mm3": 36140.23335234533,
+    "STL_sha256": "9660ebde697a15b3b0f5d47daf18102dfef92cbfa58135011bea26d8e8adc480",
     "post_sections": [
       {
         "center_print_XY_mm": [
@@ -112,8 +112,8 @@
         ],
         "section_print_Z_mm": 9.963991764396592,
         "bore_min_radius_mm": 0.7720480750265107,
-        "outer_min_radius_mm": 2.9896079731854686,
-        "minimum_section_wall_mm": 2.2146038242018293
+        "outer_min_radius_mm": 2.989607757361374,
+        "minimum_section_wall_mm": 2.2146036083777347
       },
       {
         "center_print_XY_mm": [
@@ -122,8 +122,8 @@
         ],
         "section_print_Z_mm": 9.963991764396592,
         "bore_min_radius_mm": 0.7720471147430223,
-        "outer_min_radius_mm": 2.9886517264301315,
-        "minimum_section_wall_mm": 2.2136455581436842
+        "outer_min_radius_mm": 2.9896064547550383,
+        "minimum_section_wall_mm": 2.214600286468591
       },
       {
         "center_print_XY_mm": [

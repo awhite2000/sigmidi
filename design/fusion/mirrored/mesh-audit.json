@@ -58,7 +58,7 @@
   },
   {
     "file": "design/fusion/mirrored/main/base-left.stl",
-    "triangles": 8630,
+    "triangles": 7898,
     "bounds_mm": [
       [
         0.0,
@@ -75,8 +75,8 @@
     "nonmanifold_edges": 0,
     "inconsistent_winding_edges": 0,
     "degenerate_triangles": 0,
-    "volume_mm3": 36235.40264853098,
-    "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
+    "volume_mm3": 36140.236010958164,
+    "STL_sha256": "def669e56b39b3fc4cfdea461e807f86c298f00dc84c6950185f45e91c56b51f",
     "post_sections": [
       {
         "center_print_XY_mm": [
@@ -85,8 +85,8 @@
         ],
         "section_print_Z_mm": 9.963991764396592,
         "bore_min_radius_mm": 0.7720480750264784,
-        "outer_min_radius_mm": 2.98864761861706,
-        "minimum_section_wall_mm": 2.213643469633398
+        "outer_min_radius_mm": 2.989606971888206,
+        "minimum_section_wall_mm": 2.2146028229045442
       },
       {
         "center_print_XY_mm": [
@@ -95,8 +95,8 @@
         ],
         "section_print_Z_mm": 9.963991764396592,
         "bore_min_radius_mm": 0.7720480750264913,
-        "outer_min_radius_mm": 2.989608268889152,
-        "minimum_section_wall_mm": 2.2146041199054993
+        "outer_min_radius_mm": 2.98960893464166,
+        "minimum_section_wall_mm": 2.2146047856580076
       },
       {
         "center_print_XY_mm": [

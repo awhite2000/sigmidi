@@ -53,6 +53,6 @@ Mesh and slicing reports describe nominal geometry and toolpaths. Printed fit, l
 | pair-base | 2 | 42m 38s |
 | left-cap | 1 | 36m 32s |
 | electronics-shell | 1 | 6h 20m 1s |
-| electronics-base | 1 | 2h 5m 43s |
+| electronics-base | 1 | 2h 4m 41s |
 
-Estimated total: **15h 41m, 313 g**, including brims/supports, excluding fit coupons.
+Estimated total: **15h 40m, 312 g**, including brims/supports, excluding fit coupons.

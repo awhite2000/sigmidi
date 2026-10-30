@@ -93,10 +93,10 @@
     "docs/hardware.md": "c756916d0f4f42db27ff178f971768ae0171a3d20df20b2983edf0b2a2fba25f",
     "docs/leds.md": "f4ab6c3c08fdfdeefaabb47ea6ea7d2c4014f160d3a76d805b6f818b4b31c801",
     "docs/resistor-ladders.md": "029d1c03c51d820405d32c51dcfa68c46632e547312b33d68d731c36a2635ebb",
-    "design/fusion/nano-esp32/mount-fit.json": "7c8620ac1407c3314f1aab5ede383f570c49900b9c6923b04b85a17cdb721daf",
+    "design/fusion/nano-esp32/mount-fit.json": "69d8126f30732ccc7caaf0686f750cbf766fbbfea74892f97607a1d7b225b3cd",
     "design/fusion/nano-esp32/README.md": "d95bdf567a34fa8b8fcda5f4595e9c4fbdba674b2ee660d2a7bbf49b6c33fd02",
     "design/fusion/mirrored/README.md": "a4ba93fa8f4b9c96fee815d5f66e6cf6afa2ff90b5735e499e65fddd01ae0642",
-    "design/fusion/modular/README.md": "a8ca1c50a52e631a4f9cd1f6c210d3be4a537cf974353d3feee35492e1111f3a",
+    "design/fusion/modular/README.md": "10435b547136a95c90a5f5c2b22ea403c66302446bd1bf6dfe3a4aad5cdf6dc1",
     "design/fusion/printing-tolerances.md": "200bb4341eefe9a792ca11417d28f109e5e2c5fcfb7f84db3e9560ffe1bc801b",
     "docs/user-manual.md": "1648eb18d0db558ec871779d6ff51d538027570be32fc06c0bbbeb409ece366e",
     "docs/bringup.md": "c8ba630cfcc91b48a7a7cb84c912769c18b6998aca0fbc818d0967dc56fca293"
@@ -104,8 +104,8 @@
   "images": {
     "design/electrical/pololu-2535-pinout.jpg": "fe085fddcfece0e07f77d411620187e89b1fa7ea3fd9b6091aff43a63ddcdb49",
     "design/fusion/display-m2x5-section.png": "e131f8bcfc2c77204f2d5a0cb8e105503daf6364e426e03b1943aeca61b7af81",
-    "design/fusion/nano-esp32/exploded.png": "afb8024f171d8c2d07b7641b6b65a09eeeb356861c9e7a178f36cfa7bbcbd2a3",
-    "design/fusion/nano-esp32/installed.png": "decabd4a76dfbca12271060c04f16f41ac5bbb81cd3b36c0c1e0cdc23fdf0384",
+    "design/fusion/nano-esp32/exploded.png": "dde592563ef96509419f4f663a1cd7926bac40b73c7ae22e23c66e5f708889de",
+    "design/fusion/nano-esp32/installed.png": "1745770f4e4429d62851172737cdbc7023c7e6663b089ee65942f860a4667bb6",
     "design/fusion/print/perimeter-ledge-detail.png": "1dc0b8d6625780f729604301cd6de42f390032824e0e22fa717effaa93552170",
     "design/fusion/snug-fit-sections.png": "bf5c1044ea694f73824fd47989b12443eeef62ac5c193d364eb9f450ba42393a",
     "docs/assembly-ladder.svg": "1809d34e910e7b7c91d2e5698c43be7c908b7eec15a77bc2917b3deafe0b03c2",
@@ -115,6 +115,6 @@
     "previews/sigmidi-left-main.png": "fc483734db42d3937930d1f476f123da02c0c01b4e5175461f7b5203bb473cd3"
   },
   "outputs": {
-    "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf": "b52fb94def8de8630ef055370deed3ac3daaf277e2952234c69249c29e5139cd"
+    "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf": "8acea2e8a5bda8e8228e6e33c60d9965549a168a0eab80396e6405c7e75852b7"
   }
 }

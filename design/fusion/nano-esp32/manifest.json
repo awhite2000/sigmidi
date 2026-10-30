@@ -22,108 +22,118 @@
   "files": [
     {
       "path": "README.md",
-      "sha256": "d95bdf567a34fa8b8fcda5f4595e9c4fbdba674b2ee660d2a7bbf49b6c33fd02",
-      "bytes": 5502
+      "bytes": 5502,
+      "sha256": "d95bdf567a34fa8b8fcda5f4595e9c4fbdba674b2ee660d2a7bbf49b6c33fd02"
     },
     {
       "path": "assembly-clearance.json",
-      "sha256": "7c8620ac1407c3314f1aab5ede383f570c49900b9c6923b04b85a17cdb721daf",
-      "bytes": 3618
+      "bytes": 3686,
+      "sha256": "69d8126f30732ccc7caaf0686f750cbf766fbbfea74892f97607a1d7b225b3cd"
     },
     {
       "path": "check_prints.py",
-      "sha256": "da2e8d7b9a6bd1fffc01cdfb0a9234e335e5c2ab4e665ede086967a2b4a39fd9",
-      "bytes": 7097
+      "bytes": 7097,
+      "sha256": "da2e8d7b9a6bd1fffc01cdfb0a9234e335e5c2ab4e665ede086967a2b4a39fd9"
+    },
+    {
+      "path": "clean_mount_roots.py",
+      "bytes": 4189,
+      "sha256": "ce8464e42148c6ddef3afddb6f9a8367b515bf19af8ba3d35338ab4d1b9d238a"
     },
     {
       "path": "datasheets/ABX00083-datasheet.pdf",
-      "sha256": "ef9c75c0c97387f5429dee5a416bee4f9fad0f79b95da9e0dae18a5716b624ac",
-      "bytes": 1255494
+      "bytes": 1255494,
+      "sha256": "ef9c75c0c97387f5429dee5a416bee4f9fad0f79b95da9e0dae18a5716b624ac"
     },
     {
       "path": "datasheets/NANO_ESP32.step",
-      "sha256": "b1fdadf95323994f7d7698962f2814ba3490cde1fb53701050067fbd5017ce98",
-      "bytes": 6791224
+      "bytes": 6791224,
+      "sha256": "b1fdadf95323994f7d7698962f2814ba3490cde1fb53701050067fbd5017ce98"
     },
     {
       "path": "direct_mount.py",
-      "sha256": "90c9cd0da3e237452e71db13e853014f845c3508b19b24b8b88f0f9e9095a828",
-      "bytes": 15524
+      "bytes": 15733,
+      "sha256": "9016efd61a3c0a874616f51f64c1d744858d354282ddb8b2dedbb171212bb2e5"
     },
     {
       "path": "exploded.png",
-      "sha256": "afb8024f171d8c2d07b7641b6b65a09eeeb356861c9e7a178f36cfa7bbcbd2a3",
-      "bytes": 692201
+      "bytes": 686034,
+      "sha256": "dde592563ef96509419f4f663a1cd7926bac40b73c7ae22e23c66e5f708889de"
     },
     {
       "path": "exports.json",
-      "sha256": "2677bbcc28babd41a0b561d72be3d0131eb4bc275d35fde7366b264835edd83f",
-      "bytes": 10185
+      "bytes": 10185,
+      "sha256": "1860ec41ca2feb5753351d6d7270e7c57962c8888bee532d5dc008af1266da39"
     },
     {
       "path": "installation.json",
-      "sha256": "c4753e5fc65820516097e1d92c5642bc4dd9f1af8c5ff55046144869256f34c1",
-      "bytes": 571
+      "bytes": 571,
+      "sha256": "c4753e5fc65820516097e1d92c5642bc4dd9f1af8c5ff55046144869256f34c1"
     },
     {
       "path": "installed.png",
-      "sha256": "decabd4a76dfbca12271060c04f16f41ac5bbb81cd3b36c0c1e0cdc23fdf0384",
-      "bytes": 721617
+      "bytes": 709713,
+      "sha256": "1745770f4e4429d62851172737cdbc7023c7e6663b089ee65942f860a4667bb6"
     },
     {
       "path": "instance-placement.json",
-      "sha256": "edd66e856a2cbab1e306aee6a8335970574d53e6761f203b9ad155823bf63f4b",
-      "bytes": 2737
+      "bytes": 2737,
+      "sha256": "edd66e856a2cbab1e306aee6a8335970574d53e6761f203b9ad155823bf63f4b"
     },
     {
       "path": "mount-fit.json",
-      "sha256": "7c8620ac1407c3314f1aab5ede383f570c49900b9c6923b04b85a17cdb721daf",
-      "bytes": 3618
+      "bytes": 3686,
+      "sha256": "69d8126f30732ccc7caaf0686f750cbf766fbbfea74892f97607a1d7b225b3cd"
     },
     {
       "path": "nano-esp32-direct-mount.f3d",
-      "sha256": "f2acaa88233f49ca75277b5837d9c674cad427de2141b06bd9d05a5342c3d37f",
-      "bytes": 4100980
+      "bytes": 4061773,
+      "sha256": "8f82c8aa71c827f4ac66005fc92988215c09057bd90655011676c0fbe653b114"
     },
     {
       "path": "nano-esp32-direct-mount.step",
-      "sha256": "532bb63b1e0f22d05e8af2849664b3ba1aeeaae15b16da5a0c4a130652a707a8",
-      "bytes": 9931508
+      "bytes": 9892410,
+      "sha256": "d96fa511796c3300f8a7aca36229657078e27ba0439690bfb5479fc0cff1cf07"
     },
     {
       "path": "package-verification.json",
-      "sha256": "e23303b13cc39c0fba1ae3212624fc1460dcdcfb93ba0844fb98ce105371f5cc",
-      "bytes": 9549
+      "bytes": 9549,
+      "sha256": "67c85c1dcdcd82eb96cc32a81a05592f440b54a62875e0490cfaca972e075143"
     },
     {
       "path": "package_current.py",
-      "sha256": "c473c95eb291bdf512f40402acee85d4fa0a1168868fe4a1d1ec928ddbfcc324",
-      "bytes": 8460
+      "bytes": 8687,
+      "sha256": "21aa4c0c051d837778a7459a6172b24a48b599cfe580cac36f0c2b9d7ab5a639"
     },
     {
       "path": "packages.json",
-      "sha256": "125687a535131eaf9274dc0b6a4149964bd540b9444b9d23d136379e2fd7b585",
-      "bytes": 880
+      "bytes": 880,
+      "sha256": "5233794822e4f3f7a371537f8960386b67472d5bf65780c61319857927d09100"
     },
     {
       "path": "posts.png",
-      "sha256": "037d6ea42f05c0f447fa35238dd373991920fd0d126e01a947a74da2e9124e9e",
-      "bytes": 541063
+      "bytes": 523656,
+      "sha256": "4079865e6e47c2dde3cde1d9b618e0da9cf87bd4c2517f4f5f1500c18c9ec42c"
     },
     {
       "path": "print-orientation.png",
-      "sha256": "07ff46a23c988163925b90920c8645622921742d440f6371b76b5421c6b208f4",
-      "bytes": 450446
+      "bytes": 442825,
+      "sha256": "711c7ad258574f74ab97edc49541a801177d274d08234f10105324428aafc299"
     },
     {
       "path": "print-verification.json",
-      "sha256": "964bb8d841babe2e53924ad3ccfd7d31266625c378aa7133f31243bb79e87e13",
-      "bytes": 7899
+      "bytes": 7898,
+      "sha256": "e8882df9cfb7836987bf9501ca24230743fc3d59d084a2c29cd2ec5f91df0ef0"
     },
     {
       "path": "render_mounts.py",
-      "sha256": "e0859075e6c12233b02efe16970cc62c22b16866af0760c13705f7e46d925bc3",
-      "bytes": 12967
+      "bytes": 12967,
+      "sha256": "e0859075e6c12233b02efe16970cc62c22b16866af0760c13705f7e46d925bc3"
+    },
+    {
+      "path": "root-cleanup-verification.json",
+      "bytes": 912,
+      "sha256": "07def760400d0b34a2b145d32439d2acbb99e4343db6c1c71ed390b70703f7b0"
     }
   ]
 }
