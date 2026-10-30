@@ -53,14 +53,15 @@ def main():
     }
     assert hardware_counts == {'base_M2x6':8,'display_M2x5':4}
     mount=json.loads((ROOT/'design/fusion/nano-esp32/mount-fit.json').read_text())
-    assert len(mount['board_holes_XY_mm'])==4 and len(mount['existing_post_centers_XY_mm'])==2
+    assert len(mount['board_holes_XY_mm'])==4 and not mount['component_face_down']
+    assert mount['separate_inserts']==0
     assert mount['PCB_screws']=='Four M1.6x5 pan head'
-    assert mount['bridge_fasteners']=='Two M1.6x6 pan head into existing far-end posts'
+    assert mount['bridge_fasteners']==0
     for p,n in data['profiles'].items():
         assert sum(i['quantity'][p] for i in items if i['electrical_refs']) == 16+3*n
         assert by_id['H01']['quantity'][p] == (8 if p=='main_10' else 4+2*((n-4)//2))
         printed = sum(i['quantity'][p] for i in items if i['group']=='Printed parts')
-        assert printed == (6 if p=='main_10' else 5+2*((n-4)//2))
+        assert printed == (4 if p=='main_10' else 3+2*((n-4)//2))
     headers = ['ID','Group','Part','Specification','Fit condition','References','Unit']+LABELS+['Purchase unit','Notes','Source']
     with (ROOT/'docs/bill-of-materials.csv').open('w',newline='') as f:
         writer = csv.writer(f, lineterminator='\n'); writer.writerow(headers)
@@ -108,13 +109,13 @@ Preferred build: **Left**, with electronics on the left and modular extensions t
 
 | Profile | Installed switches N | Pair extensions | Base M2x6 screws | Printed enclosure pieces |
 |---|---|---|---|---|
-| Modular 4 | 4 | 0 | 4 | 5 |
-| Modular 6 | 6 | 1 | 6 | 7 |
-| Modular 8 | 8 | 2 | 8 | 9 |
-| Modular 10 | 10 | 3 | 10 | 11 |
-| Main 10, fixed split chassis | 10 | Not applicable | 8 | 6 |
+| Modular 4 | 4 | 0 | 4 | 3 |
+| Modular 6 | 6 | 1 | 6 | 5 |
+| Modular 8 | 8 | 2 | 8 | 7 |
+| Modular 10 | 10 | 3 | 10 | 9 |
+| Main 10, fixed split chassis | 10 | Not applicable | 8 | 4 |
 
-Use **N** below for the chosen installed switch count. **AR** means as required. Optional feature quantities apply only when that feature is fitted. Parts inside boards are not itemized. Counts include the two Nano mounting adapters. Electrical reference designators match the Nano wiring diagrams and KiCad schematic.
+Use **N** below for the chosen installed switch count. **AR** means as required. Optional feature quantities apply only when that feature is fitted. Parts inside boards are not itemized. The Nano mounts directly on integral posts in the electronics base; no separate adapters are printed. Electrical reference designators match the Nano wiring diagrams and KiCad schematic.
 
 ## 1. Required control electronics
 
@@ -156,7 +157,7 @@ Pololu 2535 is sold as a **10-pack**: buy one pack for any single 4-10 switch bu
 
 **Display fit:** four M2x5 screws pass through the printed hollow mounts into the factory blind studs. Nominal engagement is 1.39 mm; confirm head seating and usable stud depth on the delivered display. Do not substitute the base's M2x6 screws for the display screws.
 
-**Nano mounting:** four H03 M1.6x5 pan-head screws attach the board to its two adapters; two H09 M1.6x6 screws attach the bridge to existing base poles. Glue the USB-side adapter foot to the original floor. Print P09/P10 without supports, component face down in the assembled mount. Check screw fit and USB cable seating before bonding.
+**Nano mounting:** four H03 M1.6x5 pan-head screws attach the board component-side up directly to four integral base posts. Posts have 6 mm shafts, 8 mm root envelopes, 45-degree root transitions and 4.3 mm-deep pilots. The USB-side pair has rear flats for pocket clearance; chamfered channels under the opposite pair preserve the vent. No mount adhesive or bridge screws are needed. Check screw fit and USB cable seating before tightening.
 
 **Control fit remains to confirm:** no exact footswitch or encoder manufacturer SKU is selected. Match the specified switch body and shaft offset, actuator height, encoder bushing length through the 3 mm roof, shaft form and knob bore. The encoder's 6 mm shaft and 8 mm body height are CAD assumptions. These checks determine the final orderable parts, not a change to the enclosure geometry.
 
@@ -213,18 +214,18 @@ USB and 9 V sources are alternative power options. Choose each supply for the co
 
 | Item | Required check |
 |---|---|
-| Arduino Nano ESP32 | ABX00083 without headers; direct wiring and two printed adapters. Recalibrate analog inputs on the new board. |
+| Arduino Nano ESP32 | ABX00083 without headers; direct wiring, components up on integral base posts. Calibrate analog inputs after assembly. |
 | Waveshare 24382 | Non-touch 1.69inch LCD Module; verify rear M2 studs and GH1.25 8-pin cable. Do not substitute a similar touch display. |
 | Footswitch / encoder | Exact supplier SKUs remain open; match the dimensional and contact requirements on pages 1 and 3. |
 | J1 power socket | Match 8 mm thread, 8 mm threaded length, 18 mm total envelope and 2 mm nut; flange and nut outside diameters still require fit confirmation. |
-| MCU screws | Four M1.6x5 and two M1.6x6 pan head; verify printed pilot engagement. |
+| MCU screws | Four M1.6x5 pan head; verify printed pilot engagement. |
 | Bundled hardware | Check cable, header, nuts and washers already supplied with the boards and controls. Do not buy duplicate sets. |
 
 ## Quantity and source checks
 
 The maximum electrical BOM/netlist contains **46 component instances**: three purchased boards, two socket assemblies, one encoder, ten footswitches, eighteen resistors, two capacitors and ten LEDs. This includes the two required USB VBUS sense resistors R50/R51, both pedals, 9 V power and optional LEDs. The similarly sized CSV line count is coincidental: CSV rows also include grouped hardware, printed parts and external accessories.
 
-For all optional circuits fitted, electrical instance totals are **28 / 34 / 40 / 46** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 46 reference designators against both electrical exports. It verifies eight base and four display screws against the CAD body inventory, and four M1.6x5 PCB screws plus two M1.6x6 bridge screws against the Nano mount specification.
+For all optional circuits fitted, electrical instance totals are **28 / 34 / 40 / 46** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 46 reference designators against both electrical exports. It verifies eight base and four display screws against the CAD body inventory, and four M1.6x5 PCB screws against the direct Nano mount specification.
 
 ## References
 
@@ -234,7 +235,7 @@ For all optional circuits fitted, electrical instance totals are **28 / 34 / 40 
 
 Local basis: design/electrical/bom.csv and netlist.json; design/fusion/mirrored/layout.json; enclosure assembly guides; docs/hardware.md and power.md; and design/fusion/datasheets/double-trs-ACJS-MHDC.pdf. The manufacturer's TRS drawing shows the included nuts/washers and optional PCB support hole; no extra saddle screw is specified in this assembly.
 
-Prepared 30 October 2026 for SIGMIDI v0.1. The Nano firmware, harness and two adapters are specified here; original enclosure solids are retained. Values and CAD fit describe the current prototype; purchased-part fit, direct LED drive, power/thermal performance and physical assembly still require bench checks. Edit docs/bom-items.json and rerun scripts/build_bom.py to refresh the PDF, Markdown and shopping CSV.
+Prepared 30 October 2026 for SIGMIDI v0.1. The Nano firmware, harness and integral components-up mounting are specified here. Electronics bases carry the four Nano posts; upper shells are unchanged. Values and CAD fit describe the current prototype; purchased-part fit, direct LED drive, power/thermal performance and physical assembly still require bench checks. Edit docs/bom-items.json and rerun scripts/build_bom.py to refresh the PDF, Markdown and shopping CSV.
 '''
     markdown = ROOT/'docs/bill-of-materials.md'
     markdown.write_text(doc)
@@ -246,7 +247,7 @@ Prepared 30 October 2026 for SIGMIDI v0.1. The Nano firmware, harness and two ad
                     'docs/hardware.md','docs/power.md','scripts/build_user_manual.py']
     digest = lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
     manifest = {'project':data['project'],'version':data['version'],'BOM_lines':len(items),
-                'electrical_reference_count':len(refs), 'total_electrical_instances_main':len(refs),'electrical_refs_match_exports':True,'USB_VBUS_divider_BOM_ids':['E16','E17'],'Nano_mount_hardware':{'M1.6x5':4,'M1.6x6':2},
+                'electrical_reference_count':len(refs), 'total_electrical_instances_main':len(refs),'electrical_refs_match_exports':True,'USB_VBUS_divider_BOM_ids':['E16','E17'],'Nano_mount_hardware':{'M1.6x5':4,'separate_adapters':0},
                 'enclosure_hardware_counts':hardware_counts,'profiles':data['profiles'],
                 'source_sha256':{n:digest(ROOT/n) for n in source_files},
                 'outputs':{n:digest(ROOT/n) for n in ['docs/bill-of-materials.csv',str(PDF.relative_to(ROOT))]},

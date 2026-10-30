@@ -1,6 +1,8 @@
 {
-  "status": "Nominal geometry verified; physical fit testing required",
+  "revision": "nano_direct_base_components_up",
   "board": "Arduino Nano ESP32 ABX00083 without headers",
+  "component_face_down": false,
+  "headers_fitted": false,
   "board_dimensions_mm": [
     43.18,
     17.78,
@@ -11,60 +13,107 @@
     15.24
   ],
   "board_hole_diameter_mm": 1.66,
-  "component_face_down": true,
-  "board_component_face_Z_mm": -9.0100053235184,
-  "USB_face_Y_mm": -4.0762937308724085,
-  "USB_recess_increase_mm": 0.3,
   "board_holes_XY_mm": [
     [
       91.69163840008723,
-      -6.458248850589463
+      -7.958248850589463
     ],
     [
       106.93163840008724,
-      -6.458248850589463
+      -7.958248850589463
     ],
     [
       91.69163840008723,
-      -47.09824885058946
+      -48.59824885058946
     ],
     [
       106.93163840008724,
-      -47.09824885058946
+      -48.59824885058946
     ]
   ],
-  "glue_insert_land_mm": [
-    14.6,
-    3.3
-  ],
-  "glue_gap_mm": 0.15,
+  "PCB_bottom_Z_mm": -13.336008235603408,
+  "board_component_face_Z_mm": -11.730004335603407,
+  "USB_face_Y_mm": -5.576293823262748,
+  "USB_center_Z_mm": -10.370004829560905,
+  "USB_alignment_XZ_unchanged": true,
+  "USB_recess_increase_mm": 1.5,
+  "USB_pocket_geometry_unchanged": true,
+  "post_minimum_radial_wall_mm": 2.225,
+  "post_outer_diameter_mm": 6,
+  "post_root_diameter_mm": 8,
+  "post_root_chamfer_degrees": 45,
+  "rear_post_flat_Y_mm": -4.95,
+  "vent_channel_roof_chamfer_degrees": 45,
   "PCB_screws": "Four M1.6x5 pan head",
   "PCB_pilot_diameter_mm": 1.55,
-  "PCB_pilot_depth_mm": 3.6,
-  "bridge_fasteners": "Two M1.6x6 pan head into existing far-end posts",
-  "bridge_clearance_holes_mm": 2.0,
-  "bridge_thickness_mm": 2.2,
-  "existing_post_centers_XY_mm": [
-    [
-      88.30579390305104,
-      -63.30265
-    ],
-    [
-      110.30622390305105,
-      -63.30265
-    ]
-  ],
+  "PCB_pilot_depth_mm": 4.3,
+  "minimum_blind_web_above_vent_mm": 2.06399176439659,
+  "nominal_screw_engagement_mm": 3.3939961,
+  "separate_inserts": 0,
+  "bridge_fasteners": 0,
   "physical_or_envelope_collisions": [],
-  "excluded_manufacturer_header_occurrences": [
-    "PCB:1+JP1:1+Header _Fem_1X8:1",
-    "PCB:1+JP1:1+Header _Fem_1X8:2",
-    "PCB:1+JP1:1",
-    "PCB:1+JP2:1+Header _Fem_1X8:3",
-    "PCB:1+JP2:1+Header _Fem_1X8:4",
-    "PCB:1+JP2:1"
+  "checks": [
+    {
+      "variant": "Left main",
+      "translation_X_mm": 0,
+      "single_connected_base": true,
+      "physical_collisions": [],
+      "blocked_floor_slots": [],
+      "unintended_removed_mm3": 0,
+      "unintended_added_mm3": 0,
+      "base_volume_mm3": 36250.66844675111,
+      "removed_old_posts_mm3": 233.9236836488058,
+      "integral_posts_added_mm3": 322.1199955909392,
+      "floor_exterior_added_mm3": 0
+    },
+    {
+      "variant": "Left modular",
+      "translation_X_mm": 0,
+      "single_connected_base": true,
+      "physical_collisions": [],
+      "blocked_floor_slots": [],
+      "unintended_removed_mm3": 0,
+      "unintended_added_mm3": 0,
+      "base_volume_mm3": 36250.66844675111,
+      "removed_old_posts_mm3": 233.9236836488058,
+      "integral_posts_added_mm3": 322.1199955909392,
+      "floor_exterior_added_mm3": 0
+    },
+    {
+      "variant": "Right main",
+      "translation_X_mm": 151.37672319982553,
+      "single_connected_base": true,
+      "physical_collisions": [],
+      "blocked_floor_slots": [],
+      "unintended_removed_mm3": 0,
+      "unintended_added_mm3": 0,
+      "base_volume_mm3": 36250.66844675112,
+      "removed_old_posts_mm3": 233.92368364880662,
+      "integral_posts_added_mm3": 322.1199955909389,
+      "floor_exterior_added_mm3": 0
+    },
+    {
+      "variant": "Right modular",
+      "translation_X_mm": 151.37672319982553,
+      "single_connected_base": true,
+      "physical_collisions": [],
+      "blocked_floor_slots": [],
+      "unintended_removed_mm3": 0,
+      "unintended_added_mm3": 0,
+      "base_volume_mm3": 36250.66844675112,
+      "removed_old_posts_mm3": 233.92368364880662,
+      "integral_posts_added_mm3": 322.1199955909389,
+      "floor_exterior_added_mm3": 0
+    }
   ],
-  "inserts_single_solids": true,
-  "unchanged_original_bodies": true,
+  "all_variants_collision_free": true,
+  "upper_shells_modified": false,
+  "floor_vent_count_preserved": 13,
+  "physical_fit_qualified": false,
   "source_STEP": "datasheets/NANO_ESP32.step",
-  "source_drawing": "datasheets/ABX00083-datasheet.pdf page 17"
+  "source_drawing": "datasheets/ABX00083-datasheet.pdf page 17",
+  "upper_shell_revision_IDs_verified_unchanged": true,
+  "upper_shell_and_cap_bodies_verified": 47,
+  "assembly_instance_placement_verified": true,
+  "instance_placement_report": "instance-placement.json"
 }

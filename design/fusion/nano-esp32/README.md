@@ -1,57 +1,51 @@
-# SIGMIDI v0.1 — Arduino Nano ESP32 mounting kit
+# SIGMIDI v0.1 - Arduino Nano ESP32 direct base mounting
 
-Two removable board adapters fit the **Arduino Nano ESP32 ABX00083 without headers** to the existing enclosure floor. The bottom shell, original mounting poles, upper shell, USB pocket and external shape are unchanged. The complete native Fusion model includes the kit in the Left and Right main and modular assemblies, with the former MCU references hidden.
+The Arduino Nano ESP32 ABX00083 mounts **component-side up** directly on four reinforced posts integral to the electronics base. The USB-C connector faces the rear protective pocket. There are no separate mounting inserts, glued mounting feet or bridge fasteners. This applies to Left and Right, Main and Modular assemblies.
 
-![Nano fitted to the original base](installed.png)
+![Nano directly mounted on the base, components facing up](installed.png)
 
-## Parts and fasteners
+## Printed parts and hardware
 
-| Part | Attachment | Nano attachment |
-|---|---|---|
-| [USB-side glue insert](usb-side-glue-insert.stl) — amber | Glue its flat foot to the unvented base immediately inside the rear USB pocket | Two M1.6 × 5 mm pan-head screws |
-| [Opposite-end bridge](existing-pole-insert.stl) — teal | Two M1.6 × 6 mm pan-head screws into the existing far-end MCU poles | Two M1.6 × 5 mm pan-head screws |
+Print the electronics base from the selected enclosure family:
 
-Print one of each. The Nano is **component-side down**, with USB-C facing the existing rear opening. Its bare reverse face and screw heads face upwards. The board is 43.18 × 17.78 mm; the mounting-hole centres form a 40.64 × 15.24 mm rectangle with Ø1.66 mm holes. Supports are relieved around components beside the corner holes and bear on the outward PCB edges. No pin headers are included in the clearance model; solder peripheral wires directly to the board pads.
+| Assembly | Electronics base |
+|---|---|
+| Left Main | `../mirrored/main/base-left.stl` / `.3mf` |
+| Left Modular | `../mirrored/modular/electronics-base-left.stl` / `.3mf` |
+| Right Main | `../print/base-right.stl` / `.3mf` |
+| Right Modular | `../modular/electronics-base.stl` / `.3mf` |
 
-PCB pilots are Ø1.55 mm and 3.6 mm deep. A 5 mm screw passes through the approximately 1.61 mm PCB and enters the pilot by approximately 3.39 mm. The bridge has Ø2.0 mm clearance holes and a 2.2 mm plate, leaving approximately 3.8 mm engagement for its 6 mm screws in the existing 6 mm-deep pilots. Screw models show nominal shanks, not helical threads. Tighten gently and test the printed pilots first.
+Use **four M1.6 x 5 mm pan-head screws** through the Nano's approximately 1.61 mm PCB into the integral posts. Board mounting holes are 1.66 mm diameter on a 40.64 x 15.24 mm rectangle. Printed pilots are 1.55 mm diameter, 4.3 mm deep; nominal screw engagement is 3.39 mm. Check the actual printed pilots and screw heads; tighten gently without bending the PCB. No headers are included in the clearance model: solder the peripheral harness directly to the pads and leave service slack.
 
-The USB-side foot has a 14.6 × 3.3 mm glue land and a nominal 0.15 mm adhesive allowance. Its sloping arms print at 45°. The original unused USB-side poles remain intact; reliefs in the insert clear them. The USB face is 0.3 mm farther inside the enclosure than the former board's face. Confirm cable-plug access before bonding.
+The posts have 6 mm shafts with 8 mm root envelopes and 45-degree root transitions. USB-side posts have a flat rear face to clear the unchanged pocket partition. The opposite posts have 45-degree arch channels over the existing floor slot, preserving all thirteen floor vents. The posts are one solid with the base, rather than cantilevered adapter arms. The base prints outside-floor down, posts up, with the supplied 0.6 mm PETG profile.
 
-![Exploded view: original base, two adapters and Nano](exploded.png)
+The PCB bottom is approximately Z -13.336 mm and the component face Z -11.730 mm in assembly-local coordinates; the outside floor is Z -24 mm. The USB connector retains its X/Z alignment and sits 1.5 mm farther inward, giving full 6 mm shafts on the USB-side posts. The pocket and cutout are unchanged; check the actual cable plug reaches and seats fully in the recess. Other controls, mounting supports, split joints, base perimeter and upper-shell geometry are unchanged. The 6 mm shafts provide 2.225 mm radial material around the pilot bore, with at least 2.06 mm blind material above the vent channel. Dimensions and checks are recorded in [mount-fit.json](mount-fit.json) and [assembly-clearance.json](assembly-clearance.json).
 
-## Printing and assembly
+![Board and four mounting screws above the integral posts](exploded.png)
 
-Use PETG, **0.6 mm nozzle and 0.3 mm layers**. Both supplied [3MFs](usb-side-glue-insert.3mf) ([bridge](existing-pole-insert.3mf)) place the flat foot or bridge plate on the bed, pilots upward. **No supports are needed in the checked Prusa MK3S+ toolpaths.** Estimated print times are 4m43s and 4m45s; total filament is about 2 g. The same insert geometry fits both enclosure handednesses; it is translated, not reflected.
+## Assembly
 
-![Printing orientations](print-orientation.png)
+1. Clean the printed electronics base and pilot entrances. Remove loose strands and check the four mounting positions against the actual board. Leave the floor vents and chamfered post channels clear.
+2. Identify the Nano pads in component-side view, USB-C up. Solder and insulate the direct harness while access is easy. Keep B1, GND and RST accessible for ROM flashing.
+3. Place the Nano **components up**, USB-C toward the rear. All four PCB holes should align with the integral post pilots. The bare PCB underside rests on the posts; no component or wire should be trapped underneath.
+4. Start all four M1.6x5 screws loosely, then seat them gently. Check the PCB stays flat and supported at every post. No glue is used for the board mounting.
+5. Dry-fit the unchanged upper shell and the actual USB plug. Verify connector seating, cable access, component clearance and a usable service-removal path before closing. Do not force the base against a trapped connector.
 
-1. Remove the former MCU and its four screws. Leave all original enclosure poles in place.
-2. Dry-fit the Nano and both inserts. Use the board to align the four supports, and loosely attach the bridge to the two far-end poles.
-3. Seat the USB connector in its existing pocket. Confirm cable seating, screw access, component clearance and the base-to-upper-shell fit with the actual board.
-4. Prepare the PETG bonding surfaces and use an adhesive suitable for PETG. Apply adhesive only beneath the amber insert's flat foot; protect the PCB and screw pilots. Use the dry-fitted board/bridge to hold alignment while the adhesive cures.
-5. Secure the board with the four M1.6 × 5 screws and the bridge with two M1.6 × 6 screws. Do not glue the PCB or bridge to the base. Leave strain-relief slack in all wiring.
+Disconnect power before servicing. Release the four Nano screws and withdraw its USB-C connector clear of the protective pocket partition before lowering the populated base. Support the floor and use harness slack or labeled service connectors; never pull the socket or PCB against the pocket.
 
-The close-up renders show a **cropped portion of the existing base**, not a replacement floor to print.
+## CAD, prints and checks
 
-## CAD and checks
+- [Complete native Fusion model](../sigmidi-foot-controller-0.1.f3d): all four assemblies and modular libraries, fitted with components-up Nano references.
+- [Direct mount detail F3D](nano-esp32-direct-mount.f3d) and [STEP](nano-esp32-direct-mount.step): a cropped mechanical reference including the fitted board and integral posts. Print the full base listed above, not this detail.
+- [Mount fit](mount-fit.json), [installation](installation.json) and [assembly clearance](assembly-clearance.json): board pose, pilots, screw engagement, all four assembly checks and unchanged upper-shell verification.
+- [Instance placement](instance-placement.json): each board follows its own assembly and aligns with its integral posts.
+- [Print verification](print-verification.json): watertight full-base meshes and support-free 0.6 mm PETG slicing.
+- `direct_mount.py`, `render_mounts.py`, `check_prints.py`, `package_current.py`: model update, exports/renders and print checks.
 
-- [Latest complete Fusion model](../sigmidi-foot-controller-0.1.f3d): all four native assemblies, modular libraries and fitted kits.
-- [Native kit](nano-esp32-mount-kit.f3d) and [STEP kit](nano-esp32-mount-kit.step): board, adapters and screw references. Print only the two designated STLs/3MFs.
-- [Assembly clearance report](assembly-clearance.json): no volumetric collisions against the existing shell, base and hardware in any of the four assemblies, including the board and four board-screw envelopes. Fastener engagement with pilots is intentional.
-- [Mount fit](mount-fit.json) and [installation](installation.json): dimensions, positions and confirmation that original enclosure-body revisions were unchanged.
-- [Print verification](print-verification.json): both meshes are closed, single-part solids and slice without support extrusion.
-- `build_mounts.py`, `install_mounts.py`, `verify_mounts.py`, `render_mounts.py`: source scripts for the Fusion MCP. `check_prints.py`: mesh/slicer checks.
+These are nominal CAD and slicing checks. Printed strength, screw retention, connector seating, vibration and thermal behavior require physical testing. The four posts are integral to the base; there are no extra Nano mounting pieces.
 
-These are nominal CAD and slicing checks. Printed pilot fit, adhesive strength, connector seating, vibration and thermal performance require a physical build. A minimum-distance measurement was not available for the imported USB reference faces; the collision checks completed for all four variants.
+## Electrical and manufacturer references
 
-## Electrical compatibility
+Use the [Nano GPIO and VBUS-divider wiring](../../../docs/hardware.md), [power guide](../../../docs/power.md), [ROM flashing procedure](../../../docs/web-flasher.md) and [assembly guide](../../../docs/assembly-guide.md). Nano VIN takes the positive sleeve of the 9 V center-negative inlet; the Pololu 5 V output supplies only the optional LEDs. Do not tie its output to USB VBUS.
 
-The firmware and current distribution now target the Nano ESP32 (ESP32-S3), with USB MIDI and BLE MIDI output. Use the [Nano GPIO and VBUS-divider wiring](../../../docs/hardware.md) and [ROM flashing procedure](../../../docs/web-flasher.md). DFR1075 harness pin assignments and C6 firmware are incompatible. Recalibrate analog inputs on the Nano after importing settings.
-
-The Nano's recommended **VIN is 6–21 V**, so the existing regulated 5 V controller connection cannot simply be transferred to VIN. With the enclosure's 9 V centre-negative supply, feed the Nano VIN from the **positive barrel sleeve (+9 V)** and GND from the negative centre, with the intended input protection. Keep the Pololu 5 V output for the optional LED supply and share ground. Do not connect the Pololu output directly to USB VBUS; the Nano VBUS pin is tied to USB power and is not a 5 V output when powered from VIN. USB-only operation does not power the separate converter/LED rail. Final power routing must be checked alongside the Nano wiring and USB implementation.
-
-## Manufacturer sources
-
-[Arduino Nano ESP32 documentation](https://docs.arduino.cc/hardware/nano-esp32/) · [Official datasheet](https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf) · [Official STEP archive](https://docs.arduino.cc/resources/models/ABX00083-step.zip).
-
-Local copies are in `datasheets/`. PCB dimensions and bores follow page 17 of the datasheet; the manufacturer's STEP provides the component envelopes. The plain PCB reference in the STEP has been given the four drawing-specified mounting bores, and header models are excluded.
+[Arduino Nano ESP32 documentation](https://docs.arduino.cc/hardware/nano-esp32/) - [Official datasheet](https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf) - [Official STEP archive](https://docs.arduino.cc/resources/models/ABX00083-step.zip). Local copies are in `datasheets/`; holes follow the official drawing on page 17. Pin names and electrical assignments do not change with the board's mechanical orientation.

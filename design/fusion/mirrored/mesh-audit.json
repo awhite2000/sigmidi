@@ -58,7 +58,7 @@
   },
   {
     "file": "design/fusion/mirrored/main/base-left.stl",
-    "triangles": 7708,
+    "triangles": 8630,
     "bounds_mm": [
       [
         0.0,
@@ -66,7 +66,7 @@
         0.0
       ],
       [
-        156.10000610351562,
+        156.10001,
         92.0,
         21.0
       ]
@@ -75,15 +75,50 @@
     "nonmanifold_edges": 0,
     "inconsistent_winding_edges": 0,
     "degenerate_triangles": 0,
-    "volume_mm3": 36060.15084941135,
-    "overhang_surface_mm2": {
-      "upright": 13.61,
-      "roof_down": 13199.12,
-      "left_end_down": 1332.56,
-      "rear_down": 2473.09
-    },
-    "overhang_metric_limit": "Geometric downward area beyond 45 degrees, excluding bed-contact triangles; not slicer support volume, bridge assessment or a print guarantee.",
-    "path": "main/base-left.stl"
+    "volume_mm3": 36235.40264853098,
+    "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
+    "post_sections": [
+      {
+        "center_print_XY_mm": [
+          91.69163840008723,
+          84.04175114941054
+        ],
+        "section_print_Z_mm": 9.963991764396592,
+        "bore_min_radius_mm": 0.7720480750264784,
+        "outer_min_radius_mm": 2.98864761861706,
+        "minimum_section_wall_mm": 2.213643469633398
+      },
+      {
+        "center_print_XY_mm": [
+          106.93163840008724,
+          84.04175114941054
+        ],
+        "section_print_Z_mm": 9.963991764396592,
+        "bore_min_radius_mm": 0.7720480750264913,
+        "outer_min_radius_mm": 2.989608268889152,
+        "minimum_section_wall_mm": 2.2146041199054993
+      },
+      {
+        "center_print_XY_mm": [
+          91.69163840008723,
+          43.40175114941054
+        ],
+        "section_print_Z_mm": 9.963991764396592,
+        "bore_min_radius_mm": 0.7720472253562108,
+        "outer_min_radius_mm": 2.9886652838248926,
+        "minimum_section_wall_mm": 2.2136617448605946
+      },
+      {
+        "center_print_XY_mm": [
+          106.93163840008724,
+          43.40175114941054
+        ],
+        "section_print_Z_mm": 9.963991764396592,
+        "bore_min_radius_mm": 0.772047225356216,
+        "outer_min_radius_mm": 2.9885874963810597,
+        "minimum_section_wall_mm": 2.2135839574167644
+      }
+    ]
   },
   {
     "file": "design/fusion/mirrored/main/base-right.stl",

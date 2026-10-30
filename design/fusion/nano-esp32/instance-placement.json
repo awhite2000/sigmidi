@@ -1,0 +1,90 @@
+{
+  "world_pose_checks": [
+    {
+      "path": "ALT Chainable - 8 switches - main enclosure retained:1+Existing RIGHT electronics section - unchanged copies:1+ALT Arduino Nano ESP32 - direct base posts - components up:5",
+      "parent_world_translation_mm": [
+        0.0,
+        -150.0,
+        0.0
+      ],
+      "Nano_world_translation_mm": [
+        151.37672319982553,
+        -150.0,
+        0.0
+      ],
+      "aligned_to_own_assembly": true
+    },
+    {
+      "path": "ALT Mirrored MAIN - left electronics - 10 switches:1+ALT Arduino Nano ESP32 - direct base posts - components up:2",
+      "parent_world_translation_mm": [
+        0.0,
+        -300.0,
+        0.0
+      ],
+      "Nano_world_translation_mm": [
+        0.0,
+        -300.0,
+        0.0
+      ],
+      "aligned_to_own_assembly": true
+    },
+    {
+      "path": "ALT Mirrored MODULAR - right extensions - 8 switches:1+Existing LEFT electronics - 4 switches - real PCB poses:1+ALT Arduino Nano ESP32 - direct base posts - components up:3",
+      "parent_world_translation_mm": [
+        0.0,
+        -450.0,
+        0.0
+      ],
+      "Nano_world_translation_mm": [
+        0.0,
+        -450.0,
+        0.0
+      ],
+      "aligned_to_own_assembly": true
+    }
+  ],
+  "upper_shell_revisions_unchanged": true,
+  "board_and_post_geometry_unchanged": true,
+  "shared_occurrence_root_context_placements": [
+    {
+      "path": "ALT Chainable - 8 switches - main enclosure retained:1+Existing RIGHT electronics section - unchanged copies:1+ALT Arduino Nano ESP32 - direct base posts - components up:5",
+      "before_native_translation_mm": [
+        151.37672319982553,
+        150.0,
+        0.0
+      ],
+      "native_translation_after_override_mm": [
+        151.37672319982553,
+        150.0,
+        0.0
+      ]
+    },
+    {
+      "path": "ALT Mirrored MAIN - left electronics - 10 switches:1+ALT Arduino Nano ESP32 - direct base posts - components up:2",
+      "before_native_translation_mm": [
+        0.0,
+        300.0,
+        0.0
+      ],
+      "native_translation_after_override_mm": [
+        0.0,
+        300.0,
+        0.0
+      ]
+    },
+    {
+      "path": "ALT Mirrored MODULAR - right extensions - 8 switches:1+Existing LEFT electronics - 4 switches - real PCB poses:1+ALT Arduino Nano ESP32 - direct base posts - components up:3",
+      "before_native_translation_mm": [
+        0.0,
+        450.0,
+        0.0
+      ],
+      "native_translation_after_override_mm": [
+        0.0,
+        450.0,
+        0.0
+      ]
+    }
+  ],
+  "transform_note": "Fusion stores root-context placement overrides independently of native shared-occurrence transforms. Exporting uses actual root-context world poses and removes each assembly presentation shift once."
+}

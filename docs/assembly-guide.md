@@ -9,7 +9,7 @@ Build the Arduino Nano ESP32 controller, from printed parts to a tested USB/BLE 
 | Build stage | Pages |
 |---|---|
 | Select parts, print and join the enclosure | 2-3 |
-| Install controls, display and Nano adapters | 4-5 |
+| Install controls, display and Nano directly on the base | 4-5 |
 | Wire power, Nano, LCD and encoder | 6-8 |
 | Wire switches, pedals and optional LEDs | 9-11 |
 | Inspect, power up, flash and calibrate | 12-14 |
@@ -40,18 +40,17 @@ For **Left Modular**, use [mirrored/modular](../design/fusion/mirrored/modular/)
 
 **Right Modular:** use [fusion/modular](../design/fusion/modular/), with `electronics-shell`, `electronics-base`, `left-cap` and the same base quantity. For 6 switches use `pair-shell-at-cap-C`; for 8 use `pair-shell` plus `pair-shell-at-cap`; for 10 use `pair-shell`, `pair-shell-D` plus `pair-shell-at-cap-E`. The cap-adjacent upper is different from a repeatable upper. Modular widths are 164.85 / 229.85 / 294.85 / 359.85 mm for 4 / 6 / 8 / 10 switches.
 
-## Add the Nano kit and separate the screws
+## Direct Nano mounting and fasteners
 
-Every build also needs one [usb-side-glue-insert](../design/fusion/nano-esp32/usb-side-glue-insert.stl) and one [existing-pole-insert](../design/fusion/nano-esp32/existing-pole-insert.stl). These same two parts fit Left and Right. Print enclosure parts, not electronic reference bodies from the complete CAD assembly.
+The electronics base already includes four reinforced Nano mounting posts. No separate inserts or mounting glue are needed. Print enclosure parts, not electronic reference bodies from the complete CAD assembly. [Direct mount details](../design/fusion/nano-esp32/README.md).
 
 | Fastener | Quantity | Use |
 |---|---|---|
 | M2x6 countersunk | Main: 8; Modular: 4 + 2 per pair | Removable base to upper shell |
 | M2x5 countersunk | 4 | LCD hollow mounts into factory blind studs |
-| M1.6x5 pan head | 4 | Nano PCB to the two adapters |
-| M1.6x6 pan head | 2 | Bridge adapter to original base poles |
+| M1.6x5 pan head | 4 | Nano PCB directly to integral base posts |
 
-Total printed pieces, including the Nano kit: Main 6; Modular 4/6/8/10 uses 5/7/9/11. Collect supplied switch nuts/washers, encoder hardware/knob, dual-TRS nuts/washers and the DC inlet nut if fitted. No heat-set inserts are specified. Verify actual screw engagement gently before installing electronics.
+Total printed pieces: Main 4; Modular 4/6/8/10 uses 3/5/7/9. Nano posts are integral to the electronics base. Collect supplied switch nuts/washers, encoder hardware/knob, dual-TRS nuts/washers and the DC inlet nut if fitted. No heat-set inserts are specified. Verify actual screw engagement gently before installing electronics.
 
 **Pass check:** one enclosure variant, one count, correct labeled uppers and a matching cap; all screws sorted by length.
 
@@ -62,7 +61,7 @@ Total printed pieces, including the Nano kit: Main 6; Modular 4/6/8/10 uses 5/7/
 ## Print and clean the empty parts
 
 1. Print fit coupons first. Use the supplied Prusa MK3S+ PETG profile: **0.6 mm nozzle, 0.3 mm layers, 6 mm brim**. Let parts cool before assessing fit. Keep global XY compensation at zero; check first-layer bulges and the profile's 0.2 mm elephant-foot compensation before altering dimensions.
-2. Main uppers print outer-end down, split up. Left pair uppers print left mating edge down; Right pairs print right mating edge down. Caps print closed outer-end down. Upper parts use snug supports at 40 degrees. Bases print outside-floor down, mounts up, without supports. Both Nano adapters print flat land/plate down, pilots up, without supports.
+2. Main uppers print outer-end down, split up. Left pair uppers print left mating edge down; Right pairs print right mating edge down. Caps print closed outer-end down. Upper parts use snug supports at 40 degrees. Bases print outside-floor down, mounts up, without supports. The integral Nano posts print with the base; their 45-degree roots and vent channels need no separate support pieces.
 3. Remove brims, supports and loose strands. Clear screw accesses and inspect joint faces. Remove all **twelve 0.6 mm rear vent membranes**. Open the **0.8 mm LED covers only where LEDs will be fitted**. Do this before installing electronics; leave no plastic debris inside.
 
 ![Sections of the snug upper hook and base positioning rib.](../design/fusion/snug-fit-sections.png) ![The upper wall rests on the widened base perimeter.](../design/fusion/print/perimeter-ledge-detail.png)
@@ -98,25 +97,25 @@ Total printed pieces, including the Nano kit: Main 6; Modular 4/6/8/10 uses 5/7/
 
 <!-- page -->
 
-# 4. Fit the Nano adapters
+# 4. Mount the Nano directly
 
-Use **Arduino Nano ESP32 ABX00083 without headers**. Keep the original base and every original pole. The images show a cropped base detail, not an additional floor to print.
+Use **Arduino Nano ESP32 ABX00083 without headers**. Four reinforced posts are part of the electronics base. The images show a cropped base detail, not an extra floor or adapter to print. All upper shells and their USB pockets retain their existing geometry.
 
-![Installed: amber USB-side glue foot, teal screw-on bridge, bare PCB back upward.](../design/fusion/nano-esp32/installed.png) ![Exploded adapter stack and screw locations.](../design/fusion/nano-esp32/exploded.png)
+![Installed: components face up; four screws secure the Nano directly to integral posts.](../design/fusion/nano-esp32/installed.png) ![Board and four screws above the integral posts; no separate inserts.](../design/fusion/nano-esp32/exploded.png)
 
-## Align before bonding
+## Seat the board on its four posts
 
-1. Identify the board pads while viewing its component side with USB-C up (page 7). Label the harness. Solder direct pad wires with the board loose if access requires it; do not add headers, whose clearance is not modeled. Insulate joints and provide slack. Keep B1, GND and RST accessible for flashing.
-2. Dry-fit the two adapters and Nano. USB-C points to the rear pocket; the **component face points down**, with bare PCB back and screw heads up. Loosely secure the teal bridge to the existing far-end poles with two M1.6x6 screws. Use the board to align all four supports.
-3. Test the upper shell, USB pocket and your actual USB plug. Check the recessed connector with the actual plug, all four board holes, screw access and a usable board/base removal path before glue. Do not pull a populated base against a trapped USB connector.
-4. Prepare the PETG surfaces per the chosen adhesive. Bond **only the amber foot's flat 14.6 x 3.3 mm land** to the unvented original floor, using the aligned board/bridge as a fixture. Keep adhesive out of the PCB, pilots, USB pocket and removable bridge. Allow full cure without stressing the board.
-5. Secure the Nano with **four M1.6x5 pan-head screws**. Nominal entry into the 3.6 mm-deep pilots is 3.39 mm. Secure the bridge with its **two M1.6x6** screws; nominal post engagement is 3.8 mm. Tighten gently; never clamp components or bend the PCB.
+1. Clean the pilot entrances and remove plastic strands. Check the posts and their vent channels are intact. The 6 mm post shafts have 8 mm root envelopes, 45-degree root transitions and rear flats at the USB-side pair. Chamfered arches under the opposite posts preserve the existing floor vent.
+2. Identify the board pads in component-side view with USB-C up (page 7). Solder the direct harness while access is easy, insulate the joints and leave service slack. Keep B1, GND and RST accessible. Do not add headers: their clearance is not included in the model.
+3. Place the Nano **components up**, USB-C toward the rear pocket. Its bare underside rests on the posts. Align the four 1.66 mm PCB holes with the post pilots, on a 40.64 x 15.24 mm rectangle. Do not trap wires or solder joints under the PCB.
+4. Start all **four M1.6x5 pan-head screws** loosely, then seat them gently. Nominal engagement through the 1.61 mm PCB is 3.39 mm in 4.3 mm-deep pilots. Check all four supports touch the PCB without bending it. No mounting adhesive or bridge fasteners are used.
+5. Dry-fit the unchanged upper shell and the actual USB cable plug. The USB connector keeps its X/Z alignment and is recessed 1.5 mm farther inside to retain full-thickness posts; the pocket is unchanged. Check full plug insertion, access to the four screw heads and a usable board/base removal path before closing. Do not pull the base against a trapped connector.
 
 ## Service access
 
-Rehearse removal while unpowered: release the Nano from the adapters and withdraw USB-C clear of the pocket partition before lowering the floor. Use enough labeled harness slack or service connectors to make this possible. The exact hand motion depends on the fitted plug and wiring and must be checked on the real build.
+Rehearse removal while unpowered: release the four Nano screws and withdraw USB-C clear of the pocket partition before lowering the populated floor. Support the floor and use labeled service connectors or sufficient harness slack. Keep all thirteen floor vents and the chamfered post channels clear.
 
-**Pass check:** the PCB sits on its intended edges, no component touches the supports, USB inserts fully, the base seats without stress, and the board can be released. [Detailed kit and fit reports](../design/fusion/nano-esp32/README.md).
+**Pass check:** the board rests directly on all four integral posts, components are accessible from above, USB inserts fully, the base seats without stress and the board can be released. [Dimensions and fit reports](../design/fusion/nano-esp32/README.md).
 
 <!-- page -->
 
@@ -140,7 +139,7 @@ Skip the DC socket, converter and input capacitor together for a USB-only build.
 
 # 6. Nano pin reference
 
-Identify pads in this **component-side view, USB-C up**, before flipping the board into its component-side-down mounting. JP1 numbers increase downward; JP2 numbers decrease downward. All printed board labels are retained. Gray unused pins have no peripheral wire; B1 and RST are used temporarily for flashing.
+Identify pads in this **component-side view, USB-C up**. The board is installed with this face up and USB-C toward the rear; rotate the reference to match the chassis. JP1 numbers increase downward; JP2 numbers decrease downward. All printed board labels are retained. Gray unused pins have no peripheral wire; B1 and RST are used temporarily for flashing.
 
 ![Physical header order. Each used signal shows the board label, GPIO and destination; board internals are omitted.](assembly-nano-pins.svg)
 
@@ -394,7 +393,7 @@ Power-cycle the completed unit and repeat the functional check. Initial message 
 
 ## Opening for service
 
-Unplug all power and pedals before removing the base screws. Release the Nano from its adapters and withdraw USB-C clear of the protective pocket before lowering the populated floor. Support the floor and unplug labeled service connectors instead of pulling panel wiring. Do not disturb the bonded upper joints or the fixed cap floor. Recheck electrical connections and calibration after repairs.
+Unplug all power and pedals before removing the base screws. Release the Nano from its four integral posts and withdraw USB-C clear of the protective pocket before lowering the populated floor. Support the floor and unplug labeled service connectors instead of pulling panel wiring. Do not disturb the bonded upper joints or the fixed cap floor. Recheck electrical connections and calibration after repairs.
 
 ## Reference files
 

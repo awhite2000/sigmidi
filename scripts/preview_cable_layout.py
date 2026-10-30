@@ -21,7 +21,7 @@ Y=lambda y:OY+y*S
 out=['<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1120" viewBox="0 0 1560 1120" role="img" aria-labelledby="title desc">',
 '<title id="title">SIGMIDI Left enclosure cable bundle layout</title><desc id="desc">Top-down routing proposal using native component footprints, color coded by cable purpose. Rear edge at top. Main case 350 by 92 millimetres. Base-removal connectors and a modular four-net interface are shown.</desc>',
 '<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#e2e7ed" stroke-width=".65"/></pattern></defs>',
-'<style>text{font-family:Arial,sans-serif;fill:#26354b}.tiny{font-size:11px}.small{font-size:13px}.medium{font-size:16px}.label{font-size:14px;font-weight:700}.wire{fill:none;stroke-linejoin:round;stroke-linecap:round}.body{fill:#e4e9ed;stroke:#96a1af;stroke-width:1.3}.board{fill:#d5e8da;stroke:#72957b;stroke-width:1.5}.dim{fill:none;stroke:#7f8da0;stroke-width:1}.muted{fill:#617087}.route.dimmed{opacity:.08}.route{transition:opacity .15s}</style>',
+'<style>text{font-family:Arial,sans-serif;fill:#26354b}.tiny{font-size:11px}.nano-label{font-size:10px}.small{font-size:13px}.medium{font-size:16px}.label{font-size:14px;font-weight:700}.wire{fill:none;stroke-linejoin:round;stroke-linecap:round}.body{fill:#e4e9ed;stroke:#96a1af;stroke-width:1.3}.board{fill:#d5e8da;stroke:#72957b;stroke-width:1.5}.dim{fill:none;stroke:#7f8da0;stroke-width:1}.muted{fill:#617087}.route.dimmed{opacity:.08}.route{transition:opacity .15s}</style>',
 '<rect width="1560" height="1120" fill="#f5f7fa"/>',
 '<text x="80" y="54" font-size="16" font-weight="700" letter-spacing="3" fill="#19836b">SIGMIDI / HARNESS PLANNING</text>',
 '<text x="80" y="99" font-size="34" font-weight="700">Cable bundles · Left enclosure</text>',
@@ -54,14 +54,14 @@ for needle,label,cls in [('LCD Waveshare','LCD / SPI','board'),('Double TRS','Du
  rect(x0,max(0,y0),x1-x0,y1-max(0,y0),cls,5)
  txt((x0+x1)/2,(max(0,y0)+y1)/2+1.3,label,'tiny')
  footprints.append({'component':name,'bounds_XY_mm':q})
-# Nano placement from the manufacturer's PCB pose verified with the adapter kit.
+# Nano placement from its verified component-side-up direct-post pose.
 fit=json.loads((R/'design/fusion/nano-esp32/mount-fit.json').read_text())
 holes=fit['board_holes_XY_mm'];x0=min(q[0] for q in holes)-1.27;x1=max(q[0] for q in holes)+1.27
 y0=-max(q[1] for q in holes)-1.27;y1=-min(q[1] for q in holes)+1.27
 rect(x0,y0,x1-x0,y1-y0,'board',4)
-txt((x0+x1)/2,46,'face down','tiny')
+nano_label_x=(x0+x1)/2
 for hx,hy in holes:out.append(f'<circle cx="{X(hx)}" cy="{Y(-hy)}" r="3.32" fill="white" stroke="#72957b"/>')
-footprints.append({'component':'Arduino Nano ESP32 ABX00083','bounds_XY_mm':[x0,y0,x1,y1],'source':'design/fusion/nano-esp32/mount-fit.json','component_face_down':True})
+footprints.append({'component':'Arduino Nano ESP32 ABX00083','bounds_XY_mm':[x0,y0,x1,y1],'source':'design/fusion/nano-esp32/mount-fit.json','component_face_down':False})
 # USB connector and nominal rear socket centres.
 rect(95,0,9,5,'body');txt(99.5,-4,'Nano ESP32 / USB-C','small')
 txt(23,-4,'TRS 1 / 2','small');txt(140,-4,'9 V · centre negative','small')
@@ -79,16 +79,16 @@ def route(kind,points,width=.8,label=''):
 # Power follows the model's five-segment reference envelopes.
 route('dc',[(142,12),(142,20),(114,20),(114,32.98),(119.21,32.98)],1,'Socket sleeve +9 V to converter VIN')
 route('ground',[(138,12),(138,18),(116,18),(116,30.45),(119.21,30.45)],.65,'Socket centre negative to converter GND')
-route('dc',[(142,20),(114,20),(114,44),(108.2,44)],1,'9V input to Nano VIN; no converter 5V connection to Nano')
-route('ground',[(119.21,30.45),(114,30.45),(114,42),(108.2,42)],.65,'Converter return to Nano ground')
+route('dc',[(142,20),(114,20),(114,51.5),(87.5,51.5),(87.5,45.5),(90.4,45.5)],1,'9V input to Nano VIN; no converter 5V connection to Nano')
+route('ground',[(119.21,30.45),(116,30.45),(116,53),(86,53),(86,43.5),(90.4,43.5)],.65,'Converter return to Nano ground')
 route('supply',[(119,28),(119,35),(81,35)],.8,'LED +5V distribution; pair with return')
 route('ground',[(119,30.5),(120.5,36.5),(81,36.5)],.65,'LED supply return, routed directly to supply point')
 route('pedal',[(27,27.4),(27,31),(56,31),(56,33),(61,33)],1.15,'Six TRS conductors to passive resistor connections')
-route('pedal',[(81,32),(84,32),(90.4,35)],1.0,'Direct TIP ADC signals, two bias GPIOs, reference and ground to Nano')
-route('display',[(90.4,43),(82.5,43),(82.5,42),(43,42),(43,46.23)],1.1,'Short SPI loom to display; J-LCD service disconnect')
-route('encoder',[(12.5,57),(12.5,46),(57,46),(57,41),(84.5,41),(90.4,41)],.95,'A, B, click and common ground to Nano')
+route('pedal',[(81,32),(84,32),(90.4,36.5)],1.0,'Direct TIP ADC signals, two bias GPIOs, reference and ground to Nano')
+route('display',[(108.2,44.5),(112,44.5),(112,54),(82.5,54),(82.5,42),(43,42),(43,46.23)],1.1,'Short SPI loom to display; J-LCD service disconnect')
+route('encoder',[(12.5,57),(12.5,46),(57,46),(57,41),(84.5,41),(84.5,55.5),(113.5,55.5),(113.5,42.5),(108.2,42.5)],.95,'A, B, click and common ground to Nano')
 # Lines mark harness corridors, not common electrical nets. Tap resistors stay in electrical order.
-route('ladder',[(90.4,38),(83,38),(83,21),(338,21)],.95,'Raised-row switched ladder harness')
+route('ladder',[(90.4,39.5),(83,39.5),(83,21),(338,21)],.95,'Raised-row switched ladder harness')
 route('ladder',[(83,21),(55,21),(55,40.5),(64,40.5),(64,76),(338,76)],.95,'Base and lower-row ladder harness; descent proposal')
 for x in [42.6,107.6,172.6,237.6,302.6]:
  route('ladder',[(x,18),(x,21)],.7,'Local switch branch / series tap resistor')
@@ -96,7 +96,7 @@ for x in [75.1,140.1,205.1,270.1,335.1]:
  route('ladder',[(x,73.5),(x,76)],.7,'Local switch branch / series tap resistor')
 route('ladder',[(42.6,21),(65,21)],.95,'Base A branch')
 # Optional pixel harness follows the model's left descent and upper/lower wire envelopes.
-route('led',[(90.4,38),(54,38),(54,32.4),(9.5,32.4),(9.5,26.2),(305,26.2)],1.15,'Upper LED harness in CAD reference envelope Z17..21')
+route('led',[(108.2,39.5),(115,39.5),(115,56.5),(84,56.5),(84,38),(54,38),(54,32.4),(9.5,32.4),(9.5,26.2),(305,26.2)],1.15,'Upper LED harness in CAD reference envelope Z17..21')
 route('led',[(9.5,32.4),(9.5,84.5),(338,84.5)],1.15,'Left descent / lower LED harness; lower bus Z-12..-9')
 for x in [42.6,107.6,172.6,237.6,302.6]:route('led',[(x,26.2),(x,28)],.65,'LED branch; connect DIN/DOUT in electrical tap order')
 for x in [75.1,140.1,205.1,270.1,335.1]:route('led',[(x,84.5),(x,81.7)],.65,'LED branch; connect DIN/DOUT in electrical tap order')
@@ -110,6 +110,10 @@ for i,x in enumerate([42.6,107.6,172.6,237.6,302.6]):
  out.append(f'<rect x="{X(x-9)}" y="{Y(5)}" width="120" height="52" rx="3" fill="#d9e0e7" fill-opacity=".5" stroke="#7b899a" stroke-width="1.2"/>')
  out.append(f'<circle cx="{X(x)}" cy="{Y(11.5)}" r="13" fill="#aeb9c4" stroke="#728296"/>')
  txt(x,12.7,chr(65+i),'label')
+# Keep the board identity readable above the harness corridors.
+out.append(f'<rect x="{X(nano_label_x-8)}" y="{Y(28)}" width="64" height="25" rx="3" fill="#f5faf7" fill-opacity=".95"/>')
+txt(nano_label_x,30.4,'Nano ESP32','nano-label')
+txt(nano_label_x,33.2,'components up','nano-label')
 # Section interfaces and routing tier annotation below the plan.
 out += ['<text x="80" y="602" class="small muted">REAR ↑  /  FRONT ↓   ·   Looking down into the case, not a mirrored underside view</text>',
 '<text x="1480" y="602" text-anchor="end" class="small muted">92 mm depth · upper row +30 mm</text>',
@@ -124,7 +128,7 @@ for i,(kind,(title,details,note,group)) in enumerate(meta.items()):
  col=i%2;row=i//2;x=80+col*710;y=727+row*74
  out += [f'<g data-legend="{kind}"><rect x="{x}" y="{y}" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>',f'<path d="M{x+18} {y+21}H{x+47}" stroke="{colors[kind]}" stroke-width="5" stroke-linecap="round"/>',f'<text x="{x+60}" y="{y+25}" class="label">{html.escape(title)}</text>',f'<text x="{x+60}" y="{y+44}" class="small">{html.escape(details)}</text>',f'<text x="{x+60}" y="{y+59}" class="tiny muted">{html.escape(note)}</text></g>']
 out += ['<text x="80" y="1045" class="small">Lines represent bundle corridors, not electrical junctions. Connect ladder taps and pixels in the stated order.</text>',
-'<text x="80" y="1068" class="small muted">Nano pose comes from the verified mount kit; other footprints from Fusion. Different Z levels overlap in this view.</text>',
+'<text x="80" y="1068" class="small muted">Nano is components-up on verified integral posts; other footprints from Fusion. Different Z levels overlap in this view.</text>',
 '<text x="80" y="1090" class="small muted">Routes are bundle corridors, not pin positions. VBUS → 100k → A4; A4 → 150k → GND. Verify service-loop clearances.</text>','</svg>']
 svg='\n'.join(out);(P/'cable-bundles-left.svg').write_text(svg)
 detail_inner=svg[svg.index('>')+1:svg.rindex('</svg>')]

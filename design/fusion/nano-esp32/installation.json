@@ -1,32 +1,26 @@
 {
-  "board": "Arduino Nano ESP32 ABX00083",
+  "revision": "nano_direct_base_components_up",
+  "component_face_down": false,
+  "separate_inserts": 0,
+  "original_upper_shell_revisions_unchanged": true,
+  "base_shells_modified": true,
+  "USB_cutout_modified": false,
   "instances": [
     {
       "variant": "Left main",
-      "translation_X_mm": 0,
-      "existing_board_hidden": true
+      "translation_X_mm": 0
     },
     {
       "variant": "Left modular",
-      "translation_X_mm": 0,
-      "existing_board_hidden": true
+      "translation_X_mm": 0
     },
     {
       "variant": "Right main",
-      "translation_X_mm": 151.37672319982553,
-      "existing_board_hidden": true
+      "translation_X_mm": 151.37672319982553
     },
     {
       "variant": "Right modular",
-      "translation_X_mm": 151.37672319982553,
-      "existing_board_hidden": true
+      "translation_X_mm": 151.37672319982553
     }
-  ],
-  "original_enclosure_body_revisions_unchanged": true,
-  "enclosure_geometry_modified": false,
-  "existing_USB_cutout_modified": false,
-  "component_face_down": true,
-  "headers_fitted": false,
-  "fit_check": "assembly-clearance.json",
-  "firmware_migration": "Nano firmware port and GPIO/power map: docs/firmware.md and docs/hardware.md"
+  ]
 }

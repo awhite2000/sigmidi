@@ -2,12 +2,12 @@
   "variant": "Left main, ten switches",
   "source": "design/fusion/mirrored/layout.json",
   "nano_mount_source": "design/fusion/nano-esp32/mount-fit.json",
-  "nano_mount_sha256": "ac5a6d0bc73f8ffca35a4e2fad8706384be21535dd9f705b912f8fc93ccf778e",
-  "source_sha256": "7c357963dd24552da748f04e48d4aab69394bea25b45ff5b9d6e26b49a379306",
+  "nano_mount_sha256": "7c8620ac1407c3314f1aab5ede383f570c49900b9c6923b04b85a17cdb721daf",
+  "source_sha256": "85b4582b4e00ae3eb994afe014bfcc2ee8799b8abf90cd20573c16eb08b8c8f0",
   "status": "routing proposal; no native CAD changes",
   "component_footprints": [
     {
-      "component": "Mirrored SW01 - rotated",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored SW01 - rotated:1",
       "bounds_XY_mm": [
         293.6,
         5.000000000000007,
@@ -17,7 +17,7 @@
       "switch": "E"
     },
     {
-      "component": "Mirrored SW02 - original upper-row orientation",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored SW02 - original upper-row orientation:1",
       "bounds_XY_mm": [
         228.6,
         5.000000000000007,
@@ -27,7 +27,7 @@
       "switch": "D"
     },
     {
-      "component": "Mirrored SW03 - rotated",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored SW03 - rotated:1",
       "bounds_XY_mm": [
         163.60000000000002,
         5.000000000000002,
@@ -37,7 +37,7 @@
       "switch": "C"
     },
     {
-      "component": "Mirrored SW04 - rotated",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored SW04 - rotated:1",
       "bounds_XY_mm": [
         98.60000000000005,
         5.0,
@@ -47,7 +47,7 @@
       "switch": "B"
     },
     {
-      "component": "Mirrored SW05 - rotated",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored SW05 - rotated:1",
       "bounds_XY_mm": [
         33.60000000000003,
         5.0,
@@ -57,7 +57,7 @@
       "switch": "A"
     },
     {
-      "component": "Mirrored SW06",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored SW06:1",
       "bounds_XY_mm": [
         328.6,
         43.50000000000001,
@@ -67,7 +67,7 @@
       "switch": "5"
     },
     {
-      "component": "Mirrored SW07",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored SW07:1",
       "bounds_XY_mm": [
         263.6,
         43.50000000000001,
@@ -77,7 +77,7 @@
       "switch": "4"
     },
     {
-      "component": "Mirrored SW08",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored SW08:1",
       "bounds_XY_mm": [
         198.6,
         43.50000000000001,
@@ -87,7 +87,7 @@
       "switch": "3"
     },
     {
-      "component": "Mirrored SW09",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored SW09:1",
       "bounds_XY_mm": [
         133.60000000000005,
         43.50000000000001,
@@ -97,7 +97,7 @@
       "switch": "2"
     },
     {
-      "component": "Mirrored SW10",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored SW10:1",
       "bounds_XY_mm": [
         68.60000000000002,
         43.50000000000001,
@@ -107,7 +107,7 @@
       "switch": "1"
     },
     {
-      "component": "Mirrored LCD Waveshare 24382 - exact STEP - 280x240 landscape - rear M2 studs",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored LCD Waveshare 24382 - exact STEP - 280x240 landscape - rear M2 studs:1",
       "bounds_XY_mm": [
         23.097810660349943,
         46.23436535680001,
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "component": "Mirrored Double TRS ACJS-MHDC - X319 - horizontal ports - 3mm rear wall",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored Double TRS ACJS-MHDC - X319 - horizontal ports - 3mm rear wall:1",
       "bounds_XY_mm": [
         9.725000000000001,
         -6.1,
@@ -125,7 +125,7 @@
       ]
     },
     {
-      "component": "Mirrored Pololu S13V10F5 - 5V converter - manufacturer STEP",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored Pololu S13V10F5 - 5V converter - manufacturer STEP:1",
       "bounds_XY_mm": [
         117.935,
         25.999999999999996,
@@ -134,7 +134,7 @@
       ]
     },
     {
-      "component": "Mirrored Encoder 15x15 - left of LCD X337.5 - 15mm knob",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored Encoder 15x15 - left of LCD X337.5 - 15mm knob:1",
       "bounds_XY_mm": [
         5.0,
         57.0,
@@ -143,7 +143,7 @@
       ]
     },
     {
-      "component": "Mirrored DC power socket - 9V center-negative - M8 x8 - 18mm overall",
+      "component": "ALT Mirrored MAIN - left electronics - 10 switches:1+Mirrored DC power socket - 9V center-negative - M8 x8 - 18mm overall:1",
       "bounds_XY_mm": [
         132.49444650053488,
         -6.0,
@@ -155,12 +155,12 @@
       "component": "Arduino Nano ESP32 ABX00083",
       "bounds_XY_mm": [
         90.42163840008723,
-        5.1882488505894635,
+        6.6882488505894635,
         108.20163840008723,
-        48.36824885058946
+        49.86824885058946
       ],
       "source": "design/fusion/nano-esp32/mount-fit.json",
-      "component_face_down": true
+      "component_face_down": false
     }
   ],
   "bundles": {
@@ -289,11 +289,19 @@
         ],
         [
           114,
-          44
+          51.5
         ],
         [
-          108.2,
-          44
+          87.5,
+          51.5
+        ],
+        [
+          87.5,
+          45.5
+        ],
+        [
+          90.4,
+          45.5
         ]
       ],
       "description": "9V input to Nano VIN; no converter 5V connection to Nano"
@@ -306,16 +314,24 @@
           30.45
         ],
         [
-          114,
+          116,
           30.45
         ],
         [
-          114,
-          42
+          116,
+          53
         ],
         [
-          108.2,
-          42
+          86,
+          53
+        ],
+        [
+          86,
+          43.5
+        ],
+        [
+          90.4,
+          43.5
         ]
       ],
       "description": "Converter return to Nano ground"
@@ -395,7 +411,7 @@
         ],
         [
           90.4,
-          35
+          36.5
         ]
       ],
       "description": "Direct TIP ADC signals, two bias GPIOs, reference and ground to Nano"
@@ -404,12 +420,20 @@
       "purpose": "display",
       "points_XY_mm": [
         [
-          90.4,
-          43
+          108.2,
+          44.5
+        ],
+        [
+          112,
+          44.5
+        ],
+        [
+          112,
+          54
         ],
         [
           82.5,
-          43
+          54
         ],
         [
           82.5,
@@ -450,8 +474,20 @@
           41
         ],
         [
-          90.4,
-          41
+          84.5,
+          55.5
+        ],
+        [
+          113.5,
+          55.5
+        ],
+        [
+          113.5,
+          42.5
+        ],
+        [
+          108.2,
+          42.5
         ]
       ],
       "description": "A, B, click and common ground to Nano"
@@ -461,11 +497,11 @@
       "points_XY_mm": [
         [
           90.4,
-          38
+          39.5
         ],
         [
           83,
-          38
+          39.5
         ],
         [
           83,
@@ -666,7 +702,23 @@
       "purpose": "led",
       "points_XY_mm": [
         [
-          90.4,
+          108.2,
+          39.5
+        ],
+        [
+          115,
+          39.5
+        ],
+        [
+          115,
+          56.5
+        ],
+        [
+          84,
+          56.5
+        ],
+        [
+          84,
           38
         ],
         [

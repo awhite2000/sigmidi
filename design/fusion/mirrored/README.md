@@ -2,7 +2,7 @@
 
 **Left is the preferred enclosure and firmware default.** Its display, encoder and electronics are on the left; switch-pair extensions attach on the right. Main and modular assemblies have independent CAD files and matching print parts. The [full Fusion archive](../sigmidi-foot-controller-0.1.f3d) includes all component hierarchies and part libraries.
 
-The complete Fusion archive also includes the [Arduino Nano ESP32 adapter kit](../nano-esp32/README.md) in all four assemblies. It uses two separate inserts and preserves every existing enclosure solid. The standalone enclosure packages below retain their DFR1075 hardware references; print parts are the same for the Nano conversion.
+The complete Fusion archive and enclosure packages include [Arduino Nano ESP32 direct mounting](../nano-esp32/README.md) in all four assemblies. Four reinforced posts are integral to each electronics base and support the board component-side up. Upper shells, USB pockets, switch positions and mating edges are unchanged.
 
 ## Dimensions and components
 
@@ -22,7 +22,7 @@ The main body measures **350 × 92 × 54 mm**, with 65 mm switch pitch, 32.5 mm 
 | D / 4 | 237.6 / 270.1 | Raised / lower row |
 | E / 5 | 302.6 / 335.1 | Raised / lower row |
 
-Coordinates span different rows and heights. The Waveshare 24382 PCB has its ribbon on the left, glass flush at Z0 and four hollow mounts for M2×5 screws. The Nano uses its manufacturer PCB model, component-side down on the two adapters; the display uses its actual PCB shape. USB-C, TRS and DC ports face the rear. Wiring follows physical pin labels.
+Coordinates span different rows and heights. The Waveshare 24382 PCB has its ribbon on the left, glass flush at Z0 and four hollow mounts for M2×5 screws. The Nano uses its manufacturer PCB model, component-side up on four integral base posts; the display uses its actual PCB shape. USB-C, TRS and DC ports face the rear. Wiring follows physical pin labels.
 
 Switch labels read **A B C D E / 1 2 3 4 5** across the rows. Arial Bold outlines are 8 mm high, recessed 0.8 mm to the left of each LED, leaving 2.2 mm roof backing. Electrical tap IDs determine MIDI actions, calibration and LED assignments. Select **ENCLOSURE → LEFT** in firmware for 180° LCD rotation and matching menu order.
 
@@ -58,11 +58,11 @@ Use one `right-cap` and the electronics shell/base at every size. Every pair use
 
 Use **Prusa MK3S+, PETG, 0.6 mm nozzle, 0.3 mm layers** with the supplied profiles. Main shells print on their outer ends, seams upward. Pair shells print left mating edge down, right edge upward. The cap prints closed-right-end down. Bases print outside-floor down, mounts upward, without supports. Upper parts use automatic snug supports at 40°. Test both fit coupons first. [Tolerances](../printing-tolerances.md).
 
-Glue upper and removable-base chains separately. Each pair base uses two M2×6 screws; electronics use four. The main and eight-switch modular assemblies each use eight base screws. The display uses four M2×5 countersunk screws; the Nano uses four M1.6x5 PCB screws and two M1.6x6 adapter screws. Check the display's 1.39 mm nominal stud engagement against its actual blind holes.
+Glue upper and removable-base chains separately. Each pair base uses two M2×6 screws; electronics use four. The main and eight-switch modular assemblies each use eight base screws. The display uses four M2×5 countersunk screws; the Nano uses four M1.6x5 PCB screws directly into the base posts. Check the display's 1.39 mm nominal stud engagement against its actual blind holes.
 
-Remove all twelve 0.6 mm rear vent membranes before operation. Optional LED holes have 0.8 mm covers; leave them closed when omitting LEDs. Provide at least 3 mm clearance below the base vents. The converter uses 4.8 mm-wide PETG clips and has 8.65 mm free space below its lowest component. Its regulated 5 V / 1 A output supplies the controller and optional LEDs. [Power](../power.md) · [LEDs](../leds.md).
+Remove all twelve 0.6 mm rear vent membranes before operation. Optional LED holes have 0.8 mm covers; leave them closed when omitting LEDs. Provide at least 3 mm clearance below the base vents. The converter uses 4.8 mm-wide PETG clips and has 8.65 mm free space below its lowest component. Its regulated 5 V / nominal 1 A output supplies the optional LED rail; Nano VIN takes the 9 V input directly. [Power](../power.md) · [LEDs](../leds.md).
 
-For base removal, release the Nano from its adapters and withdraw USB-C from the protective pocket partition. Leave slack in wires between upper-shell sockets and base electronics.
+For base removal, release the Nano from its four posts and withdraw USB-C from the protective pocket partition. Leave slack in wires between upper-shell sockets and base electronics.
 
 ## Deliverables and verification
 
@@ -70,6 +70,6 @@ For base removal, release the Nano from its adapters and withdraw USB-C from the
 - [Modular package](mirrored-modular-mk3s-petg-06.zip): eight-switch example, pair/cap parts and label variants.
 - [Main top view](main/top.png), [assembly](main/assembled.png), [exploded view](main/exploded.png), [display mounting](main/display-underside.png).
 - [Modular top view](modular/top.png), [assembly](modular/assembled.png), [exploded view](modular/exploded.png).
-- [CAD solid inventory](emboss-complete-cad.json), [mesh audit](mesh-audit.json), [wall audit](wall-audit.json), [slicing checks](slice-feature-verification.json).
+- [Current CAD/print package verification](../nano-esp32/package-verification.json), [Nano fit](../nano-esp32/assembly-clearance.json), [post wall sections and support-free slicing](../nano-esp32/print-verification.json). Upper print files retain their original verified hashes; native difference checks isolate the base changes to the Nano mounting areas.
 
-The complete main CAD export contains 305 solid bodies; modular contains 288. These include fitted hardware and references; print only the designated enclosure STLs/3MFs. Nominal geometry and toolpaths are checked. Printed tolerances, strength and thermal performance require hardware tests.
+Current assembly exports include the components-up Nano and fitted hardware. Their solid counts are recorded in [export verification](../nano-esp32/exports.json); print only the designated enclosure STLs/3MFs. Nominal geometry and toolpaths are checked. Printed tolerances, strength and thermal performance require hardware tests.

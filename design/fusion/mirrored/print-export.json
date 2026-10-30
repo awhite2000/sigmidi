@@ -1,5 +1,5 @@
 {
-  "revision": "sigmidi_embossed_icon_25mm",
+  "revision": "nano_direct_base_components_up",
   "parts": [
     {
       "path": "main/shell-left",
@@ -180,5 +180,7 @@
         0
       ]
     }
-  ]
+  ],
+  "Nano_components_up": true,
+  "upper_shell_geometry_unchanged": true
 }

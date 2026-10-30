@@ -1,5 +1,5 @@
 {
-  "revision": "display_m2x5",
+  "revision": "nano_direct_base_components_up",
   "parts": [
     {
       "name": "shell-left",
@@ -53,5 +53,7 @@
     "fit-coupon-left",
     "fit-coupon-right"
   ],
-  "base_joint": "straight-base-lips.json"
+  "base_joint": "straight-base-lips.json",
+  "Nano_components_up": true,
+  "upper_shell_geometry_unchanged": true
 }

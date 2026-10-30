@@ -116,9 +116,9 @@
       "page": 27
     }
   ],
-  "source_sha256": "f3c63f79482c2111b33c2f75e83ae65c65e25def96f6e6af427fc9514984e5c9",
-  "pdf_sha256": "e4dc17ab3af794f53581f569f6513aea8e553a1b49fb7f397bd684d9a2a964b0",
-  "renderer_sha256": "085a688b273e23191f117ba7a398068d8cff82e65dd24fd1a489a057b7f22334",
+  "source_sha256": "797d6c640693ecff1195236cd4145e660b32e7b3a952e423d59a50755808d41c",
+  "pdf_sha256": "b6e58bc73628f5aee2d22ddd258d22e9b50dbfa588b2a5f3dc709b23bb6d69a6",
+  "renderer_sha256": "178b7b0e8521b97623738698e894e0c527addb13e2db2205f86739f709ad44f1",
   "connection_diagrams": {
     "manual-signal-path.svg": "474175b49be2b19d5d40116f8be7edf1d3cc1de9bfdbdb7ab795b7901da0794e",
     "manual-usb-connection.svg": "40024e7dc34b5f480cb3673e2e8b9ed1dfa716c828f2840fe2c3b49bf62a034d",
@@ -141,7 +141,7 @@
     "previews/20.png": "31346776d8213e4fbf6b02b00d632a4f8e01f520a36e6e39d0236cb72a451007",
     "previews/22.png": "cb2d80de820686cc668613c67a45a67c982fc0339bb65e4c78e147b0f0644b82",
     "previews/23.png": "dc7dfe4c4f2807438d8374eb48d55b98a4160ddba59ad7ed96a421f2d0f6ce46",
-    "previews/sigmidi-left-main.png": "f35a3efbe48c88a0cb3fe394b2fb13fc28a4f78d3291670ef8fa6aaff26a0400"
+    "previews/sigmidi-left-main.png": "fc483734db42d3937930d1f476f123da02c0c01b4e5175461f7b5203bb473cd3"
   },
   "HX_reference": "Supplied CC table, cross-checked against official Line 6 sources",
   "BLE_dongle_hardware_tested": false,

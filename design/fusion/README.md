@@ -17,7 +17,7 @@ Upper parts meet at continuous hooked joints with 2 × 2 mm bevels, 0.20 mm incl
 
 ## Controls and mounts
 
-The Waveshare 24382 glass is flush with the lower deck. Four hollow towers have 2 mm walls and recessed head seats for **M2×5 countersunk screws**. Nominal factory-stud engagement is 1.39 mm; check the actual blind holes. The encoder body is 15 × 15 mm with a 15 mm-diameter, 5 mm-high knob. Arduino Nano ESP32 is mounted component-side down using the [two-insert mounting kit](nano-esp32/README.md), with USB-C facing the rear protective pocket. The existing shell and posts are retained.
+The Waveshare 24382 glass is flush with the lower deck. Four hollow towers have 2 mm walls and recessed head seats for **M2×5 countersunk screws**. Nominal factory-stud engagement is 1.39 mm; check the actual blind holes. The encoder body is 15 × 15 mm with a 15 mm-diameter, 5 mm-high knob. Arduino Nano ESP32 is mounted component-side up directly on four reinforced integral base posts, with USB-C facing the rear protective pocket. Use four M1.6×5 screws; no inserts or bridge screws are fitted. The upper shells and USB cutouts are unchanged. [Direct mounting](nano-esp32/README.md).
 
 Switch labels are Arial Bold, 8 mm high, recessed 0.8 mm, leaving 2.2 mm roof backing. Left labels sit to the left of each LED; Right labels sit to its right. Left electronics shells carry a 25 × 20.183 mm icon raised 0.6 mm between A and B, giving 54.6 mm local body height.
 

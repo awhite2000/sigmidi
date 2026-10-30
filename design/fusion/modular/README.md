@@ -30,15 +30,15 @@ Upper sections have continuous vertical drop-down hooked joints with 0.20 mm inc
 
 Glue the removable base chain separately at straight butt seams with 2 mm-high internal glue lands and 45° runouts. Align flat floor surfaces. Keep the 0.30 mm seam between the cap's integral floor and the removable pair base free of glue. Positioning ribs are 1.8 mm thick, 3 mm high, with 0.5 mm lead-ins and 0.20 mm wall clearance.
 
-Each pair uses two M2×6 countersunk base screws; electronics use four. The eight-switch assembly uses eight base screws. The display uses four M2×5 countersunk screws, with 1.39 mm nominal engagement in its blind studs. MCU hardware is M1.6.
+Each pair uses two M2×6 countersunk base screws; electronics use four. The eight-switch assembly uses eight base screws. The display uses four M2×5 countersunk screws, with 1.39 mm nominal engagement in its blind studs. The Nano mounts components up on four integral electronics-base posts using four M1.6×5 pan-head screws; no inserts or bridge fasteners are fitted.
 
-Release the Nano from its adapters and withdraw its USB-C connector from the pocket partition before lowering the populated floor. Leave power-wire slack between the rear socket and the converter on the base. [Power wiring](../power.md) and [LED installation](../leds.md) apply to every size.
+Release the Nano from its four integral base posts and withdraw its USB-C connector from the pocket partition before lowering the populated floor. Leave power-wire slack between the rear socket and the converter on the base. [Power wiring](../power.md) and [LED installation](../leds.md) apply to every size.
 
 ## Printing
 
 Use **Prusa MK3S+, PETG, 0.6 mm nozzle, 0.3 mm layers**, 6 mm brim. Pair shells print right-edge down; the cap prints closed-left-end down. Bases print outside-floor down without supports. Upper parts use automatic snug supports at 40°. Print coupons first; follow the [tolerance guide](../printing-tolerances.md).
 
-Remove the twelve rear vent films before operation. Open LED covers only for fitted indicators. Provide at least 3 mm free space under the base vents. The converter's 1 A output limit covers the complete controller and LED load.
+Remove the twelve rear vent films before operation. Open LED covers only for fitted indicators. Provide at least 3 mm free space under the base vents. The converter's nominal 1 A output supplies the LED rail; Nano VIN takes 9 V directly.
 
 [Populated assembly](modular-assembled.png) · [Exploded view](modular-exploded.png) · [Cap/base fit](cap-floor-underside.png) · [Print orientations](new-parts-print-orientations.png) · [Two-screw mounts](pair-two-screw-mounts.png).
 
@@ -46,13 +46,13 @@ Mesh and slicing reports describe nominal geometry and toolpaths. Printed fit, l
 
 ## Current slicer estimates
 
-| Part | Quantity | Print size X × Y × Z | Estimated time each |
-|---|---:|---|---|
-| pair-shell | 1 | 52 × 92 × 69 mm | 2h 37m 4s |
-| pair-shell-at-cap | 1 | 52 × 92 × 69 mm | 2h 36m 36s |
-| pair-base | 2 | 64.75 × 92 × 21 mm | 42m 38s |
-| left-cap | 1 | 54 × 92 × 8.5 mm | 36m 32s |
-| electronics-shell | 1 | 52 × 92 × 160.35 mm | 6h 20m 1s |
-| electronics-base | 1 | 156.1 × 92 × 21 mm | 2h 3m 57s |
+| Part | Quantity | Estimated time each |
+|---|---:|---|
+| pair-shell | 1 | 2h 37m 4s |
+| pair-shell-at-cap | 1 | 2h 36m 36s |
+| pair-base | 2 | 42m 38s |
+| left-cap | 1 | 36m 32s |
+| electronics-shell | 1 | 6h 20m 1s |
+| electronics-base | 1 | 2h 5m 43s |
 
-Estimated total: **15h 39m, 312 g**, including brims and supports, excluding fit coupons. Separate prints with the supplied PETG profile.
+Estimated total: **15h 41m, 313 g**, including brims/supports, excluding fit coupons.

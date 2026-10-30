@@ -11,7 +11,8 @@ font='/System/Library/Fonts/Supplemental/Arial.ttf';bold='/System/Library/Fonts/
 def f(n,b=False):return ImageFont.truetype(bold if b else font,n*SCALE)
 def txt(x,y,t,n=18,color='#172d3e',b=False):draw.text((x*SCALE,y*SCALE),t,font=f(n,b),fill=color)
 def support_segments(name):
- path=Path('/tmp/midi-'+name+'.gcode');text=path.read_text()
+ path=Path('/tmp/sigmidi-direct-nano-right.gcode') if name=='base-right' else Path('/tmp/midi-'+name+'.gcode')
+ text=path.read_text()
  assert '; nozzle_diameter = 0.6' in text
  if name.startswith('shell'):assert '; support_material_threshold = 40' in text
  xyz=np.zeros(3);kind='';segments=[];relE=True;lastE=0
@@ -102,5 +103,5 @@ for name,title,subtitle,x,y,cam in [
  dim=' × '.join(f'{v:.2f}'.rstrip('0').rstrip('.') for v in exports[name]['size_mm'])+' mm  •  6 mm brim'
  res.append(panel(name,title,subtitle,dim,x,y,cam))
 im.resize((W*2,H*2),Image.Resampling.LANCZOS).save(OUT/'printing-orientations-supports.png')
-(OUT/'printing-orientations-supports.json').write_text(json.dumps({'source':'Current oriented STL solids and PrusaSlicer support extrusion paths from /tmp/midi-PART.gcode','views':'Separate prints; independently scaled; brim omitted for clarity; occluded support paths are hidden by opaque part surfaces','parts':res,'STL_sha256':{n:hashlib.sha256((OUT/(n+'.stl')).read_bytes()).hexdigest() for n in exports},'Gcode_sha256':{n:hashlib.sha256(Path('/tmp/midi-'+n+'.gcode').read_bytes()).hexdigest() for n in exports}},indent=2))
+(OUT/'printing-orientations-supports.json').write_text(json.dumps({'source':'Current oriented STL solids and PrusaSlicer support extrusion paths from /tmp/midi-PART.gcode','views':'Separate prints; independently scaled; brim omitted for clarity; occluded support paths are hidden by opaque part surfaces','parts':res,'STL_sha256':{n:hashlib.sha256((OUT/(n+'.stl')).read_bytes()).hexdigest() for n in exports},'Gcode_sha256':{n:hashlib.sha256((Path('/tmp/sigmidi-direct-nano-right.gcode') if n=='base-right' else Path('/tmp/midi-'+n+'.gcode')).read_bytes()).hexdigest() for n in exports}},indent=2))
 print(json.dumps(res))

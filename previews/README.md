@@ -22,7 +22,7 @@ The illustrated [Assembly guide](../output/pdf/sigmidi-foot-controller-0.1-assem
 
 [Converter clips](../design/fusion/clip-mount.png) · [Base vents](../design/fusion/ventilation-base.png) · [Rear vents](../design/fusion/ventilation-rear.png) · [Vent membrane section](../design/fusion/rear-vent-membrane-section.png) · [Joint clearance sections](../design/fusion/snug-fit-sections.png).
 
-[Current Nano mounting detail](../design/fusion/nano-esp32/installed.png) · [Nano exploded mount](../design/fusion/nano-esp32/exploded.png) · [Adapter assembly guide](../design/fusion/nano-esp32/README.md). The Nano sits component-side down on the retained base; the adapter detail shows its current fit.
+[Current Nano mounting detail](../design/fusion/nano-esp32/installed.png) · [Nano exploded mount](../design/fusion/nano-esp32/exploded.png) · [Direct mounting guide](../design/fusion/nano-esp32/README.md). The Nano sits component-side up on four integral base posts; the detail shows the current fit without separate inserts.
 
 Exterior renders come from native Fusion geometry; manifests record image hashes. Presentation sheets are generated with `scripts/brand_enclosure_previews.py`.
 
@@ -58,7 +58,7 @@ Full pages: [Left switches](wifi-left-switches.png), [Right switches](wifi-right
 
 [Interactive Left layout](cable-bundles-left.html) · [Full layout](cable-bundles-left.png) · [Electronics detail](cable-bundles-left-detail.png) · [SVG](cable-bundles-left.svg). Select a purpose in the interactive view to isolate that harness. Colors distinguish 9 V input, regulated 5 V, ground, switch ladder, expression pedals, LCD, encoder and optional LEDs.
 
-The Nano footprint and mounting holes come from the verified adapter-kit pose; other component footprints come from the Left main CAD assembly. Power/LED corridors use the model references; the analog/LED interface area and other routing are proposals. Lines show bundle corridors rather than shared electrical nets. Vertical clearance, carrier mounting and connector placement require review before building. The preview does not change Fusion geometry or firmware settings.
+The Nano footprint and mounting holes come from the verified components-up direct-mount pose; other component footprints come from the Left main CAD assembly. Power/LED corridors use the model references; the analog/LED interface area and other routing are proposals. Lines show bundle corridors rather than shared electrical nets. Vertical clearance, carrier mounting and connector placement require review before building. The preview does not change Fusion geometry or firmware settings.
 
 ## Electrical diagram
 

@@ -145,7 +145,7 @@
 			<circle cx="328" cy="53" r="2.5" style="stroke: rgb(48%,52%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(48%,52%,52%); fill-rule: evenodd;"/>
 			<text x="289.183837890625" y="51" style="font-family: Arial; font-size: 8.5px;fill: rgb(48%,52%,52%); stroke:none;" transform="translate(0,102) scale(1,-1)">D1/TX0</text>
 			<text x="341" y="56" style="font-family: Arial; font-size: 7.5px;fill: rgb(48%,52%,52%); stroke:none;" transform="translate(0,112) scale(1,-1)">1</text>
-			<text x="147.10546875" y="13" style="font-family: Arial; font-size: 8px;fill: rgb(48%,52%,52%); stroke:none;" transform="translate(0,26) scale(1,-1)">Component-side reference; mounted component-side down</text>
+			<text x="158.888671875" y="13" style="font-family: Arial; font-size: 8px;fill: rgb(48%,52%,52%); stroke:none;" transform="translate(0,26) scale(1,-1)">Component-side reference; mounted components up</text>
 		</g>
 	</g>
 </svg>

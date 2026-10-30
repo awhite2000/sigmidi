@@ -28,7 +28,7 @@
       "page": 4
     },
     {
-      "title": "4. Fit the Nano adapters",
+      "title": "4. Mount the Nano directly",
       "page": 5
     },
     {
@@ -79,42 +79,42 @@
     "LCD_pins_in_physical_order": 8,
     "tap_label_LED_rows": 10,
     "discrete_values_and_nets_match": true,
-    "selected_print_files_exist": 56,
+    "selected_print_files_exist": 52,
     "local_links_exist": true
   },
   "source_sha256": {
-    "docs/assembly-guide.md": "cab0a2472277efd7b73555a5c051af019eb64ef847390f7936da159202123a85",
-    "scripts/build_assembly_guide.py": "cb49d586a44f9d53928d4471fff000386448ace69aa1a8bafdae5ec45aeb8f6b",
-    "scripts/build_user_manual.py": "085a688b273e23191f117ba7a398068d8cff82e65dd24fd1a489a057b7f22334",
+    "docs/assembly-guide.md": "04159aff1f872f8e8698809efcab244ae082907112b1ab5789698a215858f3fd",
+    "scripts/build_assembly_guide.py": "b4e82a55bfb69965bf376d8e70613bb03a4f83b80325f1fbb6530d4daca047b6",
+    "scripts/build_user_manual.py": "178b7b0e8521b97623738698e894e0c527addb13e2db2205f86739f709ad44f1",
     "src/board.hpp": "88db0c90739cde67be4f7b827fe0670054b07946b4170098ea1792f88d0788c3",
     "design/electrical/netlist.json": "2267e1b0a654212ef16386f61ddbc9a47e312421421e163f757127318dd4331c",
-    "docs/bom-items.json": "49f37259439b05584c178750c2b84d72b3779290c01f7c11d384259196251dce",
-    "docs/power.md": "299910572a130a002406a4a0aa52907f51867d25ab15b705543aa2c0ca4e9ffa",
-    "docs/hardware.md": "b372e52e7f73b4602c639a86cf8f16d85535ad08967bc742fc4671f93692432e",
+    "docs/bom-items.json": "5dee8ce81e9c93c553b38b9963e60dc3358710b28cecaf3682de7cb6b48282d9",
+    "docs/power.md": "fe1c5d1c4e4719229f7964cf9150eeb5dc091ce5cb6a336b514a4f9dfd87e5cc",
+    "docs/hardware.md": "aefe93a3becba8b39c03db2001dfcc1a2431f30f182d0c0f52c47534271716ab",
     "docs/leds.md": "e7db1c8221cc4d3cadb33715ea0798c2c27f307d221522f23cfdba4db73afbde",
     "docs/resistor-ladders.md": "d5272f85e75fc4354ca711bdca86ef40300236a166f2dac9036a19e02a4f1351",
-    "design/fusion/nano-esp32/mount-fit.json": "ac5a6d0bc73f8ffca35a4e2fad8706384be21535dd9f705b912f8fc93ccf778e",
-    "design/fusion/nano-esp32/README.md": "17e1edcbc4afe1a33483f02bde59ef326ae1cb9b043050121415c27433deb4c2",
-    "design/fusion/mirrored/README.md": "03331e1acd232a3fdb63b5533e124bbcfec09190d6a9be8e07e334f681cbffac",
-    "design/fusion/modular/README.md": "f2d4149c808ee37b99c4585ef4423f7eaed5201424e3744f426eabb4d1d1db71",
+    "design/fusion/nano-esp32/mount-fit.json": "7c8620ac1407c3314f1aab5ede383f570c49900b9c6923b04b85a17cdb721daf",
+    "design/fusion/nano-esp32/README.md": "eea68eb73abcc71fdcea9a8a9387fcb4fc3975d4863cbfe231e2e038beabbb18",
+    "design/fusion/mirrored/README.md": "35f1505830b2a15ba99acab50aeb81c3fc4b8916f2a327fc39570e69f17c2409",
+    "design/fusion/modular/README.md": "8e1130b382bdc791c7c1e854911e661a5082c9311f487cc3678ac38387e2aebf",
     "design/fusion/printing-tolerances.md": "200bb4341eefe9a792ca11417d28f109e5e2c5fcfb7f84db3e9560ffe1bc801b",
-    "docs/user-manual.md": "f3c63f79482c2111b33c2f75e83ae65c65e25def96f6e6af427fc9514984e5c9",
-    "docs/bringup.md": "e4b5671a2cb7b501bcfad9c91e04111498c32c2a35e89b1d617b390c48fd7047"
+    "docs/user-manual.md": "797d6c640693ecff1195236cd4145e660b32e7b3a952e423d59a50755808d41c",
+    "docs/bringup.md": "62270bf735d168d6fc207105be405f6c1f3d1de9f78aa731dee6042a2e623cab"
   },
   "images": {
     "design/electrical/pololu-2535-pinout.jpg": "fe085fddcfece0e07f77d411620187e89b1fa7ea3fd9b6091aff43a63ddcdb49",
     "design/fusion/display-m2x5-section.png": "e131f8bcfc2c77204f2d5a0cb8e105503daf6364e426e03b1943aeca61b7af81",
-    "design/fusion/nano-esp32/exploded.png": "69b248c988b0e8fd7048d0cba0fa9d135a4b10711a63b0e13075551c92020586",
-    "design/fusion/nano-esp32/installed.png": "828253b71553ba7fc32bdb8238630d4cee408c2dc6a5e3b69505929e5679af78",
+    "design/fusion/nano-esp32/exploded.png": "afb8024f171d8c2d07b7641b6b65a09eeeb356861c9e7a178f36cfa7bbcbd2a3",
+    "design/fusion/nano-esp32/installed.png": "decabd4a76dfbca12271060c04f16f41ac5bbb81cd3b36c0c1e0cdc23fdf0384",
     "design/fusion/print/perimeter-ledge-detail.png": "1dc0b8d6625780f729604301cd6de42f390032824e0e22fa717effaa93552170",
     "design/fusion/snug-fit-sections.png": "bf5c1044ea694f73824fd47989b12443eeef62ac5c193d364eb9f450ba42393a",
     "docs/assembly-ladder.svg": "1809d34e910e7b7c91d2e5698c43be7c908b7eec15a77bc2917b3deafe0b03c2",
-    "docs/assembly-nano-pins.svg": "b01f5607857092dc7b2848f9d6fd75b8f7f4d80c0804e0a85897224511ae482b",
+    "docs/assembly-nano-pins.svg": "4ae1ca69b6e3f098e0b77142f8bc2a86c8248d0df2db162d7a62c8da7a1e04c7",
     "docs/assembly-power.svg": "f284171c51352908b12d247c1109f36847d16259f7c79ce78262cd2207ecd463",
-    "previews/cable-bundles-left.png": "c096771079ec5b3d5f734d9652b7198dca6fb7b22c94d49a6a7c5dee44e05dee",
-    "previews/sigmidi-left-main.png": "f35a3efbe48c88a0cb3fe394b2fb13fc28a4f78d3291670ef8fa6aaff26a0400"
+    "previews/cable-bundles-left.png": "2ac0fe3f09273a563190939f0be6d8da3cf476d9e4f93f9b9e58e7334474154c",
+    "previews/sigmidi-left-main.png": "fc483734db42d3937930d1f476f123da02c0c01b4e5175461f7b5203bb473cd3"
   },
   "outputs": {
-    "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf": "4680a18808fd759f41a54e2a5569d78bf7b633ff23ccd76f78c0326b12fe303b"
+    "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf": "d6dee89dd79acd0e1445dc9f075f58e542f9e927e5b15208e7660a0c96461235"
   }
 }

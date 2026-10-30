@@ -8,8 +8,8 @@
   "firmware/build-info.json": "6c2af6279bebdbd231cc32312d0759ae59c0458ae4fea6acce81aec5f73dd22f",
   "firmware/firmware.bin": "b0193d79dba6fa95749a7d1d7f2af8c48f9d6ed8cf47b5c396e5b40252ea1081",
   "firmware/partitions.bin": "37f9719078927bf594a883c81ad80dd4e6d179c8db193fbded90851178aa39e7",
-  "sigmidi-foot-controller-0.1-firmware.zip": "6c9b239e32523fe722c8cb09f42362ef87baac7b28246125a01c883113e3ffe7",
-  "sigmidi-foot-controller-0.1-web-flasher.zip": "83de072af640f8a601d5d42cdba83286f26719661f6641d189a67fb42c3aa247",
+  "sigmidi-foot-controller-0.1-firmware.zip": "fb128eb2dc9e6ead138cf728037478995e5911ff4dceaa4a0ed212f61427bb5c",
+  "sigmidi-foot-controller-0.1-web-flasher.zip": "ae77d2846347d0bdba2a745444a998285bb8f637947027dea8c7bc737218c5ad",
   "sigmidi-foot-controller-0.1.bin": "b0193d79dba6fa95749a7d1d7f2af8c48f9d6ed8cf47b5c396e5b40252ea1081",
   "verification/branding-verification.json": "fbd2d0a6b12e4971b70acf0f1c8f2c0e0e1d510a060b69393145901d858388a5",
   "verification/calibration-rounding-verification.json": "9580898c05d63c60c24af0431181a57e3725ddfe952500563966c0a80957e02b",
@@ -30,7 +30,7 @@
   "verification/web-flasher-verification.json": "eba0e047cd0f71be8cacdaf83f7158d55c1bf45ea44d79d3c09496170a4fc788",
   "verification/wifi-password.json": "6a6c3a63a623630d6b1a2f727958f5e29c5b748d9a1d94d486592ba0e6ca216b",
   "web-flasher/README.md": "e3d1451b5a5151a96d7354cf42ac521acdbe107a8b95e43aaaba96eff48ce7e9",
-  "web-flasher/SHA256.json": "921a683cd6c099ded7f10dca2018448f26a3835ae306cb6577bcd0e427aa3717",
+  "web-flasher/SHA256.json": "a4541d4e662d508881915784bdd60d28fc392153258d7cb3885132433a7fccf9",
   "web-flasher/app.js": "6ae1cc3fad9b65a636fdda260e15a241f56c87268473335db51c11c0b4a3f196",
   "web-flasher/assets/enclosure-left.json": "58dfab20de45accdec99b7d10099e0c4eb163b378fd8ae48f170c63544faf254",
   "web-flasher/assets/enclosure-left.png": "e7feda82cc719ab1899684bb779e1f000bc4c2a21d770687362af1a5eeb1221e",
@@ -42,7 +42,7 @@
   "web-flasher/index.html": "0ca86947d40ffdf098698558b9453bdac6133846e2229ac4c7c2a04c4a039be6",
   "web-flasher/manifest.json": "398bb4895721c57659da1be1f639e1e3b4d8c060d8c1dbb00c4ce9af7595c8b3",
   "web-flasher/release.js": "b0790f7e255d1d67f569a8393501b0a8da9084e197c77a00c9b224feeeafa267",
-  "web-flasher/release.json": "b97eb9bf7221ab04aafc3fdff523bfcdb28345b9bd10683acd682ed66d166a65",
+  "web-flasher/release.json": "a38cc1606619bbf32b87956c99172d0c7bbda4216444dbe7e9cea9af57313373",
   "web-flasher/style.css": "c6c453bf02a669a4160985e0863144942a4cf76c8bb9cb60c003dd5c6cb00d14",
   "web-flasher/vendor/THIRD_PARTY_NOTICES.txt": "0307142ba6d58a8f29fb1a27f2a4b1b7bebf33d74bb54d8bb9090b5633f62b9d",
   "web-flasher/vendor/esp-web-tools/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
@@ -74,5 +74,5 @@
   "web-flasher/vendor/esp-web-tools/stub_flasher_8266-CQFcqJ_a.js": "7ca214be908aacff37fd937188f55042c9aeae8af30da7141d634ef68778fc79",
   "web-flasher/vendor/esp-web-tools/styles-sT2V1cOw.js": "ad32b41ad8507aed4f7241178d9a472457355ecf0282faaa655de3ea37809c9a",
   "web-flasher/vendor/notice-sources.json": "625717bf8f65e273d51d26b945d8f8bda817e3639d2afb09c973fd9260f20378",
-  "web-flasher-package.json": "6b3c1b043ccac63c005c7a349da8c7e011493f1c4dd5579749ed69653164403f"
+  "web-flasher-package.json": "665c6e1841f1c632d789275c82ed4431a95634f1b9d8ad44f62d1b3fa931448a"
 }

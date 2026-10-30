@@ -1,5 +1,5 @@
 {
-  "revision": "logical_left_electronics",
+  "revision": "nano_direct_base_components_up",
   "slicer": "PrusaSlicer",
   "printer": "Prusa MK3S+",
   "nozzle_mm": 0.6,
@@ -28,13 +28,55 @@
     },
     {
       "part": "main/base-left",
-      "STL_sha256": "e972b1235624b506d91779d3761654e19997fea88828e6d9525e3c7f0b453d0d",
-      "gcode_sha256": "b34d3d7281847ff6c3d919a0bc6ec5117553c50c85e518f9b3402bdfe85fdfd4",
       "slice_exit_code": 0,
       "support_enabled": false,
-      "estimated_time": "2h 4m 42s",
-      "filament_g": "47.44",
-      "support_extrusion_filament_mm": 0
+      "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
+      "estimated_time": "2h 5m 26s",
+      "filament_g": "47.73",
+      "support_extrusion_filament_mm": 0,
+      "post_section_checks": [
+        {
+          "center_print_XY_mm": [
+            91.69163840008723,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720480750264784,
+          "outer_min_radius_mm": 2.98864761861706,
+          "minimum_section_wall_mm": 2.213643469633398
+        },
+        {
+          "center_print_XY_mm": [
+            106.93163840008724,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720480750264913,
+          "outer_min_radius_mm": 2.989608268889152,
+          "minimum_section_wall_mm": 2.2146041199054993
+        },
+        {
+          "center_print_XY_mm": [
+            91.69163840008723,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720472253562108,
+          "outer_min_radius_mm": 2.9886652838248926,
+          "minimum_section_wall_mm": 2.2136617448605946
+        },
+        {
+          "center_print_XY_mm": [
+            106.93163840008724,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.772047225356216,
+          "outer_min_radius_mm": 2.9885874963810597,
+          "minimum_section_wall_mm": 2.2135839574167644
+        }
+      ],
+      "source_mesh": "design/fusion/mirrored/main/base-left.stl"
     },
     {
       "part": "main/base-right",
@@ -150,15 +192,55 @@
     },
     {
       "part": "modular/electronics-base-left",
-      "STL_sha256": "e972b1235624b506d91779d3761654e19997fea88828e6d9525e3c7f0b453d0d",
-      "gcode_sha256": "b34d3d7281847ff6c3d919a0bc6ec5117553c50c85e518f9b3402bdfe85fdfd4",
       "slice_exit_code": 0,
       "support_enabled": false,
-      "estimated_time": "2h 4m 42s",
-      "filament_g": "47.44",
+      "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
+      "estimated_time": "2h 5m 26s",
+      "filament_g": "47.73",
       "support_extrusion_filament_mm": 0,
-      "reused_from": "main/base-left",
-      "byte_identical": true
+      "post_section_checks": [
+        {
+          "center_print_XY_mm": [
+            91.69163840008723,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720480750264784,
+          "outer_min_radius_mm": 2.98864761861706,
+          "minimum_section_wall_mm": 2.213643469633398
+        },
+        {
+          "center_print_XY_mm": [
+            106.93163840008724,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720480750264913,
+          "outer_min_radius_mm": 2.989608268889152,
+          "minimum_section_wall_mm": 2.2146041199054993
+        },
+        {
+          "center_print_XY_mm": [
+            91.69163840008723,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720472253562108,
+          "outer_min_radius_mm": 2.9886652838248926,
+          "minimum_section_wall_mm": 2.2136617448605946
+        },
+        {
+          "center_print_XY_mm": [
+            106.93163840008724,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.772047225356216,
+          "outer_min_radius_mm": 2.9885874963810597,
+          "minimum_section_wall_mm": 2.2135839574167644
+        }
+      ],
+      "source_mesh": "design/fusion/mirrored/main/base-left.stl"
     },
     {
       "part": "modular/fit-coupon-left",

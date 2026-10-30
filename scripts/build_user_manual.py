@@ -4,6 +4,7 @@ from pathlib import Path
 import hashlib
 import html
 import json
+import os
 import re
 
 from PIL import Image as PILImage
@@ -91,6 +92,15 @@ class Manual(SimpleDocTemplate):
             self.chapters.append({'title': name, 'page': self.page})
 
 
+def pdf_inline(text):
+    def resolve(match):
+        label, target = match.groups()
+        if '://' not in target:
+            target = Path(os.path.relpath((SOURCE.parent/target).resolve(), OUTPUT.parent)).as_posix()
+        return f'[{label}]({target})'
+    return inline(re.sub(r'\[([^]]*)\]\(([^)]+)\)', resolve, text))
+
+
 def main():
     font_dir = Path('/System/Library/Fonts/Supplemental')
     for name, filename in [('Manual', 'Arial.ttf'), ('ManualBold', 'Arial Bold.ttf')]:
@@ -130,10 +140,10 @@ def main():
                 i += 1
                 continue
             if line.startswith('# '):
-                story.append(Paragraph(inline(line[2:]), s['Chapter']))
+                story.append(Paragraph(pdf_inline(line[2:]), s['Chapter']))
                 i += 1
             elif line.startswith('## '):
-                story.append(Paragraph(inline(line[3:]), s['Section']))
+                story.append(Paragraph(pdf_inline(line[3:]), s['Section']))
                 i += 1
             elif line.startswith('!['):
                 refs = re.findall(r'!\[([^]]*)\]\(([^)]+)\)', line)
@@ -159,7 +169,7 @@ def main():
                         target_h = min(target_h, 232)
                         available = target_h*w/h
                     group = [Image(str(path), width=available, height=target_h),
-                             Paragraph(inline(caption), s['Caption'])]
+                             Paragraph(pdf_inline(caption), s['Caption'])]
                     if len(refs) == 2:
                         cells.append(group)
                     else:
@@ -185,7 +195,7 @@ def main():
                 widths = [CONTENT*w/sum(weights) for w in weights]
                 if n == 2 and page_index == 0:
                     widths = [CONTENT*.87, CONTENT*.13]
-                content = [[Paragraph(('<b>'+inline(v)+'</b>') if j == 0 else inline(v),
+                content = [[Paragraph(('<b>'+pdf_inline(v)+'</b>') if j == 0 else pdf_inline(v),
                                       s['Cell']) for v in row]
                            for j, row in enumerate(rows)]
                 table = Table(content, colWidths=widths, repeatRows=1, hAlign='LEFT')
@@ -209,7 +219,7 @@ def main():
                     i += 1
                 text = ' '.join(paragraph)
                 style = s['SmallCopy'] if text.startswith('**[S') else s['Copy']
-                story.append(Paragraph(inline(text), style))
+                story.append(Paragraph(pdf_inline(text), style))
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     doc = Manual(str(OUTPUT), pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN,
                  topMargin=49, bottomMargin=43,

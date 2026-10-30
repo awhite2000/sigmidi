@@ -1,40 +1,249 @@
 {
+  "revision": "nano_direct_base_components_up",
   "printer": "Prusa MK3S+",
   "material": "PETG",
   "nozzle_mm": 0.6,
   "layer_mm": 0.3,
-  "orientation": "Flat foot/bridge plate on bed; screw pilots up",
-  "parts": [
+  "orientation": "Outside floor down; integral posts up",
+  "unique_meshes": [
     {
-      "part": "usb-side-glue-insert",
-      "triangles": 924,
-      "watertight_edges": true,
-      "signed_volume_mm3": 466.11371692861377,
-      "dimensions_mm": [
-        19.24,
-        7.85,
-        12.84
+      "file": "design/fusion/mirrored/main/base-left.stl",
+      "triangles": 8630,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          156.10001,
+          92.0,
+          21.0
+        ]
       ],
-      "STL_sha256": "fb6d8dbe6eb4c273071678af1e8a7aaea0594f976714af46fd3f7fd799530167",
-      "estimated_time": "4m 43s",
-      "filament_g": "0.79",
-      "support_material": false
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "degenerate_triangles": 0,
+      "volume_mm3": 36235.40264853098,
+      "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
+      "post_sections": [
+        {
+          "center_print_XY_mm": [
+            91.69163840008723,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720480750264784,
+          "outer_min_radius_mm": 2.98864761861706,
+          "minimum_section_wall_mm": 2.213643469633398
+        },
+        {
+          "center_print_XY_mm": [
+            106.93163840008724,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720480750264913,
+          "outer_min_radius_mm": 2.989608268889152,
+          "minimum_section_wall_mm": 2.2146041199054993
+        },
+        {
+          "center_print_XY_mm": [
+            91.69163840008723,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720472253562108,
+          "outer_min_radius_mm": 2.9886652838248926,
+          "minimum_section_wall_mm": 2.2136617448605946
+        },
+        {
+          "center_print_XY_mm": [
+            106.93163840008724,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.772047225356216,
+          "outer_min_radius_mm": 2.9885874963810597,
+          "minimum_section_wall_mm": 2.2135839574167644
+        }
+      ]
     },
     {
-      "part": "existing-pole-insert",
-      "triangles": 1248,
-      "watertight_edges": true,
-      "signed_volume_mm3": 618.3136764228894,
-      "dimensions_mm": [
-        27.6,
-        21.004,
-        4.09
+      "file": "design/fusion/print/base-right.stl",
+      "triangles": 8630,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          156.10001,
+          92.0,
+          21.0
+        ]
       ],
-      "STL_sha256": "cbd139e45b5fde5d7c1e99f809d6855b513e4ef599adaed08198d80148c6c344",
-      "estimated_time": "4m 45s",
-      "filament_g": "1.18",
-      "support_material": false
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "degenerate_triangles": 0,
+      "volume_mm3": 36235.39992056337,
+      "STL_sha256": "8ca865d2b0c655678d38428e270d8dcc7c00e7894c9e27b85b42a716b0f0fa71",
+      "post_sections": [
+        {
+          "center_print_XY_mm": [
+            49.16836159991274,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720480750265107,
+          "outer_min_radius_mm": 2.9896079731854686,
+          "minimum_section_wall_mm": 2.2146038242018293
+        },
+        {
+          "center_print_XY_mm": [
+            64.40836159991275,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720471147430223,
+          "outer_min_radius_mm": 2.9886517264301315,
+          "minimum_section_wall_mm": 2.2136455581436842
+        },
+        {
+          "center_print_XY_mm": [
+            49.16836159991274,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720472253562303,
+          "outer_min_radius_mm": 2.988664317529485,
+          "minimum_section_wall_mm": 2.213660778565193
+        },
+        {
+          "center_print_XY_mm": [
+            64.40836159991275,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720455239055708,
+          "outer_min_radius_mm": 2.98858884867645,
+          "minimum_section_wall_mm": 2.213582680390004
+        }
+      ]
     }
   ],
-  "limits": "Nominal CAD and slicing checks. Adhesive strength, cable seating and small screw fit require physical testing."
+  "parts": [
+    {
+      "part": "base-left",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
+      "estimated_time": "2h 5m 26s",
+      "filament_g": "47.73",
+      "support_extrusion_filament_mm": 0,
+      "post_section_checks": [
+        {
+          "center_print_XY_mm": [
+            91.69163840008723,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720480750264784,
+          "outer_min_radius_mm": 2.98864761861706,
+          "minimum_section_wall_mm": 2.213643469633398
+        },
+        {
+          "center_print_XY_mm": [
+            106.93163840008724,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720480750264913,
+          "outer_min_radius_mm": 2.989608268889152,
+          "minimum_section_wall_mm": 2.2146041199054993
+        },
+        {
+          "center_print_XY_mm": [
+            91.69163840008723,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720472253562108,
+          "outer_min_radius_mm": 2.9886652838248926,
+          "minimum_section_wall_mm": 2.2136617448605946
+        },
+        {
+          "center_print_XY_mm": [
+            106.93163840008724,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.772047225356216,
+          "outer_min_radius_mm": 2.9885874963810597,
+          "minimum_section_wall_mm": 2.2135839574167644
+        }
+      ],
+      "source_mesh": "design/fusion/mirrored/main/base-left.stl"
+    },
+    {
+      "part": "base-right",
+      "slice_exit_code": 0,
+      "support_enabled": false,
+      "STL_sha256": "8ca865d2b0c655678d38428e270d8dcc7c00e7894c9e27b85b42a716b0f0fa71",
+      "estimated_time": "2h 5m 43s",
+      "filament_g": "47.75",
+      "support_extrusion_filament_mm": 0,
+      "post_section_checks": [
+        {
+          "center_print_XY_mm": [
+            49.16836159991274,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720480750265107,
+          "outer_min_radius_mm": 2.9896079731854686,
+          "minimum_section_wall_mm": 2.2146038242018293
+        },
+        {
+          "center_print_XY_mm": [
+            64.40836159991275,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720471147430223,
+          "outer_min_radius_mm": 2.9886517264301315,
+          "minimum_section_wall_mm": 2.2136455581436842
+        },
+        {
+          "center_print_XY_mm": [
+            49.16836159991274,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720472253562303,
+          "outer_min_radius_mm": 2.988664317529485,
+          "minimum_section_wall_mm": 2.213660778565193
+        },
+        {
+          "center_print_XY_mm": [
+            64.40836159991275,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720455239055708,
+          "outer_min_radius_mm": 2.98858884867645,
+          "minimum_section_wall_mm": 2.213582680390004
+        }
+      ],
+      "source_mesh": "design/fusion/print/base-right.stl"
+    }
+  ],
+  "support_material": false,
+  "all_eight_post_sections_open_and_at_least_2mm_wall": true,
+  "minimum_blind_web_above_vent_mm": 2.06399176439659,
+  "physical_print_tested": false,
+  "limits": "Mesh, analytic wall and slicer checks do not establish actual screw retention, cable seating, print strength or thermal performance."
 }

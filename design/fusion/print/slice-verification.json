@@ -36,10 +36,53 @@
       "part": "base-right",
       "slice_exit_code": 0,
       "support_enabled": false,
-      "estimated_time": "2h 3m 57s",
-      "filament_g": "47.44",
-      "filament_mm": "15529.75",
-      "support_extrusion_filament_mm": 0
+      "STL_sha256": "8ca865d2b0c655678d38428e270d8dcc7c00e7894c9e27b85b42a716b0f0fa71",
+      "estimated_time": "2h 5m 43s",
+      "filament_g": "47.75",
+      "support_extrusion_filament_mm": 0,
+      "post_section_checks": [
+        {
+          "center_print_XY_mm": [
+            49.16836159991274,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720480750265107,
+          "outer_min_radius_mm": 2.9896079731854686,
+          "minimum_section_wall_mm": 2.2146038242018293
+        },
+        {
+          "center_print_XY_mm": [
+            64.40836159991275,
+            84.04175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720471147430223,
+          "outer_min_radius_mm": 2.9886517264301315,
+          "minimum_section_wall_mm": 2.2136455581436842
+        },
+        {
+          "center_print_XY_mm": [
+            49.16836159991274,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720472253562303,
+          "outer_min_radius_mm": 2.988664317529485,
+          "minimum_section_wall_mm": 2.213660778565193
+        },
+        {
+          "center_print_XY_mm": [
+            64.40836159991275,
+            43.40175114941054
+          ],
+          "section_print_Z_mm": 9.963991764396592,
+          "bore_min_radius_mm": 0.7720455239055708,
+          "outer_min_radius_mm": 2.98858884867645,
+          "minimum_section_wall_mm": 2.213582680390004
+        }
+      ],
+      "source_mesh": "design/fusion/print/base-right.stl"
     },
     {
       "part": "fit-coupon-left",
@@ -60,5 +103,6 @@
       "support_extrusion_filament_mm": 0
     }
   ],
-  "limitations": "Slicing success is not a physical fit or load test. Small pilot holes require drilling and tapping. Support extrusion is parsed positive extrusion under support feature tags."
+  "limitations": "Slicing success is not a physical fit or load test. Small pilot holes require drilling and tapping. Support extrusion is parsed positive extrusion under support feature tags.",
+  "revision": "nano_direct_base_components_up"
 }

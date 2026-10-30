@@ -1,16 +1,42 @@
 {
-  "main_components": 32,
-  "copied_bodies": 305,
-  "visible_physical_bodies": 211,
-  "STEP_manifold_solids": 304,
-  "main_only": true,
-  "independent_copies": true,
-  "revision": "display_m2x5",
-  "modular_STEP_manifold_solids": 287,
-  "modular_independent_component_copies": true,
-  "engraved_modular_variant_CAD": [
-    "pair-shell-D",
-    "pair-shell-at-cap-C",
-    "pair-shell-at-cap-E"
-  ]
+  "revision": "nano_direct_base_components_up",
+  "CAD": [
+    {
+      "file": "mirrored/main/midi-foot-mirrored-main",
+      "native_solids": 383,
+      "STEP_solids": 383,
+      "complete": true,
+      "physical_hardware_only": true
+    },
+    {
+      "file": "mirrored/modular/midi-foot-mirrored-modular",
+      "native_solids": 370,
+      "STEP_solids": 370,
+      "complete": true,
+      "physical_hardware_only": true
+    },
+    {
+      "file": "midi-foot-chassis",
+      "native_solids": 383,
+      "STEP_solids": 383,
+      "complete": true,
+      "physical_hardware_only": true
+    },
+    {
+      "file": "modular/midi-foot-modular",
+      "native_solids": 370,
+      "STEP_solids": 370,
+      "complete": true,
+      "physical_hardware_only": true
+    },
+    {
+      "file": "nano-esp32/nano-esp32-direct-mount",
+      "native_solids": 252,
+      "STEP_solids": 252,
+      "complete": true,
+      "physical_hardware_only": true
+    }
+  ],
+  "physical_hardware_only": true,
+  "native_source": "sigmidi-foot-controller-0.1.f3d"
 }

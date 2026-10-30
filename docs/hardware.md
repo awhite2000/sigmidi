@@ -36,7 +36,7 @@ The firmware uses **ESP32 GPIO numbers**, independently of Arduino IDE pin-numbe
 
 The display's eight-pin connector stays in physical order **BL, RST, D/C, CS, SCL/CLK, SDA/DIN, GND, VCC**. Connect to the signals above. The Nano's D13/default SPI-clock pin is deliberately unused because it also drives the onboard LED. GPIO19/20 are exclusively USB D−/D+ inside the USB-C connection. Avoid GPIO0/3/45/46 strapping pins and leave unused Nano pins disconnected. The three analog inputs all use ADC1, including during Wi-Fi operation. Pin constants and uniqueness checks are in `src/board.hpp`.
 
-The electrical diagrams show the component-side Nano top view with USB-C up: JP1 left, pads 1–15 downward; JP2 right, pads 15–1 downward. These are the official schematic pad IDs. Board labels and GPIO names are both retained. The physical installation is component-side down, so use the top-view reference when identifying pads before soldering.
+The electrical diagrams show the component-side Nano top view with USB-C up: JP1 left, pads 1–15 downward; JP2 right, pads 15–1 downward. These are the official schematic pad IDs. Board labels and GPIO names are both retained. The physical installation is component-side up on four integral base posts, with USB-C to the rear. Rotate the reference to match the chassis when identifying pads.
 
 ### USB VBUS detection
 
@@ -146,4 +146,4 @@ The optional chain uses one [Pololu 2535 5 mm LED](https://www.pololu.com/produc
 - [Espressif USB device stack](https://docs.espressif.com/projects/esp-usb/en/latest/esp32s3/usb_device.html): native USB and self-powered VBUS detection.
 - [Waveshare 24382 module wiki](https://www.waveshare.com/wiki/1.69inch_LCD_Module): ST7789V2, interface configuration and physical connector.
 
-The [electrical diagrams](../design/electrical/README.md) and [KiCad schematic](../design/kicad/README.md) use this Nano GPIO/power map and preserve physical pin order. The enclosure uses the [two-insert Nano mount kit](../design/fusion/nano-esp32/README.md).
+The [electrical diagrams](../design/electrical/README.md) and [KiCad schematic](../design/kicad/README.md) use this Nano GPIO/power map and preserve physical pin order. The enclosure uses the [direct Nano base mounts](../design/fusion/nano-esp32/README.md).

@@ -30,7 +30,7 @@ def main():
         draw = ImageDraw.Draw(canvas)
         draw.text((126, 18), f'SIGMIDI Foot Controller v{project_version(ROOT)}', font=title, fill='#eaf2ed')
         draw.text((128, 64), caption, font=subtitle, fill='#a9c7b8')
-        draw.text((34, image.height + 124), 'Fusion enclosure rendering · BLE MIDI · Wi-Fi setup', font=subtitle, fill='#a9c7b8')
+        draw.text((34, image.height + 124), 'Fusion enclosure rendering · USB + BLE MIDI · Wi-Fi setup', font=subtitle, fill='#a9c7b8')
         target = P / f'sigmidi-{name}.png'
         canvas.save(target)
         records.append(dict(version=project_version(ROOT), logo_source='design/branding/sigmidi-mark-light.png', logo_sha256=hashlib.sha256((ROOT/'design/branding/sigmidi-mark-light.png').read_bytes()).hexdigest(), source=source, source_sha256=hashlib.sha256((ROOT / source).read_bytes()).hexdigest(),

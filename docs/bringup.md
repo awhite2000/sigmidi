@@ -2,7 +2,7 @@
 
 The firmware targets Arduino Nano ESP32 / ESP32-S3 with 16 MB flash using PlatformIO espressif32 6.9.0 and ESP-IDF 5.3.1. It compiles and passes host tests. Hardware operation, iPad delivery and physical USB flashing require bench validation.
 
-For the complete physical build sequence, use the illustrated [assembly guide](assembly-guide.md) ([printable PDF](../output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf)). It covers part selection, printing, Nano adapters, wiring, inspection, calibration and closure.
+For the complete physical build sequence, use the illustrated [assembly guide](assembly-guide.md) ([printable PDF](../output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf)). It covers part selection, printing, direct Nano mounting, wiring, inspection, calibration and closure.
 
 ## Build and test
 
@@ -48,7 +48,7 @@ The application `.bin` alone requires a compatible bootloader and partition tabl
 
 The Waveshare 24382 uses four 16.1 mm hollow supports with 2 mm walls. Factory rear M2 studs rest on the supports; fit **M2×5 countersunk screws from below** through Ø2.6 bores. Head-seat Z is −9.51 mm with Ø4.4 access. Nominal stud engagement is 1.39 mm. The factory holes are blind; verify screw engagement and seating without bottoming out.
 
-Base screws are M2×6. The [Nano adapters](../design/fusion/nano-esp32/README.md) use four M1.6×5 PCB screws and two M1.6×6 bridge screws; the original base is retained. Remove rear vent films and open LED covers only for fitted indicators. Confirm the 9 V center-negative inlet and regulated 5 V output before connecting electronics. Provide 3 mm air space under base vents. [CAD/assembly guides](../design/README.md).
+Base screws are M2×6. The [direct Nano mounts](../design/fusion/nano-esp32/README.md) use four M1.6×5 PCB screws into integral base posts, with components facing up. No mounting inserts or bridge screws are fitted. Remove rear vent films and open LED covers only for fitted indicators. Confirm the 9 V center-negative inlet and regulated 5 V output before connecting electronics. Provide 3 mm air space under base vents. [CAD/assembly guides](../design/README.md).
 
 ## Operating limits
 

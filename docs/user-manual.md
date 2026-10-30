@@ -26,6 +26,8 @@ Firmware v0.1, configuration schema 6. Illustrations use current 280 x 240 firmw
 
 # 1. Getting ready
 
+For mounting, wiring and first power-up, follow the [assembly guide](assembly-guide.md).
+
 ## Connect your MIDI Device
 
 A **MIDI Device** is the equipment or software you want to control. Choose a USB MIDI connection (page 3), BLE MIDI (page 4), or both. These connections carry PC/CC control messages; audio follows the MIDI Device's own audio path.

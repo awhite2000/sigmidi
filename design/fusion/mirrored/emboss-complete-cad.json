@@ -1,26 +1,42 @@
 {
+  "revision": "nano_direct_base_components_up",
   "CAD": [
     {
-      "file": "main/midi-foot-mirrored-main",
-      "STEP_solids": 304,
-      "STEP_BREP_WITH_VOIDS": 1,
-      "native_bodies": 305,
-      "native_solids": 305,
+      "file": "mirrored/main/midi-foot-mirrored-main",
+      "native_solids": 383,
+      "STEP_solids": 383,
       "complete": true,
-      "hierarchy": "flattened named bodies in assembly coordinates; editable source hierarchy retained in current Fusion document"
+      "physical_hardware_only": true
     },
     {
-      "file": "modular/midi-foot-mirrored-modular",
-      "STEP_solids": 287,
-      "STEP_BREP_WITH_VOIDS": 1,
-      "native_bodies": 288,
-      "native_solids": 288,
+      "file": "mirrored/modular/midi-foot-mirrored-modular",
+      "native_solids": 370,
+      "STEP_solids": 370,
       "complete": true,
-      "hierarchy": "flattened named bodies in assembly coordinates; editable source hierarchy retained in current Fusion document"
+      "physical_hardware_only": true
+    },
+    {
+      "file": "midi-foot-chassis",
+      "native_solids": 383,
+      "STEP_solids": 383,
+      "complete": true,
+      "physical_hardware_only": true
+    },
+    {
+      "file": "modular/midi-foot-modular",
+      "native_solids": 370,
+      "STEP_solids": 370,
+      "complete": true,
+      "physical_hardware_only": true
+    },
+    {
+      "file": "nano-esp32/nano-esp32-direct-mount",
+      "native_solids": 252,
+      "STEP_solids": 252,
+      "complete": true,
+      "physical_hardware_only": true
     }
   ],
-  "document": "MIDI Foot Controller - VERIFIED chassis v107",
-  "saved": true,
-  "geometry_unchanged_during_export": true,
-  "UTC": "2026-10-28T16:24:07.076838+00:00"
+  "physical_hardware_only": true,
+  "native_source": "../sigmidi-foot-controller-0.1.f3d"
 }

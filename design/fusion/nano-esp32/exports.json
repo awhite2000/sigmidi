@@ -1,0 +1,255 @@
+{
+  "assembly_board_bounds_checks": [
+    {
+      "assembly": "Left main",
+      "PCB_min_mm": [
+        90.42163840008725,
+        -49.868248850589474,
+        -13.336008235603408
+      ],
+      "PCB_max_mm": [
+        108.20163840008725,
+        -6.68824885058946,
+        -11.730004335603407
+      ],
+      "aligned_to_mount_posts": true
+    },
+    {
+      "assembly": "Left modular",
+      "PCB_min_mm": [
+        90.42163840008725,
+        -49.868248850589474,
+        -13.336008235603408
+      ],
+      "PCB_max_mm": [
+        108.20163840008725,
+        -6.68824885058946,
+        -11.730004335603407
+      ],
+      "aligned_to_mount_posts": true
+    },
+    {
+      "assembly": "Right main",
+      "PCB_min_mm": [
+        241.79836159991277,
+        -49.868248850589474,
+        -13.336008235603408
+      ],
+      "PCB_max_mm": [
+        259.5783615999128,
+        -6.68824885058946,
+        -11.730004335603407
+      ],
+      "aligned_to_mount_posts": true
+    },
+    {
+      "assembly": "Right modular",
+      "PCB_min_mm": [
+        241.79836159991277,
+        -49.868248850589474,
+        -13.336008235603408
+      ],
+      "PCB_max_mm": [
+        259.5783615999128,
+        -6.68824885058946,
+        -11.730004335603407
+      ],
+      "aligned_to_mount_posts": true
+    }
+  ],
+  "revision": "nano_direct_base_components_up",
+  "CAD": [
+    {
+      "file": "mirrored/main/midi-foot-mirrored-main",
+      "native_solids": 383,
+      "STEP_solids": 383,
+      "complete": true,
+      "physical_hardware_only": true
+    },
+    {
+      "file": "mirrored/modular/midi-foot-mirrored-modular",
+      "native_solids": 370,
+      "STEP_solids": 370,
+      "complete": true,
+      "physical_hardware_only": true
+    },
+    {
+      "file": "midi-foot-chassis",
+      "native_solids": 383,
+      "STEP_solids": 383,
+      "complete": true,
+      "physical_hardware_only": true
+    },
+    {
+      "file": "modular/midi-foot-modular",
+      "native_solids": 370,
+      "STEP_solids": 370,
+      "complete": true,
+      "physical_hardware_only": true
+    },
+    {
+      "file": "nano-esp32/nano-esp32-direct-mount",
+      "native_solids": 252,
+      "STEP_solids": 252,
+      "complete": true,
+      "physical_hardware_only": true
+    }
+  ],
+  "images": [
+    {
+      "path": "mirrored/main/assembled.png",
+      "sha256": "e7feda82cc719ab1899684bb779e1f000bc4c2a21d770687362af1a5eeb1221e"
+    },
+    {
+      "path": "mirrored/main/top.png",
+      "sha256": "bb5305041f84ee3fda762bd315d1c0b09e331421eb73228e2f510ac80300e021"
+    },
+    {
+      "path": "mirrored/main/rear.png",
+      "sha256": "ee07601c12f42082a177a539efa953ee48158ed42202a869c70f79b1e09d74b9"
+    },
+    {
+      "path": "mirrored/main/internal.png",
+      "sha256": "e7790a67b2bdd0ba8aac9bb8eaeb6c297f9924048f2a3f79bc8f6080c5a7417c"
+    },
+    {
+      "path": "mirrored/main/base-mounts.png",
+      "sha256": "d3058fd3c467767fb7f084bd1ff72dc2874dbc2728b6f8357f9a72fb95b59cf6"
+    },
+    {
+      "path": "mirrored/main/exploded.png",
+      "sha256": "678bccc1f2c68a67f9c1c10799ec8c439ff7f45408f07091e272b85532c59ec1"
+    },
+    {
+      "path": "mirrored/modular/assembled.png",
+      "sha256": "f02d410fc3053d18c0f03ab29fe19c6bd09daee1a7888c47a8d4ed40fac2f6e1"
+    },
+    {
+      "path": "mirrored/modular/top.png",
+      "sha256": "e50c3c9a4a2949dfefd7282f85b8464673efa7954859a9a5bfce41e2a20ee209"
+    },
+    {
+      "path": "mirrored/modular/rear.png",
+      "sha256": "b5b2eb2bcaea674931dd2b93e8a93ab3a07ef09322934c26057e483dc436f5af"
+    },
+    {
+      "path": "mirrored/modular/internal.png",
+      "sha256": "c9560f8c8097f668d9b13c6f56ab9ea149748750ae5b347424c1fa206c0db84b"
+    },
+    {
+      "path": "mirrored/modular/base-mounts.png",
+      "sha256": "c444ca589981db01251ac1dd09719a736331a498860a6e87ac812c20ca21ace5"
+    },
+    {
+      "path": "mirrored/modular/exploded.png",
+      "sha256": "34b6f7642675eb612574298491853621e00a54b6e72c73d61b4e4b1aca406c6f"
+    },
+    {
+      "path": "assembled.png",
+      "sha256": "48d111f741860bf64788b8a57bbd0737bd3e66142e9884a79e93854c8cbb5c46"
+    },
+    {
+      "path": "panel-top.png",
+      "sha256": "35db0603c15b53a5180ff650f5386ea63cd4c588a28bd05faac018ccad6addb0"
+    },
+    {
+      "path": "rear.png",
+      "sha256": "acd9749366403f231a44a870c7490fc2dcaae0df61ced599581ebca8a38a32a0"
+    },
+    {
+      "path": "internal.png",
+      "sha256": "0a81801c7ad7c19dbb9d04f6b3a4a5801562c8def467c1d211678bdb51238227"
+    },
+    {
+      "path": "base-supports.png",
+      "sha256": "8f3d478eca82488387d967f02b700be810c39392fa19d1e7bf4a6b80ffc3065f"
+    },
+    {
+      "path": "exploded.png",
+      "sha256": "7c341aaeb8cbc78bcd558e7c0aa7c1981e7f87fa8b963256f9f98a014c61ebbf"
+    },
+    {
+      "path": "modular/modular-assembled.png",
+      "sha256": "986cfdbae8f9ed235c48b8d211e96d65bf5fe837f594c96996e151f5f0d41b28"
+    },
+    {
+      "path": "modular/top.png",
+      "sha256": "8cfd02a546df998f6b924b10679adbd78c0ffeda98a2c3cf94eff27dbcf37b81"
+    },
+    {
+      "path": "modular/rear.png",
+      "sha256": "6d1303dc09ce1425a6f897289e202751995a3397b02cff2a9a78fbb19e19390b"
+    },
+    {
+      "path": "modular/modular-internal.png",
+      "sha256": "36dec49b553f10b13252afd3fed2985a640c424daa1fb03e24705c1442e9c541"
+    },
+    {
+      "path": "modular/base-mounts.png",
+      "sha256": "45eb03d4b682fdc20ba1a86e4e79f7eb5cca411b7dc2fe387466617607c367f6"
+    },
+    {
+      "path": "modular/modular-exploded.png",
+      "sha256": "970b9af519ecba921c65cbb1aec0fd1b8c2c5ac5cd2c6e8990c24dac579dac18"
+    },
+    {
+      "path": "nano-esp32/installed.png",
+      "sha256": "decabd4a76dfbca12271060c04f16f41ac5bbb81cd3b36c0c1e0cdc23fdf0384"
+    },
+    {
+      "path": "nano-esp32/exploded.png",
+      "sha256": "afb8024f171d8c2d07b7641b6b65a09eeeb356861c9e7a178f36cfa7bbcbd2a3"
+    },
+    {
+      "path": "nano-esp32/print-orientation.png",
+      "sha256": "07ff46a23c988163925b90920c8645622921742d440f6371b76b5421c6b208f4"
+    },
+    {
+      "path": "nano-esp32/posts.png",
+      "sha256": "037d6ea42f05c0f447fa35238dd373991920fd0d126e01a947a74da2e9124e9e"
+    }
+  ],
+  "upper_print_files_preserved": {
+    "print/shell-left.stl": "9e0cd12be8ed445f8f1531d4eefc239dcb5b1dfbfa4c18a5908f201656fe7557",
+    "print/shell-right.stl": "3537c361d59e515bac5ea71acf2fce2f7971ba9ca7b7df897f4718c0c7c9a3d3",
+    "print/shell-left.3mf": "e312629244553f47870e96eeec659de9756a13e0bd897a65b3551528b18cd961",
+    "print/shell-right.3mf": "8cc1eccd35038a463465fa5079c8be2d82e5003e22d9d3ebc1f6b9eae2f7b3eb",
+    "modular/left-cap.stl": "f93ba486a4c92bdf2b94c28756445b8c7dec21aa1cb28638e57d82f7c6d2e723",
+    "modular/pair-shell-at-cap-E.stl": "70cd646a8ef8b7b6b9a9b86f0c6b6c19090116172f330982ce0aeb4bc130f340",
+    "modular/electronics-shell.stl": "3537c361d59e515bac5ea71acf2fce2f7971ba9ca7b7df897f4718c0c7c9a3d3",
+    "modular/pair-shell-at-cap-C.stl": "da105a3d1027147df7be3ee5d8196bba5efc370da7012845e934808c57ac2f12",
+    "modular/pair-shell-at-cap.stl": "5f20c3a282a3bfb7c012e21887ae91033292810670eca5780872507212feed6c",
+    "modular/pair-shell-D.stl": "4792a971eae4c0bad685487709d34b88a7be342737ec031fc83b3ecf68bd3967",
+    "modular/pair-shell.stl": "445177feff26b01fc97ce7b029711080d0269f7964c6458683885d4643e1723f",
+    "modular/pair-shell-D.3mf": "7b26bd04fc1d63d70ffb522105e18afcd445640643071a9771aa79750723b860",
+    "modular/pair-shell.3mf": "c858bf343551faf539911f272e68b638d99b9296e7d35c900a27190d374a9762",
+    "modular/pair-shell-at-cap-E.3mf": "07e21aefe921c0874aa5fc73c4a1dabe99fbb195ded40153968851a4ad53a583",
+    "modular/electronics-shell.3mf": "8cc1eccd35038a463465fa5079c8be2d82e5003e22d9d3ebc1f6b9eae2f7b3eb",
+    "modular/left-cap.3mf": "3ee009420c5b45c6e793e709af4630913f33e4643ac50d2a5ed4713b62d58cc6",
+    "modular/pair-shell-at-cap-C.3mf": "8d1484cce7944fd5de3260a29948776c0db6dcfae7b16f3d760f2ac5eadfe19a",
+    "modular/pair-shell-at-cap.3mf": "d72fb57b1c8d553460cffe2781ad312e587e3f3551c22e78cef62402ff2e2faf",
+    "mirrored/main/shell-left.stl": "24b88aab44e5eb655139910f6a13107ac39993bbd28e1d6fe6d72d8fa5eea03f",
+    "mirrored/main/shell-right.stl": "0de000e91a20590fedbe70e9a637943153aa9519386d60f4d960a6ad5aa39473",
+    "mirrored/main/shell-left.3mf": "11087a95a8ccf4e278d8969c7365d64be3f2073454437ffab6cfa95f489bcfbc",
+    "mirrored/main/shell-right.3mf": "87b62ab96cd59b73f4e7ad12a178b13d5b7da3e6902e1aa55220440b5408e66b",
+    "mirrored/modular/right-cap.stl": "bf21e5a9187ae5ccbed48af202b0df57fc700499d8e4e38c9f995c5d70bae00c",
+    "mirrored/modular/pair-shell-D.stl": "075941bce1a61e27fcac105809abf3527e3404d55921ac6dc9de45b24bc2875d",
+    "mirrored/modular/electronics-shell-left.stl": "24b88aab44e5eb655139910f6a13107ac39993bbd28e1d6fe6d72d8fa5eea03f",
+    "mirrored/modular/pair-shell-at-right-cap-D.3mf": "730871449ef5a74d0c63ee8d4da104cc5c83997094f5486a2d6fd1b9e031b4fb",
+    "mirrored/modular/pair-shell-at-right-cap-E.3mf": "9778e86b63d6802bf93b07a08bc674287a0827a47ad79ac9886371dc00df0e33",
+    "mirrored/modular/pair-shell-C.stl": "ea3fbd3490c7e0dcf952eba1a8d19214e84bb589a1c0b1f64f967d9ab6afb61a",
+    "mirrored/modular/pair-shell-at-right-cap-C.3mf": "998c533eceb72404cd7b4140012791e86b4ae03a16b2dc097d920c3940a9db81",
+    "mirrored/modular/pair-shell-at-right-cap-D.stl": "27d43df4f6e9ca68f72dde72eff853e325a81928a63863c6a301d21c52874675",
+    "mirrored/modular/pair-shell-at-right-cap-E.stl": "580fc4814d7b32c7cb9edad4f7dd645e1f3c52b0fe385fa0f915c21e99883b16",
+    "mirrored/modular/electronics-shell-left.3mf": "11087a95a8ccf4e278d8969c7365d64be3f2073454437ffab6cfa95f489bcfbc",
+    "mirrored/modular/pair-shell-D.3mf": "bcb81381a1bb2f139a7f902376b586b73922571c3ad2da9abbfeee2ec540feb6",
+    "mirrored/modular/pair-shell-at-right-cap-C.stl": "1df8eea02193affab05afb27f1500a85192ff0d370a60d55eadd59deddc8fec0",
+    "mirrored/modular/pair-shell-C.3mf": "a949a97435f01c778faa8f98df3f3c8c8372dec4f11eaf6c3b408568c8635954",
+    "mirrored/modular/right-cap.3mf": "7a1c0fcb97bdae66526432c19195f0ca6ba2a991664ea05546cc88a8edb9f12b"
+  },
+  "upper_shell_print_files_byte_identical": true,
+  "native_upper_shells_unchanged": true,
+  "printed_parts_added": 0,
+  "printed_inserts_removed": 2,
+  "captured_UTC": "2026-10-30T11:34:19.668718+00:00"
+}

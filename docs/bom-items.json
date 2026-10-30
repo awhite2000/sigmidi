@@ -28,7 +28,7 @@
         "U1"
       ],
       "purchase_unit": "Each",
-      "notes": "Component-side down on two printed adapters; direct-solder harness. Use Nano GPIO/power map and USB VBUS divider.",
+      "notes": "Component-side up, directly on four integral base posts; direct-solder harness. Use Nano GPIO/power map and USB VBUS divider.",
       "source": "https://docs.arduino.cc/hardware/nano-esp32/"
     },
     {
@@ -408,7 +408,7 @@
       "fit_condition": "Required",
       "electrical_refs": [],
       "purchase_unit": "Each",
-      "notes": "Four screws through the 1.61 mm PCB into 3.6 mm-deep adapter pilots; confirm actual printed fit.",
+      "notes": "Four screws through the 1.61 mm PCB into 4.3 mm-deep integral-post pilots; nominal engagement 3.39 mm. Confirm actual printed fit.",
       "source": "Project design"
     },
     {
@@ -945,63 +945,6 @@
       ],
       "purchase_unit": "Each",
       "notes": "A4 / GPIO11 divider node to GND. Never connect VBUS directly to GPIO.",
-      "source": ""
-    },
-    {
-      "id": "H09",
-      "group": "Hardware",
-      "part": "Nano bridge screws",
-      "specification": "M1.6 x 6 mm pan head",
-      "quantity": {
-        "modular_4": 2,
-        "modular_6": 2,
-        "modular_8": 2,
-        "modular_10": 2,
-        "main_10": 2
-      },
-      "unit": "piece",
-      "fit_condition": "Required",
-      "electrical_refs": [],
-      "purchase_unit": "Each",
-      "notes": "Two screws through the 2.2 mm bridge into existing base posts.",
-      "source": ""
-    },
-    {
-      "id": "P09",
-      "group": "Printed parts",
-      "part": "Nano USB-side glue insert",
-      "specification": "PETG; flat foot down, no supports",
-      "quantity": {
-        "modular_4": 1,
-        "modular_6": 1,
-        "modular_8": 1,
-        "modular_10": 1,
-        "main_10": 1
-      },
-      "unit": "piece",
-      "fit_condition": "Required",
-      "electrical_refs": [],
-      "purchase_unit": "Each",
-      "notes": "One amber insert in design/fusion/nano-esp32; bond to original base.",
-      "source": ""
-    },
-    {
-      "id": "P10",
-      "group": "Printed parts",
-      "part": "Nano opposite-end bridge",
-      "specification": "PETG; flat bridge plate down, no supports",
-      "quantity": {
-        "modular_4": 1,
-        "modular_6": 1,
-        "modular_8": 1,
-        "modular_10": 1,
-        "main_10": 1
-      },
-      "unit": "piece",
-      "fit_condition": "Required",
-      "electrical_refs": [],
-      "purchase_unit": "Each",
-      "notes": "One teal insert in design/fusion/nano-esp32; screws to existing poles.",
       "source": ""
     }
   ]

@@ -6,7 +6,7 @@
     "source": "design/fusion/mirrored/main/assembled.png",
     "source_sha256": "e7feda82cc719ab1899684bb779e1f000bc4c2a21d770687362af1a5eeb1221e",
     "output": "previews/sigmidi-left-main.png",
-    "sha256": "f35a3efbe48c88a0cb3fe394b2fb13fc28a4f78d3291670ef8fa6aaff26a0400",
+    "sha256": "fc483734db42d3937930d1f476f123da02c0c01b4e5175461f7b5203bb473cd3",
     "geometry_modified": false
   },
   {
@@ -14,9 +14,9 @@
     "logo_source": "design/branding/sigmidi-mark-light.png",
     "logo_sha256": "93260dba79cbe47ce0e1e2447c9d6aab6ae9622dfd32002224e3200b24eebf63",
     "source": "design/fusion/mirrored/modular/assembled.png",
-    "source_sha256": "d55ecba4726ff90a7c64594697c1a422d484da7190a786d5e77330cf31d4a930",
+    "source_sha256": "f02d410fc3053d18c0f03ab29fe19c6bd09daee1a7888c47a8d4ed40fac2f6e1",
     "output": "previews/sigmidi-left-modular.png",
-    "sha256": "a7c158fb500303359179470c738348f8588434eebbcfe447ab0be77072991109",
+    "sha256": "e7b96bae6e12e1b14864cf88ff2dce6f1cc796271e024d3acd8c29ac2cc95f40",
     "geometry_modified": false
   },
   {
@@ -24,9 +24,9 @@
     "logo_source": "design/branding/sigmidi-mark-light.png",
     "logo_sha256": "93260dba79cbe47ce0e1e2447c9d6aab6ae9622dfd32002224e3200b24eebf63",
     "source": "design/fusion/assembled.png",
-    "source_sha256": "4ccba0f7e56eddb7b1133b3bbdc00117c74b72e40cdbb0a5da003515fc9d2e7f",
+    "source_sha256": "48d111f741860bf64788b8a57bbd0737bd3e66142e9884a79e93854c8cbb5c46",
     "output": "previews/sigmidi-right-main.png",
-    "sha256": "0740fb36d6efbd59c1474c9c9b85938f975bf7776d8e55b80013d7f52cfa0b62",
+    "sha256": "0a15a6cad5653bd883a7142ab99ec9665f8426f4050e2ad237d2fc555cbc69f1",
     "geometry_modified": false
   },
   {
@@ -34,9 +34,9 @@
     "logo_source": "design/branding/sigmidi-mark-light.png",
     "logo_sha256": "93260dba79cbe47ce0e1e2447c9d6aab6ae9622dfd32002224e3200b24eebf63",
     "source": "design/fusion/modular/modular-assembled.png",
-    "source_sha256": "334f4f921708203490b4070f47e75e759932fc818c00aad9dc6f5ea67c9371b0",
+    "source_sha256": "986cfdbae8f9ed235c48b8d211e96d65bf5fe837f594c96996e151f5f0d41b28",
     "output": "previews/sigmidi-right-modular.png",
-    "sha256": "5a99423b5af25cc7727a06ba793e4bd48b9cea26508b0848f9188cbd8f3f227b",
+    "sha256": "35c76fa573730d52d4d5fb6b2b710d345b32c65b8105f0b8834a9704604ff22d",
     "geometry_modified": false
   }
 ]

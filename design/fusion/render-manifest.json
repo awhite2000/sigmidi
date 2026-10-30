@@ -1,28 +1,28 @@
 {
-  "revision": "display_m2x5",
-  "captured_UTC": "2026-10-27T21:25:02.644208+00:00",
+  "revision": "nano_direct_base_components_up",
+  "captured_UTC": "2026-10-30T11:34:19.668718+00:00",
   "native_document": "MIDI Foot Controller - VERIFIED chassis v93",
   "source_geometry_sha256": "1f7fbde90ff30901bdf73842c4a143a308fb52546f5018c838cb6a3c9cab3399",
   "images": [
     {
       "path": "assembled.png",
-      "sha256": "4ccba0f7e56eddb7b1133b3bbdc00117c74b72e40cdbb0a5da003515fc9d2e7f"
+      "sha256": "48d111f741860bf64788b8a57bbd0737bd3e66142e9884a79e93854c8cbb5c46"
     },
     {
       "path": "rear.png",
-      "sha256": "baa90394159e308bf09e142eec213176e057a289b0ae90c2a718547860a3a0fa"
+      "sha256": "acd9749366403f231a44a870c7490fc2dcaae0df61ced599581ebca8a38a32a0"
     },
     {
       "path": "panel-top.png",
-      "sha256": "94761726c2095ba300d93ccce539f241fec687e8699157d30026e82b15847434"
+      "sha256": "35db0603c15b53a5180ff650f5386ea63cd4c588a28bd05faac018ccad6addb0"
     },
     {
       "path": "internal.png",
-      "sha256": "4444a1a3daa759104dd37e47f40b6cd135ece42b20fb081a6b1198624cfa2847"
+      "sha256": "0a81801c7ad7c19dbb9d04f6b3a4a5801562c8def467c1d211678bdb51238227"
     },
     {
       "path": "mounted-boards.png",
-      "sha256": "1f4115128082a5cb42156cf66e89b66064afa99360d9ea264cda2b2190d4136a"
+      "sha256": "8f3d478eca82488387d967f02b700be810c39392fa19d1e7bf4a6b80ffc3065f"
     },
     {
       "path": "switch-labels.png",
@@ -30,15 +30,15 @@
     },
     {
       "path": "base-open.png",
-      "sha256": "ef1c53a66cb191f7f780043281f339df8324caa673541e97a2b6c510ffabd3df"
+      "sha256": "8f3d478eca82488387d967f02b700be810c39392fa19d1e7bf4a6b80ffc3065f"
     },
     {
       "path": "base-supports.png",
-      "sha256": "abfb2e2c8d1d4fdfd9fc478b63755f7308bdea14a042ce5e9536bff5d7312059"
+      "sha256": "8f3d478eca82488387d967f02b700be810c39392fa19d1e7bf4a6b80ffc3065f"
     },
     {
       "path": "print/split-exploded.png",
-      "sha256": "847d2aafeab68b1849badbf9deb5b30f3dc43a7a8ba0cdba71d376f88030ce84"
+      "sha256": "7c341aaeb8cbc78bcd558e7c0aa7c1981e7f87fa8b963256f9f98a014c61ebbf"
     },
     {
       "path": "print/straight-base-lips.png",
@@ -62,15 +62,15 @@
     },
     {
       "path": "right-shell-base-mounts.png",
-      "sha256": "a7e7d252c983fa2a93914b1c461eebbf1a04f7e2838c3ead5f86b84fb158ac23"
+      "sha256": "8f3d478eca82488387d967f02b700be810c39392fa19d1e7bf4a6b80ffc3065f"
     },
     {
       "path": "power-internal.png",
-      "sha256": "e62d2d8918a28b21189494fa78dee03ce4460c824701602a222d7df484c48fdb"
+      "sha256": "0a81801c7ad7c19dbb9d04f6b3a4a5801562c8def467c1d211678bdb51238227"
     },
     {
       "path": "power-rear.png",
-      "sha256": "45ec8562c256c1df8719d92794a98a977b190d13bdb6d62774187db35050d674"
+      "sha256": "acd9749366403f231a44a870c7490fc2dcaae0df61ced599581ebca8a38a32a0"
     },
     {
       "path": "clip-mount.png",
@@ -78,11 +78,11 @@
     },
     {
       "path": "ventilation-base.png",
-      "sha256": "ddaca909f93d61344d4a2d62a6dc5a164b72342f65bfd7d10bb7180f4fc59b98"
+      "sha256": "07ff46a23c988163925b90920c8645622921742d440f6371b76b5421c6b208f4"
     },
     {
       "path": "ventilation-rear.png",
-      "sha256": "5262bd7c7e91175284fceeba407443f5a24db8c9d50710ec1c181435d29d4fe8"
+      "sha256": "acd9749366403f231a44a870c7490fc2dcaae0df61ced599581ebca8a38a32a0"
     },
     {
       "path": "rear-ribs-internal.png",
@@ -102,7 +102,7 @@
     },
     {
       "path": "modular/modular-exploded.png",
-      "sha256": "504dec25ba221361e9a16f36d625ce5f786ff9b67514b74ffbcb8cea8ecea5a4"
+      "sha256": "970b9af519ecba921c65cbb1aec0fd1b8c2c5ac5cd2c6e8990c24dac579dac18"
     },
     {
       "path": "modular/cap-floor-underside.png",
@@ -114,7 +114,91 @@
     },
     {
       "path": "modular/modular-assembled.png",
-      "sha256": "334f4f921708203490b4070f47e75e759932fc818c00aad9dc6f5ea67c9371b0"
+      "sha256": "986cfdbae8f9ed235c48b8d211e96d65bf5fe837f594c96996e151f5f0d41b28"
+    },
+    {
+      "path": "mirrored/main/assembled.png",
+      "sha256": "e7feda82cc719ab1899684bb779e1f000bc4c2a21d770687362af1a5eeb1221e"
+    },
+    {
+      "path": "mirrored/main/top.png",
+      "sha256": "bb5305041f84ee3fda762bd315d1c0b09e331421eb73228e2f510ac80300e021"
+    },
+    {
+      "path": "mirrored/main/rear.png",
+      "sha256": "ee07601c12f42082a177a539efa953ee48158ed42202a869c70f79b1e09d74b9"
+    },
+    {
+      "path": "mirrored/main/internal.png",
+      "sha256": "e7790a67b2bdd0ba8aac9bb8eaeb6c297f9924048f2a3f79bc8f6080c5a7417c"
+    },
+    {
+      "path": "mirrored/main/base-mounts.png",
+      "sha256": "d3058fd3c467767fb7f084bd1ff72dc2874dbc2728b6f8357f9a72fb95b59cf6"
+    },
+    {
+      "path": "mirrored/main/exploded.png",
+      "sha256": "678bccc1f2c68a67f9c1c10799ec8c439ff7f45408f07091e272b85532c59ec1"
+    },
+    {
+      "path": "mirrored/modular/assembled.png",
+      "sha256": "f02d410fc3053d18c0f03ab29fe19c6bd09daee1a7888c47a8d4ed40fac2f6e1"
+    },
+    {
+      "path": "mirrored/modular/top.png",
+      "sha256": "e50c3c9a4a2949dfefd7282f85b8464673efa7954859a9a5bfce41e2a20ee209"
+    },
+    {
+      "path": "mirrored/modular/rear.png",
+      "sha256": "b5b2eb2bcaea674931dd2b93e8a93ab3a07ef09322934c26057e483dc436f5af"
+    },
+    {
+      "path": "mirrored/modular/internal.png",
+      "sha256": "c9560f8c8097f668d9b13c6f56ab9ea149748750ae5b347424c1fa206c0db84b"
+    },
+    {
+      "path": "mirrored/modular/base-mounts.png",
+      "sha256": "c444ca589981db01251ac1dd09719a736331a498860a6e87ac812c20ca21ace5"
+    },
+    {
+      "path": "mirrored/modular/exploded.png",
+      "sha256": "34b6f7642675eb612574298491853621e00a54b6e72c73d61b4e4b1aca406c6f"
+    },
+    {
+      "path": "exploded.png",
+      "sha256": "7c341aaeb8cbc78bcd558e7c0aa7c1981e7f87fa8b963256f9f98a014c61ebbf"
+    },
+    {
+      "path": "modular/top.png",
+      "sha256": "8cfd02a546df998f6b924b10679adbd78c0ffeda98a2c3cf94eff27dbcf37b81"
+    },
+    {
+      "path": "modular/rear.png",
+      "sha256": "6d1303dc09ce1425a6f897289e202751995a3397b02cff2a9a78fbb19e19390b"
+    },
+    {
+      "path": "modular/modular-internal.png",
+      "sha256": "36dec49b553f10b13252afd3fed2985a640c424daa1fb03e24705c1442e9c541"
+    },
+    {
+      "path": "modular/base-mounts.png",
+      "sha256": "45eb03d4b682fdc20ba1a86e4e79f7eb5cca411b7dc2fe387466617607c367f6"
+    },
+    {
+      "path": "nano-esp32/installed.png",
+      "sha256": "decabd4a76dfbca12271060c04f16f41ac5bbb81cd3b36c0c1e0cdc23fdf0384"
+    },
+    {
+      "path": "nano-esp32/exploded.png",
+      "sha256": "afb8024f171d8c2d07b7641b6b65a09eeeb356861c9e7a178f36cfa7bbcbd2a3"
+    },
+    {
+      "path": "nano-esp32/print-orientation.png",
+      "sha256": "07ff46a23c988163925b90920c8645622921742d440f6371b76b5421c6b208f4"
+    },
+    {
+      "path": "nano-esp32/posts.png",
+      "sha256": "037d6ea42f05c0f447fa35238dd373991920fd0d126e01a947a74da2e9124e9e"
     }
   ],
   "optional_LEDs": "Shown fitted in main views; mounting membranes remain present in the printable shell."

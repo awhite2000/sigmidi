@@ -1,0 +1,25 @@
+{
+  "revision": "nano_direct_base_components_up",
+  "packages": {
+    "Right main": {
+      "path": "design/fusion/print/mk3s-petg-06-print-package.zip",
+      "files": 38,
+      "sha256": "0e45ddbbb9b8c9d350e5f3263d831f05ebf6bdb1d95e198daa651d5c17d3a45e"
+    },
+    "Right modular": {
+      "path": "design/fusion/modular/chainable-enclosure-mk3s-petg-06.zip",
+      "files": 53,
+      "sha256": "d99750ea0ae46049fcc4806394583b30a3064d29eec6b467b445824ed94d673d"
+    },
+    "Left main": {
+      "path": "design/fusion/mirrored/mirrored-main-mk3s-petg-06.zip",
+      "files": 43,
+      "sha256": "4576d56ba8a4a73572c069f045fe5a74cf114052e9a72db980953aa62a3bfdfe"
+    },
+    "Left modular": {
+      "path": "design/fusion/mirrored/mirrored-modular-mk3s-petg-06.zip",
+      "files": 50,
+      "sha256": "88c5af3519d061ea41026f7dcdb84a35d4ffc29e93412d8d24093ded173e5ec0"
+    }
+  }
+}

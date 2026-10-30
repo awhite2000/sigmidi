@@ -1,73 +1,213 @@
 {
-  "revision": "sigmidi_embossed_icon_25mm",
-  "original_native_assemblies_preserved": true,
-  "original_files_byte_identical": 132,
-  "independent_main_and_modular_models": true,
-  "unique_print_shapes": 11,
-  "print_meshes_with_coupons": 13,
-  "sliced_projects_with_aliases": 17,
-  "wall_samples": 844434,
-  "unresolved_thin_wall_samples": 0,
-  "critical_toolpath_checks": 192,
-  "label_backing_checks": 20,
-  "label_backing_mm": 2.2,
-  "CAD": [
+  "revision": "nano_direct_base_components_up",
+  "source_model": "sigmidi-foot-controller-0.1.f3d",
+  "component_face_down": false,
+  "direct_integral_posts": 4,
+  "separate_Nano_mount_parts": 0,
+  "Nano_screws": "Four M1.6x5 pan head",
+  "upper_shells_native_revisions_unchanged": true,
+  "upper_print_files_byte_identical": true,
+  "all_four_assembly_interference_checks_passed": true,
+  "floor_vents_preserved": 13,
+  "new_post_section_checks": 8,
+  "new_section_minimum_wall_mm": 2.213582680390004,
+  "minimum_blind_web_above_vent_mm": 2.06399176439659,
+  "support_extrusion_in_updated_bases": false,
+  "USB_XZ_alignment_preserved": true,
+  "USB_additional_recess_mm": 1.5,
+  "inventories": [
     {
-      "file": "main/midi-foot-mirrored-main",
-      "STEP_solids": 304,
-      "STEP_BREP_WITH_VOIDS": 1,
-      "native_bodies": 305,
-      "native_solids": 305,
-      "complete": true,
-      "hierarchy": "flattened named bodies in assembly coordinates; editable source hierarchy retained in current Fusion document"
+      "folder": "design/fusion/print",
+      "parts": [
+        {
+          "part": "base-left",
+          "STL_sha256": "ac7ba15004ecff174089234c886af025626d4b4e0f003bcbfdd8f788ebb8fe59",
+          "3MF_sha256": "e9ae4bff9d2c33814a073c2fa2327eff447b6f585bece4578ace7c5ef88d2ceb"
+        },
+        {
+          "part": "base-right",
+          "STL_sha256": "8ca865d2b0c655678d38428e270d8dcc7c00e7894c9e27b85b42a716b0f0fa71",
+          "3MF_sha256": "779a2a6f988f6a7c2f3155ca0f9220c911145c451c1005d49868fb78166533a6"
+        },
+        {
+          "part": "fit-coupon-left",
+          "STL_sha256": "e8deebf1f5d4786548efde9cf83f2bd6d500a7ac1716c4ce0c8de94e44ca5d30",
+          "3MF_sha256": "2d56860152e9cb0fb0f0ef5376825c116a23fac93379e987060402aa6fcd7c49"
+        },
+        {
+          "part": "fit-coupon-right",
+          "STL_sha256": "477040213b33570172600b5b2164c8ea574e30cc27068ee3731008fb50715cd0",
+          "3MF_sha256": "a098c8bccf148594d9f726966c7ea880910451121378dbdca408a7b2ff5c7935"
+        },
+        {
+          "part": "shell-left",
+          "STL_sha256": "9e0cd12be8ed445f8f1531d4eefc239dcb5b1dfbfa4c18a5908f201656fe7557",
+          "3MF_sha256": "e312629244553f47870e96eeec659de9756a13e0bd897a65b3551528b18cd961"
+        },
+        {
+          "part": "shell-right",
+          "STL_sha256": "3537c361d59e515bac5ea71acf2fce2f7971ba9ca7b7df897f4718c0c7c9a3d3",
+          "3MF_sha256": "8cc1eccd35038a463465fa5079c8be2d82e5003e22d9d3ebc1f6b9eae2f7b3eb"
+        }
+      ]
     },
     {
-      "file": "modular/midi-foot-mirrored-modular",
-      "STEP_solids": 287,
-      "STEP_BREP_WITH_VOIDS": 1,
-      "native_bodies": 288,
-      "native_solids": 288,
-      "complete": true,
-      "hierarchy": "flattened named bodies in assembly coordinates; editable source hierarchy retained in current Fusion document"
+      "folder": "design/fusion/modular",
+      "parts": [
+        {
+          "part": "electronics-base",
+          "STL_sha256": "8ca865d2b0c655678d38428e270d8dcc7c00e7894c9e27b85b42a716b0f0fa71",
+          "3MF_sha256": "779a2a6f988f6a7c2f3155ca0f9220c911145c451c1005d49868fb78166533a6"
+        },
+        {
+          "part": "electronics-shell",
+          "STL_sha256": "3537c361d59e515bac5ea71acf2fce2f7971ba9ca7b7df897f4718c0c7c9a3d3",
+          "3MF_sha256": "8cc1eccd35038a463465fa5079c8be2d82e5003e22d9d3ebc1f6b9eae2f7b3eb"
+        },
+        {
+          "part": "fit-coupon-left",
+          "STL_sha256": "e8deebf1f5d4786548efde9cf83f2bd6d500a7ac1716c4ce0c8de94e44ca5d30",
+          "3MF_sha256": "2d56860152e9cb0fb0f0ef5376825c116a23fac93379e987060402aa6fcd7c49"
+        },
+        {
+          "part": "fit-coupon-right",
+          "STL_sha256": "477040213b33570172600b5b2164c8ea574e30cc27068ee3731008fb50715cd0",
+          "3MF_sha256": "a098c8bccf148594d9f726966c7ea880910451121378dbdca408a7b2ff5c7935"
+        },
+        {
+          "part": "left-cap",
+          "STL_sha256": "f93ba486a4c92bdf2b94c28756445b8c7dec21aa1cb28638e57d82f7c6d2e723",
+          "3MF_sha256": "3ee009420c5b45c6e793e709af4630913f33e4643ac50d2a5ed4713b62d58cc6"
+        },
+        {
+          "part": "pair-base",
+          "STL_sha256": "3a2952b453372f65fe0823cc7f92e0e9cce1d45be8ddab99db03a1fe249038a3",
+          "3MF_sha256": "88bdd0211fdca2680e16c94380648f1b6330b6a1bb1cbe1aae142f2438455253"
+        },
+        {
+          "part": "pair-shell-D",
+          "STL_sha256": "4792a971eae4c0bad685487709d34b88a7be342737ec031fc83b3ecf68bd3967",
+          "3MF_sha256": "7b26bd04fc1d63d70ffb522105e18afcd445640643071a9771aa79750723b860"
+        },
+        {
+          "part": "pair-shell-at-cap-C",
+          "STL_sha256": "da105a3d1027147df7be3ee5d8196bba5efc370da7012845e934808c57ac2f12",
+          "3MF_sha256": "8d1484cce7944fd5de3260a29948776c0db6dcfae7b16f3d760f2ac5eadfe19a"
+        },
+        {
+          "part": "pair-shell-at-cap-E",
+          "STL_sha256": "70cd646a8ef8b7b6b9a9b86f0c6b6c19090116172f330982ce0aeb4bc130f340",
+          "3MF_sha256": "07e21aefe921c0874aa5fc73c4a1dabe99fbb195ded40153968851a4ad53a583"
+        },
+        {
+          "part": "pair-shell-at-cap",
+          "STL_sha256": "5f20c3a282a3bfb7c012e21887ae91033292810670eca5780872507212feed6c",
+          "3MF_sha256": "d72fb57b1c8d553460cffe2781ad312e587e3f3551c22e78cef62402ff2e2faf"
+        },
+        {
+          "part": "pair-shell",
+          "STL_sha256": "445177feff26b01fc97ce7b029711080d0269f7964c6458683885d4643e1723f",
+          "3MF_sha256": "c858bf343551faf539911f272e68b638d99b9296e7d35c900a27190d374a9762"
+        }
+      ]
     },
     {
-      "file": "modular/pair-shell-D",
-      "STEP_solids": 1
+      "folder": "design/fusion/mirrored/main",
+      "parts": [
+        {
+          "part": "base-left",
+          "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
+          "3MF_sha256": "f2e8407c59a285132608bec299542a5ae8f53c9578abd123a8d363ad3e1e12ef"
+        },
+        {
+          "part": "base-right",
+          "STL_sha256": "de6899386e40d1d327e5108e464fbeace331325b4daedc696852edf0c32d164c",
+          "3MF_sha256": "4b4b909841606f39d52870b8139c15c363288deb5c8ee13c6e68cea733087c01"
+        },
+        {
+          "part": "fit-coupon-left",
+          "STL_sha256": "d15b22ef3a09a17318f38cd1a17e6d4e759277ee2f36af2458855695c38cee53",
+          "3MF_sha256": "251ae61c1712f06f2f81b631ce7bff0ad6f824583fa5bbb40236fea8ae1a843e"
+        },
+        {
+          "part": "fit-coupon-right",
+          "STL_sha256": "4e92c6843520edcd1b58b24935702d59a972f6544e7b103af4b97a2d42025d8c",
+          "3MF_sha256": "82f81ecf1aa8cb57b47c6c40c729183214794f01bbe37ad508be2f98b4b06416"
+        },
+        {
+          "part": "shell-left",
+          "STL_sha256": "24b88aab44e5eb655139910f6a13107ac39993bbd28e1d6fe6d72d8fa5eea03f",
+          "3MF_sha256": "11087a95a8ccf4e278d8969c7365d64be3f2073454437ffab6cfa95f489bcfbc"
+        },
+        {
+          "part": "shell-right",
+          "STL_sha256": "0de000e91a20590fedbe70e9a637943153aa9519386d60f4d960a6ad5aa39473",
+          "3MF_sha256": "87b62ab96cd59b73f4e7ad12a178b13d5b7da3e6902e1aa55220440b5408e66b"
+        }
+      ]
     },
     {
-      "file": "modular/pair-shell-at-right-cap-C",
-      "STEP_solids": 1
-    },
-    {
-      "file": "modular/pair-shell-at-right-cap-E",
-      "STEP_solids": 1
+      "folder": "design/fusion/mirrored/modular",
+      "parts": [
+        {
+          "part": "electronics-base-left",
+          "STL_sha256": "f5cdf6d0285c5a86b83de176b95f15a968074f9930903e0cef239ca3c9208e42",
+          "3MF_sha256": "f2e8407c59a285132608bec299542a5ae8f53c9578abd123a8d363ad3e1e12ef"
+        },
+        {
+          "part": "electronics-shell-left",
+          "STL_sha256": "24b88aab44e5eb655139910f6a13107ac39993bbd28e1d6fe6d72d8fa5eea03f",
+          "3MF_sha256": "11087a95a8ccf4e278d8969c7365d64be3f2073454437ffab6cfa95f489bcfbc"
+        },
+        {
+          "part": "fit-coupon-left",
+          "STL_sha256": "d15b22ef3a09a17318f38cd1a17e6d4e759277ee2f36af2458855695c38cee53",
+          "3MF_sha256": "251ae61c1712f06f2f81b631ce7bff0ad6f824583fa5bbb40236fea8ae1a843e"
+        },
+        {
+          "part": "fit-coupon-right",
+          "STL_sha256": "4e92c6843520edcd1b58b24935702d59a972f6544e7b103af4b97a2d42025d8c",
+          "3MF_sha256": "82f81ecf1aa8cb57b47c6c40c729183214794f01bbe37ad508be2f98b4b06416"
+        },
+        {
+          "part": "pair-base",
+          "STL_sha256": "a672a95f81a6300d5fd3afaf5f7233e75746d70730ed1935224f8dd0fddbcee7",
+          "3MF_sha256": "8f1abc64cd8088533ea30da2f902594d6ff2cfc166755471fe79d99e60a1d7fd"
+        },
+        {
+          "part": "pair-shell-C",
+          "STL_sha256": "ea3fbd3490c7e0dcf952eba1a8d19214e84bb589a1c0b1f64f967d9ab6afb61a",
+          "3MF_sha256": "a949a97435f01c778faa8f98df3f3c8c8372dec4f11eaf6c3b408568c8635954"
+        },
+        {
+          "part": "pair-shell-D",
+          "STL_sha256": "075941bce1a61e27fcac105809abf3527e3404d55921ac6dc9de45b24bc2875d",
+          "3MF_sha256": "bcb81381a1bb2f139a7f902376b586b73922571c3ad2da9abbfeee2ec540feb6"
+        },
+        {
+          "part": "pair-shell-at-right-cap-C",
+          "STL_sha256": "1df8eea02193affab05afb27f1500a85192ff0d370a60d55eadd59deddc8fec0",
+          "3MF_sha256": "998c533eceb72404cd7b4140012791e86b4ae03a16b2dc097d920c3940a9db81"
+        },
+        {
+          "part": "pair-shell-at-right-cap-D",
+          "STL_sha256": "27d43df4f6e9ca68f72dde72eff853e325a81928a63863c6a301d21c52874675",
+          "3MF_sha256": "730871449ef5a74d0c63ee8d4da104cc5c83997094f5486a2d6fd1b9e031b4fb"
+        },
+        {
+          "part": "pair-shell-at-right-cap-E",
+          "STL_sha256": "580fc4814d7b32c7cb9edad4f7dd645e1f3c52b0fe385fa0f915c21e99883b16",
+          "3MF_sha256": "9778e86b63d6802bf93b07a08bc674287a0827a47ad79ac9886371dc00df0e33"
+        },
+        {
+          "part": "right-cap",
+          "STL_sha256": "bf21e5a9187ae5ccbed48af202b0df57fc700499d8e4e38c9f995c5d70bae00c",
+          "3MF_sha256": "7a1c0fcb97bdae66526432c19195f0ca6ba2a991664ea05546cc88a8edb9f12b"
+        }
+      ]
     }
   ],
-  "nozzle_mm": 0.6,
-  "layer_mm": 0.3,
-  "estimates": {
-    "main": {
-      "grams": 343.54,
-      "seconds": 62187
-    },
-    "modular_8_switches": {
-      "grams": 312.28,
-      "seconds": 56660
-    }
-  },
-  "packages": {
-    "main": {
-      "path": "mirrored-main-mk3s-petg-06.zip",
-      "files": 44,
-      "bytes": 14492805,
-      "sha256": "71352c2ee068f75af11211978de6f08558edfa1aeb9e67ec1f13f1f7b8b5ccee"
-    },
-    "modular": {
-      "path": "mirrored-modular-mk3s-petg-06.zip",
-      "files": 54,
-      "bytes": 17371975,
-      "sha256": "d07405ff2a1b80a63a2d491f606feead69a178553ffe0cbb0718ffa7d0c4db28"
-    }
-  },
-  "limits": "Nominal CAD, finite surface/toolpath checks and slicer estimates; no physical print/load test."
+  "physical_print_tested": false,
+  "validation_scope": "Changed mount regions: native solid/difference and interference checks, closed manifold meshes, eight pilot/post sections, 0.6mm PETG toolpaths. Other features: unchanged upper print hashes and exact no-change outside mounting neighborhoods. Physical fit and strength require a build.",
+  "details": "../nano-esp32/package-verification.json"
 }

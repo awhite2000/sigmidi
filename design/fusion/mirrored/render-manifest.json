@@ -1,6 +1,6 @@
 {
-  "revision": "sigmidi_embossed_icon_25mm",
-  "captured_UTC": "2026-10-28T16:10:16.485512+00:00",
+  "revision": "nano_direct_base_components_up",
+  "captured_UTC": "2026-10-30T11:34:19.668718+00:00",
   "images": [
     {
       "path": "main/assembled.png",
@@ -12,11 +12,11 @@
     },
     {
       "path": "main/rear.png",
-      "sha256": "ae575dcd80948002d7b0358e1ba7d8b4bac5098eb57c440b3d2b227c925c5bcc"
+      "sha256": "ee07601c12f42082a177a539efa953ee48158ed42202a869c70f79b1e09d74b9"
     },
     {
       "path": "main/internal.png",
-      "sha256": "a0b4fcc71d88e59b2c84a5b25075483a0dff44f70a4322f1a359ed6c2cd3896f"
+      "sha256": "e7790a67b2bdd0ba8aac9bb8eaeb6c297f9924048f2a3f79bc8f6080c5a7417c"
     },
     {
       "path": "main/display-underside.png",
@@ -24,15 +24,15 @@
     },
     {
       "path": "main/exploded.png",
-      "sha256": "023f8b89f017505cc2c062b684103ad7a0f865fe699f9de759772efe7d1c19ca"
+      "sha256": "678bccc1f2c68a67f9c1c10799ec8c439ff7f45408f07091e272b85532c59ec1"
     },
     {
       "path": "main/base-mounts.png",
-      "sha256": "fea536e64d4416868aab24a4a021b9db0f862930e3e546b6cc8e8dab96b5933f"
+      "sha256": "d3058fd3c467767fb7f084bd1ff72dc2874dbc2728b6f8357f9a72fb95b59cf6"
     },
     {
       "path": "modular/assembled.png",
-      "sha256": "d55ecba4726ff90a7c64594697c1a422d484da7190a786d5e77330cf31d4a930"
+      "sha256": "f02d410fc3053d18c0f03ab29fe19c6bd09daee1a7888c47a8d4ed40fac2f6e1"
     },
     {
       "path": "modular/top.png",
@@ -40,7 +40,7 @@
     },
     {
       "path": "modular/exploded.png",
-      "sha256": "194278e3a89adb78051533690fa99cddf96e2b967d7c33515d49993792961cad"
+      "sha256": "34b6f7642675eb612574298491853621e00a54b6e72c73d61b4e4b1aca406c6f"
     },
     {
       "path": "main/display-ribbon-left.png",
@@ -50,6 +50,18 @@
     {
       "path": "main/embossed-icon.png",
       "sha256": "136077e3791f40996413f1cb5f9f5e9474ef05d3fd2c62aaa079313f2c4a02b9"
+    },
+    {
+      "path": "modular/rear.png",
+      "sha256": "b5b2eb2bcaea674931dd2b93e8a93ab3a07ef09322934c26057e483dc436f5af"
+    },
+    {
+      "path": "modular/internal.png",
+      "sha256": "c9560f8c8097f668d9b13c6f56ab9ea149748750ae5b347424c1fa206c0db84b"
+    },
+    {
+      "path": "modular/base-mounts.png",
+      "sha256": "c444ca589981db01251ac1dd09719a736331a498860a6e87ac812c20ca21ace5"
     }
   ]
 }

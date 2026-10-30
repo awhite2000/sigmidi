@@ -101,9 +101,10 @@ def validate_sources(text, netlist):
         '10':'GND','11':'P1_RING','12':'P1_ADC','7':None,'8':None,'9':None,
         '4':'GND','5':'P2_RING','6':'P2_ADC','1':None,'2':None,'3':None,'13':None}
     mount = json.loads((ROOT/'design/fusion/nano-esp32/mount-fit.json').read_text())
-    assert mount['component_face_down'] and len(mount['board_holes_XY_mm'])==4
+    assert not mount['component_face_down'] and len(mount['board_holes_XY_mm'])==4
+    assert mount['separate_inserts']==0
     assert mount['PCB_screws']=='Four M1.6x5 pan head'
-    assert mount['bridge_fasteners']=='Two M1.6x6 pan head into existing far-end posts'
+    assert mount['bridge_fasteners']==0
     prints=[]
     for folder,names in {
         'design/fusion/mirrored/main':['shell-left','shell-right','base-left','base-right'],
@@ -113,7 +114,6 @@ def validate_sources(text, netlist):
             'pair-shell-at-right-cap-E','pair-base'],
         'design/fusion/modular':['electronics-shell','electronics-base','left-cap','pair-shell',
             'pair-shell-D','pair-shell-at-cap-C','pair-shell-at-cap','pair-shell-at-cap-E','pair-base'],
-        'design/fusion/nano-esp32':['usb-side-glue-insert','existing-pole-insert'],
     }.items():
         for name in names:
             assert name in text, name
@@ -126,7 +126,7 @@ def validate_sources(text, netlist):
     for profile,count in bom['profiles'].items():
         assert by_id['H01']['quantity'][profile]==(8 if profile=='main_10' else 4+2*((count-4)//2))
         total=sum(item['quantity'][profile] for item in bom['items'] if item['group']=='Printed parts')
-        assert total==(6 if profile=='main_10' else 5+2*((count-4)//2))
+        assert total==(4 if profile=='main_10' else 3+2*((count-4)//2))
     # Verify all local Markdown link/image targets without changing any native CAD.
     for target in re.findall(r'!?\[[^]]*\]\(([^)]+)\)',text):
         if '://' not in target:
@@ -170,7 +170,7 @@ def nano_diagram(netlist):
                 if p['logical_name']==p['net']:desc=p['net']
                 desc=desc.replace('USB_VBUS','USB 5V').replace('LED_GPIO','LED DIN')
                 label(d,4 if left else 361,y,desc,8.7,color)
-    label(d,252.5,13,'Component-side reference; mounted component-side down',8,GRAY,anchor='middle')
+    label(d,252.5,13,'Component-side reference; mounted components up',8,GRAY,anchor='middle')
     return d
 
 

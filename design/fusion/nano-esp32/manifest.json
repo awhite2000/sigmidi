@@ -1,37 +1,39 @@
 {
   "project": "SIGMIDI Foot Controller",
   "version": "0.1",
-  "scope": "Arduino Nano ESP32 mechanical adapter kit",
-  "original_shells_and_base_meshes_modified": false,
+  "scope": "Components-up Nano ESP32 directly mounted to integral posts in all four electronics bases",
+  "upper_shells_modified": false,
+  "electronics_base_meshes_modified": true,
+  "separate_mount_inserts": 0,
+  "integral_posts_per_board": 4,
+  "Nano_screws": "Four M1.6x5 pan head",
   "checks": [
-    "four assembly interference checks passed",
-    "two single-solid BReps",
-    "two watertight STL meshes",
-    "0.6 mm PETG toolpaths without supports",
-    "native archives CRC verified",
-    "STEP contains solid geometry",
-    "documentation links verified"
+    "four native assembly interference and placement checks",
+    "upper-shell native revisions and print hashes unchanged",
+    "two unique single-solid watertight bases",
+    "eight open pilot sections with at least 2.21 mm wall",
+    "0.6 mm PETG toolpaths without supports on modified bases",
+    "current native and STEP exports for all four assemblies",
+    "four current manufacturing packages with CRC and manifest checks",
+    "updated assembly guide, BOM and user manual visually reviewed"
   ],
+  "physical_fit_qualified": false,
+  "refreshed_UTC": "2026-10-30T11:37:34.262654+00:00",
   "files": [
     {
       "path": "README.md",
-      "sha256": "17e1edcbc4afe1a33483f02bde59ef326ae1cb9b043050121415c27433deb4c2",
-      "bytes": 6556
+      "sha256": "eea68eb73abcc71fdcea9a8a9387fcb4fc3975d4863cbfe231e2e038beabbb18",
+      "bytes": 5952
     },
     {
       "path": "assembly-clearance.json",
-      "sha256": "873eea2c07dc04dd376e50595eb3f467d03ed107c2481851faa0ac7fcc557dd3",
-      "bytes": 932
-    },
-    {
-      "path": "build_mounts.py",
-      "sha256": "f994aeae1b0f35cce09a490438134d801bc72e09eee35b98defe7404336b1244",
-      "bytes": 9887
+      "sha256": "7c8620ac1407c3314f1aab5ede383f570c49900b9c6923b04b85a17cdb721daf",
+      "bytes": 3618
     },
     {
       "path": "check_prints.py",
-      "sha256": "328e3b26afa52b521635c5dec755a32b16d938bcadff08238c5d47f6200d4b08",
-      "bytes": 2676
+      "sha256": "da2e8d7b9a6bd1fffc01cdfb0a9234e335e5c2ab4e665ede086967a2b4a39fd9",
+      "bytes": 7097
     },
     {
       "path": "datasheets/ABX00083-datasheet.pdf",
@@ -44,79 +46,84 @@
       "bytes": 6791224
     },
     {
-      "path": "existing-pole-insert.3mf",
-      "sha256": "f765f665aa9af1929f30d011035480a08c9c0d159cd85845686ef46bfdb2678f",
-      "bytes": 16978
-    },
-    {
-      "path": "existing-pole-insert.stl",
-      "sha256": "cbd139e45b5fde5d7c1e99f809d6855b513e4ef599adaed08198d80148c6c344",
-      "bytes": 62484
+      "path": "direct_mount.py",
+      "sha256": "90c9cd0da3e237452e71db13e853014f845c3508b19b24b8b88f0f9e9095a828",
+      "bytes": 15524
     },
     {
       "path": "exploded.png",
-      "sha256": "69b248c988b0e8fd7048d0cba0fa9d135a4b10711a63b0e13075551c92020586",
-      "bytes": 554398
+      "sha256": "afb8024f171d8c2d07b7641b6b65a09eeeb356861c9e7a178f36cfa7bbcbd2a3",
+      "bytes": 692201
     },
     {
-      "path": "install_mounts.py",
-      "sha256": "b1fc9bc36dd0f473dc8d821aec1ba1e25d6c9790e55c881bc1248a9e2ddf5bb0",
-      "bytes": 5052
+      "path": "exports.json",
+      "sha256": "2677bbcc28babd41a0b561d72be3d0131eb4bc275d35fde7366b264835edd83f",
+      "bytes": 10185
     },
     {
       "path": "installation.json",
-      "sha256": "13260782d5d0a74248b35131f87a88ca26a888a4df42504460f5175fa2483d9e",
-      "bytes": 880
+      "sha256": "c4753e5fc65820516097e1d92c5642bc4dd9f1af8c5ff55046144869256f34c1",
+      "bytes": 571
     },
     {
       "path": "installed.png",
-      "sha256": "828253b71553ba7fc32bdb8238630d4cee408c2dc6a5e3b69505929e5679af78",
-      "bytes": 584445
+      "sha256": "decabd4a76dfbca12271060c04f16f41ac5bbb81cd3b36c0c1e0cdc23fdf0384",
+      "bytes": 721617
+    },
+    {
+      "path": "instance-placement.json",
+      "sha256": "edd66e856a2cbab1e306aee6a8335970574d53e6761f203b9ad155823bf63f4b",
+      "bytes": 2737
     },
     {
       "path": "mount-fit.json",
-      "sha256": "ac5a6d0bc73f8ffca35a4e2fad8706384be21535dd9f705b912f8fc93ccf778e",
-      "bytes": 1641
+      "sha256": "7c8620ac1407c3314f1aab5ede383f570c49900b9c6923b04b85a17cdb721daf",
+      "bytes": 3618
     },
     {
-      "path": "nano-esp32-mount-kit.f3d",
-      "sha256": "48020bca4db20a81bdabb391340732ed22307ae5c64caf2bc471494409d1dc25",
-      "bytes": 3937381
+      "path": "nano-esp32-direct-mount.f3d",
+      "sha256": "f2acaa88233f49ca75277b5837d9c674cad427de2141b06bd9d05a5342c3d37f",
+      "bytes": 4100980
     },
     {
-      "path": "nano-esp32-mount-kit.step",
-      "sha256": "6317c1242dbc6261ee4b88efc8f258c982c4afaa65a061c4d9522f5b1f04ff55",
-      "bytes": 9557480
+      "path": "nano-esp32-direct-mount.step",
+      "sha256": "532bb63b1e0f22d05e8af2849664b3ba1aeeaae15b16da5a0c4a130652a707a8",
+      "bytes": 9931508
+    },
+    {
+      "path": "package-verification.json",
+      "sha256": "e23303b13cc39c0fba1ae3212624fc1460dcdcfb93ba0844fb98ce105371f5cc",
+      "bytes": 9549
+    },
+    {
+      "path": "package_current.py",
+      "sha256": "c473c95eb291bdf512f40402acee85d4fa0a1168868fe4a1d1ec928ddbfcc324",
+      "bytes": 8460
+    },
+    {
+      "path": "packages.json",
+      "sha256": "eb672a13aa280b92bf767742e2da21a21479fee053bb0b28ddc0c552fb35a855",
+      "bytes": 880
+    },
+    {
+      "path": "posts.png",
+      "sha256": "037d6ea42f05c0f447fa35238dd373991920fd0d126e01a947a74da2e9124e9e",
+      "bytes": 541063
     },
     {
       "path": "print-orientation.png",
-      "sha256": "b596a2857a68ee7c84ea84ca85ffb8e4d813a78449f55fdd57d347dacd3f8978",
-      "bytes": 217664
+      "sha256": "07ff46a23c988163925b90920c8645622921742d440f6371b76b5421c6b208f4",
+      "bytes": 450446
     },
     {
       "path": "print-verification.json",
-      "sha256": "be8094b968a9dacf0bfba04b531d72b72d70f5a8c10bea2e0f210a6cc68ef2a7",
-      "bytes": 1128
+      "sha256": "964bb8d841babe2e53924ad3ccfd7d31266625c378aa7133f31243bb79e87e13",
+      "bytes": 7899
     },
     {
       "path": "render_mounts.py",
-      "sha256": "53b2e145511947c9db97251e5c358faf1e8ae33dbf91c91f44e0dac1ecd385eb",
-      "bytes": 3900
-    },
-    {
-      "path": "usb-side-glue-insert.3mf",
-      "sha256": "da24c1e50fd153215eb61602c026ef1117e17b240d0c0f2ca99249c9b2bf04ab",
-      "bytes": 15858
-    },
-    {
-      "path": "usb-side-glue-insert.stl",
-      "sha256": "fb6d8dbe6eb4c273071678af1e8a7aaea0594f976714af46fd3f7fd799530167",
-      "bytes": 46284
-    },
-    {
-      "path": "verify_mounts.py",
-      "sha256": "ee5d34ee146e89fcbd20306c7eb96f9a283b5655fbdd01e26f74957d776ba4ad",
-      "bytes": 4098
+      "sha256": "e0859075e6c12233b02efe16970cc62c22b16866af0760c13705f7e46d925bc3",
+      "bytes": 12967
     }
   ]
 }
