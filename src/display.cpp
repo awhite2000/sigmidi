@@ -218,10 +218,10 @@ void renderDisplayStripe(const DisplayFrame &v, int firstY, int rows, uint16_t *
     if (v.screen == Screen::Performance)
         c.text(16, 28, FirmwareLabel, 1, Muted, 24);
     const bool ready = v.usb || v.serial || v.ble == 2;
-    // DIN MIDI OUT is ready whenever the UART is up, so the badge reports host links
-    // and falls back to DIN MIDI only when neither USB nor BLE is linked.
+    // TRS MIDI OUT is ready whenever the UART is up, so the badge reports host links
+    // and falls back to TRS MIDI only when neither USB nor BLE is linked.
     const char *ble = v.usb ? (v.ble == 2 ? "USB+BLE" : "USB MIDI") : v.ble == 2 ? "MIDI READY" :
-                      v.ble == 1 ? "CONNECTED" : v.serial ? "DIN MIDI" : "OFFLINE";
+                      v.ble == 1 ? "CONNECTED" : v.serial ? "TRS MIDI" : "OFFLINE";
     c.round(190, 10, 74, 19, 5, ready ? Selected : Panel);
     c.text(197, 16, ble, 1, ready ? Accent : Muted, 10);
     c.rect(16, 36, 248, 1, Border);

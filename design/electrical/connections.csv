@@ -160,17 +160,18 @@ LED10,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,L9,"
 LED10,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,NC,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."
 LED10,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."
 LED10,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."
-U4,74HCT125,2,,,MIDI_OUT_TX,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
-U4,74HCT125,1,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
-U4,74HCT125,3,,,TX_GATE,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
-U4,74HCT125,14,,,MIDI_5V,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
-U4,74HCT125,7,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
-U4,74HCT125,4,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
-U4,74HCT125,5,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
-U4,74HCT125,9,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
-U4,74HCT125,10,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
-U4,74HCT125,12,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
-U4,74HCT125,13,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,2,,,MIDI_OUT_TX,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,5,,,MIDI_OUT_TX,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,1,,,GND,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,4,,,GND,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,3,,,TX_GATE1,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,6,,,TX_GATE2,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,14,,,MIDI_5V,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,7,,,GND,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,9,,,GND,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,10,,,GND,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,12,,,GND,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,13,,,GND,"Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
 R52,10k,1,,,3V3,
 R52,10k,2,,,MIDI_OUT_TX,
 D1,1N5819,A,,,+5V,
@@ -179,12 +180,17 @@ D2,1N5819,A,,,USB_VBUS,
 D2,1N5819,K,,,MIDI_5V,
 C6,100nF,1,,,MIDI_5V,
 C6,100nF,2,,,GND,
-J3,5-pin DIN MIDI OUT,1,,,NC,Pins 1/2/3 NC; 4/5 are the MIDI current loop.
-J3,5-pin DIN MIDI OUT,2,,,NC,Pins 1/2/3 NC; 4/5 are the MIDI current loop.
-J3,5-pin DIN MIDI OUT,3,,,NC,Pins 1/2/3 NC; 4/5 are the MIDI current loop.
-J3,5-pin DIN MIDI OUT,4,,,DIN4,Pins 1/2/3 NC; 4/5 are the MIDI current loop.
-J3,5-pin DIN MIDI OUT,5,,,DIN5,Pins 1/2/3 NC; 4/5 are the MIDI current loop.
+J3,3.5 mm TRS MIDI OUT,T,,,J3_TIP,"MIDI OUT A; TRS Type A: tip = DIN pin 5 (sink), ring = DIN pin 4 (source), sleeve = DIN pin 2 shield to GND."
+J3,3.5 mm TRS MIDI OUT,R,,,J3_RING,"MIDI OUT A; TRS Type A: tip = DIN pin 5 (sink), ring = DIN pin 4 (source), sleeve = DIN pin 2 shield to GND."
+J3,3.5 mm TRS MIDI OUT,S,,,GND,"MIDI OUT A; TRS Type A: tip = DIN pin 5 (sink), ring = DIN pin 4 (source), sleeve = DIN pin 2 shield to GND."
+J4,3.5 mm TRS MIDI OUT,T,,,J4_TIP,"MIDI OUT B; TRS Type A: tip = DIN pin 5 (sink), ring = DIN pin 4 (source), sleeve = DIN pin 2 shield to GND."
+J4,3.5 mm TRS MIDI OUT,R,,,J4_RING,"MIDI OUT B; TRS Type A: tip = DIN pin 5 (sink), ring = DIN pin 4 (source), sleeve = DIN pin 2 shield to GND."
+J4,3.5 mm TRS MIDI OUT,S,,,GND,"MIDI OUT B; TRS Type A: tip = DIN pin 5 (sink), ring = DIN pin 4 (source), sleeve = DIN pin 2 shield to GND."
 R53,220R,1,,,MIDI_5V,
-R53,220R,2,,,DIN4,
-R54,220R,1,,,TX_GATE,
-R54,220R,2,,,DIN5,
+R53,220R,2,,,J3_RING,
+R54,220R,1,,,TX_GATE1,
+R54,220R,2,,,J3_TIP,
+R55,220R,1,,,MIDI_5V,
+R55,220R,2,,,J4_RING,
+R56,220R,1,,,TX_GATE2,
+R56,220R,2,,,J4_TIP,

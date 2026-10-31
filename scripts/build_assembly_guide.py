@@ -22,6 +22,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Image, KeepTogether, PageBreak, Paragraph, Spacer, Table, TableStyle
 
 from build_user_manual import Manual, inline
+import perfboard_layout
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'docs/assembly-guide.md'
@@ -81,14 +82,15 @@ def validate_sources(text, netlist):
                 'R20':('5.1k','3V3','P1_RING'), 'R21':('10k','P1_MODE','P1_ADC'),
                 'R30':('5.1k','3V3','P2_RING'), 'R31':('10k','P2_MODE','P2_ADC'),
                 'C1':('47uF / 35V','+9V','GND'), 'C5':('100nF','LADDER','GND')}
-    midi_expected={'R52':('10k','3V3','MIDI_OUT_TX'),'R53':('220R','MIDI_5V','DIN4'),'R54':('220R','TX_GATE','DIN5')}
+    midi_expected={'R52':('10k','3V3','MIDI_OUT_TX'),'R53':('220R','MIDI_5V','J3_RING'),'R54':('220R','TX_GATE1','J3_TIP'),
+                 'R55':('220R','MIDI_5V','J4_RING'),'R56':('220R','TX_GATE2','J4_TIP')}
     for ref,(value,a,b) in midi_expected.items():
         c=components[ref];assert c['value']==value and c['pins']=={'1':a,'2':b},ref
     assert components['D1']['pins']=={'A':'+5V','K':'MIDI_5V'}
     assert components['D2']['pins']=={'A':'USB_VBUS','K':'MIDI_5V'}
-    assert components['U4']['pins']=={'2':'MIDI_OUT_TX','1':'GND','3':'TX_GATE','14':'MIDI_5V','7':'GND','4':'GND','5':'GND','9':'GND','10':'GND','12':'GND','13':'GND'}
+    assert components['U4']['pins']=={'2':'MIDI_OUT_TX','5':'MIDI_OUT_TX','1':'GND','4':'GND','3':'TX_GATE1','6':'TX_GATE2','14':'MIDI_5V','7':'GND','9':'GND','10':'GND','12':'GND','13':'GND'}
     assert components['C6']['pins']=={'1':'MIDI_5V','2':'GND'}
-    assert components['J3']['pins']=={'1':None,'2':None,'3':None,'4':'DIN4','5':'DIN5'}
+    for ref in ('J3','J4'):assert components[ref]['pins']=={'T':f'{ref}_TIP','R':f'{ref}_RING','S':'GND'}
     for ref, (value, a, b) in expected.items():
         c = components[ref]
         assert c['value'] == value and c['pins'] == {'1':a,'2':b}, ref
@@ -248,13 +250,20 @@ def main():
     text=SOURCE.read_text()
     netlist=json.loads((ROOT/'design/electrical/netlist.json').read_text())
     # Draw first so link validation includes the generated SVG illustrations.
+    _,carrier_holes=perfboard_layout.check(netlist)
     drawings={'assembly-nano-pins.svg':nano_diagram(netlist),
-              'assembly-power.svg':power_diagram(),'assembly-ladder.svg':ladder_diagram()}
+              'assembly-power.svg':power_diagram(),'assembly-ladder.svg':ladder_diagram(),
+              'assembly-perfboard.svg':perfboard_layout.drawing(CONTENT*0.86,'placement',carrier_holes,'Manual','ManualBold'),
+              'assembly-perfboard-wiring.svg':perfboard_layout.drawing(CONTENT*0.86,'wiring',carrier_holes,'Manual','ManualBold')}
+    # The carrier wire-entry table must list every entry drawn on the board.
+    for label,net,_,_ in perfboard_layout.PADS:
+        assert f'| {label} | `{net}` |' in text,label
     for name,drawing in drawings.items():
         renderSVG.drawToFile(drawing,str(SOURCE.parent/name))
         asset=SOURCE.parent/name
         svg=asset.read_text().replace('font-family: ManualBold;', 'font-family: Arial; font-weight: bold;').replace('font-family: Manual;', 'font-family: Arial;')
-        title={'assembly-nano-pins.svg':'Nano ESP32 physical header order and signal assignments', 'assembly-power.svg':'9 V center-negative power routing', 'assembly-ladder.svg':'Four-switch series-tap ladder and extension interface'}[name]
+        title={'assembly-nano-pins.svg':'Nano ESP32 physical header order and signal assignments', 'assembly-power.svg':'9 V center-negative power routing', 'assembly-ladder.svg':'Four-switch series-tap ladder and extension interface',
+               'assembly-perfboard.svg':'6 x 26 carrier perfboard placement','assembly-perfboard-wiring.svg':'6 x 26 carrier perfboard solder-side connections'}[name]
         svg=svg.replace('<title>...</title>', '<title>'+title+'</title>').replace('<desc>...</desc>', '<desc>SIGMIDI Foot Controller v0.1 assembly guide diagram</desc>')
         asset.write_text(svg)
     prints=validate_sources(text,netlist)
@@ -345,10 +354,10 @@ def main():
     assert [c['page'] for c in doc.chapters]==list(range(1,len(sections)+1)),doc.chapters
     from pypdf import PdfReader
     reader=PdfReader(OUTPUT)
-    assert len(reader.pages)==len(sections)==16
+    assert len(reader.pages)==len(sections)==17
     assert all(page.extract_text().strip() for page in reader.pages)
     def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-    sources=[SOURCE,Path(__file__),ROOT/'scripts/build_user_manual.py',ROOT/'src/board.hpp',
+    sources=[SOURCE,Path(__file__),ROOT/'scripts/build_user_manual.py',ROOT/'scripts/perfboard_layout.py',ROOT/'src/board.hpp',
         ROOT/'design/electrical/netlist.json',ROOT/'docs/bom-items.json',ROOT/'docs/power.md',
         ROOT/'docs/hardware.md',ROOT/'docs/leds.md',ROOT/'docs/resistor-ladders.md',
         ROOT/'design/fusion/nano-esp32/mount-fit.json',ROOT/'design/fusion/nano-esp32/README.md',

@@ -182,7 +182,7 @@
   ],
   "source_sha256": {
     "src/ui.cpp": "bdea4a829eb30a5326cd3eb41d4d038b6e3f13e10b70e63dee675332c40d304f",
-    "src/display.cpp": "bddf1a94597e441e93edad4ce1ea24eb8cd2f2b7e94585a133963b5180da3dae",
+    "src/display.cpp": "a2df2c1432c71c1aafd16fc1c8254aee15116c8b12ec43793b6b00c8a78ea1b4",
     "src/display.hpp": "6b113ae0e5439672d498a8ce6444d6d9b8b3af40fb75b555379054387ffce891",
     "src/config.cpp": "fd9094e730d2b2bfbff5a20d4cc71662f8d210e8f0db6a5284529a580cebde3f",
     "src/core.cpp": "41489476905ac012acad4380e5b06119a519e94019acc841605f1ed8d59db2d9",

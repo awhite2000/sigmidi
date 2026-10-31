@@ -1,60 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 990" role="img" aria-label="MIDI OUT - 5-pin DIN current loop">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 990" role="img" aria-label="MIDI OUT - two 3.5 mm TRS current loops">
 <rect x="0" y="0" width="1400" height="990" fill="white" stroke="none"/>
 <text x="42" y="42" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#183044" text-anchor="start">SIGMIDI</text>
 <text x="195" y="41" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">FOOT CONTROLLER  /  v0.1</text>
-<text x="42" y="78" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#183044" text-anchor="start">MIDI OUT - 5-pin DIN current loop</text>
-<text x="42" y="104" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">UART1 TX at 31,250 baud, 8-N-1; 74HCT125 buffer and current-loop resistors. UART0 remains ROM-flash serial.</text>
+<text x="42" y="78" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#183044" text-anchor="start">MIDI OUT - two 3.5 mm TRS current loops</text>
+<text x="42" y="104" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">UART1 TX at 31,250 baud, 8-N-1; 74HCT125 gates 1 and 2 each drive one TRS Type A output. UART0 remains ROM-flash serial.</text>
 <line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
 <line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
 <text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
 <text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">7 / 8  |  30 OCT 2026</text>
 <text x="48" y="158" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">UART TX, idle pull-up and 74HCT125 buffer</text>
-<text x="1100" y="158" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">J3  DIN-5 female</text>
+<text x="1100" y="158" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">J3 / J4  3.5 mm TRS, Type A</text>
 <rect x="48" y="240" width="300" height="120" fill="#f6f8fa" stroke="#183044"/>
 <text x="66" y="270" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#183044" text-anchor="start">U1  Arduino Nano ESP32</text>
-<text x="66" y="296" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">UART1 TX, 31,250 baud 8-N-1</text>
-<text x="66" y="340" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">D1 / GPIO43 not connected</text>
-<circle cx="348" cy="310" r="3" stroke="#183044" fill="white"/>
-<text x="338" y="315" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">D0 / RX0  GPIO44</text>
+<text x="66" y="322" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">UART1 TX, 31,250 baud 8-N-1</text>
+<text x="66" y="344" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">D1 / GPIO43 not connected</text>
+<circle cx="348" cy="300" r="3" stroke="#183044" fill="white"/>
+<text x="338" y="305" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">D0 / RX0  GPIO44</text>
 <circle cx="430" cy="190" r="2.6" stroke="#ba344b" fill="#ba344b"/>
 <text x="438" y="185" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="start">3V3</text>
-<line x1="430" y1="190" x2="430.0" y2="231.0" stroke="#183044" stroke-width="1.8"/>
-<line x1="430.0" y1="269.0" x2="430" y2="310" stroke="#183044" stroke-width="1.8"/>
-<rect x="423.0" y="231.0" width="14" height="38" fill="white" stroke="#183044"/>
-<text x="443.0" y="245.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="start">R52</text>
-<text x="443.0" y="261.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">10k</text>
-<line x1="348" y1="310" x2="560" y2="310" stroke="#8650aa" stroke-width="1.8"/>
-<circle cx="430" cy="310" r="3" stroke="#8650aa" fill="#8650aa"/>
-<text x="470" y="302" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#8650aa" text-anchor="start">MIDI_OUT_TX</text>
-<rect x="560" y="250" width="200" height="160" fill="#edf4fc" stroke="#183044"/>
-<text x="660" y="280" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#183044" text-anchor="middle">U4  74HCT125</text>
-<circle cx="560" cy="310" r="3" stroke="#183044" fill="white"/>
-<text x="570" y="315" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">1A</text>
-<circle cx="560" cy="370" r="3" stroke="#183044" fill="white"/>
-<text x="570" y="375" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">/1OE</text>
-<circle cx="760" cy="310" r="3" stroke="#183044" fill="white"/>
-<text x="750" y="315" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">1Y</text>
-<text x="660" y="398" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#526575" text-anchor="middle">2-4 unused: see note</text>
+<line x1="430" y1="190" x2="430.0" y2="226.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="430.0" y1="264.0" x2="430" y2="300" stroke="#183044" stroke-width="1.8"/>
+<rect x="423.0" y="226.0" width="14" height="38" fill="white" stroke="#183044"/>
+<text x="443.0" y="240.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="start">R52</text>
+<text x="443.0" y="256.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">10k</text>
+<line x1="348" y1="300" x2="560" y2="300" stroke="#8650aa" stroke-width="1.8"/>
+<circle cx="430" cy="300" r="3" stroke="#8650aa" fill="#8650aa"/>
+<line x1="500" y1="300" x2="500" y2="400" stroke="#8650aa" stroke-width="1.8"/>
+<line x1="500" y1="400" x2="560" y2="400" stroke="#8650aa" stroke-width="1.8"/>
+<circle cx="500" cy="300" r="3" stroke="#8650aa" fill="#8650aa"/>
+<text x="440" y="292" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#8650aa" text-anchor="start">MIDI_OUT_TX</text>
+<rect x="560" y="250" width="200" height="230" fill="#edf4fc" stroke="#183044"/>
+<text x="660" y="278" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#183044" text-anchor="middle">U4  74HCT125</text>
+<circle cx="560" cy="300" r="3" stroke="#183044" fill="white"/>
+<text x="570" y="305" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">1A</text>
+<circle cx="560" cy="340" r="3" stroke="#183044" fill="white"/>
+<text x="570" y="345" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">/1OE</text>
+<circle cx="560" cy="400" r="3" stroke="#183044" fill="white"/>
+<text x="570" y="405" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">2A</text>
+<circle cx="560" cy="440" r="3" stroke="#183044" fill="white"/>
+<text x="570" y="445" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">/2OE</text>
+<circle cx="760" cy="300" r="3" stroke="#183044" fill="white"/>
+<text x="750" y="305" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">1Y</text>
+<circle cx="760" cy="400" r="3" stroke="#183044" fill="white"/>
+<text x="750" y="405" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">2Y</text>
+<text x="660" y="468" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#526575" text-anchor="middle">3-4 unused: see note</text>
 <circle cx="660" cy="250" r="3" stroke="#183044" fill="white"/>
 <text x="670" y="255" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start"></text>
 <text x="668" y="242" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#183044" text-anchor="start">14 VCC</text>
-<circle cx="660" cy="410" r="3" stroke="#183044" fill="white"/>
-<text x="670" y="415" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start"></text>
-<text x="668" y="428" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#183044" text-anchor="start">7 GND</text>
-<line x1="560" y1="370" x2="520" y2="370" stroke="#183044" stroke-width="1.8"/>
-<line x1="520" y1="370" x2="520" y2="440" stroke="#183044" stroke-width="1.8"/>
-<line x1="520" y1="440" x2="520" y2="449" stroke="#183044" stroke-width="1.8"/>
-<line x1="510" y1="449" x2="530" y2="449" stroke="#183044" stroke-width="1.8"/>
-<line x1="514" y1="454" x2="526" y2="454" stroke="#183044" stroke-width="1.8"/>
-<line x1="518" y1="459" x2="522" y2="459" stroke="#183044" stroke-width="1.8"/>
-<line x1="660" y1="410" x2="660" y2="440" stroke="#183044" stroke-width="1.8"/>
-<line x1="660" y1="440" x2="660" y2="449" stroke="#183044" stroke-width="1.8"/>
-<line x1="650" y1="449" x2="670" y2="449" stroke="#183044" stroke-width="1.8"/>
-<line x1="654" y1="454" x2="666" y2="454" stroke="#183044" stroke-width="1.8"/>
-<line x1="658" y1="459" x2="662" y2="459" stroke="#183044" stroke-width="1.8"/>
+<circle cx="660" cy="480" r="3" stroke="#183044" fill="white"/>
+<text x="670" y="485" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start"></text>
+<text x="668" y="498" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#183044" text-anchor="start">7 GND</text>
+<line x1="560" y1="340" x2="540" y2="340" stroke="#183044" stroke-width="1.8"/>
+<line x1="540" y1="340" x2="540" y2="349" stroke="#183044" stroke-width="1.8"/>
+<line x1="530" y1="349" x2="550" y2="349" stroke="#183044" stroke-width="1.8"/>
+<line x1="534" y1="354" x2="546" y2="354" stroke="#183044" stroke-width="1.8"/>
+<line x1="538" y1="359" x2="542" y2="359" stroke="#183044" stroke-width="1.8"/>
+<line x1="560" y1="440" x2="540" y2="440" stroke="#183044" stroke-width="1.8"/>
+<line x1="540" y1="440" x2="540" y2="449" stroke="#183044" stroke-width="1.8"/>
+<line x1="530" y1="449" x2="550" y2="449" stroke="#183044" stroke-width="1.8"/>
+<line x1="534" y1="454" x2="546" y2="454" stroke="#183044" stroke-width="1.8"/>
+<line x1="538" y1="459" x2="542" y2="459" stroke="#183044" stroke-width="1.8"/>
+<line x1="660" y1="480" x2="660" y2="500" stroke="#183044" stroke-width="1.8"/>
+<line x1="660" y1="500" x2="660" y2="509" stroke="#183044" stroke-width="1.8"/>
+<line x1="650" y1="509" x2="670" y2="509" stroke="#183044" stroke-width="1.8"/>
+<line x1="654" y1="514" x2="666" y2="514" stroke="#183044" stroke-width="1.8"/>
+<line x1="658" y1="519" x2="662" y2="519" stroke="#183044" stroke-width="1.8"/>
 <circle cx="610" cy="190" r="2.6" stroke="#ba344b" fill="#ba344b"/>
 <text x="602" y="185" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="end">MIDI_5V</text>
-<line x1="610" y1="190" x2="960" y2="190" stroke="#ba344b" stroke-width="1.8"/>
+<line x1="610" y1="190" x2="940" y2="190" stroke="#ba344b" stroke-width="1.8"/>
 <line x1="660" y1="190" x2="660" y2="250" stroke="#ba344b" stroke-width="1.8"/>
 <circle cx="660" cy="190" r="3" stroke="#ba344b" fill="#ba344b"/>
 <line x1="840" y1="190" x2="840" y2="214" stroke="#ba344b" stroke-width="1.8"/>
@@ -68,65 +81,99 @@
 <line x1="838" y1="264" x2="842" y2="264" stroke="#183044" stroke-width="1.8"/>
 <text x="860" y="216" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="start">C6</text>
 <text x="860" y="232" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">100nF</text>
-<line x1="960" y1="190" x2="1010.0" y2="190.0" stroke="#183044" stroke-width="1.8"/>
-<line x1="1050.0" y1="190.0" x2="1100" y2="190" stroke="#183044" stroke-width="1.8"/>
-<rect x="1010.0" y="183.0" width="40" height="14" fill="white" stroke="#183044"/>
-<text x="1030.0" y="163.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">R53</text>
-<text x="1030.0" y="178.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
-<line x1="760" y1="310" x2="960" y2="310" stroke="#8650aa" stroke-width="1.8"/>
-<text x="800" y="302" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#8650aa" text-anchor="start">TX_GATE</text>
-<line x1="960" y1="310" x2="1010.0" y2="310.0" stroke="#183044" stroke-width="1.8"/>
-<line x1="1050.0" y1="310.0" x2="1100" y2="310" stroke="#183044" stroke-width="1.8"/>
-<rect x="1010.0" y="303.0" width="40" height="14" fill="white" stroke="#183044"/>
-<text x="1030.0" y="283.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">R54</text>
-<text x="1030.0" y="298.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
-<text x="1075" y="206" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#ba344b" text-anchor="middle">DIN4</text>
-<text x="1075" y="326" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#8650aa" text-anchor="middle">DIN5</text>
-<rect x="1100" y="170" width="240" height="300" fill="#f6f8fa" stroke="#183044"/>
-<circle cx="1100" cy="190" r="4" stroke="#183044" fill="white"/>
-<text x="1116" y="195" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Pin 4</text>
-<circle cx="1100" cy="310" r="4" stroke="#183044" fill="white"/>
-<text x="1116" y="315" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Pin 5</text>
-<circle cx="1100" cy="370" r="4" stroke="#183044" fill="white"/>
-<text x="1116" y="375" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Pin 1</text>
-<text x="1180" y="375" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">NC - leave open</text>
-<circle cx="1100" cy="410" r="4" stroke="#183044" fill="white"/>
-<text x="1116" y="415" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Pin 2</text>
-<text x="1180" y="415" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">NC - leave open</text>
-<circle cx="1100" cy="450" r="4" stroke="#183044" fill="white"/>
-<text x="1116" y="455" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Pin 3</text>
-<text x="1180" y="455" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">NC - leave open</text>
-<rect x="48" y="520" width="620" height="180" fill="#fbf6f6" stroke="#d6e0e6"/>
-<text x="66" y="550" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">MIDI_5V supply / Schottky diode OR</text>
-<circle cx="150" cy="600" r="2.6" stroke="#ba344b" fill="#ba344b"/>
-<text x="142" y="595" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="end">+5V</text>
-<line x1="150" y1="600" x2="220" y2="600" stroke="#ba344b" stroke-width="1.8"/>
-<polygon points="220,587 220,613 250,600" fill="white" stroke="#ba344b" stroke-width="1.7"/>
-<line x1="252" y1="587" x2="252" y2="613" stroke="#ba344b" stroke-width="2.2"/>
-<text x="236" y="580" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">D1  1N5819</text>
-<line x1="252" y1="600" x2="460" y2="600" stroke="#ba344b" stroke-width="1.8"/>
-<circle cx="150" cy="660" r="2.6" stroke="#2164b4" fill="#2164b4"/>
-<text x="142" y="655" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#2164b4" text-anchor="end">USB_VBUS</text>
-<line x1="150" y1="660" x2="220" y2="660" stroke="#2164b4" stroke-width="1.8"/>
-<polygon points="220,647 220,673 250,660" fill="white" stroke="#2164b4" stroke-width="1.7"/>
-<line x1="252" y1="647" x2="252" y2="673" stroke="#2164b4" stroke-width="2.2"/>
-<text x="236" y="640" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">D2  1N5819</text>
-<line x1="252" y1="660" x2="400" y2="660" stroke="#ba344b" stroke-width="1.8"/>
-<line x1="400" y1="660" x2="400" y2="600" stroke="#ba344b" stroke-width="1.8"/>
-<circle cx="400" cy="600" r="3" stroke="#ba344b" fill="#ba344b"/>
-<circle cx="460" cy="600" r="2.6" stroke="#ba344b" fill="#ba344b"/>
-<text x="468" y="595" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="start">MIDI_5V</text>
-<text x="142" y="616" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#526575" text-anchor="end">converter</text>
-<text x="142" y="676" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#526575" text-anchor="end">Nano VBUS</text>
-<rect x="720" y="520" width="620" height="180" fill="#f6f8fa" stroke="#d6e0e6"/>
-<text x="738" y="550" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Buffer and supply notes</text>
-<text x="738" y="580" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">R52 holds the buffer input idle-high during reset.</text>
-<text x="738" y="602" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">U4 /1OE grounded; C6 directly across pins 14 / 7.</text>
-<text x="738" y="624" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Unused inputs 5 / 9 / 12 and /OE 4 / 10 / 13 to GND;</text>
-<text x="738" y="646" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">outputs 6 / 8 / 11 left open.</text>
-<text x="738" y="668" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Diodes isolate converter +5V and USB VBUS.</text>
-<rect x="48" y="740" width="1292" height="150" fill="#fff8ef" stroke="#d6e0e6"/>
-<text x="66" y="772" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">MIDI OUT loop: MIDI_5V -&gt; R53 -&gt; DIN 4 -&gt; receiver optocoupler -&gt; DIN 5 -&gt; R54 -&gt; buffer 1Y sink.</text>
-<text x="66" y="802" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">DIN pins 1, 2 (shield) and 3 are unconnected; circuit ground does not go to the DIN.</text>
-<text x="66" y="832" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">One-way output only; no receive connection to the Nano. Verify DIN-5 numbering against the chosen connector datasheet view.</text>
+<line x1="940" y1="190" x2="940" y2="230" stroke="#ba344b" stroke-width="1.8"/>
+<line x1="940" y1="230" x2="960" y2="230" stroke="#ba344b" stroke-width="1.8"/>
+<line x1="960" y1="230" x2="1010.0" y2="230.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="1050.0" y1="230.0" x2="1100" y2="230" stroke="#183044" stroke-width="1.8"/>
+<rect x="1010.0" y="223.0" width="40" height="14" fill="white" stroke="#183044"/>
+<text x="1030.0" y="203.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">R53</text>
+<text x="1030.0" y="218.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
+<line x1="760" y1="300" x2="960" y2="300" stroke="#8650aa" stroke-width="1.8"/>
+<text x="800" y="292" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#8650aa" text-anchor="start">TX_GATE1</text>
+<line x1="960" y1="300" x2="1010.0" y2="300.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="1050.0" y1="300.0" x2="1100" y2="300" stroke="#183044" stroke-width="1.8"/>
+<rect x="1010.0" y="293.0" width="40" height="14" fill="white" stroke="#183044"/>
+<text x="1030.0" y="273.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">R54</text>
+<text x="1030.0" y="288.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
+<circle cx="960" cy="430" r="2.6" stroke="#ba344b" fill="#ba344b"/>
+<text x="952" y="425" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="end">MIDI_5V</text>
+<line x1="960" y1="430" x2="1010.0" y2="430.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="1050.0" y1="430.0" x2="1100" y2="430" stroke="#183044" stroke-width="1.8"/>
+<rect x="1010.0" y="423.0" width="40" height="14" fill="white" stroke="#183044"/>
+<text x="1030.0" y="403.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">R55</text>
+<text x="1030.0" y="418.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
+<line x1="760" y1="400" x2="880" y2="400" stroke="#8650aa" stroke-width="1.8"/>
+<line x1="880" y1="400" x2="880" y2="500" stroke="#8650aa" stroke-width="1.8"/>
+<line x1="880" y1="500" x2="960" y2="500" stroke="#8650aa" stroke-width="1.8"/>
+<text x="800" y="392" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#8650aa" text-anchor="start">TX_GATE2</text>
+<line x1="960" y1="500" x2="1010.0" y2="500.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="1050.0" y1="500.0" x2="1100" y2="500" stroke="#183044" stroke-width="1.8"/>
+<rect x="1010.0" y="493.0" width="40" height="14" fill="white" stroke="#183044"/>
+<text x="1030.0" y="473.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">R56</text>
+<text x="1030.0" y="488.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
+<rect x="1100" y="200" width="240" height="170" fill="#f6f8fa" stroke="#183044"/>
+<text x="1326" y="222" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">J3  MIDI OUT A</text>
+<circle cx="1100" cy="230" r="4" stroke="#183044" fill="white"/>
+<text x="1116" y="235" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Ring</text>
+<text x="1094" y="251" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#ba344b" text-anchor="end">J3_RING</text>
+<circle cx="1100" cy="300" r="4" stroke="#183044" fill="white"/>
+<text x="1116" y="305" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Tip</text>
+<text x="1094" y="321" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#8650aa" text-anchor="end">J3_TIP</text>
+<circle cx="1100" cy="345" r="4" stroke="#183044" fill="white"/>
+<text x="1116" y="350" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Sleeve</text>
+<line x1="1100" y1="345" x2="1070" y2="345" stroke="#183044" stroke-width="1.8"/>
+<line x1="1070" y1="345" x2="1070" y2="354" stroke="#183044" stroke-width="1.8"/>
+<line x1="1060" y1="354" x2="1080" y2="354" stroke="#183044" stroke-width="1.8"/>
+<line x1="1064" y1="359" x2="1076" y2="359" stroke="#183044" stroke-width="1.8"/>
+<line x1="1068" y1="364" x2="1072" y2="364" stroke="#183044" stroke-width="1.8"/>
+<text x="1180" y="350" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">GND - cable shield</text>
+<rect x="1100" y="400" width="240" height="170" fill="#f6f8fa" stroke="#183044"/>
+<text x="1326" y="422" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">J4  MIDI OUT B</text>
+<circle cx="1100" cy="430" r="4" stroke="#183044" fill="white"/>
+<text x="1116" y="435" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Ring</text>
+<text x="1094" y="451" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#ba344b" text-anchor="end">J4_RING</text>
+<circle cx="1100" cy="500" r="4" stroke="#183044" fill="white"/>
+<text x="1116" y="505" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Tip</text>
+<text x="1094" y="521" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#8650aa" text-anchor="end">J4_TIP</text>
+<circle cx="1100" cy="545" r="4" stroke="#183044" fill="white"/>
+<text x="1116" y="550" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Sleeve</text>
+<line x1="1100" y1="545" x2="1070" y2="545" stroke="#183044" stroke-width="1.8"/>
+<line x1="1070" y1="545" x2="1070" y2="554" stroke="#183044" stroke-width="1.8"/>
+<line x1="1060" y1="554" x2="1080" y2="554" stroke="#183044" stroke-width="1.8"/>
+<line x1="1064" y1="559" x2="1076" y2="559" stroke="#183044" stroke-width="1.8"/>
+<line x1="1068" y1="564" x2="1072" y2="564" stroke="#183044" stroke-width="1.8"/>
+<text x="1180" y="550" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">GND - cable shield</text>
+<rect x="48" y="600" width="620" height="170" fill="#fbf6f6" stroke="#d6e0e6"/>
+<text x="66" y="630" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">MIDI_5V supply / Schottky diode OR</text>
+<circle cx="150" cy="680" r="2.6" stroke="#ba344b" fill="#ba344b"/>
+<text x="142" y="675" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="end">+5V</text>
+<line x1="150" y1="680" x2="220" y2="680" stroke="#ba344b" stroke-width="1.8"/>
+<polygon points="220,667 220,693 250,680" fill="white" stroke="#ba344b" stroke-width="1.7"/>
+<line x1="252" y1="667" x2="252" y2="693" stroke="#ba344b" stroke-width="2.2"/>
+<text x="236" y="660" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">D1  1N5819</text>
+<line x1="252" y1="680" x2="460" y2="680" stroke="#ba344b" stroke-width="1.8"/>
+<circle cx="150" cy="740" r="2.6" stroke="#2164b4" fill="#2164b4"/>
+<text x="142" y="735" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#2164b4" text-anchor="end">USB_VBUS</text>
+<line x1="150" y1="740" x2="220" y2="740" stroke="#2164b4" stroke-width="1.8"/>
+<polygon points="220,727 220,753 250,740" fill="white" stroke="#2164b4" stroke-width="1.7"/>
+<line x1="252" y1="727" x2="252" y2="753" stroke="#2164b4" stroke-width="2.2"/>
+<text x="236" y="720" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">D2  1N5819</text>
+<line x1="252" y1="740" x2="400" y2="740" stroke="#ba344b" stroke-width="1.8"/>
+<line x1="400" y1="740" x2="400" y2="680" stroke="#ba344b" stroke-width="1.8"/>
+<circle cx="400" cy="680" r="3" stroke="#ba344b" fill="#ba344b"/>
+<circle cx="460" cy="680" r="2.6" stroke="#ba344b" fill="#ba344b"/>
+<text x="468" y="675" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="start">MIDI_5V</text>
+<text x="142" y="696" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#526575" text-anchor="end">converter</text>
+<text x="142" y="756" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#526575" text-anchor="end">Nano VBUS</text>
+<rect x="720" y="600" width="620" height="170" fill="#f6f8fa" stroke="#d6e0e6"/>
+<text x="738" y="630" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Buffer and supply notes</text>
+<text x="738" y="660" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">R52 holds both buffer inputs idle-high during reset.</text>
+<text x="738" y="681" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">U4 /1OE and /2OE grounded; C6 directly across pins 14 / 7.</text>
+<text x="738" y="702" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Unused inputs 9 / 12 and /OE 10 / 13 to GND;</text>
+<text x="738" y="723" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">outputs 8 / 11 left open.</text>
+<text x="738" y="744" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Diodes isolate converter +5V and USB VBUS.</text>
+<rect x="48" y="790" width="1292" height="135" fill="#fff8ef" stroke="#d6e0e6"/>
+<text x="66" y="820" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Each loop: MIDI_5V -&gt; 220R -&gt; ring -&gt; receiver optocoupler -&gt; tip -&gt; 220R -&gt; buffer output sink (J3: R53/R54/1Y, J4: R55/R56/2Y).</text>
+<text x="66" y="850" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">TRS Type A: tip = DIN pin 5, ring = DIN pin 4, sleeve = DIN pin 2. Each sleeve connects to GND to ground the cable shield.</text>
+<text x="66" y="880" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">One-way outputs only; no receive connection to the Nano. Use Type A adapters or cables for 5-pin DIN receivers.</text>
 </svg>

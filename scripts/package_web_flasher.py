@@ -61,7 +61,7 @@ def package(root):
     archive_name = f"sigmidi-foot-controller-{info['version']}-web-flasher.zip"
     with tempfile.TemporaryDirectory(prefix='web-flasher-', dir=output) as temp:
         site = Path(temp) / 'site'
-        shutil.copytree(source, site, ignore=shutil.ignore_patterns('package.json'))
+        shutil.copytree(source, site, ignore=shutil.ignore_patterns('package.json', '.DS_Store'))
         page = site / 'index.html'
         page.write_text(page.read_text().replace('__PROJECT_VERSION__', info['version']))
         firmware = site / 'firmware'

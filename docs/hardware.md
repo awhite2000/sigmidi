@@ -30,14 +30,14 @@ The firmware uses **ESP32 GPIO numbers**, independently of Arduino IDE pin-numbe
 | LCD CS | D10 | 21 | Active-low select |
 | LCD DIN | D11 | 38 | SPI MOSI |
 | LCD RST | D12 | 47 | Active-low reset |
-| UART1 MIDI OUT TX | D0 / RX0 pad | 44 | UART1 TX to 74HCT125 DIN output stage |
+| UART1 MIDI OUT TX | D0 / RX0 pad | 44 | UART1 TX to 74HCT125 TRS output stage |
 | USB VBUS sense | A4 | 11 | 100 kΩ / 150 kΩ divider below |
 | LCD VCC and BL | 3V3 | — | Always-on backlight |
 | All grounds | GND | — | Common return |
 
 UART1 is explicitly mapped to GPIO44 (the Nano labels this header pad RX0), leaving D1/GPIO43 UART0 TX free of ROM boot text. D1 is intentionally unwired; D0's normal RX function is not used. UART1 MIDI OUT runs at 31,250 baud, 8-N-1 and does not alter the USB-C device or flashing interface.
 
-The DIN MIDI OUT runs from `MIDI_5V`, a Schottky diode-OR of USB VBUS and converter +5 V. The separate diodes prevent source back-feed.
+The TRS MIDI OUT stage runs from `MIDI_5V`, a Schottky diode-OR of USB VBUS and converter +5 V. The separate diodes prevent source back-feed.
 
 The display's eight-pin connector stays in physical order **BL, RST, D/C, CS, SCL/CLK, SDA/DIN, GND, VCC**. Connect to the signals above. The Nano's D13/default SPI-clock pin is deliberately unused because it also drives the onboard LED. GPIO19/20 are exclusively USB D−/D+ inside the USB-C connection. Avoid GPIO0/3/45/46 strapping pins and leave unused Nano pins disconnected. The three analog inputs all use ADC1, including during Wi-Fi operation. Pin constants and uniqueness checks are in `src/board.hpp`.
 
@@ -53,17 +53,21 @@ Nano VBUS (USB 5 V) --- R50 100 kΩ ---+--- A4 / GPIO11
                                      GND
 ```
 
-Use 1% resistors. The divider gives about 3.0 V with a 5 V USB supply and discharges the sense input when unplugged. Never connect 5 V directly to GPIO11. This monitors host VBUS while the controller remains powered through VIN; it does not supply power or join external 5 V to USB. Native USB MIDI uses the existing USB-C connector and needs no external USB adapter. The DIN MIDI OUT stage takes its 5 V rail from a Schottky diode OR of USB VBUS and the converter’s +5 V output; the diodes prevent either source from feeding the other.
+Use 1% resistors. The divider gives about 3.0 V with a 5 V USB supply and discharges the sense input when unplugged. Never connect 5 V directly to GPIO11. This monitors host VBUS while the controller remains powered through VIN; it does not supply power or join external 5 V to USB. Native USB MIDI uses the existing USB-C connector and needs no external USB adapter. The TRS MIDI OUT stage takes its 5 V rail from a Schottky diode OR of USB VBUS and the converter’s +5 V output; the diodes prevent either source from feeding the other.
 
 LCD VCC → 3V3 and GND → GND; use the factory four-wire SPI configuration. No MISO signal is needed. Connect BL to 3V3 for always-on backlight; no additional GPIO is allocated. The display is not touch-sensitive. The module uses its supplied GH1.25 eight-pin connector; follow the signal names on the module, rather than wire colors. Landscape orientation uses a 280×240 drawing area, MADCTL 0x70 (RGB), RGB565 pixels, inversion on, and column/row offsets (20, 0): controller columns 20–299 and rows 0–239. The driver runs SPI at 10 MHz and applies the landscape mapping after vendor initialization. The saved Enclosure variant selects Right (0° screen, Right switch order) or Left (180° screen, mirrored switch order) through software stripe/window mapping; controller register settings remain the same. New configurations default to the preferred Left enclosure with the screen and ribbon on the left. For an existing saved setup choose Left, using Wi-Fi Settings → Enclosure variant or LCD EDIT CONFIG → ENCLOSURE. Verify physical viewing direction and red/blue color order on the actual module. The pin assignment reserves native USB and boot straps.
 
-## Buffered 5-pin DIN MIDI OUT
+## Buffered TRS MIDI OUT
 
-The one-way output uses UART1 TX on the Nano D0/RX0 pad at **GPIO44**, at 31,250 baud, 8 data bits, no parity, 1 stop bit. UART0 D1/TX0 GPIO43 stays unconnected to avoid boot-ROM output. The Nano source pin first drives a 74HCT125 gate; its active-low enable is grounded, its supply is `MIDI_5V`, and a 100 nF ceramic bypass is placed at the IC supply pins. Tie the unused gate inputs (pins 5, 9, 12) and enables (pins 4, 10, 13) to GND; leave outputs 6, 8 and 11 open. A 10 kΩ resistor from the buffer input to 3V3 holds the input at MIDI idle-high during reset. Do not connect the DIN loop directly to the Nano GPIO.
+The one-way output uses UART1 TX on the Nano D0/RX0 pad at **GPIO44**, at 31,250 baud, 8 data bits, no parity, 1 stop bit. UART0 D1/TX0 GPIO43 stays unconnected to avoid boot-ROM output. The Nano source pin drives the joined inputs of 74HCT125 gates 1 and 2 (pins 2 and 5); their active-low enables (pins 1 and 4) are grounded, the supply is `MIDI_5V`, and a 100 nF ceramic bypass is placed at the IC supply pins. Output 1Y (pin 3) drives J3 and output 2Y (pin 6) drives J4, so each socket has its own buffer. Tie the unused gate inputs (pins 9, 12) and enables (pins 10, 13) to GND; leave outputs 8 and 11 open. A 10 kΩ resistor from the buffer inputs to 3V3 holds them at MIDI idle-high during reset. Do not connect a MIDI loop directly to the Nano GPIO.
 
-Use a diode-OR supply: a Schottky diode from converter +5V and a second from USB VBUS feed `MIDI_5V` (anodes to sources, cathodes joined). This powers the interface in USB-only and 9 V/converter operation while preventing source back-feed. The DIN current loop is +5V rail → 220 Ω → DIN pin 4 → receiver optocoupler → DIN pin 5 → 220 Ω → buffered TX sink. DIN pins 1, 2 (shield) and 3 are unconnected; do not connect controller ground to the MIDI DIN. Verify connector pin numbering against its datasheet view. The USB-C connection remains native USB MIDI and ROM flashing; UART1 is a separate physical MIDI OUT.
+Use a diode-OR supply: a Schottky diode from converter +5V and a second from USB VBUS feed `MIDI_5V` (anodes to sources, cathodes joined). This powers the interface in USB-only and 9 V/converter operation while preventing source back-feed. Each 3.5 mm TRS socket uses the MIDI TRS Type A mapping and its own current loop: `MIDI_5V` → 220 Ω → ring (DIN pin 4) → receiver optocoupler → tip (DIN pin 5) → 220 Ω → its buffer output. J3 uses R53/R54 and 1Y; J4 uses R55/R56 and 2Y. Each sleeve (DIN pin 2, shield) connects to GND so the cable shield is grounded at the sending end. Identify the tip, ring and sleeve lugs on the selected socket before wiring. Use Type A cables or adapters for 5-pin DIN receivers. The USB-C connection remains native USB MIDI and ROM flashing; UART1 is a separate physical MIDI OUT.
 
-The DIN output has not been electrically bench-qualified. Before attaching equipment, check diode direction, 5 V rail isolation, DIN pin numbering and output current-loop polarity with a current-limited supply and MIDI test receiver.
+The TRS outputs have not been electrically bench-qualified. Before attaching equipment, check diode direction, 5 V rail isolation, tip/ring wiring and output current-loop polarity on both sockets with a current-limited supply and MIDI test receiver.
+
+## Carrier perfboard
+
+One 6 x 26 hole, 2.54 mm perfboard carries every resistor and capacitor that connects directly to the Nano (R7/R8/C5 and the first ladder segment R9, R20/R21, R30/R31, R50/R51, C1), together with the complete TRS MIDI OUT stage (R52, D1/D2, U4 in a DIP-14 socket, C6, R53-R56). Off-board wires enter at labelled holes. [Assembly guide step 7](assembly-guide.md#7-build-the-carrier-perfboard) gives the placement, trails, insulated links and wire-entry table; `scripts/perfboard_layout.py` checks the layout against the netlist.
 
 ## Rotary encoder
 

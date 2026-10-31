@@ -566,20 +566,20 @@
     {
       "id": "W04",
       "group": "Wiring",
-      "part": "Insulated solder support",
-      "specification": "Small perfboard or insulated solder strip for discrete resistors/capacitors",
+      "part": "Carrier perfboard and U4 socket",
+      "specification": "6 x 26 hole, 2.54 mm perfboard (15.2 x 66 mm hole field) plus one DIP-14 socket; carries the U1-side passives, ladder top segment and TRS MIDI OUT stage",
       "quantity": {
-        "modular_4": "AR",
-        "modular_6": "AR",
-        "modular_8": "AR",
-        "modular_10": "AR",
-        "main_10": "AR"
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
       },
       "unit": "set",
       "fit_condition": "Required",
       "electrical_refs": [],
       "purchase_unit": "Each",
-      "notes": "No custom carrier PCB or connector family is finalized; allocate space and mounting before cutting board.",
+      "notes": "Layout in assembly guide step 7: bare tinned trails plus three insulated links. Mount on insulated standoffs or tape; location set in the dry fit.",
       "source": "Project design"
     },
     {
@@ -951,7 +951,7 @@
       "id": "E18",
       "group": "MIDI OUT",
       "part": "74HCT125 quad buffer",
-      "specification": "5 V TTL-compatible quad buffer; DIP-14 or SOIC-14; gate 1 used, /OE grounded; unused inputs 5/9/12 and /OE 4/10/13 to GND",
+      "specification": "5 V TTL-compatible quad buffer; DIP-14 or SOIC-14; gates 1 and 2 used with inputs 2/5 joined and /OE 1/4 grounded; unused inputs 9/12 and /OE 10/13 to GND",
       "quantity": {
         "modular_4": 1,
         "modular_6": 1,
@@ -960,12 +960,12 @@
         "main_10": 1
       },
       "unit": "piece",
-      "fit_condition": "Required for MIDI DIN output",
+      "fit_condition": "Required for TRS MIDI output",
       "electrical_refs": [
         "U4"
       ],
       "purchase_unit": "Each",
-      "notes": "Power from isolated MIDI_5V; 100 nF bypass close to pins 14/7. Verify exact package pinout before wiring.",
+      "notes": "Power from isolated MIDI_5V; 100 nF bypass close to pins 14/7. Output 1Y drives J3, 2Y drives J4. Verify exact package pinout before wiring.",
       "source": "Texas Instruments SN74HCT125 datasheet"
     },
     {
@@ -981,7 +981,7 @@
         "main_10": 2
       },
       "unit": "piece",
-      "fit_condition": "Required for MIDI DIN output",
+      "fit_condition": "Required for TRS MIDI output",
       "electrical_refs": [
         "D1",
         "D2"
@@ -1003,54 +1003,56 @@
         "main_10": 1
       },
       "unit": "piece",
-      "fit_condition": "Required for MIDI DIN output",
+      "fit_condition": "Required for TRS MIDI output",
       "electrical_refs": [
         "R52"
       ],
       "purchase_unit": "Each",
-      "notes": "Holds 74HCT125 input high during Nano reset; 1% metal-film.",
+      "notes": "Holds both 74HCT125 inputs high during Nano reset; 1% metal-film.",
       "source": "Project design"
     },
     {
       "id": "E21",
       "group": "MIDI OUT",
       "part": "220 Ohm MIDI current-loop resistor",
-      "specification": "1% metal-film, through-hole; 0.25 W. Terminals MIDI_5V to DIN4",
+      "specification": "1% metal-film, through-hole; 0.25 W. Terminals MIDI_5V to J3_RING / J4_RING",
       "quantity": {
-        "modular_4": 1,
-        "modular_6": 1,
-        "modular_8": 1,
-        "modular_10": 1,
-        "main_10": 1
+        "modular_4": 2,
+        "modular_6": 2,
+        "modular_8": 2,
+        "modular_10": 2,
+        "main_10": 2
       },
       "unit": "piece",
-      "fit_condition": "Required for MIDI DIN output",
+      "fit_condition": "Required for TRS MIDI output",
       "electrical_refs": [
-        "R53"
+        "R53",
+        "R55"
       ],
       "purchase_unit": "Each",
-      "notes": "1% metal-film; current-source leg to DIN pin 4.",
+      "notes": "1% metal-film; current-source leg to each TRS ring (DIN pin 4).",
       "source": "Project design"
     },
     {
       "id": "E22",
       "group": "MIDI OUT",
       "part": "220 Ohm MIDI current-loop resistor",
-      "specification": "1% metal-film, through-hole; 0.25 W. Terminals TX_GATE to DIN5",
+      "specification": "1% metal-film, through-hole; 0.25 W. Terminals TX_GATE1 to J3_TIP / TX_GATE2 to J4_TIP",
       "quantity": {
-        "modular_4": 1,
-        "modular_6": 1,
-        "modular_8": 1,
-        "modular_10": 1,
-        "main_10": 1
+        "modular_4": 2,
+        "modular_6": 2,
+        "modular_8": 2,
+        "modular_10": 2,
+        "main_10": 2
       },
       "unit": "piece",
-      "fit_condition": "Required for MIDI DIN output",
+      "fit_condition": "Required for TRS MIDI output",
       "electrical_refs": [
-        "R54"
+        "R54",
+        "R56"
       ],
       "purchase_unit": "Each",
-      "notes": "1% metal-film; buffered sink leg to DIN pin 5.",
+      "notes": "1% metal-film; buffered sink leg to each TRS tip (DIN pin 5).",
       "source": "Project design"
     },
     {
@@ -1066,7 +1068,7 @@
         "main_10": 1
       },
       "unit": "piece",
-      "fit_condition": "Required for MIDI DIN output",
+      "fit_condition": "Required for TRS MIDI output",
       "electrical_refs": [
         "C6"
       ],
@@ -1077,22 +1079,23 @@
     {
       "id": "E24",
       "group": "MIDI OUT",
-      "part": "5-pin DIN MIDI OUT connector",
-      "specification": "Female DIN-5 panel or PCB connector with pins 4/5 used for MIDI current loop",
+      "part": "3.5 mm TRS MIDI OUT sockets",
+      "specification": "3.5 mm stereo (TRS) panel-mount socket; wired MIDI TRS Type A",
       "quantity": {
-        "modular_4": 1,
-        "modular_6": 1,
-        "modular_8": 1,
-        "modular_10": 1,
-        "main_10": 1
+        "modular_4": 2,
+        "modular_6": 2,
+        "modular_8": 2,
+        "modular_10": 2,
+        "main_10": 2
       },
       "unit": "piece",
-      "fit_condition": "Required for MIDI DIN output",
+      "fit_condition": "Required for TRS MIDI output",
       "electrical_refs": [
-        "J3"
+        "J3",
+        "J4"
       ],
       "purchase_unit": "Each",
-      "notes": "Pins 1, 2 (shield), and 3 not connected; verify numbering view on the selected connector.",
+      "notes": "Tip = DIN pin 5 (sink), ring = DIN pin 4 (source), sleeve = DIN pin 2 shield to GND. Verify tip/ring/sleeve lugs on the selected socket.",
       "source": "Project design"
     }
   ]

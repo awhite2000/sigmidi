@@ -20,7 +20,7 @@
 <text x="42" y="428" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Prototype verification</text>
 <text x="42" y="457" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">With power disconnected: continuity-check TRS terminals, power polarity, ground and all off-sheet nets.</text>
 <text x="42" y="482" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Verify regulated +5V, then U1 3V3. Flash the passive-input firmware and recalibrate both pedals.</text>
-<text x="42" y="507" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Check resistor-mode HIGH / pot-mode high impedance, ADC ranges, ladder taps, encoder, USB MIDI and BLE MIDI.</text>
+<text x="42" y="507" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Check resistor-mode HIGH / pot-mode high impedance, ADC ranges, ladder taps, encoder, TRS, USB and BLE MIDI.</text>
 <text x="42" y="532" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Each passive pedal input uses two resistors. Connect only unpowered variable-resistor or pot pedals.</text>
 <text x="42" y="557" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">This document does not establish ESD compliance, measured analog accuracy or simultaneous-supply qualification.</text>
 <text x="42" y="596" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Source documents checked</text>
@@ -39,6 +39,6 @@
 <text x="42" y="785" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">Espressif self-powered USB devices</text>
 <text x="445" y="785" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">VBUS sense: 100k / 150k divider to A4 / GPIO11</text>
 <text x="42" y="812" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">MIDI Association - MIDI 1.0 electrical specifications</text>
-<text x="445" y="812" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">5-pin DIN current-loop interface reference</text>
+<text x="445" y="812" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">5 V current-loop interface; TRS Type A pin mapping</text>
 <text x="42" y="918" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">Source URLs, BOM, exact terminal connectivity and generated SVG sheets are in design/electrical/.</text>
 </svg>

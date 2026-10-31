@@ -654,18 +654,19 @@
       "package": "DIP-14/SOIC-14 quad buffer",
       "pins": {
         "2": "MIDI_OUT_TX",
+        "5": "MIDI_OUT_TX",
         "1": "GND",
-        "3": "TX_GATE",
+        "4": "GND",
+        "3": "TX_GATE1",
+        "6": "TX_GATE2",
         "14": "MIDI_5V",
         "7": "GND",
-        "4": "GND",
-        "5": "GND",
         "9": "GND",
         "10": "GND",
         "12": "GND",
         "13": "GND"
       },
-      "note": "Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+      "note": "Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7."
     },
     "R52": {
       "value": "10k",
@@ -704,23 +705,31 @@
       "note": ""
     },
     "J3": {
-      "value": "5-pin DIN MIDI OUT",
-      "package": "DIN-5 output connector",
+      "value": "3.5 mm TRS MIDI OUT",
+      "package": "3.5 mm stereo panel socket",
       "pins": {
-        "1": null,
-        "2": null,
-        "3": null,
-        "4": "DIN4",
-        "5": "DIN5"
+        "T": "J3_TIP",
+        "R": "J3_RING",
+        "S": "GND"
       },
-      "note": "Pins 1/2/3 NC; 4/5 are the MIDI current loop."
+      "note": "MIDI OUT A; TRS Type A: tip = DIN pin 5 (sink), ring = DIN pin 4 (source), sleeve = DIN pin 2 shield to GND."
+    },
+    "J4": {
+      "value": "3.5 mm TRS MIDI OUT",
+      "package": "3.5 mm stereo panel socket",
+      "pins": {
+        "T": "J4_TIP",
+        "R": "J4_RING",
+        "S": "GND"
+      },
+      "note": "MIDI OUT B; TRS Type A: tip = DIN pin 5 (sink), ring = DIN pin 4 (source), sleeve = DIN pin 2 shield to GND."
     },
     "R53": {
       "value": "220R",
       "package": "1% resistor",
       "pins": {
         "1": "MIDI_5V",
-        "2": "DIN4"
+        "2": "J3_RING"
       },
       "note": ""
     },
@@ -728,8 +737,26 @@
       "value": "220R",
       "package": "1% resistor",
       "pins": {
-        "1": "TX_GATE",
-        "2": "DIN5"
+        "1": "TX_GATE1",
+        "2": "J3_TIP"
+      },
+      "note": ""
+    },
+    "R55": {
+      "value": "220R",
+      "package": "1% resistor",
+      "pins": {
+        "1": "MIDI_5V",
+        "2": "J4_RING"
+      },
+      "note": ""
+    },
+    "R56": {
+      "value": "220R",
+      "package": "1% resistor",
+      "pins": {
+        "1": "TX_GATE2",
+        "2": "J4_TIP"
       },
       "note": ""
     }
@@ -763,14 +790,6 @@
       "R20.1",
       "R30.1",
       "R52.1"
-    ],
-    "DIN4": [
-      "J3.4",
-      "R53.2"
-    ],
-    "DIN5": [
-      "J3.5",
-      "R54.2"
     ],
     "ENC_A": [
       "U1.JP2:7",
@@ -819,14 +838,31 @@
       "LED9.GND",
       "LED10.GND",
       "U4.1",
-      "U4.7",
       "U4.4",
-      "U4.5",
+      "U4.7",
       "U4.9",
       "U4.10",
       "U4.12",
       "U4.13",
-      "C6.2"
+      "C6.2",
+      "J3.S",
+      "J4.S"
+    ],
+    "J3_RING": [
+      "J3.R",
+      "R53.2"
+    ],
+    "J3_TIP": [
+      "J3.T",
+      "R54.2"
+    ],
+    "J4_RING": [
+      "J4.R",
+      "R55.2"
+    ],
+    "J4_TIP": [
+      "J4.T",
+      "R56.2"
     ],
     "L1": [
       "LED1.DOUT",
@@ -900,11 +936,13 @@
       "D1.K",
       "D2.K",
       "C6.1",
-      "R53.1"
+      "R53.1",
+      "R55.1"
     ],
     "MIDI_OUT_TX": [
       "U1.JP2:2",
       "U4.2",
+      "U4.5",
       "R52.2"
     ],
     "P1_ADC": [
@@ -982,9 +1020,13 @@
       "SW9.1",
       "R18.1"
     ],
-    "TX_GATE": [
+    "TX_GATE1": [
       "U4.3",
       "R54.1"
+    ],
+    "TX_GATE2": [
+      "U4.6",
+      "R56.1"
     ],
     "USB_SENSE": [
       "U1.JP1:8",
@@ -1035,7 +1077,7 @@
     },
     {
       "title": "MIDI Association - MIDI 1.0 electrical specifications",
-      "description": "5-pin DIN current-loop interface reference",
+      "description": "5 V current-loop interface; TRS Type A pin mapping",
       "url": "https://midi.org/midi-1-0-detailed-specification"
     }
   ]

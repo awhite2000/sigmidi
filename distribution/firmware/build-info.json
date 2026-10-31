@@ -2,9 +2,9 @@
   "name": "SIGMIDI Foot Controller",
   "version": "0.1",
   "firmware_name": "sigmidi-foot-controller-0.1.bin",
-  "build_id": "50dc963fe4d8",
-  "built_at": "2026-10-31T17:39:15.391426+00:00",
-  "source_sha256": "50dc963fe4d8b74314f8125408f3de2345779f596414cc4298d18a7b37c64d3a",
+  "build_id": "dc67b093bac7",
+  "built_at": "2026-10-31T20:46:24.791536+00:00",
+  "source_sha256": "dc67b093bac71ae2cf7cec075b577951fb0712f3f95729b09cfa996f226909c8",
   "source_files": {
     "src/CMakeLists.txt": "83e56ea156837ecb87ef29d7415a8f3bb9d5077cda04dd668678bc9863a873bc",
     "src/app.hpp": "d3f9b7174fd3f990d942649ca9e93168d6896cf32b1fc5aca5e5d992fe91528d",
@@ -17,7 +17,7 @@
     "src/core.hpp": "d0b05afc7bedbe07874e5f9d68d4c1ad256db40ae09d351ea57a635d92020c7c",
     "src/counters.cpp": "8d17090ad44f4401d0321f5cfceead885ed8b3e97d27b1caca9341907cbde6fa",
     "src/counters.hpp": "e60bf4a979e0edfe3e8c935430e3b5fb37800b93d3584592d1ab29cc48699d72",
-    "src/display.cpp": "bddf1a94597e441e93edad4ce1ea24eb8cd2f2b7e94585a133963b5180da3dae",
+    "src/display.cpp": "a2df2c1432c71c1aafd16fc1c8254aee15116c8b12ec43793b6b00c8a78ea1b4",
     "src/display.hpp": "6b113ae0e5439672d498a8ce6444d6d9b8b3af40fb75b555379054387ffce891",
     "src/encoder.hpp": "e023a17d2b82a531ca63aa049613b31d549c4f5d757bb6ebd00729dfc98a5349",
     "src/hardware.cpp": "7edb68e6a30e719f416b0f5a3bf8e54f892b559b8edf774c7ec6b6b9cea73af7",
@@ -43,9 +43,9 @@
     "partitions.csv": "0fc87e012db3c478107e047978fd142c43f104edb0dfb5546537d16f49a95300"
   },
   "sha256": {
-    "bootloader.bin": "5c05a48c63e9f2a66c75f515e76b633566d4fd8eae9967c01a81555bb67b57c2",
+    "bootloader.bin": "040af7a6d15d37f566e393e8d590be3defa8662df321157211daf19603695867",
     "partitions.bin": "37f9719078927bf594a883c81ad80dd4e6d179c8db193fbded90851178aa39e7",
-    "firmware.bin": "4978878283023b3661d6557ac3c6b9aa77c22bc85b2530db304c5d9fa81838a2"
+    "firmware.bin": "cf5031df8ada6df0fb59e0112f959237e9ce775afca7a751c1feb73564a1fd33"
   },
   "chip": "ESP32-S3",
   "flash_bytes": 16777216,

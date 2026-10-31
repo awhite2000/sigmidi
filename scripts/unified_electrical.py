@@ -177,8 +177,8 @@ def render(m):
         text(x+18,2232,ref,20);text(x+18,2270,m.TAPS[i-1][0],25,bold=True)
         text(x,2410,f'T{i} / LED{i}',18,anchor='middle')
         previous=node
-    # Buffered DIN MIDI OUT (UART1 on Nano D0/GPIO44); UART0 TX stays unconnected.
-    text(3300,1700,'MIDI OUT / DIN-5 / UART1 31,250 baud',21,anchor='middle',bold=True,color=m.PURPLE)
+    # Buffered TRS MIDI OUT (UART1 on Nano D0/GPIO44); UART0 TX stays unconnected.
+    text(2990,1675,'MIDI OUT / 2 x TRS / UART1 31,250 baud',21,bold=True,color=m.PURPLE)
     # D1/D2 source-isolate converter +5V and USB VBUS into MIDI_5V.
     pin('D1','A',2860,1690);pin('D1','K',2980,1690)
     s.path([(2880,1676),(2880,1704),(2928,1690)],m.RED,1.8,fill='white',closed=True);s.line(2930,1676,2930,1704,m.RED,2.4)
@@ -191,30 +191,40 @@ def render(m):
     text(3060,1720,'MIDI_5V',14,bold=True,color=m.RED)
     # R52 pulls the UART idle-high; U2 pins 1/8 and R52 share one 3V3 spine.
     res('R52',(2820,1860),(2940,1860))
-    wire('MIDI_OUT_TX',up['JP2:2'],(2460,up['JP2:2'][1]),(2460,1900),(2940,1900));wire('MIDI_OUT_TX',(2940,1860),(2940,1900));wire('MIDI_OUT_TX',(2940,1900),(3000,1900),(3000,1860),(3100,1860))
+    wire('MIDI_OUT_TX',up['JP2:2'],(2460,up['JP2:2'][1]),(2460,1900),(2940,1900));wire('MIDI_OUT_TX',(2940,1860),(2940,1900));wire('MIDI_OUT_TX',(2940,1900),(3000,1900),(3000,1840),(3100,1840));wire('MIDI_OUT_TX',(3000,1880),(3100,1880))
     # U4 supply pins are drawn outside the body; no supply wire crosses the symbol.
-    box(3100,1800,200,180,'#edf4fc')
-    text(3200,1830,'U4  74HCT125',18,anchor='middle',bold=True)
-    pin('U4','2',3100,1860,'1A',side='left');pin('U4','1',3100,1920,'/OE',side='left')
-    pin('U4','3',3300,1860,'1Y');pin('U4','14',3200,1770,'VCC');pin('U4','7',3200,2010,'GND')
+    box(3100,1790,200,200,'#edf4fc')
+    text(3200,1818,'U4  74HCT125',18,anchor='middle',bold=True)
+    pin('U4','2',3100,1840,'1A',side='left');pin('U4','5',3100,1880,'2A',side='left')
+    pin('U4','1',3100,1920,'/1OE',side='left');pin('U4','4',3100,1960,'/2OE',side='left')
+    pin('U4','3',3300,1840,'1Y');pin('U4','6',3300,1920,'2Y')
+    pin('U4','14',3200,1770,'VCC');pin('U4','7',3200,2010,'GND')
     wire('MIDI_5V',(3200,1730),(3200,1770))
-    wire('GND',(3100,1920),(3070,1920),(3070,2100),(3750,2100),(3750,2460))
+    wire('GND',(3100,1920),(3070,1920),(3070,2100),(3750,2100),(3750,2460));wire('GND',(3100,1960),(3070,1960))
     wire('GND',(3200,2010),(3200,2100),(3750,2100))
-    # Unused gate inputs and enables are tied low; outputs 6/8/11 stay open.
-    for i,p in enumerate(['4','5','9','10','12','13']):
+    # Unused gate inputs and enables are tied low; outputs 8/11 stay open.
+    for i,p in enumerate(['9','10','12','13']):
         x=3220+20*i;pin('U4',p,x,2010);wire('GND',(x,2010),(x,2100))
-    # DIN current-loop resistors are inline with connector pins 4 and 5.
-    box(3500,1760,180,300,'white');text(3590,1790,'J3 DIN OUT',16,anchor='middle',bold=True)
-    for pinno,y in [('4',1840),('5',1940),('1',1980),('2',2020),('3',2050)]:
-        pin('J3',pinno,3500,y,pinno,side='left')
-        if pinno in ('1','2','3'):text(3540,y+5,'NC',11,color=m.MUTED)
-    res('R53',(3360,1840),(3460,1840));wire('MIDI_5V',(3340,1730),(3340,1840),(3360,1840));wire('DIN4',(3460,1840),(3500,1840))
-    res('R54',(3360,1940),(3460,1940));wire('TX_GATE',(3300,1860),(3330,1860),(3330,1940),(3360,1940));wire('DIN5',(3460,1940),(3500,1940))
-    # C6 sits beside R53/R54, across MIDI_5V and GND.
-    cap('C6',(3340,2020),(3340,2080))
-    wire('MIDI_5V',(3340,1840),(3340,2020))
-    wire('GND',(3340,2080),(3340,2100),(3750,2100))
-    text(2660,2430,'D1/D2 1N5819; R52 10k; R53/R54 220R; C6 100nF. DIN pins 1/2/3 NC. U4 pins 4/5/9/10/12/13 GND; 6/8/11 open.',14,color=m.MUTED)
+    # Each TRS current loop: ring resistor from MIDI_5V, tip resistor from its buffer output.
+    for ref,side,top,ring,tip in [('J3','A',1745,1770,1840),('J4','B',1915,1940,2015)]:
+        box(3500,top,190,150 if ref=='J3' else 160,'white')
+        text(3680,top+48,ref,18,anchor='end',bold=True);text(3680,top+74,f'TRS {side}',16,anchor='end')
+        pin(ref,'R',3500,ring,'R',side='left');pin(ref,'T',3500,tip,'T',side='left')
+        pin(ref,'S',3690,tip+38,'S');wire('GND',(3690,tip+38),(3720,tip+38))
+    res('R53',(3360,1770),(3460,1770));wire('J3_RING',(3460,1770),(3500,1770))
+    res('R54',(3360,1840),(3460,1840));wire('J3_TIP',(3460,1840),(3500,1840))
+    res('R55',(3360,1940),(3460,1940));wire('J4_RING',(3460,1940),(3500,1940))
+    res('R56',(3360,2015),(3460,2015));wire('J4_TIP',(3460,2015),(3500,2015))
+    wire('MIDI_5V',(3340,1730),(3340,1770),(3360,1770));wire('MIDI_5V',(3340,1770),(3340,1940),(3360,1940))
+    wire('TX_GATE1',(3300,1840),(3360,1840))
+    wire('TX_GATE2',(3300,1920),(3320,1920),(3320,2015),(3360,2015))
+    # Both sleeves join one GND drop to the common bus.
+    wire('GND',(3720,1878),(3720,2053),(3720,2100))
+    # C6 sits below the ring feed, across MIDI_5V and GND.
+    cap('C6',(3340,2045),(3340,2085))
+    wire('MIDI_5V',(3340,1940),(3340,2045))
+    wire('GND',(3340,2085),(3340,2100))
+    text(2660,2430,'D1/D2 1N5819; R52 10k; R53-R56 220R; C6 100nF. TRS Type A: T = DIN 5, R = DIN 4, S = GND (shield). U4 pins 1/4/9/10/12/13 GND; 8/11 open.',14,color=m.MUTED)
     # The LED lead order follows the actual Pololu side view.
     text(100,1298,'Pololu 2535 / optional LEDs',25,bold=True,color=m.PURPLE)
     for i in range(1,11):
@@ -289,7 +299,7 @@ def render(m):
     s.text(60,2520,'PASSIVE PEDALS',22,bold=True)
     s.lines(60,2550,['Pot: outer legs RING / SLEEVE; wiper TIP.', 'Variable resistor: TIP to SLEEVE; RING unused.', '0-10k per input. Bias HIGH in resistor mode;', 'high impedance in pot / disabled / boot states.'],17,step=22)
     s.text(1100,2520,'ASSEMBLY',22,bold=True)
-    s.lines(1100,2550,['Set 4 / 6 / 8 / 10 switches; calibrate installed taps.', 'SW11 contact pin arrangement is functional.', 'UART1 D0/GPIO44 drives buffered DIN MIDI OUT; USB-C remains for USB MIDI/flashing.', 'MIDI_5V diode-ORs USB VBUS and converter +5V; LED rail remains converter-fed.'],17,step=22)
+    s.lines(1100,2550,['Set 4 / 6 / 8 / 10 switches; calibrate installed taps.', 'SW11 contact pin arrangement is functional.', 'UART1 D0/GPIO44 drives two buffered TRS MIDI OUTs; USB-C remains for USB MIDI/flashing.', 'MIDI_5V diode-ORs USB VBUS and converter +5V; LED rail remains converter-fed.'],17,step=22)
     s.text(2240,2520,'LED PACKAGE',22,bold=True)
     s.lines(2240,2550,['Lens left, leads right, flat side down.', 'Top to bottom: DIN / 5V / GND / DOUT.', 'Only LEDs and wires; direct D7 / GPIO10 data.', 'Check 3.3V data acceptance on the actual LED batch.'],17,step=22)
     s.text(60,2650,f'Netlist, BOM and pin references: design/electrical/. All {len(m.COMPONENTS)} components and {len(bynet)} nets checked against the connected drawing.',18,color=m.MUTED)

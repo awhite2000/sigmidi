@@ -2,7 +2,7 @@
   "version": "0.1",
   "directory": "/Users/ab/work/sigram/SigMidi/distribution/web-flasher",
   "ZIP": "/Users/ab/work/sigram/SigMidi/distribution/sigmidi-foot-controller-0.1-web-flasher.zip",
-  "ZIP_sha256": "7ec0d1ff11ec2ccda8f6a3c57dd15e10261e24044a349e3400b9f5a6a35f41ae",
+  "ZIP_sha256": "89e0d031f96f03a538678b644e462398e74c463a5b0edd6c0a0a66fe5b4f202c",
   "files": 45,
   "preserves_NVS_when_erase_unchecked": true,
   "chip": "ESP32-S3",

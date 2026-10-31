@@ -109,7 +109,7 @@ int main() {
         renderDisplayStripe(pending, 0, DisplayHeight, high.data());
         assert(low != high);
     }
-    // DIN readiness must not hide USB/BLE badge states.
+    // TRS readiness must not hide USB/BLE badge states.
     auto badge = [](bool serial, bool usb, int ble) {
         DisplayFrame f{};
         f.serial = serial;
@@ -127,5 +127,5 @@ int main() {
     assert(badge(true, false, 2) != badge(true, false, 1) && badge(true, true, 2) != badge(true, true, 0));
     puts("Display tests passed: hidden pending pedal values/bars, exact 0/180-degree SPI output, 280x240 offsets, stripe/frame "
          "equivalence, clipping guards, "
-         "four screens, DIN/USB/BLE badge states");
+         "four screens, TRS/USB/BLE badge states");
 }

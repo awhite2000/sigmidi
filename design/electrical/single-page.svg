@@ -184,34 +184,43 @@
 <circle cx="2820" cy="1860" r="4" stroke="#a64932" fill="white"/>
 <circle cx="2940" cy="1860" r="4" stroke="#087e89" fill="white"/>
 <rect x="2858.0" y="1851.0" width="44" height="18" fill="white" stroke="#183044"/>
-<rect x="3100" y="1800" width="200" height="180" fill="#edf4fc" stroke="#183044"/>
-<circle cx="3100" cy="1860" r="4" stroke="#087e89" fill="white"/>
+<rect x="3100" y="1790" width="200" height="200" fill="#edf4fc" stroke="#183044"/>
+<circle cx="3100" cy="1840" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3100" cy="1880" r="4" stroke="#087e89" fill="white"/>
 <circle cx="3100" cy="1920" r="4" stroke="#183044" fill="white"/>
-<circle cx="3300" cy="1860" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3100" cy="1960" r="4" stroke="#183044" fill="white"/>
+<circle cx="3300" cy="1840" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3300" cy="1920" r="4" stroke="#087e89" fill="white"/>
 <circle cx="3200" cy="1770" r="4" stroke="#ba344b" fill="white"/>
 <circle cx="3200" cy="2010" r="4" stroke="#183044" fill="white"/>
 <circle cx="3220" cy="2010" r="4" stroke="#183044" fill="white"/>
 <circle cx="3240" cy="2010" r="4" stroke="#183044" fill="white"/>
 <circle cx="3260" cy="2010" r="4" stroke="#183044" fill="white"/>
 <circle cx="3280" cy="2010" r="4" stroke="#183044" fill="white"/>
-<circle cx="3300" cy="2010" r="4" stroke="#183044" fill="white"/>
-<circle cx="3320" cy="2010" r="4" stroke="#183044" fill="white"/>
-<rect x="3500" y="1760" width="180" height="300" fill="white" stroke="#183044"/>
+<rect x="3500" y="1745" width="190" height="150" fill="white" stroke="#183044"/>
+<circle cx="3500" cy="1770" r="4" stroke="#087e89" fill="white"/>
 <circle cx="3500" cy="1840" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3690" cy="1878" r="4" stroke="#183044" fill="white"/>
+<rect x="3500" y="1915" width="190" height="160" fill="white" stroke="#183044"/>
 <circle cx="3500" cy="1940" r="4" stroke="#087e89" fill="white"/>
-<circle cx="3500" cy="1980" r="4" stroke="#526575" fill="white"/>
-<circle cx="3500" cy="2020" r="4" stroke="#526575" fill="white"/>
-<circle cx="3500" cy="2050" r="4" stroke="#526575" fill="white"/>
-<circle cx="3360" cy="1840" r="4" stroke="#ba344b" fill="white"/>
+<circle cx="3500" cy="2015" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3690" cy="2053" r="4" stroke="#183044" fill="white"/>
+<circle cx="3360" cy="1770" r="4" stroke="#ba344b" fill="white"/>
+<circle cx="3460" cy="1770" r="4" stroke="#087e89" fill="white"/>
+<rect x="3388.0" y="1761.0" width="44" height="18" fill="white" stroke="#183044"/>
+<circle cx="3360" cy="1840" r="4" stroke="#087e89" fill="white"/>
 <circle cx="3460" cy="1840" r="4" stroke="#087e89" fill="white"/>
 <rect x="3388.0" y="1831.0" width="44" height="18" fill="white" stroke="#183044"/>
-<circle cx="3360" cy="1940" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3360" cy="1940" r="4" stroke="#ba344b" fill="white"/>
 <circle cx="3460" cy="1940" r="4" stroke="#087e89" fill="white"/>
 <rect x="3388.0" y="1931.0" width="44" height="18" fill="white" stroke="#183044"/>
-<circle cx="3340" cy="2020" r="4" stroke="#ba344b" fill="white"/>
-<circle cx="3340" cy="2080" r="4" stroke="#183044" fill="white"/>
-<line x1="3325" y1="2044.0" x2="3355" y2="2044.0" stroke="#183044" stroke-width="1.8"/>
-<line x1="3325" y1="2056.0" x2="3355" y2="2056.0" stroke="#183044" stroke-width="1.8"/>
+<circle cx="3360" cy="2015" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3460" cy="2015" r="4" stroke="#087e89" fill="white"/>
+<rect x="3388.0" y="2006.0" width="44" height="18" fill="white" stroke="#183044"/>
+<circle cx="3340" cy="2045" r="4" stroke="#ba344b" fill="white"/>
+<circle cx="3340" cy="2085" r="4" stroke="#183044" fill="white"/>
+<line x1="3325" y1="2059.0" x2="3355" y2="2059.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="3325" y1="2071.0" x2="3355" y2="2071.0" stroke="#183044" stroke-width="1.8"/>
 <rect x="100" y="1342" width="230" height="100" fill="#f9f5fd" stroke="#183044"/>
 <line x1="100" y1="1442" x2="330" y2="1442" stroke="#8650aa" stroke-width="3"/>
 <circle cx="330" cy="1360" r="4" stroke="#8650aa" fill="white"/>
@@ -481,37 +490,49 @@
 <line x1="2460" y1="1900" x2="2940" y2="1900" stroke="#087e89" stroke-width="2.1"/>
 <line x1="2940" y1="1860" x2="2940" y2="1900" stroke="#087e89" stroke-width="2.1"/>
 <line x1="2940" y1="1900" x2="3000" y2="1900" stroke="#087e89" stroke-width="2.1"/>
-<line x1="3000" y1="1900" x2="3000" y2="1860" stroke="#087e89" stroke-width="2.1"/>
-<line x1="3000" y1="1860" x2="3100" y2="1860" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3000" y1="1900" x2="3000" y2="1840" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3000" y1="1840" x2="3100" y2="1840" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3000" y1="1880" x2="3100" y2="1880" stroke="#087e89" stroke-width="2.1"/>
 <line x1="3200" y1="1730" x2="3200" y2="1770" stroke="#ba344b" stroke-width="2.1"/>
 <line x1="3100" y1="1920" x2="3070" y2="1920" stroke="#183044" stroke-width="3"/>
 <line x1="3070" y1="1920" x2="3070" y2="2100" stroke="#183044" stroke-width="3"/>
 <line x1="3070" y1="2100" x2="3750" y2="2100" stroke="#183044" stroke-width="3"/>
 <line x1="3750" y1="2100" x2="3750" y2="2460" stroke="#183044" stroke-width="3"/>
+<line x1="3100" y1="1960" x2="3070" y2="1960" stroke="#183044" stroke-width="3"/>
 <line x1="3200" y1="2010" x2="3200" y2="2100" stroke="#183044" stroke-width="3"/>
 <line x1="3200" y1="2100" x2="3750" y2="2100" stroke="#183044" stroke-width="3"/>
 <line x1="3220" y1="2010" x2="3220" y2="2100" stroke="#183044" stroke-width="3"/>
 <line x1="3240" y1="2010" x2="3240" y2="2100" stroke="#183044" stroke-width="3"/>
 <line x1="3260" y1="2010" x2="3260" y2="2100" stroke="#183044" stroke-width="3"/>
 <line x1="3280" y1="2010" x2="3280" y2="2100" stroke="#183044" stroke-width="3"/>
-<line x1="3300" y1="2010" x2="3300" y2="2100" stroke="#183044" stroke-width="3"/>
-<line x1="3320" y1="2010" x2="3320" y2="2100" stroke="#183044" stroke-width="3"/>
-<line x1="3360" y1="1840" x2="3388.0" y2="1840.0" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3690" y1="1878" x2="3720" y2="1878" stroke="#183044" stroke-width="3"/>
+<line x1="3690" y1="2053" x2="3720" y2="2053" stroke="#183044" stroke-width="3"/>
+<line x1="3360" y1="1770" x2="3388.0" y2="1770.0" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3432.0" y1="1770.0" x2="3460" y2="1770" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3460" y1="1770" x2="3500" y2="1770" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3360" y1="1840" x2="3388.0" y2="1840.0" stroke="#087e89" stroke-width="2.1"/>
 <line x1="3432.0" y1="1840.0" x2="3460" y2="1840" stroke="#087e89" stroke-width="2.1"/>
-<line x1="3340" y1="1730" x2="3340" y2="1840" stroke="#ba344b" stroke-width="2.1"/>
-<line x1="3340" y1="1840" x2="3360" y2="1840" stroke="#ba344b" stroke-width="2.1"/>
 <line x1="3460" y1="1840" x2="3500" y2="1840" stroke="#087e89" stroke-width="2.1"/>
-<line x1="3360" y1="1940" x2="3388.0" y2="1940.0" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3360" y1="1940" x2="3388.0" y2="1940.0" stroke="#ba344b" stroke-width="2.1"/>
 <line x1="3432.0" y1="1940.0" x2="3460" y2="1940" stroke="#087e89" stroke-width="2.1"/>
-<line x1="3300" y1="1860" x2="3330" y2="1860" stroke="#087e89" stroke-width="2.1"/>
-<line x1="3330" y1="1860" x2="3330" y2="1940" stroke="#087e89" stroke-width="2.1"/>
-<line x1="3330" y1="1940" x2="3360" y2="1940" stroke="#087e89" stroke-width="2.1"/>
 <line x1="3460" y1="1940" x2="3500" y2="1940" stroke="#087e89" stroke-width="2.1"/>
-<line x1="3340" y1="2020" x2="3340" y2="2044.0" stroke="#ba344b" stroke-width="2.1"/>
-<line x1="3340" y1="2056.0" x2="3340" y2="2080" stroke="#183044" stroke-width="3"/>
-<line x1="3340" y1="1840" x2="3340" y2="2020" stroke="#ba344b" stroke-width="2.1"/>
-<line x1="3340" y1="2080" x2="3340" y2="2100" stroke="#183044" stroke-width="3"/>
-<line x1="3340" y1="2100" x2="3750" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3360" y1="2015" x2="3388.0" y2="2015.0" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3432.0" y1="2015.0" x2="3460" y2="2015" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3460" y1="2015" x2="3500" y2="2015" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3340" y1="1730" x2="3340" y2="1770" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3340" y1="1770" x2="3360" y2="1770" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3340" y1="1770" x2="3340" y2="1940" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3340" y1="1940" x2="3360" y2="1940" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3300" y1="1840" x2="3360" y2="1840" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3300" y1="1920" x2="3320" y2="1920" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3320" y1="1920" x2="3320" y2="2015" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3320" y1="2015" x2="3360" y2="2015" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3720" y1="1878" x2="3720" y2="2053" stroke="#183044" stroke-width="3"/>
+<line x1="3720" y1="2053" x2="3720" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3340" y1="2045" x2="3340" y2="2059.0" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3340" y1="2071.0" x2="3340" y2="2085" stroke="#183044" stroke-width="3"/>
+<line x1="3340" y1="1940" x2="3340" y2="2045" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3340" y1="2085" x2="3340" y2="2100" stroke="#183044" stroke-width="3"/>
 <line x1="330" y1="1384" x2="500" y2="1384" stroke="#ba344b" stroke-width="3"/>
 <line x1="330" y1="1408" x2="600" y2="1408" stroke="#183044" stroke-width="3"/>
 <line x1="330" y1="1432" x2="380" y2="1432" stroke="#8650aa" stroke-width="2.1"/>
@@ -748,8 +769,10 @@
 <polyline points="1463,2140 1465,2134 1470,2132 1475,2134 1477,2140" fill="none" stroke="#986300" stroke-width="2.3"/>
 <line x1="2713" y1="2140" x2="2727" y2="2140" stroke="white" stroke-width="9"/>
 <polyline points="2713,2140 2715,2134 2720,2132 2725,2134 2727,2140" fill="none" stroke="#986300" stroke-width="2.3"/>
-<line x1="3333" y1="1940" x2="3347" y2="1940" stroke="white" stroke-width="9"/>
-<polyline points="3333,1940 3335,1934 3340,1932 3345,1934 3347,1940" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="3333" y1="1840" x2="3347" y2="1840" stroke="white" stroke-width="9"/>
+<polyline points="3333,1840 3335,1834 3340,1832 3345,1834 3347,1840" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="3333" y1="2015" x2="3347" y2="2015" stroke="white" stroke-width="9"/>
+<polyline points="3333,2015 3335,2009 3340,2007 3345,2009 3347,2015" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="1153" y1="820" x2="1167" y2="820" stroke="white" stroke-width="9"/>
 <polyline points="1153,820 1155,814 1160,812 1165,814 1167,820" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="1433" y1="820" x2="1447" y2="820" stroke="white" stroke-width="9"/>
@@ -815,16 +838,17 @@
 <circle cx="2650" cy="2460" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="2850" cy="2460" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3050" cy="2460" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3070" cy="1960" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3200" cy="2100" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3220" cy="2100" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3240" cy="2100" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3250" cy="2460" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3260" cy="2100" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3280" cy="2100" r="4" stroke="#183044" fill="#183044"/>
-<circle cx="3300" cy="2100" r="4" stroke="#183044" fill="#183044"/>
-<circle cx="3320" cy="2100" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3340" cy="2100" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3700" cy="2460" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3720" cy="2053" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3720" cy="2100" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3750" cy="1500" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3750" cy="1560" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3750" cy="2100" r="4" stroke="#183044" fill="#183044"/>
@@ -833,8 +857,10 @@
 <circle cx="1350" cy="2140" r="4" stroke="#986300" fill="#986300"/>
 <circle cx="2980" cy="1730" r="4" stroke="#ba344b" fill="#ba344b"/>
 <circle cx="3200" cy="1730" r="4" stroke="#ba344b" fill="#ba344b"/>
-<circle cx="3340" cy="1840" r="4" stroke="#ba344b" fill="#ba344b"/>
+<circle cx="3340" cy="1770" r="4" stroke="#ba344b" fill="#ba344b"/>
+<circle cx="3340" cy="1940" r="4" stroke="#ba344b" fill="#ba344b"/>
 <circle cx="2940" cy="1900" r="4" stroke="#087e89" fill="#087e89"/>
+<circle cx="3000" cy="1880" r="4" stroke="#087e89" fill="#087e89"/>
 <circle cx="800" cy="720" r="4" stroke="#087e89" fill="#087e89"/>
 <circle cx="820" cy="1020" r="4" stroke="#087e89" fill="#087e89"/>
 <circle cx="1450" cy="2140.0" r="4" stroke="#986300" fill="#986300"/>
@@ -959,25 +985,34 @@
 <circle cx="2980" cy="1770" r="3.7" stroke="#ba344b" fill="white"/>
 <circle cx="2820" cy="1860" r="3.7" stroke="#a64932" fill="white"/>
 <circle cx="2940" cy="1860" r="3.7" stroke="#087e89" fill="white"/>
-<circle cx="3100" cy="1860" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3100" cy="1840" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3100" cy="1880" r="3.7" stroke="#087e89" fill="white"/>
 <circle cx="3100" cy="1920" r="3.7" stroke="#183044" fill="white"/>
-<circle cx="3300" cy="1860" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3100" cy="1960" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3300" cy="1840" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3300" cy="1920" r="3.7" stroke="#087e89" fill="white"/>
 <circle cx="3200" cy="1770" r="3.7" stroke="#ba344b" fill="white"/>
 <circle cx="3200" cy="2010" r="3.7" stroke="#183044" fill="white"/>
 <circle cx="3220" cy="2010" r="3.7" stroke="#183044" fill="white"/>
 <circle cx="3240" cy="2010" r="3.7" stroke="#183044" fill="white"/>
 <circle cx="3260" cy="2010" r="3.7" stroke="#183044" fill="white"/>
 <circle cx="3280" cy="2010" r="3.7" stroke="#183044" fill="white"/>
-<circle cx="3300" cy="2010" r="3.7" stroke="#183044" fill="white"/>
-<circle cx="3320" cy="2010" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3500" cy="1770" r="3.7" stroke="#087e89" fill="white"/>
 <circle cx="3500" cy="1840" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3690" cy="1878" r="3.7" stroke="#183044" fill="white"/>
 <circle cx="3500" cy="1940" r="3.7" stroke="#087e89" fill="white"/>
-<circle cx="3360" cy="1840" r="3.7" stroke="#ba344b" fill="white"/>
+<circle cx="3500" cy="2015" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3690" cy="2053" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3360" cy="1770" r="3.7" stroke="#ba344b" fill="white"/>
+<circle cx="3460" cy="1770" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3360" cy="1840" r="3.7" stroke="#087e89" fill="white"/>
 <circle cx="3460" cy="1840" r="3.7" stroke="#087e89" fill="white"/>
-<circle cx="3360" cy="1940" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3360" cy="1940" r="3.7" stroke="#ba344b" fill="white"/>
 <circle cx="3460" cy="1940" r="3.7" stroke="#087e89" fill="white"/>
-<circle cx="3340" cy="2020" r="3.7" stroke="#ba344b" fill="white"/>
-<circle cx="3340" cy="2080" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3360" cy="2015" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3460" cy="2015" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3340" cy="2045" r="3.7" stroke="#ba344b" fill="white"/>
+<circle cx="3340" cy="2085" r="3.7" stroke="#183044" fill="white"/>
 <circle cx="330" cy="1360" r="3.7" stroke="#8650aa" fill="white"/>
 <circle cx="330" cy="1384" r="3.7" stroke="#ba344b" fill="white"/>
 <circle cx="330" cy="1408" r="3.7" stroke="#183044" fill="white"/>
@@ -1195,34 +1230,42 @@
 <text x="3268" y="2232" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="400" fill="#183044" text-anchor="start">SW10</text>
 <text x="3268" y="2270" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#183044" text-anchor="start">5</text>
 <text x="3250" y="2410" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#183044" text-anchor="middle">T10 / LED10</text>
-<text x="3300" y="1700" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#8650aa" text-anchor="middle">MIDI OUT / DIN-5 / UART1 31,250 baud</text>
+<text x="2990" y="1675" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#8650aa" text-anchor="start">MIDI OUT / 2 x TRS / UART1 31,250 baud</text>
 <text x="2905" y="1665" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="middle">D1</text>
 <text x="2905" y="1745" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="middle">D2</text>
 <text x="3060" y="1720" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#ba344b" text-anchor="start">MIDI_5V</text>
 <text x="2880.0" y="1817.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R52</text>
 <text x="2880.0" y="1842.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="middle">10k</text>
-<text x="3200" y="1830" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#183044" text-anchor="middle">U4  74HCT125</text>
-<text x="3114" y="1867" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">1A</text>
-<text x="3114" y="1927" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">/OE</text>
-<text x="3286" y="1867" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">1Y</text>
+<text x="3200" y="1818" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#183044" text-anchor="middle">U4  74HCT125</text>
+<text x="3114" y="1847" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">1A</text>
+<text x="3114" y="1887" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">2A</text>
+<text x="3114" y="1927" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">/1OE</text>
+<text x="3114" y="1967" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">/2OE</text>
+<text x="3286" y="1847" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">1Y</text>
+<text x="3286" y="1927" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">2Y</text>
 <text x="3186" y="1777" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">VCC</text>
 <text x="3186" y="2017" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">GND</text>
-<text x="3590" y="1790" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#183044" text-anchor="middle">J3 DIN OUT</text>
-<text x="3514" y="1847" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">4</text>
-<text x="3514" y="1947" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">5</text>
-<text x="3514" y="1987" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">1</text>
-<text x="3540" y="1985" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">NC</text>
-<text x="3514" y="2027" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">2</text>
-<text x="3540" y="2025" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">NC</text>
-<text x="3514" y="2057" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">3</text>
-<text x="3540" y="2055" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">NC</text>
-<text x="3410.0" y="1797.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R53</text>
+<text x="3680" y="1793" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#183044" text-anchor="end">J3</text>
+<text x="3680" y="1819" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183044" text-anchor="end">TRS A</text>
+<text x="3514" y="1777" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">R</text>
+<text x="3514" y="1847" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">T</text>
+<text x="3676" y="1885" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">S</text>
+<text x="3680" y="1963" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#183044" text-anchor="end">J4</text>
+<text x="3680" y="1989" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183044" text-anchor="end">TRS B</text>
+<text x="3514" y="1947" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">R</text>
+<text x="3514" y="2022" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">T</text>
+<text x="3676" y="2060" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">S</text>
+<text x="3410.0" y="1727.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R53</text>
+<text x="3410.0" y="1752.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
+<text x="3410.0" y="1797.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R54</text>
 <text x="3410.0" y="1822.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
-<text x="3410.0" y="1897.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R54</text>
+<text x="3410.0" y="1897.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R55</text>
 <text x="3410.0" y="1922.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
-<text x="3364" y="2040.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="start">C6</text>
-<text x="3364" y="2068.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="start">100nF</text>
-<text x="2660" y="2430" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#526575" text-anchor="start">D1/D2 1N5819; R52 10k; R53/R54 220R; C6 100nF. DIN pins 1/2/3 NC. U4 pins 4/5/9/10/12/13 GND; 6/8/11 open.</text>
+<text x="3410.0" y="1972.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R56</text>
+<text x="3410.0" y="1997.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
+<text x="3364" y="2055.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="start">C6</text>
+<text x="3364" y="2083.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="start">100nF</text>
+<text x="2660" y="2430" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#526575" text-anchor="start">D1/D2 1N5819; R52 10k; R53-R56 220R; C6 100nF. TRS Type A: T = DIN 5, R = DIN 4, S = GND (shield). U4 pins 1/4/9/10/12/13 GND; 8/11 open.</text>
 <text x="100" y="1298" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#8650aa" text-anchor="start">Pololu 2535 / optional LEDs</text>
 <text x="114" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#183044" text-anchor="start">LED1 / B</text>
 <text x="114" y="1407" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#183044" text-anchor="start">2535</text>
@@ -1298,12 +1341,12 @@
 <text x="1100" y="2520" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#183044" text-anchor="start">ASSEMBLY</text>
 <text x="1100" y="2550" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">Set 4 / 6 / 8 / 10 switches; calibrate installed taps.</text>
 <text x="1100" y="2572" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">SW11 contact pin arrangement is functional.</text>
-<text x="1100" y="2594" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">UART1 D0/GPIO44 drives buffered DIN MIDI OUT; USB-C remains for USB MIDI/flashing.</text>
+<text x="1100" y="2594" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">UART1 D0/GPIO44 drives two buffered TRS MIDI OUTs; USB-C remains for USB MIDI/flashing.</text>
 <text x="1100" y="2616" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">MIDI_5V diode-ORs USB VBUS and converter +5V; LED rail remains converter-fed.</text>
 <text x="2240" y="2520" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#183044" text-anchor="start">LED PACKAGE</text>
 <text x="2240" y="2550" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">Lens left, leads right, flat side down.</text>
 <text x="2240" y="2572" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">Top to bottom: DIN / 5V / GND / DOUT.</text>
 <text x="2240" y="2594" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">Only LEDs and wires; direct D7 / GPIO10 data.</text>
 <text x="2240" y="2616" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">Check 3.3V data acceptance on the actual LED batch.</text>
-<text x="60" y="2650" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#526575" text-anchor="start">Netlist, BOM and pin references: design/electrical/. All 54 components and 46 nets checked against the connected drawing.</text>
+<text x="60" y="2650" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#526575" text-anchor="start">Netlist, BOM and pin references: design/electrical/. All 57 components and 49 nets checked against the connected drawing.</text>
 </svg>

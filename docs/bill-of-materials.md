@@ -63,19 +63,19 @@ J1, U3 and C1 are omitted as a group in a USB-only electrical build. The existin
 
 Pololu 2535 is sold as a **10-pack**: buy one pack for any single 4-10 switch build and fit N LEDs. The chain uses LEDs connected to +5 V, GND and data wiring. C1 is the converter input capacitor. Direct 3.3 V data into 5 V LEDs requires verification with the actual batch and harness. [S4]
 
-## Buffered 5-pin DIN MIDI OUT
+## Buffered TRS MIDI OUT
 
 | ID / references | Fitted qty | Part and specification |
 |---|---|---|
-| E18 / U4 | 1 piece | **74HCT125 quad buffer**. 5 V TTL-compatible quad buffer; DIP-14 or SOIC-14; gate 1 used, /OE grounded; unused inputs 5/9/12 and /OE 4/10/13 to GND. |
+| E18 / U4 | 1 piece | **74HCT125 quad buffer**. 5 V TTL-compatible quad buffer; DIP-14 or SOIC-14; gates 1 and 2 used with inputs 2/5 joined and /OE 1/4 grounded; unused inputs 9/12 and /OE 10/13 to GND. |
 | E19 / D1, D2 | 2 piece | **1N5819 Schottky diodes**. 40 V, 1 A Schottky rectifier, DO-41; source-isolation diode OR. |
 | E20 / R52 | 1 piece | **10 kOhm UART idle pull-up**. 1% metal-film, through-hole; 0.25 W. Terminals 3V3 to MIDI_OUT_TX. |
-| E21 / R53 | 1 piece | **220 Ohm MIDI current-loop resistor**. 1% metal-film, through-hole; 0.25 W. Terminals MIDI_5V to DIN4. |
-| E22 / R54 | 1 piece | **220 Ohm MIDI current-loop resistor**. 1% metal-film, through-hole; 0.25 W. Terminals TX_GATE to DIN5. |
+| E21 / R53, R55 | 2 piece | **220 Ohm MIDI current-loop resistor**. 1% metal-film, through-hole; 0.25 W. Terminals MIDI_5V to J3_RING / J4_RING. |
+| E22 / R54, R56 | 2 piece | **220 Ohm MIDI current-loop resistor**. 1% metal-film, through-hole; 0.25 W. Terminals TX_GATE1 to J3_TIP / TX_GATE2 to J4_TIP. |
 | E23 / C6 | 1 piece | **100 nF buffer bypass capacitor**. 100 nF X7R ceramic, >=10 V, through-hole or 1206. Terminals MIDI_5V to GND. |
-| E24 / J3 | 1 piece | **5-pin DIN MIDI OUT connector**. Female DIN-5 panel or PCB connector with pins 4/5 used for MIDI current loop. |
+| E24 / J3, J4 | 2 piece | **3.5 mm TRS MIDI OUT sockets**. 3.5 mm stereo (TRS) panel-mount socket; wired MIDI TRS Type A. |
 
-The DIN current loop uses pins 4/5 only. UART1 TX is routed to D0/GPIO44; D1/GPIO43 stays unconnected to avoid boot-ROM output. D1/D2 diode-OR USB VBUS and converter +5V to `MIDI_5V`; this supply isolation needs electrical bench verification.
+U4 gates 1 and 2 share one UART input and each drive one 3.5 mm TRS Type A current loop: tip = DIN pin 5, ring = DIN pin 4, sleeve = DIN pin 2 shield to GND. UART1 TX is routed to D0/GPIO44; D1/GPIO43 stays unconnected to avoid boot-ROM output. D1/D2 diode-OR USB VBUS and converter +5V to `MIDI_5V`; this supply isolation needs electrical bench verification.
 
 <!-- page -->
 
@@ -153,7 +153,7 @@ Current supplied profiles use Prusa MK3S+, PETG, a 0.6 mm nozzle and 0.3 mm laye
 | W01 | 1 piece | **LCD cable**. GH1.25, 8-pin mating cable; verify orientation and signal labels. |
 | W02 | AR length | **Signal hookup wire**. Stranded, insulated 26-28 AWG; assorted purpose colors. |
 | W03 | AR length | **Supply/return wire**. Stranded, insulated 22-24 AWG. |
-| W04 | AR set | **Insulated solder support**. Small perfboard or insulated solder strip for discrete resistors/capacitors. |
+| W04 | 1 set | **Carrier perfboard and U4 socket**. 6 x 26 hole, 2.54 mm perfboard (15.2 x 66 mm hole field) plus one DIP-14 socket; carries the U1-side passives, ladder top segment and TRS MIDI OUT stage. |
 | W05 | AR set | **Insulation and strain relief**. Heat-shrink, small ties/anchors and insulating sleeves. |
 
 Plan about **5 m total of assorted signal wire** and **2 m total supply/return wire** for stock. These are procurement allowances, not measured cut lengths. Keep purpose colors consistent, insulate solder joints, and leave service slack between upper ports and base electronics. Connector families for optional detachable section harnesses and a carrier-board outline are not finalized. Direct solder wiring is the documented electrical baseline; do not assume a custom PCB exists.
@@ -189,9 +189,9 @@ USB and 9 V sources are alternative power options. Choose each supply for the co
 
 ## Quantity and source checks
 
-The maximum electrical BOM/netlist contains **54 component instances**: three purchased boards, two socket assemblies, one encoder, ten footswitches, twenty-one resistors, three capacitors, two Schottky diodes, one logic buffer, one DIN connector and ten LEDs. This includes the two required USB VBUS sense resistors R50/R51, both pedals, 9 V power and optional LEDs. The similarly sized CSV line count is coincidental: CSV rows also include grouped hardware, printed parts and external accessories.
+The maximum electrical BOM/netlist contains **57 component instances**: three purchased boards, two socket assemblies, one encoder, ten footswitches, twenty-three resistors, three capacitors, two Schottky diodes, one logic buffer, two TRS MIDI sockets and ten LEDs. This includes the two required USB VBUS sense resistors R50/R51, both pedals, 9 V power and optional LEDs. The similarly sized CSV line count is coincidental: CSV rows also include grouped hardware, printed parts and external accessories.
 
-For all optional circuits fitted, electrical instance totals are **36 / 42 / 48 / 54** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 54 reference designators against both electrical exports. It verifies eight base and four display screws against the CAD body inventory, and four M1.6x5 PCB screws against the direct Nano mount specification.
+For all optional circuits fitted, electrical instance totals are **39 / 45 / 51 / 57** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 57 reference designators against both electrical exports. It verifies eight base and four display screws against the CAD body inventory, and four M1.6x5 PCB screws against the direct Nano mount specification.
 
 ## References
 

@@ -192,7 +192,7 @@ SOURCES = [
  ('Pololu S13V10F5 / #4083', '5V, 1A step-up/down regulator; retailer item 1178565', 'https://www.pololu.com/product/4083'),
  ('Pololu #2535', '5mm addressable RGB LED / WS2811 / 5V / 800kHz', 'https://www.pololu.com/product/2535'),
  ('Espressif self-powered USB devices', 'VBUS sense: 100k / 150k divider to A4 / GPIO11', 'https://docs.espressif.com/projects/esp-usb/en/latest/esp32s3/usb_device.html'),
- ('MIDI Association - MIDI 1.0 electrical specifications', '5-pin DIN current-loop interface reference', 'https://midi.org/midi-1-0-detailed-specification'),
+ ('MIDI Association - MIDI 1.0 electrical specifications', '5 V current-loop interface; TRS Type A pin mapping', 'https://midi.org/midi-1-0-detailed-specification'),
 ]
 
 
@@ -437,13 +437,14 @@ def leds():
 
 
 def midi_out():
-    s=Sheet('MIDI OUT - 5-pin DIN current loop','UART1 TX at 31,250 baud, 8-N-1; 74HCT125 buffer and current-loop resistors. UART0 remains ROM-flash serial.',7)
-    component('U4','74HCT125',{'2':'MIDI_OUT_TX','1':'GND','3':'TX_GATE','14':'MIDI_5V','7':'GND','4':'GND','5':'GND','9':'GND','10':'GND','12':'GND','13':'GND'},'DIP-14/SOIC-14 quad buffer','Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7.')
+    s=Sheet('MIDI OUT - two 3.5 mm TRS current loops','UART1 TX at 31,250 baud, 8-N-1; 74HCT125 gates 1 and 2 each drive one TRS Type A output. UART0 remains ROM-flash serial.',7)
+    component('U4','74HCT125',{'2':'MIDI_OUT_TX','5':'MIDI_OUT_TX','1':'GND','4':'GND','3':'TX_GATE1','6':'TX_GATE2','14':'MIDI_5V','7':'GND','9':'GND','10':'GND','12':'GND','13':'GND'},'DIP-14/SOIC-14 quad buffer','Gates 1 and 2 used: inputs 2/5 joined to MIDI_OUT_TX, /OE 1/4 low; unused inputs 9/12 and /OE 10/13 to GND, outputs 8/11 open; 100nF bypass across pins 14/7.')
     component('R52','10k',{'1':'3V3','2':'MIDI_OUT_TX'},'UART idle-high pull-up')
     component('D1','1N5819',{'A':'+5V','K':'MIDI_5V'},'DO-41 Schottky OR diode')
     component('D2','1N5819',{'A':'USB_VBUS','K':'MIDI_5V'},'DO-41 Schottky OR diode')
     component('C6','100nF',{'1':'MIDI_5V','2':'GND'},'local bypass capacitor')
-    component('J3','5-pin DIN MIDI OUT',{'1':None,'2':None,'3':None,'4':'DIN4','5':'DIN5'},'DIN-5 output connector','Pins 1/2/3 NC; 4/5 are the MIDI current loop.')
+    for ref,side in [('J3','A'),('J4','B')]:
+        component(ref,'3.5 mm TRS MIDI OUT',{'T':f'{ref}_TIP','R':f'{ref}_RING','S':'GND'},'3.5 mm stereo panel socket',f'MIDI OUT {side}; TRS Type A: tip = DIN pin 5 (sink), ring = DIN pin 4 (source), sleeve = DIN pin 2 shield to GND.')
     def diode(x,y,ref,color):
         # Anode at x, cathode bar at x+34; current flows left to right.
         s.path([(x,y-13),(x,y+13),(x+30,y)],color,1.7,fill='white',closed=True)
@@ -453,64 +454,75 @@ def midi_out():
         s.circle(x,y,3,INK,False)
         s.text(x+(10 if side=='left' else -10),y+5,label,13,bold=True,anchor='start' if side=='left' else 'end')
     s.title(48,158,'UART TX, idle pull-up and 74HCT125 buffer')
-    s.title(1100,158,'J3  DIN-5 female')
+    s.title(1100,158,'J3 / J4  3.5 mm TRS, Type A')
     # U1 source pin.
     s.rect(48,240,300,120,fill='#f6f8fa',stroke=INK)
     s.text(66,270,'U1  Arduino Nano ESP32',15,bold=True)
-    s.text(66,296,'UART1 TX, 31,250 baud 8-N-1',12,color=MUTED)
-    s.text(66,340,'D1 / GPIO43 not connected',12,color=MUTED)
-    pin(348,310,'D0 / RX0  GPIO44',side='right')
-    # R52 pull-up from 3V3 to the TX node.
+    s.text(66,322,'UART1 TX, 31,250 baud 8-N-1',12,color=MUTED)
+    s.text(66,344,'D1 / GPIO43 not connected',12,color=MUTED)
+    pin(348,300,'D0 / RX0  GPIO44',side='right')
+    # R52 pull-up from 3V3 to the TX node; one TX node feeds both buffer inputs.
     s.net(430,190,'3V3',color=RED)
-    s.resistor(430,190,430,310,'R52','10k')
-    s.line(348,310,560,310,PURPLE);s.circle(430,310,3,PURPLE)
-    s.text(470,302,'MIDI_OUT_TX',11,PURPLE,bold=True)
-    # U4 gate 1.
-    s.rect(560,250,200,160,fill='#edf4fc',stroke=INK)
-    s.text(660,280,'U4  74HCT125',14,bold=True,anchor='middle')
-    pin(560,310,'1A',side='left');pin(560,370,'/1OE',side='left')
-    pin(760,310,'1Y',side='right')
-    s.text(660,398,'2-4 unused: see note',10,color=MUTED,anchor='middle')
+    s.resistor(430,190,430,300,'R52','10k')
+    s.line(348,300,560,300,PURPLE);s.circle(430,300,3,PURPLE)
+    s.line(500,300,500,400,PURPLE);s.line(500,400,560,400,PURPLE);s.circle(500,300,3,PURPLE)
+    s.text(440,292,'MIDI_OUT_TX',11,PURPLE,bold=True)
+    # U4 gates 1 and 2.
+    s.rect(560,250,200,230,fill='#edf4fc',stroke=INK)
+    s.text(660,278,'U4  74HCT125',14,bold=True,anchor='middle')
+    pin(560,300,'1A',side='left');pin(560,340,'/1OE',side='left')
+    pin(560,400,'2A',side='left');pin(560,440,'/2OE',side='left')
+    pin(760,300,'1Y',side='right');pin(760,400,'2Y',side='right')
+    s.text(660,468,'3-4 unused: see note',10,color=MUTED,anchor='middle')
     pin(660,250,'',side='left');s.text(668,242,'14 VCC',11,bold=True)
-    pin(660,410,'',side='left');s.text(668,428,'7 GND',11,bold=True)
-    s.line(560,370,520,370);s.line(520,370,520,440);s.gnd(520,440)
-    s.line(660,410,660,440);s.gnd(660,440)
-    # MIDI_5V rail feeds U4, C6 and R53.
+    pin(660,480,'',side='left');s.text(668,498,'7 GND',11,bold=True)
+    s.line(560,340,540,340);s.gnd(540,340)
+    s.line(560,440,540,440);s.gnd(540,440)
+    s.line(660,480,660,500);s.gnd(660,500)
+    # MIDI_5V rail feeds U4, C6 and both ring resistors.
     s.net(610,190,'MIDI_5V',side='left',color=RED)
-    s.line(610,190,960,190,RED);s.line(660,190,660,250,RED);s.circle(660,190,3,RED)
+    s.line(610,190,940,190,RED);s.line(660,190,660,250,RED);s.circle(660,190,3,RED)
     s.line(840,190,840,214,RED);s.circle(840,190,3,RED)
     s.line(828,214,852,214);s.line(828,221,852,221);s.line(840,221,840,245);s.gnd(840,245)
     s.text(860,216,'C6',11);s.text(860,232,'100nF',12)
-    s.resistor(960,190,1100,190,'R53','220R','MIDI_5V','DIN4')
-    s.line(760,310,960,310,PURPLE);s.text(800,302,'TX_GATE',11,PURPLE,bold=True)
-    s.resistor(960,310,1100,310,'R54','220R','TX_GATE','DIN5')
-    s.text(1075,206,'DIN4',11,RED,bold=True,anchor='middle');s.text(1075,326,'DIN5',11,PURPLE,bold=True,anchor='middle')
-    # J3 connector, pins in schematic order.
-    s.rect(1100,170,240,300,fill='#f6f8fa',stroke=INK)
-    for pinno,y in [(4,190),(5,310),(1,370),(2,410),(3,450)]:
-        s.circle(1100,y,4,INK,False);s.text(1116,y+5,f'Pin {pinno}',13,bold=True)
-        if pinno in (1,2,3):s.text(1180,y+5,'NC - leave open',12,color=MUTED)
+    s.line(940,190,940,230,RED);s.line(940,230,960,230,RED)
+    s.resistor(960,230,1100,230,'R53','220R','MIDI_5V','J3_RING')
+    s.line(760,300,960,300,PURPLE);s.text(800,292,'TX_GATE1',11,PURPLE,bold=True)
+    s.resistor(960,300,1100,300,'R54','220R','TX_GATE1','J3_TIP')
+    s.net(960,430,'MIDI_5V',side='left',color=RED)
+    s.resistor(960,430,1100,430,'R55','220R','MIDI_5V','J4_RING')
+    s.line(760,400,880,400,PURPLE);s.line(880,400,880,500,PURPLE);s.line(880,500,960,500,PURPLE)
+    s.text(800,392,'TX_GATE2',11,PURPLE,bold=True)
+    s.resistor(960,500,1100,500,'R56','220R','TX_GATE2','J4_TIP')
+    # J3 and J4, ring above tip; sleeves ground the cable shield.
+    for ref,side,top in [('J3','A',200),('J4','B',400)]:
+        s.rect(1100,top,240,170,fill='#f6f8fa',stroke=INK)
+        s.text(1326,top+22,f'{ref}  MIDI OUT {side}',13,bold=True,anchor='end')
+        for label,y,net in [('Ring',top+30,f'{ref}_RING'),('Tip',top+100,f'{ref}_TIP'),('Sleeve',top+145,'GND')]:
+            s.circle(1100,y,4,INK,False);s.text(1116,y+5,label,13,bold=True)
+            if net=='GND':s.line(1100,y,1070,y);s.gnd(1070,y);s.text(1180,y+5,'GND - cable shield',12,color=MUTED)
+            else:s.text(1094,y+21,net,11,RED if label=='Ring' else PURPLE,bold=True,anchor='end')
     # Diode-OR supply.
-    s.rect(48,520,620,180,fill='#fbf6f6')
-    s.title(66,550,'MIDI_5V supply / Schottky diode OR')
-    s.net(150,600,'+5V',side='left',color=RED);s.line(150,600,220,600,RED)
-    diode(220,600,'D1  1N5819',RED);s.line(252,600,460,600,RED)
-    s.net(150,660,'USB_VBUS',side='left',color=BLUE);s.line(150,660,220,660,BLUE)
-    diode(220,660,'D2  1N5819',BLUE);s.line(252,660,400,660,RED);s.line(400,660,400,600,RED)
-    s.circle(400,600,3,RED);s.net(460,600,'MIDI_5V',color=RED)
-    s.text(142,616,'converter',10,color=MUTED,anchor='end');s.text(142,676,'Nano VBUS',10,color=MUTED,anchor='end')
+    s.rect(48,600,620,170,fill='#fbf6f6')
+    s.title(66,630,'MIDI_5V supply / Schottky diode OR')
+    s.net(150,680,'+5V',side='left',color=RED);s.line(150,680,220,680,RED)
+    diode(220,680,'D1  1N5819',RED);s.line(252,680,460,680,RED)
+    s.net(150,740,'USB_VBUS',side='left',color=BLUE);s.line(150,740,220,740,BLUE)
+    diode(220,740,'D2  1N5819',BLUE);s.line(252,740,400,740,RED);s.line(400,740,400,680,RED)
+    s.circle(400,680,3,RED);s.net(460,680,'MIDI_5V',color=RED)
+    s.text(142,696,'converter',10,color=MUTED,anchor='end');s.text(142,756,'Nano VBUS',10,color=MUTED,anchor='end')
     # Notes.
-    s.rect(720,520,620,180,fill='#f6f8fa')
-    s.title(738,550,'Buffer and supply notes')
-    s.lines(738,580,['R52 holds the buffer input idle-high during reset.',
-                     'U4 /1OE grounded; C6 directly across pins 14 / 7.',
-                     'Unused inputs 5 / 9 / 12 and /OE 4 / 10 / 13 to GND;',
-                     'outputs 6 / 8 / 11 left open.',
-                     'Diodes isolate converter +5V and USB VBUS.'],13,step=22)
-    s.rect(48,740,1292,150,fill='#fff8ef')
-    s.lines(66,772,['MIDI OUT loop: MIDI_5V -> R53 -> DIN 4 -> receiver optocoupler -> DIN 5 -> R54 -> buffer 1Y sink.',
-                    'DIN pins 1, 2 (shield) and 3 are unconnected; circuit ground does not go to the DIN.',
-                    'One-way output only; no receive connection to the Nano. Verify DIN-5 numbering against the chosen connector datasheet view.'],13,step=30)
+    s.rect(720,600,620,170,fill='#f6f8fa')
+    s.title(738,630,'Buffer and supply notes')
+    s.lines(738,660,['R52 holds both buffer inputs idle-high during reset.',
+                     'U4 /1OE and /2OE grounded; C6 directly across pins 14 / 7.',
+                     'Unused inputs 9 / 12 and /OE 10 / 13 to GND;',
+                     'outputs 8 / 11 left open.',
+                     'Diodes isolate converter +5V and USB VBUS.'],13,step=21)
+    s.rect(48,790,1292,135,fill='#fff8ef')
+    s.lines(66,820,['Each loop: MIDI_5V -> 220R -> ring -> receiver optocoupler -> tip -> 220R -> buffer output sink (J3: R53/R54/1Y, J4: R55/R56/2Y).',
+                    'TRS Type A: tip = DIN pin 5, ring = DIN pin 4, sleeve = DIN pin 2. Each sleeve connects to GND to ground the cable shield.',
+                    'One-way outputs only; no receive connection to the Nano. Use Type A adapters or cables for 5-pin DIN receivers.'],13,step=30)
     s.end()
 
 
@@ -532,7 +544,7 @@ def reference():
     s.lines(42,457,[
       'With power disconnected: continuity-check TRS terminals, power polarity, ground and all off-sheet nets.',
       'Verify regulated +5V, then U1 3V3. Flash the passive-input firmware and recalibrate both pedals.',
-      'Check resistor-mode HIGH / pot-mode high impedance, ADC ranges, ladder taps, encoder, USB MIDI and BLE MIDI.',
+      'Check resistor-mode HIGH / pot-mode high impedance, ADC ranges, ladder taps, encoder, TRS, USB and BLE MIDI.',
       'Each passive pedal input uses two resistors. Connect only unpowered variable-resistor or pot pedals.',
       'This document does not establish ESD compliance, measured analog accuracy or simultaneous-supply qualification.'
     ],13,step=25)
@@ -626,13 +638,15 @@ def export_data():
     assert COMPONENTS['R51']['pins']=={'1':'USB_SENSE','2':'GND'}
     assert COMPONENTS['U1']['pins']['JP2:2']=='MIDI_OUT_TX'
     assert COMPONENTS['R52']['pins']=={'1':'3V3','2':'MIDI_OUT_TX'}
-    assert COMPONENTS['U4']['pins']=={'2':'MIDI_OUT_TX','1':'GND','3':'TX_GATE','14':'MIDI_5V','7':'GND','4':'GND','5':'GND','9':'GND','10':'GND','12':'GND','13':'GND'}
+    assert COMPONENTS['U4']['pins']=={'2':'MIDI_OUT_TX','5':'MIDI_OUT_TX','1':'GND','4':'GND','3':'TX_GATE1','6':'TX_GATE2','14':'MIDI_5V','7':'GND','9':'GND','10':'GND','12':'GND','13':'GND'}
     assert COMPONENTS['D1']['pins']=={'A':'+5V','K':'MIDI_5V'}
     assert COMPONENTS['D2']['pins']=={'A':'USB_VBUS','K':'MIDI_5V'}
-    assert COMPONENTS['R53']['pins']=={'1':'MIDI_5V','2':'DIN4'}
-    assert COMPONENTS['R54']['pins']=={'1':'TX_GATE','2':'DIN5'}
+    assert COMPONENTS['R53']['pins']=={'1':'MIDI_5V','2':'J3_RING'}
+    assert COMPONENTS['R54']['pins']=={'1':'TX_GATE1','2':'J3_TIP'}
+    assert COMPONENTS['R55']['pins']=={'1':'MIDI_5V','2':'J4_RING'}
+    assert COMPONENTS['R56']['pins']=={'1':'TX_GATE2','2':'J4_TIP'}
     assert COMPONENTS['C6']['pins']=={'1':'MIDI_5V','2':'GND'}
-    assert COMPONENTS['J3']['pins']=={'1':None,'2':None,'3':None,'4':'DIN4','5':'DIN5'}
+    for ref in ('J3','J4'):assert COMPONENTS[ref]['pins']=={'T':f'{ref}_TIP','R':f'{ref}_RING','S':'GND'}
     (OUT/'README.md').write_text("""# SIGMIDI Foot Controller v0.1 — electrical diagrams
 
 The Nano ESP32 assembly has a [unified A0 schematic](../../output/pdf/sigmidi-electrical-single-page.pdf), [eight detailed A3 sheets](../../output/pdf/sigmidi-electrical-diagram.pdf), [browser preview](../../previews/electrical-single-page.html), terminal CSV and machine-readable netlist. Purchased boards stop at external pins. These are assembly wiring drawings, not PCB fabrication files. Bench verification is required.

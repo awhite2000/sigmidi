@@ -19,5 +19,5 @@ Quantity (10-switch maximum),References,Value,Package / type
 1,R52,10k,UART idle-high pull-up
 2,D1 D2,1N5819,DO-41 Schottky OR diode
 1,C6,100nF,local bypass capacitor
-1,J3,5-pin DIN MIDI OUT,DIN-5 output connector
-2,R53 R54,220R,1% resistor
+2,J3 J4,3.5 mm TRS MIDI OUT,3.5 mm stereo panel socket
+4,R53 R54 R55 R56,220R,1% resistor
