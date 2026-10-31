@@ -11,6 +11,7 @@ uint32_t nowMs() { return 0; }
 static bool bleOnline = true, usbOnline = false;
 bool bleReady() { return bleOnline; }
 bool usbReady() { return usbOnline; }
+bool serialReady() { return true; }
 bool bleConnected() { return bleOnline; }
 bool wifiStart() { return true; }
 bool saveConfig(const foot::Config &) { return true; }

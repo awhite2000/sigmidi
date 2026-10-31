@@ -27,7 +27,7 @@ U1,Arduino Nano ESP32 ABX00083,JP2:6,D3,GPIO6,P2_MODE,
 U1,Arduino Nano ESP32 ABX00083,JP2:5,D2,GPIO5,P1_MODE,
 U1,Arduino Nano ESP32 ABX00083,JP2:4,GND,GND,GND,
 U1,Arduino Nano ESP32 ABX00083,JP2:3,RST,RST,NC,
-U1,Arduino Nano ESP32 ABX00083,JP2:2,D0 / RX0,GPIO44,NC,
+U1,Arduino Nano ESP32 ABX00083,JP2:2,D0 / RX0,GPIO44,MIDI_OUT_TX,
 U1,Arduino Nano ESP32 ABX00083,JP2:1,D1 / TX0,GPIO43,NC,
 U2,Waveshare 24382,P2:1,,,3V3,
 U2,Waveshare 24382,P2:2,,,LCD_RST,
@@ -160,3 +160,31 @@ LED10,Pololu 2535,DIN,"top / farthest from flat (lens left, flat down)",DIN,L9,"
 LED10,Pololu 2535,DOUT,"bottom / nearest flat (lens left, flat down)",DOUT,NC,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."
 LED10,Pololu 2535,+5V,"second (lens left, flat down)",5V,+5V,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."
 LED10,Pololu 2535,GND,"third (lens left, flat down)",GND,GND,"Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."
+U4,74HCT125,2,,,MIDI_OUT_TX,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,1,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,3,,,TX_GATE,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,14,,,MIDI_5V,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,7,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,4,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,5,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,9,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,10,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,12,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+U4,74HCT125,13,,,GND,"Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+R52,10k,1,,,3V3,
+R52,10k,2,,,MIDI_OUT_TX,
+D1,1N5819,A,,,+5V,
+D1,1N5819,K,,,MIDI_5V,
+D2,1N5819,A,,,USB_VBUS,
+D2,1N5819,K,,,MIDI_5V,
+C6,100nF,1,,,MIDI_5V,
+C6,100nF,2,,,GND,
+J3,5-pin DIN MIDI OUT,1,,,NC,Pins 1/2/3 NC; 4/5 are the MIDI current loop.
+J3,5-pin DIN MIDI OUT,2,,,NC,Pins 1/2/3 NC; 4/5 are the MIDI current loop.
+J3,5-pin DIN MIDI OUT,3,,,NC,Pins 1/2/3 NC; 4/5 are the MIDI current loop.
+J3,5-pin DIN MIDI OUT,4,,,DIN4,Pins 1/2/3 NC; 4/5 are the MIDI current loop.
+J3,5-pin DIN MIDI OUT,5,,,DIN5,Pins 1/2/3 NC; 4/5 are the MIDI current loop.
+R53,220R,1,,,MIDI_5V,
+R53,220R,2,,,DIN4,
+R54,220R,1,,,TX_GATE,
+R54,220R,2,,,DIN5,

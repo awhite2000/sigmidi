@@ -145,6 +145,7 @@ static esp_err_t api(httpd_req_t *r) {
     cJSON_AddNumberToObject(out, "revision", state.revision);
     cJSON_AddBoolToObject(out, "bleReady", bleReady());
     cJSON_AddBoolToObject(out, "usbReady", usbReady());
+    cJSON_AddBoolToObject(out, "serialReady", serialReady());
     cJSON_AddBoolToObject(out, "midiReady", midiAvailable());
     cJSON_AddBoolToObject(out, "adcCalibrated", state.calibrated);
     cJSON_AddNumberToObject(out, "key",

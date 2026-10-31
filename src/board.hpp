@@ -9,9 +9,11 @@ inline constexpr int EncoderA = 7, EncoderB = 8, EncoderClick = 9; // D4..D6
 inline constexpr int LedData = 10; // D7
 inline constexpr int LcdClock = 17, LcdDc = 18, LcdCs = 21; // D8, D9, D10
 inline constexpr int LcdMosi = 38, LcdReset = 47; // D11, D12
+inline constexpr int MidiOutTx = 44; // D0 / RX0 pad; routed to UART1 TX, avoiding UART0 boot output
+
 inline constexpr int UsbVbusSense = 11; // A4, through 100k / 150k divider
-inline constexpr std::array<int, 15> UsedPins{Ladder, Pedal1, Pedal2, Pedal1Bias, Pedal2Bias,
-    EncoderA, EncoderB, EncoderClick, LedData, LcdClock, LcdDc, LcdCs, LcdMosi, LcdReset, UsbVbusSense};
+inline constexpr std::array<int, 16> UsedPins{Ladder, Pedal1, Pedal2, Pedal1Bias, Pedal2Bias,
+    EncoderA, EncoderB, EncoderClick, LedData, LcdClock, LcdDc, LcdCs, LcdMosi, LcdReset, MidiOutTx, UsbVbusSense};
 constexpr bool validPins() {
     for (unsigned i = 0; i < UsedPins.size(); ++i) {
         if (UsedPins[i] == 19 || UsedPins[i] == 20 || UsedPins[i] == 0 || UsedPins[i] == 3 ||

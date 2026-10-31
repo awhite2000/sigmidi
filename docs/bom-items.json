@@ -946,6 +946,154 @@
       "purchase_unit": "Each",
       "notes": "A4 / GPIO11 divider node to GND. Never connect VBUS directly to GPIO.",
       "source": ""
+    },
+    {
+      "id": "E18",
+      "group": "MIDI OUT",
+      "part": "74HCT125 quad buffer",
+      "specification": "5 V TTL-compatible quad buffer; DIP-14 or SOIC-14; gate 1 used, /OE grounded; unused inputs 5/9/12 and /OE 4/10/13 to GND",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required for MIDI DIN output",
+      "electrical_refs": [
+        "U4"
+      ],
+      "purchase_unit": "Each",
+      "notes": "Power from isolated MIDI_5V; 100 nF bypass close to pins 14/7. Verify exact package pinout before wiring.",
+      "source": "Texas Instruments SN74HCT125 datasheet"
+    },
+    {
+      "id": "E19",
+      "group": "MIDI OUT",
+      "part": "1N5819 Schottky diodes",
+      "specification": "40 V, 1 A Schottky rectifier, DO-41; source-isolation diode OR",
+      "quantity": {
+        "modular_4": 2,
+        "modular_6": 2,
+        "modular_8": 2,
+        "modular_10": 2,
+        "main_10": 2
+      },
+      "unit": "piece",
+      "fit_condition": "Required for MIDI DIN output",
+      "electrical_refs": [
+        "D1",
+        "D2"
+      ],
+      "purchase_unit": "Each",
+      "notes": "Anodes: converter +5 V and USB VBUS; cathodes joined as MIDI_5V. Prevents back-feed between supplies. Check diode polarity.",
+      "source": "Project design"
+    },
+    {
+      "id": "E20",
+      "group": "MIDI OUT",
+      "part": "10 kOhm UART idle pull-up",
+      "specification": "1% metal-film, through-hole; 0.25 W. Terminals 3V3 to MIDI_OUT_TX",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required for MIDI DIN output",
+      "electrical_refs": [
+        "R52"
+      ],
+      "purchase_unit": "Each",
+      "notes": "Holds 74HCT125 input high during Nano reset; 1% metal-film.",
+      "source": "Project design"
+    },
+    {
+      "id": "E21",
+      "group": "MIDI OUT",
+      "part": "220 Ohm MIDI current-loop resistor",
+      "specification": "1% metal-film, through-hole; 0.25 W. Terminals MIDI_5V to DIN4",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required for MIDI DIN output",
+      "electrical_refs": [
+        "R53"
+      ],
+      "purchase_unit": "Each",
+      "notes": "1% metal-film; current-source leg to DIN pin 4.",
+      "source": "Project design"
+    },
+    {
+      "id": "E22",
+      "group": "MIDI OUT",
+      "part": "220 Ohm MIDI current-loop resistor",
+      "specification": "1% metal-film, through-hole; 0.25 W. Terminals TX_GATE to DIN5",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required for MIDI DIN output",
+      "electrical_refs": [
+        "R54"
+      ],
+      "purchase_unit": "Each",
+      "notes": "1% metal-film; buffered sink leg to DIN pin 5.",
+      "source": "Project design"
+    },
+    {
+      "id": "E23",
+      "group": "MIDI OUT",
+      "part": "100 nF buffer bypass capacitor",
+      "specification": "100 nF X7R ceramic, >=10 V, through-hole or 1206. Terminals MIDI_5V to GND",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required for MIDI DIN output",
+      "electrical_refs": [
+        "C6"
+      ],
+      "purchase_unit": "Each",
+      "notes": "Ceramic, >=10 V; place directly across 74HCT125 supply pins.",
+      "source": "Project design"
+    },
+    {
+      "id": "E24",
+      "group": "MIDI OUT",
+      "part": "5-pin DIN MIDI OUT connector",
+      "specification": "Female DIN-5 panel or PCB connector with pins 4/5 used for MIDI current loop",
+      "quantity": {
+        "modular_4": 1,
+        "modular_6": 1,
+        "modular_8": 1,
+        "modular_10": 1,
+        "main_10": 1
+      },
+      "unit": "piece",
+      "fit_condition": "Required for MIDI DIN output",
+      "electrical_refs": [
+        "J3"
+      ],
+      "purchase_unit": "Each",
+      "notes": "Pins 1, 2 (shield), and 3 not connected; verify numbering view on the selected connector.",
+      "source": "Project design"
     }
   ]
 }

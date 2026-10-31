@@ -2,7 +2,7 @@
 
 <img src="design/branding/sigmidi-mark.svg" width="96" alt="SIGMIDI logotype">
 
-SIGMIDI is a programmable USB and BLE MIDI foot controller built around the Arduino Nano ESP32 (ESP32-S3, 16 MB flash) and Waveshare 24382 color LCD. It sends PC/CC messages over native USB MIDI and BLE MIDI simultaneously when both links are ready, including to an iPad and provides encoder menus and a Wi-Fi configuration editor.
+SIGMIDI is a programmable DIN, USB and BLE MIDI foot controller built around the Arduino Nano ESP32 (ESP32-S3, 16 MB flash) and Waveshare 24382 color LCD. It sends PC/CC messages to its buffered 5-pin DIN MIDI OUT and mirrors them to native USB MIDI and BLE MIDI when those links are ready; it also provides encoder menus and a Wi-Fi configuration editor.
 
 ## Features
 
@@ -12,7 +12,7 @@ SIGMIDI is a programmable USB and BLE MIDI foot controller built around the Ardu
 - A 280 × 240 landscape LCD and a 20-detent encoder with click for local setup.
 - An offline Wi-Fi editor for configuration, calibration, MIDI tests and JSON backups.
 - Optional Pololu 2535 indicators, one per switch: white for a performed press action and yellow for release in momentary mode; white/off in Toggle mode.
-- Native class-compliant USB MIDI plus BLE MIDI output. USB power or an optional 9 V center-negative input to Nano VIN; Pololu S13V10F5 supplies the optional LED rail.
+- Buffered 5-pin DIN MIDI OUT, native class-compliant USB MIDI and BLE MIDI output. USB power or an optional 9 V center-negative input to Nano VIN; DIN MIDI OUT is powered from a diode-OR of USB VBUS and the converter 5 V rail.
 
 ## Enclosures and switch identity
 

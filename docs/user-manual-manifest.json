@@ -116,8 +116,8 @@
       "page": 27
     }
   ],
-  "source_sha256": "1648eb18d0db558ec871779d6ff51d538027570be32fc06c0bbbeb409ece366e",
-  "pdf_sha256": "6e38af58aff24b248368331d1c52f2acb30b93da6635597276bb831388ff8402",
+  "source_sha256": "5f26f91609e90b0d2ab257afabde612de1d04383d4dff6c1947ddee009805e77",
+  "pdf_sha256": "99dfed4a82b2316cd16ff542590d1cfd826f63b201c6dea7f26e8018e17be036",
   "renderer_sha256": "178b7b0e8521b97623738698e894e0c527addb13e2db2205f86739f709ad44f1",
   "connection_diagrams": {
     "manual-signal-path.svg": "474175b49be2b19d5d40116f8be7edf1d3cc1de9bfdbdb7ab795b7901da0794e",
@@ -125,9 +125,9 @@
     "manual-ble-connection.svg": "c9fc4bf5bcd16ea317b0b99a89a19e275e200a03a2ff9a37388b3c24a3bc0438"
   },
   "images": {
-    "docs/device-workflows/other-menus-workflow.png": "e52054757b0b8a61e06e72e0901307fd9ea6b2bccb16d5af83050c4c58823d83",
+    "docs/device-workflows/other-menus-workflow.png": "9ccdd89c3c6847bfdaff01f756bc84942fd90ca58fefc0bfb6b0681f12cacf85",
     "docs/device-workflows/save-exit.png": "2389a6ede143232a5f2853c703e2c6d5720228086e15ac56f800f2ae3e82f730",
-    "docs/device-workflows/switch-message-workflow.png": "73382d607643ac5a53c98822fbe9e9db81cd3ff5ccbd762e05ebd11b1c9790c8",
+    "docs/device-workflows/switch-message-workflow.png": "aa77267da2956febb16c95791f0895f816c638ea7743eb00bd401212e11e2078",
     "docs/manual-wifi-example.png": "6808a3abe72eb560d9bbc291455cf4f04fb914ec66a959134c912a785ad73af3",
     "previews/01.png": "15283466145579f2dd40a728510da0a483d5fb552b770be75d74bef90cc9a257",
     "previews/02.png": "da2cae36620f1ed74b5765e595bdc7c3cf2ffec0f7fb2e5e54d1387d4b94c9a3",
@@ -140,7 +140,7 @@
     "previews/19.png": "056b695e3c1d9a2e12c0442f995ea17a8d945f3c9c06f94048cba71014fdf7d3",
     "previews/20.png": "31346776d8213e4fbf6b02b00d632a4f8e01f520a36e6e39d0236cb72a451007",
     "previews/22.png": "cb2d80de820686cc668613c67a45a67c982fc0339bb65e4c78e147b0f0644b82",
-    "previews/23.png": "dc7dfe4c4f2807438d8374eb48d55b98a4160ddba59ad7ed96a421f2d0f6ce46",
+    "previews/23.png": "de69c5153b147efd5837cd9e8435fea4640f3425a3f0a97d930c213b1037f3cd",
     "previews/sigmidi-left-main.png": "fc483734db42d3937930d1f476f123da02c0c01b4e5175461f7b5203bb473cd3"
   },
   "HX_reference": "Supplied CC table, cross-checked against official Line 6 sources",
@@ -156,9 +156,9 @@
   ],
   "connection_sources_sha256": {
     "src/usb.cpp": "4e0292f794b093ddc810fd885d0a6b373094d64f54f8871b952406de5d1676ba",
-    "src/ble.cpp": "32215647da7c33cb74fd3fbc5c7f06efb1a2c7c9549c8d45adc77c0c6d39e11c",
-    "src/midi_router.cpp": "1cda76aaa025d6c8ba5afcbcf281b70979fbaf26d9ae24164f2d515e49e36ce6",
-    "src/main.cpp": "f8c0ff8b54f77cbabb2341997eeb2d3f844ffbe3ec1c339cb8acd9f8d2c602f3",
+    "src/ble.cpp": "1d9d4107e5339343fa82179deb57f8f34f792e07609917f10ca5620ab4051e57",
+    "src/midi_router.cpp": "413d88638b5431d1c9f8b69bedb25c81383f4b9b232512328f55ffd312f23a14",
+    "src/main.cpp": "8a87e9cd8658a50497047cf735e63e5d70ee176b7047f7b999f6fbb861d3dbf8",
     "src/branding.hpp": "8399cbd5f124434e18b0e7ed93c24ff178ee098b3ad23573fd95c6d6cd8c5b98"
   },
   "HX_setup_in_appendix_only": true

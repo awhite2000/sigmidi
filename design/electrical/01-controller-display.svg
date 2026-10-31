@@ -7,7 +7,7 @@
 <line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
 <line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
 <text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
-<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">1 / 7  |  30 OCT 2026</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">1 / 8  |  30 OCT 2026</text>
 <text x="42" y="154" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">U1  Arduino Nano ESP32</text>
 <text x="42" y="180" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">Component-side top view, USB-C up. All printed labels retained; unused outside callouts omitted.</text>
 <rect x="300" y="211" width="270" height="595" fill="#f6f8fa" stroke="#183044"/>
@@ -110,8 +110,10 @@
 <text x="603" y="658" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#183044" text-anchor="start">JP2:4 | GND | GND</text>
 <circle cx="558" cy="688" r="4" stroke="#526575" fill="white"/>
 <text x="543" y="692" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">RST</text>
-<circle cx="558" cy="722" r="4" stroke="#526575" fill="white"/>
+<line x1="558" y1="722" x2="595" y2="722" stroke="#2164b4" stroke-width="1.5"/>
+<circle cx="558" cy="722" r="4" stroke="#2164b4" fill="white"/>
 <text x="543" y="726" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">D0 / RX0</text>
+<text x="603" y="726" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#2164b4" text-anchor="start">JP2:2 | GPIO44 | MIDI_OUT_TX</text>
 <circle cx="558" cy="756" r="4" stroke="#526575" fill="white"/>
 <text x="543" y="760" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">D1 / TX0</text>
 <text x="940" y="154" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">U2  Waveshare 24382</text>

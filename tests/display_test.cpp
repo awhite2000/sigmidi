@@ -109,7 +109,23 @@ int main() {
         renderDisplayStripe(pending, 0, DisplayHeight, high.data());
         assert(low != high);
     }
+    // DIN readiness must not hide USB/BLE badge states.
+    auto badge = [](bool serial, bool usb, int ble) {
+        DisplayFrame f{};
+        f.serial = serial;
+        f.usb = usb;
+        f.ble = ble;
+        std::vector<uint16_t> pixels(DisplayWidth * DisplayHeight);
+        renderDisplayStripe(f, 0, DisplayHeight, pixels.data());
+        return pixels;
+    };
+    for (bool usb : {false, true})
+        for (int ble : {0, 1, 2})
+            if (usb || ble == 2)
+                assert(badge(true, usb, ble) == badge(false, usb, ble));
+    assert(badge(true, false, 0) != badge(false, false, 0));
+    assert(badge(true, false, 2) != badge(true, false, 1) && badge(true, true, 2) != badge(true, true, 0));
     puts("Display tests passed: hidden pending pedal values/bars, exact 0/180-degree SPI output, 280x240 offsets, stripe/frame "
          "equivalence, clipping guards, "
-         "four screens");
+         "four screens, DIN/USB/BLE badge states");
 }

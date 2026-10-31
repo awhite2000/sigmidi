@@ -46,6 +46,7 @@ USED = {
     'JP1:14': ('GND', 'GND', 'GND'),
     'JP1:15': ('VIN', 'VIN', '+9V'),
     'JP2:15': ('D12', 'GPIO47', 'LCD_RST'),
+    'JP2:2': ('D0 / RX0', 'GPIO44', 'MIDI_OUT_TX'),
     'JP2:14': ('D11', 'GPIO38', 'LCD_DIN'),
     'JP2:13': ('D10', 'GPIO21', 'LCD_CS'),
     'JP2:12': ('D9', 'GPIO18', 'LCD_DC'),
@@ -80,6 +81,14 @@ def validate_sources(text, netlist):
                 'R20':('5.1k','3V3','P1_RING'), 'R21':('10k','P1_MODE','P1_ADC'),
                 'R30':('5.1k','3V3','P2_RING'), 'R31':('10k','P2_MODE','P2_ADC'),
                 'C1':('47uF / 35V','+9V','GND'), 'C5':('100nF','LADDER','GND')}
+    midi_expected={'R52':('10k','3V3','MIDI_OUT_TX'),'R53':('220R','MIDI_5V','DIN4'),'R54':('220R','TX_GATE','DIN5')}
+    for ref,(value,a,b) in midi_expected.items():
+        c=components[ref];assert c['value']==value and c['pins']=={'1':a,'2':b},ref
+    assert components['D1']['pins']=={'A':'+5V','K':'MIDI_5V'}
+    assert components['D2']['pins']=={'A':'USB_VBUS','K':'MIDI_5V'}
+    assert components['U4']['pins']=={'2':'MIDI_OUT_TX','1':'GND','3':'TX_GATE','14':'MIDI_5V','7':'GND','4':'GND','5':'GND','9':'GND','10':'GND','12':'GND','13':'GND'}
+    assert components['C6']['pins']=={'1':'MIDI_5V','2':'GND'}
+    assert components['J3']['pins']=={'1':None,'2':None,'3':None,'4':'DIN4','5':'DIN5'}
     for ref, (value, a, b) in expected.items():
         c = components[ref]
         assert c['value'] == value and c['pins'] == {'1':a,'2':b}, ref
@@ -336,7 +345,7 @@ def main():
     assert [c['page'] for c in doc.chapters]==list(range(1,len(sections)+1)),doc.chapters
     from pypdf import PdfReader
     reader=PdfReader(OUTPUT)
-    assert len(reader.pages)==len(sections)==15
+    assert len(reader.pages)==len(sections)==16
     assert all(page.extract_text().strip() for page in reader.pages)
     def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
     sources=[SOURCE,Path(__file__),ROOT/'scripts/build_user_manual.py',ROOT/'src/board.hpp',

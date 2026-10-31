@@ -10,10 +10,10 @@ Build the Arduino Nano ESP32 controller, from printed parts to a tested USB/BLE 
 |---|---|
 | Select parts, print and join the enclosure | 2-3 |
 | Install controls, display and Nano directly on the base | 4-5 |
-| Wire power, Nano, LCD and encoder | 6-8 |
-| Wire switches, pedals and optional LEDs | 9-11 |
-| Inspect, power up, flash and calibrate | 12-14 |
-| Close the enclosure and run acceptance checks | 15 |
+| Wire power, Nano, LCD and encoder | 6-7 |
+| Wire MIDI OUT, switches, pedals and optional LEDs | 8-12 |
+| Inspect, power up, flash and calibrate | 13-15 |
+| Close the enclosure and run acceptance checks | 16 |
 
 ## Before you start
 
@@ -83,7 +83,7 @@ Total printed pieces: Main 4; Modular 4/6/8/10 uses 3/5/7/9. Nano posts are inte
 
 1. Check every footswitch is normally open and momentary with a multimeter. Fit it through its 12 mm mounting hole using the supplied nuts/washer. The 30 x 13 x 15 mm body is offset from the shaft: 9 mm from one short edge. Upper-row bodies run left/right: in Left, the shaft is 9 mm from the left end and 21 mm from the right; Right reverses this. Lower-row bodies run front/back, extending 21 mm rearward and 9 mm forward from the shaft. Match the CAD and keep lugs clear of adjacent mounts.
 2. Fit the passive 20-detent encoder and its nut/washer. Install the **15 mm diameter x 5 mm knob**; confirm it clears the panel and its click works. Check your actual bushing length and shaft/knob fit through the 3 mm roof before tightening.
-3. Install the dual **Amphenol ACJS-MHDC** TRS socket in the rear holes, with its two nuts/fiber washers. Keep both ports side by side. Identify contacts with a plug before soldering; page 10 lists the terminal numbers. Fit the optional DC inlet as described on page 6.
+3. Install the dual **Amphenol ACJS-MHDC** TRS socket in the rear holes, with its two nuts/fiber washers. Keep both ports side by side. Identify contacts with a plug before soldering; page 12 lists the terminal numbers. Fit the optional DC inlet as described on page 6.
 4. Tighten hardware gently against PETG and recheck after seating. No torque value is qualified. Check that nuts, bodies and lugs do not interfere with posts, shell joints or the base.
 
 ## Waveshare 24382 LCD
@@ -93,7 +93,7 @@ Total printed pieces: Main 4; Modular 4/6/8/10 uses 3/5/7/9. Nano posts are inte
 5. Seat the **31.5 x 39 mm PCB** so the glass is flush with the lower deck. In Left, the screen is physically rotated 180 degrees with its ribbon on the left. Match Right to its CAD orientation. Connect the supplied eight-pin cable while access is easy; avoid a sharp ribbon fold or force on the glass.
 6. Rest all four factory studs on the printed hollow mounts. Insert **four M2x5 countersunk screws from inside/below**, through the supports into the blind studs. Nominal engagement is only 1.39 mm: confirm your actual screw head seating and stud depth. Do not substitute M2x6 or force a bottomed screw. Load the studs, not the glass.
 
-**Pass check:** controls move freely; the LCD is flush, stable and unstrained; all lugs and the cable remain clear when the base is dry-fitted. LED fitting is on page 11.
+**Pass check:** controls move freely; the LCD is flush, stable and unstrained; all lugs and the cable remain clear when the base is dry-fitted. LED fitting is on page 12.
 
 <!-- page -->
 
@@ -172,6 +172,7 @@ Use the supplied **GH1.25 eight-pin cable** and confirm continuity against the a
 | 4 - CS | D10 | GPIO21 / JP2:13 |
 | 5 - SCL / CLK | D8 | GPIO17 / JP2:11 |
 | 6 - SDA / DIN | D11 | GPIO38 / JP2:14 |
+| UART1 MIDI OUT TX | D0 / RX0 pad | GPIO44 / JP2:2 |
 | 7 - GND | GND | JP1:14 or JP2:4 |
 | 8 - VCC | 3V3 | JP1:2 |
 
@@ -195,7 +196,32 @@ The click shorts its two contacts only when pressed. Do not connect an encoder c
 
 <!-- page -->
 
-# 8. Wire the switch ladder
+# 8. Assemble the buffered MIDI DIN OUT
+
+## UART and 74HCT125
+
+The controller sends MIDI 1.0 at **31,250 baud, 8-N-1** on UART1 TX routed to the Nano **D0 / RX0 header pad, GPIO44 / JP2:2**. The pad’s normal UART0 RX peripheral is not used because UART1 is routed to it; D1/GPIO43 UART0 TX stays unconnected to prevent ROM boot output. USB-C is still the native USB MIDI and ROM-flash connection; do not wire the DIN stage to USB D-/D+.
+
+Fit a 74HCT125 powered from `MIDI_5V`. Use gate 1: pin 2 (1A) receives `MIDI_OUT_TX`, pin 1 (/1OE) is grounded to enable the gate, pin 3 (1Y) is `TX_GATE`, pin 14 is `MIDI_5V`, and pin 7 is GND. Tie the unused inputs (pins 5, 9, 12) and enables (pins 4, 10, 13) to GND so they cannot float; leave outputs 6, 8 and 11 unconnected. Check pin numbering against the exact package datasheet and footprint. Place C6 100 nF at pins 14/7. R52 10 kΩ pulls the input up to 3V3 so it remains at MIDI idle-high during reset.
+
+## Isolated supply OR and DIN current loop
+
+D1 and D2 Schottky diodes diode-OR the two available sources: D1 anode to converter +5V, D2 anode to USB VBUS, and both cathodes joined at `MIDI_5V`. This powers the interface from USB-only or converter operation and prevents back-feed between the supplies. Confirm the diode cathode stripe and footprints before soldering.
+
+| DIN-5 output | Connection |
+|---|---|
+| Pin 4 | `MIDI_5V` through R53, 220 Ω |
+| Pin 5 | U4 `TX_GATE` through R54, 220 Ω |
+| Pins 1, 2 (shield), 3 | NC; do not connect controller GND |
+
+The receiver loop is sourced from pin 4 and returns at pin 5 through its optocoupler. Verify the selected DIN connector’s pin numbering from its datasheet view; mating and solder-side diagrams may be mirrored. Keep the output one-way; do not add a receive wire.
+
+**Pass check:** verify U4 orientation, C6 placement, diode polarity, 220 Ω resistors and connector numbering. With a current-limited bench supply, check `MIDI_5V` under USB-only and VIN/converter power, verify there is no source-to-source back-feed, and test with a MIDI receiver before connecting equipment. This prototype output still requires electrical bench qualification.
+
+<!-- page -->
+
+
+# 9. Wire the switch ladder
 
 Build one **series-tap ladder**, even in the fixed Main 10 enclosure. All switches are normally open; closing a switch connects its own tap to GND. Only one footswitch is detected at a time.
 
@@ -225,7 +251,7 @@ Build one **series-tap ladder**, even in the fixed Main 10 enclosure. All switch
 
 <!-- page -->
 
-# 9. Wire the pedal sockets
+# 10. Wire the pedal sockets
 
 Each input accepts an **unpowered passive** variable resistor or potentiometer, up to 10 kOhm, selected independently in software. Each input has only two resistors inside the controller. Do not connect an externally powered expression output.
 
@@ -256,7 +282,7 @@ Use a tip/ring swap adapter if the pedal's actual wiring requires it. Unplug the
 
 <!-- page -->
 
-# 10. Fit the optional LEDs
+# 11. Fit the optional LEDs
 
 Use **Pololu 2535, 5 mm diffused RGB LEDs with integrated WS2811**, one per installed switch. Direct 3.3 V data into the 5 V LEDs must be checked with the actual LEDs and harness.
 
@@ -277,7 +303,7 @@ Use **Pololu 2535, 5 mm diffused RGB LEDs with integrated WS2811**, one per inst
 | Every +5V | Pololu converter VOUT / LED +5 V rail |
 | Every GND | Common supply return; branch LED current at the supply |
 
-The data chain is in **fixed electrical tap order**: LED1=B, LED2=A, LED3=2, LED4=1, then C/3, D/4, E/5. See page 9. Run all +5V/GND connections in parallel, not through each LED's data pins. Modular joints carry next DATA IN, +5 V and GND along with the separate ladder TAIL. Never connect LED +5 V to Nano 3V3 or USB VBUS.
+The data chain is in **fixed electrical tap order**: LED1=B, LED2=A, LED3=2, LED4=1, then C/3, D/4, E/5. See page 11. Run all +5V/GND connections in parallel, not through each LED's data pins. Modular joints carry next DATA IN, +5 V and GND along with the separate ladder TAIL. Never connect LED +5 V to Nano 3V3 or USB VBUS.
 
 ## Enable and test
 
@@ -287,7 +313,7 @@ In LED CHAIN choose **RGB**, the **2535 (800 kbit/s)** profile, enable and save.
 
 <!-- page -->
 
-# 11. Route and inspect the harness
+# 12. Route and inspect the harness
 
 ![Current Left main routing proposal, with Nano position; colors indicate harness purpose, not mandatory wire colors.](../previews/cable-bundles-left.png)
 
@@ -309,7 +335,7 @@ Label both ends by signal and physical pin. Choose wire and connectors rated for
 
 <!-- page -->
 
-# 12. Power up in stages
+# 13. Power up in stages
 
 Use a current-limited bench supply where available. Keep the assembly accessible and supported on an insulating surface. Disconnect all sources before moving a probe connection, changing wiring or adding a load. If a rail collapses, a part heats unexpectedly or polarity is wrong, disconnect and investigate before continuing.
 
@@ -321,7 +347,7 @@ Use a current-limited bench supply where available. Keep the assembly accessible
 ## B. Test USB power first
 
 3. With 9 V disconnected and the LED rail isolated, connect the Nano to a USB host using a known data cable. Verify 3V3 and the divider node before connecting untested peripheral loads. Add the LCD and input harness in stages with power removed between changes.
-4. Install firmware using page 14 if the Nano is blank or has different software. With the running SIGMIDI application, confirm the display, encoder and USB MIDI enumeration. LEDs remain unpowered on USB alone in this design.
+4. Install firmware using page 15 if the Nano is blank or has different software. With the running SIGMIDI application, confirm the display, encoder and USB MIDI enumeration. LEDs remain unpowered on USB alone in this design.
 
 ## C. Verify analog values and external power
 
@@ -331,7 +357,7 @@ Use a current-limited bench supply where available. Keep the assembly accessible
 | A4/GPIO11 to GND | About 3.0 V at USB 5.0 V | USB connected, divider fitted |
 | A4/GPIO11 to GND | Near 0 V | USB unplugged, Nano powered via VIN |
 | A0 ladder SENSE to GND | About 2.2 V | No switch pressed |
-| A0 while one switch is held | About 0.287-1.320 V | Tap-specific target on page 9 |
+| A0 while one switch is held | About 0.287-1.320 V | Tap-specific target on page 11 |
 | LED +5 V to GND | About 5 V | External 9 V/converter enabled |
 
 5. Turn off, connect the verified 9 V branch to Nano VIN and the converter output to the LED rail if fitted. Start on external power with USB unplugged. Check the rails again, then test plugging/unplugging the USB host while VIN remains powered. External 5 V must never appear on USB VBUS through your wiring.
@@ -343,7 +369,7 @@ These voltages are **nominal diagnostic targets**, not measured acceptance toler
 
 <!-- page -->
 
-# 13. Flash and calibrate
+# 14. Flash and calibrate
 
 ## Install the preserved Nano firmware
 
@@ -357,18 +383,18 @@ These voltages are **nominal diagnostic targets**, not measured acceptance toler
 5. Set **LADDER > MODULAR** and the installed **SWITCHES count: 4/6/8/10**, including Main 10. Save and exit. Default count is ten; a smaller assembly is not auto-detected.
 6. For convenient live captures, enter **Wi-Fi Setup**, join the displayed `SIGMIDI-xxxx` network and open **http://192.168.4.1/**. Use the displayed password to acquire editing. In Calibration capture stable **Idle**, then each named switch held alone. Set windows with guard bands; start at 20 mV half-width and 10 ms debounce, then check noise with LCD/BLE active. Windows must not overlap. The LCD ladder menu also permits measured center values.
 7. If pedals are fitted, configure each mode with the pedal unplugged; save/exit, reconnect, then measure and calibrate. POT requires the real lower/higher raw-mV endpoints, at least 50 mV apart; RESISTOR uses the actual maximum ohms, at most 10000. Set CC, channel, range, linear/log and inversion as required. Leave absent pedals disabled.
-8. Enable the optional LED chain only if fitted, selecting RGB / 2535 and verifying the assignments on page 9. Save & Exit turns off setup Wi-Fi. Release all switches so performance can rearm.
+8. Enable the optional LED chain only if fitted, selecting RGB / 2535 and verifying the assignments on page 11. Save & Exit turns off setup Wi-Fi. Release all switches so performance can rearm.
 
 ## Prove both MIDI outputs
 
 9. Assign one known CC press message (for example CC20 value 127, channel 1) and a release value 0, with 5 ms delays. Save. Monitor USB MIDI on a host, then connect a BLE MIDI central through its MIDI app to **SIGMIDI Foot Controller v0.1**. Verify channel, values and one press/release pair. Use a command suitable for the receiver when testing real equipment.
-10. With both links ready, the LCD shows **USB+BLE** and each receives the same action. Avoid routing both inputs to the same destination twice. Test every switch, Toggle if used, and each pedal's full CC range. Pedal values remain hidden until first movement produces a send; move each enabled pedal after boot or a ready-link change.
+10. With both links ready, the LCD shows **USB+BLE**; the DIN MIDI OUT and both links receive the same action. Avoid routing both inputs to the same destination twice. Test every switch, Toggle if used, and each pedal's full CC range. Pedal values remain hidden until first movement produces a send; move each enabled pedal after boot or a ready-link change.
 
 **Pass check:** all labels match physical switches, stable press/release detection works across the installed ladder, pedals reach their configured limits, and each intended MIDI transport receives the expected messages. [All menu paths and operating behavior](user-manual.md).
 
 <!-- page -->
 
-# 14. Close and accept the build
+# 15. Close and accept the build
 
 ## Final mechanical closure
 
@@ -401,4 +427,4 @@ Unplug all power and pedals before removing the base screws. Release the Nano fr
 
 [Left CAD/part guide](../design/fusion/mirrored/README.md) - [Right Modular](../design/fusion/modular/README.md) - [Nano mounting guide](../design/fusion/nano-esp32/README.md) - [Complete Fusion archive](../design/fusion/sigmidi-foot-controller-0.1.f3d).
 
-Manufacturer references: [Arduino ABX00083 drawing](../design/fusion/nano-esp32/datasheets/ABX00083-datasheet.pdf), [Waveshare 24382 drawing](../design/fusion/datasheets/waveshare-24382-drawing.pdf), [ACJS-MHDC socket drawing](../design/fusion/datasheets/double-trs-ACJS-MHDC.pdf), [Pololu 4083 module](https://www.pololu.com/product/4083), [Pololu 2535 LEDs](https://www.pololu.com/product/2535). The LED image on page 11 is the manufacturer's lead-orientation reference.
+Manufacturer references: [Arduino ABX00083 drawing](../design/fusion/nano-esp32/datasheets/ABX00083-datasheet.pdf), [Waveshare 24382 drawing](../design/fusion/datasheets/waveshare-24382-drawing.pdf), [ACJS-MHDC socket drawing](../design/fusion/datasheets/double-trs-ACJS-MHDC.pdf), [Pololu 4083 module](https://www.pololu.com/product/4083), [Pololu 2535 LEDs](https://www.pololu.com/product/2535). The LED image on page 12 is the manufacturer's lead-orientation reference.

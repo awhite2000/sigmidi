@@ -10,7 +10,7 @@ uint32_t nowMs() { return esp_timer_get_time() / 1000; }
 static foot::Engine engine;
 static foot::MidiRouter router;
 static bool sendMidi(const foot::Message &m, uint32_t now, void *ctx) {
-    return router.send(m, now, bleSend, usbSend, ctx);
+    return router.send(m, now, bleSend, usbSend, serialSend, ctx);
 }
 static bool sendConfigured(const foot::Message &m, uint32_t now, void *ctx) {
     return pcCounters().transmit(m, now, sendMidi, ctx);
@@ -110,6 +110,7 @@ extern "C" void app_main() {
     ledsStart();
     bleStart();
     usbStart();
+    midiOutStart();
     xTaskCreate(uiTask, "ui", 8192, nullptr, 3, nullptr);
     foot::Debouncer debounce;
     bool wasReady = false, wasSetup = false;
@@ -141,7 +142,7 @@ extern "C" void app_main() {
             state.leds.configure(state.saved);
             int code = mv < 0 ? -1 : foot::decodeLadder(state.saved, mv);
             state.key = debounce.update(code, now, state.saved.debounceMs);
-            unsigned links = (bleReady() ? 1u : 0u) | (usbReady() ? 2u : 0u);
+            unsigned links = (bleReady() ? 1u : 0u) | (usbReady() ? 2u : 0u) | (serialReady() ? 4u : 0u);
             router.ready(links);
             bool ready = links != 0;
             if (ready != wasReady || state.setup != wasSetup) {
@@ -166,7 +167,7 @@ extern "C" void app_main() {
                 }
                 previousLinks = links;
             }
-            router.tick(bleSend, usbSend, nullptr);
+            router.tick(bleSend, usbSend, serialSend, nullptr);
             if (!state.setup && ready) {
                 engine.input(state.key, state.saved, now);
                 engine.tick(now, sendConfigured, nullptr, actionFeedback);

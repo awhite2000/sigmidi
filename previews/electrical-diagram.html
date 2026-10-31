@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SIGMIDI v0.1 - electrical diagram</title><style>
 *{box-sizing:border-box}body{margin:0;background:#eaf0f4;color:#183044;font:15px system-ui,sans-serif}header{padding:22px 28px;background:#183044;color:white;display:flex;justify-content:space-between;gap:20px}h1{font-size:23px;margin:0 0 7px}p{margin:0;color:#c5d4df}nav{padding:16px 24px;display:flex;gap:8px;flex-wrap:wrap}button{border:1px solid #bdccd7;background:white;color:#183044;padding:10px 14px;border-radius:7px;cursor:pointer}button[aria-current=true]{background:#2164b4;color:white;border-color:#2164b4}main{padding:0 24px 30px}section{background:white;box-shadow:0 3px 22px #18304419}svg{display:block;width:100%;height:auto}.hint{font-size:13px;color:#c5d4df}a{color:inherit}@media print{header,nav{display:none}main{padding:0}section{display:block!important;break-after:page;box-shadow:none}section[hidden]{display:block!important}@page{size:A3 landscape;margin:0}}
-</style><header><div><h1>SIGMIDI Foot Controller / electrical diagram</h1><p>v0.1 - connector pin assignments and complete external wiring</p></div><div class="hint"><a href="electrical-single-page.html">Single-page diagram</a><br>7 detailed vector sheets<br>Prototype circuit / not bench qualified</div></header><nav><button data-sheet="0" aria-current=true>1. Controller and display - external pins</button><button data-sheet="1" >2. Power distribution and rotary encoder</button><button data-sheet="2" >3. Modular footswitch resistor ladder</button><button data-sheet="3" >4. Continuous pedal input 1 - passive</button><button data-sheet="4" >5. Continuous pedal input 2 - passive</button><button data-sheet="5" >6. Pololu 2535 - direct LED chain</button><button data-sheet="6" >7. Assembly reference, options and sources</button></nav><main><section id="sheet-0" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 990" role="img" aria-label="Controller and display - external pins">
+</style><header><div><h1>SIGMIDI Foot Controller / electrical diagram</h1><p>v0.1 - connector pin assignments and complete external wiring</p></div><div class="hint"><a href="electrical-single-page.html">Single-page diagram</a><br>8 detailed vector sheets<br>Prototype circuit / not bench qualified</div></header><nav><button data-sheet="0" aria-current=true>1. Controller and display - external pins</button><button data-sheet="1" >2. Power distribution and rotary encoder</button><button data-sheet="2" >3. Modular footswitch resistor ladder</button><button data-sheet="3" >4. Continuous pedal input 1 - passive</button><button data-sheet="4" >5. Continuous pedal input 2 - passive</button><button data-sheet="5" >6. Pololu 2535 - direct LED chain</button><button data-sheet="6" >7. MIDI OUT - 5-pin DIN current loop</button><button data-sheet="7" >8. Assembly reference, options and sources</button></nav><main><section id="sheet-0" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 990" role="img" aria-label="Controller and display - external pins">
 <rect x="0" y="0" width="1400" height="990" fill="white" stroke="none"/>
 <text x="42" y="42" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#183044" text-anchor="start">SIGMIDI</text>
 <text x="195" y="41" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">FOOT CONTROLLER  /  v0.1</text>
@@ -9,7 +9,7 @@
 <line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
 <line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
 <text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
-<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">1 / 7  |  30 OCT 2026</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">1 / 8  |  30 OCT 2026</text>
 <text x="42" y="154" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">U1  Arduino Nano ESP32</text>
 <text x="42" y="180" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">Component-side top view, USB-C up. All printed labels retained; unused outside callouts omitted.</text>
 <rect x="300" y="211" width="270" height="595" fill="#f6f8fa" stroke="#183044"/>
@@ -112,8 +112,10 @@
 <text x="603" y="658" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#183044" text-anchor="start">JP2:4 | GND | GND</text>
 <circle cx="558" cy="688" r="4" stroke="#526575" fill="white"/>
 <text x="543" y="692" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">RST</text>
-<circle cx="558" cy="722" r="4" stroke="#526575" fill="white"/>
+<line x1="558" y1="722" x2="595" y2="722" stroke="#2164b4" stroke-width="1.5"/>
+<circle cx="558" cy="722" r="4" stroke="#2164b4" fill="white"/>
 <text x="543" y="726" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">D0 / RX0</text>
+<text x="603" y="726" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="400" fill="#2164b4" text-anchor="start">JP2:2 | GPIO44 | MIDI_OUT_TX</text>
 <circle cx="558" cy="756" r="4" stroke="#526575" fill="white"/>
 <text x="543" y="760" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#183044" text-anchor="end">D1 / TX0</text>
 <text x="940" y="154" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">U2  Waveshare 24382</text>
@@ -182,7 +184,7 @@
 <line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
 <line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
 <text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
-<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">2 / 7  |  30 OCT 2026</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">2 / 8  |  30 OCT 2026</text>
 <text x="42" y="158" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">External power</text>
 <rect x="42" y="190" width="224" height="140" fill="#f6f8fa" stroke="#183044"/>
 <text x="57" y="216" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#183044" text-anchor="start">J1  5.5 x 2.1mm socket</text>
@@ -315,7 +317,7 @@
 <line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
 <line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
 <text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
-<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">3 / 7  |  30 OCT 2026</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">3 / 8  |  30 OCT 2026</text>
 <circle cx="80" cy="185" r="2.6" stroke="#ba344b" fill="#ba344b"/>
 <text x="88" y="180" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="start">3V3</text>
 <line x1="80" y1="185" x2="80.0" y2="223.5" stroke="#183044" stroke-width="1.8"/>
@@ -597,7 +599,7 @@
 <line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
 <line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
 <text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
-<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">4 / 7  |  30 OCT 2026</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">4 / 8  |  30 OCT 2026</text>
 <text x="42" y="155" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Inside the controller - only two resistors</text>
 <rect x="700" y="190" width="230" height="390" fill="#f6f8fa" stroke="#183044"/>
 <text x="715" y="217" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#183044" text-anchor="start">J2  TOP</text>
@@ -693,7 +695,7 @@
 <line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
 <line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
 <text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
-<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">5 / 7  |  30 OCT 2026</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">5 / 8  |  30 OCT 2026</text>
 <text x="42" y="155" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Inside the controller - only two resistors</text>
 <rect x="700" y="190" width="230" height="390" fill="#f6f8fa" stroke="#183044"/>
 <text x="715" y="217" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#183044" text-anchor="start">J2  BOTTOM</text>
@@ -789,7 +791,7 @@
 <line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
 <line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
 <text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
-<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">6 / 7  |  30 OCT 2026</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">6 / 8  |  30 OCT 2026</text>
 <rect x="42" y="150" width="420" height="150" fill="#f6f8fa" stroke="#183044"/>
 <text x="60" y="180" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">U1  Arduino Nano ESP32</text>
 <text x="445" y="215" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#183044" text-anchor="end">D7 / GPIO10 (JP2:10)</text>
@@ -1037,7 +1039,138 @@
 <line x1="866" y1="872" x2="874" y2="864" stroke="#8650aa" stroke-width="1.8"/>
 <text x="883" y="872" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#8650aa" text-anchor="start">NC</text>
 <text x="600" y="932" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#526575" text-anchor="start">Lead order is physical; outlines and lead spacing are schematic, not to scale. Hops do not connect to the red rail.</text>
-</svg></section><section id="sheet-6" hidden><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 990" role="img" aria-label="Assembly reference, options and sources">
+</svg></section><section id="sheet-6" hidden><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 990" role="img" aria-label="MIDI OUT - 5-pin DIN current loop">
+<rect x="0" y="0" width="1400" height="990" fill="white" stroke="none"/>
+<text x="42" y="42" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#183044" text-anchor="start">SIGMIDI</text>
+<text x="195" y="41" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">FOOT CONTROLLER  /  v0.1</text>
+<text x="42" y="78" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#183044" text-anchor="start">MIDI OUT - 5-pin DIN current loop</text>
+<text x="42" y="104" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">UART1 TX at 31,250 baud, 8-N-1; 74HCT125 buffer and current-loop resistors. UART0 remains ROM-flash serial.</text>
+<line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
+<line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
+<text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">7 / 8  |  30 OCT 2026</text>
+<text x="48" y="158" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">UART TX, idle pull-up and 74HCT125 buffer</text>
+<text x="1100" y="158" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">J3  DIN-5 female</text>
+<rect x="48" y="240" width="300" height="120" fill="#f6f8fa" stroke="#183044"/>
+<text x="66" y="270" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#183044" text-anchor="start">U1  Arduino Nano ESP32</text>
+<text x="66" y="296" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">UART1 TX, 31,250 baud 8-N-1</text>
+<text x="66" y="340" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">D1 / GPIO43 not connected</text>
+<circle cx="348" cy="310" r="3" stroke="#183044" fill="white"/>
+<text x="338" y="315" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">D0 / RX0  GPIO44</text>
+<circle cx="430" cy="190" r="2.6" stroke="#ba344b" fill="#ba344b"/>
+<text x="438" y="185" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="start">3V3</text>
+<line x1="430" y1="190" x2="430.0" y2="231.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="430.0" y1="269.0" x2="430" y2="310" stroke="#183044" stroke-width="1.8"/>
+<rect x="423.0" y="231.0" width="14" height="38" fill="white" stroke="#183044"/>
+<text x="443.0" y="245.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="start">R52</text>
+<text x="443.0" y="261.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">10k</text>
+<line x1="348" y1="310" x2="560" y2="310" stroke="#8650aa" stroke-width="1.8"/>
+<circle cx="430" cy="310" r="3" stroke="#8650aa" fill="#8650aa"/>
+<text x="470" y="302" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#8650aa" text-anchor="start">MIDI_OUT_TX</text>
+<rect x="560" y="250" width="200" height="160" fill="#edf4fc" stroke="#183044"/>
+<text x="660" y="280" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#183044" text-anchor="middle">U4  74HCT125</text>
+<circle cx="560" cy="310" r="3" stroke="#183044" fill="white"/>
+<text x="570" y="315" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">1A</text>
+<circle cx="560" cy="370" r="3" stroke="#183044" fill="white"/>
+<text x="570" y="375" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">/1OE</text>
+<circle cx="760" cy="310" r="3" stroke="#183044" fill="white"/>
+<text x="750" y="315" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="end">1Y</text>
+<text x="660" y="398" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#526575" text-anchor="middle">2-4 unused: see note</text>
+<circle cx="660" cy="250" r="3" stroke="#183044" fill="white"/>
+<text x="670" y="255" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start"></text>
+<text x="668" y="242" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#183044" text-anchor="start">14 VCC</text>
+<circle cx="660" cy="410" r="3" stroke="#183044" fill="white"/>
+<text x="670" y="415" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start"></text>
+<text x="668" y="428" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#183044" text-anchor="start">7 GND</text>
+<line x1="560" y1="370" x2="520" y2="370" stroke="#183044" stroke-width="1.8"/>
+<line x1="520" y1="370" x2="520" y2="440" stroke="#183044" stroke-width="1.8"/>
+<line x1="520" y1="440" x2="520" y2="449" stroke="#183044" stroke-width="1.8"/>
+<line x1="510" y1="449" x2="530" y2="449" stroke="#183044" stroke-width="1.8"/>
+<line x1="514" y1="454" x2="526" y2="454" stroke="#183044" stroke-width="1.8"/>
+<line x1="518" y1="459" x2="522" y2="459" stroke="#183044" stroke-width="1.8"/>
+<line x1="660" y1="410" x2="660" y2="440" stroke="#183044" stroke-width="1.8"/>
+<line x1="660" y1="440" x2="660" y2="449" stroke="#183044" stroke-width="1.8"/>
+<line x1="650" y1="449" x2="670" y2="449" stroke="#183044" stroke-width="1.8"/>
+<line x1="654" y1="454" x2="666" y2="454" stroke="#183044" stroke-width="1.8"/>
+<line x1="658" y1="459" x2="662" y2="459" stroke="#183044" stroke-width="1.8"/>
+<circle cx="610" cy="190" r="2.6" stroke="#ba344b" fill="#ba344b"/>
+<text x="602" y="185" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="end">MIDI_5V</text>
+<line x1="610" y1="190" x2="960" y2="190" stroke="#ba344b" stroke-width="1.8"/>
+<line x1="660" y1="190" x2="660" y2="250" stroke="#ba344b" stroke-width="1.8"/>
+<circle cx="660" cy="190" r="3" stroke="#ba344b" fill="#ba344b"/>
+<line x1="840" y1="190" x2="840" y2="214" stroke="#ba344b" stroke-width="1.8"/>
+<circle cx="840" cy="190" r="3" stroke="#ba344b" fill="#ba344b"/>
+<line x1="828" y1="214" x2="852" y2="214" stroke="#183044" stroke-width="1.8"/>
+<line x1="828" y1="221" x2="852" y2="221" stroke="#183044" stroke-width="1.8"/>
+<line x1="840" y1="221" x2="840" y2="245" stroke="#183044" stroke-width="1.8"/>
+<line x1="840" y1="245" x2="840" y2="254" stroke="#183044" stroke-width="1.8"/>
+<line x1="830" y1="254" x2="850" y2="254" stroke="#183044" stroke-width="1.8"/>
+<line x1="834" y1="259" x2="846" y2="259" stroke="#183044" stroke-width="1.8"/>
+<line x1="838" y1="264" x2="842" y2="264" stroke="#183044" stroke-width="1.8"/>
+<text x="860" y="216" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="start">C6</text>
+<text x="860" y="232" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="start">100nF</text>
+<line x1="960" y1="190" x2="1010.0" y2="190.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="1050.0" y1="190.0" x2="1100" y2="190" stroke="#183044" stroke-width="1.8"/>
+<rect x="1010.0" y="183.0" width="40" height="14" fill="white" stroke="#183044"/>
+<text x="1030.0" y="163.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">R53</text>
+<text x="1030.0" y="178.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
+<line x1="760" y1="310" x2="960" y2="310" stroke="#8650aa" stroke-width="1.8"/>
+<text x="800" y="302" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#8650aa" text-anchor="start">TX_GATE</text>
+<line x1="960" y1="310" x2="1010.0" y2="310.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="1050.0" y1="310.0" x2="1100" y2="310" stroke="#183044" stroke-width="1.8"/>
+<rect x="1010.0" y="303.0" width="40" height="14" fill="white" stroke="#183044"/>
+<text x="1030.0" y="283.0" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">R54</text>
+<text x="1030.0" y="298.0" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
+<text x="1075" y="206" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#ba344b" text-anchor="middle">DIN4</text>
+<text x="1075" y="326" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="#8650aa" text-anchor="middle">DIN5</text>
+<rect x="1100" y="170" width="240" height="300" fill="#f6f8fa" stroke="#183044"/>
+<circle cx="1100" cy="190" r="4" stroke="#183044" fill="white"/>
+<text x="1116" y="195" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Pin 4</text>
+<circle cx="1100" cy="310" r="4" stroke="#183044" fill="white"/>
+<text x="1116" y="315" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Pin 5</text>
+<circle cx="1100" cy="370" r="4" stroke="#183044" fill="white"/>
+<text x="1116" y="375" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Pin 1</text>
+<text x="1180" y="375" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">NC - leave open</text>
+<circle cx="1100" cy="410" r="4" stroke="#183044" fill="white"/>
+<text x="1116" y="415" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Pin 2</text>
+<text x="1180" y="415" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">NC - leave open</text>
+<circle cx="1100" cy="450" r="4" stroke="#183044" fill="white"/>
+<text x="1116" y="455" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#183044" text-anchor="start">Pin 3</text>
+<text x="1180" y="455" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">NC - leave open</text>
+<rect x="48" y="520" width="620" height="180" fill="#fbf6f6" stroke="#d6e0e6"/>
+<text x="66" y="550" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">MIDI_5V supply / Schottky diode OR</text>
+<circle cx="150" cy="600" r="2.6" stroke="#ba344b" fill="#ba344b"/>
+<text x="142" y="595" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="end">+5V</text>
+<line x1="150" y1="600" x2="220" y2="600" stroke="#ba344b" stroke-width="1.8"/>
+<polygon points="220,587 220,613 250,600" fill="white" stroke="#ba344b" stroke-width="1.7"/>
+<line x1="252" y1="587" x2="252" y2="613" stroke="#ba344b" stroke-width="2.2"/>
+<text x="236" y="580" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">D1  1N5819</text>
+<line x1="252" y1="600" x2="460" y2="600" stroke="#ba344b" stroke-width="1.8"/>
+<circle cx="150" cy="660" r="2.6" stroke="#2164b4" fill="#2164b4"/>
+<text x="142" y="655" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#2164b4" text-anchor="end">USB_VBUS</text>
+<line x1="150" y1="660" x2="220" y2="660" stroke="#2164b4" stroke-width="1.8"/>
+<polygon points="220,647 220,673 250,660" fill="white" stroke="#2164b4" stroke-width="1.7"/>
+<line x1="252" y1="647" x2="252" y2="673" stroke="#2164b4" stroke-width="2.2"/>
+<text x="236" y="640" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#183044" text-anchor="middle">D2  1N5819</text>
+<line x1="252" y1="660" x2="400" y2="660" stroke="#ba344b" stroke-width="1.8"/>
+<line x1="400" y1="660" x2="400" y2="600" stroke="#ba344b" stroke-width="1.8"/>
+<circle cx="400" cy="600" r="3" stroke="#ba344b" fill="#ba344b"/>
+<circle cx="460" cy="600" r="2.6" stroke="#ba344b" fill="#ba344b"/>
+<text x="468" y="595" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ba344b" text-anchor="start">MIDI_5V</text>
+<text x="142" y="616" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#526575" text-anchor="end">converter</text>
+<text x="142" y="676" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#526575" text-anchor="end">Nano VBUS</text>
+<rect x="720" y="520" width="620" height="180" fill="#f6f8fa" stroke="#d6e0e6"/>
+<text x="738" y="550" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Buffer and supply notes</text>
+<text x="738" y="580" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">R52 holds the buffer input idle-high during reset.</text>
+<text x="738" y="602" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">U4 /1OE grounded; C6 directly across pins 14 / 7.</text>
+<text x="738" y="624" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Unused inputs 5 / 9 / 12 and /OE 4 / 10 / 13 to GND;</text>
+<text x="738" y="646" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">outputs 6 / 8 / 11 left open.</text>
+<text x="738" y="668" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Diodes isolate converter +5V and USB VBUS.</text>
+<rect x="48" y="740" width="1292" height="150" fill="#fff8ef" stroke="#d6e0e6"/>
+<text x="66" y="772" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">MIDI OUT loop: MIDI_5V -&gt; R53 -&gt; DIN 4 -&gt; receiver optocoupler -&gt; DIN 5 -&gt; R54 -&gt; buffer 1Y sink.</text>
+<text x="66" y="802" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">DIN pins 1, 2 (shield) and 3 are unconnected; circuit ground does not go to the DIN.</text>
+<text x="66" y="832" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">One-way output only; no receive connection to the Nano. Verify DIN-5 numbering against the chosen connector datasheet view.</text>
+</svg></section><section id="sheet-7" hidden><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 990" role="img" aria-label="Assembly reference, options and sources">
 <rect x="0" y="0" width="1400" height="990" fill="white" stroke="none"/>
 <text x="42" y="42" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#183044" text-anchor="start">SIGMIDI</text>
 <text x="195" y="41" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526575" text-anchor="start">FOOT CONTROLLER  /  v0.1</text>
@@ -1046,7 +1179,7 @@
 <line x1="42" y1="119" x2="1358" y2="119" stroke="#d6e0e6" stroke-width="1.8"/>
 <line x1="42" y1="937" x2="1358" y2="937" stroke="#d6e0e6" stroke-width="1.8"/>
 <text x="42" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.</text>
-<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">7 / 7  |  30 OCT 2026</text>
+<text x="1358" y="961" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="end">8 / 8  |  30 OCT 2026</text>
 <text x="42" y="155" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="start">Harness and assembly rules</text>
 <text x="42" y="185" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">All GND symbols are the same electrical net. Run analog returns separately to the controller ground point.</text>
 <text x="42" y="210" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#183044" text-anchor="start">Keep LADDER and pedal signals away from LED power/data and the DC converter. Pair signals with ground.</text>
@@ -1077,5 +1210,7 @@
 <text x="445" y="758" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">5mm addressable RGB LED / WS2811 / 5V / 800kHz</text>
 <text x="42" y="785" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">Espressif self-powered USB devices</text>
 <text x="445" y="785" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">VBUS sense: 100k / 150k divider to A4 / GPIO11</text>
+<text x="42" y="812" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#183044" text-anchor="start">MIDI Association - MIDI 1.0 electrical specifications</text>
+<text x="445" y="812" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">5-pin DIN current-loop interface reference</text>
 <text x="42" y="918" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#526575" text-anchor="start">Source URLs, BOM, exact terminal connectivity and generated SVG sheets are in design/electrical/.</text>
 </svg></section></main><script>document.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('section').forEach((s,i)=>s.hidden=i!==Number(b.dataset.sheet));document.querySelectorAll('button').forEach(x=>x.setAttribute('aria-current',String(x===b)));}));</script></html>

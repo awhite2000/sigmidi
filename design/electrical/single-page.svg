@@ -30,7 +30,7 @@
 <circle cx="2400" cy="1000" r="4" stroke="#087e89" fill="white"/>
 <circle cx="2400" cy="1060" r="4" stroke="#183044" fill="white"/>
 <circle cx="2400" cy="1120" r="4" stroke="#526575" fill="white"/>
-<circle cx="2400" cy="1180" r="4" stroke="#526575" fill="white"/>
+<circle cx="2400" cy="1180" r="4" stroke="#087e89" fill="white"/>
 <circle cx="2400" cy="1240" r="4" stroke="#526575" fill="white"/>
 <rect x="2800" y="350" width="600" height="650" fill="#edf4fc" stroke="#183044"/>
 <circle cx="2800" cy="410" r="4" stroke="#a64932" fill="white"/>
@@ -52,12 +52,12 @@
 <circle cx="500" cy="480" r="4" stroke="#183044" fill="white"/>
 <line x1="485" y1="439.0" x2="515" y2="439.0" stroke="#183044" stroke-width="1.8"/>
 <line x1="485" y1="451.0" x2="515" y2="451.0" stroke="#183044" stroke-width="1.8"/>
-<circle cx="900" cy="1220" r="4" stroke="#087e89" fill="white"/>
-<circle cx="1000" cy="1220" r="4" stroke="#087e89" fill="white"/>
-<rect x="928.0" y="1211.0" width="44" height="18" fill="white" stroke="#183044"/>
-<circle cx="1000" cy="1220" r="4" stroke="#087e89" fill="white"/>
-<circle cx="1000" cy="1340" r="4" stroke="#183044" fill="white"/>
-<rect x="991.0" y="1255.0" width="18" height="50" fill="white" stroke="#183044"/>
+<circle cx="1320" cy="1260" r="4" stroke="#087e89" fill="white"/>
+<circle cx="1200" cy="1260" r="4" stroke="#087e89" fill="white"/>
+<rect x="1238.0" y="1251.0" width="44" height="18" fill="white" stroke="#183044"/>
+<circle cx="1200" cy="1260" r="4" stroke="#087e89" fill="white"/>
+<circle cx="1200" cy="1380" r="4" stroke="#183044" fill="white"/>
+<rect x="1191.0" y="1295.0" width="18" height="50" fill="white" stroke="#183044"/>
 <rect x="100" y="490" width="600" height="650" fill="#eef8f8" stroke="#183044"/>
 <circle cx="700" cy="600" r="4" stroke="#087e89" fill="white"/>
 <circle cx="700" cy="720" r="4" stroke="#087e89" fill="white"/>
@@ -173,6 +173,45 @@
 <circle cx="3250" cy="2210" r="4" stroke="#183044" fill="white"/>
 <circle cx="3250" cy="2260" r="4" stroke="#183044" fill="white"/>
 <line x1="3250" y1="2260" x2="3228" y2="2217" stroke="#183044" stroke-width="1.8"/>
+<circle cx="2860" cy="1690" r="4" stroke="#ba344b" fill="white"/>
+<circle cx="2980" cy="1690" r="4" stroke="#ba344b" fill="white"/>
+<polygon points="2880,1676 2880,1704 2928,1690" fill="white" stroke="#ba344b" stroke-width="1.8"/>
+<line x1="2930" y1="1676" x2="2930" y2="1704" stroke="#ba344b" stroke-width="2.4"/>
+<circle cx="2860" cy="1770" r="4" stroke="#087e89" fill="white"/>
+<circle cx="2980" cy="1770" r="4" stroke="#ba344b" fill="white"/>
+<polygon points="2880,1756 2880,1784 2928,1770" fill="white" stroke="#2164b4" stroke-width="1.8"/>
+<line x1="2930" y1="1756" x2="2930" y2="1784" stroke="#2164b4" stroke-width="2.4"/>
+<circle cx="2820" cy="1860" r="4" stroke="#a64932" fill="white"/>
+<circle cx="2940" cy="1860" r="4" stroke="#087e89" fill="white"/>
+<rect x="2858.0" y="1851.0" width="44" height="18" fill="white" stroke="#183044"/>
+<rect x="3100" y="1800" width="200" height="180" fill="#edf4fc" stroke="#183044"/>
+<circle cx="3100" cy="1860" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3100" cy="1920" r="4" stroke="#183044" fill="white"/>
+<circle cx="3300" cy="1860" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3200" cy="1770" r="4" stroke="#ba344b" fill="white"/>
+<circle cx="3200" cy="2010" r="4" stroke="#183044" fill="white"/>
+<circle cx="3220" cy="2010" r="4" stroke="#183044" fill="white"/>
+<circle cx="3240" cy="2010" r="4" stroke="#183044" fill="white"/>
+<circle cx="3260" cy="2010" r="4" stroke="#183044" fill="white"/>
+<circle cx="3280" cy="2010" r="4" stroke="#183044" fill="white"/>
+<circle cx="3300" cy="2010" r="4" stroke="#183044" fill="white"/>
+<circle cx="3320" cy="2010" r="4" stroke="#183044" fill="white"/>
+<rect x="3500" y="1760" width="180" height="300" fill="white" stroke="#183044"/>
+<circle cx="3500" cy="1840" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3500" cy="1940" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3500" cy="1980" r="4" stroke="#526575" fill="white"/>
+<circle cx="3500" cy="2020" r="4" stroke="#526575" fill="white"/>
+<circle cx="3500" cy="2050" r="4" stroke="#526575" fill="white"/>
+<circle cx="3360" cy="1840" r="4" stroke="#ba344b" fill="white"/>
+<circle cx="3460" cy="1840" r="4" stroke="#087e89" fill="white"/>
+<rect x="3388.0" y="1831.0" width="44" height="18" fill="white" stroke="#183044"/>
+<circle cx="3360" cy="1940" r="4" stroke="#087e89" fill="white"/>
+<circle cx="3460" cy="1940" r="4" stroke="#087e89" fill="white"/>
+<rect x="3388.0" y="1931.0" width="44" height="18" fill="white" stroke="#183044"/>
+<circle cx="3340" cy="2020" r="4" stroke="#ba344b" fill="white"/>
+<circle cx="3340" cy="2080" r="4" stroke="#183044" fill="white"/>
+<line x1="3325" y1="2044.0" x2="3355" y2="2044.0" stroke="#183044" stroke-width="1.8"/>
+<line x1="3325" y1="2056.0" x2="3355" y2="2056.0" stroke="#183044" stroke-width="1.8"/>
 <rect x="100" y="1342" width="230" height="100" fill="#f9f5fd" stroke="#183044"/>
 <line x1="100" y1="1442" x2="330" y2="1442" stroke="#8650aa" stroke-width="3"/>
 <circle cx="330" cy="1360" r="4" stroke="#8650aa" fill="white"/>
@@ -252,18 +291,26 @@
 <line x1="40" y1="480" x2="40" y2="2460" stroke="#183044" stroke-width="3"/>
 <line x1="40" y1="2460" x2="3750" y2="2460" stroke="#183044" stroke-width="3"/>
 <line x1="3750" y1="2460" x2="3750" y2="1060" stroke="#183044" stroke-width="3"/>
-<line x1="1500" y1="1180" x2="1400" y2="1180" stroke="#183044" stroke-width="3"/>
-<line x1="1400" y1="1180" x2="1400" y2="1500" stroke="#183044" stroke-width="3"/>
-<line x1="1400" y1="1500" x2="1080" y2="1500" stroke="#183044" stroke-width="3"/>
+<line x1="1500" y1="1180" x2="1480" y2="1180" stroke="#183044" stroke-width="3"/>
+<line x1="1480" y1="1180" x2="1480" y2="1370" stroke="#183044" stroke-width="3"/>
+<line x1="1480" y1="1370" x2="1470" y2="1370" stroke="#183044" stroke-width="3"/>
+<line x1="1470" y1="1370" x2="1470" y2="2470" stroke="#183044" stroke-width="3"/>
+<line x1="1470" y1="2470" x2="3700" y2="2470" stroke="#183044" stroke-width="3"/>
+<line x1="3700" y1="2470" x2="3700" y2="2460" stroke="#183044" stroke-width="3"/>
 <line x1="2400" y1="1060" x2="3750" y2="1060" stroke="#183044" stroke-width="3"/>
 <line x1="600" y1="1325" x2="600" y2="2460" stroke="#183044" stroke-width="3"/>
-<line x1="2740" y1="250" x2="2740" y2="410" stroke="#a64932" stroke-width="3"/>
-<line x1="2740" y1="410" x2="2800" y2="410" stroke="#a64932" stroke-width="3"/>
-<line x1="2720" y1="250" x2="2720" y2="970" stroke="#a64932" stroke-width="3"/>
-<line x1="2720" y1="970" x2="2800" y2="970" stroke="#a64932" stroke-width="3"/>
-<line x1="2800" y1="890" x2="2700" y2="890" stroke="#183044" stroke-width="3"/>
-<line x1="2700" y1="890" x2="2700" y2="1100" stroke="#183044" stroke-width="3"/>
-<line x1="2700" y1="1100" x2="3750" y2="1100" stroke="#183044" stroke-width="3"/>
+<line x1="2740" y1="250" x2="2760" y2="250" stroke="#a64932" stroke-width="3"/>
+<line x1="2760" y1="250" x2="2760" y2="410" stroke="#a64932" stroke-width="3"/>
+<line x1="2760" y1="410" x2="2800" y2="410" stroke="#a64932" stroke-width="3"/>
+<line x1="2760" y1="410" x2="2760" y2="970" stroke="#a64932" stroke-width="3"/>
+<line x1="2760" y1="970" x2="2800" y2="970" stroke="#a64932" stroke-width="3"/>
+<line x1="2760" y1="970" x2="2760" y2="1810" stroke="#a64932" stroke-width="3"/>
+<line x1="2760" y1="1810" x2="2820" y2="1810" stroke="#a64932" stroke-width="3"/>
+<line x1="2820" y1="1810" x2="2820" y2="1860" stroke="#a64932" stroke-width="3"/>
+<line x1="2800" y1="890" x2="2720" y2="890" stroke="#183044" stroke-width="3"/>
+<line x1="2720" y1="890" x2="2720" y2="2440" stroke="#183044" stroke-width="3"/>
+<line x1="2720" y1="2440" x2="3750" y2="2440" stroke="#183044" stroke-width="3"/>
+<line x1="3750" y1="2440" x2="3750" y2="2460" stroke="#183044" stroke-width="3"/>
 <line x1="2400" y1="400" x2="2500" y2="400" stroke="#2164b4" stroke-width="2.1"/>
 <line x1="2500" y1="400" x2="2500" y2="490" stroke="#2164b4" stroke-width="2.1"/>
 <line x1="2500" y1="490" x2="2800" y2="490" stroke="#2164b4" stroke-width="2.1"/>
@@ -283,30 +330,32 @@
 <line x1="500" y1="410" x2="500" y2="439.0" stroke="#a35b12" stroke-width="2.1"/>
 <line x1="500" y1="451.0" x2="500" y2="480" stroke="#183044" stroke-width="3"/>
 <line x1="650" y1="410" x2="650" y2="280" stroke="#a35b12" stroke-width="2.1"/>
-<line x1="650" y1="280" x2="1360" y2="280" stroke="#a35b12" stroke-width="2.1"/>
-<line x1="1360" y1="280" x2="1360" y2="1480" stroke="#a35b12" stroke-width="2.1"/>
-<line x1="1360" y1="1480" x2="1380" y2="1480" stroke="#a35b12" stroke-width="2.1"/>
-<line x1="1380" y1="1480" x2="1380" y2="1240" stroke="#a35b12" stroke-width="2.1"/>
-<line x1="1380" y1="1240" x2="1500" y2="1240" stroke="#a35b12" stroke-width="2.1"/>
+<line x1="650" y1="280" x2="1460" y2="280" stroke="#a35b12" stroke-width="2.1"/>
+<line x1="1460" y1="280" x2="1460" y2="1240" stroke="#a35b12" stroke-width="2.1"/>
+<line x1="1460" y1="1240" x2="1500" y2="1240" stroke="#a35b12" stroke-width="2.1"/>
 <line x1="250" y1="450" x2="250" y2="480" stroke="#183044" stroke-width="3"/>
 <line x1="250" y1="480" x2="40" y2="480" stroke="#183044" stroke-width="3"/>
 <line x1="850" y1="450" x2="850" y2="480" stroke="#183044" stroke-width="3"/>
 <line x1="850" y1="480" x2="250" y2="480" stroke="#183044" stroke-width="3"/>
 <line x1="1000" y1="410" x2="1040" y2="410" stroke="#ba344b" stroke-width="3"/>
 <line x1="1040" y1="410" x2="1040" y2="200" stroke="#ba344b" stroke-width="3"/>
-<line x1="900" y1="1220" x2="928.0" y2="1220.0" stroke="#087e89" stroke-width="2.1"/>
-<line x1="972.0" y1="1220.0" x2="1000" y2="1220" stroke="#087e89" stroke-width="2.1"/>
-<line x1="1000" y1="1220" x2="1000.0" y2="1255.0" stroke="#087e89" stroke-width="2.1"/>
-<line x1="1000.0" y1="1305.0" x2="1000" y2="1340" stroke="#183044" stroke-width="3"/>
-<line x1="1500" y1="1060" x2="1300" y2="1060" stroke="#087e89" stroke-width="2.1"/>
-<line x1="1300" y1="1060" x2="1300" y2="1180" stroke="#087e89" stroke-width="2.1"/>
-<line x1="1300" y1="1180" x2="900" y2="1180" stroke="#087e89" stroke-width="2.1"/>
-<line x1="900" y1="1180" x2="900" y2="1220" stroke="#087e89" stroke-width="2.1"/>
-<line x1="1500" y1="820" x2="1120" y2="820" stroke="#087e89" stroke-width="2.1"/>
-<line x1="1120" y1="820" x2="1120" y2="1220" stroke="#087e89" stroke-width="2.1"/>
-<line x1="1120" y1="1220" x2="1000" y2="1220" stroke="#087e89" stroke-width="2.1"/>
-<line x1="1000" y1="1340" x2="1080" y2="1340" stroke="#183044" stroke-width="3"/>
-<line x1="1080" y1="1340" x2="1080" y2="2460" stroke="#183044" stroke-width="3"/>
+<line x1="1320" y1="1260" x2="1282.0" y2="1260.0" stroke="#087e89" stroke-width="2.1"/>
+<line x1="1238.0" y1="1260.0" x2="1200" y2="1260" stroke="#087e89" stroke-width="2.1"/>
+<line x1="1200" y1="1260" x2="1200.0" y2="1295.0" stroke="#087e89" stroke-width="2.1"/>
+<line x1="1200.0" y1="1345.0" x2="1200" y2="1380" stroke="#183044" stroke-width="3"/>
+<line x1="1500" y1="1060" x2="1420" y2="1060" stroke="#087e89" stroke-width="2.1"/>
+<line x1="1420" y1="1060" x2="1420" y2="1770" stroke="#087e89" stroke-width="2.1"/>
+<line x1="1420" y1="1770" x2="2860" y2="1770" stroke="#087e89" stroke-width="2.1"/>
+<line x1="2860" y1="1770" x2="2880" y2="1770" stroke="#087e89" stroke-width="2.1"/>
+<line x1="1420" y1="1240" x2="1320" y2="1240" stroke="#087e89" stroke-width="2.1"/>
+<line x1="1320" y1="1240" x2="1320" y2="1260" stroke="#087e89" stroke-width="2.1"/>
+<line x1="1200" y1="1260" x2="1120" y2="1260" stroke="#087e89" stroke-width="2.1"/>
+<line x1="1120" y1="1260" x2="1120" y2="820" stroke="#087e89" stroke-width="2.1"/>
+<line x1="1120" y1="820" x2="1500" y2="820" stroke="#087e89" stroke-width="2.1"/>
+<line x1="1200" y1="1380" x2="1200" y2="1460" stroke="#183044" stroke-width="3"/>
+<line x1="1200" y1="1460" x2="600" y2="1460" stroke="#183044" stroke-width="3"/>
+<line x1="600" y1="1460" x2="600" y2="1325" stroke="#183044" stroke-width="3"/>
+<line x1="600" y1="1325" x2="600" y2="2460" stroke="#183044" stroke-width="3"/>
 <line x1="100" y1="780" x2="40" y2="780" stroke="#183044" stroke-width="3"/>
 <line x1="100" y1="1080" x2="40" y2="1080" stroke="#183044" stroke-width="3"/>
 <line x1="780" y1="600" x2="762.0" y2="600.0" stroke="#a64932" stroke-width="3"/>
@@ -415,6 +464,54 @@
 <line x1="3250" y1="2175" x2="3250" y2="2210" stroke="#986300" stroke-width="2.1"/>
 <line x1="3250" y1="2260" x2="3250" y2="2320" stroke="#183044" stroke-width="3"/>
 <line x1="3250" y1="2320" x2="3250" y2="2460" stroke="#183044" stroke-width="3"/>
+<line x1="3700" y1="200" x2="3760" y2="200" stroke="#ba344b" stroke-width="3"/>
+<line x1="3760" y1="200" x2="3760" y2="1620" stroke="#ba344b" stroke-width="3"/>
+<line x1="3760" y1="1620" x2="2820" y2="1620" stroke="#ba344b" stroke-width="3"/>
+<line x1="2820" y1="1620" x2="2820" y2="1690" stroke="#ba344b" stroke-width="3"/>
+<line x1="2820" y1="1690" x2="2860" y2="1690" stroke="#ba344b" stroke-width="3"/>
+<line x1="2860" y1="1690" x2="2880" y2="1690" stroke="#ba344b" stroke-width="3"/>
+<line x1="2930" y1="1690" x2="2980" y2="1690" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="2930" y1="1770" x2="2980" y2="1770" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="2980" y1="1690" x2="2980" y2="1770" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="2980" y1="1730" x2="3340" y2="1730" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="2820" y1="1860" x2="2858.0" y2="1860.0" stroke="#a64932" stroke-width="3"/>
+<line x1="2902.0" y1="1860.0" x2="2940" y2="1860" stroke="#087e89" stroke-width="2.1"/>
+<line x1="2400" y1="1180" x2="2460" y2="1180" stroke="#087e89" stroke-width="2.1"/>
+<line x1="2460" y1="1180" x2="2460" y2="1900" stroke="#087e89" stroke-width="2.1"/>
+<line x1="2460" y1="1900" x2="2940" y2="1900" stroke="#087e89" stroke-width="2.1"/>
+<line x1="2940" y1="1860" x2="2940" y2="1900" stroke="#087e89" stroke-width="2.1"/>
+<line x1="2940" y1="1900" x2="3000" y2="1900" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3000" y1="1900" x2="3000" y2="1860" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3000" y1="1860" x2="3100" y2="1860" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3200" y1="1730" x2="3200" y2="1770" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3100" y1="1920" x2="3070" y2="1920" stroke="#183044" stroke-width="3"/>
+<line x1="3070" y1="1920" x2="3070" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3070" y1="2100" x2="3750" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3750" y1="2100" x2="3750" y2="2460" stroke="#183044" stroke-width="3"/>
+<line x1="3200" y1="2010" x2="3200" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3200" y1="2100" x2="3750" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3220" y1="2010" x2="3220" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3240" y1="2010" x2="3240" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3260" y1="2010" x2="3260" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3280" y1="2010" x2="3280" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3300" y1="2010" x2="3300" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3320" y1="2010" x2="3320" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3360" y1="1840" x2="3388.0" y2="1840.0" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3432.0" y1="1840.0" x2="3460" y2="1840" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3340" y1="1730" x2="3340" y2="1840" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3340" y1="1840" x2="3360" y2="1840" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3460" y1="1840" x2="3500" y2="1840" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3360" y1="1940" x2="3388.0" y2="1940.0" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3432.0" y1="1940.0" x2="3460" y2="1940" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3300" y1="1860" x2="3330" y2="1860" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3330" y1="1860" x2="3330" y2="1940" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3330" y1="1940" x2="3360" y2="1940" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3460" y1="1940" x2="3500" y2="1940" stroke="#087e89" stroke-width="2.1"/>
+<line x1="3340" y1="2020" x2="3340" y2="2044.0" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3340" y1="2056.0" x2="3340" y2="2080" stroke="#183044" stroke-width="3"/>
+<line x1="3340" y1="1840" x2="3340" y2="2020" stroke="#ba344b" stroke-width="2.1"/>
+<line x1="3340" y1="2080" x2="3340" y2="2100" stroke="#183044" stroke-width="3"/>
+<line x1="3340" y1="2100" x2="3750" y2="2100" stroke="#183044" stroke-width="3"/>
 <line x1="330" y1="1384" x2="500" y2="1384" stroke="#ba344b" stroke-width="3"/>
 <line x1="330" y1="1408" x2="600" y2="1408" stroke="#183044" stroke-width="3"/>
 <line x1="330" y1="1432" x2="380" y2="1432" stroke="#8650aa" stroke-width="2.1"/>
@@ -467,38 +564,48 @@
 <line x1="2440" y1="1400" x2="720" y2="1400" stroke="#8650aa" stroke-width="2.1"/>
 <line x1="720" y1="1400" x2="720" y2="1360" stroke="#8650aa" stroke-width="2.1"/>
 <line x1="720" y1="1360" x2="330" y2="1360" stroke="#8650aa" stroke-width="2.1"/>
+<line x1="3743" y1="1620" x2="3757" y2="1620" stroke="white" stroke-width="9"/>
+<polyline points="3743,1620 3745,1614 3750,1612 3755,1614 3757,1620" fill="none" stroke="#ba344b" stroke-width="2.3"/>
 <line x1="1033" y1="280" x2="1047" y2="280" stroke="white" stroke-width="9"/>
 <polyline points="1033,280 1035,274 1040,272 1045,274 1047,280" fill="none" stroke="#a35b12" stroke-width="2.3"/>
 <line x1="1093" y1="280" x2="1107" y2="280" stroke="white" stroke-width="9"/>
 <polyline points="1093,280 1095,274 1100,272 1105,274 1107,280" fill="none" stroke="#a35b12" stroke-width="2.3"/>
-<line x1="1393" y1="1240" x2="1407" y2="1240" stroke="white" stroke-width="9"/>
-<polyline points="1393,1240 1395,1234 1400,1232 1405,1234 1407,1240" fill="none" stroke="#a35b12" stroke-width="2.3"/>
-<line x1="1433" y1="1240" x2="1447" y2="1240" stroke="white" stroke-width="9"/>
-<polyline points="1433,1240 1435,1234 1440,1232 1445,1234 1447,1240" fill="none" stroke="#a35b12" stroke-width="2.3"/>
+<line x1="1473" y1="1240" x2="1487" y2="1240" stroke="white" stroke-width="9"/>
+<polyline points="1473,1240 1475,1234 1480,1232 1485,1234 1487,1240" fill="none" stroke="#a35b12" stroke-width="2.3"/>
 <line x1="73" y1="250" x2="87" y2="250" stroke="white" stroke-width="9"/>
 <polyline points="73,250 75,244 80,242 85,244 87,250" fill="none" stroke="#a64932" stroke-width="2.3"/>
 <line x1="593" y1="2445" x2="607" y2="2445" stroke="white" stroke-width="9"/>
 <polyline points="593,2445 595,2439 600,2437 605,2439 607,2445" fill="none" stroke="#a64932" stroke-width="2.3"/>
 <line x1="1033" y1="250" x2="1047" y2="250" stroke="white" stroke-width="9"/>
 <polyline points="1033,250 1035,244 1040,242 1045,244 1047,250" fill="none" stroke="#a64932" stroke-width="2.3"/>
-<line x1="1073" y1="2445" x2="1087" y2="2445" stroke="white" stroke-width="9"/>
-<polyline points="1073,2445 1075,2439 1080,2437 1085,2439 1087,2445" fill="none" stroke="#a64932" stroke-width="2.3"/>
-<line x1="1353" y1="460" x2="1367" y2="460" stroke="white" stroke-width="9"/>
-<polyline points="1353,460 1355,454 1360,452 1365,454 1367,460" fill="none" stroke="#a64932" stroke-width="2.3"/>
+<line x1="1453" y1="460" x2="1467" y2="460" stroke="white" stroke-width="9"/>
+<polyline points="1453,460 1455,454 1460,452 1465,454 1467,460" fill="none" stroke="#a64932" stroke-width="2.3"/>
 <line x1="2433" y1="880" x2="2447" y2="880" stroke="white" stroke-width="9"/>
 <polyline points="2433,880 2435,874 2440,872 2445,874 2447,880" fill="none" stroke="#25734a" stroke-width="2.3"/>
 <line x1="2593" y1="1280" x2="2607" y2="1280" stroke="white" stroke-width="9"/>
 <polyline points="2593,1280 2595,1274 2600,1272 2605,1274 2607,1280" fill="none" stroke="#25734a" stroke-width="2.3"/>
 <line x1="2633" y1="1280" x2="2647" y2="1280" stroke="white" stroke-width="9"/>
 <polyline points="2633,1280 2635,1274 2640,1272 2645,1274 2647,1280" fill="none" stroke="#25734a" stroke-width="2.3"/>
+<line x1="2713" y1="1280" x2="2727" y2="1280" stroke="white" stroke-width="9"/>
+<polyline points="2713,1280 2715,1274 2720,1272 2725,1274 2727,1280" fill="none" stroke="#25734a" stroke-width="2.3"/>
+<line x1="2753" y1="1280" x2="2767" y2="1280" stroke="white" stroke-width="9"/>
+<polyline points="2753,1280 2755,1274 2760,1272 2765,1274 2767,1280" fill="none" stroke="#25734a" stroke-width="2.3"/>
 <line x1="2433" y1="820" x2="2447" y2="820" stroke="white" stroke-width="9"/>
 <polyline points="2433,820 2435,814 2440,812 2445,814 2447,820" fill="none" stroke="#25734a" stroke-width="2.3"/>
 <line x1="2633" y1="1360" x2="2647" y2="1360" stroke="white" stroke-width="9"/>
 <polyline points="2633,1360 2635,1354 2640,1352 2645,1354 2647,1360" fill="none" stroke="#25734a" stroke-width="2.3"/>
+<line x1="2713" y1="1360" x2="2727" y2="1360" stroke="white" stroke-width="9"/>
+<polyline points="2713,1360 2715,1354 2720,1352 2725,1354 2727,1360" fill="none" stroke="#25734a" stroke-width="2.3"/>
+<line x1="2753" y1="1360" x2="2767" y2="1360" stroke="white" stroke-width="9"/>
+<polyline points="2753,1360 2755,1354 2760,1352 2765,1354 2767,1360" fill="none" stroke="#25734a" stroke-width="2.3"/>
 <line x1="2433" y1="760" x2="2447" y2="760" stroke="white" stroke-width="9"/>
 <polyline points="2433,760 2435,754 2440,752 2445,754 2447,760" fill="none" stroke="#25734a" stroke-width="2.3"/>
 <line x1="2533" y1="760" x2="2547" y2="760" stroke="white" stroke-width="9"/>
 <polyline points="2533,760 2535,754 2540,752 2545,754 2547,760" fill="none" stroke="#25734a" stroke-width="2.3"/>
+<line x1="2713" y1="1440" x2="2727" y2="1440" stroke="white" stroke-width="9"/>
+<polyline points="2713,1440 2715,1434 2720,1432 2725,1434 2727,1440" fill="none" stroke="#25734a" stroke-width="2.3"/>
+<line x1="2753" y1="1440" x2="2767" y2="1440" stroke="white" stroke-width="9"/>
+<polyline points="2753,1440 2755,1434 2760,1432 2765,1434 2767,1440" fill="none" stroke="#25734a" stroke-width="2.3"/>
 <line x1="53" y1="480" x2="67" y2="480" stroke="white" stroke-width="9"/>
 <polyline points="53,480 55,474 60,472 65,474 67,480" fill="none" stroke="#183044" stroke-width="2.3"/>
 <line x1="53" y1="780" x2="67" y2="780" stroke="white" stroke-width="9"/>
@@ -531,8 +638,10 @@
 <polyline points="493,2288 495,2282 500,2280 505,2282 507,2288" fill="none" stroke="#183044" stroke-width="2.3"/>
 <line x1="493" y1="2398" x2="507" y2="2398" stroke="white" stroke-width="9"/>
 <polyline points="493,2398 495,2392 500,2390 505,2392 507,2398" fill="none" stroke="#183044" stroke-width="2.3"/>
-<line x1="1433" y1="1180" x2="1447" y2="1180" stroke="white" stroke-width="9"/>
-<polyline points="1433,1180 1435,1174 1440,1172 1445,1174 1447,1180" fill="none" stroke="#183044" stroke-width="2.3"/>
+<line x1="793" y1="1460" x2="807" y2="1460" stroke="white" stroke-width="9"/>
+<polyline points="793,1460 795,1454 800,1452 805,1454 807,1460" fill="none" stroke="#183044" stroke-width="2.3"/>
+<line x1="813" y1="1460" x2="827" y2="1460" stroke="white" stroke-width="9"/>
+<polyline points="813,1460 815,1454 820,1452 825,1454 827,1460" fill="none" stroke="#183044" stroke-width="2.3"/>
 <line x1="2433" y1="1060" x2="2447" y2="1060" stroke="white" stroke-width="9"/>
 <polyline points="2433,1060 2435,1054 2440,1052 2445,1054 2447,1060" fill="none" stroke="#183044" stroke-width="2.3"/>
 <line x1="2473" y1="1060" x2="2487" y2="1060" stroke="white" stroke-width="9"/>
@@ -545,36 +654,40 @@
 <polyline points="2593,1060 2595,1054 2600,1052 2605,1054 2607,1060" fill="none" stroke="#183044" stroke-width="2.3"/>
 <line x1="2633" y1="1060" x2="2647" y2="1060" stroke="white" stroke-width="9"/>
 <polyline points="2633,1060 2635,1054 2640,1052 2645,1054 2647,1060" fill="none" stroke="#183044" stroke-width="2.3"/>
-<line x1="2713" y1="890" x2="2727" y2="890" stroke="white" stroke-width="9"/>
-<polyline points="2713,890 2715,884 2720,882 2725,884 2727,890" fill="none" stroke="#183044" stroke-width="2.3"/>
+<line x1="2753" y1="890" x2="2767" y2="890" stroke="white" stroke-width="9"/>
+<polyline points="2753,890 2755,884 2760,882 2765,884 2767,890" fill="none" stroke="#183044" stroke-width="2.3"/>
+<line x1="2753" y1="1060" x2="2767" y2="1060" stroke="white" stroke-width="9"/>
+<polyline points="2753,1060 2755,1054 2760,1052 2765,1054 2767,1060" fill="none" stroke="#183044" stroke-width="2.3"/>
+<line x1="1453" y1="580" x2="1467" y2="580" stroke="white" stroke-width="9"/>
+<polyline points="1453,580 1455,574 1460,572 1465,574 1467,580" fill="none" stroke="#986300" stroke-width="2.3"/>
 <line x1="2533" y1="640" x2="2547" y2="640" stroke="white" stroke-width="9"/>
 <polyline points="2533,640 2535,634 2540,632 2545,634 2547,640" fill="none" stroke="#2164b4" stroke-width="2.3"/>
 <line x1="2573" y1="640" x2="2587" y2="640" stroke="white" stroke-width="9"/>
 <polyline points="2573,640 2575,634 2580,632 2585,634 2587,640" fill="none" stroke="#2164b4" stroke-width="2.3"/>
-<line x1="2713" y1="730" x2="2727" y2="730" stroke="white" stroke-width="9"/>
-<polyline points="2713,730 2715,724 2720,722 2725,724 2727,730" fill="none" stroke="#2164b4" stroke-width="2.3"/>
+<line x1="2753" y1="730" x2="2767" y2="730" stroke="white" stroke-width="9"/>
+<polyline points="2753,730 2755,724 2760,722 2765,724 2767,730" fill="none" stroke="#2164b4" stroke-width="2.3"/>
 <line x1="2533" y1="520" x2="2547" y2="520" stroke="white" stroke-width="9"/>
 <polyline points="2533,520 2535,514 2540,512 2545,514 2547,520" fill="none" stroke="#2164b4" stroke-width="2.3"/>
 <line x1="2653" y1="650" x2="2667" y2="650" stroke="white" stroke-width="9"/>
 <polyline points="2653,650 2655,644 2660,642 2665,644 2667,650" fill="none" stroke="#2164b4" stroke-width="2.3"/>
-<line x1="2713" y1="650" x2="2727" y2="650" stroke="white" stroke-width="9"/>
-<polyline points="2713,650 2715,644 2720,642 2725,644 2727,650" fill="none" stroke="#2164b4" stroke-width="2.3"/>
+<line x1="2753" y1="650" x2="2767" y2="650" stroke="white" stroke-width="9"/>
+<polyline points="2753,650 2755,644 2760,642 2765,644 2767,650" fill="none" stroke="#2164b4" stroke-width="2.3"/>
 <line x1="2533" y1="580" x2="2547" y2="580" stroke="white" stroke-width="9"/>
 <polyline points="2533,580 2535,574 2540,572 2545,574 2547,580" fill="none" stroke="#2164b4" stroke-width="2.3"/>
 <line x1="2573" y1="580" x2="2587" y2="580" stroke="white" stroke-width="9"/>
 <polyline points="2573,580 2575,574 2580,572 2585,574 2587,580" fill="none" stroke="#2164b4" stroke-width="2.3"/>
-<line x1="2713" y1="570" x2="2727" y2="570" stroke="white" stroke-width="9"/>
-<polyline points="2713,570 2715,564 2720,562 2725,564 2727,570" fill="none" stroke="#2164b4" stroke-width="2.3"/>
+<line x1="2753" y1="570" x2="2767" y2="570" stroke="white" stroke-width="9"/>
+<polyline points="2753,570 2755,564 2760,562 2765,564 2767,570" fill="none" stroke="#2164b4" stroke-width="2.3"/>
 <line x1="2493" y1="460" x2="2507" y2="460" stroke="white" stroke-width="9"/>
 <polyline points="2493,460 2495,454 2500,452 2505,454 2507,460" fill="none" stroke="#2164b4" stroke-width="2.3"/>
 <line x1="2633" y1="810" x2="2647" y2="810" stroke="white" stroke-width="9"/>
 <polyline points="2633,810 2635,804 2640,802 2645,804 2647,810" fill="none" stroke="#2164b4" stroke-width="2.3"/>
-<line x1="2713" y1="810" x2="2727" y2="810" stroke="white" stroke-width="9"/>
-<polyline points="2713,810 2715,804 2720,802 2725,804 2727,810" fill="none" stroke="#2164b4" stroke-width="2.3"/>
+<line x1="2753" y1="810" x2="2767" y2="810" stroke="white" stroke-width="9"/>
+<polyline points="2753,810 2755,804 2760,802 2765,804 2767,810" fill="none" stroke="#2164b4" stroke-width="2.3"/>
 <line x1="2533" y1="490" x2="2547" y2="490" stroke="white" stroke-width="9"/>
 <polyline points="2533,490 2535,484 2540,482 2545,484 2547,490" fill="none" stroke="#2164b4" stroke-width="2.3"/>
-<line x1="2713" y1="490" x2="2727" y2="490" stroke="white" stroke-width="9"/>
-<polyline points="2713,490 2715,484 2720,482 2725,484 2727,490" fill="none" stroke="#2164b4" stroke-width="2.3"/>
+<line x1="2753" y1="490" x2="2767" y2="490" stroke="white" stroke-width="9"/>
+<polyline points="2753,490 2755,484 2760,482 2765,484 2767,490" fill="none" stroke="#2164b4" stroke-width="2.3"/>
 <line x1="493" y1="1360" x2="507" y2="1360" stroke="white" stroke-width="9"/>
 <polyline points="493,1360 495,1354 500,1352 505,1354 507,1360" fill="none" stroke="#8650aa" stroke-width="2.3"/>
 <line x1="593" y1="1360" x2="607" y2="1360" stroke="white" stroke-width="9"/>
@@ -583,56 +696,80 @@
 <polyline points="793,1400 795,1394 800,1392 805,1394 807,1400" fill="none" stroke="#8650aa" stroke-width="2.3"/>
 <line x1="813" y1="1400" x2="827" y2="1400" stroke="white" stroke-width="9"/>
 <polyline points="813,1400 815,1394 820,1392 825,1394 827,1400" fill="none" stroke="#8650aa" stroke-width="2.3"/>
-<line x1="1073" y1="1400" x2="1087" y2="1400" stroke="white" stroke-width="9"/>
-<polyline points="1073,1400 1075,1394 1080,1392 1085,1394 1087,1400" fill="none" stroke="#8650aa" stroke-width="2.3"/>
-<line x1="1353" y1="1400" x2="1367" y2="1400" stroke="white" stroke-width="9"/>
-<polyline points="1353,1400 1355,1394 1360,1392 1365,1394 1367,1400" fill="none" stroke="#8650aa" stroke-width="2.3"/>
-<line x1="1373" y1="1400" x2="1387" y2="1400" stroke="white" stroke-width="9"/>
-<polyline points="1373,1400 1375,1394 1380,1392 1385,1394 1387,1400" fill="none" stroke="#8650aa" stroke-width="2.3"/>
-<line x1="1393" y1="1400" x2="1407" y2="1400" stroke="white" stroke-width="9"/>
-<polyline points="1393,1400 1395,1394 1400,1392 1405,1394 1407,1400" fill="none" stroke="#8650aa" stroke-width="2.3"/>
+<line x1="1193" y1="1400" x2="1207" y2="1400" stroke="white" stroke-width="9"/>
+<polyline points="1193,1400 1195,1394 1200,1392 1205,1394 1207,1400" fill="none" stroke="#8650aa" stroke-width="2.3"/>
+<line x1="1413" y1="1400" x2="1427" y2="1400" stroke="white" stroke-width="9"/>
+<polyline points="1413,1400 1415,1394 1420,1392 1425,1394 1427,1400" fill="none" stroke="#8650aa" stroke-width="2.3"/>
 <line x1="1433" y1="1400" x2="1447" y2="1400" stroke="white" stroke-width="9"/>
 <polyline points="1433,1400 1435,1394 1440,1392 1445,1394 1447,1400" fill="none" stroke="#8650aa" stroke-width="2.3"/>
+<line x1="1463" y1="1400" x2="1477" y2="1400" stroke="white" stroke-width="9"/>
+<polyline points="1463,1400 1465,1394 1470,1392 1475,1394 1477,1400" fill="none" stroke="#8650aa" stroke-width="2.3"/>
+<line x1="2433" y1="1180" x2="2447" y2="1180" stroke="white" stroke-width="9"/>
+<polyline points="2433,1180 2435,1174 2440,1172 2445,1174 2447,1180" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="2713" y1="1900" x2="2727" y2="1900" stroke="white" stroke-width="9"/>
+<polyline points="2713,1900 2715,1894 2720,1892 2725,1894 2727,1900" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="773" y1="720" x2="787" y2="720" stroke="white" stroke-width="9"/>
 <polyline points="773,720 775,714 780,712 785,714 787,720" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="813" y1="1580.0" x2="827" y2="1580.0" stroke="white" stroke-width="9"/>
 <polyline points="813,1580.0 815,1574.0 820,1572.0 825,1574.0 827,1580.0" fill="none" stroke="#087e89" stroke-width="2.3"/>
-<line x1="1353" y1="640" x2="1367" y2="640" stroke="white" stroke-width="9"/>
-<polyline points="1353,640 1355,634 1360,632 1365,634 1367,640" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="1433" y1="640" x2="1447" y2="640" stroke="white" stroke-width="9"/>
 <polyline points="1433,640 1435,634 1440,632 1445,634 1447,640" fill="none" stroke="#087e89" stroke-width="2.3"/>
-<line x1="1073" y1="1580" x2="1087" y2="1580" stroke="white" stroke-width="9"/>
-<polyline points="1073,1580 1075,1574 1080,1572 1085,1574 1087,1580" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="1453" y1="640" x2="1467" y2="640" stroke="white" stroke-width="9"/>
+<polyline points="1453,640 1455,634 1460,632 1465,634 1467,640" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="1413" y1="1580" x2="1427" y2="1580" stroke="white" stroke-width="9"/>
+<polyline points="1413,1580 1415,1574 1420,1572 1425,1574 1427,1580" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="1433" y1="1580" x2="1447" y2="1580" stroke="white" stroke-width="9"/>
 <polyline points="1433,1580 1435,1574 1440,1572 1445,1574 1447,1580" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="1463" y1="1580" x2="1477" y2="1580" stroke="white" stroke-width="9"/>
+<polyline points="1463,1580 1465,1574 1470,1572 1475,1574 1477,1580" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="2433" y1="1000" x2="2447" y2="1000" stroke="white" stroke-width="9"/>
 <polyline points="2433,1000 2435,994 2440,992 2445,994 2447,1000" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="2453" y1="1580" x2="2467" y2="1580" stroke="white" stroke-width="9"/>
+<polyline points="2453,1580 2455,1574 2460,1572 2465,1574 2467,1580" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="793" y1="1020" x2="807" y2="1020" stroke="white" stroke-width="9"/>
 <polyline points="793,1020 795,1014 800,1012 805,1014 807,1020" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="1113" y1="1020" x2="1127" y2="1020" stroke="white" stroke-width="9"/>
 <polyline points="1113,1020 1115,1014 1120,1012 1125,1014 1127,1020" fill="none" stroke="#087e89" stroke-width="2.3"/>
-<line x1="1353" y1="760" x2="1367" y2="760" stroke="white" stroke-width="9"/>
-<polyline points="1353,760 1355,754 1360,752 1365,754 1367,760" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="1433" y1="760" x2="1447" y2="760" stroke="white" stroke-width="9"/>
 <polyline points="1433,760 1435,754 1440,752 1445,754 1447,760" fill="none" stroke="#087e89" stroke-width="2.3"/>
-<line x1="1073" y1="1660" x2="1087" y2="1660" stroke="white" stroke-width="9"/>
-<polyline points="1073,1660 1075,1654 1080,1652 1085,1654 1087,1660" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="1453" y1="760" x2="1467" y2="760" stroke="white" stroke-width="9"/>
+<polyline points="1453,760 1455,754 1460,752 1465,754 1467,760" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="1413" y1="1660" x2="1427" y2="1660" stroke="white" stroke-width="9"/>
+<polyline points="1413,1660 1415,1654 1420,1652 1425,1654 1427,1660" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="1433" y1="1660" x2="1447" y2="1660" stroke="white" stroke-width="9"/>
 <polyline points="1433,1660 1435,1654 1440,1652 1445,1654 1447,1660" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="1463" y1="1660" x2="1477" y2="1660" stroke="white" stroke-width="9"/>
+<polyline points="1463,1660 1465,1654 1470,1652 1475,1654 1477,1660" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="2433" y1="940" x2="2447" y2="940" stroke="white" stroke-width="9"/>
 <polyline points="2433,940 2435,934 2440,932 2445,934 2447,940" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="2453" y1="1660" x2="2467" y2="1660" stroke="white" stroke-width="9"/>
+<polyline points="2453,1660 2455,1654 2460,1652 2465,1654 2467,1660" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="1463" y1="2140" x2="1477" y2="2140" stroke="white" stroke-width="9"/>
+<polyline points="1463,2140 1465,2134 1470,2132 1475,2134 1477,2140" fill="none" stroke="#986300" stroke-width="2.3"/>
+<line x1="2713" y1="2140" x2="2727" y2="2140" stroke="white" stroke-width="9"/>
+<polyline points="2713,2140 2715,2134 2720,2132 2725,2134 2727,2140" fill="none" stroke="#986300" stroke-width="2.3"/>
+<line x1="3333" y1="1940" x2="3347" y2="1940" stroke="white" stroke-width="9"/>
+<polyline points="3333,1940 3335,1934 3340,1932 3345,1934 3347,1940" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="1153" y1="820" x2="1167" y2="820" stroke="white" stroke-width="9"/>
 <polyline points="1153,820 1155,814 1160,812 1165,814 1167,820" fill="none" stroke="#087e89" stroke-width="2.3"/>
-<line x1="1353" y1="820" x2="1367" y2="820" stroke="white" stroke-width="9"/>
-<polyline points="1353,820 1355,814 1360,812 1365,814 1367,820" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="1433" y1="820" x2="1447" y2="820" stroke="white" stroke-width="9"/>
 <polyline points="1433,820 1435,814 1440,812 1445,814 1447,820" fill="none" stroke="#087e89" stroke-width="2.3"/>
-<line x1="1113" y1="1180" x2="1127" y2="1180" stroke="white" stroke-width="9"/>
-<polyline points="1113,1180 1115,1174 1120,1172 1125,1174 1127,1180" fill="none" stroke="#087e89" stroke-width="2.3"/>
-<line x1="1353" y1="1060" x2="1367" y2="1060" stroke="white" stroke-width="9"/>
-<polyline points="1353,1060 1355,1054 1360,1052 1365,1054 1367,1060" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="1453" y1="820" x2="1467" y2="820" stroke="white" stroke-width="9"/>
+<polyline points="1453,820 1455,814 1460,812 1465,814 1467,820" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <line x1="1433" y1="1060" x2="1447" y2="1060" stroke="white" stroke-width="9"/>
 <polyline points="1433,1060 1435,1054 1440,1052 1445,1054 1447,1060" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="1433" y1="1770" x2="1447" y2="1770" stroke="white" stroke-width="9"/>
+<polyline points="1433,1770 1435,1764 1440,1762 1445,1764 1447,1770" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="1453" y1="1060" x2="1467" y2="1060" stroke="white" stroke-width="9"/>
+<polyline points="1453,1060 1455,1054 1460,1052 1465,1054 1467,1060" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="1463" y1="1770" x2="1477" y2="1770" stroke="white" stroke-width="9"/>
+<polyline points="1463,1770 1465,1764 1470,1762 1475,1764 1477,1770" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="2453" y1="1770" x2="2467" y2="1770" stroke="white" stroke-width="9"/>
+<polyline points="2453,1770 2455,1764 2460,1762 2465,1764 2467,1770" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="2713" y1="1770" x2="2727" y2="1770" stroke="white" stroke-width="9"/>
+<polyline points="2713,1770 2715,1764 2720,1762 2725,1764 2727,1770" fill="none" stroke="#087e89" stroke-width="2.3"/>
+<line x1="2753" y1="1770" x2="2767" y2="1770" stroke="white" stroke-width="9"/>
+<polyline points="2753,1770 2755,1764 2760,1762 2765,1764 2767,1770" fill="none" stroke="#087e89" stroke-width="2.3"/>
 <circle cx="500" cy="1384" r="4" stroke="#ba344b" fill="#ba344b"/>
 <circle cx="500" cy="1494" r="4" stroke="#ba344b" fill="#ba344b"/>
 <circle cx="500" cy="1604" r="4" stroke="#ba344b" fill="#ba344b"/>
@@ -649,12 +786,14 @@
 <circle cx="780" cy="600" r="4" stroke="#a64932" fill="#a64932"/>
 <circle cx="1100" cy="250" r="4" stroke="#a64932" fill="#a64932"/>
 <circle cx="1100" cy="460" r="4" stroke="#a64932" fill="#a64932"/>
-<circle cx="2720" cy="250" r="4" stroke="#a64932" fill="#a64932"/>
+<circle cx="2760" cy="410" r="4" stroke="#a64932" fill="#a64932"/>
+<circle cx="2760" cy="970" r="4" stroke="#a64932" fill="#a64932"/>
 <circle cx="40" cy="780" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="40" cy="1080" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="250" cy="480" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="500" cy="480" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="600" cy="1408" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="600" cy="1460" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="600" cy="1518" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="600" cy="1628" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="600" cy="1738" r="4" stroke="#183044" fill="#183044"/>
@@ -665,8 +804,6 @@
 <circle cx="600" cy="2288" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="600" cy="2398" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="600" cy="2460" r="4" stroke="#183044" fill="#183044"/>
-<circle cx="1080" cy="1500" r="4" stroke="#183044" fill="#183044"/>
-<circle cx="1080" cy="2460" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="1250" cy="2460" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="1350" cy="2460" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="1450" cy="2460" r="4" stroke="#183044" fill="#183044"/>
@@ -678,12 +815,26 @@
 <circle cx="2650" cy="2460" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="2850" cy="2460" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3050" cy="2460" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3200" cy="2100" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3220" cy="2100" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3240" cy="2100" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3250" cy="2460" r="4" stroke="#183044" fill="#183044"/>
-<circle cx="3750" cy="1100" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3260" cy="2100" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3280" cy="2100" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3300" cy="2100" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3320" cy="2100" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3340" cy="2100" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3700" cy="2460" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3750" cy="1500" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="3750" cy="1560" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3750" cy="2100" r="4" stroke="#183044" fill="#183044"/>
+<circle cx="3750" cy="2440" r="4" stroke="#183044" fill="#183044"/>
 <circle cx="1250" cy="2140.0" r="4" stroke="#986300" fill="#986300"/>
 <circle cx="1350" cy="2140" r="4" stroke="#986300" fill="#986300"/>
+<circle cx="2980" cy="1730" r="4" stroke="#ba344b" fill="#ba344b"/>
+<circle cx="3200" cy="1730" r="4" stroke="#ba344b" fill="#ba344b"/>
+<circle cx="3340" cy="1840" r="4" stroke="#ba344b" fill="#ba344b"/>
+<circle cx="2940" cy="1900" r="4" stroke="#087e89" fill="#087e89"/>
 <circle cx="800" cy="720" r="4" stroke="#087e89" fill="#087e89"/>
 <circle cx="820" cy="1020" r="4" stroke="#087e89" fill="#087e89"/>
 <circle cx="1450" cy="2140.0" r="4" stroke="#986300" fill="#986300"/>
@@ -695,7 +846,8 @@
 <circle cx="2650" cy="2140.0" r="4" stroke="#986300" fill="#986300"/>
 <circle cx="2850" cy="2140.0" r="4" stroke="#986300" fill="#986300"/>
 <circle cx="3050" cy="2140.0" r="4" stroke="#986300" fill="#986300"/>
-<circle cx="1000" cy="1220.0" r="4" stroke="#087e89" fill="#087e89"/>
+<circle cx="1200" cy="1260.0" r="4" stroke="#087e89" fill="#087e89"/>
+<circle cx="1420" cy="1240" r="4" stroke="#087e89" fill="#087e89"/>
 <circle cx="1500" cy="460" r="3.7" stroke="#a64932" fill="white"/>
 <circle cx="1500" cy="580" r="3.7" stroke="#986300" fill="white"/>
 <circle cx="1500" cy="640" r="3.7" stroke="#087e89" fill="white"/>
@@ -716,6 +868,7 @@
 <circle cx="2400" cy="940" r="3.7" stroke="#087e89" fill="white"/>
 <circle cx="2400" cy="1000" r="3.7" stroke="#087e89" fill="white"/>
 <circle cx="2400" cy="1060" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="2400" cy="1180" r="3.7" stroke="#087e89" fill="white"/>
 <circle cx="2800" cy="410" r="3.7" stroke="#a64932" fill="white"/>
 <circle cx="2800" cy="490" r="3.7" stroke="#2164b4" fill="white"/>
 <circle cx="2800" cy="570" r="3.7" stroke="#2164b4" fill="white"/>
@@ -731,10 +884,10 @@
 <circle cx="850" cy="450" r="3.7" stroke="#183044" fill="white"/>
 <circle cx="500" cy="410" r="3.7" stroke="#a35b12" fill="white"/>
 <circle cx="500" cy="480" r="3.7" stroke="#183044" fill="white"/>
-<circle cx="900" cy="1220" r="3.7" stroke="#087e89" fill="white"/>
-<circle cx="1000" cy="1220" r="3.7" stroke="#087e89" fill="white"/>
-<circle cx="1000" cy="1220" r="3.7" stroke="#087e89" fill="white"/>
-<circle cx="1000" cy="1340" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="1320" cy="1260" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="1200" cy="1260" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="1200" cy="1260" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="1200" cy="1380" r="3.7" stroke="#183044" fill="white"/>
 <circle cx="700" cy="600" r="3.7" stroke="#087e89" fill="white"/>
 <circle cx="700" cy="720" r="3.7" stroke="#087e89" fill="white"/>
 <circle cx="700" cy="900" r="3.7" stroke="#087e89" fill="white"/>
@@ -800,6 +953,31 @@
 <circle cx="3250" cy="2140" r="3.7" stroke="#986300" fill="white"/>
 <circle cx="3250" cy="2175" r="3.7" stroke="#986300" fill="white"/>
 <circle cx="3250" cy="2320" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="2860" cy="1690" r="3.7" stroke="#ba344b" fill="white"/>
+<circle cx="2980" cy="1690" r="3.7" stroke="#ba344b" fill="white"/>
+<circle cx="2860" cy="1770" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="2980" cy="1770" r="3.7" stroke="#ba344b" fill="white"/>
+<circle cx="2820" cy="1860" r="3.7" stroke="#a64932" fill="white"/>
+<circle cx="2940" cy="1860" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3100" cy="1860" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3100" cy="1920" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3300" cy="1860" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3200" cy="1770" r="3.7" stroke="#ba344b" fill="white"/>
+<circle cx="3200" cy="2010" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3220" cy="2010" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3240" cy="2010" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3260" cy="2010" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3280" cy="2010" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3300" cy="2010" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3320" cy="2010" r="3.7" stroke="#183044" fill="white"/>
+<circle cx="3500" cy="1840" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3500" cy="1940" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3360" cy="1840" r="3.7" stroke="#ba344b" fill="white"/>
+<circle cx="3460" cy="1840" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3360" cy="1940" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3460" cy="1940" r="3.7" stroke="#087e89" fill="white"/>
+<circle cx="3340" cy="2020" r="3.7" stroke="#ba344b" fill="white"/>
+<circle cx="3340" cy="2080" r="3.7" stroke="#183044" fill="white"/>
 <circle cx="330" cy="1360" r="3.7" stroke="#8650aa" fill="white"/>
 <circle cx="330" cy="1384" r="3.7" stroke="#ba344b" fill="white"/>
 <circle cx="330" cy="1408" r="3.7" stroke="#183044" fill="white"/>
@@ -898,7 +1076,7 @@
 <text x="2375" y="1068" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">GND</text>
 <text x="2375" y="1102" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#526575" text-anchor="end">JP2:3</text>
 <text x="2375" y="1128" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">RST</text>
-<text x="2375" y="1162" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#526575" text-anchor="end">JP2:2</text>
+<text x="2375" y="1162" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#087e89" text-anchor="end">JP2:2 / GPIO44</text>
 <text x="2375" y="1188" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">D0 / RX0</text>
 <text x="2375" y="1222" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#526575" text-anchor="end">JP2:1</text>
 <text x="2375" y="1248" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">D1 / TX0</text>
@@ -928,11 +1106,11 @@
 <text x="524" y="397.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="start">C1</text>
 <text x="524" y="422.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="start">47uF / 35V</text>
 <text x="480" y="435.0" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#183044" text-anchor="start">+</text>
-<text x="950.0" y="1177.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R50</text>
-<text x="950.0" y="1202.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="middle">100k</text>
-<text x="1020.0" y="1274.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="start">R51</text>
-<text x="1020.0" y="1301.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="start">150k</text>
-<text x="900" y="1150" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#2164b4" text-anchor="start">USB VBUS sense / 3.0V at 5V</text>
+<text x="1260.0" y="1217.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R50</text>
+<text x="1260.0" y="1242.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="middle">100k</text>
+<text x="1220.0" y="1314.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="start">R51</text>
+<text x="1220.0" y="1341.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="start">150k</text>
+<text x="1260" y="1205" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#2164b4" text-anchor="middle">R50 / R51 USB VBUS sense</text>
 <text x="120" y="535" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#183044" text-anchor="start">J2  ACJS-MHDC / passive pedals</text>
 <text x="120" y="570" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">TOP / pedal 1</text>
 <text x="686" y="607" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">11 RING</text>
@@ -1017,6 +1195,34 @@
 <text x="3268" y="2232" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="400" fill="#183044" text-anchor="start">SW10</text>
 <text x="3268" y="2270" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#183044" text-anchor="start">5</text>
 <text x="3250" y="2410" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#183044" text-anchor="middle">T10 / LED10</text>
+<text x="3300" y="1700" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#8650aa" text-anchor="middle">MIDI OUT / DIN-5 / UART1 31,250 baud</text>
+<text x="2905" y="1665" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="middle">D1</text>
+<text x="2905" y="1745" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183044" text-anchor="middle">D2</text>
+<text x="3060" y="1720" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#ba344b" text-anchor="start">MIDI_5V</text>
+<text x="2880.0" y="1817.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R52</text>
+<text x="2880.0" y="1842.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="middle">10k</text>
+<text x="3200" y="1830" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#183044" text-anchor="middle">U4  74HCT125</text>
+<text x="3114" y="1867" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">1A</text>
+<text x="3114" y="1927" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">/OE</text>
+<text x="3286" y="1867" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">1Y</text>
+<text x="3186" y="1777" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">VCC</text>
+<text x="3186" y="2017" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="end">GND</text>
+<text x="3590" y="1790" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#183044" text-anchor="middle">J3 DIN OUT</text>
+<text x="3514" y="1847" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">4</text>
+<text x="3514" y="1947" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">5</text>
+<text x="3514" y="1987" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">1</text>
+<text x="3540" y="1985" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">NC</text>
+<text x="3514" y="2027" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">2</text>
+<text x="3540" y="2025" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">NC</text>
+<text x="3514" y="2057" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#183044" text-anchor="start">3</text>
+<text x="3540" y="2055" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="400" fill="#526575" text-anchor="start">NC</text>
+<text x="3410.0" y="1797.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R53</text>
+<text x="3410.0" y="1822.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
+<text x="3410.0" y="1897.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="middle">R54</text>
+<text x="3410.0" y="1922.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="middle">220R</text>
+<text x="3364" y="2040.0" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#183044" text-anchor="start">C6</text>
+<text x="3364" y="2068.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#183044" text-anchor="start">100nF</text>
+<text x="2660" y="2430" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#526575" text-anchor="start">D1/D2 1N5819; R52 10k; R53/R54 220R; C6 100nF. DIN pins 1/2/3 NC. U4 pins 4/5/9/10/12/13 GND; 6/8/11 open.</text>
 <text x="100" y="1298" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#8650aa" text-anchor="start">Pololu 2535 / optional LEDs</text>
 <text x="114" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#183044" text-anchor="start">LED1 / B</text>
 <text x="114" y="1407" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#183044" text-anchor="start">2535</text>
@@ -1092,12 +1298,12 @@
 <text x="1100" y="2520" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#183044" text-anchor="start">ASSEMBLY</text>
 <text x="1100" y="2550" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">Set 4 / 6 / 8 / 10 switches; calibrate installed taps.</text>
 <text x="1100" y="2572" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">SW11 contact pin arrangement is functional.</text>
-<text x="1100" y="2594" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">Native USB-C carries USB MIDI and ROM flashing.</text>
-<text x="1100" y="2616" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">USB-only supply does not power the external LED rail.</text>
+<text x="1100" y="2594" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">UART1 D0/GPIO44 drives buffered DIN MIDI OUT; USB-C remains for USB MIDI/flashing.</text>
+<text x="1100" y="2616" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">MIDI_5V diode-ORs USB VBUS and converter +5V; LED rail remains converter-fed.</text>
 <text x="2240" y="2520" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#183044" text-anchor="start">LED PACKAGE</text>
 <text x="2240" y="2550" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">Lens left, leads right, flat side down.</text>
 <text x="2240" y="2572" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">Top to bottom: DIN / 5V / GND / DOUT.</text>
 <text x="2240" y="2594" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">Only LEDs and wires; direct D7 / GPIO10 data.</text>
 <text x="2240" y="2616" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183044" text-anchor="start">Check 3.3V data acceptance on the actual LED batch.</text>
-<text x="60" y="2650" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#526575" text-anchor="start">Netlist, BOM and pin references: design/electrical/. All 46 components and 41 nets checked against the connected drawing.</text>
+<text x="60" y="2650" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#526575" text-anchor="start">Netlist, BOM and pin references: design/electrical/. All 54 components and 46 nets checked against the connected drawing.</text>
 </svg>

@@ -39,7 +39,10 @@ void bleStart();
 void usbStart();
 bool usbReady();
 bool usbSend(const foot::Message &, uint32_t, void *);
-inline bool midiAvailable() { return bleReady() || usbReady(); }
+void midiOutStart();
+bool serialReady();
+bool serialSend(const foot::Message &, uint32_t, void *);
+inline bool midiAvailable() { return bleReady() || usbReady() || serialReady(); }
 bool bleSend(const foot::Message &, uint32_t, void *);
 void hardwareStart();
 void ledsStart();

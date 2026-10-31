@@ -20,7 +20,7 @@ def render(m):
     s.svg=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {m.W} {m.H}" role="img" aria-label="SIGMIDI unified electrical schematic">']
     s.rect(0,0,m.W,m.H,fill='white',stroke='none')
     wires=[];terminals={};bodies=[];labels=[]
-    colors={**m.COLORS,'3V3':'#a64932'}
+    colors={**m.COLORS,'3V3':'#a64932','MIDI_5V':m.RED}
     def color(net):
         if net and net.startswith('LCD_'):return m.BLUE
         if net and net.startswith('T') and net[1:].isdigit():return m.AMBER
@@ -89,7 +89,7 @@ def render(m):
     wire('+5V',(80,200),(3700,200))
     wire('+5V',(80,200),(80,1325),(500,1325),(500,2430))
     wire('GND',(40,480),(40,2460),(3750,2460),(3750,1060))
-    wire('GND',up['JP1:14'],(1400,1180),(1400,1500),(1080,1500))
+    wire('GND',up['JP1:14'],(1500,up['JP1:14'][1]),(1480,up['JP1:14'][1]),(1480,1370),(1470,1370),(1470,2470),(3700,2470),(3700,2460))
     wire('GND',up['JP2:4'],(3750,1060))
     wire('GND',(600,1325),(600,2460))
     text(1120,228,'3V3 / Nano logic supply',22,bold=True,color=color('3V3'))
@@ -100,9 +100,10 @@ def render(m):
     text(3070,390,'U2  Waveshare 24382',26,anchor='middle',bold=True)
     lcd={n:410+(n-1)*80 for n in range(1,9)}
     for n,y in lcd.items():pin('U2',f'P2:{n}',2800,y,f'{n}  {m.LCD[n-1][1]}',side='left')
-    wire('3V3',(2740,250),(2740,410),(2800,410))
-    wire('3V3',(2720,250),(2720,970),(2800,970))
-    wire('GND',(2800,890),(2700,890),(2700,1100),(3750,1100))
+    wire('3V3',(2740,250),(2760,250),(2760,410),(2800,410))
+    wire('3V3',(2760,410),(2760,970),(2800,970))
+    wire('3V3',(2760,970),(2760,1810),(2820,1810),(2820,1860))
+    wire('GND',(2800,890),(2720,890),(2720,2440),(3750,2440),(3750,2460))
     for n,ref,ch in [(2,'JP2:15',2500),(6,'JP2:14',2540),(4,'JP2:13',2580),(3,'JP2:12',2620),(5,'JP2:11',2660)]:
         a=up[ref];wire(m.COMPONENTS['U2']['pins'][f'P2:{n}'],a,(ch,a[1]),(ch,lcd[n]),(2800,lcd[n]))
     text(3070,1028,'P2 / GH1.25 / SPI / pins 1-8',19,anchor='middle',color=m.BLUE)
@@ -119,17 +120,18 @@ def render(m):
     pin('U3','VOUT',1000,410,'5V OUT')
     pin('U3','GND',850,450);text(850,433,'GND',20,anchor='middle',bold=True)
     wire('+9V',(400,410),(700,410));cap('C1',(500,410),(500,480))
-    wire('+9V',(650,410),(650,280),(1360,280),(1360,1480),(1380,1480),(1380,1240),up['JP1:15'])
+    wire('+9V',(650,410),(650,280),(1460,280),(1460,1240),(1500,1240),up['JP1:15'])
     wire('GND',(250,450),(250,480),(40,480))
     wire('GND',(850,450),(850,480),(250,480))
     wire('+5V',(1000,410),(1040,410),(1040,200))
-    # USB host VBUS is isolated from the external LED rail.
-    res('R50',(900,1220),(1000,1220))
-    res('R51',(1000,1220),(1000,1340))
-    wire('USB_VBUS',up['JP1:12'],(1300,1060),(1300,1180),(900,1180),(900,1220))
-    wire('USB_SENSE',up['JP1:8'],(1120,820),(1120,1220),(1000,1220))
-    wire('GND',(1000,1340),(1080,1340),(1080,2460))
-    text(900,1150,'USB VBUS sense / 3.0V at 5V',19,color=m.BLUE)
+    # USB host VBUS divider beside U1, tapped from the same VBUS trunk as D2.
+    res('R50',(1320,1260),(1200,1260))
+    res('R51',(1200,1260),(1200,1380))
+    wire('USB_VBUS',up['JP1:12'],(1420,up['JP1:12'][1]),(1420,1770),(2860,1770),(2880,1770))
+    wire('USB_VBUS',(1420,1240),(1320,1240),(1320,1260))
+    wire('USB_SENSE',(1200,1260),(1120,1260),(1120,820),(1500,820),up['JP1:8'])
+    wire('GND',(1200,1380),(1200,1460),(600,1460),(600,1325),(600,2460))
+    text(1260,1205,'R50 / R51 USB VBUS sense',16,color=m.BLUE,anchor='middle')
     # Both pedal ports in one purchased dual-TRS housing.
     box(100,490,600,650,'#eef8f8')
     text(120,535,'J2  ACJS-MHDC / passive pedals',25,bold=True)
@@ -175,6 +177,44 @@ def render(m):
         text(x+18,2232,ref,20);text(x+18,2270,m.TAPS[i-1][0],25,bold=True)
         text(x,2410,f'T{i} / LED{i}',18,anchor='middle')
         previous=node
+    # Buffered DIN MIDI OUT (UART1 on Nano D0/GPIO44); UART0 TX stays unconnected.
+    text(3300,1700,'MIDI OUT / DIN-5 / UART1 31,250 baud',21,anchor='middle',bold=True,color=m.PURPLE)
+    # D1/D2 source-isolate converter +5V and USB VBUS into MIDI_5V.
+    pin('D1','A',2860,1690);pin('D1','K',2980,1690)
+    s.path([(2880,1676),(2880,1704),(2928,1690)],m.RED,1.8,fill='white',closed=True);s.line(2930,1676,2930,1704,m.RED,2.4)
+    text(2905,1665,'D1',17,anchor='middle',bold=True)
+    wire('+5V',(3700,200),(3760,200),(3760,1620),(2820,1620),(2820,1690),(2860,1690),(2880,1690))
+    pin('D2','A',2860,1770);pin('D2','K',2980,1770)
+    s.path([(2880,1756),(2880,1784),(2928,1770)],m.BLUE,1.8,fill='white',closed=True);s.line(2930,1756,2930,1784,m.BLUE,2.4)
+    text(2905,1745,'D2',17,anchor='middle',bold=True)
+    wire('MIDI_5V',(2930,1690),(2980,1690));wire('MIDI_5V',(2930,1770),(2980,1770));wire('MIDI_5V',(2980,1690),(2980,1770));wire('MIDI_5V',(2980,1730),(3340,1730))
+    text(3060,1720,'MIDI_5V',14,bold=True,color=m.RED)
+    # R52 pulls the UART idle-high; U2 pins 1/8 and R52 share one 3V3 spine.
+    res('R52',(2820,1860),(2940,1860))
+    wire('MIDI_OUT_TX',up['JP2:2'],(2460,up['JP2:2'][1]),(2460,1900),(2940,1900));wire('MIDI_OUT_TX',(2940,1860),(2940,1900));wire('MIDI_OUT_TX',(2940,1900),(3000,1900),(3000,1860),(3100,1860))
+    # U4 supply pins are drawn outside the body; no supply wire crosses the symbol.
+    box(3100,1800,200,180,'#edf4fc')
+    text(3200,1830,'U4  74HCT125',18,anchor='middle',bold=True)
+    pin('U4','2',3100,1860,'1A',side='left');pin('U4','1',3100,1920,'/OE',side='left')
+    pin('U4','3',3300,1860,'1Y');pin('U4','14',3200,1770,'VCC');pin('U4','7',3200,2010,'GND')
+    wire('MIDI_5V',(3200,1730),(3200,1770))
+    wire('GND',(3100,1920),(3070,1920),(3070,2100),(3750,2100),(3750,2460))
+    wire('GND',(3200,2010),(3200,2100),(3750,2100))
+    # Unused gate inputs and enables are tied low; outputs 6/8/11 stay open.
+    for i,p in enumerate(['4','5','9','10','12','13']):
+        x=3220+20*i;pin('U4',p,x,2010);wire('GND',(x,2010),(x,2100))
+    # DIN current-loop resistors are inline with connector pins 4 and 5.
+    box(3500,1760,180,300,'white');text(3590,1790,'J3 DIN OUT',16,anchor='middle',bold=True)
+    for pinno,y in [('4',1840),('5',1940),('1',1980),('2',2020),('3',2050)]:
+        pin('J3',pinno,3500,y,pinno,side='left')
+        if pinno in ('1','2','3'):text(3540,y+5,'NC',11,color=m.MUTED)
+    res('R53',(3360,1840),(3460,1840));wire('MIDI_5V',(3340,1730),(3340,1840),(3360,1840));wire('DIN4',(3460,1840),(3500,1840))
+    res('R54',(3360,1940),(3460,1940));wire('TX_GATE',(3300,1860),(3330,1860),(3330,1940),(3360,1940));wire('DIN5',(3460,1940),(3500,1940))
+    # C6 sits beside R53/R54, across MIDI_5V and GND.
+    cap('C6',(3340,2020),(3340,2080))
+    wire('MIDI_5V',(3340,1840),(3340,2020))
+    wire('GND',(3340,2080),(3340,2100),(3750,2100))
+    text(2660,2430,'D1/D2 1N5819; R52 10k; R53/R54 220R; C6 100nF. DIN pins 1/2/3 NC. U4 pins 4/5/9/10/12/13 GND; 6/8/11 open.',14,color=m.MUTED)
     # The LED lead order follows the actual Pololu side view.
     text(100,1298,'Pololu 2535 / optional LEDs',25,bold=True,color=m.PURPLE)
     for i in range(1,11):
@@ -249,7 +289,7 @@ def render(m):
     s.text(60,2520,'PASSIVE PEDALS',22,bold=True)
     s.lines(60,2550,['Pot: outer legs RING / SLEEVE; wiper TIP.', 'Variable resistor: TIP to SLEEVE; RING unused.', '0-10k per input. Bias HIGH in resistor mode;', 'high impedance in pot / disabled / boot states.'],17,step=22)
     s.text(1100,2520,'ASSEMBLY',22,bold=True)
-    s.lines(1100,2550,['Set 4 / 6 / 8 / 10 switches; calibrate installed taps.', 'SW11 contact pin arrangement is functional.', 'Native USB-C carries USB MIDI and ROM flashing.', 'USB-only supply does not power the external LED rail.'],17,step=22)
+    s.lines(1100,2550,['Set 4 / 6 / 8 / 10 switches; calibrate installed taps.', 'SW11 contact pin arrangement is functional.', 'UART1 D0/GPIO44 drives buffered DIN MIDI OUT; USB-C remains for USB MIDI/flashing.', 'MIDI_5V diode-ORs USB VBUS and converter +5V; LED rail remains converter-fed.'],17,step=22)
     s.text(2240,2520,'LED PACKAGE',22,bold=True)
     s.lines(2240,2550,['Lens left, leads right, flat side down.', 'Top to bottom: DIN / 5V / GND / DOUT.', 'Only LEDs and wires; direct D7 / GPIO10 data.', 'Check 3.3V data acceptance on the actual LED batch.'],17,step=22)
     s.text(60,2650,f'Netlist, BOM and pin references: design/electrical/. All {len(m.COMPONENTS)} components and {len(bynet)} nets checked against the connected drawing.',18,color=m.MUTED)

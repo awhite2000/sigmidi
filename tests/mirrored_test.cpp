@@ -9,6 +9,7 @@ SemaphoreHandle_t stateMutex;
 uint32_t nowMs() { return 0; }
 bool bleReady() { return true; }
 bool usbReady() { return false; }
+bool serialReady() { return false; }
 bool bleConnected() { return true; }
 bool wifiStart() { return false; }
 static std::string stored;

@@ -11,6 +11,7 @@ SemaphoreHandle_t stateMutex;
 uint32_t nowMs() { return 0; }
 bool bleReady() { return true; }
 bool usbReady() { return false; }
+bool serialReady() { return true; }
 bool bleConnected() { return true; }
 bool wifiStart() { return true; }
 bool saveConfig(const foot::Config &) { return true; }

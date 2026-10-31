@@ -8,7 +8,7 @@ Perform with your MIDI Device. Configure every action on the controller or over 
 
 ## Features at a glance
 
-USB MIDI and BLE MIDI send the same actions to each ready connection. Each switch can send ordered lists of PC and CC messages on independent channels. Choose momentary press/release behavior or a two-press toggle. PC+ and PC- provide independent remembered program counters. Two passive continuous pedals send CC values; optional LEDs show local action state. Modular builds support 4, 6, 8 or 10 switches. Left/Right selects the matching screen orientation and switch order.
+The 5-pin DIN MIDI OUT always sends actions; USB MIDI and BLE MIDI receive the same actions when connected and ready. Each switch can send ordered lists of PC and CC messages on independent channels. Choose momentary press/release behavior or a two-press toggle. PC+ and PC- provide independent remembered program counters. Two passive continuous pedals send CC values; optional LEDs show local action state. Modular builds support 4, 6, 8 or 10 switches. Left/Right selects the matching screen orientation and switch order.
 
 | Find it | Pages |
 |---|---|
@@ -30,11 +30,11 @@ For mounting, wiring and first power-up, follow the [assembly guide](assembly-gu
 
 ## Connect your MIDI Device
 
-A **MIDI Device** is the equipment or software you want to control. Choose a USB MIDI connection (page 3), BLE MIDI (page 4), or both. These connections carry PC/CC control messages; audio follows the MIDI Device's own audio path.
+A **MIDI Device** is the equipment or software you want to control. The 5-pin DIN MIDI OUT is always available; USB MIDI (page 3), BLE MIDI (page 4), or both can receive the same PC/CC actions. Audio follows the MIDI Device's own audio path.
 
 1. Power SIGMIDI through USB-C, or its fitted 9 V DC center-negative, 5.5 x 2.1 mm input. Power the MIDI Device as its manufacturer requires.
-2. Connect USB to a MIDI host, or connect from a BLE MIDI receiver. Select **SIGMIDI Foot Controller v0.1** in the receiving software. A DIN-only MIDI Device needs a suitable MIDI interface or BLE central adapter; Appendix A gives a dongle example.
-3. Wait for **USB MIDI**, **MIDI READY** (BLE), or **USB+BLE**. Match the action's MIDI channel to the receiver and enable its required PC/CC reception or MIDI-learn assignment.
+2. Connect USB to a MIDI host, or connect from a BLE MIDI receiver. Select **SIGMIDI Foot Controller v0.1** in the receiving software. A DIN-only MIDI Device connects directly to the controller MIDI OUT. Appendix A covers an optional BLE dongle.
+3. The DIN MIDI OUT is active after startup. The badge shows **DIN MIDI** until a host link is ready. If connected, also wait for **USB MIDI**, **MIDI READY** (BLE) or **USB+BLE**. Match the action's MIDI channel to the receiver and enable its required PC/CC reception or MIDI-learn assignment.
 4. Configure one simple action, save and exit setup, release all switches, then test its result. Default action lists are empty.
 5. Move every enabled pedal until its MOVE marker clears. A stationary pedal does not send an initial value automatically.
 
@@ -94,7 +94,7 @@ SIGMIDI advertises automatically as a **BLE MIDI peripheral**. The receiver must
 3. On macOS, use a BLE-capable app or **Audio MIDI Setup > Window > Show MIDI Studio > Configure Bluetooth**, then connect to SIGMIDI. On Windows or another platform, use an app/driver path that explicitly supports BLE MIDI. General Bluetooth pairing alone does not establish app MIDI routing. [Mac setup](https://support.apple.com/en-ie/guide/audio-midi-setup/ams33f013765/mac).
 4. Wait for **MIDI READY** (BLE only) or **USB+BLE**. **CONNECTED** means BLE is linked but the central has not enabled MIDI notifications; reconnect through its MIDI interface. Enable the resulting MIDI input in the receiving app, match the channel and test one action outside setup.
 
-Only one BLE central connects at a time. Disconnect a competing phone, app or dongle before using another receiver. For a DIN-only MIDI Device, follow the central dongle maker's procedure; the HX Stomp example and pairing steps stay in Appendix A.
+Only one BLE central connects at a time. Disconnect a competing phone, app or dongle before using another receiver. The onboard DIN MIDI OUT connects directly to DIN-input equipment; the HX Stomp/BLE dongle example and BLE pairing steps stay in Appendix A.
 
 ## Use USB and BLE together
 
@@ -104,7 +104,7 @@ You can control two destinations this way. If USB and BLE both reach the same ap
 
 ## Reconnect and resume
 
-After any ready-link change, move each enabled pedal to initialize the receivers; MOVE clears after an accepted CC, not a receiver acknowledgement. If all MIDI links are lost, pending actions are cleared and toggles reset to OFF. When a link returns, release all switches to rearm, establish the intended device state and move the pedals. Missed actions are not replayed. If one link remains ready, it continues carrying actions while the other is disconnected.
+After any ready-link change, move each enabled pedal to initialize the receivers; MOVE clears after an accepted CC, not a receiver acknowledgement. The DIN MIDI OUT stays ready, so a USB or BLE disconnect does not clear pending actions or reset toggles; the remaining outputs keep carrying actions. A reconnected link does not receive missed actions, so establish the intended device state and move the pedals.
 
 <!-- page -->
 
@@ -117,11 +117,11 @@ After any ready-link change, move each enabled pedal to initialize the receivers
 | Screen element | What it tells you |
 |---|---|
 | Icon, SIGMIDI and version | Controller identity and installed firmware version, at the top left. |
-| MIDI badge, top right | USB MIDI: USB ready. USB+BLE: both ready. MIDI READY: BLE ready. CONNECTED: BLE linked without subscription. OFFLINE: no ready link. |
+| MIDI badge, top right | USB MIDI: USB ready. USB+BLE: both ready. MIDI READY: BLE ready. CONNECTED: BLE linked without subscription. DIN MIDI: no USB/BLE link; the DIN MIDI OUT is sending. OFFLINE: no MIDI output ready; not expected after startup. |
 | Large SW label | The currently physically held switch, such as SW B. It is not a latched toggle-state display. |
 | Name below the label | Your configured switch name; LEAD in the example. Long names use smaller text. |
 | PRESS / RELEASE counts | Numbers of configured messages in those two lists. They are not counters of messages already sent. |
-| READY at idle | No physical switch is held. The panel shows the installed count and USB + BLE instead of a switch name. |
+| READY at idle | No physical switch is held. The panel shows the installed count and MIDI OUT instead of a switch name. |
 | PEDAL 1 / CC11, etc. | Input number and configured CC. The MIDI channel is set in the pedal menu but is not displayed here. |
 | Pedal number and bar | Hidden until that input first moves and sends a CC: --- is shown without a bar. Then the calculated output appears as 000-127 with a bar on the full MIDI scale. OFF means disabled; --- also indicates an invalid reading. |
 | MOVE beside a pedal / MOVE PEDAL... TO SYNC | Move each indicated pedal to change its CC value. Its initial value has not yet been sent since boot, a USB/BLE readiness change or setup exit. The marker clears after that input sends successfully to at least one ready MIDI output; it does not confirm the MIDI Device received it. |
@@ -157,7 +157,7 @@ Each switch toggles independently. Runtime ON/OFF state is not saved: reboot, se
 
 Use one footswitch at a time; simultaneous presses are unsupported. Holding a switch does not repeat its action. Every list runs in order, with the configured delay before each message. A quick release waits behind that switch's pending Press messages. Rapid accepted actions are queued; a full queue reports a notice.
 
-After boot, leaving setup or a transition from no ready MIDI links to at least one, release all switches to rearm input detection. Move each enabled pedal until its MOVE marker disappears. A resting pedal sends no initial value, so the MIDI Device may retain its previous expression setting until you move it. Losing all ready MIDI links clears pending actions; reconnecting does not replay them. A change to either ready link also marks enabled pedals for movement. Setup pauses normal switch and pedal MIDI, so leave setup before playing. Explicit menu Test commands are the exception.
+After boot or leaving setup, release all switches to rearm input detection. Move each enabled pedal until its MOVE marker disappears. A resting pedal sends no initial value, so the MIDI Device may retain its previous expression setting until you move it. USB/BLE disconnects keep pending actions on the remaining outputs; reconnecting does not replay missed actions. A change to either USB or BLE also marks enabled pedals for movement. Setup pauses normal switch and pedal MIDI, so leave setup before playing. Explicit menu Test commands are the exception.
 
 <!-- page -->
 
@@ -439,7 +439,7 @@ If the physical travel runs the opposite way, retain the valid low/high endpoint
 
 ## Check the result before performance
 
-Confirm USB MIDI, MIDI READY or USB+BLE; exercise every installed switch; check both pedal extremes and a mid-position. Verify optional LED assignments and brightness. Then export the configuration JSON. Recalibrate after changing the ladder, switch count or pedal wiring. A saved configuration does not establish the MIDI Device's effect states; use explicit actions to set a known state.
+Confirm DIN MIDI, USB MIDI, MIDI READY or USB+BLE; exercise every installed switch; check both pedal extremes and a mid-position. Verify optional LED assignments and brightness. Then export the configuration JSON. Recalibrate after changing the ladder, switch count or pedal wiring. A saved configuration does not establish the MIDI Device's effect states; use explicit actions to set a known state.
 
 <!-- page -->
 
@@ -447,10 +447,11 @@ Confirm USB MIDI, MIDI READY or USB+BLE; exercise every installed switch; check 
 
 | Symptom | Check or corrective action |
 |---|---|
-| OFFLINE | USB: check a data cable, host port and normal firmware mode. BLE: reconnect through the receiver's MIDI interface or central dongle. Connection steps are on pages 3-4. |
+| DIN MIDI when USB/BLE expected | USB: check a data cable, host port and normal firmware mode. BLE: reconnect through the receiver's MIDI interface or central dongle. Connection steps are on pages 3-4. |
+| OFFLINE | No MIDI output started. Restart the controller; if it persists, reflash the firmware. |
 | Display powered, USB absent | A charger/charge-only cable is not a MIDI host. Try a data cable and enable SIGMIDI in the host's MIDI app; check adapter power. |
 | CONNECTED but no MIDI | The receiving central must subscribe to BLE MIDI notifications; reconnect through its MIDI interface. |
-| USB MIDI / MIDI READY / USB+BLE, no response | Exit setup; check channel, the MIDI Device's PC/CC receive settings, command mapping and nonempty action list. Test one message. |
+| DIN MIDI / USB MIDI / MIDI READY / USB+BLE, no response | Exit setup; check channel, the MIDI Device's PC/CC receive settings, command mapping and nonempty action list. Test one message. |
 | Commands happen twice | USB and BLE may reach the same destination. Enable one input or filter duplicate routes in the host; both outputs are automatic. |
 | Wrong program | Confirm the MIDI Device's wire program number; fields are always 0-127, regardless of its display numbering. |
 | CC changes the wrong function | Check that device's CC map and per-program assignments. CC numbers have no universal effect or parameter meaning. |

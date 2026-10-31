@@ -48,7 +48,7 @@ function render(){const nav=$('nav');nav.replaceChildren();for(const name of ['S
  // Preserve expanded switch panels while changing their message lists.
  if(tab==='Switches')for(const d of content.querySelectorAll('details:not(.messageEditor)'))d.open=true;
 }
-setInterval(async()=>{if(!token||$('editor').hidden||polling)return;polling=true;try{const s=await api();$('status').textContent=`USB ${s.usbReady?'ready':'offline'} · BLE ${s.bleReady?'ready':'offline'} · ADC ${s.adcCalibrated?'calibrated':'unavailable'} · Switch ${s.keyLabel || (s.key>0?String(s.key):'IDLE')} · Input mV ${s.mv.map(v=>v.toFixed(0)).join(' / ')}`;}catch(e){notice(e.message)}finally{polling=false}},500);
+setInterval(async()=>{if(!token||$('editor').hidden||polling)return;polling=true;try{const s=await api();$('status').textContent=`SERIAL ${s.serialReady?'ready':'offline'} · USB ${s.usbReady?'ready':'offline'} · BLE ${s.bleReady?'ready':'offline'} · ADC ${s.adcCalibrated?'calibrated':'unavailable'} · Switch ${s.keyLabel || (s.key>0?String(s.key):'IDLE')} · Input mV ${s.mv.map(v=>v.toFixed(0)).join(' / ')}`;}catch(e){notice(e.message)}finally{polling=false}},500);
 window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
 if(token)load().catch(e=>{notice(e.message);sessionStorage.removeItem('footToken');token=''});
 </script></html>

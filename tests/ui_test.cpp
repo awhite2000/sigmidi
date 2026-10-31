@@ -8,6 +8,7 @@ uint32_t nowMs() { return 0; }
 static bool midiReady = false, usbOnline = false;
 bool bleReady() { return midiReady; }
 bool usbReady() { return usbOnline; }
+bool serialReady() { return false; }
 bool bleConnected() { return midiReady; }
 bool wifiStart() { return false; }
 bool saveConfig(const foot::Config &) { return true; }

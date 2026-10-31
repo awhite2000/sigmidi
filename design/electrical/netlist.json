@@ -147,7 +147,7 @@
     "JP2:2": {
       "physical_label": "D0 / RX0",
       "logical_name": "GPIO44",
-      "net": null
+      "net": "MIDI_OUT_TX"
     },
     "JP2:1": {
       "physical_label": "D1 / TX0",
@@ -157,8 +157,8 @@
   },
   "firmware_pin_verification": {
     "source": "src/board.hpp",
-    "sha256": "88db0c90739cde67be4f7b827fe0670054b07946b4170098ea1792f88d0788c3",
-    "used_signal_pins": 15,
+    "sha256": "5de3ef5b4000c6601b72f661b1305032aaf7e3e7ced4ada47ee1e1052f73470c",
+    "used_signal_pins": 16,
     "all_assignments_match": true
   },
   "units": {
@@ -198,7 +198,7 @@
         "JP2:5": "P1_MODE",
         "JP2:4": "GND",
         "JP2:3": null,
-        "JP2:2": null,
+        "JP2:2": "MIDI_OUT_TX",
         "JP2:1": null
       },
       "note": ""
@@ -648,6 +648,90 @@
         "GND": "GND"
       },
       "note": "Physical side view: lens left, flat down; right-side leads top-to-bottom DIN, 5V, GND, DOUT. Switch 5 / tap T10."
+    },
+    "U4": {
+      "value": "74HCT125",
+      "package": "DIP-14/SOIC-14 quad buffer",
+      "pins": {
+        "2": "MIDI_OUT_TX",
+        "1": "GND",
+        "3": "TX_GATE",
+        "14": "MIDI_5V",
+        "7": "GND",
+        "4": "GND",
+        "5": "GND",
+        "9": "GND",
+        "10": "GND",
+        "12": "GND",
+        "13": "GND"
+      },
+      "note": "Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7."
+    },
+    "R52": {
+      "value": "10k",
+      "package": "UART idle-high pull-up",
+      "pins": {
+        "1": "3V3",
+        "2": "MIDI_OUT_TX"
+      },
+      "note": ""
+    },
+    "D1": {
+      "value": "1N5819",
+      "package": "DO-41 Schottky OR diode",
+      "pins": {
+        "A": "+5V",
+        "K": "MIDI_5V"
+      },
+      "note": ""
+    },
+    "D2": {
+      "value": "1N5819",
+      "package": "DO-41 Schottky OR diode",
+      "pins": {
+        "A": "USB_VBUS",
+        "K": "MIDI_5V"
+      },
+      "note": ""
+    },
+    "C6": {
+      "value": "100nF",
+      "package": "local bypass capacitor",
+      "pins": {
+        "1": "MIDI_5V",
+        "2": "GND"
+      },
+      "note": ""
+    },
+    "J3": {
+      "value": "5-pin DIN MIDI OUT",
+      "package": "DIN-5 output connector",
+      "pins": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": "DIN4",
+        "5": "DIN5"
+      },
+      "note": "Pins 1/2/3 NC; 4/5 are the MIDI current loop."
+    },
+    "R53": {
+      "value": "220R",
+      "package": "1% resistor",
+      "pins": {
+        "1": "MIDI_5V",
+        "2": "DIN4"
+      },
+      "note": ""
+    },
+    "R54": {
+      "value": "220R",
+      "package": "1% resistor",
+      "pins": {
+        "1": "TX_GATE",
+        "2": "DIN5"
+      },
+      "note": ""
     }
   },
   "nets": {
@@ -662,7 +746,8 @@
       "LED7.+5V",
       "LED8.+5V",
       "LED9.+5V",
-      "LED10.+5V"
+      "LED10.+5V",
+      "D1.A"
     ],
     "+9V": [
       "U1.JP1:15",
@@ -676,7 +761,16 @@
       "U2.P2:8",
       "R7.1",
       "R20.1",
-      "R30.1"
+      "R30.1",
+      "R52.1"
+    ],
+    "DIN4": [
+      "J3.4",
+      "R53.2"
+    ],
+    "DIN5": [
+      "J3.5",
+      "R54.2"
     ],
     "ENC_A": [
       "U1.JP2:7",
@@ -723,7 +817,16 @@
       "LED7.GND",
       "LED8.GND",
       "LED9.GND",
-      "LED10.GND"
+      "LED10.GND",
+      "U4.1",
+      "U4.7",
+      "U4.4",
+      "U4.5",
+      "U4.9",
+      "U4.10",
+      "U4.12",
+      "U4.13",
+      "C6.2"
     ],
     "L1": [
       "LED1.DOUT",
@@ -791,6 +894,18 @@
     "LED_GPIO": [
       "U1.JP2:10",
       "LED1.DIN"
+    ],
+    "MIDI_5V": [
+      "U4.14",
+      "D1.K",
+      "D2.K",
+      "C6.1",
+      "R53.1"
+    ],
+    "MIDI_OUT_TX": [
+      "U1.JP2:2",
+      "U4.2",
+      "R52.2"
     ],
     "P1_ADC": [
       "U1.JP1:5",
@@ -867,6 +982,10 @@
       "SW9.1",
       "R18.1"
     ],
+    "TX_GATE": [
+      "U4.3",
+      "R54.1"
+    ],
     "USB_SENSE": [
       "U1.JP1:8",
       "R50.2",
@@ -874,7 +993,8 @@
     ],
     "USB_VBUS": [
       "U1.JP1:12",
-      "R50.1"
+      "R50.1",
+      "D2.A"
     ]
   },
   "sources": [
@@ -912,6 +1032,11 @@
       "title": "Espressif self-powered USB devices",
       "description": "VBUS sense: 100k / 150k divider to A4 / GPIO11",
       "url": "https://docs.espressif.com/projects/esp-usb/en/latest/esp32s3/usb_device.html"
+    },
+    {
+      "title": "MIDI Association - MIDI 1.0 electrical specifications",
+      "description": "5-pin DIN current-loop interface reference",
+      "url": "https://midi.org/midi-1-0-detailed-specification"
     }
   ]
 }

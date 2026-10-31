@@ -35,7 +35,7 @@ def main():
     # Reconcile at the assembly boundary. Do not parse or edit KiCad source files.
     netlist = json.loads((ROOT/'design/electrical/netlist.json').read_text())
     refs = [ref for item in items for ref in item['electrical_refs']]
-    assert len(refs) == len(set(refs)) == 46
+    assert len(refs) == len(set(refs)) == 54
     assert set(refs) == set(netlist['components'])
     for item in items:
         if item['electrical_refs']:
@@ -58,7 +58,7 @@ def main():
     assert mount['PCB_screws']=='Four M1.6x5 pan head'
     assert mount['bridge_fasteners']==0
     for p,n in data['profiles'].items():
-        assert sum(i['quantity'][p] for i in items if i['electrical_refs']) == 16+3*n
+        assert sum(i['quantity'][p] for i in items if i['electrical_refs']) == 24+3*n
         assert by_id['H01']['quantity'][p] == (8 if p=='main_10' else 4+2*((n-4)//2))
         printed = sum(i['quantity'][p] for i in items if i['group']=='Printed parts')
         assert printed == (4 if p=='main_10' else 3+2*((n-4)//2))
@@ -92,6 +92,7 @@ def main():
     pedals = table('Pedals')
     power = table('Power')
     leds = table('LEDs')
+    midi_out = table('MIDI OUT')
     hardware = table('Hardware')
     wiring = table('Wiring')
     accessories = table('External accessories')
@@ -121,7 +122,7 @@ Use **N** below for the chosen installed switch count. **AR** means as required.
 
 {core}
 
-E16/E17 form the required USB VBUS divider at A4/GPIO11. All discrete resistors are 1% metal-film; 0.25 W through-hole is a practical procurement choice. Higher precision is optional. The 100 nF capacitor belongs to the switch ladder. Four 1 kOhm sections are in the base; each two-switch extension adds two. No resistor terminates the final tap.
+E16/E17 form the required USB VBUS divider at A4/GPIO11. All discrete resistors are 1% metal-film; 0.25 W through-hole is a practical procurement choice. Higher precision is optional. C5 100 nF belongs to the switch ladder; C6 100 nF bypasses the 74HCT125 supply. Four 1 kOhm sections are in the base; each two-switch extension adds two. No resistor terminates the final tap.
 
 <!-- page -->
 
@@ -144,6 +145,12 @@ J1, U3 and C1 are omitted as a group in a USB-only electrical build. The existin
 {leds}
 
 Pololu 2535 is sold as a **10-pack**: buy one pack for any single 4-10 switch build and fit N LEDs. The chain uses LEDs connected to +5 V, GND and data wiring. C1 is the converter input capacitor. Direct 3.3 V data into 5 V LEDs requires verification with the actual batch and harness. [S4]
+
+## Buffered 5-pin DIN MIDI OUT
+
+{midi_out}
+
+The DIN current loop uses pins 4/5 only. UART1 TX is routed to D0/GPIO44; D1/GPIO43 stays unconnected to avoid boot-ROM output. D1/D2 diode-OR USB VBUS and converter +5V to `MIDI_5V`; this supply isolation needs electrical bench verification.
 
 <!-- page -->
 
@@ -223,9 +230,9 @@ USB and 9 V sources are alternative power options. Choose each supply for the co
 
 ## Quantity and source checks
 
-The maximum electrical BOM/netlist contains **46 component instances**: three purchased boards, two socket assemblies, one encoder, ten footswitches, eighteen resistors, two capacitors and ten LEDs. This includes the two required USB VBUS sense resistors R50/R51, both pedals, 9 V power and optional LEDs. The similarly sized CSV line count is coincidental: CSV rows also include grouped hardware, printed parts and external accessories.
+The maximum electrical BOM/netlist contains **54 component instances**: three purchased boards, two socket assemblies, one encoder, ten footswitches, twenty-one resistors, three capacitors, two Schottky diodes, one logic buffer, one DIN connector and ten LEDs. This includes the two required USB VBUS sense resistors R50/R51, both pedals, 9 V power and optional LEDs. The similarly sized CSV line count is coincidental: CSV rows also include grouped hardware, printed parts and external accessories.
 
-For all optional circuits fitted, electrical instance totals are **28 / 34 / 40 / 46** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 46 reference designators against both electrical exports. It verifies eight base and four display screws against the CAD body inventory, and four M1.6x5 PCB screws against the direct Nano mount specification.
+For all optional circuits fitted, electrical instance totals are **36 / 42 / 48 / 54** at 4 / 6 / 8 / 10 switches. Omitting LEDs subtracts N; omitting 9 V input subtracts three (J1/U3/C1). Omitting the complete pedal interface subtracts five (J2 and four resistors). Printed/hardware quantities are separate. The BOM generator checks all 54 reference designators against both electrical exports. It verifies eight base and four display screws against the CAD body inventory, and four M1.6x5 PCB screws against the direct Nano mount specification.
 
 ## References
 
@@ -316,7 +323,12 @@ def render(markdown):
         c.setFillColor(colors.HexColor('#506268'));c.drawString(MARGIN,20,'Installed quantities / feature-dependent options')
         c.drawRightString(WIDTH-MARGIN,20,str(d.page))
     document.build(story,onFirstPage=frame,onLaterPages=frame)
-    assert [c['page'] for c in document.chapters]==list(range(1,7)),document.chapters
+    assert [c['title'] for c in document.chapters] == [
+        'SIGMIDI Foot Controller v0.1', '2. Feature-dependent electronics',
+        '3. Mounting hardware', '4. Printed enclosure and assembly materials',
+        '5. Wiring and external accessories', '6. Procurement notes and traceability']
+    chapter_pages=[c['page'] for c in document.chapters]
+    assert chapter_pages[0]==1 and chapter_pages==sorted(set(chapter_pages)),document.chapters
 
 
 if __name__=='__main__':main()

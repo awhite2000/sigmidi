@@ -13,9 +13,9 @@ import math
 import re
 import hashlib
 from collections import defaultdict
-from reportlab.pdfgen import canvas
 from reportlab.lib.colors import toColor as HexColor
 from reportlab.lib.pagesizes import A0, A3, landscape
+from reportlab.pdfgen import canvas
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'design/electrical'
@@ -57,7 +57,7 @@ class Sheet:
         self.line(42, 119, 1358, 119, GRID)
         self.line(42, 937, 1358, 937, GRID)
         self.text(42, 961, 'ELECTRICAL REVIEW  |  Prototype circuit; verify on hardware before final assembly.', 11, color=MUTED)
-        self.text(1358, 961, f'{number} / 7  |  30 OCT 2026', 11, color=MUTED, anchor='end')
+        self.text(1358, 961, f'{number} / 8  |  30 OCT 2026', 11, color=MUTED, anchor='end')
 
     def line(self, x1, y1, x2, y2, color=INK, width=1.8, dash=False):
         self.svg.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{color}" stroke-width="{width}"'+(' stroke-dasharray="6 5"' if dash else '')+'/>')
@@ -152,24 +152,21 @@ class Sheet:
 
     def end(self):
         self.svg.append('</svg>')
-        name=f'{self.number:02d}-'+['controller-display','power-encoder','modular-ladder','pedal-1','pedal-2','optional-leds','assembly-reference'][self.number-1]+'.svg'
+        name=f'{self.number:02d}-'+['controller-display','power-encoder','modular-ladder','pedal-1','pedal-2','optional-leds','midi-out','assembly-reference'][self.number-1]+'.svg'
         content='\n'.join(self.svg)
         (OUT/name).write_text(content)
         PAGES.append({'title':self.heading,'file':name,'svg':content})
         C.showPage()
-        if self.number < 7:C.scale(SCALE,SCALE)
+        if self.number < 8:C.scale(SCALE,SCALE)
 
-
-# Accepted map: Arduino ABX00083 V0.3 schematic header pad IDs and official
-# component-side top-view pinout. JP2 numbers DESCEND from USB towards VIN.
 P1 = [(1,'GPIO48','NC'),(2,'3V3','3V3'),(3,'GPIO46','NC'),(4,'GPIO1','LADDER'),(5,'GPIO2','P1_ADC'),(6,'GPIO3','NC'),(7,'GPIO4','P2_ADC'),(8,'GPIO11','USB_SENSE'),(9,'GPIO12','NC'),(10,'GPIO13','NC'),(11,'GPIO14','NC'),(12,'VBUS','USB_VBUS'),(13,'GPIO0','NC'),(14,'GND','GND'),(15,'VIN','+9V')]
-P2 = [(15,'GPIO47','LCD_RST'),(14,'GPIO38','LCD_DIN'),(13,'GPIO21','LCD_CS'),(12,'GPIO18','LCD_DC'),(11,'GPIO17','LCD_CLK'),(10,'GPIO10','LED_GPIO'),(9,'GPIO9','ENC_SW'),(8,'GPIO8','ENC_B'),(7,'GPIO7','ENC_A'),(6,'GPIO6','P2_MODE'),(5,'GPIO5','P1_MODE'),(4,'GND','GND'),(3,'RST','NC'),(2,'GPIO44','NC'),(1,'GPIO43','NC')]
+P2 = [(15,'GPIO47','LCD_RST'),(14,'GPIO38','LCD_DIN'),(13,'GPIO21','LCD_CS'),(12,'GPIO18','LCD_DC'),(11,'GPIO17','LCD_CLK'),(10,'GPIO10','LED_GPIO'),(9,'GPIO9','ENC_SW'),(8,'GPIO8','ENC_B'),(7,'GPIO7','ENC_A'),(6,'GPIO6','P2_MODE'),(5,'GPIO5','P1_MODE'),(4,'GND','GND'),(3,'RST','NC'),(2,'GPIO44','MIDI_OUT_TX'),(1,'GPIO43','NC')]
 HEADERS = [('JP1',P1,False),('JP2',P2,True)]
 PHYSICAL = {
     'JP1': ['D13','3V3','B0','A0','A1','A2','A3','A4','A5','A6','A7','VBUS / VUSB','B1','GND','VIN'],
     'JP2': ['D1 / TX0','D0 / RX0','RST','GND','D2','D3','D4','D5','D6','D7','D8','D9','D10','D11','D12'],
 }
-GPIO_ALIASES = {1:'A0',2:'A1',4:'A3',5:'D2',6:'D3',7:'D4',8:'D5',9:'D6',10:'D7',11:'A4',17:'D8',18:'D9',21:'D10',38:'D11',47:'D12'}
+GPIO_ALIASES = {1:'A0',2:'A1',4:'A3',5:'D2',6:'D3',7:'D4',8:'D5',9:'D6',10:'D7',11:'A4',17:'D8',18:'D9',21:'D10',38:'D11',43:'D1',47:'D12'}
 
 
 def logical_name(signal):
@@ -195,6 +192,7 @@ SOURCES = [
  ('Pololu S13V10F5 / #4083', '5V, 1A step-up/down regulator; retailer item 1178565', 'https://www.pololu.com/product/4083'),
  ('Pololu #2535', '5mm addressable RGB LED / WS2811 / 5V / 800kHz', 'https://www.pololu.com/product/2535'),
  ('Espressif self-powered USB devices', 'VBUS sense: 100k / 150k divider to A4 / GPIO11', 'https://docs.espressif.com/projects/esp-usb/en/latest/esp32s3/usb_device.html'),
+ ('MIDI Association - MIDI 1.0 electrical specifications', '5-pin DIN current-loop interface reference', 'https://midi.org/midi-1-0-detailed-specification'),
 ]
 
 
@@ -438,8 +436,87 @@ def leds():
     s.end()
 
 
+def midi_out():
+    s=Sheet('MIDI OUT - 5-pin DIN current loop','UART1 TX at 31,250 baud, 8-N-1; 74HCT125 buffer and current-loop resistors. UART0 remains ROM-flash serial.',7)
+    component('U4','74HCT125',{'2':'MIDI_OUT_TX','1':'GND','3':'TX_GATE','14':'MIDI_5V','7':'GND','4':'GND','5':'GND','9':'GND','10':'GND','12':'GND','13':'GND'},'DIP-14/SOIC-14 quad buffer','Gate 1 used; pin 1 /OE low; unused gate inputs 5/9/12 and /OE 4/10/13 to GND, outputs 6/8/11 open; 100nF bypass across pins 14/7.')
+    component('R52','10k',{'1':'3V3','2':'MIDI_OUT_TX'},'UART idle-high pull-up')
+    component('D1','1N5819',{'A':'+5V','K':'MIDI_5V'},'DO-41 Schottky OR diode')
+    component('D2','1N5819',{'A':'USB_VBUS','K':'MIDI_5V'},'DO-41 Schottky OR diode')
+    component('C6','100nF',{'1':'MIDI_5V','2':'GND'},'local bypass capacitor')
+    component('J3','5-pin DIN MIDI OUT',{'1':None,'2':None,'3':None,'4':'DIN4','5':'DIN5'},'DIN-5 output connector','Pins 1/2/3 NC; 4/5 are the MIDI current loop.')
+    def diode(x,y,ref,color):
+        # Anode at x, cathode bar at x+34; current flows left to right.
+        s.path([(x,y-13),(x,y+13),(x+30,y)],color,1.7,fill='white',closed=True)
+        s.line(x+32,y-13,x+32,y+13,color,2.2)
+        s.text(x+16,y-20,ref,11,anchor='middle')
+    def pin(x,y,label,side):
+        s.circle(x,y,3,INK,False)
+        s.text(x+(10 if side=='left' else -10),y+5,label,13,bold=True,anchor='start' if side=='left' else 'end')
+    s.title(48,158,'UART TX, idle pull-up and 74HCT125 buffer')
+    s.title(1100,158,'J3  DIN-5 female')
+    # U1 source pin.
+    s.rect(48,240,300,120,fill='#f6f8fa',stroke=INK)
+    s.text(66,270,'U1  Arduino Nano ESP32',15,bold=True)
+    s.text(66,296,'UART1 TX, 31,250 baud 8-N-1',12,color=MUTED)
+    s.text(66,340,'D1 / GPIO43 not connected',12,color=MUTED)
+    pin(348,310,'D0 / RX0  GPIO44',side='right')
+    # R52 pull-up from 3V3 to the TX node.
+    s.net(430,190,'3V3',color=RED)
+    s.resistor(430,190,430,310,'R52','10k')
+    s.line(348,310,560,310,PURPLE);s.circle(430,310,3,PURPLE)
+    s.text(470,302,'MIDI_OUT_TX',11,PURPLE,bold=True)
+    # U4 gate 1.
+    s.rect(560,250,200,160,fill='#edf4fc',stroke=INK)
+    s.text(660,280,'U4  74HCT125',14,bold=True,anchor='middle')
+    pin(560,310,'1A',side='left');pin(560,370,'/1OE',side='left')
+    pin(760,310,'1Y',side='right')
+    s.text(660,398,'2-4 unused: see note',10,color=MUTED,anchor='middle')
+    pin(660,250,'',side='left');s.text(668,242,'14 VCC',11,bold=True)
+    pin(660,410,'',side='left');s.text(668,428,'7 GND',11,bold=True)
+    s.line(560,370,520,370);s.line(520,370,520,440);s.gnd(520,440)
+    s.line(660,410,660,440);s.gnd(660,440)
+    # MIDI_5V rail feeds U4, C6 and R53.
+    s.net(610,190,'MIDI_5V',side='left',color=RED)
+    s.line(610,190,960,190,RED);s.line(660,190,660,250,RED);s.circle(660,190,3,RED)
+    s.line(840,190,840,214,RED);s.circle(840,190,3,RED)
+    s.line(828,214,852,214);s.line(828,221,852,221);s.line(840,221,840,245);s.gnd(840,245)
+    s.text(860,216,'C6',11);s.text(860,232,'100nF',12)
+    s.resistor(960,190,1100,190,'R53','220R','MIDI_5V','DIN4')
+    s.line(760,310,960,310,PURPLE);s.text(800,302,'TX_GATE',11,PURPLE,bold=True)
+    s.resistor(960,310,1100,310,'R54','220R','TX_GATE','DIN5')
+    s.text(1075,206,'DIN4',11,RED,bold=True,anchor='middle');s.text(1075,326,'DIN5',11,PURPLE,bold=True,anchor='middle')
+    # J3 connector, pins in schematic order.
+    s.rect(1100,170,240,300,fill='#f6f8fa',stroke=INK)
+    for pinno,y in [(4,190),(5,310),(1,370),(2,410),(3,450)]:
+        s.circle(1100,y,4,INK,False);s.text(1116,y+5,f'Pin {pinno}',13,bold=True)
+        if pinno in (1,2,3):s.text(1180,y+5,'NC - leave open',12,color=MUTED)
+    # Diode-OR supply.
+    s.rect(48,520,620,180,fill='#fbf6f6')
+    s.title(66,550,'MIDI_5V supply / Schottky diode OR')
+    s.net(150,600,'+5V',side='left',color=RED);s.line(150,600,220,600,RED)
+    diode(220,600,'D1  1N5819',RED);s.line(252,600,460,600,RED)
+    s.net(150,660,'USB_VBUS',side='left',color=BLUE);s.line(150,660,220,660,BLUE)
+    diode(220,660,'D2  1N5819',BLUE);s.line(252,660,400,660,RED);s.line(400,660,400,600,RED)
+    s.circle(400,600,3,RED);s.net(460,600,'MIDI_5V',color=RED)
+    s.text(142,616,'converter',10,color=MUTED,anchor='end');s.text(142,676,'Nano VBUS',10,color=MUTED,anchor='end')
+    # Notes.
+    s.rect(720,520,620,180,fill='#f6f8fa')
+    s.title(738,550,'Buffer and supply notes')
+    s.lines(738,580,['R52 holds the buffer input idle-high during reset.',
+                     'U4 /1OE grounded; C6 directly across pins 14 / 7.',
+                     'Unused inputs 5 / 9 / 12 and /OE 4 / 10 / 13 to GND;',
+                     'outputs 6 / 8 / 11 left open.',
+                     'Diodes isolate converter +5V and USB VBUS.'],13,step=22)
+    s.rect(48,740,1292,150,fill='#fff8ef')
+    s.lines(66,772,['MIDI OUT loop: MIDI_5V -> R53 -> DIN 4 -> receiver optocoupler -> DIN 5 -> R54 -> buffer 1Y sink.',
+                    'DIN pins 1, 2 (shield) and 3 are unconnected; circuit ground does not go to the DIN.',
+                    'One-way output only; no receive connection to the Nano. Verify DIN-5 numbering against the chosen connector datasheet view.'],13,step=30)
+    s.end()
+
+
+
 def reference():
-    s=Sheet('Assembly reference, options and sources','The accompanying netlist and connection schedule include every external component terminal shown in this set.',7)
+    s=Sheet('Assembly reference, options and sources','The accompanying netlist and connection schedule include every external component terminal shown in this set.',8)
     s.title(42,155,'Harness and assembly rules')
     s.lines(42,185,[
       'All GND symbols are the same electrical net. Run analog returns separately to the controller ground point.',
@@ -481,7 +558,7 @@ def single_page():
 
 def verify_firmware_pins():
     source=(ROOT/'src/board.hpp').read_text()
-    names={'Ladder':'LADDER','Pedal1':'P1_ADC','Pedal2':'P2_ADC',
+    names={'Ladder':'LADDER','MidiOutTx':'MIDI_OUT_TX','Pedal1':'P1_ADC','Pedal2':'P2_ADC',
            'Pedal1Bias':'P1_MODE','Pedal2Bias':'P2_MODE','EncoderA':'ENC_A',
            'EncoderB':'ENC_B','EncoderClick':'ENC_SW','LedData':'LED_GPIO',
            'LcdClock':'LCD_CLK','LcdDc':'LCD_DC','LcdCs':'LCD_CS',
@@ -531,8 +608,6 @@ def export_data():
         assert COMPONENTS[f'R{offset}']['pins']=={'1':'3V3','2':f'P{n}_RING'}
         assert COMPONENTS[f'R{offset+1}']['pins']=={'1':f'P{n}_MODE','2':f'P{n}_ADC'}
         assert COMPONENTS['J2']['pins']['12' if n==1 else '6']==f'P{n}_ADC'
-    assert not any(ref in COMPONENTS for ref in ['U4','Q1','Q2','D1','D2'])
-    assert not any(ref in COMPONENTS for ref in ['U5','R40','R41']+[f'C{i}' for i in range(16,28)])
     for i in range(1,11):
         assert COMPONENTS[f'LED{i}']['pins']['+5V']=='+5V'
         assert COMPONENTS[f'LED{i}']['pins']['GND']=='GND'
@@ -549,9 +624,18 @@ def export_data():
     assert COMPONENTS['U1']['pins']['JP1:12']=='USB_VBUS'
     assert COMPONENTS['R50']['pins']=={'1':'USB_VBUS','2':'USB_SENSE'}
     assert COMPONENTS['R51']['pins']=={'1':'USB_SENSE','2':'GND'}
+    assert COMPONENTS['U1']['pins']['JP2:2']=='MIDI_OUT_TX'
+    assert COMPONENTS['R52']['pins']=={'1':'3V3','2':'MIDI_OUT_TX'}
+    assert COMPONENTS['U4']['pins']=={'2':'MIDI_OUT_TX','1':'GND','3':'TX_GATE','14':'MIDI_5V','7':'GND','4':'GND','5':'GND','9':'GND','10':'GND','12':'GND','13':'GND'}
+    assert COMPONENTS['D1']['pins']=={'A':'+5V','K':'MIDI_5V'}
+    assert COMPONENTS['D2']['pins']=={'A':'USB_VBUS','K':'MIDI_5V'}
+    assert COMPONENTS['R53']['pins']=={'1':'MIDI_5V','2':'DIN4'}
+    assert COMPONENTS['R54']['pins']=={'1':'TX_GATE','2':'DIN5'}
+    assert COMPONENTS['C6']['pins']=={'1':'MIDI_5V','2':'GND'}
+    assert COMPONENTS['J3']['pins']=={'1':None,'2':None,'3':None,'4':'DIN4','5':'DIN5'}
     (OUT/'README.md').write_text("""# SIGMIDI Foot Controller v0.1 — electrical diagrams
 
-The Nano ESP32 assembly has a [unified A0 schematic](../../output/pdf/sigmidi-electrical-single-page.pdf), [seven detailed A3 sheets](../../output/pdf/sigmidi-electrical-diagram.pdf), [browser preview](../../previews/electrical-single-page.html), terminal CSV and machine-readable netlist. Purchased boards stop at external pins. These are assembly wiring drawings, not PCB fabrication files. Bench verification is required.
+The Nano ESP32 assembly has a [unified A0 schematic](../../output/pdf/sigmidi-electrical-single-page.pdf), [eight detailed A3 sheets](../../output/pdf/sigmidi-electrical-diagram.pdf), [browser preview](../../previews/electrical-single-page.html), terminal CSV and machine-readable netlist. Purchased boards stop at external pins. These are assembly wiring drawings, not PCB fabrication files. Bench verification is required.
 
 U1 is Arduino Nano ESP32 ABX00083, component-side top view with USB-C up. JP1 is left, pads 1–15 top-down; JP2 is right, pads 15–1 top-down. Pad IDs follow Arduino's V0.3 schematic, while printed D/A labels follow its official top-view pinout. VBUS is called VUSB in that pinout. Every printed header label remains visible; unused outside callouts are omitted. Connected pins show both the board label and ESP32 GPIO. GPIO numbers match `src/board.hpp`, independently of Arduino pin-numbering preferences.
 
@@ -574,7 +658,7 @@ J1 accepts 9V DC center-negative: center GND, sleeve +9V. +9V feeds both Nano VI
     sheets=''.join(f'<section id="sheet-{i}" {"" if i==0 else "hidden"}>{p["svg"]}</section>' for i,p in enumerate(PAGES))
     PREVIEW.write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SIGMIDI v0.1 - electrical diagram</title><style>
 *{box-sizing:border-box}body{margin:0;background:#eaf0f4;color:#183044;font:15px system-ui,sans-serif}header{padding:22px 28px;background:#183044;color:white;display:flex;justify-content:space-between;gap:20px}h1{font-size:23px;margin:0 0 7px}p{margin:0;color:#c5d4df}nav{padding:16px 24px;display:flex;gap:8px;flex-wrap:wrap}button{border:1px solid #bdccd7;background:white;color:#183044;padding:10px 14px;border-radius:7px;cursor:pointer}button[aria-current=true]{background:#2164b4;color:white;border-color:#2164b4}main{padding:0 24px 30px}section{background:white;box-shadow:0 3px 22px #18304419}svg{display:block;width:100%;height:auto}.hint{font-size:13px;color:#c5d4df}a{color:inherit}@media print{header,nav{display:none}main{padding:0}section{display:block!important;break-after:page;box-shadow:none}section[hidden]{display:block!important}@page{size:A3 landscape;margin:0}}
-</style><header><div><h1>SIGMIDI Foot Controller / electrical diagram</h1><p>v0.1 - connector pin assignments and complete external wiring</p></div><div class="hint"><a href="electrical-single-page.html">Single-page diagram</a><br>7 detailed vector sheets<br>Prototype circuit / not bench qualified</div></header><nav>'''+options+'</nav><main>'+sheets+'''</main><script>document.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('section').forEach((s,i)=>s.hidden=i!==Number(b.dataset.sheet));document.querySelectorAll('button').forEach(x=>x.setAttribute('aria-current',String(x===b)));}));</script></html>''')
+</style><header><div><h1>SIGMIDI Foot Controller / electrical diagram</h1><p>v0.1 - connector pin assignments and complete external wiring</p></div><div class="hint"><a href="electrical-single-page.html">Single-page diagram</a><br>8 detailed vector sheets<br>Prototype circuit / not bench qualified</div></header><nav>'''+options+'</nav><main>'+sheets+'''</main><script>document.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('section').forEach((s,i)=>s.hidden=i!==Number(b.dataset.sheet));document.querySelectorAll('button').forEach(x=>x.setAttribute('aria-current',String(x===b)));}));</script></html>''')
     print(json.dumps({'pages':len(PAGES),'components':len(COMPONENTS),'named_nets':len(nets),'pdf':str(PDF),'preview':str(PREVIEW)},indent=2))
 
 
@@ -586,6 +670,6 @@ if __name__=='__main__':
     SCALE=landscape(A3)[0]/W
     # A3 has a 1.414 aspect ratio; this logical page has the same dimensions to rounding.
     C.scale(SCALE,SCALE)
-    controller();power_encoder();ladder();pedal(1);pedal(2);leds();reference()
+    controller();power_encoder();ladder();pedal(1);pedal(2);leds();midi_out();reference()
     C.save()
     export_data()

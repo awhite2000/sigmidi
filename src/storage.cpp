@@ -4,6 +4,7 @@
 #include "esp_system.h"
 #include "esp_log.h"
 #include <cstdlib>
+#include <cstring>
 // ESP32-S3 .rtc_noinit is in retained RTC SLOW memory (FAST placement disabled).
 static RTC_NOINIT_ATTR foot::CounterMemory retainedCounters;
 foot::PcCounters &pcCounters() {
@@ -68,7 +69,8 @@ bool saveConfig(const foot::Config &c) {
     nvs_handle_t h;
     esp_err_t err = nvs_open("foot", NVS_READWRITE, &h);
     if (err == ESP_OK) {
-        err = nvs_set_str(h, "config", data);
+        // Blob, not string: NVS strings are limited to about 4000 bytes.
+        err = nvs_set_blob(h, "config_v2", data, strlen(data) + 1);
         if (err == ESP_OK)
             err = nvs_commit(h);
         nvs_close(h);
@@ -81,18 +83,24 @@ bool loadConfig(foot::Config &c) {
     if (nvs_open("foot", NVS_READONLY, &h) != ESP_OK)
         return false;
     size_t n = 0;
-    auto err = nvs_get_str(h, "config", nullptr, &n);
-    if (err != ESP_OK || n > 131072) {
+    bool blob = true;
+    auto err = nvs_get_blob(h, "config_v2", nullptr, &n);
+    if (err == ESP_ERR_NVS_NOT_FOUND) { // settings saved by earlier firmware
+        blob = false;
+        err = nvs_get_str(h, "config", nullptr, &n);
+    }
+    if (err != ESP_OK || n == 0 || n > 131072) {
         nvs_close(h);
         return false;
     }
-    char *data = (char *)malloc(n);
+    char *data = (char *)malloc(n + 1);
     if (!data) {
         nvs_close(h);
         return false;
     }
-    err = nvs_get_str(h, "config", data, &n);
+    err = blob ? nvs_get_blob(h, "config_v2", data, &n) : nvs_get_str(h, "config", data, &n);
     nvs_close(h);
+    data[n] = 0; // blobs carry no guaranteed terminator
     auto j = err == ESP_OK ? cJSON_Parse(data) : nullptr;
     char e[80];
     bool ok = j && configParse(j, c, e, sizeof e);
