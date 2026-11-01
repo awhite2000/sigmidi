@@ -112,7 +112,7 @@ bool validate(const Config &c, char *e, size_t n) {
         c.leds.colorOrder > 5 || c.leds.protocol < 0 || c.leds.protocol > 2)
         return fail("Invalid LED chain settings");
     for (int i = 0; i <= MaxSwitches; i++) {
-        if (!finite(c.ladder[i]) || c.ladder[i] < 0 || c.ladder[i] > 3300)
+        if (!finite(c.ladder[i]) || c.ladder[i] < 0 || c.ladder[i] > MaxLadderMv)
             return fail("Invalid ladder center");
         for (int j = 0; i <= c.switchCount && j < i; j++)
             if (std::fabs(c.ladder[i] - c.ladder[j]) <= 2 * c.windowMv)

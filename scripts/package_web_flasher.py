@@ -132,7 +132,7 @@ def package(root):
     preserve_firmware(root, info, images)
     (output / 'web-flasher-package.json').write_text(json.dumps(report, indent=2) + '\n')
     hashes = {p.relative_to(output).as_posix(): sha256(p.read_bytes()) for p in sorted(output.rglob('*'))
-              if p.is_file() and p != output / 'SHA256.json'}
+              if p.is_file() and p != output / 'SHA256.json' and p.name != '.DS_Store'}
     (output / 'SHA256.json').write_text(json.dumps(hashes, indent=2) + '\n')
     print(json.dumps(report, indent=2))
     return report

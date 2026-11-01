@@ -375,7 +375,7 @@ The local pedal menu edits endpoint numbers; it has no live capture action. Use 
 
 ## LADDER calibration list
 
-Open the **LADDER navigation row**, rather than the LADDER wiring selector. **IDLE MV** is the voltage with no switch held. **SW A MV**, etc. are the measured centers for installed switches, in the selected enclosure's order. Click, turn and accept a voltage in mV; values must be 0-3300. There is no local Capture command or live ADC display on this screen.
+Open the **LADDER navigation row**, rather than the LADDER wiring selector. **IDLE MV** is the voltage with no switch held. **SW A MV**, etc. are the measured centers for installed switches, in the selected enclosure's order. Click, turn and accept a voltage in mV; values must be 0-2300. The 10 kΩ/20 kΩ divider at the top of the ladder holds Idle at about 2200 mV, the highest voltage the ladder can produce; the extra 100 mV allows for resistor, supply and ADC tolerance. There is no local Capture command or live ADC display on this screen.
 
 **WINDOW MV** is edited one level above, at the configuration root. It is the allowed deviation on each side of a center, not the full window width. Choose 3-100 mV and less than half the smallest gap between installed centers, including Idle. Windows touching or overlapping fail validation. Use the Wi-Fi procedure on page 18 to capture actual measurements.
 

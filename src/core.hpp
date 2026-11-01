@@ -5,6 +5,9 @@
 namespace foot {
 constexpr int MinSwitches = 4, MaxSwitches = 10, MaxMessages = 32;
 constexpr int MaxTotalMessages = 128;
+// Idle is the highest ladder voltage: 3300 mV across 10 kΩ over 20 kΩ gives 2200 mV;
+// the limit leaves margin for resistor, supply and ADC tolerance.
+constexpr int MaxLadderMv = 2300;
 enum PcMode { Static = 0, Increment = 1, Decrement = 2 };
 struct Message {
     int type = 0, channel = 1, number = 0, value = 0, delayMs = 5;

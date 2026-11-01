@@ -21,6 +21,11 @@ int main() {
     invalid = c;
     invalid.ladder[2] = invalid.ladder[1] + 5;
     assert(!validate(invalid, error, sizeof error));
+    invalid = c;
+    invalid.ladder[0] = MaxLadderMv + 1;
+    assert(!validate(invalid, error, sizeof error));
+    invalid.ladder[0] = MaxLadderMv;
+    assert(validate(invalid, error, sizeof error));
     // Every supported count decodes only its installed taps, preserves idle,
     // and sends ordered press/release messages on the last active switch.
     assert(std::fabs(c.ladder[1] - 286.95652f) < .001f);

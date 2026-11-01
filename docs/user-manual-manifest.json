@@ -116,8 +116,8 @@
       "page": 27
     }
   ],
-  "source_sha256": "bd89ee437fb6a7e8fba8a622650d867cc3d72a6fe979089de6c4ff15d1e80e0c",
-  "pdf_sha256": "c9c20618c204217a9d04e380b25706ceccbfab16dce1776be1296392555ad5e8",
+  "source_sha256": "6e2d8742278c200b298616beb5fbbac756edb8587e9877e0122871287f969b5c",
+  "pdf_sha256": "f931461d8d6007d1371905bc374895609295620f2f998e0eeac3687472e31674",
   "renderer_sha256": "178b7b0e8521b97623738698e894e0c527addb13e2db2205f86739f709ad44f1",
   "connection_diagrams": {
     "manual-signal-path.svg": "474175b49be2b19d5d40116f8be7edf1d3cc1de9bfdbdb7ab795b7901da0794e",

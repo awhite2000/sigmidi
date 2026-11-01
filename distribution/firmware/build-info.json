@@ -2,9 +2,9 @@
   "name": "SIGMIDI Foot Controller",
   "version": "0.1",
   "firmware_name": "sigmidi-foot-controller-0.1.bin",
-  "build_id": "dc67b093bac7",
-  "built_at": "2026-11-01T20:00:51.557752+00:00",
-  "source_sha256": "dc67b093bac71ae2cf7cec075b577951fb0712f3f95729b09cfa996f226909c8",
+  "build_id": "7ced33fca9fe",
+  "built_at": "2026-11-01T20:57:32.668081+00:00",
+  "source_sha256": "7ced33fca9fe72e35020e5eb6c23bf6fbd5c0a508ffc3fcbbec304f20d724297",
   "source_files": {
     "src/CMakeLists.txt": "83e56ea156837ecb87ef29d7415a8f3bb9d5077cda04dd668678bc9863a873bc",
     "src/app.hpp": "d3f9b7174fd3f990d942649ca9e93168d6896cf32b1fc5aca5e5d992fe91528d",
@@ -13,8 +13,8 @@
     "src/branding.hpp": "8399cbd5f124434e18b0e7ed93c24ff178ee098b3ad23573fd95c6d6cd8c5b98",
     "src/config.cpp": "fd9094e730d2b2bfbff5a20d4cc71662f8d210e8f0db6a5284529a580cebde3f",
     "src/config.hpp": "6edf96183c505f393d6a82dc3fc1b8db0f10331ea0d7543322472cc3de073059",
-    "src/core.cpp": "41489476905ac012acad4380e5b06119a519e94019acc841605f1ed8d59db2d9",
-    "src/core.hpp": "d0b05afc7bedbe07874e5f9d68d4c1ad256db40ae09d351ea57a635d92020c7c",
+    "src/core.cpp": "c6dc290b1789bd65b2bfa4de4552cd119fee61046a3f953145de2e39a853590e",
+    "src/core.hpp": "6e4b490055272ed3714d42658d64c75e4cc0db0630c1e17d8d314ed2a713e891",
     "src/counters.cpp": "8d17090ad44f4401d0321f5cfceead885ed8b3e97d27b1caca9341907cbde6fa",
     "src/counters.hpp": "e60bf4a979e0edfe3e8c935430e3b5fb37800b93d3584592d1ab29cc48699d72",
     "src/display.cpp": "a2df2c1432c71c1aafd16fc1c8254aee15116c8b12ec43793b6b00c8a78ea1b4",
@@ -43,9 +43,9 @@
     "partitions.csv": "0fc87e012db3c478107e047978fd142c43f104edb0dfb5546537d16f49a95300"
   },
   "sha256": {
-    "bootloader.bin": "1024c2199111c0bae38a23ea093bb510c6e8ac46c8fe2fb9831583adf1af2737",
+    "bootloader.bin": "19da96967ead7544b3f2b7a4dcead27c05ed522197896cd09508f7a8fb9b3007",
     "partitions.bin": "37f9719078927bf594a883c81ad80dd4e6d179c8db193fbded90851178aa39e7",
-    "firmware.bin": "c0b865c2221dd03b9bce3c6f4076e85c733b38de64739d6093c9643f79486b68"
+    "firmware.bin": "f057ee53407007614a3ea139e52aef0f1549588942d65e93a77cecde11bc1004"
   },
   "chip": "ESP32-S3",
   "flash_bytes": 16777216,
