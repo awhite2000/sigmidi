@@ -2,27 +2,14 @@
   "validate_wire_connections": {
     "floating_count": 0,
     "floating_endpoints": [],
+    "tees_without_junction": [],
+    "collinear_overlaps": 0,
     "valid": true
   },
   "validate_component_connections": {
     "unconnected_count": 0,
     "unconnected_pins": [],
     "valid": true
-  },
-  "find_shorted_nets": {
-    "short_count": 0,
-    "shorts": []
-  },
-  "find_orphan_items": {
-    "orphan_count": 0,
-    "orphans": [],
-    "tolerance": 0.05
-  },
-  "check_schematic_overlaps": {
-    "bounds_resolved": 48,
-    "bounds_unresolved": [],
-    "overlap_count": 0,
-    "overlaps": []
   },
   "run_erc": {
     "coordinates": {
@@ -35,71 +22,47 @@
     "violations": [],
     "warnings": 0
   },
-  "annotate_schematic": {
-    "assigned": [],
-    "dry_run": true,
-    "duplicates_before": [],
-    "message": "Dry run: nothing was written; assigned lists what a real run would write.",
-    "other_sheets_consulted": [],
-    "other_sheets_unreadable": [],
-    "outcome": {
-      "completed": 0,
-      "failed": 0,
-      "requested": 0,
-      "retry": null,
-      "source": "dry_run_plan",
-      "status": "complete",
-      "target": "/Users/ab/Documents/ChatGPT/MIDI controller 3/design/kicad/sigmidi-foot-controller.kicad_sch"
-    },
-    "outside_project": [],
-    "paths": [
-      "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
-    ],
-    "project": "sigmidi-foot-controller",
-    "resolve_duplicates": false,
-    "schematic": "/Users/ab/Documents/ChatGPT/MIDI controller 3/design/kicad/sigmidi-foot-controller.kicad_sch",
-    "unannotated_before": 0,
-    "unresolved": [],
-    "written": false
+  "annotation": {
+    "references": 57,
+    "duplicates": [],
+    "unannotated": []
   },
   "independent_netlist_and_pin_order": {
-    "components": 46,
-    "nets": 41,
-    "connected_terminals": 143,
-    "unused_terminals": 18,
+    "components": 57,
+    "nets": 49,
+    "connected_terminals": 178,
+    "unused_terminals": 17,
     "connectivity_matches_source": true,
     "nano_physical_order": true,
     "nano_JP2_order": "15 to 1, top to bottom",
     "nano_header_tops_aligned": true,
     "display_physical_order": true
   },
-  "timestamp": "2026-10-30T07:42:38.332168+00:00",
-  "konnect_version": "0.13.0",
+  "timestamp": "2026-11-01T20:15:35.731702+00:00",
   "kicad_version": "10.0.7",
-  "authority": "Saved native schematic plus direct KiCad XML/ERC/render exports; no suppressed ERC rules.",
+  "authority": "Saved native schematic plus direct kicad-cli XML netlist, ERC, SVG and PDF exports; pin coordinates computed from the saved symbol placements; no suppressed ERC rules beyond KiCad project defaults.",
   "visual_inspection": {
-    "native_png": true,
-    "pdf_rendered_with_poppler": true,
+    "native_svg_rendered_to_png": true,
     "pdf_pages": 1,
     "page_size": "A0 landscape",
     "large_annotations_readable_at_zoom": true
   },
   "sha256": {
-    "design/electrical/netlist.json": "2267e1b0a654212ef16386f61ddbc9a47e312421421e163f757127318dd4331c",
-    "design/electrical/single-page-wiring.json": "1cd663d9ac87751692b7c7486c9fde1dde74c4527cff126ce49b4625e34d9c1c",
-    "design/kicad/README.md": "76320e8761cc64145d446a27d25b4cdeec20d38615ff1d479013c24563dd666f",
-    "design/kicad/SIGMIDI.kicad_sym": "da3a36574770d4fa520c7a61c78fbc6e2947881cc1fd633291ac9c22482f7a86",
+    "design/electrical/netlist.json": "33627f63f1bc87214620771378b382524cb5e48990a955a39a6ecef06ac8f8b1",
+    "design/electrical/single-page-wiring.json": "18efcdcc5744ff12adcb36600efac262a6b08208f52fef74c67770d4a8617bd6",
+    "design/kicad/README.md": "51ead7fbecc8b7992f8edf52a776f645d350f8547b7b23e2e41ea375ffad53ec",
+    "design/kicad/SIGMIDI.kicad_sym": "36f6a4157be8f28d80856bdbaba029e8f174bd3cc7ec961337f7ebe3e40707c3",
     "design/kicad/sigmidi-foot-controller.kicad_pcb": "d339432e9703afe9d86e25ef344078522aa166b4c78db6f36e6141cb87bb7690",
     "design/kicad/sigmidi-foot-controller.kicad_prl": "9798abdb7242bf9b19d4fef8eaeb4cbfde6a25dc5b4cbf91f7e3eb4e9394a8ea",
     "design/kicad/sigmidi-foot-controller.kicad_pro": "45192d9c23f0fa1310e6926b03631a9f5004c6ba2790738f2b109f5f91374854",
-    "design/kicad/sigmidi-foot-controller.kicad_sch": "3d4ae1353eb2d20d4710f00cb9345e02572305c379f862d6f0f6214b241516e8",
+    "design/kicad/sigmidi-foot-controller.kicad_sch": "8b3efbda515232e200517a65e47803648a50bfa87cbdacbccac7fe8e5f3acb8c",
     "design/kicad/sym-lib-table": "4b06b7e3ce4efb245b90ee0c05ff15a3db99ccc58b504aef1373338c7a495b94",
-    "design/kicad/sigmidi-foot-controller.net": "756f9b442244afc1b0677e28f9de55067a7f18bb89d7fd2af8a5c82d5a458a94",
-    "design/kicad/sigmidi-foot-controller.svg": "0f37444e60e0c20c041866dabace238f0804706c7f707452af1af3b988a005e0",
-    "design/kicad/sigmidi-foot-controller.png": "108d594ab78e3771ee314241d3ed22f6ebcabfd98107ea0e0b0c747578e3840c",
-    "design/kicad/verification/erc.json": "9fe8bea2883538794f6f2e2f0ac3e33a9392d36fa5de817c2484811d5a9f3e0b",
-    "design/kicad/verification/physical-pin-map.json": "95ea9bc472e49f4ee9883f75c2ba6a3a126d4b62bd95a6c1d888b3f3e51171e0",
-    "design/kicad/verification/pin-locations.json": "783e8fc28bba656cf188bc94116a8d95306a6c2f698d13c5a135f3685e9dc019",
-    "output/pdf/sigmidi-kicad-schematic.pdf": "0e9d4afece0ed727cab07d231965aed32ebf0f9eabcbcfc8d6461b124763fbbf"
+    "design/kicad/sigmidi-foot-controller.net": "8017fbc1e7caf258a217acf026cbd796e9648464fa7650d653641efb24cf4bed",
+    "design/kicad/sigmidi-foot-controller.svg": "81165a2db48bafeabe8476f12192805cba0a79d3c3a7c2342400d4bb261fbcb3",
+    "design/kicad/sigmidi-foot-controller.png": "7b9af06b5ba69dafa6926ab3ebb81c7590c5b5c367cc1b21abdc72c66d0bad7c",
+    "design/kicad/verification/erc.json": "8836a2b7e7ea407bb200eaba1d346149a7381f9f75847aecfc972a0fdcd253e5",
+    "design/kicad/verification/physical-pin-map.json": "0dc898b2c0e47f5931e155eeba1e46375f1ca3501f5c7c862900e3aceecbac54",
+    "design/kicad/verification/pin-locations.json": "0181915a376265334004c0ddfb25d5bdd21db4c6234e3fe4f219d6f14734d7d9",
+    "output/pdf/sigmidi-kicad-schematic.pdf": "fdf06107cbf5514bc404e49cf412932ac48ab23c485456165feefc814a866ae2"
   }
 }

@@ -98,13 +98,13 @@
     "src/board.hpp": "5de3ef5b4000c6601b72f661b1305032aaf7e3e7ced4ada47ee1e1052f73470c",
     "design/electrical/netlist.json": "33627f63f1bc87214620771378b382524cb5e48990a955a39a6ecef06ac8f8b1",
     "docs/bom-items.json": "9e33d6a87516a6ff7851c3875aaac15ed1c5ec095f171befeeb3de1e0bd84117",
-    "docs/power.md": "fe1c5d1c4e4719229f7964cf9150eeb5dc091ce5cb6a336b514a4f9dfd87e5cc",
+    "docs/power.md": "6cfe78733231642027d0fa7033f76a2b84eaa59a9815ecdb91e781673639cae0",
     "docs/hardware.md": "41b0deedef88a0d0b921d1019d1f9d9637e16017f8eb09a2b8633a26a88dc9cf",
     "docs/leds.md": "f4ab6c3c08fdfdeefaabb47ea6ea7d2c4014f160d3a76d805b6f818b4b31c801",
-    "docs/resistor-ladders.md": "029d1c03c51d820405d32c51dcfa68c46632e547312b33d68d731c36a2635ebb",
+    "docs/resistor-ladders.md": "0bfcee47d6111201d07d79f201b84caa5c3b6b21005dc32ed7e2ad87786ddbb4",
     "design/fusion/nano-esp32/mount-fit.json": "69d8126f30732ccc7caaf0686f750cbf766fbbfea74892f97607a1d7b225b3cd",
     "design/fusion/nano-esp32/README.md": "d95bdf567a34fa8b8fcda5f4595e9c4fbdba674b2ee660d2a7bbf49b6c33fd02",
-    "design/fusion/mirrored/README.md": "653a5e9ae55f49fd7fcb51a9979a83e17cd8c304e9fa79099e5c34f10c88149b",
+    "design/fusion/mirrored/README.md": "f055a691f8e327b423fd8d33f5daba114230d3c9034007bdc13d3ca6a4e000ee",
     "design/fusion/modular/README.md": "10435b547136a95c90a5f5c2b22ea403c66302446bd1bf6dfe3a4aad5cdf6dc1",
     "design/fusion/printing-tolerances.md": "200bb4341eefe9a792ca11417d28f109e5e2c5fcfb7f84db3e9560ffe1bc801b",
     "docs/user-manual.md": "bd89ee437fb6a7e8fba8a622650d867cc3d72a6fe979089de6c4ff15d1e80e0c",
@@ -128,6 +128,6 @@
     "previews/sigmidi-left-main.png": "fc483734db42d3937930d1f476f123da02c0c01b4e5175461f7b5203bb473cd3"
   },
   "outputs": {
-    "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf": "fab4689f035db1218a72fb708e4d018933ce92167ffd0bf2a557926a5df5bac0"
+    "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf": "5db57cb2ffc18329407060b789a04d81580df69c87f48489e5be947a9dd3a65c"
   }
 }

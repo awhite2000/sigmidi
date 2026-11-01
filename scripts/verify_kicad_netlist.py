@@ -90,8 +90,9 @@ def verify(source_path, exported_path):
         seen.update(pins)
         if not pins:
             continue
-        if pins <= unused and len(pins) == 1:
-            continue  # KiCad may include an isolated NC pin as a one-node net.
+        if len(pins) == 1 and (pins <= unused or not any(
+                pin in expected_components[ref]['pins'] for ref, pin in pins)):
+            continue  # KiCad may include an isolated NC or open package pin as a one-node net.
         assert not pins.intersection(unused), ('Unexpected NC connection', net.attrib, pins)
         name = net.attrib['name'].removeprefix('/')
         assert name not in actual, ('Duplicate net name', name)

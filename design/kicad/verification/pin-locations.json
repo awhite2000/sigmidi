@@ -3863,6 +3863,885 @@
       ],
       "x": 80.01,
       "y": 629.92
+    },
+    {
+      "component_x": 1066.8,
+      "component_y": 337.82,
+      "pins": [
+        {
+          "length_mm": 2.54,
+          "name": "1A",
+          "number": "2",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1051.56,
+          "y": 325.12
+        },
+        {
+          "length_mm": 2.54,
+          "name": "2A",
+          "number": "5",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1051.56,
+          "y": 330.2
+        },
+        {
+          "length_mm": 2.54,
+          "name": "~{1OE}",
+          "number": "1",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1051.56,
+          "y": 335.28
+        },
+        {
+          "length_mm": 2.54,
+          "name": "~{2OE}",
+          "number": "4",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1051.56,
+          "y": 340.36
+        },
+        {
+          "length_mm": 2.54,
+          "name": "3A",
+          "number": "9",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1051.56,
+          "y": 345.44
+        },
+        {
+          "length_mm": 2.54,
+          "name": "~{3OE}",
+          "number": "10",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1051.56,
+          "y": 350.52
+        },
+        {
+          "length_mm": 2.54,
+          "name": "4A",
+          "number": "12",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1051.56,
+          "y": 355.6
+        },
+        {
+          "length_mm": 2.54,
+          "name": "~{4OE}",
+          "number": "13",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1051.56,
+          "y": 360.68
+        },
+        {
+          "length_mm": 2.54,
+          "name": "1Y",
+          "number": "3",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1082.04,
+          "y": 325.12
+        },
+        {
+          "length_mm": 2.54,
+          "name": "2Y",
+          "number": "6",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1082.04,
+          "y": 330.2
+        },
+        {
+          "length_mm": 2.54,
+          "name": "3Y",
+          "number": "8",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1082.04,
+          "y": 345.44
+        },
+        {
+          "length_mm": 2.54,
+          "name": "4Y",
+          "number": "11",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1082.04,
+          "y": 355.6
+        },
+        {
+          "length_mm": 2.54,
+          "name": "VCC",
+          "number": "14",
+          "orientation_degrees": 90.0,
+          "unit": 1,
+          "x": 1066.8,
+          "y": 317.5
+        },
+        {
+          "length_mm": 2.54,
+          "name": "GND",
+          "number": "7",
+          "orientation_degrees": 270.0,
+          "unit": 1,
+          "x": 1066.8,
+          "y": 368.3
+        }
+      ],
+      "reference": "U4",
+      "rotation": 0.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 2.54,
+              "name": "1A",
+              "number": "2",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1051.56,
+              "y": 325.12
+            },
+            {
+              "length_mm": 2.54,
+              "name": "2A",
+              "number": "5",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1051.56,
+              "y": 330.2
+            },
+            {
+              "length_mm": 2.54,
+              "name": "~{1OE}",
+              "number": "1",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1051.56,
+              "y": 335.28
+            },
+            {
+              "length_mm": 2.54,
+              "name": "~{2OE}",
+              "number": "4",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1051.56,
+              "y": 340.36
+            },
+            {
+              "length_mm": 2.54,
+              "name": "3A",
+              "number": "9",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1051.56,
+              "y": 345.44
+            },
+            {
+              "length_mm": 2.54,
+              "name": "~{3OE}",
+              "number": "10",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1051.56,
+              "y": 350.52
+            },
+            {
+              "length_mm": 2.54,
+              "name": "4A",
+              "number": "12",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1051.56,
+              "y": 355.6
+            },
+            {
+              "length_mm": 2.54,
+              "name": "~{4OE}",
+              "number": "13",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1051.56,
+              "y": 360.68
+            },
+            {
+              "length_mm": 2.54,
+              "name": "1Y",
+              "number": "3",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1082.04,
+              "y": 325.12
+            },
+            {
+              "length_mm": 2.54,
+              "name": "2Y",
+              "number": "6",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1082.04,
+              "y": 330.2
+            },
+            {
+              "length_mm": 2.54,
+              "name": "3Y",
+              "number": "8",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1082.04,
+              "y": 345.44
+            },
+            {
+              "length_mm": 2.54,
+              "name": "4Y",
+              "number": "11",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1082.04,
+              "y": 355.6
+            },
+            {
+              "length_mm": 2.54,
+              "name": "VCC",
+              "number": "14",
+              "orientation_degrees": 90.0,
+              "unit": 1,
+              "x": 1066.8,
+              "y": 317.5
+            },
+            {
+              "length_mm": 2.54,
+              "name": "GND",
+              "number": "7",
+              "orientation_degrees": 270.0,
+              "unit": 1,
+              "x": 1066.8,
+              "y": 368.3
+            }
+          ],
+          "rotation": 0.0,
+          "unit": 1,
+          "x": 1066.8,
+          "y": 337.82
+        }
+      ],
+      "x": 1066.8,
+      "y": 337.82
+    },
+    {
+      "component_x": 1023.62,
+      "component_y": 106.68,
+      "pins": [
+        {
+          "length_mm": 3.81,
+          "name": "A",
+          "number": "A",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1018.54,
+          "y": 106.68
+        },
+        {
+          "length_mm": 3.81,
+          "name": "K",
+          "number": "K",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1028.7,
+          "y": 106.68
+        }
+      ],
+      "reference": "D1",
+      "rotation": 0.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 3.81,
+              "name": "A",
+              "number": "A",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1018.54,
+              "y": 106.68
+            },
+            {
+              "length_mm": 3.81,
+              "name": "K",
+              "number": "K",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1028.7,
+              "y": 106.68
+            }
+          ],
+          "rotation": 0.0,
+          "unit": 1,
+          "x": 1023.62,
+          "y": 106.68
+        }
+      ],
+      "x": 1023.62,
+      "y": 106.68
+    },
+    {
+      "component_x": 1043.94,
+      "component_y": 106.68,
+      "pins": [
+        {
+          "length_mm": 3.81,
+          "name": "A",
+          "number": "A",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1049.02,
+          "y": 106.68
+        },
+        {
+          "length_mm": 3.81,
+          "name": "K",
+          "number": "K",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1038.86,
+          "y": 106.68
+        }
+      ],
+      "reference": "D2",
+      "rotation": 180.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 3.81,
+              "name": "A",
+              "number": "A",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1049.02,
+              "y": 106.68
+            },
+            {
+              "length_mm": 3.81,
+              "name": "K",
+              "number": "K",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1038.86,
+              "y": 106.68
+            }
+          ],
+          "rotation": 180.0,
+          "unit": 1,
+          "x": 1043.94,
+          "y": 106.68
+        }
+      ],
+      "x": 1043.94,
+      "y": 106.68
+    },
+    {
+      "component_x": 1028.7,
+      "component_y": 342.9,
+      "pins": [
+        {
+          "length_mm": 2.794,
+          "name": "",
+          "number": "1",
+          "orientation_degrees": 90.0,
+          "unit": 1,
+          "x": 1028.7,
+          "y": 339.09
+        },
+        {
+          "length_mm": 2.794,
+          "name": "",
+          "number": "2",
+          "orientation_degrees": 270.0,
+          "unit": 1,
+          "x": 1028.7,
+          "y": 346.71
+        }
+      ],
+      "reference": "C6",
+      "rotation": 0.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 2.794,
+              "name": "",
+              "number": "1",
+              "orientation_degrees": 90.0,
+              "unit": 1,
+              "x": 1028.7,
+              "y": 339.09
+            },
+            {
+              "length_mm": 2.794,
+              "name": "",
+              "number": "2",
+              "orientation_degrees": 270.0,
+              "unit": 1,
+              "x": 1028.7,
+              "y": 346.71
+            }
+          ],
+          "rotation": 0.0,
+          "unit": 1,
+          "x": 1028.7,
+          "y": 342.9
+        }
+      ],
+      "x": 1028.7,
+      "y": 342.9
+    },
+    {
+      "component_x": 1003.3,
+      "component_y": 312.42,
+      "pins": [
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "1",
+          "orientation_degrees": 90.0,
+          "unit": 1,
+          "x": 1003.3,
+          "y": 308.61
+        },
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "2",
+          "orientation_degrees": 270.0,
+          "unit": 1,
+          "x": 1003.3,
+          "y": 316.23
+        }
+      ],
+      "reference": "R52",
+      "rotation": 0.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "1",
+              "orientation_degrees": 90.0,
+              "unit": 1,
+              "x": 1003.3,
+              "y": 308.61
+            },
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "2",
+              "orientation_degrees": 270.0,
+              "unit": 1,
+              "x": 1003.3,
+              "y": 316.23
+            }
+          ],
+          "rotation": 0.0,
+          "unit": 1,
+          "x": 1003.3,
+          "y": 312.42
+        }
+      ],
+      "x": 1003.3,
+      "y": 312.42
+    },
+    {
+      "component_x": 1115.06,
+      "component_y": 314.96,
+      "pins": [
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "1",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1111.25,
+          "y": 314.96
+        },
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "2",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1118.87,
+          "y": 314.96
+        }
+      ],
+      "reference": "R53",
+      "rotation": 90.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "1",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1111.25,
+              "y": 314.96
+            },
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "2",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1118.87,
+              "y": 314.96
+            }
+          ],
+          "rotation": 90.0,
+          "unit": 1,
+          "x": 1115.06,
+          "y": 314.96
+        }
+      ],
+      "x": 1115.06,
+      "y": 314.96
+    },
+    {
+      "component_x": 1094.74,
+      "component_y": 325.12,
+      "pins": [
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "1",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1090.93,
+          "y": 325.12
+        },
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "2",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1098.55,
+          "y": 325.12
+        }
+      ],
+      "reference": "R54",
+      "rotation": 90.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "1",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1090.93,
+              "y": 325.12
+            },
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "2",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1098.55,
+              "y": 325.12
+            }
+          ],
+          "rotation": 90.0,
+          "unit": 1,
+          "x": 1094.74,
+          "y": 325.12
+        }
+      ],
+      "x": 1094.74,
+      "y": 325.12
+    },
+    {
+      "component_x": 1115.06,
+      "component_y": 340.36,
+      "pins": [
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "1",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1111.25,
+          "y": 340.36
+        },
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "2",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1118.87,
+          "y": 340.36
+        }
+      ],
+      "reference": "R55",
+      "rotation": 90.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "1",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1111.25,
+              "y": 340.36
+            },
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "2",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1118.87,
+              "y": 340.36
+            }
+          ],
+          "rotation": 90.0,
+          "unit": 1,
+          "x": 1115.06,
+          "y": 340.36
+        }
+      ],
+      "x": 1115.06,
+      "y": 340.36
+    },
+    {
+      "component_x": 1094.74,
+      "component_y": 350.52,
+      "pins": [
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "1",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1090.93,
+          "y": 350.52
+        },
+        {
+          "length_mm": 1.27,
+          "name": "",
+          "number": "2",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1098.55,
+          "y": 350.52
+        }
+      ],
+      "reference": "R56",
+      "rotation": 90.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "1",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1090.93,
+              "y": 350.52
+            },
+            {
+              "length_mm": 1.27,
+              "name": "",
+              "number": "2",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1098.55,
+              "y": 350.52
+            }
+          ],
+          "rotation": 90.0,
+          "unit": 1,
+          "x": 1094.74,
+          "y": 350.52
+        }
+      ],
+      "x": 1094.74,
+      "y": 350.52
+    },
+    {
+      "component_x": 1132.84,
+      "component_y": 320.04,
+      "pins": [
+        {
+          "length_mm": 2.54,
+          "name": "R",
+          "number": "R",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1125.22,
+          "y": 314.96
+        },
+        {
+          "length_mm": 2.54,
+          "name": "T",
+          "number": "T",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1125.22,
+          "y": 325.12
+        },
+        {
+          "length_mm": 2.54,
+          "name": "S",
+          "number": "S",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1140.46,
+          "y": 320.04
+        }
+      ],
+      "reference": "J3",
+      "rotation": 0.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 2.54,
+              "name": "R",
+              "number": "R",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1125.22,
+              "y": 314.96
+            },
+            {
+              "length_mm": 2.54,
+              "name": "T",
+              "number": "T",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1125.22,
+              "y": 325.12
+            },
+            {
+              "length_mm": 2.54,
+              "name": "S",
+              "number": "S",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1140.46,
+              "y": 320.04
+            }
+          ],
+          "rotation": 0.0,
+          "unit": 1,
+          "x": 1132.84,
+          "y": 320.04
+        }
+      ],
+      "x": 1132.84,
+      "y": 320.04
+    },
+    {
+      "component_x": 1132.84,
+      "component_y": 345.44,
+      "pins": [
+        {
+          "length_mm": 2.54,
+          "name": "R",
+          "number": "R",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1125.22,
+          "y": 340.36
+        },
+        {
+          "length_mm": 2.54,
+          "name": "T",
+          "number": "T",
+          "orientation_degrees": 180.0,
+          "unit": 1,
+          "x": 1125.22,
+          "y": 350.52
+        },
+        {
+          "length_mm": 2.54,
+          "name": "S",
+          "number": "S",
+          "orientation_degrees": 0.0,
+          "unit": 1,
+          "x": 1140.46,
+          "y": 345.44
+        }
+      ],
+      "reference": "J4",
+      "rotation": 0.0,
+      "unit_count": 1,
+      "units": [
+        {
+          "pins": [
+            {
+              "length_mm": 2.54,
+              "name": "R",
+              "number": "R",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1125.22,
+              "y": 340.36
+            },
+            {
+              "length_mm": 2.54,
+              "name": "T",
+              "number": "T",
+              "orientation_degrees": 180.0,
+              "unit": 1,
+              "x": 1125.22,
+              "y": 350.52
+            },
+            {
+              "length_mm": 2.54,
+              "name": "S",
+              "number": "S",
+              "orientation_degrees": 0.0,
+              "unit": 1,
+              "x": 1140.46,
+              "y": 345.44
+            }
+          ],
+          "rotation": 0.0,
+          "unit": 1,
+          "x": 1132.84,
+          "y": 345.44
+        }
+      ],
+      "x": 1132.84,
+      "y": 345.44
     }
   ]
 }

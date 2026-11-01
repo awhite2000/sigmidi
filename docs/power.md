@@ -21,7 +21,7 @@ The regulator has no reverse-input-polarity protection. For long supply leads or
 
 ## Load budget
 
-The Pololu 1 A output supplies the LED rail; the Nano regulates its own VIN supply for the MCU, LCD and analog circuits. Its continuous capacity depends on input voltage, airflow and temperature. Ten Pololu 2535 LEDs draw approximately 0.5 A at full white. Default 64/255 brightness reduces average load, but wiring and supply selection must accommodate peak current. Validate Wi-Fi and full-white/startup load. No battery charger is included.
+The Pololu 1 A output supplies the LED rail; the Nano regulates its own VIN supply for the ESP32, LCD and analog circuits. Its continuous capacity depends on input voltage, airflow and temperature. Ten Pololu 2535 LEDs draw approximately 0.5 A at full white. Default 64/255 brightness reduces average load, but wiring and supply selection must accommodate peak current. Validate Wi-Fi and full-white/startup load. No battery charger is included.
 
 Branch LED +5 V and GND directly at the supply distribution point. Do not route LED current through the Nano header or join independent positive outputs. USB-only operation does not imply power on the converter's LED rail. [LED wiring](leds.md).
 
@@ -44,7 +44,7 @@ The [converter STEP](../design/fusion/datasheets/pololu-4083.step) and [drawing]
 
 Three bare-edge seats and two opposing PETG springs support the converter. Springs are 4.8 mm wide, 1.6 mm thick and 13.216 mm tall above the reinforced floor, with 0.8 mm root gussets at 45°. Hook overlap is 0.4 mm, top clearance 0.2 mm and insertion travel about 0.6 mm outward per leaf. Solder wires first; spread the leaves, lower the PCB onto its seats and release. Press only on bare edges and keep strain off the springs.
 
-The electronics base has six inlet slots around the converter and seven in the MCU mounting region, each 2.4 mm wide. The floor is 3 mm thick across their rectangular zone and a 3 mm border. Twelve rear exhaust slots form three columns and four rows; their highest edge leaves a 7.6 mm solid top rim. An internal rib with 45° side chamfers runs from roof to base between columns and joins the USB-pocket chamfer.
+The electronics base has six inlet slots around the converter and seven in the Nano mounting region, each 2.4 mm wide. The floor is 3 mm thick across their rectangular zone and a 3 mm border. Twelve rear exhaust slots form three columns and four rows; their highest edge leaves a 7.6 mm solid top rim. An internal rib with 45° side chamfers runs from roof to base between columns and joins the USB-pocket chamfer.
 
 Rear vents print with **0.6 mm internal membranes**. Remove all twelve films and clean the openings before operation; finished rear open area is 380.16 mm². Keep grilles clear of foam, tape and wiring, and provide at least **3 mm air space under the base**. The ventilated enclosure is not sealed against dust or liquid.
 

@@ -3164,6 +3164,179 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "SIGMIDI:74HCT125_Quad_Buffer"
+			(pin_names
+				(offset 1.016))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U" (at 0 22.86 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+			(property "Value" "74HCT125" (at 0 -33.02 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+			(property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+			(property "Description" "Quad buffer, active-low output enables; pins 1-14 are DIP/SOIC package pins" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+			(symbol "74HCT125_Quad_Buffer_0_1"
+				(rectangle (start -12.7 17.78) (end 12.7 -27.94)
+					(stroke (width 0.254) (type default))
+					(fill (type background))
+				)
+			(pin input line (at -15.24 12.7 0)
+				(length 2.54)
+				(name "1A" (effects (font (size 1.27 1.27))))
+				(number "2" (effects (font (size 1.27 1.27))))
+			)
+			(pin input line (at -15.24 7.62 0)
+				(length 2.54)
+				(name "2A" (effects (font (size 1.27 1.27))))
+				(number "5" (effects (font (size 1.27 1.27))))
+			)
+			(pin input line (at -15.24 2.54 0)
+				(length 2.54)
+				(name "~{1OE}" (effects (font (size 1.27 1.27))))
+				(number "1" (effects (font (size 1.27 1.27))))
+			)
+			(pin input line (at -15.24 -2.54 0)
+				(length 2.54)
+				(name "~{2OE}" (effects (font (size 1.27 1.27))))
+				(number "4" (effects (font (size 1.27 1.27))))
+			)
+			(pin input line (at -15.24 -7.62 0)
+				(length 2.54)
+				(name "3A" (effects (font (size 1.27 1.27))))
+				(number "9" (effects (font (size 1.27 1.27))))
+			)
+			(pin input line (at -15.24 -12.7 0)
+				(length 2.54)
+				(name "~{3OE}" (effects (font (size 1.27 1.27))))
+				(number "10" (effects (font (size 1.27 1.27))))
+			)
+			(pin input line (at -15.24 -17.78 0)
+				(length 2.54)
+				(name "4A" (effects (font (size 1.27 1.27))))
+				(number "12" (effects (font (size 1.27 1.27))))
+			)
+			(pin input line (at -15.24 -22.86 0)
+				(length 2.54)
+				(name "~{4OE}" (effects (font (size 1.27 1.27))))
+				(number "13" (effects (font (size 1.27 1.27))))
+			)
+			(pin tri_state line (at 15.24 12.7 180)
+				(length 2.54)
+				(name "1Y" (effects (font (size 1.27 1.27))))
+				(number "3" (effects (font (size 1.27 1.27))))
+			)
+			(pin tri_state line (at 15.24 7.62 180)
+				(length 2.54)
+				(name "2Y" (effects (font (size 1.27 1.27))))
+				(number "6" (effects (font (size 1.27 1.27))))
+			)
+			(pin tri_state line (at 15.24 -7.62 180)
+				(length 2.54)
+				(name "3Y" (effects (font (size 1.27 1.27))))
+				(number "8" (effects (font (size 1.27 1.27))))
+			)
+			(pin tri_state line (at 15.24 -17.78 180)
+				(length 2.54)
+				(name "4Y" (effects (font (size 1.27 1.27))))
+				(number "11" (effects (font (size 1.27 1.27))))
+			)
+			(pin power_in line (at 0 20.32 270)
+				(length 2.54)
+				(name "VCC" (effects (font (size 1.27 1.27))))
+				(number "14" (effects (font (size 1.27 1.27))))
+			)
+			(pin power_in line (at 0 -30.48 90)
+				(length 2.54)
+				(name "GND" (effects (font (size 1.27 1.27))))
+				(number "7" (effects (font (size 1.27 1.27))))
+			)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "SIGMIDI:D_Schottky_AK"
+			(pin_numbers
+				(hide yes))
+			(pin_names
+				(offset 1.016))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D" (at 0 2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+			(property "Value" "1N5819" (at 0 -2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+			(property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+			(property "Description" "Schottky diode; terminal IDs A anode, K cathode" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+			(symbol "D_Schottky_AK_0_1"
+				(polyline
+					(pts (xy -1.27 1.27) (xy -1.27 -1.27) (xy 1.27 0) (xy -1.27 1.27))
+					(stroke (width 0.254) (type default))
+					(fill (type outline))
+				)
+				(polyline
+					(pts (xy 0.635 1.27) (xy 1.27 1.27) (xy 1.27 -1.27) (xy 1.905 -1.27))
+					(stroke (width 0.254) (type default))
+					(fill (type none))
+				)
+				(polyline
+					(pts (xy -1.27 0) (xy 1.27 0))
+					(stroke (width 0.254) (type default))
+					(fill (type none))
+				)
+			(pin passive line (at -5.08 0 0)
+				(length 3.81)
+				(name "A" (effects (font (size 1.27 1.27))))
+				(number "A" (effects (font (size 1.27 1.27))))
+			)
+			(pin passive line (at 5.08 0 180)
+				(length 3.81)
+				(name "K" (effects (font (size 1.27 1.27))))
+				(number "K" (effects (font (size 1.27 1.27))))
+			)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "SIGMIDI:TRS_MIDI_TypeA"
+			(pin_numbers
+				(hide yes))
+			(pin_names
+				(offset 1.016))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J" (at 0 10.16 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+			(property "Value" "3.5 mm TRS MIDI OUT" (at 0 -10.16 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+			(property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+			(property "Description" "3.5 mm stereo socket, MIDI TRS Type A: T sink, R source, S shield/GND" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+			(symbol "TRS_MIDI_TypeA_0_1"
+				(rectangle (start -5.08 7.62) (end 5.08 -7.62)
+					(stroke (width 0.254) (type default))
+					(fill (type background))
+				)
+			(pin passive line (at -7.62 5.08 0)
+				(length 2.54)
+				(name "R" (effects (font (size 1.27 1.27))))
+				(number "R" (effects (font (size 1.27 1.27))))
+			)
+			(pin passive line (at -7.62 -5.08 0)
+				(length 2.54)
+				(name "T" (effects (font (size 1.27 1.27))))
+				(number "T" (effects (font (size 1.27 1.27))))
+			)
+			(pin passive line (at 7.62 0 180)
+				(length 2.54)
+				(name "S" (effects (font (size 1.27 1.27))))
+				(number "S" (effects (font (size 1.27 1.27))))
+			)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(junction
 		(at 304.8 142.24)
@@ -3808,10 +3981,6 @@
 	(no_connect
 		(at 635 309.88)
 		(uuid "e7daf552-afa0-43ce-8e3f-f6b120cccb0e")
-	)
-	(no_connect
-		(at 635 325.12)
-		(uuid "8ed5e982-4f2b-44cc-b82e-c4fc7e528399")
 	)
 	(no_connect
 		(at 635 340.36)
@@ -5872,12 +6041,12 @@
 		)
 		(uuid "de5b2161-d261-4b56-badd-09ee6a20206b")
 	)
-	(text "JP2:2"
+	(text "JP2:2 / GPIO44"
 		(at 628.65 320.548 0)
 		(effects
 			(font
 				(size 2.972 2.972)
-				(color 82 101 117 1)
+				(color 8 126 137 1)
 			)
 			(justify right bottom)
 		)
@@ -5941,7 +6110,7 @@
 		)
 		(uuid "8681b677-1741-42d4-bd08-54cd38caae35")
 	)
-	(text "+5V LED"
+	(text "+5V LED / MIDI"
 		(at 965.2 83.312 0)
 		(effects
 			(font
@@ -8175,7 +8344,7 @@
 		)
 		(uuid "dc6c1ea2-fb4e-40e4-b86f-adfc6fb0d7f1")
 	)
-	(text "Netlist, BOM and pin references: design/electrical/. All 46 components and 41 nets checked against the connected drawing."
+	(text "Netlist, BOM and pin references: design/electrical/. All 57 components and 49 nets checked against the connected drawing."
 		(at 40.64 698.5 0)
 		(effects
 			(font
@@ -11653,5 +11822,1942 @@
 				)
 			)
 		)
+	)
+	(symbol
+		(lib_id "SIGMIDI:74HCT125_Quad_Buffer")
+		(at 1066.8 337.82 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5ddb4296-a8fc-4dd5-bb17-4576b53fadd1")
+		(property "Reference" "U4"
+			(at 1066.8 337.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74HCT125"
+			(at 1066.8 337.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1066.8 337.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1066.8 337.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 1066.8 337.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SIGMIDI:D_Schottky_AK")
+		(at 1023.62 106.68 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ba372ee5-aacf-4b4d-a6f7-6985278da4c9")
+		(property "Reference" "D1"
+			(at 1023.62 106.68 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N5819"
+			(at 1023.62 106.68 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1023.62 106.68 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1023.62 106.68 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 1023.62 106.68 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SIGMIDI:D_Schottky_AK")
+		(at 1043.94 106.68 180)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "10a443bb-85ae-4242-84e1-d064975ce42b")
+		(property "Reference" "D2"
+			(at 1043.94 106.68 180)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N5819"
+			(at 1043.94 106.68 180)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1043.94 106.68 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1043.94 106.68 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 1043.94 106.68 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 1028.7 342.9 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b979d608-cfe6-4b18-950b-e395aac37a29")
+		(property "Reference" "C6"
+			(at 1028.7 342.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 1028.7 342.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1028.7 342.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1028.7 342.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 1028.7 342.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 1003.3 312.42 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5afb0c0f-fa16-4c03-9f4f-7bcbf920c68f")
+		(property "Reference" "R52"
+			(at 1003.3 312.42 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 1003.3 312.42 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1003.3 312.42 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1003.3 312.42 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 1003.3 312.42 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "R52")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 1115.06 314.96 90)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b54d79cb-50e7-4c86-83f9-3f7db0675780")
+		(property "Reference" "R53"
+			(at 1115.06 314.96 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220R"
+			(at 1115.06 314.96 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1115.06 314.96 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1115.06 314.96 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 1115.06 314.96 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "R53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 1094.74 325.12 90)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "61255fef-4c7e-4cae-8be5-d0c541ebff99")
+		(property "Reference" "R54"
+			(at 1094.74 325.12 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220R"
+			(at 1094.74 325.12 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1094.74 325.12 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1094.74 325.12 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 1094.74 325.12 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "R54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 1115.06 340.36 90)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f01bfcb6-90fb-45d7-bdc7-939350b7c4be")
+		(property "Reference" "R55"
+			(at 1115.06 340.36 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220R"
+			(at 1115.06 340.36 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1115.06 340.36 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1115.06 340.36 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 1115.06 340.36 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "R55")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 1094.74 350.52 90)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "135a73bf-5193-47a6-a43e-66da6a2042cf")
+		(property "Reference" "R56"
+			(at 1094.74 350.52 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220R"
+			(at 1094.74 350.52 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1094.74 350.52 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1094.74 350.52 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 1094.74 350.52 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "R56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SIGMIDI:TRS_MIDI_TypeA")
+		(at 1132.84 320.04 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6f273caa-3814-4351-9d4b-a26e43c88874")
+		(property "Reference" "J3"
+			(at 1132.84 320.04 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3.5 mm TRS MIDI OUT"
+			(at 1132.84 320.04 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1132.84 320.04 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1132.84 320.04 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 1132.84 320.04 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SIGMIDI:TRS_MIDI_TypeA")
+		(at 1132.84 345.44 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aec1f69c-1af5-4943-b5f1-908301a694a8")
+		(property "Reference" "J4"
+			(at 1132.84 345.44 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3.5 mm TRS MIDI OUT"
+			(at 1132.84 345.44 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1132.84 345.44 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1132.84 345.44 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 1132.84 345.44 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 1033.78 101.6 0)
+		(unit 1)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "2ec6e14d-d1e7-49e1-b8a8-ddad9e47c24b")
+		(property "Reference" "#FLG03"
+			(at 1033.78 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 1033.78 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1033.78 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1033.78 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 1033.78 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "sigmidi-foot-controller"
+				(path "/4bf4cf8a-da25-4a6a-8f94-301a3ee9afc6"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 289.56 76.2)
+			(xy 1013.46 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a74cde48-a0de-4201-8a85-1bcd8755f421")
+	)
+	(wire
+		(pts
+			(xy 1013.46 76.2)
+			(xy 1013.46 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e15d47be-2cbc-4ce8-b2d8-6cb51a41a8b2")
+	)
+	(wire
+		(pts
+			(xy 1013.46 106.68)
+			(xy 1018.54 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b9d637b-ad61-467f-bc21-a55e67927486")
+	)
+	(junction
+		(at 289.56 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ff7d2899-10b1-4f14-9124-189d14b2c9b5")
+	)
+	(wire
+		(pts
+			(xy 721.36 88.9)
+			(xy 1003.3 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2928e931-b063-4a6c-b8a8-3f4d325afeea")
+	)
+	(wire
+		(pts
+			(xy 1003.3 88.9)
+			(xy 1003.3 308.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7725f8e-d689-4da3-a683-b24ff2a334f0")
+	)
+	(junction
+		(at 721.36 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "296bc7ce-ad10-498b-ba64-e349e4bcaa22")
+	)
+	(wire
+		(pts
+			(xy 355.6 325.12)
+			(xy 355.6 388.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76ca1ffe-8b6f-4ba4-8033-83ec60fca54c")
+	)
+	(wire
+		(pts
+			(xy 355.6 388.62)
+			(xy 1150.62 388.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3a0d7ce-9c0d-49d1-a97c-bf0dbb6ad1c1")
+	)
+	(wire
+		(pts
+			(xy 1150.62 388.62)
+			(xy 1150.62 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0d503a0-b0c1-4a89-9007-849b9d5725cc")
+	)
+	(wire
+		(pts
+			(xy 1150.62 106.68)
+			(xy 1049.02 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b306a69c-1632-4efa-9ab3-0803f2cf3e40")
+	)
+	(junction
+		(at 355.6 325.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "544a6286-93b3-4911-a1e5-eec8efa0ede0")
+	)
+	(wire
+		(pts
+			(xy 1028.7 106.68)
+			(xy 1033.78 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fbec0aa-d385-4e93-a13b-a95757cff949")
+	)
+	(wire
+		(pts
+			(xy 1033.78 106.68)
+			(xy 1038.86 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e49ea37-2363-4c3a-80d5-f34510454c76")
+	)
+	(junction
+		(at 1033.78 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ee4bd24-7bc1-49f2-947e-c23c3dc21af9")
+	)
+	(wire
+		(pts
+			(xy 1033.78 101.6)
+			(xy 1033.78 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7d49ac3-ed00-40f5-8f44-aa553d6a8692")
+	)
+	(wire
+		(pts
+			(xy 1033.78 106.68)
+			(xy 1033.78 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1c39f05-4ab8-42c3-8f20-556a73afe4c9")
+	)
+	(wire
+		(pts
+			(xy 1028.7 339.09)
+			(xy 1028.7 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8a112df-f9b4-4ed7-a260-356c96d61002")
+	)
+	(wire
+		(pts
+			(xy 1028.7 309.88)
+			(xy 1033.78 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d9bf8e0-35c5-495a-b592-f5031eae71f5")
+	)
+	(junction
+		(at 1033.78 309.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7a1244cf-b93e-48a3-bd8e-ef887fa9eaab")
+	)
+	(wire
+		(pts
+			(xy 1033.78 309.88)
+			(xy 1066.8 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b23877b4-38a7-4ab1-8324-238905ce9002")
+	)
+	(wire
+		(pts
+			(xy 1066.8 309.88)
+			(xy 1102.36 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59a41c9c-2907-4e37-900f-6ce562027166")
+	)
+	(junction
+		(at 1066.8 309.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34586eda-a309-48c9-b70b-dcd8f86cfb77")
+	)
+	(wire
+		(pts
+			(xy 1066.8 309.88)
+			(xy 1066.8 317.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b933221-4874-43a0-b867-430d47a8c13b")
+	)
+	(wire
+		(pts
+			(xy 1102.36 309.88)
+			(xy 1102.36 314.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4122e1c9-8cec-4a40-a732-bcf2cd4ec302")
+	)
+	(wire
+		(pts
+			(xy 1102.36 314.96)
+			(xy 1102.36 340.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46e18fcc-bb7e-4bee-a87f-05b18461c9b4")
+	)
+	(wire
+		(pts
+			(xy 1102.36 340.36)
+			(xy 1111.25 340.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6789618b-4433-4a28-83b7-18d67c8281d2")
+	)
+	(wire
+		(pts
+			(xy 1102.36 314.96)
+			(xy 1111.25 314.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5e3c09b-4546-40e6-add4-bfe37062562b")
+	)
+	(junction
+		(at 1102.36 314.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a4081328-f780-49ee-9414-742eac61c5c2")
+	)
+	(wire
+		(pts
+			(xy 635 325.12)
+			(xy 1003.3 325.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36a6fb99-2fe0-4431-bf4b-3d72d97fee98")
+	)
+	(wire
+		(pts
+			(xy 1003.3 325.12)
+			(xy 1041.4 325.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0228de91-093e-41f5-a0dd-050bd745342c")
+	)
+	(wire
+		(pts
+			(xy 1041.4 325.12)
+			(xy 1051.56 325.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "650804bb-310e-4c50-bcc1-7e0d9a6d68b1")
+	)
+	(wire
+		(pts
+			(xy 1003.3 316.23)
+			(xy 1003.3 325.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdba06dc-ee6f-4596-b191-7d3663ab8780")
+	)
+	(junction
+		(at 1003.3 325.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a63ba52c-7045-451d-be05-de7ab6b0d1ad")
+	)
+	(wire
+		(pts
+			(xy 1041.4 325.12)
+			(xy 1041.4 330.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cf4eb83-a869-4ba9-8c61-be8685095ebf")
+	)
+	(wire
+		(pts
+			(xy 1041.4 330.2)
+			(xy 1051.56 330.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "149b288f-9eb0-4497-99de-ff6c70f265d4")
+	)
+	(junction
+		(at 1041.4 325.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e1dd95b-4d5c-435c-aee2-2f859744370f")
+	)
+	(wire
+		(pts
+			(xy 1046.48 335.28)
+			(xy 1051.56 335.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98e39966-b08c-4d94-a44a-ee7c4b9a7f56")
+	)
+	(wire
+		(pts
+			(xy 1046.48 335.28)
+			(xy 1046.48 340.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9582104c-91e4-4a3a-9591-2a064b3ae38b")
+	)
+	(wire
+		(pts
+			(xy 1046.48 340.36)
+			(xy 1046.48 345.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc1f0c2d-55c1-44de-835c-48970b3dfb75")
+	)
+	(wire
+		(pts
+			(xy 1046.48 345.44)
+			(xy 1046.48 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0dbfd18-1c3b-4735-bf49-f18117482744")
+	)
+	(wire
+		(pts
+			(xy 1046.48 350.52)
+			(xy 1046.48 355.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "feadcf04-3dd4-4fd9-a03a-ebaed6c7f0d9")
+	)
+	(wire
+		(pts
+			(xy 1046.48 355.6)
+			(xy 1046.48 360.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40f3125d-f225-4eda-a0be-25eefc107889")
+	)
+	(wire
+		(pts
+			(xy 1046.48 340.36)
+			(xy 1051.56 340.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc5b17a3-520f-4cad-b6cb-ff70ee22baa9")
+	)
+	(junction
+		(at 1046.48 340.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a738b0bb-b112-430f-9436-a9525a2a376d")
+	)
+	(wire
+		(pts
+			(xy 1046.48 345.44)
+			(xy 1051.56 345.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b3ecfad-14a9-4ed2-ac83-30f3ec2d1194")
+	)
+	(junction
+		(at 1046.48 345.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e3acc3d3-c553-4f2d-8b3f-703577312b07")
+	)
+	(wire
+		(pts
+			(xy 1046.48 350.52)
+			(xy 1051.56 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da633c6d-d524-4856-afa2-fa75a4ae1c1b")
+	)
+	(junction
+		(at 1046.48 350.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ccc60994-1b5a-4978-a965-a7e0139644c1")
+	)
+	(wire
+		(pts
+			(xy 1046.48 355.6)
+			(xy 1051.56 355.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db8af4ca-d734-4c6c-8c6b-e277184ca376")
+	)
+	(junction
+		(at 1046.48 355.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d12ba3bc-0bc9-4756-ae1d-a372fb6baf0f")
+	)
+	(wire
+		(pts
+			(xy 1046.48 360.68)
+			(xy 1051.56 360.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02dec587-f40f-4d7d-9768-800fa01b507c")
+	)
+	(junction
+		(at 1046.48 360.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e2438f44-03c8-4f50-b169-7337c5b218f2")
+	)
+	(wire
+		(pts
+			(xy 1046.48 360.68)
+			(xy 1046.48 375.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bc91387-c33f-48f7-b48f-795de4c163ea")
+	)
+	(wire
+		(pts
+			(xy 1066.8 368.3)
+			(xy 1066.8 375.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ded4fb5-9504-41cd-8ed3-808078851861")
+	)
+	(wire
+		(pts
+			(xy 1028.7 346.71)
+			(xy 1028.7 375.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da6d51a0-9f06-4f50-98f7-aaaf0feef9ab")
+	)
+	(wire
+		(pts
+			(xy 977.9 375.92)
+			(xy 1028.7 375.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4475fd6c-af2e-4de6-8c43-431e5e4bb963")
+	)
+	(wire
+		(pts
+			(xy 1028.7 375.92)
+			(xy 1046.48 375.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dd19653-9901-4365-b59f-3f60603f7d43")
+	)
+	(wire
+		(pts
+			(xy 1046.48 375.92)
+			(xy 1066.8 375.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b91ade80-5754-4241-8cd9-4d7d1a11ad44")
+	)
+	(wire
+		(pts
+			(xy 1066.8 375.92)
+			(xy 1145.54 375.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2a09dc8-8c7b-4937-bf8a-38be38b50b6f")
+	)
+	(junction
+		(at 977.9 375.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ae3710e6-b37b-4a75-a961-04c583a83088")
+	)
+	(junction
+		(at 1028.7 375.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c5e3d1fa-36cf-4532-9e43-ca293c352daf")
+	)
+	(junction
+		(at 1046.48 375.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ffe8c75e-93f5-4a79-a6f9-fd92dd3caf79")
+	)
+	(junction
+		(at 1066.8 375.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ecc0dcfd-f3d4-4c74-88a3-faaf1cda0481")
+	)
+	(wire
+		(pts
+			(xy 1140.46 320.04)
+			(xy 1145.54 320.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da911616-1daf-4ed9-9dff-af8162fd7d65")
+	)
+	(wire
+		(pts
+			(xy 1145.54 320.04)
+			(xy 1145.54 345.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "945cb242-30d2-47f3-b8de-0c71e839de68")
+	)
+	(wire
+		(pts
+			(xy 1140.46 345.44)
+			(xy 1145.54 345.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f627104-3c41-499c-953e-430af1f9940b")
+	)
+	(wire
+		(pts
+			(xy 1145.54 345.44)
+			(xy 1145.54 375.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79c08646-d1e6-4a14-93b5-add971e9258e")
+	)
+	(junction
+		(at 1145.54 345.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "163bb17d-2e5e-42c7-b0e7-db27f48dd47b")
+	)
+	(wire
+		(pts
+			(xy 1082.04 325.12)
+			(xy 1090.93 325.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae849ce1-c6ea-4142-9396-960668cbec84")
+	)
+	(wire
+		(pts
+			(xy 1098.55 325.12)
+			(xy 1125.22 325.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6e84e7c-1c33-442a-a67d-72ca0085d910")
+	)
+	(wire
+		(pts
+			(xy 1082.04 330.2)
+			(xy 1085.85 330.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca2ce911-2e84-499e-a447-0cdcc6a5f622")
+	)
+	(wire
+		(pts
+			(xy 1085.85 330.2)
+			(xy 1085.85 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fc432f2-d274-43c9-824f-67131461b3ac")
+	)
+	(wire
+		(pts
+			(xy 1085.85 350.52)
+			(xy 1090.93 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4eae4d4f-e7fd-4d2e-9eaa-42bdde45fb4d")
+	)
+	(wire
+		(pts
+			(xy 1098.55 350.52)
+			(xy 1125.22 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a15defb8-99ec-4159-a1e2-489ec04ddaae")
+	)
+	(wire
+		(pts
+			(xy 1118.87 314.96)
+			(xy 1125.22 314.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe005037-f725-451e-a20f-74dabae33595")
+	)
+	(wire
+		(pts
+			(xy 1118.87 340.36)
+			(xy 1125.22 340.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c7351a6-21da-4f30-8ca4-b58304d80cc2")
+	)
+	(no_connect
+		(at 1082.04 345.44)
+		(uuid "031da55f-afbf-4f6b-9d82-74f9285f172a")
+	)
+	(no_connect
+		(at 1082.04 355.6)
+		(uuid "8a50ccde-92ff-4ca1-b07f-20ff13cfed84")
+	)
+	(label "MIDI_OUT_TX"
+		(at 635 325.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8225dc03-644c-4198-a015-6546c01b054d")
+	)
+	(label "MIDI_5V"
+		(at 1071.88 309.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7a7be961-d713-4d98-9713-9822f3bb209f")
+	)
+	(label "+5V"
+		(at 1013.46 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "01f3df07-210a-4c3d-906a-66bb1bd9f7f0")
+	)
+	(label "USB_VBUS"
+		(at 1104.9 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c99a6b27-c063-4bc2-92d6-31e35dc45ae9")
+	)
+	(label "3V3"
+		(at 1003.3 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "570244b8-27d0-4480-b92e-555d71b814eb")
+	)
+	(label "TX_GATE1"
+		(at 1082.296 325.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ae5adf1d-3d1f-4993-9b81-c1c5a7ef856c")
+	)
+	(label "TX_GATE2"
+		(at 1082.296 330.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cc6c5cbb-357f-4d4b-bca6-32250ebc597a")
+	)
+	(label "J3_TIP"
+		(at 1105.408 325.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a664e95a-dcdd-4dc9-92b6-bc197072adfd")
+	)
+	(label "J3_RING"
+		(at 1119.124 314.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6ed4f1ae-cfa1-4e86-8ebf-bde447ef4d58")
+	)
+	(label "J4_TIP"
+		(at 1105.408 350.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4012b19c-8b1d-4dca-98fe-6c52098bf921")
+	)
+	(label "J4_RING"
+		(at 1119.124 340.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d05c365c-d7d6-49d2-ac9c-e2b1715ec6b4")
+	)
+	(text "MIDI OUT / 2 x 3.5 mm TRS"
+		(at 1038.86 98.552 0)
+		(effects
+			(font
+				(size 4.127 4.127)
+				(bold yes)
+				(color 34 92 150 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "5a874ed2-c81f-404a-bc1c-e8c3cc822470")
+	)
+	(text "D1"
+		(at 1023.62 115.57 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 24 48 68 1)
+			)
+			(justify bottom)
+		)
+		(uuid "0382fd14-e1d8-4cd0-819d-c641dc361892")
+	)
+	(text "1N5819"
+		(at 1023.62 120.65 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 82 101 117 1)
+			)
+			(justify bottom)
+		)
+		(uuid "1887d899-7763-43c5-8f42-9b1120067d75")
+	)
+	(text "D2"
+		(at 1043.94 115.57 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 24 48 68 1)
+			)
+			(justify bottom)
+		)
+		(uuid "399b0228-8f3b-4ccc-93c4-3374fab88256")
+	)
+	(text "1N5819"
+		(at 1043.94 120.65 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 82 101 117 1)
+			)
+			(justify bottom)
+		)
+		(uuid "7115a472-9cd7-4689-938c-0ede9bb0b610")
+	)
+	(text "MIDI_5V = converter +5V OR USB VBUS (D1/D2 1N5819)"
+		(at 1040.13 200.66 0)
+		(effects
+			(font
+				(size 2.6 2.6)
+				(color 82 101 117 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "16133b57-f74b-41ef-9199-09e66ef5f96f")
+	)
+	(text "U4 74HCT125 at MIDI_5V: 1A/2A from D0 / GPIO44"
+		(at 1040.13 207.01 0)
+		(effects
+			(font
+				(size 2.6 2.6)
+				(color 82 101 117 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d4557048-c738-4962-807a-0c698f41b5c5")
+	)
+	(text "UART1 TX, 31,250 baud; R52 holds TX idle high"
+		(at 1040.13 213.36 0)
+		(effects
+			(font
+				(size 2.6 2.6)
+				(color 82 101 117 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "212b6676-857a-4541-bad0-d0e63b525064")
+	)
+	(text "Unused 3A/4A and all ~OE to GND; 3Y/4Y open"
+		(at 1040.13 219.71 0)
+		(effects
+			(font
+				(size 2.6 2.6)
+				(color 82 101 117 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "2c93046a-e718-4bbf-be92-183d62db16b4")
+	)
+	(text "C6 100nF across U4 pins 14/7"
+		(at 1040.13 226.06 0)
+		(effects
+			(font
+				(size 2.6 2.6)
+				(color 82 101 117 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "556803e6-5ff2-4df4-a3b0-12ca2a8a962d")
+	)
+	(text "TRS Type A: T = sink (DIN 5), R = source (DIN 4)"
+		(at 1040.13 232.41 0)
+		(effects
+			(font
+				(size 2.6 2.6)
+				(color 82 101 117 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ee8c1a19-ac8f-407b-bc28-9c9874d45e5e")
+	)
+	(text "S = shield / GND (DIN 2)"
+		(at 1040.13 238.76 0)
+		(effects
+			(font
+				(size 2.6 2.6)
+				(color 82 101 117 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf1a2a8a-cfd1-4a18-9c54-c0718af3168a")
+	)
+	(text "U4  74HCT125"
+		(at 1069.34 373.38 0)
+		(effects
+			(font
+				(size 3.137 3.137)
+				(bold yes)
+				(color 24 48 68 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "2e547704-ffa4-4ae1-a250-be6ce3c464d8")
+	)
+	(text "R52"
+		(at 1000.76 312.42 0)
+		(effects
+			(font
+				(size 3.137 3.137)
+				(color 24 48 68 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "c96336ba-9fc8-4b1b-af8c-b127f3e8421b")
+	)
+	(text "10k"
+		(at 1000.76 317.5 0)
+		(effects
+			(font
+				(size 3.137 3.137)
+				(color 82 101 117 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "8160e064-e2e8-4d5f-9d86-bf887854941e")
+	)
+	(text "C6"
+		(at 1031.24 342.9 0)
+		(effects
+			(font
+				(size 3.137 3.137)
+				(color 24 48 68 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "6a8f81d7-6357-42e8-afee-1bf8c474c049")
+	)
+	(text "100nF"
+		(at 1031.24 347.98 0)
+		(effects
+			(font
+				(size 3.137 3.137)
+				(color 82 101 117 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1328e2e-7083-4057-b901-0f7941cfe9a8")
+	)
+	(text "R53"
+		(at 1115.06 308.864 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 24 48 68 1)
+			)
+			(justify bottom)
+		)
+		(uuid "bd6584ab-48f3-4e26-871a-b8b0b40fa6ef")
+	)
+	(text "220R"
+		(at 1115.06 313.436 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 82 101 117 1)
+			)
+			(justify bottom)
+		)
+		(uuid "9ba89543-bca5-416a-a862-1d8654880bde")
+	)
+	(text "R54"
+		(at 1094.74 319.024 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 24 48 68 1)
+			)
+			(justify bottom)
+		)
+		(uuid "6b2fa0b4-a676-4f6b-942e-4f2b34b365cd")
+	)
+	(text "220R"
+		(at 1094.74 323.596 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 82 101 117 1)
+			)
+			(justify bottom)
+		)
+		(uuid "3ca6a212-1384-4a99-ac73-2a4c865182c7")
+	)
+	(text "R55"
+		(at 1115.06 334.264 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 24 48 68 1)
+			)
+			(justify bottom)
+		)
+		(uuid "f305264a-9de8-4d64-a6d9-319111066d70")
+	)
+	(text "220R"
+		(at 1115.06 338.836 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 82 101 117 1)
+			)
+			(justify bottom)
+		)
+		(uuid "93400690-b1a6-4e80-bcd6-44ea4cd81363")
+	)
+	(text "R56"
+		(at 1094.74 344.424 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 24 48 68 1)
+			)
+			(justify bottom)
+		)
+		(uuid "9637c18e-64cc-47f1-bfbd-a4ddeacf3333")
+	)
+	(text "220R"
+		(at 1094.74 348.996 0)
+		(effects
+			(font
+				(size 2.8 2.8)
+				(color 82 101 117 1)
+			)
+			(justify bottom)
+		)
+		(uuid "19eddf1d-c7c7-4d81-a089-b6533951367c")
+	)
+	(text "J3"
+		(at 1132.84 311.15 0)
+		(effects
+			(font
+				(size 3.137 3.137)
+				(bold yes)
+				(color 24 48 68 1)
+			)
+			(justify bottom)
+		)
+		(uuid "501dc9c4-0a99-4b42-8c20-b526c1a3a3f8")
+	)
+	(text "MIDI OUT A"
+		(at 1132.84 331.47 0)
+		(effects
+			(font
+				(size 2.5 2.5)
+				(color 82 101 117 1)
+			)
+			(justify bottom)
+		)
+		(uuid "ac33279c-2bd5-4aaf-b9f5-8f9baf6ed8f1")
+	)
+	(text "J4"
+		(at 1132.84 336.55 0)
+		(effects
+			(font
+				(size 3.137 3.137)
+				(bold yes)
+				(color 24 48 68 1)
+			)
+			(justify bottom)
+		)
+		(uuid "403c2be6-e32d-4249-b1a1-643943d3494d")
+	)
+	(text "MIDI OUT B"
+		(at 1132.84 356.87 0)
+		(effects
+			(font
+				(size 2.5 2.5)
+				(color 82 101 117 1)
+			)
+			(justify bottom)
+		)
+		(uuid "94e98d93-a70d-44d1-82ac-10583465b8b8")
 	)
 )

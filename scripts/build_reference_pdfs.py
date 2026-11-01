@@ -201,7 +201,8 @@ def render(source, s, images):
     output = output_for(source)
     title, flow = story(source, output, s, images)
     doc = SimpleDocTemplate(str(output), pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN, topMargin=49,
-                            bottomMargin=43, title=f'SIGMIDI Foot Controller v0.1 - {title}', author='SIGMIDI project')
+                            bottomMargin=43, title=f'SIGMIDI Foot Controller v0.1 - {title}', author='SIGMIDI project',
+                            invariant=True)
 
     def frame(canvas, _doc):
         canvas.saveState()

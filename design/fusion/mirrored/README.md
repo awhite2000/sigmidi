@@ -28,7 +28,7 @@ Switch labels read **A B C D E / 1 2 3 4 5** across the rows. Arial Bold outline
 
 ## Main enclosure
 
-`main/midi-foot-mirrored-main.f3d` and `.step` contain the complete ten-switch assembly as named bodies in assembly coordinates. The full project archive provides the native component hierarchy.
+`main/midi-foot-mirrored-main.f3d` and `.step` contain the complete ten-switch assembly, including the populated carrier perfboard, as named bodies in assembly coordinates. The full project archive provides the native component hierarchy. [add_carrier_perfboard.py](add_carrier_perfboard.py) rebuilds the perfboard component from `scripts/perfboard_layout.py` and records its placement and clash check in [carrier-perfboard.json](carrier-perfboard.json); [export_left_main_cad.py](export_left_main_cad.py) exports the assembly F3D/STEP.
 
 | Print part | Role |
 |---|---|

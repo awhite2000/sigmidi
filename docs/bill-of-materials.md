@@ -184,7 +184,7 @@ USB and 9 V sources are alternative power options. Choose each supply for the co
 | Waveshare 24382 | Non-touch 1.69inch LCD Module; verify rear M2 studs and GH1.25 8-pin cable. Do not substitute a similar touch display. |
 | Footswitch / encoder | Exact supplier SKUs remain open; match the dimensional and contact requirements on pages 1 and 3. |
 | J1 power socket | Match 8 mm thread, 8 mm threaded length, 18 mm total envelope and 2 mm nut; flange and nut outside diameters still require fit confirmation. |
-| MCU screws | Four M1.6x5 pan head; verify printed pilot engagement. |
+| Nano screws | Four M1.6x5 pan head; verify printed pilot engagement. |
 | Bundled hardware | Check cable, header, nuts and washers already supplied with the boards and controls. Do not buy duplicate sets. |
 
 ## Quantity and source checks

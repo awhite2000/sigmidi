@@ -1,6 +1,6 @@
 {
   "scope": "Schematic-only conversion of current accepted electrical diagram. No PCB footprints or fabrication claims.",
-  "created_using": "Konnect MCP0.13.0",
+  "created_using": "Konnect MCP0.13.0 and direct schematic edits; checked with kicad-cli 10.0.7",
   "datasheet_sources": [
     {
       "title": "Arduino Nano ESP32 ABX00083 pinout",
@@ -36,6 +36,16 @@
       "title": "Espressif self-powered USB devices",
       "description": "VBUS sense: 100k / 150k divider to A4 / GPIO11",
       "url": "https://docs.espressif.com/projects/esp-usb/en/latest/esp32s3/usb_device.html"
+    },
+    {
+      "title": "Texas Instruments SN74HCT125",
+      "description": "Quad buffer, 3-state outputs, active-low OE; pins 1-14",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74hct125.pdf"
+    },
+    {
+      "title": "MIDI Association RP-054 TRS connectors",
+      "description": "TRS Type A: tip = DIN pin 5, ring = DIN pin 4, sleeve = DIN pin 2",
+      "url": "https://midi.org/specification-for-use-of-trs-connectors-with-midi-devices"
     }
   ],
   "parts": [
@@ -837,6 +847,330 @@
         }
       ],
       "readback_pin_count": 4
+    },
+    {
+      "reference": "U4",
+      "value": "74HCT125",
+      "symbol_library_id": "SIGMIDI:74HCT125_Quad_Buffer",
+      "drawing_view": "Functional single-unit view with DIP/SOIC-14 package pin numbers: inputs and active-low enables left, outputs right, VCC 14 top, GND 7 bottom.",
+      "source": "design/electrical/netlist.json plus official references listed there",
+      "schematic_only": true,
+      "footprint_library_id": null,
+      "rows": [
+        {
+          "source_terminal": "1",
+          "net": "GND",
+          "symbol_pin": "1",
+          "symbol_name": "~{1OE}",
+          "schematic_xy_mm": [
+            1051.56,
+            335.28
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "2",
+          "net": "MIDI_OUT_TX",
+          "symbol_pin": "2",
+          "symbol_name": "1A",
+          "schematic_xy_mm": [
+            1051.56,
+            325.12
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "3",
+          "net": "TX_GATE1",
+          "symbol_pin": "3",
+          "symbol_name": "1Y",
+          "schematic_xy_mm": [
+            1082.04,
+            325.12
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "4",
+          "net": "GND",
+          "symbol_pin": "4",
+          "symbol_name": "~{2OE}",
+          "schematic_xy_mm": [
+            1051.56,
+            340.36
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "5",
+          "net": "MIDI_OUT_TX",
+          "symbol_pin": "5",
+          "symbol_name": "2A",
+          "schematic_xy_mm": [
+            1051.56,
+            330.2
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "6",
+          "net": "TX_GATE2",
+          "symbol_pin": "6",
+          "symbol_name": "2Y",
+          "schematic_xy_mm": [
+            1082.04,
+            330.2
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "7",
+          "net": "GND",
+          "symbol_pin": "7",
+          "symbol_name": "GND",
+          "schematic_xy_mm": [
+            1066.8,
+            368.3
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "8",
+          "net": null,
+          "symbol_pin": "8",
+          "symbol_name": "3Y",
+          "schematic_xy_mm": [
+            1082.04,
+            345.44
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "9",
+          "net": "GND",
+          "symbol_pin": "9",
+          "symbol_name": "3A",
+          "schematic_xy_mm": [
+            1051.56,
+            345.44
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "10",
+          "net": "GND",
+          "symbol_pin": "10",
+          "symbol_name": "~{3OE}",
+          "schematic_xy_mm": [
+            1051.56,
+            350.52
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "11",
+          "net": null,
+          "symbol_pin": "11",
+          "symbol_name": "4Y",
+          "schematic_xy_mm": [
+            1082.04,
+            355.6
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "12",
+          "net": "GND",
+          "symbol_pin": "12",
+          "symbol_name": "4A",
+          "schematic_xy_mm": [
+            1051.56,
+            355.6
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "13",
+          "net": "GND",
+          "symbol_pin": "13",
+          "symbol_name": "~{4OE}",
+          "schematic_xy_mm": [
+            1051.56,
+            360.68
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "14",
+          "net": "MIDI_5V",
+          "symbol_pin": "14",
+          "symbol_name": "VCC",
+          "schematic_xy_mm": [
+            1066.8,
+            317.5
+          ],
+          "footprint_pad": null
+        }
+      ],
+      "readback_pin_count": 14
+    },
+    {
+      "reference": "D1",
+      "value": "1N5819",
+      "symbol_library_id": "SIGMIDI:D_Schottky_AK",
+      "drawing_view": "Terminal IDs A (anode) and K (cathode); banded end is K.",
+      "source": "design/electrical/netlist.json plus official references listed there",
+      "schematic_only": true,
+      "footprint_library_id": null,
+      "rows": [
+        {
+          "source_terminal": "A",
+          "net": "+5V",
+          "symbol_pin": "A",
+          "symbol_name": "A",
+          "schematic_xy_mm": [
+            1018.54,
+            106.68
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "K",
+          "net": "MIDI_5V",
+          "symbol_pin": "K",
+          "symbol_name": "K",
+          "schematic_xy_mm": [
+            1028.7,
+            106.68
+          ],
+          "footprint_pad": null
+        }
+      ],
+      "readback_pin_count": 2
+    },
+    {
+      "reference": "D2",
+      "value": "1N5819",
+      "symbol_library_id": "SIGMIDI:D_Schottky_AK",
+      "drawing_view": "Terminal IDs A (anode) and K (cathode); banded end is K.",
+      "source": "design/electrical/netlist.json plus official references listed there",
+      "schematic_only": true,
+      "footprint_library_id": null,
+      "rows": [
+        {
+          "source_terminal": "A",
+          "net": "USB_VBUS",
+          "symbol_pin": "A",
+          "symbol_name": "A",
+          "schematic_xy_mm": [
+            1049.02,
+            106.68
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "K",
+          "net": "MIDI_5V",
+          "symbol_pin": "K",
+          "symbol_name": "K",
+          "schematic_xy_mm": [
+            1038.86,
+            106.68
+          ],
+          "footprint_pad": null
+        }
+      ],
+      "readback_pin_count": 2
+    },
+    {
+      "reference": "J3",
+      "value": "3.5 mm TRS MIDI OUT",
+      "symbol_library_id": "SIGMIDI:TRS_MIDI_TypeA",
+      "drawing_view": "Functional T/R/S terminals of a 3.5 mm stereo panel socket; MIDI TRS Type A. No exact socket MPN supplied.",
+      "source": "design/electrical/netlist.json plus official references listed there",
+      "schematic_only": true,
+      "footprint_library_id": null,
+      "rows": [
+        {
+          "source_terminal": "R",
+          "net": "J3_RING",
+          "symbol_pin": "R",
+          "symbol_name": "R",
+          "schematic_xy_mm": [
+            1125.22,
+            314.96
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "S",
+          "net": "GND",
+          "symbol_pin": "S",
+          "symbol_name": "S",
+          "schematic_xy_mm": [
+            1140.46,
+            320.04
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "T",
+          "net": "J3_TIP",
+          "symbol_pin": "T",
+          "symbol_name": "T",
+          "schematic_xy_mm": [
+            1125.22,
+            325.12
+          ],
+          "footprint_pad": null
+        }
+      ],
+      "readback_pin_count": 3
+    },
+    {
+      "reference": "J4",
+      "value": "3.5 mm TRS MIDI OUT",
+      "symbol_library_id": "SIGMIDI:TRS_MIDI_TypeA",
+      "drawing_view": "Functional T/R/S terminals of a 3.5 mm stereo panel socket; MIDI TRS Type A. No exact socket MPN supplied.",
+      "source": "design/electrical/netlist.json plus official references listed there",
+      "schematic_only": true,
+      "footprint_library_id": null,
+      "rows": [
+        {
+          "source_terminal": "R",
+          "net": "J4_RING",
+          "symbol_pin": "R",
+          "symbol_name": "R",
+          "schematic_xy_mm": [
+            1125.22,
+            340.36
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "S",
+          "net": "GND",
+          "symbol_pin": "S",
+          "symbol_name": "S",
+          "schematic_xy_mm": [
+            1140.46,
+            345.44
+          ],
+          "footprint_pad": null
+        },
+        {
+          "source_terminal": "T",
+          "net": "J4_TIP",
+          "symbol_pin": "T",
+          "symbol_name": "T",
+          "schematic_xy_mm": [
+            1125.22,
+            350.52
+          ],
+          "footprint_pad": null
+        }
+      ],
+      "readback_pin_count": 3
     }
   ],
   "inspection": {
