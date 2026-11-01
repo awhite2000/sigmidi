@@ -1,0 +1,226 @@
+{
+  "title": "SIGMIDI Foot Controller v0.1 reference PDFs",
+  "page_size": "A4",
+  "documents": [
+    {
+      "source": "README.md",
+      "pdf": "output/pdf/reference/readme.pdf",
+      "title": "SIGMIDI Foot Controller v0.1",
+      "pages": 3,
+      "source_sha256": "f6b996163028a7f9b8c991541b3dad59f5b16652f7f722199a5ff3f72bb207ea",
+      "pdf_sha256": "dc4a15980668b6a57f18f45658adf0fff5b3aa816b06a93711c579aa1151ffd3"
+    },
+    {
+      "source": "docs/hardware.md",
+      "pdf": "output/pdf/reference/docs-hardware.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Hardware and wiring",
+      "pages": 5,
+      "source_sha256": "41b0deedef88a0d0b921d1019d1f9d9637e16017f8eb09a2b8633a26a88dc9cf",
+      "pdf_sha256": "e85bfc98db31fce0878839e000c1904db2ce1ab87077b4a5aa7a72fd7b510315"
+    },
+    {
+      "source": "docs/firmware.md",
+      "pdf": "output/pdf/reference/docs-firmware.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Firmware",
+      "pages": 5,
+      "source_sha256": "377b2187e74fef3f302f4acc8832e7b10799de4ee5a1a7bb1d0527e17b7d3d63",
+      "pdf_sha256": "ff8d74121c4b0664aff4545ce59e8fde62073edcbcd273621413422fd3950178"
+    },
+    {
+      "source": "docs/bringup.md",
+      "pdf": "output/pdf/reference/docs-bringup.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Build and bring-up",
+      "pages": 2,
+      "source_sha256": "8093ce0b4b57259cfab0c2f798a5ad54880b0badfef0c3531b3b4ac004dbf5f9",
+      "pdf_sha256": "08672a456f8d4a419f9645cc53e522f7a6d558c413714f0d82456283e4e36441"
+    },
+    {
+      "source": "docs/power.md",
+      "pdf": "output/pdf/reference/docs-power.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Power",
+      "pages": 2,
+      "source_sha256": "fe1c5d1c4e4719229f7964cf9150eeb5dc091ce5cb6a336b514a4f9dfd87e5cc",
+      "pdf_sha256": "4e2809a89b60b69a828e9cf0e01694e43d0ca2ebc196065d39032e45264cf564"
+    },
+    {
+      "source": "docs/leds.md",
+      "pdf": "output/pdf/reference/docs-leds.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Pololu 2535 switch indicators (optional)",
+      "pages": 3,
+      "source_sha256": "f4ab6c3c08fdfdeefaabb47ea6ea7d2c4014f160d3a76d805b6f818b4b31c801",
+      "pdf_sha256": "d643b401a54f6125d42cb82c8790c4d68e4d2a3c5aa323c8ccdbfc79fdb62501"
+    },
+    {
+      "source": "docs/resistor-ladders.md",
+      "pdf": "output/pdf/reference/docs-resistor-ladders.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Modular resistor ladder: four-switch base + two-switch sections",
+      "pages": 3,
+      "source_sha256": "029d1c03c51d820405d32c51dcfa68c46632e547312b33d68d731c36a2635ebb",
+      "pdf_sha256": "cc06dbf166afeb8ad1ec3fb75979d41f10c3133833364232c9089bb1ab9bddad"
+    },
+    {
+      "source": "docs/printing-tolerances.md",
+      "pdf": "output/pdf/reference/docs-printing-tolerances.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Printing tolerances",
+      "pages": 1,
+      "source_sha256": "b805eef58f3711e86a0ee5533fb05fcbd0c98b3949c1a24930aa908a7b84c8fd",
+      "pdf_sha256": "35979b32f42286e9be4632a8dc2db6587a43838928c759ab21577661880a4724"
+    },
+    {
+      "source": "docs/web-flasher.md",
+      "pdf": "output/pdf/reference/docs-web-flasher.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Web flasher",
+      "pages": 2,
+      "source_sha256": "d5070467345d5b045b7bfd22668d5790f8ca66dfa83c955636aa152322f63f42",
+      "pdf_sha256": "e99d0528b40af755e83a24cc36c4c64ba3cf517681a20a3e143e0abafb17245f"
+    },
+    {
+      "source": "docs/device-workflows/README.md",
+      "pdf": "output/pdf/reference/docs-device-workflows.pdf",
+      "title": "On-device editing screen paths",
+      "pages": 1,
+      "source_sha256": "08d33e4d63c5c7ad8093224cd7b9e146ad679aa754353f72830741013f85f82f",
+      "pdf_sha256": "4353833f90c5e9946319e6e5cdc1f8a08fac75d5f537aec560151b4a62610b74"
+    },
+    {
+      "source": "design/README.md",
+      "pdf": "output/pdf/reference/design.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Design",
+      "pages": 1,
+      "source_sha256": "3456d7746d113b84664de827d6508080562703174f1b467b3feed9f6fc47e76f",
+      "pdf_sha256": "3a7771093c10f9e15f682fa3a482d29af46ea3180039585df41769154315400e"
+    },
+    {
+      "source": "design/front-panel.md",
+      "pdf": "output/pdf/reference/design-front-panel.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Front panel",
+      "pages": 1,
+      "source_sha256": "db39fd3b296c90d67592ba72caae566ef2e551f2d9abc86fb6d99894883f7fcc",
+      "pdf_sha256": "bf20899796a66cf26e863897c765c484013141412cae916e0a628f98664c0f1f"
+    },
+    {
+      "source": "design/branding/README.md",
+      "pdf": "output/pdf/reference/design-branding.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Brand assets",
+      "pages": 1,
+      "source_sha256": "84023ae13ccfda0dfa822b48e5a106328c95955ecf6729defc35f3773ac2eebd",
+      "pdf_sha256": "4be846d085d7e3ca9929aa713ab8102232bb638c164b589d2668a1775dd48a86"
+    },
+    {
+      "source": "design/electrical/README.md",
+      "pdf": "output/pdf/reference/design-electrical.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 electrical diagrams",
+      "pages": 1,
+      "source_sha256": "5af63a38e6aa3ad731937cb97f15a6d860e790f395d570cd92b013e561697203",
+      "pdf_sha256": "8ab1859f6fadce6e0a4f6305fcc0e66912fd1e73c7879d89f3262eb7a3ead5cc"
+    },
+    {
+      "source": "design/kicad/README.md",
+      "pdf": "output/pdf/reference/design-kicad.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 KiCad schematic",
+      "pages": 1,
+      "source_sha256": "76320e8761cc64145d446a27d25b4cdeec20d38615ff1d479013c24563dd666f",
+      "pdf_sha256": "89424dd48f095bd100e340ac9eb7ed52bc0c7d2e044c8d6c926688700985a058"
+    },
+    {
+      "source": "design/fusion/README.md",
+      "pdf": "output/pdf/reference/design-fusion.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Enclosures",
+      "pages": 2,
+      "source_sha256": "ac621c1e951fb336bcc6a959b85e2070b0981762ca51faa9431c10c192595f34",
+      "pdf_sha256": "fa40584a11be7153bdccedf0dbb0d13f7a0a67afb159d03b228333dbba3fb1bd"
+    },
+    {
+      "source": "design/fusion/print/README.md",
+      "pdf": "output/pdf/reference/design-fusion-print.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Right main printing",
+      "pages": 2,
+      "source_sha256": "5154b7bd0d52e915fb7cd587ba5e0e206605eb92c6bd34d6cc3cfb49571e24f5",
+      "pdf_sha256": "28485ccb8805808fa4260dc3a302f75805a132fbf2a800c20bc9be66ac6ec738"
+    },
+    {
+      "source": "design/fusion/modular/README.md",
+      "pdf": "output/pdf/reference/design-fusion-modular.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Right modular enclosure",
+      "pages": 2,
+      "source_sha256": "10435b547136a95c90a5f5c2b22ea403c66302446bd1bf6dfe3a4aad5cdf6dc1",
+      "pdf_sha256": "973989136ef8d60ef6cce6aad17985c4b430720b66be3707e5a6f580f88f4bfe"
+    },
+    {
+      "source": "design/fusion/mirrored/README.md",
+      "pdf": "output/pdf/reference/design-fusion-mirrored.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Left enclosure",
+      "pages": 3,
+      "source_sha256": "653a5e9ae55f49fd7fcb51a9979a83e17cd8c304e9fa79099e5c34f10c88149b",
+      "pdf_sha256": "20c27045df78d74cf89be9a3ae79d1d685216d6706879e046f0f6f74f44e2bb4"
+    },
+    {
+      "source": "design/fusion/nano-esp32/README.md",
+      "pdf": "output/pdf/reference/design-fusion-nano-esp32.pdf",
+      "title": "SIGMIDI v0.1 - Arduino Nano ESP32 direct base mounting",
+      "pages": 3,
+      "source_sha256": "d95bdf567a34fa8b8fcda5f4595e9c4fbdba674b2ee660d2a7bbf49b6c33fd02",
+      "pdf_sha256": "c6a41e70f32cdd0cacb7575f4d6d14de1ecaaa12209a5f326b6a903a42cb343e"
+    },
+    {
+      "source": "design/fusion/archive/README.md",
+      "pdf": "output/pdf/reference/design-fusion-archive.pdf",
+      "title": "Wall sample data",
+      "pages": 1,
+      "source_sha256": "222e7f39017a9c00fa65f4fec89b9848e14a0dc8c0c4eb1792f1266b310c5bab",
+      "pdf_sha256": "24a34a44c81a66363100a125c9441ef72476d8471853c42ebe709dd9f112e044"
+    },
+    {
+      "source": "distribution/README.md",
+      "pdf": "output/pdf/reference/distribution.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 distribution",
+      "pages": 1,
+      "source_sha256": "bdce8e5cb87c6dc4262c4588f12dd3b48a8779d638d8dca12be0e5e19fc434e0",
+      "pdf_sha256": "30c3826eed06448d228375e818c2e4a7eb802c5be732b61cb6a047a613bfb13b"
+    },
+    {
+      "source": "distribution/web-flasher/README.md",
+      "pdf": "output/pdf/reference/distribution-web-flasher.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 USB firmware installer",
+      "pages": 2,
+      "source_sha256": "3f8f4b1df49c7a37fe168fc66b7260d410d0335686ca6d2597ab801b41415956",
+      "pdf_sha256": "f9a2ca45757425da1bb6642ada1edc55f4e705b016a27fd7158af9b8b224c121"
+    },
+    {
+      "source": "flasher/README.md",
+      "pdf": "output/pdf/reference/flasher.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 USB firmware installer",
+      "pages": 2,
+      "source_sha256": "3f8f4b1df49c7a37fe168fc66b7260d410d0335686ca6d2597ab801b41415956",
+      "pdf_sha256": "d7592818c19b3810988fde8aa9b71a5156bcc7af4a751ce3a63e0a953659e783"
+    },
+    {
+      "source": "previews/README.md",
+      "pdf": "output/pdf/reference/previews.pdf",
+      "title": "SIGMIDI Foot Controller v0.1 \u2014 Previews",
+      "pages": 4,
+      "source_sha256": "f6058a0696735193b89990623222dd9a90d5d24d24cd256ec7c55b60cf480a49",
+      "pdf_sha256": "807269d95d210b2095e8c387fcd282331f7a51493da048bda4de740fc8f1d0c1"
+    }
+  ],
+  "designed_pdfs": {
+    "docs/assembly-guide.md": "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf",
+    "docs/bill-of-materials.md": "output/pdf/sigmidi-foot-controller-0.1-bill-of-materials.pdf",
+    "docs/user-manual.md": "output/pdf/sigmidi-foot-controller-0.1-user-manual.pdf"
+  },
+  "link_path_copies_not_rendered": [
+    "design/fusion/leds.md",
+    "design/fusion/power.md",
+    "design/fusion/printing-tolerances.md",
+    "design/fusion/resistor-ladders.md"
+  ],
+  "renderer_sha256": "31ceacc5d91cac0688e4354bfa43d7989b62913ae7627ddc1e29b8a2480d3074",
+  "images": {
+    "design/branding/sigmidi-mark.svg": "40661cc74a73ed3c70e0d95dd64a2723e30f8eca7d861432cac7def8dfafb430",
+    "design/fusion/nano-esp32/exploded.png": "dde592563ef96509419f4f663a1cd7926bac40b73c7ae22e23c66e5f708889de",
+    "design/fusion/nano-esp32/installed.png": "1745770f4e4429d62851172737cdbc7023c7e6663b089ee65942f860a4667bb6",
+    "previews/device-menu-preview.png": "0a10e170d79b5429b2dae4d3f94e72c6e870450f2f0ea54fb0c7e36611c6d82c",
+    "previews/sigmidi-left-main.png": "fc483734db42d3937930d1f476f123da02c0c01b4e5175461f7b5203bb473cd3",
+    "previews/wifi-editor.png": "0201358a187817648e7881ee0cd24758674f3ee21f8f92bbde09e45e25541a34"
+  }
+}

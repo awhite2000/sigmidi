@@ -48,4 +48,4 @@ The electronics base has six inlet slots around the converter and seven in the M
 
 Rear vents print with **0.6 mm internal membranes**. Remove all twelve films and clean the openings before operation; finished rear open area is 380.16 mm². Keep grilles clear of foam, tape and wiring, and provide at least **3 mm air space under the base**. The ventilated enclosure is not sealed against dust or liquid.
 
-Before removing the populated base, disconnect power, release the MCU and withdraw its USB-C connector from the pocket partition. Physical clip retention, fatigue and operating temperatures require testing with the intended PETG and electrical load.
+Before removing the populated base, disconnect power, release the Nano from its four integral base posts and withdraw its USB-C connector from the pocket partition. Physical clip retention, fatigue and operating temperatures require testing with the intended PETG and electrical load.

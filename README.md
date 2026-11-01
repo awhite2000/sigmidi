@@ -43,6 +43,7 @@ On the controller, enter **Wi-Fi Setup**, join the displayed `SIGMIDI-xxxx` netw
 | Step-by-step assembly, wiring and first power-up | [Assembly guide PDF](output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf) · [Editable source](docs/assembly-guide.md) |
 | USB/BLE connections, performance and editing; HX Stomp example in Appendix A | [User manual PDF](output/pdf/sigmidi-foot-controller-0.1-user-manual.pdf) · [Editable source](docs/user-manual.md) |
 | Parts, hardware and enclosure quantities | [Bill of materials PDF](output/pdf/sigmidi-foot-controller-0.1-bill-of-materials.pdf) · [Shopping CSV](docs/bill-of-materials.csv) · [Document source](docs/bill-of-materials.md) |
+| Every other documentation page as a printable PDF | [Reference PDFs](output/pdf/reference/) · Rebuild with `scripts/build_reference_pdfs.py` |
 | Electrical wiring and GPIO | [Hardware](docs/hardware.md) |
 | Editable electrical schematic | [KiCad project](design/kicad/README.md) |
 | Modular taps and resistor values | [Resistor ladder](docs/resistor-ladders.md) |
