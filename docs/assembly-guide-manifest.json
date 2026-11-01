@@ -91,15 +91,15 @@
     "local_links_exist": true
   },
   "source_sha256": {
-    "docs/assembly-guide.md": "579b6bf59decc6fb5fd35ce9c808dca4a2fcf7847f8e08a1fe56a8ac019b2021",
+    "docs/assembly-guide.md": "74b2adb72661ec8bd4360f1b248cb765ff8eed7f669786b11bbaaebe6f87331c",
     "scripts/build_assembly_guide.py": "873641aaf1f22a9754b1f708785b571af96931e824a0d0f9e6bc3354317db2d9",
     "scripts/build_user_manual.py": "178b7b0e8521b97623738698e894e0c527addb13e2db2205f86739f709ad44f1",
-    "scripts/perfboard_layout.py": "cd0b0dd1c1f2295ded0f7b85d49516641c07d1f78d6ede0e8de61a3e940d3b4e",
+    "scripts/perfboard_layout.py": "a20a18413257ead3905eebab3dca46324937162269be3cc2cec259541bb6aa79",
     "src/board.hpp": "5de3ef5b4000c6601b72f661b1305032aaf7e3e7ced4ada47ee1e1052f73470c",
     "design/electrical/netlist.json": "33627f63f1bc87214620771378b382524cb5e48990a955a39a6ecef06ac8f8b1",
-    "docs/bom-items.json": "cfc6c94e6c9765c506ab12ae99c4215b66e9cfd0a6881c661a072d810f71010a",
+    "docs/bom-items.json": "c7a64a8fc670fe181f9212ebf134a4cb29957de9e6648cee10f56a937d8992dc",
     "docs/power.md": "fe1c5d1c4e4719229f7964cf9150eeb5dc091ce5cb6a336b514a4f9dfd87e5cc",
-    "docs/hardware.md": "09e9aadf8c17ffeb807a799b6486ce305eac4f92bd41b29b286a1588057bbfa3",
+    "docs/hardware.md": "24aa1bb6f44a5281c7e752ab8ec285b247e1da50d667b24a28a9c80967fc0f64",
     "docs/leds.md": "f4ab6c3c08fdfdeefaabb47ea6ea7d2c4014f160d3a76d805b6f818b4b31c801",
     "docs/resistor-ladders.md": "029d1c03c51d820405d32c51dcfa68c46632e547312b33d68d731c36a2635ebb",
     "design/fusion/nano-esp32/mount-fit.json": "69d8126f30732ccc7caaf0686f750cbf766fbbfea74892f97607a1d7b225b3cd",
@@ -119,13 +119,13 @@
     "design/fusion/snug-fit-sections.png": "bf5c1044ea694f73824fd47989b12443eeef62ac5c193d364eb9f450ba42393a",
     "docs/assembly-ladder.svg": "1809d34e910e7b7c91d2e5698c43be7c908b7eec15a77bc2917b3deafe0b03c2",
     "docs/assembly-nano-pins.svg": "07aa1bd074738bab6e27f9c88434a9de5180bbf08bd71bc48449776eb7a188d8",
-    "docs/assembly-perfboard-wiring.svg": "2bad47618b69bbc10a7db62d20b3d2e39091711a9fb8ef8e0eb0cc8c430d52da",
-    "docs/assembly-perfboard.svg": "ea3493cf3bb8a5e36712da1f16a751bbec45856b409ed43f48cd80d0bbbb4715",
+    "docs/assembly-perfboard-wiring.svg": "676c2c4f8f5e04e095b1bc9ef965569c41f59501edcc7d7849af32969e589b64",
+    "docs/assembly-perfboard.svg": "40fbd3ed123e7233c20061ed43991c5090f4405435bed2ed14c86273f1dc08bf",
     "docs/assembly-power.svg": "f284171c51352908b12d247c1109f36847d16259f7c79ce78262cd2207ecd463",
-    "previews/cable-bundles-left.png": "2ac0fe3f09273a563190939f0be6d8da3cf476d9e4f93f9b9e58e7334474154c",
+    "previews/cable-bundles-left.png": "9aef7e89cb31cb10f9013a52add4d7e19a87fd5b291ed4cf4a2b5d3fb14f2340",
     "previews/sigmidi-left-main.png": "fc483734db42d3937930d1f476f123da02c0c01b4e5175461f7b5203bb473cd3"
   },
   "outputs": {
-    "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf": "bb99d973ab40fb9baec111a70fc21599bc7ece8d12d5366c23535c76c9b7a5ca"
+    "output/pdf/sigmidi-foot-controller-0.1-assembly-guide.pdf": "b6f246ccc1e4fa7bd81d07ef3fef3b371a1b4f5779fb1b0efb41d93a5b7b5bd4"
   }
 }

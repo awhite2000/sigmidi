@@ -348,11 +348,11 @@ In LED CHAIN choose **RGB**, the **2535 (800 kbit/s)** profile, enable and save.
 
 # 13. Route and inspect the harness
 
-![Current Left main routing proposal, with Nano position; colors indicate harness purpose, not mandatory wire colors.](../previews/cable-bundles-left.png)
+![Current Left main routing proposal, with Nano and carrier perfboard positions; colors indicate harness purpose, not mandatory wire colors.](../previews/cable-bundles-left.png)
 
 ## Bundle by purpose
 
-Keep 9 V input, regulated LED 5 V and their returns together. Route the ladder sense and pedal leads away from converter wiring, LED current loops and SPI where practical. Mount the step 7 carrier perfboard on insulated standoffs or tape near the Nano; its exact location is not specified. Confirm its clearance in the actual dry-fit and do not obstruct vents or spring clips.
+Keep 9 V input, regulated LED 5 V and their returns together. Route the ladder sense and pedal leads away from converter wiring, LED current loops and SPI where practical. Mount the step 7 carrier perfboard at base level in the rear, between the Nano and the enclosure side, under the dual TRS socket, on insulated standoffs or tape. Confirm its clearance in the actual dry-fit and do not obstruct vents or spring clips.
 
 Label both ends by signal and physical pin. Choose wire and connectors rated for their load; LED power must carry its combined chain current. Cut lengths from the real assembly, with service loops for panel-to-base wiring and USB withdrawal. The routing preview is a corridor proposal, not a cable cut-length template. Secure bundles to suitable solid areas, avoiding sharp bends, the cap/floor seam, screw seats, locating ribs and sliding joints.
 

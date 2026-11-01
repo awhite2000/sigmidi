@@ -579,7 +579,7 @@
       "fit_condition": "Required",
       "electrical_refs": [],
       "purchase_unit": "Each",
-      "notes": "Layout in assembly guide step 7: bare tinned trails plus three insulated links. Mount on insulated standoffs or tape; location set in the dry fit.",
+      "notes": "Layout in assembly guide step 7: bare tinned trails plus three insulated links. Mount at base level under the dual TRS socket, beside the Nano, on insulated standoffs or tape.",
       "source": "Project design"
     },
     {

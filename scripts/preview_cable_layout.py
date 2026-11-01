@@ -68,9 +68,13 @@ txt(23,-4,'TRS 1 / 2','small');txt(140,-4,'9 V · centre negative','small')
 # Existing vent area is crosshatched rather than available for tie mounts.
 for x in [91,96,101,106,111,120,126]:
  out.append(f'<path d="M{X(x)} {Y(49)}V{Y(60)}" stroke="#adc3c1" stroke-width="5" opacity=".6"/>')
-# Carrier area is a functional placeholder, clearly distinct from CAD components.
-out.append(f'<rect x="{X(61)}" y="{Y(30)}" width="80" height="40" rx="6" fill="#fff" stroke="#6b7d91" stroke-width="1.7" stroke-dasharray="5 4"/>')
-txt(71,29,'Pedal + USB resistors','tiny')
+# Carrier perfboard (6 x 26 holes, 2.54 mm) at base level under the Dual TRS, rear, ending beside the Nano.
+CX0,CY0,CW,CH=18.0,5.0,70.0,20.0
+out.append(f'<rect x="{X(CX0)}" y="{Y(CY0)}" width="{CW*S}" height="{CH*S}" rx="4" fill="#e9dcc0" stroke="#9c8a62" stroke-width="1.7" stroke-dasharray="5 4"/>')
+for c in range(26):
+ for r in range(6):
+  out.append(f'<circle cx="{X(CX0+(CW-25*2.54)/2+c*2.54):.2f}" cy="{Y(CY0+(CH-5*2.54)/2+r*2.54):.2f}" r="1.6" fill="#b49a5c"/>')
+footprints.append({'component':'Carrier perfboard 6 x 26 holes, 2.54 mm','bounds_XY_mm':[CX0,CY0,CX0+CW,CY0+CH],'source':'scripts/perfboard_layout.py','level':'base, under Dual TRS'})
 paths=[]
 def route(kind,points,width=.8,label=''):
  pts=' '.join(f'{X(x):.2f},{Y(y):.2f}' for x,y in points)
@@ -83,8 +87,8 @@ route('dc',[(142,20),(114,20),(114,51.5),(87.5,51.5),(87.5,45.5),(90.4,45.5)],1,
 route('ground',[(119.21,30.45),(116,30.45),(116,53),(86,53),(86,43.5),(90.4,43.5)],.65,'Converter return to Nano ground')
 route('supply',[(119,28),(119,35),(81,35)],.8,'LED +5V distribution; pair with return')
 route('ground',[(119,30.5),(120.5,36.5),(81,36.5)],.65,'LED supply return, routed directly to supply point')
-route('pedal',[(27,27.4),(27,31),(56,31),(56,33),(61,33)],1.15,'Six TRS conductors to passive resistor connections')
-route('pedal',[(81,32),(84,32),(90.4,36.5)],1.0,'Direct TIP ADC signals, two bias GPIOs, reference and ground to Nano')
+route('pedal',[(27,27.4),(27,29.5),(36,29.5),(36,25)],1.15,'Six TRS conductors down to the carrier perfboard')
+route('pedal',[(88,12),(90.4,12)],1.0,'Carrier wire entries to Nano JP1: ladder, pedals, USB sense, 3V3, GND, VIN')
 route('display',[(108.2,44.5),(112,44.5),(112,54),(82.5,54),(82.5,42),(43,42),(43,46.23)],1.1,'Short SPI loom to display; J-LCD service disconnect')
 route('encoder',[(12.5,57),(12.5,46),(57,46),(57,41),(84.5,41),(84.5,55.5),(113.5,55.5),(113.5,42.5),(108.2,42.5)],.95,'A, B, click and common ground to Nano')
 # Lines mark harness corridors, not common electrical nets. Tap resistors stay in electrical order.
@@ -101,15 +105,20 @@ route('led',[(9.5,32.4),(9.5,84.5),(338,84.5)],1.15,'Left descent / lower LED ha
 for x in [42.6,107.6,172.6,237.6,302.6]:route('led',[(x,26.2),(x,28)],.65,'LED branch; connect DIN/DOUT in electrical tap order')
 for x in [75.1,140.1,205.1,270.1,335.1]:route('led',[(x,84.5),(x,81.7)],.65,'LED branch; connect DIN/DOUT in electrical tap order')
 # Proposed detachable plugs are printed as white blocks along each loom.
-for x,y,name in [(132,20,'J-PWR'),(59,31,'J-PED'),(61,42,'J-LCD'),(42,46,'J-ENC'),(83,21,'J-SW'),(54,32.4,'J-LED')]:
+for x,y,name in [(132,20,'J-PWR'),(31.5,29.5,'J-PED'),(61,42,'J-LCD'),(42,46,'J-ENC'),(83,21,'J-SW'),(54,32.4,'J-LED')]:
  out.append(f'<rect x="{X(x)-7}" y="{Y(y)-5}" width="14" height="10" rx="2" fill="#fff" stroke="#34465c"/>')
- lx,ly={'J-PED':(59,26),'J-LED':(45,36),'J-LCD':(61,47),'J-ENC':(42,49)}.get(name,(x,y-3))
+ lx,ly={'J-PED':(31.5,33.5),'J-LED':(45,36),'J-LCD':(61,47),'J-ENC':(42,49)}.get(name,(x,y-3))
  txt(lx,ly,name,'tiny')
 # Draw raised-row controls last so the lower PCB/socket footprints cannot hide A/B.
 for i,x in enumerate([42.6,107.6,172.6,237.6,302.6]):
  out.append(f'<rect x="{X(x-9)}" y="{Y(5)}" width="120" height="52" rx="3" fill="#d9e0e7" fill-opacity=".5" stroke="#7b899a" stroke-width="1.2"/>')
  out.append(f'<circle cx="{X(x)}" cy="{Y(11.5)}" r="13" fill="#aeb9c4" stroke="#728296"/>')
  txt(x,12.7,chr(65+i),'label')
+# Carrier label sits on the board, above the corridors that pass at other heights.
+out.append(f'<rect x="{X(52)}" y="{Y(18.6)}" width="{32*S}" height="{6*S}" rx="3" fill="#fbf6ea" fill-opacity=".95"/>')
+txt(68,21.2,'Carrier perfboard 6 x 26','nano-label')
+txt(68,23.9,'base level, under Dual TRS','nano-label')
+txt(28,12,'Dual TRS','tiny')
 # Keep the board identity readable above the harness corridors.
 out.append(f'<rect x="{X(nano_label_x-8)}" y="{Y(28)}" width="64" height="25" rx="3" fill="#f5faf7" fill-opacity=".95"/>')
 txt(nano_label_x,30.4,'Nano ESP32','nano-label')

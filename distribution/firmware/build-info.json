@@ -3,7 +3,7 @@
   "version": "0.1",
   "firmware_name": "sigmidi-foot-controller-0.1.bin",
   "build_id": "dc67b093bac7",
-  "built_at": "2026-10-31T20:46:24.791536+00:00",
+  "built_at": "2026-11-01T14:47:50.642848+00:00",
   "source_sha256": "dc67b093bac71ae2cf7cec075b577951fb0712f3f95729b09cfa996f226909c8",
   "source_files": {
     "src/CMakeLists.txt": "83e56ea156837ecb87ef29d7415a8f3bb9d5077cda04dd668678bc9863a873bc",
@@ -43,9 +43,9 @@
     "partitions.csv": "0fc87e012db3c478107e047978fd142c43f104edb0dfb5546537d16f49a95300"
   },
   "sha256": {
-    "bootloader.bin": "040af7a6d15d37f566e393e8d590be3defa8662df321157211daf19603695867",
+    "bootloader.bin": "1942261db4a91b5341bc33b44b2bc5b3a6b8bf213cbef40f0e99df1229e3b36c",
     "partitions.bin": "37f9719078927bf594a883c81ad80dd4e6d179c8db193fbded90851178aa39e7",
-    "firmware.bin": "cf5031df8ada6df0fb59e0112f959237e9ce775afca7a751c1feb73564a1fd33"
+    "firmware.bin": "dbaf5278ae12c8c1206dcdc49a221808da64bc2ea4e0cc9861caaadcd06af35f"
   },
   "chip": "ESP32-S3",
   "flash_bytes": 16777216,

@@ -4,6 +4,7 @@
 
 - Never run `git commit` and never `git push` until the user specifically requests it. Each request authorises only the action it names, once; after that, return to not committing or pushing.
 - When explicitly asked to push, never push to `origin` without that explicit instruction. Keep all work local by default.
+- Keep commit messages short: a single paragraph.
 
 ## Documentation
 

@@ -161,6 +161,17 @@
       ],
       "source": "design/fusion/nano-esp32/mount-fit.json",
       "component_face_down": false
+    },
+    {
+      "component": "Carrier perfboard 6 x 26 holes, 2.54 mm",
+      "bounds_XY_mm": [
+        18.0,
+        5.0,
+        88.0,
+        25.0
+      ],
+      "source": "scripts/perfboard_layout.py",
+      "level": "base, under Dual TRS"
     }
   ],
   "bundles": {
@@ -381,40 +392,32 @@
         ],
         [
           27,
-          31
+          29.5
         ],
         [
-          56,
-          31
+          36,
+          29.5
         ],
         [
-          56,
-          33
-        ],
-        [
-          61,
-          33
+          36,
+          25
         ]
       ],
-      "description": "Six TRS conductors to passive resistor connections"
+      "description": "Six TRS conductors down to the carrier perfboard"
     },
     {
       "purpose": "pedal",
       "points_XY_mm": [
         [
-          81,
-          32
-        ],
-        [
-          84,
-          32
+          88,
+          12
         ],
         [
           90.4,
-          36.5
+          12
         ]
       ],
-      "description": "Direct TIP ADC signals, two bias GPIOs, reference and ground to Nano"
+      "description": "Carrier wire entries to Nano JP1: ladder, pedals, USB sense, 3V3, GND, VIN"
     },
     {
       "purpose": "display",

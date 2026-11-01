@@ -305,6 +305,14 @@ def drawing(width, view, hole_use, font='Helvetica', bold='Helvetica-Bold'):
                 fill = {'elko': '#1f3f73', 'diode': '#2b2b2b'}.get(kind, '#9cc5e0')
                 d.add(Circle(x, y, shape[3] * pitch, fillColor=colors.HexColor(fill), strokeColor=colors.HexColor('#183044'),
                              strokeWidth=0.5, fillOpacity=0.8 if view == 'wiring' else 1))
+        if kind in ('res', 'diode'):
+            # Upright part: the top lead bends from the body end down into the other hole.
+            top = xy(*p['pins'][p['body']])
+            for pin, hole in p['pins'].items():
+                if pin != p['body']:
+                    x, y = xy(*hole)
+                    d.add(Line(top[0], top[1], x, y, strokeColor=colors.HexColor('#5a4a2a'), strokeWidth=pitch * 0.05))
+                    d.add(Circle(x, y, pitch * 0.09, fillColor=colors.HexColor('#5a4a2a'), strokeColor=None))
         if kind == 'dip':
             x, y = xy(21, 2.5)
             text(x, y - pitch * 0.15, 'U4  74HCT125', pitch * 0.5, colors.white, bold)
@@ -320,7 +328,8 @@ def drawing(width, view, hole_use, font='Helvetica', bold='Helvetica-Bold'):
         if kind == 'diode':
             x, y = xy(*p['pins'][p['body']])
             if p['body'] == 'K':
-                d.add(Rect(x - pitch * 0.3, y - pitch * 0.08, pitch * 0.6, pitch * 0.16, fillColor=colors.HexColor('#dddddd'), strokeColor=None))
+                # Cathode band along the upper edge keeps the centre free for the reference.
+                d.add(Rect(x - pitch * 0.3, y + pitch * 0.22, pitch * 0.6, pitch * 0.12, fillColor=colors.HexColor('#dddddd'), strokeColor=None))
         if kind == 'cer':
             pins = list(p['pins'].values())
             x, y = xy(sum(c for c, _ in pins) / len(pins) - 0.55, sum(r for _, r in pins) / len(pins))

@@ -25,7 +25,7 @@
     "main_10": 10
   },
   "source_sha256": {
-    "docs/bom-items.json": "cfc6c94e6c9765c506ab12ae99c4215b66e9cfd0a6881c661a072d810f71010a",
+    "docs/bom-items.json": "c7a64a8fc670fe181f9212ebf134a4cb29957de9e6648cee10f56a937d8992dc",
     "docs/bill-of-materials.md": "fb16ed0c2f6d264f2de8fee3a1a007bdbb3a9ae765fe005623e58823217c27a1",
     "scripts/build_bom.py": "96075f6dbb4082051ae54052752dcee15ff7a4bad3ffbdc62bd0abbda25eb2c8",
     "design/electrical/bom.csv": "769981197bb7a0562c437ccc9fd66c901a7d97117f4a09a0baca852ae62f8e90",
@@ -35,13 +35,13 @@
     "design/fusion/mirrored/README.md": "a4ba93fa8f4b9c96fee815d5f66e6cf6afa2ff90b5735e499e65fddd01ae0642",
     "design/fusion/README.md": "ac621c1e951fb336bcc6a959b85e2070b0981762ca51faa9431c10c192595f34",
     "design/fusion/datasheets/double-trs-ACJS-MHDC.pdf": "cf064025759af13229b2930116f74c2eb0c3a9675ed1c8e6eadcfdd8939f70f5",
-    "docs/hardware.md": "09e9aadf8c17ffeb807a799b6486ce305eac4f92bd41b29b286a1588057bbfa3",
+    "docs/hardware.md": "24aa1bb6f44a5281c7e752ab8ec285b247e1da50d667b24a28a9c80967fc0f64",
     "docs/power.md": "fe1c5d1c4e4719229f7964cf9150eeb5dc091ce5cb6a336b514a4f9dfd87e5cc",
     "scripts/build_user_manual.py": "178b7b0e8521b97623738698e894e0c527addb13e2db2205f86739f709ad44f1"
   },
   "outputs": {
-    "docs/bill-of-materials.csv": "ab23d95551dd63a4411a58283d47a2b07e40e3fd1dfb0f2a51f38f2f72526e6d",
-    "output/pdf/sigmidi-foot-controller-0.1-bill-of-materials.pdf": "b0dddb2918ba294120b2003363155b90294ba88f7cb63ae785b5f39249652cc6"
+    "docs/bill-of-materials.csv": "87401c24fec2d80a5d29c710b4755c5ceaaad1a9ad496ca75b9a52143d349d51",
+    "output/pdf/sigmidi-foot-controller-0.1-bill-of-materials.pdf": "349e4ad15b10970a6b0af4d62896671fa1aa901f03fe62cdd1a1de677ad4510d"
   },
   "physical_fit_qualified": false,
   "purchased_parts_inside_boards_itemized": false
