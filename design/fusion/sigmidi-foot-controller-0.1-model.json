@@ -1,7 +1,7 @@
 {
   "project": "SIGMIDI Foot Controller",
   "version": "0.1",
-  "native_document": "MIDI Foot Controller - VERIFIED chassis v121",
+  "native_document": "MIDI Foot Controller - VERIFIED chassis v124",
   "path": "sigmidi-foot-controller-0.1.f3d",
   "scope": "Entire native design, including original Right and preferred Left main/modular assemblies and part libraries",
   "top_level_components": [
@@ -107,8 +107,8 @@
     "native_backup": "../archive/pre-sigmidi-25mm-emboss.f3d",
     "UTC": "2026-10-28T16:00:30.445670+00:00"
   },
-  "sha256": "2744d0547dcd9b121283a32283823625526583af6be8f8571ce65a2be29f679d",
-  "bytes": 15741007,
+  "sha256": "0f7bb015f368fc58c7e76e8981d2be6ee0b21d6665146b09b9edf80c701c9306",
+  "bytes": 15924282,
   "archive_CRC_verified": true,
-  "exported_UTC": "2026-10-30T14:15:43.772951+00:00"
+  "exported_UTC": "2026-11-01T18:05:27.401673+00:00"
 }

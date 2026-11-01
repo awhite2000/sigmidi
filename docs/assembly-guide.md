@@ -162,28 +162,26 @@ Keep the unused external pins unwired in the permanent harness. USB D-/D+ use th
 
 # 7. Build the carrier perfboard
 
-One **6 x 26 hole, 2.54 mm perfboard** carries the U1-side passives, the first ladder segment and the TRS MIDI OUT stage. Resistors and diodes stand upright, body over the marked hole; U4 sits in a DIP-14 socket, pin 1 at column 18 row 4.
+One **80.5 x 20 x 1.5 mm perfboard** (6 x 28 holes at 2.5 mm, four 3 mm mounting holes on 76 x 16 mm, four 2 x 3.5 mm pads at each end) carries the U1-side passives, the first ladder segment and the TRS MIDI OUT stage. Resistors and diodes stand upright, body over the marked hole; U4 sits in a DIP-14 socket, pin 1 at column 18 row 4.
 
-![Component side: parts and wire entries; columns 0-25, rows 0-5.](assembly-perfboard.svg)
+![Component side: parts and wire entries; columns 0-27, rows 0-5; columns 26-27 stay free.](assembly-perfboard.svg)
 
 ![Seen through the board: bare trails solid, insulated links dashed. Row 0: 3V3 and MIDI_5V; row 5: GND.](assembly-perfboard-wiring.svg)
 
+![Populated board from the front left; coloured stubs are the wire entries.](assembly-perfboard-perspective.svg)
+
 Use bare tinned wire for trails. Insulated links: R52 to U4 pin 2, pin 2 to pin 5, pin 3 to R54. The J4 tip wire solders to the R56 lead pad (column 25 row 5).
 
-| Entry | Net | Wire to | Entry | Net | Wire to |
-|---|---|---|---|---|---|
-| 3V3 | `3V3` | U1 JP1:2 | P2T | `P2_ADC` | J2:6 |
-| GND | `GND` | U1 JP1:14 | A4 | `USB_SENSE` | U1 JP1:8 |
-| +9V | `+9V` | J1, JP1:15, U3 | VBUS | `USB_VBUS` | U1 JP1:12 |
-| A0 | `LADDER` | U1 JP1:4 | TX | `MIDI_OUT_TX` | U1 JP2:2 (D0) |
-| T1 | `T1` | SW1, R10 | +5V | `+5V` | U3 VOUT |
-| P1R | `P1_RING` | J2:11 | 3R | `J3_RING` | J3 ring |
-| P1M | `P1_MODE` | U1 JP2:5 (D2) | 4R | `J4_RING` | J4 ring |
-| A1 | `P1_ADC` | U1 JP1:5 | 3T | `J3_TIP` | J3 tip |
-| P1T | `P1_ADC` | J2:12 | 4T | `J4_TIP` | J4 tip (R56 pad) |
-| P2R | `P2_RING` | J2:5 | 3S | `GND` | J3 sleeve |
-| P2M | `P2_MODE` | U1 JP2:6 (D3) | 4S | `GND` | J4 sleeve |
-| A3 | `P2_ADC` | U1 JP1:7 |  |  |  |
+| Entry | Net | Wire to | Entry | Net | Wire to | Entry | Net | Wire to |
+|---|---|---|---|---|---|---|---|---|
+| 3V3 | `3V3` | U1 JP1:2 | P1T | `P1_ADC` | J2:12 | +5V | `+5V` | U3 VOUT |
+| GND | `GND` | U1 JP1:14 | P2R | `P2_RING` | J2:5 | 3R | `J3_RING` | J3 ring |
+| +9V | `+9V` | J1, JP1:15, U3 | P2M | `P2_MODE` | U1 JP2:6 (D3) | 4R | `J4_RING` | J4 ring |
+| A0 | `LADDER` | U1 JP1:4 | A3 | `P2_ADC` | U1 JP1:7 | 3T | `J3_TIP` | J3 tip |
+| T1 | `T1` | SW1, R10 | P2T | `P2_ADC` | J2:6 | 4T | `J4_TIP` | J4 tip (R56 pad) |
+| P1R | `P1_RING` | J2:11 | A4 | `USB_SENSE` | U1 JP1:8 | 3S | `GND` | J3 sleeve |
+| P1M | `P1_MODE` | U1 JP2:5 (D2) | VBUS | `USB_VBUS` | U1 JP1:12 | 4S | `GND` | J4 sleeve |
+| A1 | `P1_ADC` | U1 JP1:5 | TX | `MIDI_OUT_TX` | U1 JP2:2 (D0) |  |  |  |
 
 **Pass check:** before fitting U4, check C1 polarity, D1/D2 cathodes on row 0 and no rail shorts.
 
@@ -348,7 +346,7 @@ In LED CHAIN choose **RGB**, the **2535 (800 kbit/s)** profile, enable and save.
 
 # 13. Route and inspect the harness
 
-![Current Left main routing proposal, with Nano and carrier perfboard positions; colors indicate harness purpose, not mandatory wire colors.](../previews/cable-bundles-left.png)
+![Current Left main routing proposal, with Nano and carrier perfboard positions; colors indicate harness purpose, not mandatory wire colors.](../previews/cable-bundles-left.png) ![Left main from the left rear with the top shell hidden; all parts in place, harness wires not drawn.](../design/fusion/mirrored/main/open-assembly.png)
 
 ## Bundle by purpose
 

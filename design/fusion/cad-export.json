@@ -3,8 +3,9 @@
   "CAD": [
     {
       "file": "mirrored/main/midi-foot-mirrored-main",
-      "native_solids": 383,
-      "STEP_solids": 383,
+      "native_bodies": 451,
+      "native_solids": 657,
+      "STEP_solids": 657,
       "complete": true,
       "physical_hardware_only": true
     },

@@ -10,7 +10,7 @@ def run(_context: str):
  mirrors=root.attributes.itemByName('MIDI_MIRROR','logical_left_electronics')
  assert mirrors,'Expected both Left enclosure assemblies.'
  assert not [o for o in root.occurrences if o.component.name.startswith('TEMP')]
- path='/Users/ab/Documents/ChatGPT/MIDI controller 3/design/fusion/sigmidi-foot-controller-0.1.f3d'
+ path='/Users/ab/work/sigram/SigMidi/design/fusion/sigmidi-foot-controller-0.1.f3d'
  if app.activeDocument.isModified:assert app.activeDocument.save('SIGMIDI complete project archive for distribution cleanup')
  assert d.exportManager.execute(d.exportManager.createFusionArchiveExportOptions(path))
  with zipfile.ZipFile(path) as z:assert z.testzip() is None

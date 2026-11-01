@@ -68,13 +68,22 @@ txt(23,-4,'TRS 1 / 2','small');txt(140,-4,'9 V · centre negative','small')
 # Existing vent area is crosshatched rather than available for tie mounts.
 for x in [91,96,101,106,111,120,126]:
  out.append(f'<path d="M{X(x)} {Y(49)}V{Y(60)}" stroke="#adc3c1" stroke-width="5" opacity=".6"/>')
-# Carrier perfboard (6 x 26 holes, 2.54 mm) at base level under the Dual TRS, rear, ending beside the Nano.
-CX0,CY0,CW,CH=18.0,5.0,70.0,20.0
-out.append(f'<rect x="{X(CX0)}" y="{Y(CY0)}" width="{CW*S}" height="{CH*S}" rx="4" fill="#e9dcc0" stroke="#9c8a62" stroke-width="1.7" stroke-dasharray="5 4"/>')
-for c in range(26):
- for r in range(6):
-  out.append(f'<circle cx="{X(CX0+(CW-25*2.54)/2+c*2.54):.2f}" cy="{Y(CY0+(CH-5*2.54)/2+r*2.54):.2f}" r="1.6" fill="#b49a5c"/>')
-footprints.append({'component':'Carrier perfboard 6 x 26 holes, 2.54 mm','bounds_XY_mm':[CX0,CY0,CX0+CW,CY0+CH],'source':'scripts/perfboard_layout.py','level':'base, under Dual TRS'})
+# Carrier perfboard at base level under the Dual TRS, rear, ending beside the Nano; placement
+# matches design/fusion/mirrored/carrier-perfboard.json (board turned 180 degrees in the case).
+carrier=json.loads((R/'design/fusion/mirrored/carrier-perfboard.json').read_text())
+(CW,CH,_),(BX,BY)=carrier['board_mm'],carrier['centre_local_mm'];BY=-BY
+CX0,CY0=BX-CW/2,BY-CH/2
+out.append(f'<rect x="{X(CX0)}" y="{Y(CY0)}" width="{CW*S}" height="{CH*S}" rx="4" fill="#e9dcc0" stroke="#9c8a62" stroke-width="1.7"/>')
+pitch=carrier['pitch_mm'];rows,cols=carrier['hole_field']
+for c in range(cols):
+ for r in range(rows):
+  out.append(f'<circle cx="{X(BX+(c-(cols-1)/2)*pitch):.2f}" cy="{Y(BY+(r-(rows-1)/2)*pitch):.2f}" r="1.6" fill="#b49a5c"/>')
+for sx in (-1,1):
+ for sy in (-1,1):
+  out.append(f'<circle cx="{X(BX+sx*38)}" cy="{Y(BY+sy*8)}" r="{1.5*S}" fill="white" stroke="#9c8a62"/>')
+ for y in (-3.75,-1.25,1.25,3.75):
+  out.append(f'<rect x="{X(BX+sx*38-1.75)}" y="{Y(BY+y-1)}" width="{3.5*S}" height="{2*S}" rx="1" fill="#c9a64a"/>')
+footprints.append({'component':f'Carrier perfboard {CW:g} x {CH:g} mm, {rows} x {cols} holes at {pitch:g} mm','bounds_XY_mm':[CX0,CY0,CX0+CW,CY0+CH],'source':'design/fusion/mirrored/carrier-perfboard.json','level':'base, under Dual TRS'})
 paths=[]
 def route(kind,points,width=.8,label=''):
  pts=' '.join(f'{X(x):.2f},{Y(y):.2f}' for x,y in points)
@@ -88,7 +97,7 @@ route('ground',[(119.21,30.45),(116,30.45),(116,53),(86,53),(86,43.5),(90.4,43.5
 route('supply',[(119,28),(119,35),(81,35)],.8,'LED +5V distribution; pair with return')
 route('ground',[(119,30.5),(120.5,36.5),(81,36.5)],.65,'LED supply return, routed directly to supply point')
 route('pedal',[(27,27.4),(27,29.5),(36,29.5),(36,25)],1.15,'Six TRS conductors down to the carrier perfboard')
-route('pedal',[(88,12),(90.4,12)],1.0,'Carrier wire entries to Nano JP1: ladder, pedals, USB sense, 3V3, GND, VIN')
+route('pedal',[(89,12),(90.4,12)],1.0,'Carrier wire entries to Nano JP1: ladder, pedals, USB sense, 3V3, GND, VIN')
 route('display',[(108.2,44.5),(112,44.5),(112,54),(82.5,54),(82.5,42),(43,42),(43,46.23)],1.1,'Short SPI loom to display; J-LCD service disconnect')
 route('encoder',[(12.5,57),(12.5,46),(57,46),(57,41),(84.5,41),(84.5,55.5),(113.5,55.5),(113.5,42.5),(108.2,42.5)],.95,'A, B, click and common ground to Nano')
 # Lines mark harness corridors, not common electrical nets. Tap resistors stay in electrical order.
@@ -116,7 +125,7 @@ for i,x in enumerate([42.6,107.6,172.6,237.6,302.6]):
  txt(x,12.7,chr(65+i),'label')
 # Carrier label sits on the board, above the corridors that pass at other heights.
 out.append(f'<rect x="{X(52)}" y="{Y(18.6)}" width="{32*S}" height="{6*S}" rx="3" fill="#fbf6ea" fill-opacity=".95"/>')
-txt(68,21.2,'Carrier perfboard 6 x 26','nano-label')
+txt(68,21.2,'Carrier perfboard 80.5 x 20','nano-label')
 txt(68,23.9,'base level, under Dual TRS','nano-label')
 txt(28,12,'Dual TRS','tiny')
 # Keep the board identity readable above the harness corridors.
@@ -141,8 +150,8 @@ out += ['<text x="80" y="1045" class="small">Lines represent bundle corridors, n
 '<text x="80" y="1090" class="small muted">Routes are bundle corridors, not pin positions. VBUS → 100k → A4; A4 → 150k → GND. Verify service-loop clearances.</text>','</svg>']
 svg='\n'.join(out);(P/'cable-bundles-left.svg').write_text(svg)
 detail_inner=svg[svg.index('>')+1:svg.rindex('</svg>')]
-(P/'cable-bundles-left-detail.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1000" viewBox="0 0 1560 1000"><rect width="1560" height="1000" fill="#f5f7fa"/><text x="40" y="44" font-family="Arial,sans-serif" font-size="26" fill="#26354b">SIGMIDI · electronics harness detail · Left</text><svg x="20" y="70" width="1520" height="860" viewBox="60 193 655 390">'+detail_inner+'</svg><text x="40" y="970" font-family="Arial,sans-serif" font-size="18" fill="#617087">Routing proposal. Dashed interface is not a fitted CAD part; vertical clearances require review.</text></svg>')
-data={'variant':'Left main, ten switches','source':'design/fusion/mirrored/layout.json','nano_mount_source':'design/fusion/nano-esp32/mount-fit.json','nano_mount_sha256':hashlib.sha256((R/'design/fusion/nano-esp32/mount-fit.json').read_bytes()).hexdigest(),'source_sha256':hashlib.sha256((R/'design/fusion/mirrored/layout.json').read_bytes()).hexdigest(),'status':'routing proposal; no native CAD changes','component_footprints':footprints,'bundles':meta,'colors':colors,'routes':paths,'notes':['XY corridors only; crossings do not connect nets','Native LED/power references used; other routing and unmodeled interface carrier need clearance validation','Electrical tap and LED assignments remain unchanged','Disconnect shell controls and withdraw MCU USB before base removal']}
+(P/'cable-bundles-left-detail.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1000" viewBox="0 0 1560 1000"><rect width="1560" height="1000" fill="#f5f7fa"/><text x="40" y="44" font-family="Arial,sans-serif" font-size="26" fill="#26354b">SIGMIDI · electronics harness detail · Left</text><svg x="20" y="70" width="1520" height="860" viewBox="60 193 655 390">'+detail_inner+'</svg><text x="40" y="970" font-family="Arial,sans-serif" font-size="18" fill="#617087">Routing proposal. The carrier perfboard is a fitted CAD part; wire corridors need vertical clearance review.</text></svg>')
+data={'variant':'Left main, ten switches','source':'design/fusion/mirrored/layout.json','nano_mount_source':'design/fusion/nano-esp32/mount-fit.json','nano_mount_sha256':hashlib.sha256((R/'design/fusion/nano-esp32/mount-fit.json').read_bytes()).hexdigest(),'source_sha256':hashlib.sha256((R/'design/fusion/mirrored/layout.json').read_bytes()).hexdigest(),'status':'routing proposal; no native CAD changes','component_footprints':footprints,'bundles':meta,'colors':colors,'routes':paths,'notes':['XY corridors only; crossings do not connect nets','Native LED/power references and the fitted carrier perfboard used; other routing needs clearance validation','Electrical tap and LED assignments remain unchanged','Disconnect shell controls and withdraw MCU USB before base removal']}
 (P/'cable-bundles-left.json').write_text(json.dumps(data,indent=2)+'\n')
 buttons=''.join(f'<button data-focus="{k}" style="--bundle:{colors[k]}">{html.escape(meta[k][0])}</button>' for k in meta)
 page='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>SIGMIDI cable routing preview</title><style>body{margin:0;background:#f5f7fa;color:#26354b;font:14px Arial,sans-serif}nav{padding:18px 5%;display:flex;gap:8px;flex-wrap:wrap;align-items:center;border-bottom:1px solid #dae1e8}button,a{font:inherit}button{border:1px solid #c6ced8;border-left:5px solid var(--bundle,#26354b);background:white;color:#26354b;padding:8px 12px;border-radius:6px;cursor:pointer}button[aria-pressed=true]{background:#26354b;color:white}nav a{margin-left:auto;color:#265f99}main{max-width:1700px;margin:auto}svg{width:100%;height:auto;display:block}footer{padding:12px 5%;color:#617087}</style><nav aria-label="Cable bundle filters"><strong>Show:</strong><button data-focus="all" aria-pressed="true">All bundles</button>'''+buttons+'''<a href="cable-bundles-left-detail.svg">Electronics zoom</a><a href="cable-bundles-left.svg">Download SVG</a></nav><main>'''+svg+'''</main><footer>Routing preview only. No firmware settings or Fusion geometry changed.</footer><script>for(const b of document.querySelectorAll('button[data-focus]'))b.addEventListener('click',()=>{const k=b.dataset.focus;for(const p of document.querySelectorAll('.route'))p.classList.toggle('dimmed',k!=='all'&&p.dataset.bundle!==k);for(const q of document.querySelectorAll('button[data-focus]'))q.setAttribute('aria-pressed',String(q===b));});</script></html>'''

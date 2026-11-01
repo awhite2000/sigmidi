@@ -1,14 +1,36 @@
 """Carrier perfboard layout: U1-side passives, ladder top segment and the TRS MIDI buffer.
 
-Grid: column c = 0..25 (left to right), row r = 0..5 (top to bottom) on a 6 x 26 hole,
-2.54 mm perfboard, seen from the component side. check() validates every lead against
-design/electrical/netlist.json, hole reuse, body overlap and per-net connectivity.
-drawing() renders the placement or solder-side view as a ReportLab drawing.
+Grid: column c = 0..27 (left to right), row r = 0..5 (top to bottom) on the 6 x 28 hole,
+2.5 mm pitch field of an 80.5 x 20 x 1.5 mm perfboard, seen from the component side; the
+parts use columns 0..25. check() validates every lead against design/electrical/netlist.json, hole reuse, body overlap and per-net connectivity.
+drawing() renders the placement or solder-side view and perspective() the populated board
+as ReportLab drawings.
 """
-from reportlab.graphics.shapes import Circle, Drawing, Line, PolyLine, Rect, String
-from reportlab.lib import colors
+try:
+    from reportlab.graphics.shapes import Circle, Drawing, Line, PolyLine, Rect, String
+    from reportlab.lib import colors
+except ImportError:
+    # Fusion's Python reads the layout data without ReportLab.
+    pass
 
-COLS, ROWS = 26, 6
+COLS, ROWS = 28, 6
+PITCH_MM = 2.5
+BOARD_MM = (80.5, 20.0, 1.5)
+# Board features relative to the board centre, X along the columns, Y down the rows.
+MOUNT_HOLE_MM = 3.0
+MOUNT_HOLES_MM = [(sx * 38.0, sy * 8.0) for sx in (-1, 1) for sy in (-1, 1)]
+END_PAD_MM = (3.5, 2.0)
+END_PADS_MM = [(sx * 38.0, y) for sx in (-1, 1) for y in (-3.75, -1.25, 1.25, 3.75)]
+
+
+def board_xy(c, r):
+    """Hole (c, r) in millimetres from the board centre."""
+    return (c - (COLS - 1) / 2) * PITCH_MM, (r - (ROWS - 1) / 2) * PITCH_MM
+
+
+def board_grid(x, y):
+    """Board millimetres from the centre, in grid units."""
+    return x / PITCH_MM + (COLS - 1) / 2, y / PITCH_MM + (ROWS - 1) / 2
 
 PARTS = {
     # Ladder top: pull-up, pull-down, filter and the first 1k segment to tap T1.
@@ -257,24 +279,33 @@ def net_color(net):
 
 def drawing(width, view, hole_use, font='Helvetica', bold='Helvetica-Bold'):
     """Return the 'placement' or 'wiring' (trails and links seen through the board) view."""
-    pitch = width / (COLS + 1.2)
-    x0, height = pitch * 1.1, pitch * (ROWS + 1.4)
+    left, top_edge = board_grid(-BOARD_MM[0] / 2, -BOARD_MM[1] / 2)
+    right, bottom_edge = board_grid(BOARD_MM[0] / 2, BOARD_MM[1] / 2)
+    pitch = width / (right - left + 0.2)
+    height = pitch * (bottom_edge - top_edge + 0.9)
     d = Drawing(width, height)
     def xy(c, r):
-        return x0 + c * pitch, height - pitch * 0.85 - r * pitch
+        return pitch * (c - left + 0.1), height - pitch * (r - top_edge + 0.1)
     def text(x, y, value, size, color, weight=font, anchor='middle'):
         d.add(String(x, y, value, fontName=weight, fontSize=size, fillColor=color, textAnchor=anchor))
-    bx, top = xy(-0.7, -0.7)
-    _, bottom = xy(0, ROWS - 0.3)
-    d.add(Rect(bx, bottom, (COLS + 0.4) * pitch, top - bottom, rx=4, ry=4,
+    bx, top = xy(left, top_edge)
+    _, bottom = xy(left, bottom_edge)
+    d.add(Rect(bx, bottom, (right - left) * pitch, top - bottom, rx=4, ry=4,
                fillColor=colors.HexColor('#e9dcc0'), strokeColor=colors.HexColor('#9c8a62'), strokeWidth=0.8))
+    for hx, hy in MOUNT_HOLES_MM:
+        x, y = xy(*board_grid(hx, hy))
+        d.add(Circle(x, y, MOUNT_HOLE_MM / 2 / PITCH_MM * pitch, fillColor=colors.white, strokeColor=colors.HexColor('#9c8a62'), strokeWidth=0.6))
+    for px, py in END_PADS_MM:
+        x, y = xy(*board_grid(px, py))
+        w, h = END_PAD_MM[0] / PITCH_MM * pitch, END_PAD_MM[1] / PITCH_MM * pitch
+        d.add(Rect(x - w / 2, y - h / 2, w, h, rx=1, ry=1, fillColor=colors.HexColor('#c9a64a'), strokeColor=colors.HexColor('#8a7440'), strokeWidth=0.4))
     label = colors.HexColor('#7a6a48')
     for c in range(COLS):
         x, _ = xy(c, 0)
-        text(x, bottom - pitch * 0.45, str(c), pitch * 0.32, label)
+        text(x, bottom - pitch * 0.5, str(c), pitch * 0.32, label)
     for r in range(ROWS):
-        _, y = xy(0, r)
-        text(bx - pitch * 0.15, y - pitch * 0.11, str(r), pitch * 0.32, label, anchor='end')
+        x, y = xy(-0.75, r)
+        text(x, y - pitch * 0.11, str(r), pitch * 0.32, label, anchor='end')
     if view == 'wiring':
         for net, holes in TRAILS:
             (xa, ya), (xb, yb) = xy(*holes[0]), xy(*holes[-1])
@@ -345,4 +376,206 @@ def drawing(width, view, hole_use, font='Helvetica', bold='Helvetica-Bold'):
         d.add(Rect(x - pitch * 0.46, y - pitch * 0.22, pitch * 0.92, pitch * 0.44, rx=1.5, ry=1.5,
                    fillColor=net_color(net), strokeColor=None))
         text(x, y - pitch * 0.11, label_text, pitch * 0.3, colors.white, bold)
+    return d
+
+
+def perspective(width, hole_use, font='Helvetica', bold='Helvetica-Bold'):
+    """Return a perspective view of the populated board from the front left, above row 5."""
+    import math
+    from reportlab.graphics.shapes import Polygon
+    yaw, tilt, dist = math.radians(-20), math.radians(40), 60.0
+    cx, cy = (COLS - 1) / 2, (ROWS - 1) / 2
+    cam = (cx + dist * math.cos(tilt) * math.sin(yaw), cy + dist * math.cos(tilt) * math.cos(yaw), dist * math.sin(tilt))
+    light = (-0.35, 0.45, 0.82)
+
+    def project(p):
+        x, y, z = p
+        px, py = x - cx, y - cy
+        x1 = px * math.cos(yaw) - py * math.sin(yaw)
+        y1 = px * math.sin(yaw) + py * math.cos(yaw)
+        f = dist / (dist - (y1 * math.cos(tilt) + z * math.sin(tilt)))
+        return x1 * f, (z * math.cos(tilt) - y1 * math.sin(tilt)) * f, f
+
+    def sub(a, b):
+        return tuple(i - j for i, j in zip(a, b))
+
+    def dot(a, b):
+        return sum(i * j for i, j in zip(a, b))
+
+    def shade(hex_color, k):
+        c = colors.HexColor(hex_color)
+        return colors.Color(min(1, c.red * k), min(1, c.green * k), min(1, c.blue * k))
+
+    # Primitives in board space: ('face', points, color), ('line', a, b, color, width),
+    # ('text', point, value, size, color, weight). Objects draw back to front.
+    objects = []
+
+    def solid(faces, centre):
+        """Keep the camera-facing faces of a convex solid, shaded by their outward normal."""
+        out = []
+        for pts, hex_color in faces:
+            n = [0.0, 0.0, 0.0]
+            for a, b in zip(pts, pts[1:] + pts[:1]):
+                n[0] += (a[1] - b[1]) * (a[2] + b[2]); n[1] += (a[2] - b[2]) * (a[0] + b[0]); n[2] += (a[0] - b[0]) * (a[1] + b[1])
+            mid = tuple(sum(p[i] for p in pts) / len(pts) for i in range(3))
+            if dot(n, sub(mid, centre)) < 0:
+                n = [-v for v in n]
+            if dot(n, sub(cam, mid)) <= 0:
+                continue
+            length = math.sqrt(dot(n, n)) or 1
+            k = 0.62 + 0.45 * max(0, dot(n, light) / length / math.sqrt(dot(light, light)))
+            out.append(('face', pts, shade(hex_color, k)))
+        return out
+
+    def box(x0, y0, z0, x1, y1, z1, hex_color, top=None):
+        v = lambda x, y, z: (x, y, z)
+        faces = [([v(x0, y0, z1), v(x1, y0, z1), v(x1, y1, z1), v(x0, y1, z1)], top or hex_color),
+                 ([v(x0, y0, z0), v(x1, y0, z0), v(x1, y1, z0), v(x0, y1, z0)], hex_color),
+                 ([v(x0, y0, z0), v(x1, y0, z0), v(x1, y0, z1), v(x0, y0, z1)], hex_color),
+                 ([v(x0, y1, z0), v(x1, y1, z0), v(x1, y1, z1), v(x0, y1, z1)], hex_color),
+                 ([v(x0, y0, z0), v(x0, y1, z0), v(x0, y1, z1), v(x0, y0, z1)], hex_color),
+                 ([v(x1, y0, z0), v(x1, y1, z0), v(x1, y1, z1), v(x1, y0, z1)], hex_color)]
+        return solid(faces, ((x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2))
+
+    def cylinder(x, y, radius, bands, top, stripe=None, n=28):
+        """Upright cylinder; bands are (z0, z1, color) from the bottom; stripe is (angle, color)."""
+        ring = [(math.cos(2 * math.pi * i / n), math.sin(2 * math.pi * i / n)) for i in range(n)]
+        out = []
+        for z0, z1, hex_color in bands:
+            faces = []
+            for i in range(n):
+                (ca, sa), (cb, sb) = ring[i], ring[(i + 1) % n]
+                face_color = hex_color
+                if stripe and math.cos(math.atan2(sa + sb, ca + cb) - stripe[0]) > 0.86:
+                    face_color = stripe[1]
+                faces.append(([(x + radius * ca, y + radius * sa, z0), (x + radius * cb, y + radius * sb, z0),
+                               (x + radius * cb, y + radius * sb, z1), (x + radius * ca, y + radius * sa, z1)], face_color))
+            faces.append(([(x + radius * c, y + radius * s, z1) for c, s in ring], top if (z0, z1, hex_color) == bands[-1] else hex_color))
+            out += solid(faces, (x, y, (z0 + z1) / 2))
+        return out
+
+    lead = '#9a9a9a'
+    thick = BOARD_MM[2] / PITCH_MM
+    # Board slab and holes.
+    left, back = board_grid(-BOARD_MM[0] / 2, -BOARD_MM[1] / 2)
+    right, front = board_grid(BOARD_MM[0] / 2, BOARD_MM[1] / 2)
+    board = box(left, back, -thick, right, front, 0, '#c9b98f', top='#e9dcc0')
+    holes = []
+    for c in range(COLS):
+        for r in range(ROWS):
+            used = (c, r) in hole_use
+            for radius, hex_color in ((0.2 if used else 0.15, '#c9a64a' if used else '#d9c79c'), (0.06, '#5a4a2a')):
+                holes.append(('face', [(c + radius * math.cos(a / 6 * math.pi), r + radius * math.sin(a / 6 * math.pi), 0.001)
+                                       for a in range(12)], colors.HexColor(hex_color)))
+    for hx, hy in MOUNT_HOLES_MM:
+        c, r = board_grid(hx, hy)
+        radius = MOUNT_HOLE_MM / 2 / PITCH_MM
+        holes.append(('face', [(c + radius * math.cos(a / 8 * math.pi), r + radius * math.sin(a / 8 * math.pi), 0.001)
+                               for a in range(16)], colors.HexColor('#ffffff')))
+    for px, py in END_PADS_MM:
+        c, r = board_grid(px, py)
+        w, h = END_PAD_MM[0] / PITCH_MM / 2, END_PAD_MM[1] / PITCH_MM / 2
+        holes.append(('face', [(c - w, r - h, 0.001), (c + w, r - h, 0.001), (c + w, r + h, 0.001), (c - w, r + h, 0.001)],
+                      colors.HexColor('#c9a64a')))
+    base = board + holes
+
+    pad_holes = {h for p in PARTS.values() for h in p['pins'].values()}
+    for ref, p in PARTS.items():
+        kind = p.get('kind', 'res')
+        pins = list(p['pins'].values())
+        prims, label_at = [], None
+        if kind in ('res', 'diode'):
+            c, r = p['pins'][p['body']]
+            radius, height = (0.53, 2.05) if kind == 'diode' else (0.45, 2.45)
+            z0, z1 = 0.2, 0.2 + height
+            if kind == 'diode':
+                # Cathode band at the K end: on the board for a K-body part, at the top otherwise.
+                band = (z0, z0 + 0.35) if p['body'] == 'K' else (z1 - 0.35, z1)
+                bands = [(z0, band[0], '#2b2b2b'), (band[0], band[1], '#dddddd'), (band[1], z1, '#2b2b2b')]
+                bands = [b for b in bands if b[1] > b[0] + 1e-9]
+                top = bands[-1][2]
+            else:
+                bands, top = [(z0, z1, '#9cc5e0')], '#9cc5e0'
+            other = next(h for pin, h in p['pins'].items() if pin != p['body'])
+            prims.append(('line', (c, r, 0), (c, r, z0), lead, 0.07))
+            prims += cylinder(c, r, radius, bands, top)
+            # The upper lead bends over and drops into the other hole.
+            path = [(c, r, z1), (c, r, z1 + 0.25), (other[0], other[1], z1 + 0.25), (other[0], other[1], 0)]
+            prims += [('line', a, b, lead, 0.07) for a, b in zip(path, path[1:])]
+            label_at = (c, r, z1 + 0.6)
+        elif kind == 'elko':
+            (c1, r1), (c2, r2) = pins
+            c, r = (c1 + c2) / 2, (r1 + r2) / 2
+            stripe = (math.atan2(p['pins']['2'][1] - r, p['pins']['2'][0] - c), '#c8d0dc')
+            prims += cylinder(c, r, 1.2, [(0.1, 4.3, '#1f3f73')], '#a9b2bf', stripe=stripe)
+            label_at = (c, r, 4.7)
+        elif kind == 'cer':
+            (c1, r1), (c2, r2) = pins
+            c, r = (c1 + c2) / 2, (r1 + r2) / 2
+            prims += [('line', (pc, pr, 0), (pc, pr + (0.35 if pr < r else -0.35), 1.0), lead, 0.06) for pc, pr in pins]
+            n = 16
+            disc = [(r + 0.9 * math.cos(2 * math.pi * i / n), 1.55 + 0.9 * math.sin(2 * math.pi * i / n)) for i in range(n)]
+            faces = [([(c - 0.17, y, z) for y, z in disc], '#d98c2b'), ([(c + 0.17, y, z) for y, z in disc], '#d98c2b')]
+            for (ya, za), (yb, zb) in zip(disc, disc[1:] + disc[:1]):
+                faces.append(([(c - 0.17, ya, za), (c + 0.17, ya, za), (c + 0.17, yb, zb), (c - 0.17, yb, zb)], '#d98c2b'))
+            prims += solid(faces, (c, r, 1.55))
+            label_at = (c, r, 2.85)
+        elif kind == 'dip':
+            prims += box(17.35, 0.95, 0, 24.65, 4.05, 0.35, '#3a3a3a')
+            for pin, (c, r) in p['pins'].items():
+                if r == 1:
+                    prims += box(c - 0.13, 1.25, 0.35, c + 0.13, 1.5, 0.95, '#b8b8b8')
+            prims += box(17.55, 1.5, 0.35, 24.45, 3.5, 1.35, '#222222', top='#2b2b2b')
+            for pin, (c, r) in p['pins'].items():
+                if r == 4:
+                    prims += box(c - 0.13, 3.5, 0.35, c + 0.13, 3.75, 0.95, '#b8b8b8')
+            prims.append(('face', [(17.8 + 0.22 * math.cos(a / 6 * math.pi), 3.15 + 0.22 * math.sin(a / 6 * math.pi), 1.351)
+                                   for a in range(12)], colors.HexColor('#555555')))
+            prims.append(('text', (21, 2.5, 1.36), 'U4  74HCT125', 0.5, colors.white, bold))
+            # Front-row pin numbers go first so the package covers nothing it should not.
+            prims[:0] = [('text', (c, r + 0.75, 0.002), pin, 0.32, colors.HexColor('#5a4a2a'), font)
+                         for pin, (c, r) in p['pins'].items() if r == 4]
+        if label_at:
+            prims.append(('text', label_at, ref, 0.42, colors.HexColor('#111111'), bold))
+        cxy = (sum(c for c, _ in pins) / len(pins), sum(r for _, r in pins) / len(pins), 0)
+        objects.append((cxy, prims))
+
+    # Off-board wires: a short coloured stub rising from each entry hole; the flat views name them.
+    for _, net, (c, r), _ in PADS:
+        top = (c - 0.15, r + 0.35, 1.05) if (c, r) not in pad_holes else (c + 0.3, r + 0.35, 0.9)
+        objects.append(((c, r, 0), [('line', (c, r, 0), top, net_color(net), 0.16)]))
+
+    def depth(p):
+        return project(p)[2]
+
+    objects.sort(key=lambda o: depth(o[0]))
+    prims = base + [q for _, group in objects for q in group]
+    # Fit the projected scene to the requested width.
+    pts = []
+    for q in prims:
+        if q[0] == 'face':
+            pts += [project(p)[:2] for p in q[1]]
+        elif q[0] == 'line':
+            pts += [project(q[1])[:2], project(q[2])[:2]]
+    xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+    margin = 6
+    scale = (width - 2 * margin) / (max(xs) - min(xs))
+    height = (max(ys) - min(ys)) * scale + 2 * margin + 8
+    d = Drawing(width, height)
+
+    def screen(p):
+        x, y, f = project(p)
+        return margin + (x - min(xs)) * scale, margin + (y - min(ys)) * scale, f
+
+    for q in prims:
+        if q[0] == 'face':
+            flat = [v for p in q[1] for v in screen(p)[:2]]
+            d.add(Polygon(flat, fillColor=q[2], strokeColor=q[2], strokeWidth=0.15))
+        elif q[0] == 'line':
+            (xa, ya, fa), (xb, yb, fb) = screen(q[1]), screen(q[2])
+            stroke = q[3] if not isinstance(q[3], str) else colors.HexColor(q[3])
+            d.add(Line(xa, ya, xb, yb, strokeColor=stroke, strokeWidth=q[4] * scale * (fa + fb) / 2, strokeLineCap=1))
+        else:
+            x, y, f = screen(q[1])
+            d.add(String(x, y, q[2], fontName=q[5], fontSize=q[3] * scale * f, fillColor=q[4], textAnchor='middle'))
     return d

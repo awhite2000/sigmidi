@@ -567,7 +567,7 @@
       "id": "W04",
       "group": "Wiring",
       "part": "Carrier perfboard and U4 socket",
-      "specification": "6 x 26 hole, 2.54 mm perfboard (15.2 x 66 mm hole field) plus one DIP-14 socket; carries the U1-side passives, ladder top segment and TRS MIDI OUT stage",
+      "specification": "80.5 x 20 x 1.5 mm perfboard, 6 x 28 holes at 2.5 mm pitch, four 3 mm mounting holes on 76 x 16 mm, four 2 x 3.5 mm pads at each end, plus one DIP-14 socket; carries the U1-side passives, ladder top segment and TRS MIDI OUT stage",
       "quantity": {
         "modular_4": 1,
         "modular_6": 1,

@@ -163,14 +163,14 @@
       "component_face_down": false
     },
     {
-      "component": "Carrier perfboard 6 x 26 holes, 2.54 mm",
+      "component": "Carrier perfboard 80.5 x 20 mm, 6 x 28 holes at 2.5 mm",
       "bounds_XY_mm": [
-        18.0,
+        8.5,
         5.0,
-        88.0,
+        89.0,
         25.0
       ],
-      "source": "scripts/perfboard_layout.py",
+      "source": "design/fusion/mirrored/carrier-perfboard.json",
       "level": "base, under Dual TRS"
     }
   ],
@@ -409,7 +409,7 @@
       "purpose": "pedal",
       "points_XY_mm": [
         [
-          88,
+          89,
           12
         ],
         [
@@ -908,7 +908,7 @@
   ],
   "notes": [
     "XY corridors only; crossings do not connect nets",
-    "Native LED/power references used; other routing and unmodeled interface carrier need clearance validation",
+    "Native LED/power references and the fitted carrier perfboard used; other routing needs clearance validation",
     "Electrical tap and LED assignments remain unchanged",
     "Disconnect shell controls and withdraw MCU USB before base removal"
   ]

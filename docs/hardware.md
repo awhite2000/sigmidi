@@ -67,7 +67,7 @@ The TRS outputs have not been electrically bench-qualified. Before attaching equ
 
 ## Carrier perfboard
 
-One 6 x 26 hole, 2.54 mm perfboard carries every resistor and capacitor that connects directly to the Nano (R7/R8/C5 and the first ladder segment R9, R20/R21, R30/R31, R50/R51, C1), together with the complete TRS MIDI OUT stage (R52, D1/D2, U4 in a DIP-14 socket, C6, R53-R56). It sits at base level in the rear, between the Nano and the enclosure side, under the dual TRS socket. Off-board wires enter at labelled holes. [Assembly guide step 7](assembly-guide.md#7-build-the-carrier-perfboard) gives the placement, trails, insulated links and wire-entry table; `scripts/perfboard_layout.py` checks the layout against the netlist.
+One 80.5 x 20 x 1.5 mm perfboard carries every resistor and capacitor that connects directly to the Nano (R7/R8/C5 and the first ladder segment R9, R20/R21, R30/R31, R50/R51, C1), together with the complete TRS MIDI OUT stage (R52, D1/D2, U4 in a DIP-14 socket, C6, R53-R56). The board has a 6 x 28 hole field at 2.5 mm pitch, four 3 mm mounting holes on a 76 x 16 mm rectangle and four 2 x 3.5 mm pads at each end, between its mounting holes; the parts use columns 0-25. It sits at base level in the rear, between the Nano and the enclosure side, under the dual TRS socket. Off-board wires enter at labelled holes. [Assembly guide step 7](assembly-guide.md#7-build-the-carrier-perfboard) gives the placement, trails, insulated links and wire-entry table; `scripts/perfboard_layout.py` checks the layout against the netlist.
 
 ## Rotary encoder
 

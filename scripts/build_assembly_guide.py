@@ -254,7 +254,8 @@ def main():
     drawings={'assembly-nano-pins.svg':nano_diagram(netlist),
               'assembly-power.svg':power_diagram(),'assembly-ladder.svg':ladder_diagram(),
               'assembly-perfboard.svg':perfboard_layout.drawing(CONTENT*0.86,'placement',carrier_holes,'Manual','ManualBold'),
-              'assembly-perfboard-wiring.svg':perfboard_layout.drawing(CONTENT*0.86,'wiring',carrier_holes,'Manual','ManualBold')}
+              'assembly-perfboard-wiring.svg':perfboard_layout.drawing(CONTENT*0.86,'wiring',carrier_holes,'Manual','ManualBold'),
+              'assembly-perfboard-perspective.svg':perfboard_layout.perspective(CONTENT*0.68,carrier_holes,'Manual','ManualBold')}
     # The carrier wire-entry table must list every entry drawn on the board.
     for label,net,_,_ in perfboard_layout.PADS:
         assert f'| {label} | `{net}` |' in text,label
@@ -263,7 +264,7 @@ def main():
         asset=SOURCE.parent/name
         svg=asset.read_text().replace('font-family: ManualBold;', 'font-family: Arial; font-weight: bold;').replace('font-family: Manual;', 'font-family: Arial;')
         title={'assembly-nano-pins.svg':'Nano ESP32 physical header order and signal assignments', 'assembly-power.svg':'9 V center-negative power routing', 'assembly-ladder.svg':'Four-switch series-tap ladder and extension interface',
-               'assembly-perfboard.svg':'6 x 26 carrier perfboard placement','assembly-perfboard-wiring.svg':'6 x 26 carrier perfboard solder-side connections'}[name]
+               'assembly-perfboard.svg':'80.5 x 20 mm carrier perfboard placement','assembly-perfboard-wiring.svg':'80.5 x 20 mm carrier perfboard solder-side connections','assembly-perfboard-perspective.svg':'80.5 x 20 mm carrier perfboard populated perspective view'}[name]
         svg=svg.replace('<title>...</title>', '<title>'+title+'</title>').replace('<desc>...</desc>', '<desc>SIGMIDI Foot Controller v0.1 assembly guide diagram</desc>')
         asset.write_text(svg)
     prints=validate_sources(text,netlist)
@@ -272,6 +273,7 @@ def main():
         'Section':ParagraphStyle('Section',fontName='ManualBold',fontSize=12,leading=15,textColor=TEAL,spaceBefore=8,spaceAfter=6,keepWithNext=True),
         'Copy':ParagraphStyle('Copy',fontName='Manual',fontSize=10,leading=13.2,textColor=INK,spaceAfter=7),
         'Cell':ParagraphStyle('Cell',fontName='Manual',fontSize=9,leading=11.7,textColor=INK,spaceAfter=0),
+        'CellCompact':ParagraphStyle('CellCompact',fontName='Manual',fontSize=8,leading=10,textColor=INK,spaceAfter=0),
         'Caption':ParagraphStyle('Caption',fontName='Manual',fontSize=8.3,leading=10.5,textColor=GRAY,alignment=TA_CENTER,spaceBefore=4,spaceAfter=7),
         'Check':ParagraphStyle('Check',fontName='Manual',fontSize=10,leading=13.2,textColor=TEAL,spaceBefore=4,spaceAfter=8,borderColor=TEAL,borderWidth=.7,borderPadding=7,backColor=PALE),
     }
@@ -324,13 +326,17 @@ def main():
                 if page_index==1 and n==4:widths=[58,135,235,CONTENT-428]
                 if page_index==8:widths=[115,100,95,CONTENT-310]
                 if page_index==9:widths=[110,197,CONTENT-307]
-                cells=[[Paragraph(('<b>'+pdf_inline(v)+'</b>') if j==0 else pdf_inline(v),styles['Cell']) for v in row] for j,row in enumerate(rows)]
+                # The carrier wire-entry table runs in three compact column groups.
+                compact=page_index==7 and n==9
+                if compact:widths=[32,62,74]*3
+                cell,pad=(styles['CellCompact'],2) if compact else (styles['Cell'],5)
+                cells=[[Paragraph(('<b>'+pdf_inline(v)+'</b>') if j==0 else pdf_inline(v),cell) for v in row] for j,row in enumerate(rows)]
                 t=Table(cells,colWidths=widths,repeatRows=1,hAlign='LEFT')
                 t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),PALE),
                     ('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,colors.HexColor('#f7f9f8')]),
                     ('LINEBELOW',(0,0),(-1,0),.7,TEAL),('LINEBELOW',(0,1),(-1,-1),.25,colors.HexColor('#d6e1de')),
-                    ('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),6),('RIGHTPADDING',(0,0),(-1,-1),6),
-                    ('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),5)]))
+                    ('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),3 if compact else 6),('RIGHTPADDING',(0,0),(-1,-1),3 if compact else 6),
+                    ('TOPPADDING',(0,0),(-1,-1),pad),('BOTTOMPADDING',(0,0),(-1,-1),pad)]))
                 story.extend([t,Spacer(1,8)])
             else:
                 paragraph=[line];i+=1;numbered=bool(re.match(r'\d+\. ',line))

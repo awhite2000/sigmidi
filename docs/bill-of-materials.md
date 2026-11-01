@@ -153,7 +153,7 @@ Current supplied profiles use Prusa MK3S+, PETG, a 0.6 mm nozzle and 0.3 mm laye
 | W01 | 1 piece | **LCD cable**. GH1.25, 8-pin mating cable; verify orientation and signal labels. |
 | W02 | AR length | **Signal hookup wire**. Stranded, insulated 26-28 AWG; assorted purpose colors. |
 | W03 | AR length | **Supply/return wire**. Stranded, insulated 22-24 AWG. |
-| W04 | 1 set | **Carrier perfboard and U4 socket**. 6 x 26 hole, 2.54 mm perfboard (15.2 x 66 mm hole field) plus one DIP-14 socket; carries the U1-side passives, ladder top segment and TRS MIDI OUT stage. |
+| W04 | 1 set | **Carrier perfboard and U4 socket**. 80.5 x 20 x 1.5 mm perfboard, 6 x 28 holes at 2.5 mm pitch, four 3 mm mounting holes on 76 x 16 mm, four 2 x 3.5 mm pads at each end, plus one DIP-14 socket; carries the U1-side passives, ladder top segment and TRS MIDI OUT stage. |
 | W05 | AR set | **Insulation and strain relief**. Heat-shrink, small ties/anchors and insulating sleeves. |
 
 Plan about **5 m total of assorted signal wire** and **2 m total supply/return wire** for stock. These are procurement allowances, not measured cut lengths. Keep purpose colors consistent, insulate solder joints, and leave service slack between upper ports and base electronics. Connector families for optional detachable section harnesses and a carrier-board outline are not finalized. Direct solder wiring is the documented electrical baseline; do not assume a custom PCB exists.

@@ -2,8 +2,8 @@
   "Apache-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
   "README.txt": "611da12d5c48241d2ab999beeb988702fff08fcd155620891e26be2fa507c1e0",
   "TinyUSB-MIT.txt": "b171720e8a442e7a3957d83c62cd3299dbb29da3db534cc626f9dded0de2ca44",
-  "bootloader.bin": "1942261db4a91b5341bc33b44b2bc5b3a6b8bf213cbef40f0e99df1229e3b36c",
-  "build-info.json": "804150f9b958c822401ef9010c8c3ecd5c59d724948b961115f04de98039ed84",
-  "firmware.bin": "dbaf5278ae12c8c1206dcdc49a221808da64bc2ea4e0cc9861caaadcd06af35f",
+  "bootloader.bin": "3429de0debda260e0ec60f9c34b2249a8a049b5059da1b80c3f8ff5c3e4d0a74",
+  "build-info.json": "03ce2a399a62fdf206a35f5830f4db8dce824693d5c7ebcb3481c333246d87a0",
+  "firmware.bin": "7e237c0be5bce231c9d1dc20ace62484f13628fc65967dfc88ce3f0a451a0a63",
   "partitions.bin": "37f9719078927bf594a883c81ad80dd4e6d179c8db193fbded90851178aa39e7"
 }

@@ -68,7 +68,7 @@ For base removal, release the Nano from its four posts and withdraw USB-C from t
 
 - [Main package](mirrored-main-mk3s-petg-06.zip): ten-switch CAD, oriented print parts, profiles, renders and reports.
 - [Modular package](mirrored-modular-mk3s-petg-06.zip): eight-switch example, pair/cap parts and label variants.
-- [Main top view](main/top.png), [assembly](main/assembled.png), [exploded view](main/exploded.png), [display mounting](main/display-underside.png).
+- [Main top view](main/top.png), [assembly](main/assembled.png), [open assembly with the top shell hidden](main/open-assembly.png) ([render script](render_open_assembly.py)), [exploded view](main/exploded.png), [display mounting](main/display-underside.png).
 - [Modular top view](modular/top.png), [assembly](modular/assembled.png), [exploded view](modular/exploded.png).
 - [Current CAD/print package verification](../nano-esp32/package-verification.json), [Nano fit](../nano-esp32/assembly-clearance.json), [post wall sections and support-free slicing](../nano-esp32/print-verification.json). The reports cover assembly interference, board placement, post geometry, mesh integrity and print toolpaths.
 

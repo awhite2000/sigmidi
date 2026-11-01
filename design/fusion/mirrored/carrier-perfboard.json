@@ -1,0 +1,38 @@
+{
+ "component": "Carrier perfboard 80.5 x 20 - populated",
+ "assembly": "ALT Mirrored MAIN - left electronics - 10 switches",
+ "source": "scripts/perfboard_layout.py",
+ "board_mm": [
+  80.5,
+  20.0,
+  1.5
+ ],
+ "pitch_mm": 2.5,
+ "hole_field": [
+  6,
+  28
+ ],
+ "mounting_holes": {
+  "diameter_mm": 3.0,
+  "rectangle_mm": [
+   76.0,
+   16.0
+  ]
+ },
+ "end_pads": {
+  "size_mm": [
+   3.5,
+   2.0
+  ],
+  "per_end": 4
+ },
+ "centre_local_mm": [
+  48.75,
+  -15.0
+ ],
+ "underside_local_Z_mm": -21.0,
+ "rotation_deg": 180,
+ "column_0_faces": "Nano (+X)",
+ "bodies": 68,
+ "clashes": []
+}
