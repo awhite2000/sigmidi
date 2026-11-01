@@ -146,11 +146,12 @@ TRAILS = [
     run('TX_GATE2', (25, 3), (25, 4)),
 ]
 
-# Insulated wire links on the solder side (they may cross trails).
+# Insulated wire links on the solder side (they may cross trails): net, start, end and the
+# half-grid bends between them, so each run stays between hole rows and columns.
 LINKS = [
-    ('MIDI_OUT_TX', (11, 2), (19, 4)),        # R52 / TX entry to U4 pin 2
-    ('MIDI_OUT_TX', (19, 4), (22, 4)),        # U4 pin 2 to pin 5
-    ('TX_GATE1', (20, 4), (15, 3)),           # U4 pin 3 to R54
+    ('MIDI_OUT_TX', (11, 2), (19, 4), [(11.5, 2.5), (11.5, 4.5), (18.5, 4.5)]),   # R52 / TX entry to U4 pin 2
+    ('MIDI_OUT_TX', (19, 4), (22, 4), [(19.5, 4.5), (21.5, 4.5)]),                # U4 pin 2 to pin 5
+    ('TX_GATE1', (20, 4), (15, 3), [(19.5, 3.35), (15.5, 3.35)]),                 # U4 pin 3 to R54, above the pin numbers
 ]
 
 
@@ -217,7 +218,7 @@ def check(netlist):
     for net, holes in TRAILS:
         for h in holes:
             claim(h, net, f'trail {net}')
-    for net, a, b in LINKS:
+    for net, a, b, _ in LINKS:
         assert hole_net.get(a) == net and hole_net.get(b) == net, (net, a, b)
     # Bodies: no overlaps, and no foreign lead or pad inside a body.
     shapes = {ref: body_shapes(ref, p) for ref, p in PARTS.items()}
@@ -243,7 +244,7 @@ def check(netlist):
     for net, holes in TRAILS:
         for a, b in zip(holes, holes[1:]):
             join(a, b)
-    for net, a, b in LINKS:
+    for net, a, b, _ in LINKS:
         join(a, b)
     groups = {}
     for hole, net in hole_net.items():
@@ -317,12 +318,7 @@ def drawing(width, view, hole_use, font='Helvetica', bold='Helvetica-Bold'):
             d.add(Circle(x, y, pitch * (0.2 if used else 0.15), fillColor=colors.HexColor('#c9a64a' if used else '#d9c79c'),
                          strokeColor=colors.HexColor('#8a7440'), strokeWidth=0.4))
             d.add(Circle(x, y, pitch * 0.06, fillColor=colors.HexColor('#5a4a2a'), strokeColor=None))
-    if view == 'wiring':
-        for net, a, b in LINKS:
-            (xa, ya), (xb, yb) = xy(*a), xy(*b)
-            sag = pitch * 0.55 if a[1] == b[1] else 0
-            d.add(PolyLine([xa, ya, (xa + xb) / 2, (ya + yb) / 2 - sag, xb, yb], strokeColor=net_color(net),
-                           strokeWidth=pitch * 0.09, strokeDashArray=[pitch * 0.25, pitch * 0.15]))
+    refs = []
     for ref, p in PARTS.items():
         kind = p.get('kind', 'res')
         for shape in body_shapes(ref, p):
@@ -363,12 +359,25 @@ def drawing(width, view, hole_use, font='Helvetica', bold='Helvetica-Bold'):
                 d.add(Rect(x - pitch * 0.3, y + pitch * 0.22, pitch * 0.6, pitch * 0.12, fillColor=colors.HexColor('#dddddd'), strokeColor=None))
         if kind == 'cer':
             pins = list(p['pins'].values())
-            x, y = xy(sum(c for c, _ in pins) / len(pins) - 0.55, sum(r for _, r in pins) / len(pins))
+            # Level with the upper lead, clear of the TX_GATE1 link lane below it.
+            x, y = xy(sum(c for c, _ in pins) / len(pins) - 0.55, min(r for _, r in pins))
         else:
             shape = body_shapes(ref, p)[0]
             x, y = xy(shape[1], shape[2])
         light = kind in ('elko', 'diode')
-        text(x, y - pitch * 0.12, ref, pitch * 0.34, colors.white if light else colors.HexColor('#111111'), bold)
+        refs.append((x, y - pitch * 0.12, ref, colors.white if light else colors.HexColor('#111111')))
+    if view == 'wiring':
+        # Links are on the solder side, nearer the viewer than the bodies seen through the board.
+        for net, a, b, via in LINKS:
+            points = [xy(*q) for q in [a, *via, b]]
+            d.add(PolyLine([v for q in points for v in q], strokeColor=net_color(net), strokeWidth=pitch * 0.09,
+                           strokeDashArray=[pitch * 0.25, pitch * 0.15], strokeLineJoin=1))
+            # Solid ends mark the two holes the link is soldered to.
+            for x, y in (points[0], points[-1]):
+                d.add(Circle(x, y, pitch * 0.13, fillColor=net_color(net), strokeColor=None))
+    # References last, so link ends under an upright body do not hide them.
+    for x, y, ref, color in refs:
+        text(x, y, ref, pitch * 0.34, color, bold)
     for label_text, net, (c, r), _ in PADS:
         if (c, r) in {h for p in PARTS.values() for h in p['pins'].values()}:
             continue

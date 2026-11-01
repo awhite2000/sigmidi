@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1120" viewBox="0 0 1560 1120" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1194" viewBox="0 0 1560 1194" role="img" aria-labelledby="title desc">
 <title id="title">SIGMIDI Left enclosure cable bundle layout</title><desc id="desc">Top-down routing proposal using native component footprints, color coded by cable purpose. Rear edge at top. Main case 350 by 92 millimetres. Base-removal connectors and a modular four-net interface are shown.</desc>
 <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#e2e7ed" stroke-width=".65"/></pattern></defs>
 <style>text{font-family:Arial,sans-serif;fill:#26354b}.tiny{font-size:11px}.nano-label{font-size:10px}.small{font-size:13px}.medium{font-size:16px}.label{font-size:14px;font-weight:700}.wire{fill:none;stroke-linejoin:round;stroke-linecap:round}.body{fill:#e4e9ed;stroke:#96a1af;stroke-width:1.3}.board{fill:#d5e8da;stroke:#72957b;stroke-width:1.5}.dim{fill:none;stroke:#7f8da0;stroke-width:1}.muted{fill:#617087}.route.dimmed{opacity:.08}.route{transition:opacity .15s}</style>
-<rect width="1560" height="1120" fill="#f5f7fa"/>
+<rect width="1560" height="1194" fill="#f5f7fa"/>
 <text x="80" y="54" font-size="16" font-weight="700" letter-spacing="3" fill="#19836b">SIGMIDI / HARNESS PLANNING</text>
 <text x="80" y="99" font-size="34" font-weight="700">Cable bundles · Left enclosure</text>
 <text x="80" y="129" class="medium muted">Top view, roof omitted · actual CAD footprints · proposed routing, disconnects and interface area</text>
@@ -57,7 +57,7 @@
 <rect x="172.39" y="386.94" width="156.00" height="126.00" rx="5" class="board"/>
 <text x="250.39" y="455.14" text-anchor="middle" class="tiny">LCD / SPI</text>
 <rect x="118.90" y="202.00" width="149.20" height="109.60" rx="5" class="body"/>
-<text x="193.50" y="262.00" text-anchor="middle" class="tiny">Dual TRS</text>
+<text x="193.50" y="262.00" text-anchor="middle" class="tiny">Pedal TRS</text>
 <rect x="551.74" y="306.00" width="48.26" height="35.56" rx="5" class="board"/>
 <text x="575.87" y="328.98" text-anchor="middle" class="tiny">5V</text>
 <rect x="100.00" y="430.00" width="60.00" height="60.00" rx="5" class="body"/>
@@ -71,7 +71,8 @@
 <circle cx="507.72655360034895" cy="396.3929954023578" r="3.32" fill="white" stroke="#72957b"/>
 <rect x="460.00" y="202.00" width="36.00" height="20.00" rx="3" class="body"/>
 <text x="478.00" y="186.00" text-anchor="middle" class="small">Nano ESP32 / USB-C</text>
-<text x="172.00" y="186.00" text-anchor="middle" class="small">TRS 1 / 2</text>
+<text x="172.00" y="186.00" text-anchor="middle" class="small">Pedal TRS 1 / 2</text>
+<text x="352.00" y="186.00" text-anchor="middle" class="small">MIDI OUT J3 / J4</text>
 <text x="640.00" y="186.00" text-anchor="middle" class="small">9 V · centre negative</text>
 <path d="M444 398V442" stroke="#adc3c1" stroke-width="5" opacity=".6"/>
 <path d="M464 398V442" stroke="#adc3c1" stroke-width="5" opacity=".6"/>
@@ -265,10 +266,19 @@
 <g class="route" data-bundle="ground"><title>Ground / returns: Socket centre negative to converter GND</title><polyline points="632.00,250.00 632.00,274.00 544.00,274.00 544.00,323.80 556.84,323.80" class="wire" stroke="#fff" stroke-width="4.9"/><polyline points="632.00,250.00 632.00,274.00 544.00,274.00 544.00,323.80 556.84,323.80" class="wire" stroke="#303a48" stroke-width="2.6"/></g>
 <g class="route" data-bundle="dc"><title>9 V input: 9V input to Nano VIN; no converter 5V connection to Nano</title><polyline points="648.00,282.00 536.00,282.00 536.00,408.00 430.00,408.00 430.00,384.00 441.60,384.00" class="wire" stroke="#fff" stroke-width="6.3"/><polyline points="648.00,282.00 536.00,282.00 536.00,408.00 430.00,408.00 430.00,384.00 441.60,384.00" class="wire" stroke="#d65e21" stroke-width="4"/></g>
 <g class="route" data-bundle="ground"><title>Ground / returns: Converter return to Nano ground</title><polyline points="556.84,323.80 544.00,323.80 544.00,414.00 424.00,414.00 424.00,376.00 441.60,376.00" class="wire" stroke="#fff" stroke-width="4.9"/><polyline points="556.84,323.80 544.00,323.80 544.00,414.00 424.00,414.00 424.00,376.00 441.60,376.00" class="wire" stroke="#303a48" stroke-width="2.6"/></g>
-<g class="route" data-bundle="supply"><title>Regulated 5 V: LED +5V distribution; pair with return</title><polyline points="556.00,314.00 556.00,342.00 404.00,342.00" class="wire" stroke="#fff" stroke-width="5.5"/><polyline points="556.00,314.00 556.00,342.00 404.00,342.00" class="wire" stroke="#cf3144" stroke-width="3.2"/></g>
-<g class="route" data-bundle="ground"><title>Ground / returns: LED supply return, routed directly to supply point</title><polyline points="556.00,324.00 562.00,348.00 404.00,348.00" class="wire" stroke="#fff" stroke-width="4.9"/><polyline points="556.00,324.00 562.00,348.00 404.00,348.00" class="wire" stroke="#303a48" stroke-width="2.6"/></g>
+<g class="route" data-bundle="supply"><title>Regulated 5 V: LED +5V to J-LED; pair with return</title><polyline points="556.00,314.00 556.00,342.00 304.00,342.00 304.00,336.40" class="wire" stroke="#fff" stroke-width="5.5"/><polyline points="556.00,314.00 556.00,342.00 304.00,342.00 304.00,336.40" class="wire" stroke="#cf3144" stroke-width="3.2"/></g>
+<g class="route" data-bundle="ground"><title>Ground / returns: LED return from the supply point to J-LED</title><polyline points="556.00,324.00 562.00,348.00 300.00,348.00 300.00,336.40" class="wire" stroke="#fff" stroke-width="4.9"/><polyline points="556.00,324.00 562.00,348.00 300.00,348.00 300.00,336.40" class="wire" stroke="#303a48" stroke-width="2.6"/></g>
 <g class="route" data-bundle="pedal"><title>Expression pedals: Six TRS conductors down to the carrier perfboard</title><polyline points="188.00,311.60 188.00,320.00 224.00,320.00 224.00,302.00" class="wire" stroke="#fff" stroke-width="6.8999999999999995"/><polyline points="188.00,311.60 188.00,320.00 224.00,320.00 224.00,302.00" class="wire" stroke="#008b95" stroke-width="4.6"/></g>
-<g class="route" data-bundle="pedal"><title>Expression pedals: Carrier wire entries to Nano JP1: ladder, pedals, USB sense, 3V3, GND, VIN</title><polyline points="436.00,250.00 441.60,250.00" class="wire" stroke="#fff" stroke-width="6.3"/><polyline points="436.00,250.00 441.60,250.00" class="wire" stroke="#008b95" stroke-width="4.0"/></g>
+<g class="route" data-bundle="pedal"><title>Expression pedals: Carrier wire entries to Nano JP1: ladder, pedals, USB sense, VBUS, 3V3, GND, VIN</title><polyline points="436.00,250.00 441.60,250.00" class="wire" stroke="#fff" stroke-width="6.3"/><polyline points="436.00,250.00 441.60,250.00" class="wire" stroke="#008b95" stroke-width="4.0"/></g>
+<circle cx="336" cy="212.0" r="12" fill="#f7e3ef" stroke="#a34a7d" stroke-width="1.3" stroke-dasharray="3 2"/>
+<text x="336.00" y="216.40" text-anchor="middle" class="tiny">J3</text>
+<circle cx="368" cy="212.0" r="12" fill="#f7e3ef" stroke="#a34a7d" stroke-width="1.3" stroke-dasharray="3 2"/>
+<text x="368.00" y="216.40" text-anchor="middle" class="tiny">J4</text>
+<g class="route" data-bundle="midi"><title>TRS MIDI OUT: J3 tip, ring and sleeve from carrier pads 3T / 3R / 3S</title><polyline points="260.00,238.00 260.00,228.00 336.00,228.00 336.00,224.00" class="wire" stroke="#fff" stroke-width="6.7"/><polyline points="260.00,238.00 260.00,228.00 336.00,228.00 336.00,224.00" class="wire" stroke="#d4389a" stroke-width="4.4"/></g>
+<g class="route" data-bundle="midi"><title>TRS MIDI OUT: J4 ring and sleeve from pads 4R / 4S</title><polyline points="250.00,238.00 250.00,232.00 368.00,232.00 368.00,224.00" class="wire" stroke="#fff" stroke-width="6.7"/><polyline points="250.00,238.00 250.00,232.00 368.00,232.00 368.00,224.00" class="wire" stroke="#d4389a" stroke-width="4.4"/></g>
+<g class="route" data-bundle="midi"><title>TRS MIDI OUT: J4 tip from the R56 pad (4T)</title><polyline points="160.00,238.00 160.00,232.00 250.00,232.00" class="wire" stroke="#fff" stroke-width="5.5"/><polyline points="160.00,238.00 160.00,232.00 250.00,232.00" class="wire" stroke="#d4389a" stroke-width="3.2"/></g>
+<g class="route" data-bundle="midi"><title>TRS MIDI OUT: Nano JP2:2 D0 / GPIO44 TX to carrier pad TX</title><polyline points="512.80,246.00 522.00,246.00 522.00,224.40 310.00,224.40 310.00,238.00" class="wire" stroke="#fff" stroke-width="5.5"/><polyline points="512.80,246.00 522.00,246.00 522.00,224.40 310.00,224.40 310.00,238.00" class="wire" stroke="#d4389a" stroke-width="3.2"/></g>
+<g class="route" data-bundle="supply"><title>Regulated 5 V: Converter +5V to carrier pad +5V, D1 into MIDI_5V</title><polyline points="404.00,342.00 404.00,312.00 270.00,312.00 270.00,302.00" class="wire" stroke="#fff" stroke-width="5.5"/><polyline points="404.00,342.00 404.00,312.00 270.00,312.00 270.00,302.00" class="wire" stroke="#cf3144" stroke-width="3.2"/></g>
 <g class="route" data-bundle="display"><title>LCD / SPI: Short SPI loom to display; J-LCD service disconnect</title><polyline points="512.80,380.00 528.00,380.00 528.00,418.00 410.00,418.00 410.00,370.00 252.00,370.00 252.00,386.92" class="wire" stroke="#fff" stroke-width="6.7"/><polyline points="512.80,380.00 528.00,380.00 528.00,418.00 410.00,418.00 410.00,370.00 252.00,370.00 252.00,386.92" class="wire" stroke="#2b74cc" stroke-width="4.4"/></g>
 <g class="route" data-bundle="encoder"><title>Encoder + click: A, B, click and common ground to Nano</title><polyline points="130.00,430.00 130.00,386.00 308.00,386.00 308.00,366.00 418.00,366.00 418.00,424.00 534.00,424.00 534.00,372.00 512.80,372.00" class="wire" stroke="#fff" stroke-width="6.1"/><polyline points="130.00,430.00 130.00,386.00 308.00,386.00 308.00,366.00 418.00,366.00 418.00,424.00 534.00,424.00 534.00,372.00 512.80,372.00" class="wire" stroke="#45933b" stroke-width="3.8"/></g>
 <g class="route" data-bundle="ladder"><title>Footswitch ladder: Raised-row switched ladder harness</title><polyline points="441.60,360.00 412.00,360.00 412.00,286.00 1432.00,286.00" class="wire" stroke="#fff" stroke-width="6.1"/><polyline points="441.60,360.00 412.00,360.00 412.00,286.00 1432.00,286.00" class="wire" stroke="#b47a00" stroke-width="3.8"/></g>
@@ -325,8 +335,8 @@
 <text x="1290.40" y="252.80" text-anchor="middle" class="label">E</text>
 <rect x="288" y="276.4" width="128" height="24" rx="3" fill="#fbf6ea" fill-opacity=".95"/>
 <text x="352.00" y="286.80" text-anchor="middle" class="nano-label">Carrier perfboard 80.5 x 20</text>
-<text x="352.00" y="297.60" text-anchor="middle" class="nano-label">base level, under Dual TRS</text>
-<text x="192.00" y="250.00" text-anchor="middle" class="tiny">Dual TRS</text>
+<text x="352.00" y="297.60" text-anchor="middle" class="nano-label">base level, under pedal TRS</text>
+<text x="192.00" y="250.00" text-anchor="middle" class="tiny">Pedal dual TRS</text>
 <rect x="445.24655360034893" y="314" width="64" height="25" rx="3" fill="#f5faf7" fill-opacity=".95"/>
 <text x="477.25" y="323.60" text-anchor="middle" class="nano-label">Nano ESP32</text>
 <text x="477.25" y="334.80" text-anchor="middle" class="nano-label">components up</text>
@@ -347,7 +357,7 @@
 <g data-legend="supply"><rect x="790" y="727" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>
 <path d="M808 748H837" stroke="#cf3144" stroke-width="5" stroke-linecap="round"/>
 <text x="850" y="752" class="label">Regulated 5 V</text>
-<text x="850" y="771" class="small">Pololu VOUT → optional LED rail only</text>
+<text x="850" y="771" class="small">Pololu VOUT → optional LED rail + D1 into MIDI_5V</text>
 <text x="850" y="786" class="tiny muted">Supply + return travel together</text></g>
 <g data-legend="ground"><rect x="80" y="801" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>
 <path d="M98 822H127" stroke="#303a48" stroke-width="5" stroke-linecap="round"/>
@@ -379,7 +389,12 @@
 <text x="850" y="974" class="label">Optional Pololu 2535</text>
 <text x="850" y="993" class="small">D7 / GPIO10 → first LED DIN, directly</text>
 <text x="850" y="1008" class="tiny muted">5V + GND + data; preserve tap assignments</text></g>
-<text x="80" y="1045" class="small">Lines represent bundle corridors, not electrical junctions. Connect ladder taps and pixels in the stated order.</text>
-<text x="80" y="1068" class="small muted">Nano is components-up on verified integral posts; other footprints from Fusion. Different Z levels overlap in this view.</text>
-<text x="80" y="1090" class="small muted">Routes are bundle corridors, not pin positions. VBUS → 100k → A4; A4 → 150k → GND. Verify service-loop clearances.</text>
+<g data-legend="midi"><rect x="80" y="1023" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>
+<path d="M98 1044H127" stroke="#d4389a" stroke-width="5" stroke-linecap="round"/>
+<text x="140" y="1048" class="label">TRS MIDI OUT</text>
+<text x="140" y="1067" class="small">D0 / GPIO44 → U4 buffer on carrier → J3 / J4, TRS Type A</text>
+<text x="140" y="1082" class="tiny muted">TX + VBUS + 5V in · 6 wires to sockets · socket position proposed</text></g>
+<text x="80" y="1119" class="small">Lines represent bundle corridors, not electrical junctions. Connect ladder taps and pixels in the stated order.</text>
+<text x="80" y="1142" class="small muted">Nano is components-up on verified integral posts; other footprints from Fusion. Different Z levels overlap in this view.</text>
+<text x="80" y="1164" class="small muted">Routes are bundle corridors, not pin positions. VBUS → 100k → A4; A4 → 150k → GND. Verify service-loop clearances.</text>
 </svg>

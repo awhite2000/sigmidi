@@ -171,7 +171,27 @@
         25.0
       ],
       "source": "design/fusion/mirrored/carrier-perfboard.json",
-      "level": "base, under Dual TRS"
+      "level": "base, under pedal dual TRS"
+    },
+    {
+      "component": "J3 3.5 mm TRS MIDI OUT socket",
+      "bounds_XY_mm": [
+        61,
+        -0.5,
+        67,
+        5.5
+      ],
+      "source": "proposed position; not in CAD"
+    },
+    {
+      "component": "J4 3.5 mm TRS MIDI OUT socket",
+      "bounds_XY_mm": [
+        69,
+        -0.5,
+        75,
+        5.5
+      ],
+      "source": "proposed position; not in CAD"
     }
   ],
   "bundles": {
@@ -183,7 +203,7 @@
     ],
     "supply": [
       "Regulated 5 V",
-      "Pololu VOUT \u2192 optional LED rail only",
+      "Pololu VOUT \u2192 optional LED rail + D1 into MIDI_5V",
       "Supply + return travel together",
       "power"
     ],
@@ -222,6 +242,12 @@
       "D7 / GPIO10 \u2192 first LED DIN, directly",
       "5V + GND + data; preserve tap assignments",
       "led"
+    ],
+    "midi": [
+      "TRS MIDI OUT",
+      "D0 / GPIO44 \u2192 U4 buffer on carrier \u2192 J3 / J4, TRS Type A",
+      "TX + VBUS + 5V in \u00b7 6 wires to sockets \u00b7 socket position proposed",
+      "controls"
     ]
   },
   "colors": {
@@ -232,7 +258,8 @@
     "pedal": "#008b95",
     "display": "#2b74cc",
     "encoder": "#45933b",
-    "led": "#9251c7"
+    "led": "#9251c7",
+    "midi": "#d4389a"
   },
   "routes": [
     {
@@ -359,11 +386,15 @@
           35
         ],
         [
-          81,
+          56,
           35
+        ],
+        [
+          56,
+          33.6
         ]
       ],
-      "description": "LED +5V distribution; pair with return"
+      "description": "LED +5V to J-LED; pair with return"
     },
     {
       "purpose": "ground",
@@ -377,11 +408,15 @@
           36.5
         ],
         [
-          81,
+          55,
           36.5
+        ],
+        [
+          55,
+          33.6
         ]
       ],
-      "description": "LED supply return, routed directly to supply point"
+      "description": "LED return from the supply point to J-LED"
     },
     {
       "purpose": "pedal",
@@ -417,7 +452,117 @@
           12
         ]
       ],
-      "description": "Carrier wire entries to Nano JP1: ladder, pedals, USB sense, 3V3, GND, VIN"
+      "description": "Carrier wire entries to Nano JP1: ladder, pedals, USB sense, VBUS, 3V3, GND, VIN"
+    },
+    {
+      "purpose": "midi",
+      "points_XY_mm": [
+        [
+          45,
+          9
+        ],
+        [
+          45,
+          6.5
+        ],
+        [
+          64,
+          6.5
+        ],
+        [
+          64,
+          5.5
+        ]
+      ],
+      "description": "J3 tip, ring and sleeve from carrier pads 3T / 3R / 3S"
+    },
+    {
+      "purpose": "midi",
+      "points_XY_mm": [
+        [
+          42.5,
+          9
+        ],
+        [
+          42.5,
+          7.5
+        ],
+        [
+          72,
+          7.5
+        ],
+        [
+          72,
+          5.5
+        ]
+      ],
+      "description": "J4 ring and sleeve from pads 4R / 4S"
+    },
+    {
+      "purpose": "midi",
+      "points_XY_mm": [
+        [
+          20,
+          9
+        ],
+        [
+          20,
+          7.5
+        ],
+        [
+          42.5,
+          7.5
+        ]
+      ],
+      "description": "J4 tip from the R56 pad (4T)"
+    },
+    {
+      "purpose": "midi",
+      "points_XY_mm": [
+        [
+          108.2,
+          11
+        ],
+        [
+          110.5,
+          11
+        ],
+        [
+          110.5,
+          5.6
+        ],
+        [
+          57.5,
+          5.6
+        ],
+        [
+          57.5,
+          9
+        ]
+      ],
+      "description": "Nano JP2:2 D0 / GPIO44 TX to carrier pad TX"
+    },
+    {
+      "purpose": "supply",
+      "points_XY_mm": [
+        [
+          81,
+          35
+        ],
+        [
+          81,
+          27.5
+        ],
+        [
+          47.5,
+          27.5
+        ],
+        [
+          47.5,
+          25
+        ]
+      ],
+      "description": "Converter +5V to carrier pad +5V, D1 into MIDI_5V"
     },
     {
       "purpose": "display",
@@ -909,6 +1054,7 @@
   "notes": [
     "XY corridors only; crossings do not connect nets",
     "Native LED/power references and the fitted carrier perfboard used; other routing needs clearance validation",
+    "J3/J4 MIDI OUT sockets are not in the CAD assembly; their rear-wall positions are a proposal",
     "Electrical tap and LED assignments remain unchanged",
     "Disconnect shell controls and withdraw MCU USB before base removal"
   ]

@@ -199,8 +199,8 @@
       "pdf": "output/pdf/reference/previews.pdf",
       "title": "SIGMIDI Foot Controller v0.1 \u2014 Previews",
       "pages": 4,
-      "source_sha256": "db0a1dcc5293ef46b5a7e451c8c8adfabf05f68d0c2364ce3e2b77320143ce6b",
-      "pdf_sha256": "0a51c417def5f658b2175955ea5110bf76591d771172b18f8416dee0e0787b29"
+      "source_sha256": "3668471d65e4c0e672d872ad4d953957daa1901087878266a5261a0cb939f715",
+      "pdf_sha256": "b50fcd7df4ed85600c3fe9d57c186a8bd3676849b931a6081d3d6e25b67703f8"
     }
   ],
   "designed_pdfs": {

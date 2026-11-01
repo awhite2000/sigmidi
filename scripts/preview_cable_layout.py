@@ -5,24 +5,25 @@ import json,html,hashlib
 R=Path(__file__).resolve().parents[1];P=R/'previews';rows=json.loads((R/'design/fusion/mirrored/layout.json').read_text())['bodies']
 rows=[r for r in rows if r['assembly']=='main'];groups={}
 for r in rows:groups.setdefault(r['component_path'].split('/')[-1],[]).append(r)
-colors={'dc':'#d65e21','supply':'#cf3144','ground':'#303a48','ladder':'#b47a00','pedal':'#008b95','display':'#2b74cc','encoder':'#45933b','led':'#9251c7'}
+colors={'dc':'#d65e21','supply':'#cf3144','ground':'#303a48','ladder':'#b47a00','pedal':'#008b95','display':'#2b74cc','encoder':'#45933b','led':'#9251c7','midi':'#d4389a'}
 meta={
 'dc':('9 V input','Sleeve +9 V → Nano VIN + Pololu VIN','2 wires · J-PWR', 'power'),
-'supply':('Regulated 5 V','Pololu VOUT → optional LED rail only','Supply + return travel together','power'),
+'supply':('Regulated 5 V','Pololu VOUT → optional LED rail + D1 into MIDI_5V','Supply + return travel together','power'),
 'ground':('Ground / returns','Common reference; LED return to supply','Dark lines beside power and signals','power'),
 'ladder':('Footswitch ladder','Series taps T1–T10; each adds 1 kΩ','TAIL + GND between sections','controls'),
 'pedal':('Expression pedals','Passive TRS → 2 resistors/input → A1 / GPIO2 and A3 / GPIO4','6 wires at sockets · bias D2 / GPIO5 and D3 / GPIO6','controls'),
 'display':('LCD / SPI','D8–D12 / GPIO17, 18, 21, 38, 47; 3V3 + GND','7 wires · backlight tied to 3V3 locally','controls'),
 'encoder':('Encoder + click','D4–D6 / GPIO7, 8, 9 + common GND','4 wires · J-ENC','controls'),
-'led':('Optional Pololu 2535','D7 / GPIO10 → first LED DIN, directly','5V + GND + data; preserve tap assignments','led')}
+'led':('Optional Pololu 2535','D7 / GPIO10 → first LED DIN, directly','5V + GND + data; preserve tap assignments','led'),
+'midi':('TRS MIDI OUT','D0 / GPIO44 → U4 buffer on carrier → J3 / J4, TRS Type A','TX + VBUS + 5V in · 6 wires to sockets · socket position proposed','controls')}
 S=4;OX=80;OY=202
 X=lambda x:OX+x*S
 Y=lambda y:OY+y*S
-out=['<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1120" viewBox="0 0 1560 1120" role="img" aria-labelledby="title desc">',
+out=['<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1194" viewBox="0 0 1560 1194" role="img" aria-labelledby="title desc">',
 '<title id="title">SIGMIDI Left enclosure cable bundle layout</title><desc id="desc">Top-down routing proposal using native component footprints, color coded by cable purpose. Rear edge at top. Main case 350 by 92 millimetres. Base-removal connectors and a modular four-net interface are shown.</desc>',
 '<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#e2e7ed" stroke-width=".65"/></pattern></defs>',
 '<style>text{font-family:Arial,sans-serif;fill:#26354b}.tiny{font-size:11px}.nano-label{font-size:10px}.small{font-size:13px}.medium{font-size:16px}.label{font-size:14px;font-weight:700}.wire{fill:none;stroke-linejoin:round;stroke-linecap:round}.body{fill:#e4e9ed;stroke:#96a1af;stroke-width:1.3}.board{fill:#d5e8da;stroke:#72957b;stroke-width:1.5}.dim{fill:none;stroke:#7f8da0;stroke-width:1}.muted{fill:#617087}.route.dimmed{opacity:.08}.route{transition:opacity .15s}</style>',
-'<rect width="1560" height="1120" fill="#f5f7fa"/>',
+'<rect width="1560" height="1194" fill="#f5f7fa"/>',
 '<text x="80" y="54" font-size="16" font-weight="700" letter-spacing="3" fill="#19836b">SIGMIDI / HARNESS PLANNING</text>',
 '<text x="80" y="99" font-size="34" font-weight="700">Cable bundles · Left enclosure</text>',
 '<text x="80" y="129" class="medium muted">Top view, roof omitted · actual CAD footprints · proposed routing, disconnects and interface area</text>',
@@ -49,7 +50,7 @@ for name,items in groups.items():
  elif 'Pololu 2535' in name:
   q=bbox(items);cx=(q[0]+q[2])/2;cy=(q[1]+q[3])/2
   out.append(f'<circle cx="{X(cx)}" cy="{Y(cy)}" r="10" fill="#e8dff4" stroke="#a58bc0"/>')
-for needle,label,cls in [('LCD Waveshare','LCD / SPI','board'),('Double TRS','Dual TRS','body'),('Pololu S13V10F5','5V','board'),('Encoder 15x15','ENC','body'),('DC power socket','9 V DC','body')]:
+for needle,label,cls in [('LCD Waveshare','LCD / SPI','board'),('Double TRS','Pedal TRS','body'),('Pololu S13V10F5','5V','board'),('Encoder 15x15','ENC','body'),('DC power socket','9 V DC','body')]:
  name,items=next((n,v) for n,v in groups.items() if needle in n);q=bbox(items);x0,y0,x1,y1=q
  rect(x0,max(0,y0),x1-x0,y1-max(0,y0),cls,5)
  txt((x0+x1)/2,(max(0,y0)+y1)/2+1.3,label,'tiny')
@@ -64,7 +65,7 @@ for hx,hy in holes:out.append(f'<circle cx="{X(hx)}" cy="{Y(-hy)}" r="3.32" fill
 footprints.append({'component':'Arduino Nano ESP32 ABX00083','bounds_XY_mm':[x0,y0,x1,y1],'source':'design/fusion/nano-esp32/mount-fit.json','component_face_down':False})
 # USB connector and nominal rear socket centres.
 rect(95,0,9,5,'body');txt(99.5,-4,'Nano ESP32 / USB-C','small')
-txt(23,-4,'TRS 1 / 2','small');txt(140,-4,'9 V · centre negative','small')
+txt(23,-4,'Pedal TRS 1 / 2','small');txt(68,-4,'MIDI OUT J3 / J4','small');txt(140,-4,'9 V · centre negative','small')
 # Existing vent area is crosshatched rather than available for tie mounts.
 for x in [91,96,101,106,111,120,126]:
  out.append(f'<path d="M{X(x)} {Y(49)}V{Y(60)}" stroke="#adc3c1" stroke-width="5" opacity=".6"/>')
@@ -83,7 +84,7 @@ for sx in (-1,1):
   out.append(f'<circle cx="{X(BX+sx*38)}" cy="{Y(BY+sy*8)}" r="{1.5*S}" fill="white" stroke="#9c8a62"/>')
  for y in (-3.75,-1.25,1.25,3.75):
   out.append(f'<rect x="{X(BX+sx*38-1.75)}" y="{Y(BY+y-1)}" width="{3.5*S}" height="{2*S}" rx="1" fill="#c9a64a"/>')
-footprints.append({'component':f'Carrier perfboard {CW:g} x {CH:g} mm, {rows} x {cols} holes at {pitch:g} mm','bounds_XY_mm':[CX0,CY0,CX0+CW,CY0+CH],'source':'design/fusion/mirrored/carrier-perfboard.json','level':'base, under Dual TRS'})
+footprints.append({'component':f'Carrier perfboard {CW:g} x {CH:g} mm, {rows} x {cols} holes at {pitch:g} mm','bounds_XY_mm':[CX0,CY0,CX0+CW,CY0+CH],'source':'design/fusion/mirrored/carrier-perfboard.json','level':'base, under pedal dual TRS'})
 paths=[]
 def route(kind,points,width=.8,label=''):
  pts=' '.join(f'{X(x):.2f},{Y(y):.2f}' for x,y in points)
@@ -94,10 +95,21 @@ route('dc',[(142,12),(142,20),(114,20),(114,32.98),(119.21,32.98)],1,'Socket sle
 route('ground',[(138,12),(138,18),(116,18),(116,30.45),(119.21,30.45)],.65,'Socket centre negative to converter GND')
 route('dc',[(142,20),(114,20),(114,51.5),(87.5,51.5),(87.5,45.5),(90.4,45.5)],1,'9V input to Nano VIN; no converter 5V connection to Nano')
 route('ground',[(119.21,30.45),(116,30.45),(116,53),(86,53),(86,43.5),(90.4,43.5)],.65,'Converter return to Nano ground')
-route('supply',[(119,28),(119,35),(81,35)],.8,'LED +5V distribution; pair with return')
-route('ground',[(119,30.5),(120.5,36.5),(81,36.5)],.65,'LED supply return, routed directly to supply point')
+route('supply',[(119,28),(119,35),(56,35),(56,33.6)],.8,'LED +5V to J-LED; pair with return')
+route('ground',[(119,30.5),(120.5,36.5),(55,36.5),(55,33.6)],.65,'LED return from the supply point to J-LED')
 route('pedal',[(27,27.4),(27,29.5),(36,29.5),(36,25)],1.15,'Six TRS conductors down to the carrier perfboard')
-route('pedal',[(89,12),(90.4,12)],1.0,'Carrier wire entries to Nano JP1: ladder, pedals, USB sense, 3V3, GND, VIN')
+route('pedal',[(89,12),(90.4,12)],1.0,'Carrier wire entries to Nano JP1: ladder, pedals, USB sense, VBUS, 3V3, GND, VIN')
+# TRS MIDI OUT: the U4 stage is on the carrier; J3/J4 are not in the CAD assembly, so their
+# rear-wall positions are a proposal. Carrier pad columns follow scripts/perfboard_layout.py.
+for sx,ref in [(64,'J3'),(72,'J4')]:
+ out.append(f'<circle cx="{X(sx)}" cy="{Y(2.5)}" r="{3*S}" fill="#f7e3ef" stroke="#a34a7d" stroke-width="1.3" stroke-dasharray="3 2"/>')
+ txt(sx,3.6,ref,'tiny')
+ footprints.append({'component':f'{ref} 3.5 mm TRS MIDI OUT socket','bounds_XY_mm':[sx-3,-0.5,sx+3,5.5],'source':'proposed position; not in CAD'})
+route('midi',[(45,9),(45,6.5),(64,6.5),(64,5.5)],1.1,'J3 tip, ring and sleeve from carrier pads 3T / 3R / 3S')
+route('midi',[(42.5,9),(42.5,7.5),(72,7.5),(72,5.5)],1.1,'J4 ring and sleeve from pads 4R / 4S')
+route('midi',[(20,9),(20,7.5),(42.5,7.5)],.8,'J4 tip from the R56 pad (4T)')
+route('midi',[(108.2,11),(110.5,11),(110.5,5.6),(57.5,5.6),(57.5,9)],.8,'Nano JP2:2 D0 / GPIO44 TX to carrier pad TX')
+route('supply',[(81,35),(81,27.5),(47.5,27.5),(47.5,25)],.8,'Converter +5V to carrier pad +5V, D1 into MIDI_5V')
 route('display',[(108.2,44.5),(112,44.5),(112,54),(82.5,54),(82.5,42),(43,42),(43,46.23)],1.1,'Short SPI loom to display; J-LCD service disconnect')
 route('encoder',[(12.5,57),(12.5,46),(57,46),(57,41),(84.5,41),(84.5,55.5),(113.5,55.5),(113.5,42.5),(108.2,42.5)],.95,'A, B, click and common ground to Nano')
 # Lines mark harness corridors, not common electrical nets. Tap resistors stay in electrical order.
@@ -126,8 +138,8 @@ for i,x in enumerate([42.6,107.6,172.6,237.6,302.6]):
 # Carrier label sits on the board, above the corridors that pass at other heights.
 out.append(f'<rect x="{X(52)}" y="{Y(18.6)}" width="{32*S}" height="{6*S}" rx="3" fill="#fbf6ea" fill-opacity=".95"/>')
 txt(68,21.2,'Carrier perfboard 80.5 x 20','nano-label')
-txt(68,23.9,'base level, under Dual TRS','nano-label')
-txt(28,12,'Dual TRS','tiny')
+txt(68,23.9,'base level, under pedal TRS','nano-label')
+txt(28,12,'Pedal dual TRS','tiny')
 # Keep the board identity readable above the harness corridors.
 out.append(f'<rect x="{X(nano_label_x-8)}" y="{Y(28)}" width="64" height="25" rx="3" fill="#f5faf7" fill-opacity=".95"/>')
 txt(nano_label_x,30.4,'Nano ESP32','nano-label')
@@ -145,13 +157,13 @@ out += ['<text x="80" y="602" class="small muted">REAR ↑  /  FRONT ↓   ·   
 for i,(kind,(title,details,note,group)) in enumerate(meta.items()):
  col=i%2;row=i//2;x=80+col*710;y=727+row*74
  out += [f'<g data-legend="{kind}"><rect x="{x}" y="{y}" width="690" height="65" rx="9" fill="#fff" stroke="#e1e6ed"/>',f'<path d="M{x+18} {y+21}H{x+47}" stroke="{colors[kind]}" stroke-width="5" stroke-linecap="round"/>',f'<text x="{x+60}" y="{y+25}" class="label">{html.escape(title)}</text>',f'<text x="{x+60}" y="{y+44}" class="small">{html.escape(details)}</text>',f'<text x="{x+60}" y="{y+59}" class="tiny muted">{html.escape(note)}</text></g>']
-out += ['<text x="80" y="1045" class="small">Lines represent bundle corridors, not electrical junctions. Connect ladder taps and pixels in the stated order.</text>',
-'<text x="80" y="1068" class="small muted">Nano is components-up on verified integral posts; other footprints from Fusion. Different Z levels overlap in this view.</text>',
-'<text x="80" y="1090" class="small muted">Routes are bundle corridors, not pin positions. VBUS → 100k → A4; A4 → 150k → GND. Verify service-loop clearances.</text>','</svg>']
+out += ['<text x="80" y="1119" class="small">Lines represent bundle corridors, not electrical junctions. Connect ladder taps and pixels in the stated order.</text>',
+'<text x="80" y="1142" class="small muted">Nano is components-up on verified integral posts; other footprints from Fusion. Different Z levels overlap in this view.</text>',
+'<text x="80" y="1164" class="small muted">Routes are bundle corridors, not pin positions. VBUS → 100k → A4; A4 → 150k → GND. Verify service-loop clearances.</text>','</svg>']
 svg='\n'.join(out);(P/'cable-bundles-left.svg').write_text(svg)
 detail_inner=svg[svg.index('>')+1:svg.rindex('</svg>')]
 (P/'cable-bundles-left-detail.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1000" viewBox="0 0 1560 1000"><rect width="1560" height="1000" fill="#f5f7fa"/><text x="40" y="44" font-family="Arial,sans-serif" font-size="26" fill="#26354b">SIGMIDI · electronics harness detail · Left</text><svg x="20" y="70" width="1520" height="860" viewBox="60 193 655 390">'+detail_inner+'</svg><text x="40" y="970" font-family="Arial,sans-serif" font-size="18" fill="#617087">Routing proposal. The carrier perfboard is a fitted CAD part; wire corridors need vertical clearance review.</text></svg>')
-data={'variant':'Left main, ten switches','source':'design/fusion/mirrored/layout.json','nano_mount_source':'design/fusion/nano-esp32/mount-fit.json','nano_mount_sha256':hashlib.sha256((R/'design/fusion/nano-esp32/mount-fit.json').read_bytes()).hexdigest(),'source_sha256':hashlib.sha256((R/'design/fusion/mirrored/layout.json').read_bytes()).hexdigest(),'status':'routing proposal; no native CAD changes','component_footprints':footprints,'bundles':meta,'colors':colors,'routes':paths,'notes':['XY corridors only; crossings do not connect nets','Native LED/power references and the fitted carrier perfboard used; other routing needs clearance validation','Electrical tap and LED assignments remain unchanged','Disconnect shell controls and withdraw MCU USB before base removal']}
+data={'variant':'Left main, ten switches','source':'design/fusion/mirrored/layout.json','nano_mount_source':'design/fusion/nano-esp32/mount-fit.json','nano_mount_sha256':hashlib.sha256((R/'design/fusion/nano-esp32/mount-fit.json').read_bytes()).hexdigest(),'source_sha256':hashlib.sha256((R/'design/fusion/mirrored/layout.json').read_bytes()).hexdigest(),'status':'routing proposal; no native CAD changes','component_footprints':footprints,'bundles':meta,'colors':colors,'routes':paths,'notes':['XY corridors only; crossings do not connect nets','Native LED/power references and the fitted carrier perfboard used; other routing needs clearance validation','J3/J4 MIDI OUT sockets are not in the CAD assembly; their rear-wall positions are a proposal','Electrical tap and LED assignments remain unchanged','Disconnect shell controls and withdraw MCU USB before base removal']}
 (P/'cable-bundles-left.json').write_text(json.dumps(data,indent=2)+'\n')
 buttons=''.join(f'<button data-focus="{k}" style="--bundle:{colors[k]}">{html.escape(meta[k][0])}</button>' for k in meta)
 page='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>SIGMIDI cable routing preview</title><style>body{margin:0;background:#f5f7fa;color:#26354b;font:14px Arial,sans-serif}nav{padding:18px 5%;display:flex;gap:8px;flex-wrap:wrap;align-items:center;border-bottom:1px solid #dae1e8}button,a{font:inherit}button{border:1px solid #c6ced8;border-left:5px solid var(--bundle,#26354b);background:white;color:#26354b;padding:8px 12px;border-radius:6px;cursor:pointer}button[aria-pressed=true]{background:#26354b;color:white}nav a{margin-left:auto;color:#265f99}main{max-width:1700px;margin:auto}svg{width:100%;height:auto;display:block}footer{padding:12px 5%;color:#617087}</style><nav aria-label="Cable bundle filters"><strong>Show:</strong><button data-focus="all" aria-pressed="true">All bundles</button>'''+buttons+'''<a href="cable-bundles-left-detail.svg">Electronics zoom</a><a href="cable-bundles-left.svg">Download SVG</a></nav><main>'''+svg+'''</main><footer>Routing preview only. No firmware settings or Fusion geometry changed.</footer><script>for(const b of document.querySelectorAll('button[data-focus]'))b.addEventListener('click',()=>{const k=b.dataset.focus;for(const p of document.querySelectorAll('.route'))p.classList.toggle('dimmed',k!=='all'&&p.dataset.bundle!==k);for(const q of document.querySelectorAll('button[data-focus]'))q.setAttribute('aria-pressed',String(q===b));});</script></html>'''

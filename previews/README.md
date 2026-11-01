@@ -56,9 +56,9 @@ Full pages: [Left switches](wifi-left-switches.png), [Right switches](wifi-right
 
 ## Cable routing proposal
 
-[Interactive Left layout](cable-bundles-left.html) · [Full layout](cable-bundles-left.png) · [Electronics detail](cable-bundles-left-detail.png) · [SVG](cable-bundles-left.svg). Select a purpose in the interactive view to isolate that harness. Colors distinguish 9 V input, regulated 5 V, ground, switch ladder, expression pedals, LCD, encoder and optional LEDs.
+[Interactive Left layout](cable-bundles-left.html) · [Full layout](cable-bundles-left.png) · [Electronics detail](cable-bundles-left-detail.png) · [SVG](cable-bundles-left.svg). Select a purpose in the interactive view to isolate that harness. Colors distinguish 9 V input, regulated 5 V, ground, switch ladder, expression pedals, LCD, encoder, optional LEDs and TRS MIDI OUT.
 
-The Nano footprint and mounting holes come from the verified components-up direct-mount pose; the carrier perfboard and other component footprints come from the Left main CAD assembly. Power/LED corridors use the model references; other routing is a proposal. Lines show bundle corridors rather than shared electrical nets. Vertical wire clearance and connector placement require review before building. The preview does not change Fusion geometry or firmware settings.
+The Nano footprint and mounting holes come from the verified components-up direct-mount pose; the carrier perfboard and other component footprints come from the Left main CAD assembly. Power/LED corridors use the model references; other routing is a proposal. The J3/J4 TRS MIDI OUT sockets are not in the CAD assembly, so their rear-wall positions are proposed. Lines show bundle corridors rather than shared electrical nets. Vertical wire clearance and connector placement require review before building. The preview does not change Fusion geometry or firmware settings.
 
 ## Electrical diagram
 
